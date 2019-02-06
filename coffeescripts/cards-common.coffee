@@ -192,7 +192,7 @@ exportObj.basicCardData = ->
             ]
         "TIE Interceptor":
             name: "TIE Interceptor"
-            xws: "TIE Interceptor".canonicalize()
+            xws: "TIE/in Interceptor".canonicalize()
             factions: [ "Galactic Empire" ]
             attack: 3
             agility: 3
@@ -1227,7 +1227,7 @@ exportObj.basicCardData = ->
             ]
         "Upsilon-Class Command Shuttle":
             name: "Upsilon-Class Command Shuttle"
-            xws: "Upsilon-class command shuttle".canonicalize()
+            xws: "Upsilon-class shuttle".canonicalize()
             factions: ["First Order"]
             attack: 4
             agility: 1
