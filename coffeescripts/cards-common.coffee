@@ -8192,6 +8192,7 @@ exportObj.basicCardData = ->
             ship: "TIE Advanced Prototype"
             points: 200
             force: 2
+            darkside: true
             slots: [
                 "Force"
                 "Sensor"
