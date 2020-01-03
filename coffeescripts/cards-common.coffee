@@ -7950,6 +7950,13 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Title"
             ]
+            ship_override:
+                actions: [
+                    "Calculate"
+                    "Evade"
+                    "Roll"
+                    "SLAM"
+                ]
         }
         {
             name: "Colossus Station Mechanic"
