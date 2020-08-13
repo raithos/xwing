@@ -9529,7 +9529,7 @@ exportObj.basicCardData = ->
            charge: 2
            recurring: true
            restriction_func: (ship) ->
-                ("Coordinate" or "R-Coordinate") in ship.effectiveStats().actions
+                ship.effectiveStats().actions.some( (action) -> action in ["Coordinate", "R-Coordinate"] )
        }
        {
            name: "Magva Yarro"
