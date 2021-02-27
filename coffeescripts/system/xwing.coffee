@@ -4401,6 +4401,42 @@ class Ship
         @pilot.modifier_func(stats) if @pilot?.modifier_func?
         stats
 
+    effectiveStatsWithout: (me) ->
+        stats =
+            attack: @pilot.ship_override?.attack ? @data.attack
+            attackf: @pilot.ship_override?.attackf ? @data.attackf
+            attackbull: @pilot.ship_override?.attackbull ? @data.attackbull
+            attackb: @pilot.ship_override?.attackb ? @data.attackb
+            attackt: @pilot.ship_override?.attackt ? @data.attackt
+            attackl: @pilot.ship_override?.attackl ? @data.attackl
+            attackr: @pilot.ship_override?.attackr ? @data.attackr
+            attackdt: @pilot.ship_override?.attackdt ? @data.attackdt
+            energy: @pilot.ship_override?.energy ? @data.energy
+            agility: @pilot.ship_override?.agility ? @data.agility
+            hull: @pilot.ship_override?.hull ? @data.hull
+            shields: @pilot.ship_override?.shields ? @data.shields
+            force: (@pilot.ship_override?.force ? @pilot.force) ? 0
+            charge: @pilot.ship_override?.charge ? @pilot.charge
+            actions: (@pilot.ship_override?.actions ? @data.actions).slice 0
+
+        # need a deep copy of maneuvers array
+        stats.maneuvers = []
+        for s in [0 ... (@data.maneuvers ? []).length]
+            stats.maneuvers[s] = @data.maneuvers[s].slice 0
+
+        # Droid conversion of Focus to Calculate
+        if @pilot.keyword? and ("Droid" in @pilot.keyword) and stats.actions?
+            new_stats = []
+            for statentry in stats.actions
+                new_stats.push statentry.replace("Focus","Calculate")
+            stats.actions = new_stats
+
+        for upgrade in @upgrades
+            continue if upgrade == me
+            upgrade.data.modifier_func(stats) if upgrade?.data?.modifier_func?
+        @pilot.modifier_func(stats) if @pilot?.modifier_func?
+        stats
+
     validate: ->
         # Remove addons that violate their validation functions (if any) one by one
         # until everything checks out
@@ -4510,7 +4546,7 @@ class Ship
                 when "AttackArc"
                     if not @data.attackb? then return false
                 when "ShieldsGreaterThan"
-                    if not (@data.shields > r[1]) then return false
+                    if not (@effectiveStatsWithout(upgrade_obj).shields > r[1]) then return false
                 when "EnergyGreatterThan"
                     if not (effective_stats.energy > r[1]) then return false
                 when "InitiativeGreaterThan"
