@@ -1738,7 +1738,7 @@ exportObj.cardLoaders.简体中文 = () ->
            text: """在结束阶段开始时，你可以花费2个 %CHARGE% 来选择你自己或者一架位于你 %SINGLETURRETARC% 内拥有1个或更多圆形标记的战机。在结束阶段中，被选择的战机不用移除圆形标记。"""
         "Arliz Hadrassian":
            display_name: """阿莉兹·哈德拉西安 (Arliz Hadrassian)"""
-           text: """当你执行一次 %FRONTARC% 攻击时，如果你受到伤害，你可以将一个你的 %FOCUS% 结果改成一个 %CRIT% 结果。%LINEBREAK% 当你防御时，如果你有伤害，你必须将一个你的 %FOCUS% 结果改成 %FOCUS% 结果。"""
+           text: """当你执行一次 %FRONTARC% 攻击时，如果你受到伤害，你可以将一个你的 %FOCUS% 结果改成一个 %CRIT% 结果。%LINEBREAK% 当你防御时，如果你有伤害，你必须将一个你的 %FOCUS% 结果改成空白结果。"""
         "Leema Kai":
            display_name: """利马·凯 (Leema Kai)"""
            text: """你交战之前，如果你没有在任何敌方战机的 %FRONTARC% 内，那么你可以获得1架位于你 %FULLFRONTARC% 内的敌方战机的锁定。"""
@@ -2039,7 +2039,7 @@ exportObj.cardLoaders.简体中文 = () ->
            text: """当一架在距离1-3的你有锁定的战机防御或攻击时，你可以选择花费1个%CHARGE%来阻止距离加成的使用。（距离1攻击加成或距离3防御加成）"""
         '"Kickback" (SoC)':
            display_name: """“后踢” [科洛桑] (“Kickback”)"""
-           text: """在你执行一个 %BARRELLROLL% 行动后，你可以执行一个红色 %LOCK% 行动。如此的话，在你执行该 %LOCK% 行动之前，你可以获得1个扭力标记以将其视为白色行动。"""
+           text: """在你执行一个 %BARRELROLL% 行动后，你可以执行一个红色 %LOCK% 行动。如此的话，在你执行该 %LOCK% 行动之前，你可以获得1个扭力标记以将其视为白色行动。"""
         '"Axe" (SoC)':
            display_name: """“战斧” [科洛桑] (“Axe”)"""
            text: """在你进行一次攻击后，你可以选择在你的 %LEFTARC% 或 %RIGHTARC% 0-2范围内选择另一架具有 <b>为此而生</b> 能力的友方战机。被选中的战机可以获得一个对防御者的锁定。"""
@@ -2539,7 +2539,7 @@ exportObj.cardLoaders.简体中文 = () ->
            text: """在你执行一次未命中的攻击后，如果一个或更多的 %HIT% 或 %CRIT% 结果被抵消，该防御者获得一个扭力标记。"""
         "Cluster Missiles":
            display_name: """集束导弹 (Cluster Missiles)"""
-           text: """<b>攻击 (%LOCK%):</b> 花费1%个 CHARGE%。在此攻击后，你可以选择对在该防御者距离0-1内，并且在你射界内的另一个目标，进行一次额外攻击，无视此攻击 %LOCK% 的要求。"""
+           text: """<b>攻击 (%LOCK%):</b> 花费1%个 %CHARGE%。在此攻击后，你可以选择对在该防御者距离0-1内，并且在你射界内的另一个目标，进行一次额外攻击，无视此攻击 %LOCK% 的要求。"""
         "Collision Detector":
            display_name: """碰撞感知器 (Collision Detector)"""
            text: """在你推进或桶滚时，你可位移穿过障碍物，或与障碍物重叠。%LINEBREAK%在你位移穿过或与障碍物重叠后，你可以选择花费1个 %CHARGE% 来无效它的效果，直到此轮结束。"""
@@ -2626,7 +2626,7 @@ exportObj.cardLoaders.简体中文 = () ->
            text: """"""
         "Ezra Bridger":
            display_name: """埃兹拉·布里杰 (Ezra Bridger)"""
-           text: """在你执行一次基础攻击后，你可以选择花费1个 %FORCE% ，来使用一个此轮中你未攻击过的 %SINGLETURRETARC%，执行1次额外 %SINGLETURRETARC% 攻击。如此的话，且你没有压力的话，你可以选择重投一个攻击骰。"""
+           text: """在你执行一次基础攻击后，你可以选择花费1个 %FORCE% ，来使用一个此轮中你未攻击过的 %SINGLETURRETARC%，执行1次额外 %SINGLETURRETARC% 攻击。且你有压力的话，你可以选择重投一个攻击骰。"""
         "Fanatical":
            display_name: """狂热 (Fanatical)"""
            text: """在你执行一次基础攻击时，如果你没有护盾，你可以选择将一个 %FOCUS% 结果改为一个 %HIT% 结果。"""
@@ -2714,8 +2714,8 @@ exportObj.cardLoaders.简体中文 = () ->
            display_name: """IG-88D"""
            text: """你拥有每个带有<b>IG-2000</b>升级的其他友方战机的飞行员能力。%LINEBREAK%在你执行一次 %CALCULATE% 行动后，获得一个计算标记。"""
         "Ion Bombs":
-           display_name: """Ion Bombs"""
-           text: """<b>炸弹</b>在系统阶段中，你可以选择花费1个 %CHARGE% 来使用[1 %STRAIGHT%]移动条投放一个离子炸弹。"""
+           display_name: """Ion Bombs (离子炸弹)"""
+           text: """<b>炸弹</b>在系统阶段中，你可以选择花费1个 %CHARGE% 来使用[1%STRAIGHT%]移动条投放一个离子炸弹。"""
         "ISB Slicer":
            display_name: """ISB黑客 (ISB Slicer)"""
            text: """在结束阶段中，在距离1-2的敌方战机不能移除干扰标记。"""
@@ -2730,7 +2730,7 @@ exportObj.cardLoaders.简体中文 = () ->
            text: """<b>布置:</b> 在部署战机后，指定一架敌方战机，为它添加<b>监听装置</b>状态。"""
         "Instinctive Aim":
            display_name: """本能瞄准 (Instinctive Aim)"""
-           text: """在你执行一次特殊攻击时，你可以选择花费1个 %FORCE% 来无视对 %FOCUS% 或% LOCK% 的要求。"""
+           text: """在你执行一次特殊攻击时，你可以选择花费1个 %FORCE% 来无视对 %FOCUS% 或 %LOCK% 的要求。"""
         "Integrated S-Foils":
            display_name: """整合式S机翼 (Integrated S-Foils)"""
            text: """<strong>闭合:  </strong><i>%BARRELROLL%、%FOCUS% &nbsp;<i class="xwing-miniatures-font xwing-miniatures-font-linked"></i>&nbsp;<r>%BARRELROLL%</r></i>%LINEBREAK% 在你执行一次基础攻击时，如果该防御者不在你的 %BULLSEYEARC% ，少投一个攻击骰。%LINEBREAK% 在你激活前，你可以将此卡翻面。 %LINEBREAK% <b>打开:</b> 在你激活前，你可以选择将此卡翻面。"""
@@ -3181,7 +3181,7 @@ exportObj.cardLoaders.简体中文 = () ->
            text: """<b>攻击:</b> 如果你有计算标记，该防御者不适用距离加成。"""
         "Concussion Bombs":
            display_name: """震荡炸弹 (Concussion Bombs)"""
-           text: """在系统阶段中，如果此卡的任何 %CHARGE% 是非激活的，如可能的话，你必须花费1个 %CHARGE% 来投放一个震荡炸弹。否则，你可以选择花费1个 %CHARGE% 来投放一个震荡炸弹。"""
+           text: """在系统阶段中，如果此卡的任何 %CHARGE% 是非激活的，你必须花费1个 %CHARGE%，使用 [1 %STRAIGHT%] 移动条投放一个震荡炸弹。否则，你可以选择花费1个 %CHARGE% 来投放一个震荡炸弹。"""
         "Maneuver-Assist MGK-300":
            display_name: """MGK-300机动辅助系统 (Maneuver-Assist MGK-300)"""
            text: """降低你的速度3直行 [%STRAIGHT%] 与倾斜 [%BANKLEFT% 或 %BANKRIGHT%] 移动的难度。"""
@@ -3471,19 +3471,19 @@ exportObj.cardLoaders.简体中文 = () ->
            text: """<b>降下状态(Down)</b> %LINEBREAK% 在你执行一次 [0 %STOP%] 移动后，你可以将战机旋转90度或180度。如果你这样做了，<b>必须</b>将这张卡翻面。%LINEBREAK% <b>升起状态(Up)</b> %LINEBREAK% 当你防御时，少投掷一个防御骰。%LINEBREAK% 在你执行一次非悬停 [%STOP%] 移动后，你可以将这张卡翻面。"""
         "Clan Wren Commandos":
            display_name: """雷恩氏族突击队(Clan Wren Commandos)"""
-           text: """在系统阶段中，你可以花费1个 %CHARGE%，用 [1 %STRAIGHT%] 移动条投放一个突击队小组。你可以从战机的前方或后方卡槽投放。%LINEBREAK% 这张卡的 %CHARGE% 无法恢复。"""
+           text: """在系统阶段中，你可以花费1个 %CHARGE%，用 [1%STRAIGHT%] 移动条投放一个突击队小组。你可以选择将该装置面朝前或朝后投放。%LINEBREAK% 这张卡的 %CHARGE% 无法恢复。"""
         "Death Watch Commandos":
            display_name: """死神卫突击队(Death Watch Commandos)"""
-           text: """在系统阶段中，你可以花费1个 %CHARGE%，用 [1 %STRAIGHT%] 移动条投放一个突击队小组。你可以从战机的前方或后方卡槽投放。%LINEBREAK% 这张卡的 %CHARGE% 无法恢复。"""
+           text: """在系统阶段中，你可以花费1个 %CHARGE%，用 [1%STRAIGHT%] 移动条投放一个突击队小组。你可以选择将该装置面朝前或朝后投放。%LINEBREAK% 这张卡的 %CHARGE% 无法恢复。"""
         "Nite Owl Commandos":
            display_name: """夜鸮突击队(Nite Owl Commandos)"""
-           text: """在系统阶段中，你可以花费1个 %CHARGE%，用 [1 %STRAIGHT%] 移动条投放一个突击队小组。你可以从战机的前方或后方卡槽投放。%LINEBREAK% 这张卡的 %CHARGE% 无法恢复。"""
+           text: """在系统阶段中，你可以花费1个 %CHARGE%，用 [1%STRAIGHT%] 移动条投放一个突击队小组。你可以选择将该装置面朝前或朝后投放。%LINEBREAK% 这张卡的 %CHARGE% 无法恢复。"""
         "Imperial Super Commandos":
            display_name: """帝国超级突击队(Imperial Super Commandos)"""
-           text: """在系统阶段中，你可以花费1个 %CHARGE%，用 [1 %STRAIGHT%] 移动条投放一个突击队小组。你可以从战机的前方或后方卡槽投放。%LINEBREAK% 这张卡的 %CHARGE% 无法恢复。"""
+           text: """在系统阶段中，你可以花费1个 %CHARGE%，用 [1%STRAIGHT%] 移动条投放一个突击队小组。你可以选择将该装置面朝前或朝后投放。%LINEBREAK% 这张卡的 %CHARGE% 无法恢复。"""
         "Mandalorian Super Commandos":
            display_name: """曼达洛人超级突击队 (Mandalorian Super Commandos)"""
-           text: """在系统阶段中，你可以花费1个 %CHARGE%，用 [1 %STRAIGHT%] 移动条投放一个突击队小组。你可以从战机的前方或后方卡槽投放。%LINEBREAK% 这张卡的 %CHARGE% 无法恢复。"""
+           text: """在系统阶段中，你可以花费1个 %CHARGE%，用 [1%STRAIGHT%] 移动条投放一个突击队小组。你可以选择将该装置面朝前或朝后投放。%LINEBREAK% 这张卡的 %CHARGE% 无法恢复。"""
         "Razor Crest":
            display_name: """剃刀冠号(Razor Crest)"""
            text: """<b>布置阶段：</b> 将一张非限制的 %ILLICIT% 升级卡面朝下放置在此卡下面。%LINEBREAK% 在系统阶段中，你可以展示这张 %ILLICIT% 升级卡，并且装备它，如同布置战机时那样(不需要花费分数)。"""
@@ -3650,7 +3650,7 @@ exportObj.cardLoaders.简体中文 = () ->
            text: """当你进行基础攻击时，如果在防御者0-1范围内的友方战机（包含你自己）比敌方战机（不包含防御者）多，你可以重投1个空白结果。"""
         "Apex Predator (BoE)":
            display_name: """顶级捕食者 (Apex Predator)"""
-           text: """君が主武装攻撃を実行する際、もし防御者の先攻值が君の先攻值より低いなら、君は攻撃ダイスを1つ振り直しても良い。"""
+           text: """当你进行基础攻击时，如果防御者的先攻值低于你，你可以重投1个攻击骰。"""
         "Push The Limit (BoE)":
            display_name: """超负荷推进 (Push The Limit)"""
            text: """在你进行一次完整的红色移动或执行一个红色行动后，如果你没有扭力，你可以获得1个扭力标记来移除1个压力标记。"""
