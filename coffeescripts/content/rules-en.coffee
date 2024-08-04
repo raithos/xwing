@@ -406,7 +406,7 @@ exportObj.ruleLoaders.English = () ->
                 text: """Structures are an upcoming game mechanic that some cards reference for the sake of future compatibility. There are currently no structures"""
             "SUFFER DAMAGE":
                 name: "Suffer Damage"
-                text: """See “Damage.”"""
+                text: """See Damage."""
             "SUPPLY":
                 name: "Supply"
                 text: """The supply is the shared set of game components that are not being used by any player, such as unassigned focus tokens, maneuver templates, etc."""
@@ -418,7 +418,7 @@ exportObj.ruleLoaders.English = () ->
                 text: """See Bearing."""
             "TARGET":
                 name: "Target"
-                text: """The target of an attack is declared during the Declare Target step. Asuccessfully targeted enemy ship is the defender."""
+                text: """The target of an attack is declared during the Declare Target step. A successfully targeted enemy ship is the defender."""
             "TIMING":
                 name: "Timing"
                 text: """There are several terms used to indicate the specific timing of an effect: <br>• <strong>Before:</strong> The effect resolves immediately preceding the timing specified. <br>• <strong>At the start of:</strong> This timing is used with a specific phase or step. The effect triggers before anything occurs during that phase or step. <br>• <strong>While:</strong> This term is often used in combination with multi-stepped game effects such as an attack, an action, or a maneuver. Although less specific than the other timings, this term is used to narrow down when the ability is resolved during the round. Additional verbiage is required to identify when exactly the effect is applied. <br>◊ For example, in the context of an attack, if the ability rolls additional attack dice, the ability triggers during the Roll Attack Dice step. If the ability modifies defense dice, the ability triggers during the Modify Defense Dice step. <br>• <strong>At the end of:</strong> This timing is used with a specific phase or step of ship’s activation. This effect triggers after the normal effects of that phase or step have occurred. <br>• <strong>After:</strong> The effect resolves immediately following the timing specified. <br>The ability queue is used to resolve abilities that would resolve simultaneously."""
