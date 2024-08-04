@@ -384,7 +384,7 @@ exportObj.ruleLoaders.English = () ->
                 name: "Standard Arc"
                 text: """See Arc."""
             "STANDARD LOADOUTS":
-                name: "Standard Arc"
+                name: "Standard Loadouts"
                 text: """Some ship cards are <b>standard loadouts</b>. Standard loadout cards are larger than normal ship cards and list all the ship's equipped upgrades. Some standard loadouts have unique ship abilities, upgrade abilities, and action bars. Standard loadout ships cannot equip any additional upgrades."""
             "STANDARD SHIP":
                 name: "Standard Ship"
