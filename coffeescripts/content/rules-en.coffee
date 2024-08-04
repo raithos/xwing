@@ -247,7 +247,7 @@ exportObj.ruleLoaders.English = () ->
                 text: """A mine is a type of device that is placed in the play area through a card effect from a %DEVICE% upgrade card. The upgrade card that corresponds to the mine has the “Mine” trait at the top of its card text. Mines can be dropped or launched during the System Phase and typically detonate after they are moved through or overlapped by a ship."""
             "MISS":
                 name: "Miss"
-                text: """During the Neutralize Results step of an attack, the attack misses if no %HIT% or %CRIT% results remain. The attack hits if at least one %HIT% or %CRIT% result remain uncanceled. • If the attack misses, the Deal Damage step of the attack is skipped."""
+                text: """During the Neutralize Results step of an attack, the attack misses if no %HIT% or %CRIT% results remain. The attack hits if at least one %HIT% or %CRIT% result remain uncanceled. <br>• If the attack misses, the Deal Damage step of the attack is skipped."""
             "MISSION POINTS":
                 name: "Mision Points"
                 text: """ Mission points determine who wins the game. Reference the scenario rules to determine how mission points are earned. <br><br>• At the start of the game, each player earns mission points equal to their opponent’s deficit. <br>• Players track their mission points with Victory counters."""
