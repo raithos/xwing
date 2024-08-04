@@ -403,7 +403,7 @@ exportObj.ruleLoaders.English = () ->
                 text: """A ship is stressed while it has at least one stress token. A stressed ship cannot execute red maneuvers or perform actions. The stress token is a red token. <br>• A ship receives one stress token while it executes a red maneuver or after it performs a red action. Additionally, a ship removes one stress token while it executes a blue maneuver. <br>• If a stressed ship attempts to execute a red maneuver, it instead executes a white [2 %STRAIGHT%] maneuver. <br>◊ After a stressed ship reveals a red maneuver, abilities that change the maneuver can be used. After resolving these abilities, if the ship would still execute a red maneuver, it instead executes a white [2 %STRAIGHT%] maneuver. <br>• Huge ships have additional rules for stress (see Appendix: Huge Ships)."""
             "STRUCTURE":
                 name: "Structure"
-                text: """Structures are an upcoming game mechanic that some cards reference for the sake of future compatibility. There are currently no structures”"""
+                text: """Structures are an upcoming game mechanic that some cards reference for the sake of future compatibility. There are currently no structures"""
             "SUFFER DAMAGE":
                 name: "Suffer Damage"
                 text: """See “Damage.”"""
