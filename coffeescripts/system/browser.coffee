@@ -103,6 +103,9 @@ class exportObj.CardBrowser
                                     </div>
                                     <div class = "advanced-search-misc-container">
                                         <strong class="translated" defaultText="Misc:"></strong>
+                                        <label class = "advanced-search-label toggle-xwa">
+                                            <input type="checkbox" class="xwa-checkbox advanced-search-checkbox" checked="checked"/> <span class="translated" defaultText="Use XWA points"></span>
+                                        </label>
                                         <label class = "advanced-search-label toggle-unique">
                                             <input type="checkbox" class="unique-checkbox advanced-search-checkbox" /> <span class="translated" defaultText="Is unique"></span>
                                         </label>
@@ -354,6 +357,7 @@ class exportObj.CardBrowser
         @maximum_point_costs = ($ @container.find('.xwing-card-browser .maximum-point-cost'))[0]
         @minimum_loadout_costs = ($ @container.find('.xwing-card-browser .minimum-loadout-cost'))[0]
         @maximum_loadout_costs = ($ @container.find('.xwing-card-browser .maximum-loadout-cost'))[0]
+        @use_xwa_points = ($ @container.find('.xwing-card-browser .xwa-checkbox'))[0]
         @standard_checkbox = ($ @container.find('.xwing-card-browser .standard-checkbox'))[0]
         @unique_checkbox = ($ @container.find('.xwing-card-browser .unique-checkbox'))[0]
         @non_unique_checkbox = ($ @container.find('.xwing-card-browser .non-unique-checkbox'))[0]
@@ -485,6 +489,7 @@ class exportObj.CardBrowser
         @minimum_loadout_costs.oninput = => @renderList_advanced @sort_selector.val()
         @maximum_loadout_costs.oninput = => @renderList_advanced @sort_selector.val()
         @standard_checkbox.onclick = => @renderList_advanced @sort_selector.val()
+        @use_xwa_points.onclick = => @renderList_advanced @sort_selector.val()
         @unique_checkbox.onclick = => @renderList_advanced @sort_selector.val()
         @non_unique_checkbox.onclick = => @renderList_advanced @sort_selector.val()
         @limited_checkbox.onclick = => @renderList_advanced @sort_selector.val()
@@ -526,6 +531,18 @@ class exportObj.CardBrowser
         @maximum_owned_copies.oninput = => @renderList_advanced @sort_selector.val()
 
 
+    getPoints = (a) ->
+        if @standard_checkbox.checked and a.pointsbeta?
+            return a.pointsbeta
+        return a.points
+    getLoadout = (a) ->
+        if @standard_checkbox.checked and a.loadoutbeta?
+            return a.loadoutbeta
+        return a.loadout
+    getSlots = (a) ->
+        if @standard_checkbox.checked and a.slotsbeta?
+            return a.slotsbeta
+        return a.slots
 
     prepareData: () ->
         @all_cards = []
@@ -674,7 +691,7 @@ class exportObj.CardBrowser
 
     addCardTo: (container, card) ->
         option = $ document.createElement('OPTION')
-        option.text "#{if card.display_name then card.display_name else card.name} (#{if card.data.points? then card.data.points else (if card.data.quantity? then card.data.quantity+'x' else '*')}#{if card.data.loadout? then "/#{card.data.loadout}" else ''})"
+        option.text "#{if card.display_name then card.display_name else card.name} (#{if @getPoints(card.data)? then @getPoints(card.data) else (if card.data.quantity? then card.data.quantity+'x' else '*')}#{if @getLoadout(card.data)? then "/#{@getLoadout(card.data)}" else ''})"
         option.data 'name', card.name
         option.data 'display_name', card.display_name
         option.data 'type', card.type
@@ -770,7 +787,7 @@ class exportObj.CardBrowser
         # check for slot requirements
         required_slots = @searchInputs.required_slots
         if required_slots.length > 0
-            slots = card.data.slots
+            slots = @getSlots(card.data)
             
             for slot in required_slots
                 # special case for hardpoints
@@ -813,7 +830,7 @@ class exportObj.CardBrowser
 
         # check if point costs matches
         if @minimum_point_costs.value > 0 or @maximum_point_costs.value < 20
-            return false unless (card.data.points >= @minimum_point_costs.value and card.data.points <= @maximum_point_costs.value) or (card.data.variablepoints?)
+            return false unless (@getPoints(card.data) >= @minimum_point_costs.value and @getPoints(card.data) <= @maximum_point_costs.value) or (card.data.variablepoints?)
             if card.data.variablepoints?
                 matching_points = false
                 for points in card.data.pointsarray
@@ -827,23 +844,23 @@ class exportObj.CardBrowser
                     for name, pilots of exportObj.pilotsByFactionCanonicalName[faction]
                         for pilot in pilots
                             if pilot.ship == card.data.name
-                                if pilot.points >= @minimum_point_costs.value and pilot.points <= @maximum_point_costs.value
+                                if @getPoints(pilot) >= @minimum_point_costs.value and @getPoints(pilot) <= @maximum_point_costs.value
                                     matching_points = true
                                     break
                         break if matching_points
-                    break if matching_points            
+                    break if matching_points
                 return false unless matching_points
 
         # check if loadout costs matches
         if @minimum_loadout_costs.value > 0 or @maximum_loadout_costs.value < 99
-            return false unless (card.data.loadout >= @minimum_loadout_costs.value and card.data.loadout <= @maximum_loadout_costs.value)
+            return false unless (@getLoadout(card.data) >= @minimum_loadout_costs.value and @getLoadout(card.data) <= @maximum_loadout_costs.value)
             if card.orig_type == 'Ship' # check if pilot matching points exist
                 matching_loadout = false
                 for faction in selected_factions
                     for name, pilots of exportObj.pilotsByFactionCanonicalName[faction]
                         for pilot in pilots
                             if pilot.ship == card.data.name
-                                if pilot.loadout >= @minimum_loadout_costs.value and pilot.loadout <= @maximum_loadout_costs.value
+                                if @getLoadout(pilot) >= @minimum_loadout_costs.value and @getLoadout(pilot) <= @maximum_loadout_costs.value
                                     matching_loadout = true
                                     break
                         break if matching_loadout
