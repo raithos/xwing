@@ -531,16 +531,16 @@ class exportObj.CardBrowser
         @maximum_owned_copies.oninput = => @renderList_advanced @sort_selector.val()
 
 
-    getPoints = (a) ->
-        if @standard_checkbox.checked and a.pointsbeta?
+    getPoints: (a) ->
+        if @use_xwa_points.checked and a.pointsbeta?
             return a.pointsbeta
         return a.points
-    getLoadout = (a) ->
-        if @standard_checkbox.checked and a.loadoutbeta?
+    getLoadout: (a) ->
+        if @use_xwa_points.checked and a.loadoutbeta?
             return a.loadoutbeta
         return a.loadout
-    getSlots = (a) ->
-        if @standard_checkbox.checked and a.slotsbeta?
+    getSlots: (a) ->
+        if @use_xwa_points.checked and a.slotsbeta?
             return a.slotsbeta
         return a.slots
 
