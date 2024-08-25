@@ -107,7 +107,8 @@ exportObj.translations.English =
         damageHeader: (translator, type) ->
             "Damage Card (#{translator 'types', type})"
         "unreleased": "unreleased"
-        "epic": "epic"
+        "epic": "Epic"
+        "XWA Beta": "XWA Beta"
         "Quickbuild": "Quick Build"
         "limited": "limited"
         "Unreleased content warning": "This squad uses unreleased content!"
