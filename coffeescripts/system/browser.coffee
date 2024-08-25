@@ -597,6 +597,9 @@ class exportObj.CardBrowser
         # Renders multiselect to container
         # Selects previously selected card if there is one
         
+        if @use_xwa_points.checked?
+            exportObj.builders[7].isBeta = @use_xwa_points.checked
+
         if @card_selector?
             @card_selector.empty()
         else
@@ -878,7 +881,7 @@ class exportObj.CardBrowser
                     break
             return false unless matches
 
-        # check if used second slot matches
+        # check if used second slot matchesexportObj.builders[7]
         used_second_slots = @searchInputs.used_second_slots
         if used_second_slots.length > 0
             return false unless card.data.also_occupies_upgrades?
