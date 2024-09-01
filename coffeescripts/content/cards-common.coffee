@@ -17632,6 +17632,10 @@ exportObj.basicCardData = ->
             restrictions: [
                 ["Action", "Calculate"]
             ]
+            restrictionsbeta: [
+                ["Action", "Calculate"]
+                ["Slot", "Modification"]
+            ]
             also_occupies_upgrades_beta: [ "Modification" ]
         }
         {

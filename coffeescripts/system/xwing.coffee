@@ -3411,10 +3411,10 @@ class exportObj.SquadBuilder
     restriction_text: (card) ->
         uniquetext = comma = othertext = text = ''
         ignoreShip = false
-        if (@isBeta and card.restrictionsbeta?) then card_restrictions = card.restrictionsbeta
         standardized = card.standardized?
         if (@isBeta and card.standardizedbeta?) then standardized = card.standardizedbeta
         if card.restrictions? then card_restrictions = card.restrictions
+        if (@isBeta and card.restrictionsbeta?) then card_restrictions = card.restrictionsbeta
         if card_restrictions?
             for r in card_restrictions
                 switch r[0]
