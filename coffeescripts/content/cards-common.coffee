@@ -22134,6 +22134,7 @@ String::serialtoxws = ->
                 builder_url: "https://yasb.app"
                 link: "https://yasb.app/#{this}" 
         version: '02/23/2024'
+        ruleset: 'AMG'
 
     if this.ParseParameter('obs')
         xws.obstacles = this.ParseParameter('obs').split(",")
@@ -22165,6 +22166,10 @@ String::serialtoxws = ->
 
         #independantly setting up basic card data for xws output
         card_data = exportObj.basicCardData()
+
+        if gamemode == 'xwabeta'
+            xws.version = 'BV1'
+            xws.ruleset = 'XWA'
 
         card_pilots = {}
         for pilot_data in card_data.pilotsById
