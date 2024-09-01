@@ -349,7 +349,7 @@ class exportObj.SquadBuilder
         <div class="modal-content">
             <div class="modal-header">
                 <div class="d-print-none">
-                    <h4 class="modal-title"><span class="squad-name"></span> (<span class="total-points"></span>)</h4>
+                    <h4 class="modal-title"><span class="squad-name"></span> <span class="total-points"></span></h4>
                 </div>
                 <div class="d-none d-print-block">
                     <div class="fancy-header">
@@ -1655,7 +1655,10 @@ class exportObj.SquadBuilder
         @points_remaining_container.toggleClass 'red', (points_left < 0)
         @unreleased_content_used_container.toggleClass 'd-none', not unreleased_content_used
 
-        @fancy_total_points_container.text @total_points
+        if @isStandard == false then gamemode = "(Extended)" else gamemode = "(Standard)"
+        if @isBeta then gamemode = "(XWA Beta)" 
+        if @isEpic then gamemode = "(Epic)"
+        @fancy_total_points_container.text """(#{@total_points}) #{gamemode}"""
         
         # update text list
         @updatePrintAndExportTexts()
