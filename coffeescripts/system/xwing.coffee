@@ -252,8 +252,8 @@ class exportObj.SquadBuilder
                     </div>
                     <br />
                     <select class="game-type-selector">
-                        <option value="xwabeta" class="translated" defaultText="XWA Beta" selected="selected">#{@uitranslation("XWA Beta")}</option>
-                        <option value="standard" class="translated" defaultText="Standard">#{@uitranslation("Standard")}</option>
+                        <option value="xwabeta" class="translated" defaultText="XWA Beta">#{@uitranslation("XWA Beta")}</option>
+                        <option value="standard" class="translated" defaultText="Standard" selected="selected">#{@uitranslation("Standard")}</option>
                         <option value="extended" class="translated" defaultText="Extended">#{@uitranslation("Extended")}</option>
                         <option value="epic" class="translated" defaultText="Epic">#{@uitranslation("Epic")}</option>
                         <option value="quickbuild" class="translated" defaultText="Quickbuild">#{@uitranslation("Standard")}</option>
@@ -1469,9 +1469,15 @@ class exportObj.SquadBuilder
             if @isBeta
                 @printable_container.find('.squad-name').append """ <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>""" 
 
+            versioninfo = "02/23/2024"
+            rules = "AMG"
+            if @isBeta
+                versioninfo = "BV1"
+                rules = "XWA"
+
             # Version number
             @printable_container.find('.fancy-under-header').append $.trim """
-                <div class="version">Points Version: 02/23/2024</div>
+                <div class="version">Points Version: #{rules} - #{versioninfo}</div>
             """
                     
             # Notes, if present
@@ -2689,9 +2695,6 @@ class exportObj.SquadBuilder
                     else
                         container.find('tr.info-engagement').hide()
                     
-                    
-#                    for cls in container.find('tr.info-attack td.info-header i.xwing-miniatures-font')[0].classList
-#                        container.find('tr.info-attack td.info-header i.xwing-miniatures-font').removeClass(cls) if cls.startsWith('xwing-miniatures-font-attack')
                     container.find('tr.info-attack td.info-header i.xwing-miniatures-font').addClass(ship.attack_icon ? 'xwing-miniatures-font-attack')
 
                     container.find('tr.info-attack td.info-data').text statAndEffectiveStat((data.ship_override?.attack ? ship.attack), effective_stats, 'attack')
@@ -2869,8 +2872,6 @@ class exportObj.SquadBuilder
                     container.find('tr.info-attack-doubleturret td.info-data').text(ship.attackdt)
                     container.find('tr.info-attack-doubleturret').toggle(ship.attackdt?)
                     
-#                    for cls in container.find('tr.info-attack td.info-header i.xwing-miniatures-font')[0].classList
-#                        container.find('tr.info-attack td.info-header i.xwing-miniatures-font').removeClass(cls) if cls.startsWith('xwing-miniatures-font-frontarc')
                     container.find('tr.info-attack td.info-header i.xwing-miniatures-font').addClass(ship.attack_icon ? 'xwing-miniatures-font-frontarc')
 
                     container.find('tr.info-energy td.info-data').text(pilot.ship_override?.energy ? ship.energy)
@@ -3559,6 +3560,12 @@ class exportObj.SquadBuilder
 
     toXWS: ->
         # Often you will want JSON.stringify(builder.toXWS())
+        versioninfo = "02/23/2024"
+        rules = "AMG"
+        if @isBeta
+            versioninfo = "BV1"
+            rules = "XWA"
+
         xws =
             description: @getNotes()
             faction: exportObj.toXWSFaction[@faction]
@@ -3570,7 +3577,8 @@ class exportObj.SquadBuilder
                     builder: 'YASB - X-Wing 2.5'
                     builder_url: window.location.href.split('?')[0]
                     link: @getPermaLink()
-            version: '02/23/2024'
+            version: versioninfo
+            ruleset: rules
             # there is no point to have this version identifier, if we never actually increase it, right?
 
         for ship in @ships
