@@ -6298,7 +6298,6 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Gunner"
                 "Device"
-                "Modification"
             ]
         }
         {
