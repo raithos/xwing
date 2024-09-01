@@ -4902,7 +4902,6 @@ class Ship
                         if upgrade?.data?.also_occupies_upgrades?
                             for upgradeslot in upgrade.data.also_occupies_upgrades
                                 meets_restrictions = meets_restrictions and upgrade.occupiesAnUpgradeSlot(upgradeslot)
-                            console.log "#{meets_restrictions}"
 
                     restrictions = upgrade?.data?.restrictions ? undefined
                     # always perform this check, even if no special restrictions for this upgrade exists, to check for allowed points
@@ -5537,7 +5536,14 @@ class GenericAddon
         @data? or @occupied_by?
 
     occupyOtherUpgrades: ->
-        for slot in @data?.also_occupies_upgrades ? []
+        checkupgrades = []
+        if @ship.builder.isBeta? and @data?.also_occupies_upgrades_beta?
+            checkupgrades = @data?.also_occupies_upgrades_beta
+        else
+            if @data?.also_occupies_upgrades?
+                checkupgrades = @data?.also_occupies_upgrades
+
+        for slot in checkupgrades
             for upgrade in @ship.upgrades
                 continue if not exportObj.slotsMatching(upgrade.slot, slot) or upgrade == this or upgrade.isOccupied()
                 @occupy upgrade

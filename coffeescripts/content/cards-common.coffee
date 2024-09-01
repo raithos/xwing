@@ -8880,7 +8880,7 @@ exportObj.basicCardData = ->
             points: 4
             loadout: 9
             pointsbeta: 4
-            loadoutbeta: 5
+            loadoutbeta: 4
             keyword: ["Clone"]
             slots: [
                 "Talent"
