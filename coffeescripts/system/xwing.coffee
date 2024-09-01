@@ -150,9 +150,9 @@ class exportObj.SquadBuilder
             fill_zero_pts: false
         @total_points = 0
         # a squad given in the link is loaded on construction of that builder. It will set all gamemodes of already existing builders accordingly, but we did not exists back than. So we copy over the gamemode
-        @isStandard = exportObj.builders[0]?.isStandard ? false
+        @isStandard = exportObj.builders[0]?.isStandard ? true
         @isEpic = exportObj.builders[0]?.isEpic ? false
-        @isBeta = exportObj.builders[0]?.isBeta ? true
+        @isBeta = exportObj.builders[0]?.isBeta ? false
         @isQuickbuild = exportObj.builders[0]?.isQuickbuild ? false
 
         @backend = null
