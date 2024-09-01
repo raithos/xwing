@@ -11741,7 +11741,6 @@ exportObj.basicCardData = ->
                 "Device"
                 "Modification"
                 "Modification"
-                "Configuration"
             ]
         }
         {
