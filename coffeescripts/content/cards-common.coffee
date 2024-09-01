@@ -2514,6 +2514,7 @@ exportObj.basicCardData = ->
             slotsbeta: [
                 "Talent"
                 "Turret"
+                "Torpedo"
                 "Gunner"
                 "Astromech"
                 "Device"
@@ -18789,6 +18790,7 @@ exportObj.basicCardData = ->
             id: 311
             slot: "Missile"
             points: 4
+            pointsbeta: 7
             attack: 3
             range: """1-3"""
             rangebonus: true
