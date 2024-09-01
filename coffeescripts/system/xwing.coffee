@@ -4139,7 +4139,7 @@ class Ship
                 points = 0
                 loadout = 0
             @points_container.find('div').text "#{points}"
-            @points_container.find('.upgrade-points').text if (@pilot?.loadout? and (@pilot.loadout > 0)) then "(#{@upgrade_points_total}/#{loadout})" else ""
+            @points_container.find('.upgrade-points').text if @pilot?.loadout? then "(#{@upgrade_points_total}/#{loadout})" else ""
             if points > 0
                 @points_container.fadeTo 'fast', 1
             else
@@ -4961,10 +4961,7 @@ class Ship
     restriction_check: (restrictions, upgrade_obj, points = 0, current_upgrade_points = 0, upgrade_data = undefined) ->
         effective_stats = @effectiveStats()
         if @pilot.loadout?
-            if effective_stats.loadout > 0
-                loadout = effective_stats.loadout
-            else
-                loadout = @pilot.loadout
+            loadout = effective_stats.loadout
             if (points + current_upgrade_points > loadout)
                 return false
         if restrictions?
