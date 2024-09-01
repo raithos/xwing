@@ -10845,7 +10845,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 15
             pointsbeta: 4
-            loadoutbeta: 11
+            loadoutbeta: 4
             force: 2
             keyword: ["Jedi", "Light Side"]
             slots: [
