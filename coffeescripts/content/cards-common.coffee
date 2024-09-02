@@ -7401,7 +7401,7 @@ exportObj.basicCardData = ->
             points: 3
             loadout: 2
             pointsbeta: 3
-            loadoutbeta: 11
+            loadoutbeta: 13
             slots: [
                 "Tech"
             ]
@@ -7420,7 +7420,7 @@ exportObj.basicCardData = ->
             points: 4
             loadout: 7
             pointsbeta: 3
-            loadoutbeta: 4
+            loadoutbeta: 3
             slots: [
                 "Talent"
                 "Missile"
