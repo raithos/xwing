@@ -3196,7 +3196,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 11
             pointsbeta: 4
-            loadoutbeta: 7
+            loadoutbeta: 4
             slots: [
                 "Talent"
                 "Crew"
