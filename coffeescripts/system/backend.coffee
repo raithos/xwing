@@ -159,10 +159,16 @@ class exportObj.SquadBuilderBackend
                     li.hide()
                 else
                     hasNotArchivedSquads = true
+                
+                if squad.serialized.search(/v\d+Zb/) != -1
+                    isbeta = """ <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>"""
+                else 
+                    isbeta = ""
+
                 li.append $.trim """
                     <div class="row">
                         <div class="col-md-9">
-                            <h4>#{squad.name}</h4>
+                            <h4>#{squad.name}#{isbeta}</h4>
                         </div>
                         <div class="col-md-3">
                             <h5>#{squad.additional_data?.points} #{exportObj.translate('ui', "Points")}</h5>
