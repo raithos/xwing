@@ -2273,7 +2273,7 @@ exportObj.basicCardData = ->
             ship: "TIE/ln Fighter"
             skill: 3
             points: 2
-            loadout: 3
+            loadout: 0
             pointsbeta: 3
             loadoutbeta: 11
             keyword: ["Spectre", "Mandalorian"]
@@ -4125,13 +4125,12 @@ exportObj.basicCardData = ->
             points: 9
             loadout: 18
             pointsbeta: 8
-            loadoutbeta: 13
+            loadoutbeta: 18
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
                 "Cannon"
                 "Missile"
-                "Crew"
                 "Device"
                 "Illicit"
                 "Modification"
@@ -6325,8 +6324,8 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE/sk Striker"
             skill: 5
-            points: 5
-            loadout: 18
+            points: 4
+            loadout: 7
             pointsbeta: 4
             loadoutbeta: 12
             slots: [
@@ -6763,7 +6762,7 @@ exportObj.basicCardData = ->
             force: 2
             keyword: ["Dark Side"]
             points: 7
-            loadout: 22
+            loadout: 24
             pointsbeta: 6
             loadoutbeta: 8
             applies_condition: '''I'll Show You the Dark Side'''.canonicalize()
@@ -7457,8 +7456,8 @@ exportObj.basicCardData = ->
             skill: 5
             force: 3
             keyword: ["Dark Side","Sith"]
-            points: 7
-            loadout: 19
+            points: 6
+            loadout: 14
             pointsbeta: 7
             loadoutbeta: 20
             slots: [
@@ -8046,7 +8045,7 @@ exportObj.basicCardData = ->
             ship: "T-70 X-wing"
             skill: 5
             points: 4
-            loadout: 8
+            loadout: 4
             pointsbeta: 5
             loadoutbeta: 12
             slots: [
@@ -8157,7 +8156,7 @@ exportObj.basicCardData = ->
             unique: true
             skill: 4
             points: 5
-            loadout: 11
+            loadout: 14
             pointsbeta: 4
             loadoutbeta: 11
             slots: [
@@ -9776,8 +9775,8 @@ exportObj.basicCardData = ->
             charge: 1
             recurring: 1
             ship: "RZ-2 A-wing"
-            points: 5
-            loadout: 10
+            points: 4
+            loadout: 7
             pointsbeta: 4
             loadoutbeta: 11
             slots: [
@@ -11334,8 +11333,8 @@ exportObj.basicCardData = ->
             keyword: ["Light Side"]
             skill: 5
             force: 3
-            points: 5
-            loadout: 12
+            points: 4
+            loadout: 7
             pointsbeta: 5
             loadoutbeta: 16
             slots: [
@@ -12810,7 +12809,7 @@ exportObj.basicCardData = ->
             ship: "Delta-7b Aethersprite"
             skill: 3
             force: 2
-            points: 6
+            points: 5
             loadout: 10
             pointsbeta: 5
             loadoutbeta: 10
@@ -13681,7 +13680,7 @@ exportObj.basicCardData = ->
             faction: "Galactic Republic"
             ship: "ARC-170 Starfighter"
             skill: 5
-            points: 4
+            points: 5
             pointsbeta: 5
             chassis: "Born for This"
             ship_override:
@@ -13771,7 +13770,7 @@ exportObj.basicCardData = ->
             faction: "Galactic Republic"
             ship: "V-19 Torrent Starfighter"
             skill: 5
-            points: 3
+            points: 4
             pointsbeta: 4
             chassis: "Born for This"
             ship_override:
@@ -15020,7 +15019,7 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE/sa Bomber"
             skill: 5
-            points: 3
+            points: 4
             pointsbeta: 4
             charge: 2
             recurring: 1
@@ -15060,7 +15059,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "YT-2400 Light Freighter"
             skill: 5
-            points: 7
+            points: 6
             upgrades: [
                 "Mercenary (YLF)"
                 "Seeker Missiles (YLF)"
@@ -15076,7 +15075,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "YT-2400 Light Freighter"
             skill: 5
-            points: 7
+            points: 6
             upgrades: [
                 "Mercenary (YLF)"
                 "Seeker Missiles (YLF)"
@@ -15198,7 +15197,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "RZ-1 A-wing"
             skill: 2
-            points: 3
+            points: 4
             pointsbeta: 4
             chassis: "Vectored Cannons"
             upgrades: [
@@ -15278,7 +15277,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "A/SF-01 B-wing"
             skill: 4
-            points: 4
+            points: 5
             pointsbeta: 5
             charge: 2
             recurring: 1
@@ -15656,6 +15655,67 @@ exportObj.basicCardData = ->
                 "Proton Bombs"
             ]
         }
+        {
+            name: "Lieutenant Karsabi (SSL)"
+            unique: true
+            id: 674
+            faction: "Galactic Empire"
+            ship: "Alpha-Class Star Wing"
+            chassis: "Prioritized Weapons Systems"
+            skill: 3
+            points: 5
+            upgrades: [
+                "Proton Torpedoes"
+                "Saturation Rockets (SL)"
+                "Electronic Baffle"
+            ]
+        }
+        {
+            name: "Major Vynder (SSL)"
+            unique: true
+            id: 675
+            faction: "Galactic Empire"
+            ship: "Alpha-Class Star Wing"
+            chassis: "Prioritized Weapons Systems"
+            skill: 4
+            points: 5
+            upgrades: [
+                "Long-Range Scanners (SL)"
+                "Ion Cannon"
+                "Heavy Plasma Missiles (SL)"
+            ]
+        }
+        {
+            name: '"Echo" (SSL)'
+            unique: true
+            id: 676
+            faction: "Galactic Empire"
+            ship: "TIE/ph Phantom"
+            skill: 4
+            points: 5
+            charge: 1
+            recurring: 1
+            upgrades: [
+                "Silent Hunter (SL)"
+                "Stealth Gambit (SL)"
+                "Manual Ailerons (SL)"
+            ]
+        }
+        {
+            name: '"Whisper" (SSL)'
+            unique: true
+            id: 677
+            faction: "Galactic Empire"
+            ship: "TIE/ph Phantom"
+            skill: 5
+            points: 5
+            charge: 2
+            upgrades: [
+                "Without A Trace (SL)"
+                "Relay System (SL)"
+                "Stygium Reserve (SL)"
+            ]
+        }
     ]
 
     upgradesById: [
@@ -15910,7 +15970,7 @@ exportObj.basicCardData = ->
             name: "Death Troopers"
             id: 27
             slot: "Crew"
-            points: 4
+            points: 8
             pointsbeta: 10
             unique: true
             faction: "Galactic Empire"
@@ -17503,7 +17563,7 @@ exportObj.basicCardData = ->
             name: "BB-8"
             id: 195
             slot: "Astromech"
-            points: 5
+            points: 4
             charge: 2
             unique: true
             faction: "Resistance"
@@ -21057,6 +21117,71 @@ exportObj.basicCardData = ->
                 stats.points += 1
                 stats.loadout += 10
         }
+        {
+            name: "Without A Trace (SL)"
+            id: 533
+            standard: true
+            slot: "Talent"
+        }
+        {
+            name: "Relay System (SL)"
+            id: 534
+            standard: true
+            slot: "Sensor"
+        }
+        {
+            name: "Stygium Reserve (SL)"
+            id: 535
+            standard: true
+            slot: "Modification"
+            charge: 1
+        }
+        {
+            name: "Silent Hunter (SL)"
+            id: 536
+            standard: true
+            slot: "Talent"
+        }
+        {
+            name: "Stealth Gambit (SL)"
+            id: 537
+            standard: true
+            slot: "Talent"
+        }
+        {
+            name: "Manual Ailerons (SL)"
+            id: 538
+            standard: true
+            slot: "Modification"
+            charge: 2
+        }
+        {
+            name: "Saturation Rockets (SL)"
+            id: 539
+            unique: true
+            standard: true
+            slot: "Missile"
+            charge: 4
+            recurring: 1
+            attackf: 3
+            range: """1-2"""
+        }
+        {
+            name: "Long-Range Scanners (SL)"
+            id: 540
+            standard: true
+            slot: "Sensor"
+            charge: 2
+        }
+        {
+            name: "Heavy Plasma Missiles (SL)"
+            id: 541
+            standard: true
+            slot: "Missile"
+            charge: 2
+            attackf: 3
+            range: """1-3"""
+        }
     ]
 
 
@@ -21481,6 +21606,10 @@ exportObj.basicCardData = ->
         {
             name: "Formed Up"
             id: 54
+        }
+        {
+            name: "Prioritized Weapons Systems"
+            id: 55
         }
     ]
 
@@ -21913,6 +22042,8 @@ exportObj.standardShipInclusions = [
     {name: 'TIE/d Defender', faction: 'Galactic Empire'}
     {name: 'TIE/sk Striker', faction: 'Galactic Empire'}
     {name: 'TIE/rb Heavy', faction: 'Galactic Empire'}
+    {name: 'TIE/ph Phantom', faction: 'Galactic Empire'}
+    {name: 'Alpha-Class Star Wing', faction: 'Galactic Empire'}
     {name: 'VT-49 Decimator', faction: 'Galactic Empire'}
     {name: 'Gauntlet Fighter', faction: 'Galactic Empire'}
 
@@ -22132,7 +22263,7 @@ String::serialtoxws = ->
                 builder: 'YASB - X-Wing 2.5'
                 builder_url: "https://yasb.app"
                 link: "https://yasb.app/#{this}" 
-        version: '02/23/2024'
+        version: '09/06/2024'
         ruleset: 'AMG'
 
     if this.ParseParameter('obs')

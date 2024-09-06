@@ -1469,7 +1469,7 @@ class exportObj.SquadBuilder
             if @isBeta
                 @printable_container.find('.squad-name').append """ <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>""" 
 
-            versioninfo = "02/23/2024"
+            versioninfo = "09/06/2024"
             rules = "AMG"
             if @isBeta
                 versioninfo = "BV1"
@@ -2151,7 +2151,7 @@ class exportObj.SquadBuilder
         if pilot.upgrades?
             for upgrade in pilot.upgrades
                 upgrade_data = exportObj.upgrades[upgrade]
-                if upgrade_data.unique == true
+                if upgrade_data.unique?
                     for ship in @ships
                         if not (ship.pilot?.name? and set_pilot?.name? and ship.pilot.name == set_pilot.name)
                             for shipupgrade in ship.upgrades
@@ -3560,7 +3560,7 @@ class exportObj.SquadBuilder
 
     toXWS: ->
         # Often you will want JSON.stringify(builder.toXWS())
-        versioninfo = "02/23/2024"
+        versioninfo = "09/06/2024"
         rules = "AMG"
         if @isBeta
             versioninfo = "BV1"

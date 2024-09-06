@@ -175,7 +175,7 @@ exportObj.translations.English =
         "Intro Card YASB": """
                     <h2>YASB for X-Wing 2.5</h2>
                     <p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures by <a href="https://www.atomicmassgames.com/">Atomic Mass Games</a>.</p>
-                    <p>Current Version: 02/23/2024</p>
+                    <p>Current Version: 09/06/2024</p>
                     <h5>Credits</h5>
                     <p>Built upon the amazing original <a href="https://geordanr.github.io/xwing/">Yet Another Squad Builder</a>.</p>
                     <p>YASB is updated and maintained by Stephen Kim.</p>
@@ -2084,6 +2084,19 @@ exportObj.cardLoaders.English = () ->
            display_name: """Scimitar 3 (BoE)"""
            text: """After you drop a bomb, you may spend 1 %CHARGE% to perform a %BOOST% action."""
 
+        "Major Vynder (SSL)":
+           display_name: """Major Vynder (SL)"""
+           text: """After you perform a %MISSILE% attack, you may perform a bonus %CANNON% attack. While you perform this bonus attack, you may change 1 %FOCUS% result to a %HIT% result."""
+        "Lieutenant Karsabi (SSL)":
+           display_name: """Lieutenant Karsabi (SL)"""
+           text: """When you perform a %RELOAD% action, the chosen upgrade recovers 1 additional %CHARGE%."""
+        '"Whisper" (SSL)':
+           display_name: """“Whisper” (SL)"""
+           text: """After you perform an attack, you may spend 1 %CHARGE% to perform a %CLOAK% action."""
+        '"Echo" (SSL)':
+           display_name: """“Echo” (SL)"""
+           text: """After an enemy ship at range 0-1 performs an action on its action bar, you may spend 1 %CHARGE% to perform the same action, treating it as white."""
+
 
         # Epic Ships
         "Republic Judiciary":
@@ -3362,6 +3375,33 @@ exportObj.cardLoaders.English = () ->
         "Ion Maneuvering Jet (BoE)":
            display_name: """Ion Maneuvering Jet"""
            text: """After you fully execute a Koiogran Turn [%KTURN%], you may spend 1 %CHARGE% to perform an action, even while stressed."""
+        "Without A Trace (SL)":
+           display_name: """Without A Trace"""
+           text: """After you gain a cloak token, you may remove 1 red token. While you are cloaked, enenmy ships cannot acuqire locks on you."""
+        "Relay System (SL)":
+           display_name: """Relay System"""
+           text: """After a friendly ship at range 0-2 performs a %LOCK% action, you may acquire a lock on the same object. %LINEBREAK% After you perform an attack that hits, you may spend a lock you have on the defender. If you do, another friendly ship at range 0-1 may acquire a lock on the defender."""
+        "Stygium Reserve (SL)":
+           display_name: """Stygium Reserve"""
+           text: """After you fully execute a maneuver, you may spend 1 %CHARGE% to perform a %BOOST% action, even while stressed."""
+        "Silent Hunter (SL)":
+           display_name: """Silent Hunter"""
+           text: """After you decloak, you may acquire a lock on an enemy ship in your %BULLSEYEARC%."""
+        "Stealth Gambit (SL)":
+           display_name: """Stealth Gambit"""
+           text: """After a friendly ship performs an attack that hits an enemy ship in your %FRONTARC%, if you are cloaked, you may gain a strain token to remove your cloak token and perform a bonus primary attack against the defender. %LINEBREAK% At the end of the Engagement Phase, if you are strained, gain an evade token."""
+        "Manual Ailerons (SL)":
+           display_name: """Manual Ailerons"""
+           text: """While you decloak, you may spend 1 %CHARGE% to use the [2 %BANKLEFT%] or [2 %BANKRIGHT%] template instead of the [2 %STRAIGHT%] template."""
+        "Saturation Rockets (SL)":
+           display_name: """Saturation Rockets"""
+           text: """<strong>Attack:</strong> Spend 2 %CHARGE%. If the defender is in yuour %FRONTARC%, you may spend 1 additional %CHARGE% to roll 1 additional attack die. %LINEBREAK% After this attack, you may spend 1 %CHARGE% to perform this attack as a bonus attack against a different target at range 0-1 of the defender without paying the %CHARGE% cost."""
+        "Long-Range Scanners (SL)":
+           display_name: """Long-Range Scanners"""
+           text: """Before you perform a %LOCK% action, you may spend 1 %CHARGE%. If you do, you may acquire a lock on an object at any range during that action."""
+        "Heavy Plasma Missiles (SL)":
+           display_name: """Heavy Plasma Missiles"""
+           text: """<strong>Attack:</strong> Spend 1 %CHARGE%. After this attack hits, the defender loses 1 shield."""
 
 
         # Epic upgrades
@@ -3859,6 +3899,9 @@ exportObj.cardLoaders.English = () ->
         "Formed Up":
            display_name: "Formed Up"
            text: """At the end of the End Phase, if there is another friendly <strong>TIE/ln Fighter</strong> ship at range 0-1, you may remove 1 stress token."""
+        "Prioritized Weapons Systems":
+           display_name: "Prioritized Weapons Systems"
+           text: """Before you engage, you may gain a strain token to remove a disarm token."""
 
 
     damage_translations =
