@@ -15666,6 +15666,16 @@ exportObj.basicCardData = ->
             chassis: "Prioritized Weapons Systems"
             skill: 3
             points: 5
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Lock"
+                    "Slam"
+                    "R-> Lock"
+                    "Slam"
+                    "R-> Reload"
+                    "Reload"
+                ]
             upgrades: [
                 "Proton Torpedoes"
                 "Saturation Rockets (SL)"
@@ -15681,6 +15691,16 @@ exportObj.basicCardData = ->
             chassis: "Prioritized Weapons Systems"
             skill: 4
             points: 5
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Lock"
+                    "Slam"
+                    "R-> Lock"
+                    "Slam"
+                    "R-> Reload"
+                    "Reload"
+                ]
             upgrades: [
                 "Long-Range Scanners (SL)"
                 "Ion Cannon"
