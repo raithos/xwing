@@ -15060,6 +15060,7 @@ exportObj.basicCardData = ->
             ship: "YT-2400 Light Freighter"
             skill: 5
             points: 6
+            pointsbeta: 7
             upgrades: [
                 "Mercenary (YLF)"
                 "Seeker Missiles (YLF)"
@@ -15076,6 +15077,7 @@ exportObj.basicCardData = ->
             ship: "YT-2400 Light Freighter"
             skill: 5
             points: 6
+            pointsbeta: 7
             upgrades: [
                 "Mercenary (YLF)"
                 "Seeker Missiles (YLF)"
