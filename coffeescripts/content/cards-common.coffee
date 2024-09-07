@@ -17566,6 +17566,7 @@ exportObj.basicCardData = ->
             id: 195
             slot: "Astromech"
             points: 4
+            pointsbeta: 5
             charge: 2
             unique: true
             faction: "Resistance"
