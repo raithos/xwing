@@ -15666,6 +15666,7 @@ exportObj.basicCardData = ->
             chassis: "Prioritized Weapons Systems"
             skill: 3
             points: 5
+            pointsbeta: 20
             ship_override:
                 actions: [
                     "Focus"
@@ -15691,6 +15692,7 @@ exportObj.basicCardData = ->
             chassis: "Prioritized Weapons Systems"
             skill: 4
             points: 5
+            pointsbeta: 20
             ship_override:
                 actions: [
                     "Focus"
@@ -15715,6 +15717,7 @@ exportObj.basicCardData = ->
             ship: "TIE/ph Phantom"
             skill: 4
             points: 5
+            pointsbeta: 20
             charge: 1
             recurring: 1
             upgrades: [
@@ -15731,6 +15734,7 @@ exportObj.basicCardData = ->
             ship: "TIE/ph Phantom"
             skill: 5
             points: 5
+            pointsbeta: 20
             charge: 2
             upgrades: [
                 "Without A Trace (SL)"
