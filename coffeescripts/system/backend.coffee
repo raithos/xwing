@@ -578,12 +578,13 @@ class exportObj.SquadBuilderBackend
                 </div>
                 <div class="btn-group squad-display-mode full-row">
                     <button class="btn btn-modal btn-inverse show-all-squads translated" defaultText="All"></button>
-                    <button class="btn btn-modal show-standard-squads"><span class="d-none d-lg-block translated" defaultText="Standard"></span><span class="d-lg-none translated" defaultText="Hyper"></span></button>
+                    <button class="btn btn-modal show-standard-squads"><span class="d-none d-lg-block translated" defaultText="Standard"></span><span class="d-lg-none"><i class="xwing-miniatures-font xwing-miniatures-font-first-player-1"></i></span></button>
                     <button class="btn btn-modal show-extended-squads"><span class="d-none d-lg-block translated" defaultText="Extended"></span><span class="d-lg-none translated" defaultText="Ext"></span></button>
+                    <button class="btn btn-modal show-xwabeta-squads"><span class="d-none d-lg-block translated" defaultText="XWA Beta"></span><span class="d-lg-none"><i class="xwing-miniatures-font xwing-miniatures-font-point" title="Energy"></i></span></button>
                     <button class="btn btn-modal show-quickbuild-squads"><span class="d-none d-lg-block translated" defaultText="Quickbuild"></span><span class="d-lg-none translated" defaultText="QB"></span></button>
-                    <button class="btn btn-modal show-epic-squads translated" defaultText="Epic"></button>
-                    <button class="btn btn-modal show-archived-squads translated" defaultText="Archived"></button>
-                    <button class="btn btn-modal reload-all translated" defaultText="Recalculate Points"></button>
+                    <button class="btn btn-modal show-epic-squads"><span class="d-none d-lg-block translated" defaultText="Epic"></span><span class="d-lg-none" ><i class="xwing-miniatures-font xwing-miniatures-font-energy" title="Energy"></i></span></button>
+                    <button class="btn btn-modal show-archived-squads"><span class="d-none d-lg-block translated" defaultText="Archived"></span><span class="d-lg-none translated" defaultText="Arc"></span></button>
+                    <button class="btn btn-modal reload-all" title="Recalculate Points"><span><i class="xwing-miniatures-font xwing-miniatures-font-calculate" title="Calculate"></i></span></button>
                 </div>
                 <div class="btn-group tags-display full-row">
                 </div>
@@ -733,6 +734,17 @@ class exportObj.SquadBuilderBackend
                 @show_standard_squads_button.addClass 'btn-inverse'
                 @squad_list_modal.find('.squad-list li').each (idx, elem) ->
                     $(elem).toggle $(elem).data().squad.serialized.search(/v\d+Zh/) != -1
+
+        @show_xwabeta_squads_button = $ @squad_list_modal.find('.show-xwabeta-squads')
+        @show_xwabeta_squads_button.click (e) =>
+            unless @squad_display_mode == 'xwabeta'
+                @squad_display_mode = 'xwabeta'
+                @squad_list_modal.find('.squad-display-mode .btn').removeClass 'btn-inverse'
+                @squad_list_tags.find('.btn').removeClass 'btn-inverse'
+                @show_xwabeta_squads_button.addClass 'btn-inverse'
+                @squad_list_modal.find('.squad-list li').each (idx, elem) ->
+                    $(elem).toggle $(elem).data().squad.serialized.search(/v\d+Zb/) != -1
+
 
         @show_quickbuild_squads_button = $ @squad_list_modal.find('.show-quickbuild-squads')
         @show_quickbuild_squads_button.click (e) =>
