@@ -21192,6 +21192,7 @@ exportObj.basicCardData = ->
             recurring: 1
             attackf: 3
             range: """1-2"""
+            rangebonus: true
         }
         {
             name: "Long-Range Scanners (SL)"
