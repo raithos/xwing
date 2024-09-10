@@ -3401,7 +3401,7 @@ exportObj.cardLoaders.English = () ->
            text: """Before you perform a %LOCK% action, you may spend 1 %CHARGE%. If you do, you may acquire a lock on an object at any range during that action."""
         "Heavy Plasma Missiles (SL)":
            display_name: """Heavy Plasma Missiles"""
-           text: """<strong>Attack:</strong> Spend 1 %CHARGE%. After this attack hits, the defender loses 1 shield."""
+           text: """<strong>Attack (%LOCK%):</strong> Spend 1 %CHARGE%. After this attack hits, the defender loses 1 shield."""
 
 
         # Epic upgrades

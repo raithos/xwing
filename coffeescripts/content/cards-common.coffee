@@ -3849,8 +3849,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Customized YT-1300 Light Freighter"
             skill: 6
-            points: 6
-            loadout: 20
+            points: 5
+            loadout: 10
             pointsbeta: 5
             loadoutbeta: 14
             slots: [
@@ -21206,8 +21206,9 @@ exportObj.basicCardData = ->
             standard: true
             slot: "Missile"
             charge: 2
-            attackf: 3
+            attack: 3
             range: """1-3"""
+            rangebonus: true
         }
     ]
 
