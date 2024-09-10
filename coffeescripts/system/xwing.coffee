@@ -4549,6 +4549,10 @@ class Ship
                 hullIconHTML += """<i class="xwing-miniatures-font header-hull xwing-miniatures-font-hull expanded-hull-or-shield"></i>"""
             hullIconHTML += """<i class="xwing-miniatures-font header-hull xwing-miniatures-font-hull"></i>"""
 
+        shieldHTML = if (effective_stats.shields? and effective_stats.shields > 0) then $.trim """
+            <span class="info-data info-shields">#{statAndEffectiveStat((@pilot.ship_override?.shields ? @data.shields), effective_stats, 'shields')}#{shieldRECUR}</span>
+        """ else ''
+
         html = $.trim """
             <div class="fancy-pilot-header">
                 <div class="pilot-header-text">#{if @pilot.display_name then @pilot.display_name else @pilot.name} <i class="xwing-miniatures-ship xwing-miniatures-ship-#{@data.name.canonicalize()}"></i><span class="fancy-ship-type"> #{if @data.display_name then @data.display_name else @data.name}</span></div>
@@ -4575,7 +4579,7 @@ class Ship
                     #{hullIconHTML}
                     <span class="info-data info-hull">#{statAndEffectiveStat((@pilot.ship_override?.hull ? @data.hull), effective_stats, 'hull')}</span>
                     #{shieldIconHTML}
-                    <span class="info-data info-shields">#{statAndEffectiveStat((@pilot.ship_override?.shields ? @data.shields), effective_stats, 'shields')}#{shieldRECUR}</span>
+                    #{shieldHTML}
                     #{energyHTML}
                     #{forceHTML}
                     #{chargeHTML}
