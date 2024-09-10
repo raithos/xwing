@@ -4125,7 +4125,7 @@ exportObj.basicCardData = ->
             points: 8
             loadout: 18
             pointsbeta: 8
-            loadoutbeta: 18
+            loadoutbeta: 13
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
@@ -5904,7 +5904,7 @@ exportObj.basicCardData = ->
                 "Turret"
                 "Missile"
                 "Gunner"
-                "Modifiaction"
+                "Modification"
             ]
         }
         {
