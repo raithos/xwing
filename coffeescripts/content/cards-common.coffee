@@ -9831,7 +9831,6 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Tech"
                 "Crew"
-                "Gunner"
                 "Device"
                 "Device"
                 "Modification"
