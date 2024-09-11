@@ -5549,7 +5549,7 @@ class GenericAddon
 
     occupyOtherUpgrades: ->
         checkupgrades = []
-        if @ship.builder.isBeta? and @data?.also_occupies_upgrades_beta?
+        if @ship.builder.isBeta and @data?.also_occupies_upgrades_beta?
             checkupgrades = @data?.also_occupies_upgrades_beta
         else
             if @data?.also_occupies_upgrades?
