@@ -3849,8 +3849,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Customized YT-1300 Light Freighter"
             skill: 6
-            points: 6
-            loadout: 20
+            points: 5
+            loadout: 10
             pointsbeta: 5
             loadoutbeta: 14
             slots: [
@@ -4125,7 +4125,7 @@ exportObj.basicCardData = ->
             points: 8
             loadout: 18
             pointsbeta: 8
-            loadoutbeta: 18
+            loadoutbeta: 13
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
@@ -5904,7 +5904,7 @@ exportObj.basicCardData = ->
                 "Turret"
                 "Missile"
                 "Gunner"
-                "Modifiaction"
+                "Modification"
             ]
         }
         {
@@ -21192,6 +21192,7 @@ exportObj.basicCardData = ->
             recurring: 1
             attackf: 3
             range: """1-2"""
+            rangebonus: true
         }
         {
             name: "Long-Range Scanners (SL)"
@@ -21206,8 +21207,9 @@ exportObj.basicCardData = ->
             standard: true
             slot: "Missile"
             charge: 2
-            attackf: 3
+            attack: 3
             range: """1-3"""
+            rangebonus: true
         }
     ]
 

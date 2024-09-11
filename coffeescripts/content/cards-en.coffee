@@ -3395,13 +3395,13 @@ exportObj.cardLoaders.English = () ->
            text: """While you decloak, you may spend 1 %CHARGE% to use the [2 %BANKLEFT%] or [2 %BANKRIGHT%] template instead of the [2 %STRAIGHT%] template."""
         "Saturation Rockets (SL)":
            display_name: """Saturation Rockets"""
-           text: """<strong>Attack:</strong> Spend 2 %CHARGE%. If the defender is in yuour %FRONTARC%, you may spend 1 additional %CHARGE% to roll 1 additional attack die. %LINEBREAK% After this attack, you may spend 1 %CHARGE% to perform this attack as a bonus attack against a different target at range 0-1 of the defender without paying the %CHARGE% cost."""
+           text: """<strong>Attack:</strong> Spend 2 %CHARGE%. If the defender is in your %FRONTARC%, you may spend 1 additional %CHARGE% to roll 1 additional attack die. %LINEBREAK% After this attack, you may spend 1 %CHARGE% to perform this attack as a bonus attack against a different target at range 0-1 of the defender without paying the %CHARGE% cost."""
         "Long-Range Scanners (SL)":
            display_name: """Long-Range Scanners"""
            text: """Before you perform a %LOCK% action, you may spend 1 %CHARGE%. If you do, you may acquire a lock on an object at any range during that action."""
         "Heavy Plasma Missiles (SL)":
            display_name: """Heavy Plasma Missiles"""
-           text: """<strong>Attack:</strong> Spend 1 %CHARGE%. After this attack hits, the defender loses 1 shield."""
+           text: """<strong>Attack (%LOCK%):</strong> Spend 1 %CHARGE%. After this attack hits, the defender loses 1 shield."""
 
 
         # Epic upgrades
