@@ -2347,7 +2347,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 14
             pointsbeta: 5
-            loadoutbeta: 25
+            loadoutbeta: 20
             slots: [
                 "Torpedo"
                 "Missile"
@@ -5714,7 +5714,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 10
             pointsbeta: 4
-            loadoutbeta: 1
+            loadoutbeta: 0
             slots: [
                 "Talent"
                 "Talent"
@@ -5724,6 +5724,7 @@ exportObj.basicCardData = ->
             slotsbeta: [
                 "Talent"
                 "Modification"
+                "Configuration"
             ]
         }
         {
@@ -5933,8 +5934,8 @@ exportObj.basicCardData = ->
             skill: 5
             points: 7
             loadout: 25
-            pointsbeta: 5
-            loadoutbeta: 14
+            pointsbeta: 6
+            loadoutbeta: 20
             slots: [
                 "Sensor"
                 "Torpedo"
@@ -5961,6 +5962,15 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Torpedo"
+                "Missile"
+                "Gunner"
+                "Device"
+                "Device"
+                "Modification"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Sensor"
                 "Missile"
                 "Gunner"
                 "Device"
@@ -13864,7 +13874,7 @@ exportObj.basicCardData = ->
             skill: 1
             max_per_squad: 2
             points: 3
-            pointsbeta: 2
+            pointsbeta: 3
             upgrades: [
                 "Homing Missiles"
                 "Contingency Protocol (SoC)"
@@ -15666,7 +15676,7 @@ exportObj.basicCardData = ->
             chassis: "Prioritized Weapons Systems"
             skill: 3
             points: 5
-            pointsbeta: 20
+            pointsbeta: 6
             ship_override:
                 actions: [
                     "Focus"
@@ -15692,7 +15702,7 @@ exportObj.basicCardData = ->
             chassis: "Prioritized Weapons Systems"
             skill: 4
             points: 5
-            pointsbeta: 20
+            pointsbeta: 6
             ship_override:
                 actions: [
                     "Focus"
@@ -15717,7 +15727,7 @@ exportObj.basicCardData = ->
             ship: "TIE/ph Phantom"
             skill: 4
             points: 5
-            pointsbeta: 20
+            pointsbeta: 6
             charge: 1
             recurring: 1
             upgrades: [
@@ -15734,7 +15744,7 @@ exportObj.basicCardData = ->
             ship: "TIE/ph Phantom"
             skill: 5
             points: 5
-            pointsbeta: 20
+            pointsbeta: 7
             charge: 2
             upgrades: [
                 "Without A Trace (SL)"
@@ -16760,7 +16770,7 @@ exportObj.basicCardData = ->
             name: "Static Discharge Vanes"
             id: 109
             slot: "Modification"
-            points: 5
+            points: 12
         }
         {
             name: "Tactical Scrambler"
@@ -17941,7 +17951,7 @@ exportObj.basicCardData = ->
             name: "Kaydel Connix"
             id: 231
             slot: "Crew"
-            points: 5
+            points: 8
             faction: "Resistance"
             unique: true
         }
