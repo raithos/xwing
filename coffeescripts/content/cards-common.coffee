@@ -15669,6 +15669,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Lieutenant Karsabi (SSL)"
+            xwsaddon: "ssl"
             unique: true
             id: 674
             faction: "Galactic Empire"
@@ -15695,6 +15696,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Major Vynder (SSL)"
+            xwsaddon: "ssl"
             unique: true
             id: 675
             faction: "Galactic Empire"
@@ -15721,6 +15723,7 @@ exportObj.basicCardData = ->
         }
         {
             name: '"Echo" (SSL)'
+            xwsaddon: "ssl"
             unique: true
             id: 676
             faction: "Galactic Empire"
@@ -15738,6 +15741,7 @@ exportObj.basicCardData = ->
         }
         {
             name: '"Whisper" (SSL)'
+            xwsaddon: "ssl"
             unique: true
             id: 677
             faction: "Galactic Empire"
@@ -22337,7 +22341,7 @@ String::serialtoxws = ->
         card_data = exportObj.basicCardData()
 
         if gamemode == 'xwabeta'
-            xws.version = 'BV1'
+            xws.version = 'BV2'
             xws.ruleset = 'XWA'
 
         card_pilots = {}
