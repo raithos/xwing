@@ -4667,7 +4667,7 @@ class Ship
         
         html += $.trim """
             <div class="ship-points-total">
-                <strong>#{@uitranslation("Ship Cost")}: #{@getPoints()}, #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta? and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")}), #{@uitranslation("Half Points")}: #{HalfPoints}, #{@uitranslation("Damage Threshold")}: #{Threshold}</strong> 
+                <strong>#{@uitranslation("Ship Cost")}: #{@getPoints()}, #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")}), #{@uitranslation("Half Points")}: #{HalfPoints}, #{@uitranslation("Damage Threshold")}: #{Threshold}</strong> 
             </div>
         """
 
@@ -4677,7 +4677,7 @@ class Ship
         table_html = $.trim """
             <tr class="simple-pilot">
                 <td class="name">#{if @pilot.display_name then @pilot.display_name else @pilot.name} &mdash; #{if @data.display_name then @data.display_name else @data.name}</td>
-                <td class="points">#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isBeta? and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)}</td>
+                <td class="points">#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isBeta and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)}</td>
             </tr>
         """
 
@@ -4692,13 +4692,13 @@ class Ship
         halfPoints = Math.floor @getPoints() / 2        
         threshold = Math.floor (@effectiveStats()['hull'] + @effectiveStats()['shields']) / 2
 
-        table_html += """<tr class="simple-ship-half-points"><td colspan="2">#{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta? and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")}) #{@uitranslation("Half Points")}: #{halfPoints} #{@uitranslation("Damage Threshold")}: #{threshold}</td></tr>"""
+        table_html += """<tr class="simple-ship-half-points"><td colspan="2">#{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")}) #{@uitranslation("Half Points")}: #{halfPoints} #{@uitranslation("Damage Threshold")}: #{threshold}</td></tr>"""
 
         table_html += '<tr><td>&nbsp;</td><td></td></tr>'
         table_html
 
     toSimpleCopy: ->
-        simplecopy = """#{@pilot.display_name} – #{@data.display_name} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isBeta? and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)})    \n"""
+        simplecopy = """#{@pilot.display_name} – #{@data.display_name} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isBeta and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)})    \n"""
         slotted_upgrades = (upgrade for upgrade in @upgrades when upgrade.data?)
         if slotted_upgrades.length > 0
             simplecopy +="    "
@@ -4713,13 +4713,13 @@ class Ship
         halfPoints = Math.floor @getPoints() / 2        
         threshold = Math.floor (@effectiveStats()['hull'] + @effectiveStats()['shields']) / 2
 
-        simplecopy += """#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta? and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}    \n    \n"""
+        simplecopy += """#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}    \n    \n"""
 
         simplecopy
         
         
     toRedditText: ->
-        reddit = """**#{@pilot.name} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isBeta? and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)})**    \n"""
+        reddit = """**#{@pilot.name} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isBeta and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)})**    \n"""
         slotted_upgrades = (upgrade for upgrade in @upgrades when upgrade.data?)
         if slotted_upgrades.length > 0
             halfPoints = Math.floor @getPoints() / 2
@@ -4731,7 +4731,7 @@ class Ship
                 upgrade_reddit = upgrade.toRedditText points
                 reddit_upgrades.push upgrade_reddit if upgrade_reddit?
             reddit += reddit_upgrades.join "    "
-            reddit += """&nbsp;*#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta? and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}*    \n"""
+            reddit += """&nbsp;*#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}*    \n"""
             
         reddit
 
