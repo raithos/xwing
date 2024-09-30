@@ -885,7 +885,7 @@ exportObj.cardLoaders['Español'] = () ->
            text: """Después de que efectúes un ataque, puedes gastar 2 %FORCE% para efectuar un ataque principal adicional contra un objetivo diferente. Si tu primer ataque falló, puedes optar por efectuar este ataque principal adicional contra ese mismo objetivo."""
         "Darth Vader":
            display_name: """Darth Vader"""
-           text: """Después de que realices una acción, puedes gastar 1 %FORCE% para realizar una acción.%LINEBREAK%Computadora de selección de blancos avanzada: Mientras efectúas un ataque principal contra un defensor que tienes fijado como blanco, tira 1 dado de ataque adicional y cambia 1 resultado %HIT% por un resultado %CRIT%."""
+           text: """Después de que realices una acción, puedes gastar 1 %FORCE% para realizar una acción."""
         "Dash Rendar":
            display_name: """Dash Rendar"""
            text: """Mientras te mueves, ignoras los obstáculos.%LINEBREAK%Punto ciego en los sensores: Mientras efectúas un ataque principal a alcance de ataque 0-1, no apliques el modificador por alcance 0-1 y tira 1 dado de ataque menos."""
@@ -1245,7 +1245,7 @@ exportObj.cardLoaders['Español'] = () ->
            text: """Mientras te defiendes o efectúas un ataque principal, si estás bajo tensión, debes tirar 1 dado de defensa menos o 1 dado de ataque adicional."""
         "Maarek Stele":
            display_name: """Maarek Stele"""
-           text: """Mientras efectúas un ataque, si al defensor se le va a infligir una carta de Daño boca arriba, en vez de eso roba 3 cartas de Daño, elige 1 de ellas a tu elección y descarta las otras.%LINEBREAK%Computadora de selección de blancos avanzada: Mientras efectúas un ataque principal contra un defensor que tienes fijado como blanco, tira 1 dado de ataque adicional y cambia 1 resultado %HIT% por un resultado %CRIT%."""
+           text: """Mientras efectúas un ataque, si al defensor se le va a infligir una carta de Daño boca arriba, en vez de eso roba 3 cartas de Daño, elige 1 de ellas a tu elección y descarta las otras."""
         "Mace Windu":
            display_name: """Mace Windu"""
            text: """Después de que ejecutes completamente una maniobra roja, recuperas 1 %FORCE%."""
@@ -1536,7 +1536,7 @@ exportObj.cardLoaders['Español'] = () ->
            text: """<i class = flavor_text>La lanzadera de mando clase Ípsilon sirve como base de operaciones para muchos agentes y oficiales superiores de la Primera Orden. Su potente equipo de sensores y de comunicaciones les permite orquestar la difusión del terror por toda la galaxia.</i>"""
         "Storm Squadron Ace":
            display_name: """As del Escuadrón Tormenta"""
-           text: """<i class = flavor_text>El caza TIE avanzado supuso una mejora del popular TIE/ln gracias a la incorporación de escudos, armamento más potente, paneles solares curvados y un hiperimpulsor.</i>%LINEBREAK%Computadora de selección de blancos avanzada: Mientras efectúas un ataque principal contra un defensor que tienes fijado como blanco, tira 1 dado de ataque adicional y cambia 1 resultado %HIT% por un resultado %CRIT%."""
+           text: """<i class = flavor_text>El caza TIE avanzado supuso una mejora del popular TIE/ln gracias a la incorporación de escudos, armamento más potente, paneles solares curvados y un hiperimpulsor."""
         "Sun Fac":
            display_name: """Sun Fac"""
            text: """Mientras realizas un ataque principal, si el defensor está en tiro de sable, lanza 1 dado de ataque adicional."""
@@ -1569,7 +1569,7 @@ exportObj.cardLoaders['Español'] = () ->
            text: """Después de que ejecutes completamente una maniobra de velocidad 2-4, puedes realizar una acción %BOOST%."""
         "Tempest Squadron Pilot":
            display_name: """Piloto del Escuadrón Tempestad"""
-           text: """<i class = flavor_text>El caza TIE avanzado supuso una mejora del popular TIE/ln gracias a la incorporación de escudos, armamento más potente, paneles solares curvados y un hiperimpulsor.</i>%LINEBREAK%Computadora de selección de blancos avanzada: Mientras efectúas un ataque principal contra un defensor que tienes fijado como blanco, tira 1 dado de ataque adicional y cambia 1 resultado %HIT% por un resultado %CRIT%."""
+           text: """<i class = flavor_text>El caza TIE avanzado supuso una mejora del popular TIE/ln gracias a la incorporación de escudos, armamento más potente, paneles solares curvados y un hiperimpulsor."""
         "Ten Numb":
            display_name: """Ten Numb"""
            text: """Mientras te defiendes o efectúas un ataque, puedes gastar 1 ficha de Tensión para cambiar todos tus resultados %FOCUS% por resultados %EVADE% o %HIT%."""
@@ -1593,7 +1593,7 @@ exportObj.cardLoaders['Español'] = () ->
            text: """<i class = flavor_text>El espacioso diseño de triple cubierta del YV-666 lo convierte en un vehículo muy popular entre cazarrecompensas y esclavistas, quienes suelen modificar una de las cubiertas para dedicarla por entero al transporte de prisioneros.</i>"""
         "Turr Phennir":
            display_name: """Turr Phennir"""
-           text: """Después de que efectúes un ataque, puedes realizar una acción %BARRELROLL% o %BOOST%, incluso aunque estés bajo tensión.%LINEBREAK%Propulsores automatizados: Después de que realices una acción, puedes realizar una acción %BARRELROLL% roja o una acción %BOOST% roja."""
+           text: """Después de que efectúes un ataque, puedes realizar una acción %BARRELROLL% o %BOOST%, incluso aunque estés bajo tensión."""
         "Unkar Plutt":
            display_name: """Unkar Plutt"""
            text: """Al comienzo de la fase de Enfrentamiento, si tienes una o más naves a alcance 0, tú y toda otra nave que tengas a alcance 0 recibís 1 ficha de Campo de tracción. %LINEBREAK%Campos de tracción de remolque: Acción: Elige una nave que tengas en tu %FRONTARC% a alcance 1. Esa nave recibe 1 ficha de Campo de tracción, o 2 fichas de Campo de tracción si está situada en tu %BULLSEYEARC% a alcance 1."""
@@ -1638,7 +1638,7 @@ exportObj.cardLoaders['Español'] = () ->
            text: """<i class = flavor_text>Los pilotos del caza Colmillo mandaloriano deben dominar el Envite de Concordia, una maniobra que se vale de la estilizada silueta del vehículo para efectuar mortíferos asaltos frontales.</i>"""
         "Zertik Strom":
            display_name: """Zertik Strom"""
-           text: """Durante la fase Final, puedes gastar un Blanco fijado que tengas sobre una nave enemiga para exponer 1 de las cartas de Daño de esa nave.%LINEBREAK%Computadora de selección de blancos avanzada: Mientras efectúas un ataque principal contra un defensor que tienes fijado como blanco, tira 1 dado de ataque adicional y cambia 1 resultado %HIT% por un resultado %CRIT%."""
+           text: """Durante la fase Final, puedes gastar un Blanco fijado que tengas sobre una nave enemiga para exponer 1 de las cartas de Daño de esa nave."""
         "Zeta Squadron Pilot":
            display_name: """Piloto del Escuadrón Zeta"""
            text: """<i class = flavor_text>Sin las trabas de una engorrosa burocracia galáctica, las tecnologías que fueron investigadas originalmente en el programa de TIE avanzado del Imperio se producen ahora en masa para los cazas estelares de la Primera Orden. Como resultado, los pilotos de TIE/fo disfrutan de unos índices de supervivencia superiores a los de sus predecesores en el Imperio Galáctico.</i>"""
@@ -3000,7 +3000,7 @@ exportObj.cardLoaders['Español'] = () ->
            text: """Después de que reveles tu selector, puedes establecer en él una maniobra básica que tenga un valor de velocidad inmediatamente superior al de la actual. Mientras ejecutas esa maniobra, incrementa su dificultad."""
         "Kaz's Fireball":
            display_name: """Fireball de Kaz"""
-           text: """<strong>Preparación:</strong> cuando resuelvas <strong>Explosion en Vol</strong>, puedes buscar y elegir una carta de daño del mazo con la característica <strong>Vaisseau</strong>; en su lugar, esa carta se te asigna. Luego, baraja el mazo de daño. %LINEBREAK%Puedes realizar acciones de cartas de daño, incluso si estás ionizado."""
+           text: """<strong>Preparación:</strong> cuando resuelvas <strong>Explosión con Alas</strong>, puedes buscar y elegir una carta de daño del mazo con la característica <strong>Nave</strong>; en su lugar, esa carta se te asigna. Luego, baraja el mazo de daño. %LINEBREAK%Puedes realizar acciones de cartas de daño, incluso si estás ionizado."""
         "Ketsu Onyo":
            display_name: """Ketsu Onyo"""
            text: """<i>Sólo Escoria</i>%LINEBREAK%Al comienzo de la fase Final, puedes elegir 1 nave enemiga que tengas en tu arco de fuego a alcance 0-2. Si lo haces, esa nave no retira sus fichas de Campo de tracción."""
@@ -3141,7 +3141,7 @@ exportObj.cardLoaders['Español'] = () ->
            text: """<i>Sólo Escoria</i>%LINEBREAK%Mientras te mueves y efectúas ataques, ignoras los obstáculos que tienes fijados como blanco."""
         "R1-J5":
            display_name: """R1-J5"""
-           text: """Mientras tengas 2 marcadores de estrés o menos, puedes realizar acciones de las cartas de daño, incluso si estás stressé.%LINEBREAK%Después de reparar una carta de daño con la característica <strong>Nave</strong>, puedes gastar 1 %CHARGE% para reparar esta carta de nuevo."""
+           text: """Mientras tengas 2 marcadores de estrés o menos, puedes realizar acciones de las cartas de daño, incluso si estás estresado.%LINEBREAK%Después de reparar una carta de daño con la característica <strong>Nave</strong>, puedes gastar 1 %CHARGE% para reparar esta carta de nuevo."""
         "R2 Astromech":
            display_name: """Droide astromecánico R2"""
            text: """Después de que reveles tu selector de maniobras, puedes gastar 1%CHARGE% y recibir 1 ficha de Desarme para recuperar 1 escudo."""
@@ -3290,7 +3290,7 @@ exportObj.cardLoaders['Español'] = () ->
            text: """<i>Sólo nave grande o nave mediana</i>%LINEBREAK%Mientras obstruyes el ataque de una nave enemiga, el defensor tira 1 dado de defensa adicional."""
         "Targeting Computer":
            display_name: """Computadora de selección de blancos"""
-           text: """Las computadoras de selección de blancos son componentes habituales en muchas naves, sobre todo en aquellas diseñadas para disparar cabezas explosivas. Algunos cazas estelares y transportes pequeños carecen de estos sistemas de guiado de armas, aunque eso no impide instalárselos como una modificación ulterior."""
+           text: """ """
         "Targeting Synchronizer":
            display_name: """Sincronizador de disparos"""
            text: """Mientras una nave aliada que tienes a alcance 1-2 efectúa un ataque contra un objetivo que tienes fijado como blanco, esa nave aliada ignora el requisito de ataque %LOCK%."""
