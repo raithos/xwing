@@ -1608,6 +1608,7 @@ class exportObj.SquadBuilder
                 @desired_points_input.val 20
             when 'epic'
                 @isEpic = true
+                @isBeta = true
                 @desired_points_input.val 20
                 @epic_not_legal_container.toggleClass 'd-none', false
             when 'quickbuild'

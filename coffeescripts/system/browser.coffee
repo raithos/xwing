@@ -836,11 +836,13 @@ class exportObj.CardBrowser
             return false unless (@getPoints(card.data) >= @minimum_point_costs.value and @getPoints(card.data) <= @maximum_point_costs.value) or (card.data.variablepoints?)
             if card.data.variablepoints?
                 matching_points = false
-                for points in card.data.pointsarray
-                    if points >= @minimum_point_costs.value and points <= @maximum_point_costs.value
-                        matching_points = true
-                        break
-                return false unless matching_points
+                variablepoints = @getPoints(card.data)
+                if Array.isArray(variablepoints)
+                    for points in variablepoints
+                        if points >= @minimum_point_costs.value and points <= @maximum_point_costs.value
+                            matching_points = true
+                            break
+                    return false unless matching_points
             if card.orig_type == 'Ship' # check if pilot matching points exist
                 matching_points = false
                 for faction in selected_factions

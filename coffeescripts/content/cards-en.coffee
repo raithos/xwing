@@ -116,7 +116,7 @@ exportObj.translations.English =
         "Collection warning": "You cannot field this list with your collection!"
         "Ship number warning": "A tournament legal squad must contain 3-8 ships!"
         "Multi-Faction warning": "Multi-Faction Lists are NEVER tournament legal!"
-        "Epic Unofficial": "Epic points are unofficial and not supported, endorsed, or accepted by AMG. Please don't make a big deal about it."
+        "Epic Unofficial": "Epic points are now managed by the XWA."
         "XWS Import Dialog": "Import your list via XWS into YASB.<br><i>XWS is a common format to share lists between applications.</i>"
         "Copy below simple text": "<p>Copy the below and paste it elsewhere.</p>"
         "Copy below markdown": "<p>Copy the below and paste it into your reddit post.</p><p>Make sure that the post editor is set to markdown mode.</p>"
@@ -279,7 +279,7 @@ exportObj.cardLoaders.English = () ->
            text: """At the start of the Engagement Phase, you may choose 1 enemy ship in your %SINGLETURRETARC% at range 0-2 and spend 1 %FORCE%. If you do, that ship gains 1 stress token unless it removes 1 green token."""
         "Autopilot Drone":
            display_name: """Autopilot Drone"""
-           text: """<i class = flavor_text>Sometimes, manufacturer's warnings are made to be broken."""
+           text: """<i class = flavor_text>Sometimes, manufacturer's warnings are made to be broken.</i>"""
         "Bandit Squadron Pilot":
            display_name: """Bandit Squadron Pilot"""
            text: """<i class = flavor_text>The Z-95 Headhunter was the primary inspiration for Incom Corporation's exemplary T-65 X-wing starfighter. Though it is considered outdated by modern standards, it remains a versatile and potent snub fighter.</i>"""
@@ -1815,7 +1815,7 @@ exportObj.cardLoaders.English = () ->
            text: """While you perform an attack at range 1, you <b>must</b> roll 1 additional die. After the attack hits, suffer 1 %CRIT% damage."""
         "Baktoid Prototype (SoC)":
            display_name: """Baktoid Prototype (SoC)"""
-           text: """While you perform a special attack, if a friendly ship with the <strong>Networked Calculations</strong> ship ability has a lock on the defender, you may ingore the %FOCUS%, %CALCULATE% or %LOCK% requirement of the attack."""
+           text: """While you perform a special attack, if a friendly ship with the <strong>Networked Calculations</strong> ship ability has a lock on the defender, you may ignore the %FOCUS%, %CALCULATE% or %LOCK% requirement of the attack."""
         "DIS-347 (SoC)":
            display_name: """DIS-347 (SoC)"""
            text: """At the start of the Engagement Phase, you may acquire a lock on an object at range 1-3 that has a friendly lock."""
@@ -3618,32 +3618,6 @@ exportObj.cardLoaders.English = () ->
         "Neimoidian Grasp":
            display_name: """Neimoidian Grasp"""
            text: """After you perform an attack, you may perform a red  %EVADE% action. While you defend, if you are evading, you may roll 1 addtional defense die."""
-
-        # Upgrade Command Cards
-        "New Recruit":
-           display_name: """New Recruit"""
-           text: """<strong>Setup:</strong> Before ships are placed, discard all other upgrades equipped (except %CONFIGURATION%). %LINEBREAK% This ship costs and scores for 1 less."""
-        "Locked-Turret Specialist":
-           display_name: """Locked-Turret Specialist"""
-           text: """You must treat the %SINGLETURRETARC% requirement of your equipped %TURRET% attacks as %BULLSEYEARC%. While making a %TURRET% attack, you may add 1 %FOCUS% result. While you perform a %TURRET% attack, you may increase the range requirement by 1, to a maximum of 3. During the System Phase, you may spend one %CHARGE%. If you do, you may acquire a lock on an enemy ship in your %BULLSEYEARC%."""
-        "Heavy Reinforced Vanguard":
-           display_name: """Heavy Reinforced Vanguard"""
-           text: """After you perform a %BOOST% or %BARRELROLL%, gain 1 strain token. In the End Phase, you may gain 3 strain tokens to repair 1 faceup damage card of your choice. %LINEBREAK% This ship costs and scores for 1 more."""
-        "Evasive Interceptor":
-           display_name: """Evasive Interceptor"""
-           text: """After you perform an %EVADE% action, gain 1 stress token. Before you activate, you may expose 1 damage card to %BOOST% or %BARRELROLL%. %LINEBREAK% This ship costs and scores for 1 less."""
-        "Countermeasures Specialist":
-           display_name: """Countermeasures Specialist"""
-           text: """At the start of the Engagement Phase, you may spend 1 %CHARGE%. If you do, all ships at range 0-3 break all locks they are maintaining. %LINEBREAK% While you jam, you can choose enemy ships in your %BULLSEYEARC% at range 3."""
-        "Combat Veteran":
-           display_name: """Combat Veteran"""
-           text: """While you perform an attack, if the defender is in your %BULLSEYEARC%, defense dice cannot be rerolled. While you defend, if you are not in the %BULLSEYEARC%, attack dice cannot be rerolled. %LINEBREAK% This ship costs and scores for 1 more."""
-        "Force Adept Pilot":
-           display_name: """Force Adept Pilot"""
-           text: """After you reveal a bank [%BANKLEFT% or %BANKRIGHT%] or turn [%TURNLEFT% or %TURNRIGHT%] maneuver, you may spend 1 %FORCE%. If you do, perform that maneuver as a red sideslip. %LINEBREAK% This ship costs and scores for 1 more."""
-        "Adaptable Pilot":
-           display_name: """Adaptable Pilot"""
-           text: """Add 10 loadout to this ship. This ship costs and scores for 1 more."""
 
     condition_translations =
         'Suppressive Fire':
