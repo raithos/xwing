@@ -287,7 +287,7 @@ class exportObj.SquadBuilder
             </div>
 
             <div class="row squad-save-buttons">
-                <div class="col-md-12">
+                <div class="col-md-12 squad-save-buttons-container">
                     <button class="show-authenticated btn btn-primary save-list"><i class="far fa-save"></i>&nbsp;<span class="translated" defaultText="Save"></span></button>
                     <button class="show-authenticated btn btn-primary save-list-as"><i class="far fa-file"></i>&nbsp;<span class="translated" defaultText="Save As..."></span></button>
                     <button class="show-authenticated btn btn-primary delete-list disabled"><i class="fa fa-trash"></i>&nbsp;<span class="translated" defaultText="Delete"></span></button>
