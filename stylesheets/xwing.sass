@@ -499,6 +499,11 @@ li.squad-summary
   background: #282f40
   margin-bottom: 10px
 
+.squad-save-buttons-container
+    display: flex
+    flex-wrap: wrap
+    gap: 6px
+
 .collection-inventory-content
   ul
     list-style-type: none
@@ -645,15 +650,23 @@ h6
 
 .ship-query-modal, .pilot-query-modal, .upgrade-query-modal
     padding: 0px 12px
-    
-.input-group-addon
-  padding: 1px
+    height: 26px
+    margin-left: 2px
 
 .addon-container
   display: flex
   flex-wrap: wrap
 .upgrade-box
   width: 50%
+  padding-right:  4px
+  padding-left:  4px
+
+.upgrade-box:nth-child(even)
+  padding-right: 0
+
+.upgrade-box:nth-child(odd)
+  padding-left: 0
+
 
 .action-bar
   margin-top: 6px
