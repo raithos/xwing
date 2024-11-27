@@ -250,7 +250,7 @@ class exportObj.SquadBuilder
                         <input type="text" maxlength="64" placeholder="#{@uitranslation("Name your squad...")}" />
                         <button class="btn save"><i class="fa fa-pen-square"></i></button>
                     </div>
-                    <br />
+                    <br class="hide-on-mobile" />
                     <select class="game-type-selector">
                         <option value="xwabeta" class="translated" defaultText="XWA Beta">#{@uitranslation("XWA Beta")}</option>
                         <option value="standard" class="translated" defaultText="Standard" selected="selected">#{@uitranslation("Standard")}</option>
