@@ -15909,7 +15909,7 @@ exportObj.basicCardData = ->
             ship: "TIE/ph Phantom"
             skill: 5
             points: 5
-            pointsbeta: 5
+            pointsbeta: 6
             charge: 2
             upgrades: [
                 "Without A Trace (SL)"
