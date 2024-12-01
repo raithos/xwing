@@ -3377,7 +3377,7 @@ exportObj.cardLoaders.English = () ->
            text: """After you fully execute a Koiogran Turn [%KTURN%], you may spend 1 %CHARGE% to perform an action, even while stressed."""
         "Without A Trace (SL)":
            display_name: """Without A Trace"""
-           text: """After you gain a cloak token, you may remove 1 red token. While you are cloaked, enenmy ships cannot acuqire locks on you."""
+           text: """After you gain a cloak token, you may remove 1 red token. While you are cloaked, enemy ships cannot acquire locks on you."""
         "Relay System (SL)":
            display_name: """Relay System"""
            text: """After a friendly ship at range 0-2 performs a %LOCK% action, you may acquire a lock on the same object. %LINEBREAK% After you perform an attack that hits, you may spend a lock you have on the defender. If you do, another friendly ship at range 0-1 may acquire a lock on the defender."""
