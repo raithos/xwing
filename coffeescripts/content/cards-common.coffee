@@ -2433,7 +2433,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 18
             pointsbeta: 5
-            loadoutbeta: 12
+            loadoutbeta: 10
             slots: [
                 "Talent"
                 "Tech"
@@ -4010,8 +4010,8 @@ exportObj.basicCardData = ->
             skill: 6
             points: 6
             loadout: 12
-            pointsbeta: 6
-            loadoutbeta: 10
+            pointsbeta: 5
+            loadoutbeta: 3
             keyword: ["Mandalorian"]
             slots: [
                 "Talent"
@@ -4031,7 +4031,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 10
             pointsbeta: 5
-            loadoutbeta: 9
+            loadoutbeta: 11
             keyword: ["Mandalorian"]
             slots: [
                 "Talent"
@@ -5392,6 +5392,12 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Configuration"
             ]
+            slotsbeta: [
+                "Talent"
+                "Sensor"
+                "Modification"
+                "Configuration"
+            ]
         }
         {
             name: "Rho Squadron Pilot"
@@ -5465,6 +5471,13 @@ exportObj.basicCardData = ->
                 "Crew"
                 "Modification"
                 "Title"
+            ]
+            slotsbeta: [
+                "Sensor"
+                "Cannon"
+                "Crew"
+                "Crew"
+                "Modification"
             ]
         }
         {
@@ -6445,6 +6458,14 @@ exportObj.basicCardData = ->
                 "Device"
                 "Modification"
             ]
+            slotsbeta: [
+                "Torpedo"
+                "Crew"
+                "Crew"
+                "Gunner"
+                "Device"
+                "Modification"
+            ]
         }
         {
             name: '"Howlrunner"'
@@ -6725,6 +6746,7 @@ exportObj.basicCardData = ->
             slotsbeta: [
                 "Talent"
                 "Talent"
+                "Sensor"
                 "Tech"
                 "Missile"
                 "Modification"
@@ -6761,6 +6783,12 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Modification"
             ]
+            slotsbeta: [
+                "Talent"
+                "Sensor"
+                "Tech"
+                "Modification"
+            ]
         }
         {
             name: "Kylo Ren"
@@ -6794,8 +6822,8 @@ exportObj.basicCardData = ->
             skill: 5
             points: 5
             loadout: 12
-            pointsbeta: 6
-            loadoutbeta: 17
+            pointsbeta: 5
+            loadoutbeta: 11
             slots: [
                 "Talent"
                 "Tech"
@@ -6882,14 +6910,24 @@ exportObj.basicCardData = ->
             skill: 4
             points: 4
             loadout: 5
-            pointsbeta: 4
-            loadoutbeta: 7
+            pointsbeta: 5
+            loadoutbeta: 15
             slots: [
                 "Talent"
                 "Sensor"
                 "Tech"
                 "Missile"
                 "Gunner"
+                "Modification"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Sensor"
+                "Tech"
+                "Missile"
+                "Missile"
+                "Gunner"
+                "Modification"
                 "Modification"
             ]
         }
@@ -7278,6 +7316,12 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Modification"
             ]
+            slotsbeta: [
+                "Talent"
+                "Sensor"
+                "Tech"
+                "Modification"
+            ]
         }
         {
             name: '"Scorch"'
@@ -7296,6 +7340,13 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Modification"
             ]
+            slotsbeta: [
+                "Talent"
+                "Talent"
+                "Sensor"
+                "Tech"
+                "Modification"
+            ]
         }
         {
             name: '"Longshot"'
@@ -7309,6 +7360,12 @@ exportObj.basicCardData = ->
             pointsbeta: 3
             loadoutbeta: 9
             slots: [
+                "Talent"
+                "Tech"
+                "Tech"
+                "Modification"
+            ]
+            slotsbeta: [
                 "Talent"
                 "Tech"
                 "Tech"
@@ -7331,6 +7388,13 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Modification"
             ]
+            slotsbeta: [
+                "Talent"
+                "Talent"
+                "Sensor"
+                "Tech"
+                "Modification"
+            ]
         }
         {
             name: "Lieutenant Rivas"
@@ -7345,6 +7409,12 @@ exportObj.basicCardData = ->
             loadoutbeta: 11
             slots: [ 
                 "Talent"
+                "Tech" 
+                "Modification"
+            ]
+            slotsbeta: [ 
+                "Talent"
+                "Sensor"
                 "Tech" 
                 "Modification"
             ]
@@ -7368,6 +7438,14 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Modification"
             ]
+            slotsbeta: [
+                "Talent"
+                "Talent"
+                "Sensor"
+                "Missile"
+                "Tech"
+                "Modification"
+            ]
         }
         {
             name: "Omega Squadron Ace"
@@ -7381,6 +7459,13 @@ exportObj.basicCardData = ->
             loadoutbeta: 10
             slots: [
                 "Talent"
+                "Tech"
+                "Modification"
+                "Modification"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Sensor"
                 "Tech"
                 "Modification"
                 "Modification"
@@ -7400,6 +7485,11 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Modification"
             ]
+            slotsbeta: [
+                "Sensor"
+                "Tech"
+                "Modification"
+            ]
         }
         {
             name: "Epsilon Squadron Cadet"
@@ -7415,6 +7505,8 @@ exportObj.basicCardData = ->
                 "Tech"
             ]
             slotsbeta: [
+                "Talent"
+                "Sensor"
                 "Tech"
                 "Modification"
             ]
@@ -7862,6 +7954,14 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Tech"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Talent"
+                "Sensor"
+                "Tech"
+                "Tech"
+                "Modification"
             ]
         }
         {
@@ -8549,6 +8649,11 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Configuration"
             ]
+            slotsbeta: [
+                "Device"
+                "Device"
+                "Modification"
+            ]
         }
         {
             name: "DBS-404"
@@ -8857,6 +8962,12 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Astromech"
                 "Modification"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Gunner"
+                "Gunner"
+                "Astromech"
             ]
         }
         {
@@ -9172,7 +9283,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 15
             pointsbeta: 5
-            loadoutbeta: 21
+            loadoutbeta: 17
             slots: [
                 "Talent"
                 "Talent"
@@ -9712,6 +9823,8 @@ exportObj.basicCardData = ->
             ship: "TIE/ba Interceptor"
             points: 4
             loadout: 7
+            pointsbeta: 4
+            loadoutbeta: 10
             slots: [
                 "Talent"
                 "Talent"
@@ -10024,6 +10137,14 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Tech"
                 "Missile"
+                "Missile"
+                "Gunner"
+                "Sensor"
+                "Modification"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Tech"
                 "Missile"
                 "Gunner"
                 "Sensor"
@@ -10789,7 +10910,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 4
             pointsbeta: 4
-            loadoutbeta: 9
+            loadoutbeta: 10
             force: 2
             keyword: ["Jedi", "Light Side"]
             slots: [
@@ -10809,7 +10930,7 @@ exportObj.basicCardData = ->
             points: 4
             loadout: 12
             pointsbeta: 4
-            loadoutbeta: 7
+            loadoutbeta: 9
             force: 3
             keyword: ["Jedi", "Light Side"]
             slots: [
@@ -10829,8 +10950,8 @@ exportObj.basicCardData = ->
             ship: "Eta-2 Actis"
             points: 4
             loadout: 10
-            pointsbeta: 4
-            loadoutbeta: 6
+            pointsbeta: 5
+            loadoutbeta: 17
             force: 2
             keyword: ["Jedi", "Light Side"]
             slots: [
@@ -10852,7 +10973,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 15
             pointsbeta: 4
-            loadoutbeta: 4
+            loadoutbeta: 6
             force: 2
             keyword: ["Jedi", "Light Side"]
             slots: [
@@ -10874,8 +10995,8 @@ exportObj.basicCardData = ->
             force: 3
             points: 5
             loadout: 15
-            pointsbeta: 5
-            loadoutbeta: 17
+            pointsbeta: 4
+            loadoutbeta: 7
             keyword: ["Jedi", "Light Side"]
             slots: [
                 "Force"
@@ -10897,7 +11018,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 15
             pointsbeta: 4
-            loadoutbeta: 3
+            loadoutbeta: 5
             keyword: ["Jedi", "Light Side", "Dark Side"]
             slots: [
                 "Force"
@@ -11325,11 +11446,17 @@ exportObj.basicCardData = ->
             skill: 4
             points: 4
             loadout: 7
-            pointsbeta: 3
-            loadoutbeta: 7
+            pointsbeta: 4
+            loadoutbeta: 12
             slots: [
                 "Talent"
                 "Missile"
+                "Configuration"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Missile"
+                "Modification"
                 "Configuration"
             ]
         }
@@ -12011,7 +12138,7 @@ exportObj.basicCardData = ->
             skill: 2
             points: 4
             loadout: 3
-            pointsbeta: 4
+            pointsbeta: 3
             loadoutbeta: 8
             slots: [
                 "Talent"
@@ -12019,6 +12146,12 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Tech"
                 "Configuration"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Missile"
+                "Tech"
+                "Tech"
             ]
         }
         {
@@ -12156,6 +12289,8 @@ exportObj.basicCardData = ->
             skill: 4
             points: 4
             loadout: 7
+            pointsbeta: 5
+            loadoutbeta: 18
             keyword: ["Mandalorian"]
             slots: [
                 "Talent"
@@ -12192,7 +12327,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 9
             pointsbeta: 5
-            loadoutbeta: 10
+            loadoutbeta: 8
             keyword: ["Mandalorian"]
             slots: [
                 "Talent"
@@ -13671,7 +13806,6 @@ exportObj.basicCardData = ->
             ship: "Eta-2 Actis"
             skill: 4
             points: 4
-            pointsbeta: 5
             force: 2
             chassis: "Intuitive Controls"
             keyword: ["Jedi","Light Side"]
@@ -14597,12 +14731,19 @@ exportObj.basicCardData = ->
             points: 4
             loadout: 11
             pointsbeta: 4
-            loadoutbeta: 5
+            loadoutbeta: 8
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
                 "Force"
                 "Talent"
+                "Cannon"
+                "Astromech"
+                "Modification"
+            ]
+            slotsbeta: [
+                "Force"
+                "Force"
                 "Cannon"
                 "Astromech"
                 "Modification"
@@ -14664,6 +14805,14 @@ exportObj.basicCardData = ->
                 "Cannon"
                 "Modification"
             ]
+            slotsbeta: [
+                "Talent"
+                "Sensor"
+                "Tech"
+                "Tech"
+                "Missile"
+                "Modification"
+            ]
         }
         {
             name: "Jul Jerjerrod"
@@ -14706,6 +14855,12 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Modification"
             ]
+            slotsbeta: [
+                "Talent"
+                "Sensor"
+                "Tech"
+                "Modification"
+            ]
         }
         {
             name: "Lin Gaava"
@@ -14719,6 +14874,13 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Talent"
+                "Tech"
+                "Modification"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Talent"
+                "Sensor"
                 "Tech"
                 "Modification"
             ]
@@ -14959,6 +15121,7 @@ exportObj.basicCardData = ->
             ship: "RZ-1 A-wing"
             skill: 4
             points: 4
+            pointsbeta: 3
             upgrades: [
                 "Hopeful"
                 "Concussion Missiles"
@@ -15261,7 +15424,6 @@ exportObj.basicCardData = ->
             ship: "A/SF-01 B-wing"
             skill: 1
             points: 5
-            pointsbeta: 4
             charge: 2
             recurring: 1
             chassis: "Gyro-Cockpit"
@@ -15677,7 +15839,6 @@ exportObj.basicCardData = ->
             chassis: "Prioritized Weapons Systems"
             skill: 3
             points: 5
-            pointsbeta: 6
             ship_override:
                 actions: [
                     "Focus"
@@ -15748,7 +15909,7 @@ exportObj.basicCardData = ->
             ship: "TIE/ph Phantom"
             skill: 5
             points: 5
-            pointsbeta: 7
+            pointsbeta: 5
             charge: 2
             upgrades: [
                 "Without A Trace (SL)"
@@ -16303,6 +16464,7 @@ exportObj.basicCardData = ->
             id: 57
             slot: "Crew"
             points: 3
+            pointsbeta: 5
             unique: true
             faction: "Rebel Alliance"
         }
@@ -16420,7 +16582,7 @@ exportObj.basicCardData = ->
             id: 70
             slot: "Device"
             points: 10
-            pointsbeta: 7
+            pointsbeta: 9
             charge: 2
             applies_condition: 'Proximity Mine'.canonicalize()
         }
@@ -18189,6 +18351,7 @@ exportObj.basicCardData = ->
             id: 255
             slot: "Talent"
             points: 4
+            pointsbeta: 3
             ship: "Nantex-Class Starfighter"
         }
         {
@@ -22228,7 +22391,7 @@ String::serialtoxws = ->
         card_data = exportObj.basicCardData()
 
         if gamemode == 'xwabeta'
-            xws.version = 'BV2'
+            xws.version = 'BV3'
             xws.ruleset = 'XWA'
 
         card_pilots = {}
