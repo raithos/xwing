@@ -12157,7 +12157,6 @@ exportObj.basicCardData = ->
             ]
             slotsbeta: [
                 "Talent"
-                "Missile"
                 "Tech"
                 "Tech"
             ]
