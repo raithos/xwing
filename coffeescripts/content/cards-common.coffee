@@ -6754,28 +6754,8 @@ exportObj.basicCardData = ->
             ]
         }
         {
-            name: '"Longshot"'
-            id: 234
+            id: 234 # duplicate, has been removed
             skip: true
-            unique: true
-            faction: "First Order"
-            ship: "TIE/fo Fighter"
-            skill: 3
-            points: 3
-            loadout: 3
-            slots: [
-                "Talent"
-                "Tech"
-                "Tech"
-                "Modification"
-            ]
-            slotsbeta: [
-                "Talent"
-                "Sensor"
-                "Tech"
-                "Tech"
-                "Modification"
-            ]
         }
         {
             name: '"Muse"'
@@ -7375,6 +7355,7 @@ exportObj.basicCardData = ->
             ]
             slotsbeta: [
                 "Talent"
+                "Sensor"
                 "Tech"
                 "Tech"
                 "Modification"
