@@ -2101,40 +2101,53 @@ exportObj.cardLoaders.English = () ->
         # Epic Ships
         "Republic Judiciary":
            display_name: """Republic Judiciary"""
-           text: """<i class = flavor_text>The Galactic Republic uses small, swift warships such as the CR90 corvette to respond rapidly to Separatist incursions across the galaxy.</i> %LINEBREAK% <strong>Broadside Batteries:</strong> You can acquire locks and perform primary attacks at range 1-4."""
+           text: """<i class = flavor_text>The Galactic Republic uses small, swift warships such as the CR90 corvette to respond rapidly to Separatist incursions across the galaxy.</i>"""
         "Alderaanian Guard":
            display_name: """Alderaanian Guard"""
-           text: """<i class = flavor_text>A craft used since before the Clone Wars, the CR90 corvette is favored by the Royal House of Alderaan for its versatility.</i> %LINEBREAK% <strong>Broadside Batteries:</strong> You can acquire locks and perform primary attacks at range 1-4."""
+           text: """<i class = flavor_text>A craft used since before the Clone Wars, the CR90 corvette is favored by the Royal House of Alderaan for its versatility.</i>"""
         "Outer Rim Patrol":
            display_name: """Outer Rim Patrol"""
-           text: """<i class = flavor_text>The <untalic>Raider</untalic>-class corvette is one of the Empire's smallest warships, often used for reconnaissance missions, surgical strikes, or suppressing enemy starfighters with its powerful ordnance.</i> %LINEBREAK% <strong>Concentrated Batteries:</strong> While you perform a primary, %TORPEDO%, or %MISSILE% attack, if the defender is in your %BULLSEYEARC%, roll 1 additional die."""
+           text: """<i class = flavor_text>The <untalic>Raider</untalic>-class corvette is one of the Empire's smallest warships, often used for reconnaissance missions, surgical strikes, or suppressing enemy starfighters with its powerful ordnance.</i>"""
         "First Order Collaborators":
            display_name: """First Order Collaborators"""
-           text: """<i class = flavor_text>The First Order's supporters make use of former Imperial vessels, such as the <untalic>Raider</untalic>-class corvette. Though it has outlived the regime that created it, this craft still spreads terror across the galaxy.</i> %LINEBREAK% <strong>Concentrated Batteries:</strong> While you perform a primary, %TORPEDO%, or %MISSILE% attack, if the defender is in your %BULLSEYEARC%, roll 1 additional die."""
+           text: """<i class = flavor_text>The First Order's supporters make use of former Imperial vessels, such as the <untalic>Raider</untalic>-class corvette. Though it has outlived the regime that created it, this craft still spreads terror across the galaxy.</i>"""
         "Echo Base Evacuees":
            display_name: """Echo Base Evacuees"""
-           text: """<i class = flavor_text>The GR-75 medium transport acquitted itself well at battles such as the evacuation of Hoth, where several of these ships were pivotal to the Rebel forces' escape.</i> %LINEBREAK% <strong>Resupply Craft:</strong> After another friendly ship at range 0-1 performs an action, you may spend 1 %ENERGY%. If you do, it removes 1 orange or red token, or recovers 1 shield."""
+           text: """<i class = flavor_text>The GR-75 medium transport acquitted itself well at battles such as the evacuation of Hoth, where several of these ships were pivotal to the Rebel forces' escape.</i>"""
         "New Republic Volunteers":
            display_name: """New Republic Volunteers"""
-           text: """<i class = flavor_text>In use since the Galactic Civil War, groups within the New Republic still utilize the GR-75 medium transport for supply and aid missions.</i> %LINEBREAK% <strong>Resupply Craft:</strong> After another friendly ship at range 0-1 performs an action, you may spend 1 %ENERGY%. If you do, it removes 1 orange or red token, or recovers 1 shield."""
+           text: """<i class = flavor_text>In use since the Galactic Civil War, groups within the New Republic still utilize the GR-75 medium transport for supply and aid missions.</i>"""
         "Outer Rim Garrison":
            display_name: """Outer Rim Garrison"""
-           text: """<i class = flavor_text>Capable of carrying TIE fighters and operating independently for long periods of time, the <untalic>Gozanti</untalic>-class cruiser is a common sight in the skies of downtrodden worlds across the Outer Rim.</i> %LINEBREAK% <strong>Docking Clamps:</strong> You can dock up to 4 small ships."""
+           text: """<i class = flavor_text>Capable of carrying TIE fighters and operating independently for long periods of time, the <untalic>Gozanti</untalic>-class cruiser is a common sight in the skies of downtrodden worlds across the Outer Rim.</i>"""
         "First Order Sympathizers":
            display_name: """First Order Sympathizers"""
-           text: """<i class = flavor_text>The First Order's swift rise to power rests upon ruthless innovation. However, sympathizers often repurpose Imperial designs, like the venerable <untalic>Gozanti</untalic>-class cruiser, in surveillance and patrol operations.</i> %LINEBREAK% <strong>Docking Clamps:</strong> You can dock up to 4 small ships."""
+           text: """<i class = flavor_text>The First Order's swift rise to power rests upon ruthless innovation. However, sympathizers often repurpose Imperial designs, like the venerable <untalic>Gozanti</untalic>-class cruiser, in surveillance and patrol operations.</i>"""
         "Separatist Privateers":
            display_name: """Separatist Privateers"""
-           text: """<i class = flavor_text>The Separatist Alliance makes use of all manner of unsavory contacts in its fight against the Galactic Republic, including corsairs and criminal cartels.</i> %LINEBREAK% <strong>Overdrive Burners:</strong> While you defend, if your revealed maneuver is speed 3-5, roll 1 additional defense die."""
+           text: """<i class = flavor_text>The Separatist Alliance makes use of all manner of unsavory contacts in its fight against the Galactic Republic, including corsairs and criminal cartels.</i>"""
         "Syndicate Smugglers":
            display_name: """Syndicate Smugglers"""
-           text: """<i class = flavor_text>Vessels like the C-ROC Cruiser allow criminal operations across the Outer Rim to move massive amounts of illicit materials, or project power that can bully small colonies into compliance.</i> %LINEBREAK% <strong>Overdrive Burners:</strong> While you defend, if your revealed maneuver is speed 3-5, roll 1 additional defense die."""
+           text: """<i class = flavor_text>Vessels like the C-ROC Cruiser allow criminal operations across the Outer Rim to move massive amounts of illicit materials, or project power that can bully small colonies into compliance.</i>"""
         "Colicoid Destroyer":
            display_name: """Colicoid Destroyer"""
-           text: """<i class = flavor_text>Designed by the Colicoid Creation Nest and equipped with powerful tentacles and a massive drill to tear through the hull of even the toughest starships and fortifications, the Trident-class Assault Ship is a terrifying testament to the threat posed by the Separatist Alliance.</i> %LINEBREAK% <strong>Tractor Grasp:</strong> After you perform a <b>Tractor Tentacles</b> attack that hits, the defender gains 1 tractor token."""
+           text: """<i class = flavor_text>Designed by the Colicoid Creation Nest and equipped with powerful tentacles and a massive drill to tear through the hull of even the toughest starships and fortifications, the Trident-class Assault Ship is a terrifying testament to the threat posed by the Separatist Alliance.</i>"""
         "Lawless Pirates":
            display_name: """Lawless Pirates"""
-           text: """<i class = flavor_text>The Separatist Alliance has close ties to certain mercenaries and criminal groups and, as the war rages on, its technology sometimes finds its way into unsavory hands.</i> %LINEBREAK% <strong>Tractor Grasp:</strong> After you perform a <b>Tractor Tentacles</b> attack that hits, the defender gains 1 tractor token."""
+           text: """<i class = flavor_text>The Separatist Alliance has close ties to certain mercenaries and criminal groups and, as the war rages on, its technology sometimes finds its way into unsavory hands.</i>"""
+        "Leia Organa (CR90)":
+           display_name: """Leia Organa"""
+           text: """ """
+
+        "Iden Versio (Raider)":
+           display_name: """Iden Versio"""
+           text: """ """
+        "Gideon Hask (Raider)":
+           display_name: """Gideon Hask"""
+           text: """ """
+        "Asajj Ventress (Trident)":
+           display_name: """Asajj Ventress"""
+           text: """ """
 
     upgrade_translations =
         "0-0-0":
@@ -3619,6 +3632,122 @@ exportObj.cardLoaders.English = () ->
            display_name: """Neimoidian Grasp"""
            text: """After you perform an attack, you may perform a red  %EVADE% action. While you defend, if you are evading, you may roll 1 addtional defense die."""
 
+        # Epic SL Upgrades
+        "Leia Organa (Epic)":
+           display_name: """Leia Organa"""
+           text: """After a friendly ship at range 0-3 is destroyed, choose another friendly ship at range 0-3. It may perform a %BOOST% or %FOCUS% action."""
+        "R2-D2 (Epic)":
+           display_name: """R2-D2"""
+           text: """At the end of the Engagement Phase, if you are not shielded, you may roll 1 attack die to recover one %SHIELD%. If you do, on a %HIT% result, deal 1 facedown damage card to this ship."""
+        "C-3PO (Epic)":
+           display_name: """C-3PO"""
+           text: """While you defend, you may gain 1 strain token. If you do, change 1 of your results to an %EVADE% result."""
+        "Bail Organa (Epic)":
+           display_name: """Bail Organa"""
+           text: """At the start of the Engagement Phase, you may remove a green token from this ship. If you do, up to three other friendly ships at range 0-3 gain that token."""
+        "Secret Provisions (Epic)":
+           display_name: """Secret Provisions"""
+           text: """During the End Phase, if you are at range 1-3 of the opponent's board edge, you may spend one %CHARGE% to gain 2 %MISSIONPOINT%."""
+        "Nien Nunb (Epic)":
+           display_name: """Nien Nunb"""
+           text: """<strong>Bonus Attack:</strong> After performing a primary attack, you may spend 2 %ENERGY% and 1 %CHARGE% to perform a bonus primary attack against a different target."""
+        "Urcos Furdam (Epic)":
+           display_name: """Urcos Furdam"""
+           text: """After you perform a blue maneuver, recover one energy."""
+        "Tantive IV (Republic)":
+           display_name: """Tantive IV"""
+           text: """While you defend, if you have no green tokens, you may change 1 result to an %EVADE% result."""
+        "Tantive IV (Resistance)":
+           display_name: """Tantive IV"""
+           text: """When a friendly ship at range 0-2 defends or performs an attack, if it has only blank results and has 2 or more results, you may suffer 1 %HIT% or spend 2 %ENERGY%. If you do, that ship may reroll all of its dice."""
+        "Twin Missile Launcher (Epic)":
+           display_name: """Twin Missile Launcher"""
+           text: """<strong>Bonus attack:</strong> Spend 1 energy. %LINEBREAK% <strong>Bonus attack:</strong> Spend 1 energy."""
+        "Fanatical (Epic)":
+           display_name: """Fanatical"""
+           text: """While you perform an attack, if you are not shielded, you may change 1 %FOCUS% result to a %HIT% result."""
+        "Inferno Squad (Epic)":
+           display_name: """Inferno Squad"""
+           text: """While a friendly <strong>Gideon Hask</strong>, <strong>Del Meeko</strong>, or <strong>Seyn Marana</strong> ship at range 0-2 performs an attack, you may suffer 1 %HIT% damage. If you do, they may change one of their results to a hit result."""
+        "Corvus (Epic)":
+           display_name: """Corvus"""
+           text: """<strong>Setup:</strong> Place this ship as if it were a standard ship at initiative 5."""
+        "Agent Terex (Epic)":
+           display_name: """Gideon Hask"""
+           text: """After an enemy ship is destroyed during an attack, if the attacker is at range 1-2 of you, assign a focus token to them."""
+        "Protectorate Gleb (Epic)":
+           display_name: """Protectorate Gleb"""
+           text: """While you defend or perform an attack, during the Modify Dice step, another friendly ship at range 0-2 may gain a strain or deplete token. If they do, you may transfer one focus token from that ship to you."""
+        "Jinata Security Forces (Epic)":
+           display_name: """Jinata Security Forces"""
+           text: """While you defend or perform an attack, you may spend a focus token to change a blank result to a %HIT% result or an %EVADE% result"""
+        "Precursor (Epic)":
+           display_name: """Precursor"""
+           text: """At the end of the Engagement Phase, you may spend 1 %SHIELD% to recover 1 %ENERGY%, or spend 1 %ENERGY% to recover 1 %SHIELD%."""
+        "TX-25 (Epic)":
+           display_name: """TX-25"""
+           text: """After a friendly ship at range 0-3 is destroyed, you may equip a Tactical Relay upgrade attached to that ship to this one."""
+        "Endless Hordes (Epic)":
+           display_name: """Endless Hordes"""
+           text: """Before a friendly ship with the <strong>Contingency Protocol</strong> upgrade or a friendly <strong>Trade Federation Drone</strong> at range 0-3 would be removed from play, you may spend 1 %CHARGE% to restore that ship, remove and Command upgrade from it, and dock it."""
+        "Alpha Revue (Epic)":
+           display_name: """Alpha Revue"""
+           text: """Before the Neutralize Results step, while a friendly Vulture-class Droid Fighter is at range 0-2 is attacking a defender in its %BULLSEYEARC%, it may suffer 1 %HIT% damage to cancel 1 %EVADE% result."""
+        "Petty Officer Thanisson (Epic)":
+           display_name: """Petty Officer Thanisson"""
+           text: """During the Activation or Engagement Phase, after an enemy ship in your %FRONTARC% at range 0-1 gains a red or orange token, if you are not stressed, you may gain 1 stress token. If you do, that ship gains 1 additional token of the type that it gained."""
+        "Malefactor (Epic)":
+           display_name: """Malefactor"""
+           text: """While you defend, friendly ships docked with you may suffer damage instead of you."""
+        "Thrawn (Epic)":
+           display_name: """Malefactor"""
+           text: """Before an enemy ship at range 0-3 reveals its dial, you may spend 1 %CHARGE% and choose a number. If the speed on the dial matches your choice, acquire a lock on that ship or recover 1 %ENERGY%."""
+        "Heavy Laser Cannon Turret (Epic)":
+           display_name: """Heavy Laser Cannon Turret"""
+           text: """<strong>Bonus attack:</strong> Spend 1 energy. Roll an additional attack die at range 3."""
+        "Blood Crow (Epic)":
+           display_name: """Blood Crow"""
+           text: """While you defend or perform an attack, if the attack range is 1, you may spend 1 %ENERGY% to add a %FOCUS% result."""
+        "Spectre of Nayr (Epic)":
+           display_name: """Spectre of Nayr"""
+           text: """After you perform an attack, if you have not targetted the defender in a previous attack this round and you are focused, you may recover 1 %ENERGY%"""
+        "GA-75 (Epic)":
+           display_name: """GA-75"""
+           text: """After you perform an attack, if you have not targetted the defender in a previous attack this round and you are focused, you may recover 1 %ENERGY%"""
+        "Hosnian Lament (Epic)":
+           display_name: """Hosnian Lament"""
+           text: """After you perform an attack, if you have not targetted the defender in a previous attack this round and you are focused, you may recover 1 %ENERGY%"""
+        "Planetary Ion Bombardment (Epic)":
+           display_name: """Planetary Ion Bombardment"""
+           text: """<strong>Bonus Attack (%LOCK%):</strong> Attack 1 medium, large or huge ship. If this attack hits, all %HIT%/%CRIT% results inflict ion tokens instead of damage."""
+        "Azmorigan (Epic)":
+           display_name: """Azmorigan"""
+           text: """After a friendly ship at range 0-3 is destroyed, before that ship is removed, you may equip an %ILLICIT% upgrade attached to that ship to this one. Recover all charges on it."""
+        "Illegal Countermeasures (Epic)":
+           display_name: """Illegal Countermeasures"""
+           text: """While you or a ship you are locking at range 0-3 defends or performs an attack, you may spend 1 %ENERGY% to prevent range bonuses from being applied.."""
+        "Modified Dorsal Turret (Epic)":
+           display_name: """Modified Dorsal Turret"""
+           text: """<strong>Bonus Attack</strong>"""
+        "AQ-Series Battle Droids (Epic)":
+           display_name: """AQ-Series Battle Droids"""
+           text: """After an enemy ship at range 0-2 becomes tractored, assign it a jam token."""
+        "Drill Beak (Epic)":
+           display_name: """Drill Beak"""
+           text: """<strong>Bonus Attack</strong>: If the attack range is 0, change all %HIT% results to %CRIT% results."""
+        "Trident (Epic)":
+           display_name: """Trident"""
+           text: """While you defend, if the attackerr does not have any green tokens, you may add 1 %EVADE% result."""
+        "Caij Vanda (Epic)":
+           display_name: """Caij Vanda"""
+           text: """While you defend, if the attacker is in your %FRONTARC%, add an %EVADE% result."""
+        "Nautolan's Revenge (Epic)":
+           display_name: """Nautolan's Revenge"""
+           text: """After a tractored enemy ship in your %REARARC% suffers damage, you may spend 1 %CHARGE%. If you do, that ship suffers 1 additional %HIT% damage."""
+        "Born for This (Epic)":
+           display_name: "Born for This"
+           text: """While another friendly ship at range 0-2 defends, if you are not strained, it may spend your focus and evade tokens as if that ship has them. If it does, you gain 1 strain token."""
+
     condition_translations =
         'Suppressive Fire':
            text: '''While you perform an attack against a ship other than <strong>Captain Rex</strong>, roll 1 fewer attack die. %LINEBREAK% After <strong>Captain Rex</strong> defends, remove this card.  %LINEBREAK% At the end of the Combat Phase, if <strong>Captain Rex</strong> did not perform an attack this phase, remove this card. %LINEBREAK% After <strong>Captain Rex</strong> is destroyed, remove this card.'''
@@ -3876,7 +4005,24 @@ exportObj.cardLoaders.English = () ->
         "Prioritized Weapons Systems":
            display_name: "Prioritized Weapons Systems"
            text: """Before you engage, you may gain a strain token to remove a disarm token."""
-
+        "Broadside Batteries":
+           display_name: "Broadside Batteries"
+           text: """You can acquire locks and perform primary attacks at range 1-4."""
+        "Concentrated Batteries":
+           display_name: "Concentrated Batteries"
+           text: """While you perform a primary, %TORPEDO%, or %MISSILE% attack, if the defender is in your %BULLSEYEARC%, roll 1 additional die."""
+        "Docking Clamps":
+           display_name: "Docking Clamps"
+           text: """You can dock up to 4 small ships."""
+        "Resupply Craft":
+           display_name: "Docking Clamps"
+           text: """You can dock up to 4 small ships."""
+        "Overdrive Burners":
+           display_name: "Overdrive Burners"
+           text: """While you defend, if your revealed maneuver is speed 3-5, roll 1 additional defense die."""
+        "Tractor Grasp":
+           display_name: "Tractor Grasp"
+           text: """After you perform a <b>Tractor Tentacles</b> attack that hits, the defender gains 1 tractor token."""
 
     damage_translations =
         "Panicked Pilot":

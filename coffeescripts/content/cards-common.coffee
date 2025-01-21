@@ -1869,7 +1869,7 @@ exportObj.basicCardData = ->
         "CR90 Corellian Corvette":
             name: "CR90 Corellian Corvette"
             icon: "cr90corvette"
-            factions: ["Galactic Republic", "Rebel Alliance"]
+            factions: ["Galactic Republic", "Rebel Alliance", "Resistance"]
             base: "Huge"
             attackl: 4
             attackr: 4
@@ -1879,6 +1879,7 @@ exportObj.basicCardData = ->
             shieldrecurr: 2
             energy: 7
             energyrecurr: 2
+            chassis: "Broadside Batteries"
             actions: [
                 "Focus"
                 "Reinforce"
@@ -1905,6 +1906,7 @@ exportObj.basicCardData = ->
             shieldrecurr: 2
             energy: 6
             energyrecurr: 2
+            chassis: "Concentrated Batteries"
             actions: [
                 "Focus"
                 "Reinforce"
@@ -1931,6 +1933,7 @@ exportObj.basicCardData = ->
             shieldrecurr: 1
             energy: 4
             energyrecurr: 1
+            chassis: "Resupply Craft"
             actions: [
                 "Focus"
                 "R-Lock"
@@ -1947,7 +1950,7 @@ exportObj.basicCardData = ->
             ]
         "Gozanti-class Cruiser":
             name: "Gozanti-class Cruiser"
-            factions: ["Galactic Empire", "First Order"]
+            factions: ["Galactic Empire", "First Order", "Separatist Alliance"]
             base: "Huge"
             attack: 3
             agility: 0
@@ -1956,6 +1959,7 @@ exportObj.basicCardData = ->
             shieldrecurr: 1
             energy: 3
             energyrecurr: 1
+            chassis: "Docking Clamps"
             actions: [
                 "Focus"
                 "Reinforce"
@@ -1981,6 +1985,7 @@ exportObj.basicCardData = ->
             shieldrecurr: 1
             energy: 4
             energyrecurr: 1
+            chassis: "Overdrive Burners"
             actions: [
                 "Focus"
                 "Reinforce"
@@ -2007,6 +2012,7 @@ exportObj.basicCardData = ->
             shieldrecurr: 1
             energy: 3
             energyrecurr: 2
+            chassis: "Tractor Grasp"
             actions: [
                 "Focus"
                 "R-Evade"
@@ -15905,6 +15911,363 @@ exportObj.basicCardData = ->
                 "Stygium Reserve (SL)"
             ]
         }
+        {
+            name: "Raymus Antilles"
+            unique: true
+            id: 678
+            faction: "Rebel Alliance"
+            ship: "CR90 Corellian Corvette"
+            skill: 8
+            engagement: 0
+            points: 12
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Focus"
+                    "Lock"
+                    "R-Coordinate"
+                    "Jam"
+                    "Rotate Arc"
+                ]
+            upgrades: [
+                "Leia Organa (Epic)"
+                "R2-D2 (Epic)"
+                "C-3PO (Epic)"
+                "Turbolaser Battery"
+                "Tantive IV"
+            ]
+        }
+        {
+            name: "Raymus Antilles (Republic)"
+            unique: true
+            id: 679
+            faction: "Galactic Republic"
+            ship: "CR90 Corellian Corvette"
+            skill: 8
+            engagement: 0
+            points: 12
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Focus"
+                    "Lock"
+                    "R-Coordinate"
+                    "Jam"
+                    "Rotate Arc"
+                ]
+            upgrades: [
+                "Born for This (Epic)"
+                "Bail Organa (Epic)"
+                "Secret Provisions (Epic)"
+                "Turbolaser Battery"
+                "Tantive IV (Republic)"
+            ]
+        }
+        {
+            name: "Leia Organa (CR90)" 
+            unique: true
+            id: 680
+            faction: "Resistance"
+            ship: "CR90 Corellian Corvette"
+            skill: 8
+            engagement: 0
+            points: 12
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Focus"
+                    "Lock"
+                    "R-Coordinate"
+                    "Jam"
+                    "Rotate Arc"
+                ]
+            upgrades: [
+                "Nien Nunb (Epic)"
+                "Urcos Furdam (Epic)"
+                "Tibanna Reserves"
+                "Turbolaser Battery"
+                "Tantive IV (Resistance)"
+            ]
+        }
+        {
+            name: "Iden Versio (Raider)"
+            unique: true
+            id: 681
+            faction: "Galactic Empire"
+            ship: "Raider-class Corvette"
+            skill: 8
+            engagement: 0
+            points: 13
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Focus"
+                    "Lock"
+                    "Coordinate"
+                    "Jam"
+                    "Rotate Arc"
+                ]
+            upgrades: [
+                "Ruthless"
+                "Fanatical (Epic)"
+                "Inferno Squad (Epic)"
+                "Twin Missile Launcher (Epic)"
+                "Corvus"
+            ]
+        }
+        {
+            name: "Gideon Hask (Raider)"
+            unique: true
+            id: 682
+            faction: "First Order"
+            ship: "Raider-class Corvette"
+            skill: 8
+            engagement: 0
+            points: 13
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Focus"
+                    "Lock"
+                    "Coordinate"
+                    "Jam"
+                    "Rotate Arc"
+                ]
+            upgrades: [
+                "Agent Terex (Epic)"
+                "Protectorate Gleb (Epic)"
+                "Jinata Security Forces (Epic)"
+                "Twin Missile Launcher (Epic)"
+                "Precursor (Epic)"
+            ]
+        }
+        {
+            name: "Aut-0"
+            unique: true
+            id: 683
+            faction: "Separatist Alliance"
+            ship: "Gozanti-class Cruiser"
+            skill: 7
+            engagement: 1
+            points: 8
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Coordinate"
+                    "Lock"
+                    "Coordinate"
+                    "Jam"
+                ]
+            upgrades: [
+                "TX-25 (Epic)"
+                "Endless Hordes (Epic)"
+                "Alpha Revue (Epic)"
+            ]
+        }
+        {
+            name: "Cerra Fellian"
+            unique: true
+            id: 684
+            faction: "First Order"
+            ship: "Gozanti-class Cruiser"
+            skill: 7
+            engagement: 1
+            points: 8
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Coordinate"
+                    "Lock"
+                    "Coordinate"
+                    "Jam"
+                    "Rotate Arc"
+                ]
+            upgrades: [
+                "Petty Officer Thanisson (Epic)"
+                "Ion Cannon Battery"
+                "Malefactor (Epic)"
+            ]
+        }
+        {
+            name: "Rik Virgilio"
+            unique: true
+            id: 685
+            faction: "Galactic Empire"
+            ship: "Gozanti-class Cruiser"
+            skill: 7
+            engagement: 1
+            points: 8
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Coordinate"
+                    "Lock"
+                    "Coordinate"
+                    "Jam"
+                    "Rotate Arc"
+                ]
+            upgrades: [
+                "Thrawn (Epic)"
+                "Heavy Laser Cannon Turret (Epic)"
+                "Blood Crow (Epic)"
+            ]
+        }
+        {
+            name: "Wez Synat"
+            unique: true
+            id: 686
+            faction: "Galactic Republic"
+            ship: "Gozanti-class Cruiser"
+            skill: 7
+            engagement: 1
+            points: 8
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Coordinate"
+                    "Lock"
+                    "Coordinate"
+                    "Jam"
+                    "Rotate Arc"
+                ]
+            upgrades: [
+                "Clone Commander Cody"
+                "Point Defense Battery"
+                "Spectre of Nayr (Epic)"
+            ]
+        }
+        {
+            name: "Oraf Desyk"
+            unique: true
+            id: 687
+            faction: "Resistance"
+            ship: "GR-75 Medium Transport"
+            skill: 7
+            engagement: 1
+            points: 8
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Coordinate"
+                    "R-Lock"
+                    "Coordinate"
+                    "Jam"
+                ]
+            upgrades: [
+                "GA-75 (Epic)"
+                "Adaptive Shields"
+                "Hosnian Lament (Epic)"
+            ]
+        }
+        {
+            name: "Trebor Zednem"
+            unique: true
+            id: 688
+            faction: "Rebel Alliance"
+            ship: "GR-75 Medium Transport"
+            skill: 7
+            engagement: 1
+            points: 8
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Coordinate"
+                    "R-Lock"
+                    "Coordinate"
+                    "Jam"
+                ]
+            upgrades: [
+                "Toryn Farr"
+                "Planetary Ion Bombardment (Epic)"
+                "Bright Hope"
+            ]
+        }
+        {
+            name: "Cikatro Vizago"
+            unique: true
+            id: 689
+            faction: "Scum and Villainy"
+            ship: "C-ROC Cruiser"
+            skill: 7
+            engagement: 1
+            points: 8
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Reinforce"
+                    "R-> Jam"
+                    "Lock"
+                    "R-Coordinate"
+                    "Jam"
+                    "Rotate Arc"
+                ]
+            upgrades: [
+                "Azmorigan (Epic)"
+                "Illegal Countermeasures (Epic)"
+                "Modified Dorsal Turret (Epic)"
+                "Broken Horn"
+            ]
+        }
+        {
+            name: "Asajj Ventress (Trident)"
+            unique: true
+            id: 690
+            faction: "Scum and Villainy"
+            ship: "Trident-class Assault Ship"
+            skill: 8
+            engagement: 1
+            points: 8
+            force: 1
+            ship_override:
+                actions: [
+                    "Focus"
+                    "R-Evade"
+                    "Reinforce"
+                    "Lock"
+                    "R-Coordinate"
+                ]
+            upgrades: [
+                "AQ-Series Battle Droids (Epic)"
+                "Tractor Tentacles"
+                "Drill Beak (Epic)"
+                "Trident (Epic)"
+            ]
+        }
+        {
+            name: "Sorc Tormo"
+            unique: true
+            id: 691
+            faction: "Scum and Villainy"
+            ship: "Trident-class Assault Ship"
+            skill: 8
+            engagement: 1
+            points: 8
+            ship_override:
+                actions: [
+                    "Focus"
+                    "R-Evade"
+                    "Reinforce"
+                    "Lock"
+                    "R-Coordinate"
+                ]
+            upgrades: [
+                "Caij Vanda (Epic)"
+                "Tractor Tentacles"
+                "Drill Beak (Epic)"
+                "Nautolan's Revenge (Epic)"
+            ]
+        }
     ]
 
     upgradesById: [
@@ -21263,6 +21626,280 @@ exportObj.basicCardData = ->
             range: """1-3"""
             rangebonus: true
         }
+        {
+            name: "Leia Organa (Epic)"
+            id: 534
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "R2-D2 (Epic)"
+            id: 535
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "C-3PO (Epic)"
+            id: 536
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "Endless Hordes (Epic)"
+            id: 537
+            standard: true
+            charge: 1
+            recurring: 1
+            slot: "Cargo"
+        }
+        {
+            name: "Bail Organa (Epic)"
+            id: 538
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "Alpha Revue (Epic)"
+            id: 539
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "Secret Provisions (Epic)"
+            id: 540
+            standard: true
+            slot: "Modification"
+            charge: 3
+        }
+        {
+            name: "Nien Nunb (Epic)"
+            id: 541
+            standard: true
+            unique: true
+            slot: "Command"
+            charge: 1
+            recurring: 1
+        }
+        {
+            name: "Urcos Furdam (Epic)"
+            id: 542
+            standard: true
+            unique: true
+            slot: "Command"
+        }
+        {
+            name: "Tantive IV (Resistance)"
+            id: 543
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "Twin Missile Launcher (Epic)"
+            id: 544
+            standard: true
+            slot: "Missile"
+            attackt: 3
+            range: """2-3"""
+        }
+        {
+            name: "Fanatical (Epic)"
+            id: 545
+            standard: true
+            slot: "Talent"
+        }
+        {
+            name: "Inferno Squad (Epic)"
+            id: 546
+            standard: true
+            slot: "Crew"
+        }
+        {
+            name: "Corvus (Epic)"
+            id: 547
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "Agent Terex (Epic)"
+            id: 548
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "Protectorate Gleb (Epic)"
+            id: 549
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "Jinata Security Forces (Epic)"
+            id: 550
+            standard: true
+            slot: "Crew"
+        }
+        {
+            name: "Precursor (Epic)"
+            id: 551
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "TX-25 (Epic)"
+            id: 552
+            standard: true
+            unique: true
+            slot: "Tactical Relay"
+        }
+        {
+            name: "Petty Officer Thanisson (Epic)"
+            id: 553
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "Malefactor (Epic)"
+            id: 554
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "Thrawn (Epic)"
+            id: 555
+            standard: true
+            unique: true
+            slot: "Crew"
+            charge: 1
+            recurring: 1
+        }
+        {
+            name: "Heavy Laser Cannon Turret (Epic)"
+            id: 556
+            standard: true
+            slot: "Hardpoint"
+            attackt: 3
+            range: """2-3"""
+        }
+        {
+            name: "Blood Crow (Epic)"
+            id: 557
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "Spectre of Nayr (Epic)"
+            id: 558
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "GA-75 (Epic)"
+            id: 559
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "Hosnian Lament (Epic)"
+            id: 560
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "Planetary Ion Bombardment (Epic)"
+            id: 561
+            standard: true
+            slot: "Hardpoint"
+            attackf: 5
+            range: """1-3"""
+            rangebonus: true
+        }
+        {
+            name: "Azmorigan (Epic)"
+            id: 562
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "Illegal Countermeasures (Epic)"
+            id: 563
+            standard: true
+            slot: "Cargo"
+        }
+        {
+            name: "Modified Dorsal Turret (Epic)"
+            id: 564
+            standard: true
+            slot: "Hardpoint"
+            attackt: 2
+            range: """1-3"""
+        }
+        {
+            name: "AQ-Series Battle Droids (Epic)"
+            id: 565
+            standard: true
+            slot: "Crew"
+        }
+        {
+            name: "Drill Beak (Epic)"
+            id: 566
+            standard: true
+            slot: "Hardpoint"
+            attackb: 3
+            range: """0-1"""
+            rangebonus: true
+        }
+        {
+            name: "Trident (Epic)"
+            id: 567
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "Caij Vanda (Epic)"
+            id: 568
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "Nautolan's Revenge (Epic)"
+            id: 569
+            standard: true
+            unique: true
+            slot: "Title"
+            charge: 1
+            recurring: 1
+        }
+        {
+            name: "Tantive IV (Republic)"
+            id: 570
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "Born for This (Epic)"
+            id: 571
+            standard: true
+            slot: "Talent"
+        }
     ]
 
 
@@ -21692,6 +22329,31 @@ exportObj.basicCardData = ->
             name: "Prioritized Weapons Systems"
             id: 55
         }
+        {
+            name: "Broadside Batteries"
+            id: 56
+        }
+        {
+            name: "Concentrated Batteries"
+            id: 57
+        }
+        {
+            name: "Docking Clamps"
+            id: 58
+        }
+        {
+            name: "Resupply Craft"
+            id: 59
+        }
+        {
+            name: "Overdrive Burners"
+            id: 60
+        }
+        {
+            name: "Tractor Grasp"
+            id: 61
+        }
+
     ]
 
     damageById: [
