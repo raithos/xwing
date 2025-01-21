@@ -15913,6 +15913,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Raymus Antilles"
+            xwsaddon: "epicsl-rebelalliance"
             unique: true
             id: 678
             faction: "Rebel Alliance"
@@ -15940,6 +15941,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Raymus Antilles (Republic)"
+            xwsaddon: "epicsl-galacticrepublic"
             unique: true
             id: 679
             faction: "Galactic Republic"
@@ -15967,6 +15969,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Leia Organa (CR90)" 
+            xwsaddon: "epicsl"
             unique: true
             id: 680
             faction: "Resistance"
@@ -15994,6 +15997,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Iden Versio (Raider)"
+            xwsaddon: "epicsl"
             unique: true
             id: 681
             faction: "Galactic Empire"
@@ -16021,6 +16025,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Gideon Hask (Raider)"
+            xwsaddon: "epicsl"
             unique: true
             id: 682
             faction: "First Order"
@@ -16048,6 +16053,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Aut-0"
+            xwsaddon: "epicsl"
             unique: true
             id: 683
             faction: "Separatist Alliance"
@@ -16072,6 +16078,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Cerra Fellian"
+            xwsaddon: "epicsl"
             unique: true
             id: 684
             faction: "First Order"
@@ -16097,6 +16104,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Rik Virgilio"
+            xwsaddon: "epicsl"
             unique: true
             id: 685
             faction: "Galactic Empire"
@@ -16122,6 +16130,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Wez Synat"
+            xwsaddon: "epicsl"
             unique: true
             id: 686
             faction: "Galactic Republic"
@@ -16147,6 +16156,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Oraf Desyk"
+            xwsaddon: "epicsl"
             unique: true
             id: 687
             faction: "Resistance"
@@ -16171,6 +16181,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Trebor Zednem"
+            xwsaddon: "epicsl"
             unique: true
             id: 688
             faction: "Rebel Alliance"
@@ -16195,6 +16206,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Cikatro Vizago"
+            xwsaddon: "epicsl"
             unique: true
             id: 689
             faction: "Scum and Villainy"
@@ -16221,6 +16233,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Asajj Ventress (Trident)"
+            xwsaddon: "epicsl"
             unique: true
             id: 690
             faction: "Scum and Villainy"
@@ -16246,6 +16259,7 @@ exportObj.basicCardData = ->
         }
         {
             name: "Sorc Tormo"
+            xwsaddon: "epicsl"
             unique: true
             id: 691
             faction: "Scum and Villainy"
