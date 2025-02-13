@@ -2133,6 +2133,14 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Configuration"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Torpedo"
+                "Astromech"
+                "Modification"
+                "Configuration"
+            ]
         }
         {
             name: "Wedge Antilles"
@@ -2896,8 +2904,8 @@ exportObj.basicCardData = ->
             skill: 6
             points: 7
             loadout: 15
-            pointsbeta: 7
-            loadoutbeta: 9
+            pointsbeta: 9
+            loadoutbeta: 25
             slots: [
                 "Talent"
                 "Missile"
@@ -2921,7 +2929,7 @@ exportObj.basicCardData = ->
             points: 7
             loadout: 21
             pointsbeta: 7
-            loadoutbeta: 12
+            loadoutbeta: 15
             slots: [
                 "Talent"
                 "Missile"
@@ -3857,8 +3865,8 @@ exportObj.basicCardData = ->
             skill: 6
             points: 5
             loadout: 10
-            pointsbeta: 5
-            loadoutbeta: 14
+            pointsbeta: 6
+            loadoutbeta: 20
             slots: [
                 "Talent"
                 "Missile"
@@ -4631,6 +4639,14 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Talent"
+                "Crew"
+                "Illicit"
+                "Illicit"
+                "Modification"
+            ]
+            slotsbeta: [
+                "Force"
+                "Force"
                 "Crew"
                 "Illicit"
                 "Illicit"
@@ -5560,6 +5576,13 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Missile"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Sensor"
+                "Missile"
+                "Modification"
+            ]
         }
         {
             name: "Seventh Sister"
@@ -5580,6 +5603,13 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Missile"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Sensor"
+                "Missile"
+                "Modification"
+            ]
         }
         {
             name: "Inquisitor"
@@ -5597,6 +5627,11 @@ exportObj.basicCardData = ->
                 "Force"
                 "Sensor"
             ]
+            slotsbeta: [
+                "Force"
+                "Sensor"
+                "Modification"
+            ]
         }
         {
             name: "Baron of the Empire"
@@ -5612,6 +5647,12 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Missile"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Sensor"
+                "Missile"
+                "Modification"
             ]
         }
         {
@@ -5630,7 +5671,6 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Force"
-                "Talent"
                 "Tech"
                 "Sensor"
                 "Missile"
@@ -6410,8 +6450,8 @@ exportObj.basicCardData = ->
             skill: 5
             points: 7
             loadout: 20
-            pointsbeta: 7
-            loadoutbeta: 10
+            pointsbeta: 8
+            loadoutbeta: 24
             slots: [
                 "Talent"
                 "Torpedo"
@@ -6483,7 +6523,7 @@ exportObj.basicCardData = ->
             points: 4
             loadout: 8
             pointsbeta: 4
-            loadoutbeta: 11
+            loadoutbeta: 18
             slots: [
                 "Talent"
                 "Talent"
@@ -6501,7 +6541,7 @@ exportObj.basicCardData = ->
             points: 4
             loadout: 8
             pointsbeta: 4
-            loadoutbeta: 12
+            loadoutbeta: 16
             slots: [
                 "Talent"
                 "Talent"
@@ -6805,6 +6845,14 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Configuration"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Tech"
+                "Torpedo"
+                "Missile"
+                "Configuration"
+            ]
         }
         {
             name: '"Blackout"'
@@ -6954,12 +7002,23 @@ exportObj.basicCardData = ->
             skill: 5
             points: 7
             loadout: 25
-            pointsbeta: 7
-            loadoutbeta: 21
+            pointsbeta: 8
+            loadoutbeta: 28
             force: 2
             slots: [
                 "Force"
                 "Talent"
+                "Missile"
+                "Crew"
+                "Crew"
+                "Gunner"
+                "Illicit"
+                "Modification"
+                "Title"
+            ]
+            slotsbeta: [
+                "Force"
+                "Force"
                 "Missile"
                 "Crew"
                 "Crew"
@@ -6978,8 +7037,8 @@ exportObj.basicCardData = ->
             skill: 6
             points: 6
             loadout: 15
-            pointsbeta: 6
-            loadoutbeta: 9
+            pointsbeta: 7
+            loadoutbeta: 24
             slots: [
                 "Talent"
                 "Missile"
@@ -6990,6 +7049,18 @@ exportObj.basicCardData = ->
                 "Illicit"
                 "Modification"
                 "Modification"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Missile"
+                "Crew"
+                "Crew"
+                "Gunner"
+                "Illicit"
+                "Illicit"
+                "Modification"
+                "Modification"
+                "Title"
             ]
         }
         {
@@ -7591,6 +7662,14 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Configuration"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Force"
+                "Astromech"
+                "Modification"
+                "Configuration"
+            ]
         }
         {
             name: "Luminara Unduli"
@@ -7692,7 +7771,7 @@ exportObj.basicCardData = ->
             slotsbeta: [
                 "Force"
                 "Force"
-                "Talent"
+                "Force"
                 "Astromech"
                 "Modification"
                 "Configuration"
@@ -8404,6 +8483,13 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Configuration"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Astromech"
+                "Modification"
+                "Configuration"
+            ]
         }
         {
             name: "Saesee Tiin"
@@ -8590,6 +8676,13 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Torpedo"
                 "Astromech"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Talent"
+                "Torpedo"
+                "Astromech"
+                "Modification"
             ]
         }
         {
@@ -9313,7 +9406,7 @@ exportObj.basicCardData = ->
             points: 6
             loadout: 20
             pointsbeta: 5
-            loadoutbeta: 25
+            loadoutbeta: 20
             keyword: ["Jedi", "Light Side"]
             slots: [
                 "Force"
@@ -9323,6 +9416,14 @@ exportObj.basicCardData = ->
                 "Astromech"
                 "Device"
                 "Modification"
+            ]
+            slotsbeta: [
+                "Force"
+                "Turret"
+                "Torpedo"
+                "Gunner"
+                "Astromech"
+                "Device"
             ]
         }
         {
@@ -10073,6 +10174,13 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Missile"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Sensor"
+                "Missile"
+                "Modification"
+            ]
         }
         {
             name: '"Vagabond"'
@@ -10340,8 +10448,8 @@ exportObj.basicCardData = ->
             ship: "HMP Droid Gunship"
             points: 4
             loadout: 12
-            pointsbeta: 3
-            loadoutbeta: 8
+            pointsbeta: 4
+            loadoutbeta: 12
             keyword: ["Droid"]
             slots: [
                 "Missile"
@@ -10384,8 +10492,8 @@ exportObj.basicCardData = ->
             ship: "HMP Droid Gunship"
             points: 3
             loadout: 7
-            pointsbeta: 4
-            loadoutbeta: 10
+            pointsbeta: 3
+            loadoutbeta: 6
             keyword: ["Droid"]
             slots: [
                 "Missile"
@@ -10393,6 +10501,13 @@ exportObj.basicCardData = ->
                 "Tactical Relay"
                 "Crew"
                 "Device"
+                "Modification"
+                "Configuration"
+            ]
+            slotsbeta: [
+                "Missile"
+                "Missile"
+                "Tactical Relay"
                 "Modification"
                 "Configuration"
             ]
@@ -11476,6 +11591,14 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Configuration"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Missile"
+                "Modification"
+                "Modification"
+                "Configuration"
+            ]
         }
         {
             name: "Netrem Pollard"
@@ -12036,7 +12159,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 14
             pointsbeta: 6
-            loadoutbeta: 17
+            loadoutbeta: 20
             slots: [
                 "Force"
                 "Force"
@@ -12044,6 +12167,16 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Tech"
                 "Tech"
+                "Modification"
+                "Configuration"
+            ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Missile"
+                "Tech"
+                "Tech"
+                "Modification"
                 "Modification"
                 "Configuration"
             ]
@@ -12058,7 +12191,7 @@ exportObj.basicCardData = ->
             points: 5
             loadout: 15
             pointsbeta: 5
-            loadoutbeta: 12
+            loadoutbeta: 17
             slots: [
                 "Talent"
                 "Talent"
@@ -12078,7 +12211,7 @@ exportObj.basicCardData = ->
             points: 4
             loadout: 10
             pointsbeta: 4
-            loadoutbeta: 3
+            loadoutbeta: 8
             slots: [
                 "Talent"
                 "Missile"
@@ -12097,7 +12230,7 @@ exportObj.basicCardData = ->
             points: 4
             loadout: 12
             pointsbeta: 5
-            loadoutbeta: 18
+            loadoutbeta: 20
             slots: [
                 "Talent"
                 "Talent"
@@ -12360,7 +12493,7 @@ exportObj.basicCardData = ->
             points: 4
             loadout: 8
             pointsbeta: 4
-            loadoutbeta: 10
+            loadoutbeta: 15
             slots: [
                 "Talent"
                 "Missile"
@@ -12371,6 +12504,7 @@ exportObj.basicCardData = ->
             slotsbeta: [
                 "Talent"
                 "Missile"
+                "Modification"
                 "Modification"
             ]
         }
@@ -12383,11 +12517,16 @@ exportObj.basicCardData = ->
             points: 3
             loadout: 5
             pointsbeta: 4
-            loadoutbeta: 8
+            loadoutbeta: 18
             max_per_squad: 2
             slots: [
                 "Talent"
                 "Illicit"
+            ]
+            slotsbeta: [
+                "Talent"
+                "Illicit"
+                "Modification"
             ]
         }
         {
@@ -12549,6 +12688,19 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Talent"
+                "Crew"
+                "Gunner"
+                "Missile"
+                "Device"
+                "Illicit"
+                "Modification"
+                "Modification"
+                "Title"
+                "Configuration"
+            ]
+            slotsbeta: [
+                "Force"
+                "Force"
                 "Crew"
                 "Gunner"
                 "Missile"
@@ -12740,6 +12892,18 @@ exportObj.basicCardData = ->
                 "Title"
                 "Configuration"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Crew"
+                "Gunner"
+                "Device"
+                "Illicit"
+                "Modification"
+                "Modification"
+                "Title"
+                "Configuration"
+            ]
         }
         {
             name: "Q9-0"
@@ -12900,6 +13064,14 @@ exportObj.basicCardData = ->
                 "Astromech"
                 "Modification"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Astromech"
+                "Modification"
+                "Modification"
+                "Modification"
+            ]
         }
         {
             name: "Luminara Unduli (Delta-7b)"
@@ -12990,6 +13162,13 @@ exportObj.basicCardData = ->
             loadoutbeta: 9
             keyword: ["Jedi","Light Side"]
             slots: [
+                "Force"
+                "Force"
+                "Talent"
+                "Astromech"
+                "Modification"
+            ]
+            slotsbeta: [
                 "Force"
                 "Force"
                 "Talent"
@@ -14264,6 +14443,13 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Configuration"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Missile"
+                "Modification"
+                "Configuration"
+            ]
         }
         {
             name: "Magna Tolvan"
@@ -14307,7 +14493,7 @@ exportObj.basicCardData = ->
             points: 7
             loadout: 25
             pointsbeta: 7
-            loadoutbeta: 24
+            loadoutbeta: 21
             slots: [
                 "Talent"
                 "Talent"
@@ -14669,6 +14855,13 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Configuration"
             ]
+            slotsbeta: [
+                "Force"
+                "Force"
+                "Astromech"
+                "Modification"
+                "Configuration"
+            ]
         }
         {
             name: "Adi Gallia (Delta-7B)"
@@ -14686,6 +14879,12 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Talent"
+                "Astromech"
+                "Modification"
+            ]
+            slotsbeta: [
+                "Force"
+                "Force"
                 "Astromech"
                 "Modification"
             ]
@@ -15773,6 +15972,7 @@ exportObj.basicCardData = ->
             ship: "TIE/ln Fighter"
             skill: 2
             points: 3
+            pointsbeta: 4
             chassis: "Formed Up"
             ship_override:
                 hull: 4
