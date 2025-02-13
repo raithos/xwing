@@ -3336,7 +3336,7 @@ exportObj.cardLoaders.English = () ->
            text: """While attacking or defending, if you have a non-lock red or orange token, you may reroll 1 die."""
         "No Escape (BoE)":
            display_name: """No Escape"""
-           text: """While you perform a primary attack, if there are more friendly ships then other enemy ships at range 0-1 of the defender, you may reroll 1 of your blank results."""
+           text: """While you perform a primary attack, if there are more friendly ships than other enemy ships at range 0-1 of the defender, you may reroll 1 of your blank results."""
         "Apex Predator (BoE)":
            display_name: """Apex Predator"""
            text: """While you perform a primary attack, if the defender's initative is lower than yours, you may reroll 1 attack die."""
