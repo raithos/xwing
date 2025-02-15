@@ -7665,8 +7665,8 @@ exportObj.basicCardData = ->
             slotsbeta: [
                 "Force"
                 "Force"
-                "Force"
                 "Astromech"
+                "Modification"
                 "Modification"
                 "Configuration"
             ]
@@ -7771,8 +7771,8 @@ exportObj.basicCardData = ->
             slotsbeta: [
                 "Force"
                 "Force"
-                "Force"
                 "Astromech"
+                "Modification"
                 "Modification"
                 "Configuration"
             ]
@@ -13076,7 +13076,6 @@ exportObj.basicCardData = ->
                 "Astromech"
                 "Modification"
                 "Modification"
-                "Modification"
             ]
         }
         {
@@ -13177,8 +13176,8 @@ exportObj.basicCardData = ->
             slotsbeta: [
                 "Force"
                 "Force"
-                "Talent"
                 "Astromech"
+                "Modification"
                 "Modification"
             ]
         }
