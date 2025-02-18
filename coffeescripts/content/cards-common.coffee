@@ -1950,7 +1950,7 @@ exportObj.basicCardData = ->
             ]
         "Gozanti-class Cruiser":
             name: "Gozanti-class Cruiser"
-            factions: ["Galactic Empire", "First Order", "Separatist Alliance"]
+            factions: ["Galactic Empire", "First Order", "Galactic Republic", "Separatist Alliance"]
             base: "Huge"
             attack: 3
             agility: 0
