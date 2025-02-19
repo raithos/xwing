@@ -2599,7 +2599,7 @@ exportObj.cardLoaders.Magyar = () ->
            text: '''Miután egy bomba vagy akna 0-1-es távolságban felrobban, elszenvedsz 1 %CRIT% sérülést. Aztán vedd le ezt a kártyát.<br><strong>Akció:</strong> Ha nincs bomba vagy akna 0-1-es távolságban, vedd ele ezt a kártyát.'''
         'Optimized Prototype':
            text: '''Amikor végrehajtasz egy elsődleges %FRONTARC% támadást egy olyan hajó ellen, amit bemért <strong>Director Krennic</strong> fejlesztéssel felszerelt hajó, elkölthetsz 1&nbsp;%HIT%/%CRIT%/%FOCUS% eredményt. Ha így teszel, választhatsz, hogy a védekező elveszt 1 pajzsot vagy a védekező felfordítja 1 sérüléskártyáját.'''
-        '''I'll Show You the Dark Side''': 
+        "I'll Show You the Dark Side": 
            text: '''Mikor ezt a kártyát hozzárendelik egy hajódhoz, ha nincs felfordított sérüléskártya rajta, az ellenfél kikeres a sérüléskártyáidból egy pilóta típusút és felfordítva ráteszi. Aztán megkeveri a paklit. Amikor elszenvednél 1&nbsp;%CRIT% sérülést, ezen a kártyán lévő sérüléskártyát kapod meg. Aztán vedd le ezt a lapot.'''
         'Proton Bomb':
            text: '''(Bomba jelző) - Az Aktivációs fázis végén ez az eszköz felrobban. Amikor ez az eszköz felrobban, minden hajó és távérzékelő 0–1-es távolságban elszenved 1&nbsp;%CRIT% sérülést.'''
@@ -2617,7 +2617,7 @@ exportObj.cardLoaders.Magyar = () ->
            text: '''INIT: 0 / MOZGÉKONYSÁG: 3 / HULL: 1 (távérzékelő)<br>Amikor egy baráti hajó bemér egy objektumot vagy zavar egy ellenséges hajót, mérheti a távolságot tőled. Miután egy ellenséges hajó átfedésbe kerül veled, az dob egy támadókockával. %FOCUS% eredménynél elszenvedsz 1 %HIT% sérülést.<br>Rendszer fázis: a kezdeményezésednek megfelelően arrébb mozgathatod a [2 %BANKLEFT%], [2 %STRAIGHT%] vagy [2 %BANKRIGHT%] sablonnal.'''
         'Buzz Droid Swarm':
            text: '''INIT: 0 / MOZGÉKONYSÁG: 3 / HULL: 1 (távérzékelő)<br>Miután egy ellenséges hajó átmozog rajtad vagy átfedésbe kerül veled, átteheted annak első vagy hátsó pöckeihez (ilyenkor 0-ás távolságra vagy a hajótól). Nem lehetsz átfedésbe egy objektummal sem ily módon. Ha nem tudod elhelyezni a pöckökhöz, te és a hajó is elszenvedtek 1 %HIT% sérülést.<br>Ütközet fázis: a kezdeményezésednek megfelelően minden 0-ás távolságba nlévő hajó elszenved 1 %CRIT% sérülést.'''
-        '''It's the Resistance''':
+        "It's the Resistance":
            text: """<strong>Felhelyezés:</strong> tartalékban kezdesz. <br> Amikor beszállsz a csatába, helyezd a hajót 1-es távolságra a játékterület bármely szélétől és 3-as távolságon túl bármely ellenséges hajótól.<br>A kör kezdetén ha a baráti <strong>GA-97</strong> összes %CHARGE% jelzője aktív, be <strong>kell</strong> szállnod a csatába. Ezután vedd le ezt a kártyát. Miután a baráti <strong>GA-97</strong> megsemmisül, csatába <strong>kell</strong> szállnod, majd kapsz 1 'inaktív fegyvezet' jelzőt és vedd le ezt a kártyát."""
         'Electro-Proton Bomb':
            text: """(Bomba jelző) - Az Aktivációs fázis végén ez az eszköz felrobban. Amikor ez az eszköz felrobban, minden hajó és távérzékelő 0–2-es távolságban dob 4 támadókockával. Minden hajó elveszti 1 pajzsát minden üres eredmény után, kap 1 ion jelzőt minden %FOCUS%/%HIT% eredmény után és kap 1 'inaktív fegyvezet' minden %CRIT% eredmény után. MInden távérzékelő 0-1-es távolságban elveszít 1 pajzsot minden üres eredmény után és elszenved 1 sérülést minden %FOCUS%/%HIT% eredmény után."""
@@ -2639,27 +2639,27 @@ exportObj.cardLoaders.Magyar = () ->
            text: '''Miután védekezel egy ellenséges <strong>Fearsome Predator</strong> ellen, ha nem költöttél el legalább 1 zöld jelzőt a támadás alatt, kapsz 1 'strain' jelzőt.'''
         'You Should Thank Me':
            text: '''Ez a kártyát lefordítva rendeld a hajóhoz.<br>Védekezés után fordítsd fel.%LINEBREAK%Miután védekeztél <strong>Zam Wesell</strong> visszatölt 1 %CHARGE% jelzőt, majd feltehetsz egy bemérőt a támadóra.%LINEBREAK%Az Ütközet fázis végén, ha ez a kártya le van fordítva és benne vagy egy ellenséges hajó tűzívében, felfedheted ezt a kártyát, hogy elkölts 2 %CHARGE% jelzőt <strong>Zam Wesell</strong>-ről. Ha így teszel, végrehajthatsz egy bónusz támadást.%LINEBREAK%A Rendszer fázis elején távolítsd el ezt az állapotkártyát.'''
-        '''You'd Better Mean Business''':
+        "You'd Better Mean Business":
            text: '''Ez a kártyát lefordítva rendeld a hajóhoz.<br>Védekezés után fordítsd fel.%LINEBREAK%Miután védekeztél, elkölthetsz 2 %CHARGE% jelzőt <strong>Zam Wesell</strong>-ről. Ha így teszel, végrehajthatsz egy bónusz támadást a támadó ellen.%LINEBREAK%Az üzközet fázis végén, ha ez a kártya le van fordítva és benne vagy egy ellenséges hajó tűzívében, felfedheted ezt a kártyát. Ha így teszel <strong>Zam Wesell</strong> visszatölt 2 %CHARGE% jelzőt.%LINEBREAK%A Rendszer fázis elején távolítsd el ezt az állapotkártyát.'''
-        '''Merciless Pursuit''':
+        "Merciless Pursuit":
            text: '''Miután végrehajtasz egy támadást, ha a védekező fel van szerelve a <b>The Child</b> fejlesztéssel, feltehetsz egy bemérőt a védekezőre.'''
-        '''Marked for Elimination''':
+        "Marked for Elimination":
            text: '''Amikor védekezel, ha a támadó fel van szerelve a <b>Tracking Fob</b> fejlesztéssel és van bemérője rajtad, nem költhetsz zöld jelzőket.'''
-        '''False Friend''':
+        "False Friend":
            text: '''A Rendszer fázis alatt ha egy ellenséges hajó <b>Tal Merrik</b> fejlesztéssel vagy egy ellenséges eszköz 0-2-es távolságban van, fordítsd fel a manőver tárcsádat.<br><strong>Akció:</strong> Kapsz 1 'deplete' és stressz jelzőt, hogy eldobd ezt az állapotkártyát.'''
-        '''Trials of the Darksaber''':
+        "Trials of the Darksaber":
            text: '''Amikor végrehajtasz egy támadást 0-2-es támadási ívben, elkölthetsz 1 %CRIT% eredményt. Ha így teszel, ha a védekező hajó több %POINT% jelzőt kapott, mint te, az elveszít 1 %POINT% jelzőt. Helyezd azt a %POINT% jelzőt erre a kártyára.<br>Miután védekeztél, ha megsemmisültél egy ellenséges hajó 0-2-es támadásától, helyezd a <b>Trials of the Darksaber</b> állapotkártyát a támadóra (az összes %POINT% marad a kártyán).<br>A játék végén ez a hajó megkapja az összes %POINT% jlezőt erről a kártyáról.'''
-        '''Blazer Bomb''':
+        "Blazer Bomb":
            text: '''<strong>Típusok:</strong> eszköz, bomba<br>Az Aktivációs fázis végén ez az eszköz felrobban.<br>Amikor ez az eszköz felrobban, minden hajó és eszköz 0-1-es távolságban gurít 1 támadókockával. Minden hajó és eszköz elszenved 1 %HIT% sérülést minden %HIT%/%CRIT% eredmény után.<br>Miután ez az eszköz felrobban helyezz egy Blase jelzőt a bomba lapkához igazítva<br>A Blaze akadálynak számít. Miután felhelyezted , tegyél rá 1 időzítő jelzőt.<br>A Vége fázis alatt vegyél le minden időzítő nélüli Blaze jelzőt, aztán vegyél le 1 időzítő jelzőt minden Blaze jelzőről.'''
-        '''Clan Wren Commandos''':
+        "Clan Wren Commandos":
            text: """INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Típusok:</strong> eszköz, távérzékelő<br>Mmiután egy ellenséges hajó átfedésbe kerül veled, kap egy 'strain' jelzőt<br><strong>Aktivációs fázis:</strong> A fázis kezdetén előre helyezheted a [1 %TURNLEFT%], [2 %STRAIGHT%] vagy [1 %TURNRIGHT%] segítségével.<br><strong>Ütközet fázis:</strong> nem támadhatsz 0-ás távolságban. A támadáshoz el kell költs 1 %CHARGE% jelzőt. Amikor végrehajtasz egy támadást megváltoztathatsz 1 %FOCUS% eredményt %HIT% eredményre."""
-        '''Death Watch Commandos''':
+        "Death Watch Commandos":
            text: """INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Típusok:</strong> eszköz, távérzékelő<br>Mmiután egy ellenséges hajó átfedésbe kerül veled, kap egy 'strain' jelzőt<br><strong>Aktivációs fázis:</strong> A fázis kezdetén előre helyezheted a [1 %TURNLEFT%], [2 %STRAIGHT%] vagy [1 %TURNRIGHT%] segítségével.<br><strong>Ütközet fázis:</strong> nem támadhatsz 0-ás távolságban. A támadáshoz el kell költs 1 %CHARGE% jelzőt. Amikor végrehajtasz egy támadást megváltoztathatsz 1 %FOCUS% eredményt %HIT% eredményre."""
-        '''Nite Owl Commandos''':
+        "Nite Owl Commandos":
            text: """INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Típusok:</strong> eszköz, távérzékelő<br>Mmiután egy ellenséges hajó átfedésbe kerül veled, kap egy 'strain' jelzőt<br><strong>Aktivációs fázis:</strong> A fázis kezdetén előre helyezheted a [1 %TURNLEFT%], [2 %STRAIGHT%] vagy [1 %TURNRIGHT%] segítségével.<br><strong>Ütközet fázis:</strong> nem támadhatsz 0-ás távolságban. A támadáshoz el kell költs 1 %CHARGE% jelzőt. Amikor végrehajtasz egy támadást megváltoztathatsz 1 %FOCUS% eredményt %HIT% eredményre."""
-        '''Imperial Super Commandos''':
+        "Imperial Super Commandos":
            text: """INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Típusok:</strong> eszköz, távérzékelő<br>Mmiután egy ellenséges hajó átfedésbe kerül veled, kap egy 'strain' jelzőt<br><strong>Aktivációs fázis:</strong> A fázis kezdetén előre helyezheted a [1 %TURNLEFT%], [2 %STRAIGHT%] vagy [1 %TURNRIGHT%] segítségével.<br><strong>Ütközet fázis:</strong> nem támadhatsz 0-ás távolságban. A támadáshoz el kell költs 1 %CHARGE% jelzőt. Amikor végrehajtasz egy támadást megváltoztathatsz 1 %FOCUS% eredményt %HIT% eredményre."""
-        '''Mandalorian Super Commandos''':
+        "Mandalorian Super Commandos":
            text: """INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, RANGE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Típusok:</strong> eszköz, távérzékelő<br>Mmiután egy ellenséges hajó átfedésbe kerül veled, kap egy 'strain' jelzőt<br><strong>Aktivációs fázis:</strong> A fázis kezdetén előre helyezheted a [1 %TURNLEFT%], [2 %STRAIGHT%] vagy [1 %TURNRIGHT%] segítségével.<br><strong>Ütközet fázis:</strong> nem támadhatsz 0-ás távolságban. A támadáshoz el kell költs 1 %CHARGE% jelzőt. Amikor végrehajtasz egy támadást megváltoztathatsz 1 %FOCUS% eredményt %HIT% eredményre."""
 
 
