@@ -4153,7 +4153,7 @@ exportObj.cardLoaders['Español'] = () ->
            text: """Considera a las naves aliadas como amigas. %LINEBREAK%Las naves no enemigas te consideran amistoso. %LINEBREAK%Mientras realizas un ataque, antes de declarar al defensor, cada nave amistosa en su arco de ataque y que no esté bajo tensión, recibe 1 ficha de tensión. %LINEBREAK%Después de que hayas defendido o realizado un ataque, si al menos 1 carta de daño boca arriba ha sido asignada al defensor o si ha sido destruido, retira este estado."""
 
     chassis_translations =
-	    "Vectored Thrusters":
+       "Vectored Thrusters":
            display_name: "Propulsores vectoriales"
            text: """Después de que realices una acción, puedes realizar una acción %BOOST% roja."""
         "Advanced Targeting Computer":
