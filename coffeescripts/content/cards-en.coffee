@@ -3700,7 +3700,7 @@ exportObj.cardLoaders.English = () ->
            display_name: """Malefactor"""
            text: """While you defend, friendly ships docked with you may suffer damage instead of you."""
         "Thrawn (Epic)":
-           display_name: """Malefactor"""
+           display_name: """Thrawn"""
            text: """Before an enemy ship at range 0-3 reveals its dial, you may spend 1 %CHARGE% and choose a number. If the speed on the dial matches your choice, acquire a lock on that ship or recover 1 %ENERGY%."""
         "Heavy Laser Cannon Turret (Epic)":
            display_name: """Heavy Laser Cannon Turret"""
