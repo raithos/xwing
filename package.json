@@ -13,12 +13,12 @@
   "devDependencies": {
     "bower": "*",
     "coffeescript": "*",
-    "grunt": "*",
+    "grunt": "0.4.5",
     "grunt-bower-task": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-pug": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-coffee": "*",
+    "grunt-iced-coffee": "*",
     "grunt-sass": "*",
     "jstransformer-coffee-script": "*",
     "jstransformer-markdown": "*",
@@ -27,9 +27,5 @@
   },
   "engines": {
     "node": "*"
-  },
-  "dependencies": {
-    "install": "^0.13.0",
-    "sass": "^1.85.0"
   }
 }

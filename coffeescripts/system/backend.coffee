@@ -1008,30 +1008,30 @@ class exportObj.SquadBuilderBackend
             cb settings.language, 10
         # otherwise we may parse a language out of the headers 
         else
-            await @getHeaders (headers) ->
-                if headers?.HTTP_ACCEPT_LANGUAGE?
-                    # Need to parse out language preferences
-                    # console.log "#{headers.HTTP_ACCEPT_LANGUAGE}"
-                    for language_range in headers.HTTP_ACCEPT_LANGUAGE.split(',')
-                        [ language_tag, quality ] = language_range.split ';'
-                        # console.log "#{language_tag}, #{quality}"
-                        if language_tag == '*'
-                            # let's give that half priority
-                            cb 'English', -0.5
+            await @getHeaders defer(headers)
+            if headers?.HTTP_ACCEPT_LANGUAGE?
+                # Need to parse out language preferences
+                # console.log "#{headers.HTTP_ACCEPT_LANGUAGE}"
+                for language_range in headers.HTTP_ACCEPT_LANGUAGE.split(',')
+                    [ language_tag, quality ] = language_range.split ';'
+                    # console.log "#{language_tag}, #{quality}"
+                    if language_tag == '*'
+                        # let's give that half priority
+                        cb 'English', -0.5
+                    else
+                        language_code = language_tag.split('-')[0]
+                        # check if the language code is available
+                        if language_code of exportObj.codeToLanguage
+                            # yep - use as language with reasonable priority
+                            cb(exportObj.codeToLanguage[language_code], 8)
                         else
-                            language_code = language_tag.split('-')[0]
-                            # check if the language code is available
-                            if language_code of exportObj.codeToLanguage
-                                # yep - use as language with reasonable priority
-                                cb(exportObj.codeToLanguage[language_code], 8)
-                            else
-                                # bullshit priority - we can't support what the user wants
-                                # (maybe he gave another option though in his browser settings)
-                                cb 'English', -1
-                        break
-                else
-                    # no headers, callback with bullshit priority
-                    cb 'English', -1
+                            # bullshit priority - we can't support what the user wants
+                            # (maybe he gave another option though in his browser settings)
+                            cb 'English', -1
+                    break
+            else
+                # no headers, callback with bullshit priority
+                cb 'English', -1
 
     getCollectionCheck: (settings, cb=$.noop) =>
         if settings?.collectioncheck?
