@@ -3747,6 +3747,9 @@ exportObj.cardLoaders.English = () ->
         "Born for This (Epic)":
            display_name: "Born for This"
            text: """While another friendly ship at range 0-2 defends, if you are not strained, it may spend your focus and evade tokens as if that ship has them. If it does, you gain 1 strain token."""
+        "Point Defense Battery (Epic)":
+           display_name: "Point Defense Battery"
+           text: """<strong>Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Attack:</strong> Spend 1 %ENERGY%."""
 
     condition_translations =
         'Suppressive Fire':

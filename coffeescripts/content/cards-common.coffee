@@ -16355,7 +16355,7 @@ exportObj.basicCardData = ->
                 ]
             upgrades: [
                 "Clone Commander Cody"
-                "Point Defense Battery"
+                "Point Defense Battery (Epic)"
                 "Spectre of Nayr (Epic)"
             ]
         }
@@ -16441,7 +16441,7 @@ exportObj.basicCardData = ->
             xwsaddon: "epicsl"
             unique: true
             id: 690
-            faction: "Scum and Villainy"
+            faction: "Separatist Alliance"
             ship: "Trident-class Assault Ship"
             skill: 8
             engagement: 1
@@ -22118,6 +22118,14 @@ exportObj.basicCardData = ->
             id: 571
             standard: true
             slot: "Talent"
+        }
+        {
+            name: "Point Defense Battery (Epic)"
+            id: 572
+            standard: true
+            slot: "Hardpoint"
+            attackdt: 2
+            range: """1-2"""
         }
     ]
 
