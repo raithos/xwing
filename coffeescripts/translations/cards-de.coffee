@@ -3861,7 +3861,7 @@ Aktion durchgeführt hast, darfst du bis zu 2&nbsp;%ENERGY% ausgeben, um ebenso
         'Thermal Detonator':
            display_name: """Thermaldetonator"""
            text: '''<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff und Remote in Reichweite 0–1 1 Angriffswürfel. Jedes Schiff erhält 1 Anstrengungsmarker für jedes %FOCUS%-Ergebnis und jedes Schiff und Remote erleidet 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis.'''
-        '''Blazer Bomb''':
+        "Blazer Bomb":
            display_name: """Brandbombe"""
            text: '''<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. %LINEBREAK% Sobald dieses Gerät detoniert, wirft jedes Schiff und jedes Remote in Reichweite 0–1 1 Angriffswürfel. Jedes Schiff oder Remote erleidet 1 %HIT%-Schaden für jedes %HIT%/%CRIT%-Ergebnis. %LINEBREAK% Nachdem dieses Gerät detoniert ist, wird ein Brand so platziert, dass seine Stopper bündig an der Aussparung des Geräts anliegen. %LINEBREAK% Ein Brand ist ein Hindernis. Nachdem dieses Hindernis platziert worden ist, wird ein Zeitzünder darauf platziert.%LINEBREAK% Während der Endphase wird jeder Brand ohne Zeitzünder entfernt, dann wird 1 Zeitzünder von jedem Brand entfernt..'''
         'Loose Cargo':
@@ -3888,7 +3888,7 @@ Aktion durchgeführt hast, darfst du bis zu 2&nbsp;%ENERGY% ausgeben, um ebenso
         'Rattled':
            display_name: 'Aus der Fassung'
            text: 'Nachdem eine Bombe oder Mine in Reichweite 0-1 detoniert ist, erleide 1 %CRIT% Schaden. Dann entferne diese Karte. %LINEBREAK% <strong>Aktion:</strong> Falls keine Bomben oder Minen in Reichweite 0-1 sind, entferne diese Karte.'
-        '''I'll Show You the Dark Side''': 
+        "I'll Show You the Dark Side": 
            display_name: 'Ich zeige dir die dunkle Seite'
            text: 'Sobald diese Karte zugeordnet wird, falls keine offene Schadenskarte darauf liegt, sucht der Spieler, der sie zugeordnet hat, im Schadensstapel nach 1 <strong>Pilot</strong>-Schadenskarte und platziert sie offen auf dieser Karte. Dann mische den Schadensstapel. %LINEBREAK%Sobald du 1 %CRIT%-Schaden erleiden würdest, wird dir stattdessen die offene Schadenskarte auf dieser Karte zugeteilt. Dann entferne diese Karte. '
         'Buzz Droid Swarm':

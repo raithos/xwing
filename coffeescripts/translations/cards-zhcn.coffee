@@ -4004,46 +4004,46 @@ exportObj.cardLoaders.简体中文 = () ->
         "You'd Better Mean Business":
            display_name: "你最好是认真的 (You'd Better Mean Business)"
            text: '''此状态面朝下分配。在你防御后展示。%LINEBREAK% 在你防御后，你可以选择从 <b>扎姆·韦塞尔</b> 上花费2个%CHARGE%。如此的话，对该攻击者执行一次额外的攻击。%LINEBREAK% 在交战阶段结束时，如果此卡面朝下，且你在一架敌方战机的射界范围，你可以选择展示此卡。如此的话，<b>扎姆·韦塞尔</b>恢复2个%CHARGE%。%LINEBREAK% 在系统阶段开始时，移除此状态。'''
-        '''Merciless Pursuit''':
+        "Merciless Pursuit":
            display_name: "无情追击(Merciless Pursuit)"
            text: '''在执行攻击后，如果防御者装备了<b>咕咕(The Child)</b>，你可以获得对防御者的锁定。'''
-        '''Marked for Elimination''':
+        "Marked for Elimination":
            display_name: "抹杀标记(Marked for Elimination)"
            text: '''当你防御时，如果攻击者装备了<b>追踪器(Tracking Fob)</b>并且锁定了你，你无法花费绿色标记。'''
-        '''False Friend''':
+        "False Friend":
            display_name: '虚假朋友 (False Friend)',
            text: '''在系统阶段中，如果一架带有<b>塔尔•梅里克</b>升级的敌方战机或一个敌方遥控机在你的0-2距离，将你的移动盘翻到正面。%LINEBREAK% <b>行动：</b>获得一个耗竭标记和一个压力标记，移除这状态张卡。'''
-        '''Trials of the Darksaber''':
+        "Trials of the Darksaber":
            display_name: '暗剑的试炼 (Trials of the Darksaber)',
            text: '''当你执行一个射程为0-2的攻击时，你可以花费一个 %CRIT% 结果。这么做之后，如果防御者上的 %POINT% 比你多，那么它失去一个 %POINT%，并且将该 %POINT% 放在这张卡上。%LINEBREAK% 在你被击败后，如果你在攻击者的射程0-2被击毁，那么将<b>暗剑的试炼</b> (以及上面的 %POINT%)分配给攻击者。在游戏结束时，这架战机获得卡上所有的 %POINT% 。'''
-        '''Blazer Bomb''':
+        "Blazer Bomb":
            display_name: "燃烧炸弹(Blazer Bomb)"
            text: '''<b>类型:</b> 装置, 炸弹 %LINEBREAK% 在行动阶段结束时，这个装置引爆。%LINEBREAK% 当这个装置引爆时，每架0-1距离内的战机和遥控机投一个攻击骰。每出现一个 %HIT%/%CRIT% 结果，该战机或遥控机受到一个 %HIT% 伤害。%LINEBREAK% 在装置引爆后，沿着炸弹的卡槽放置一个火焰。%LINEBREAK% 火焰是一个障碍物。在放置这个障碍物后，在它上面放一个引信标记。%LINEBREAK% 在结束阶段中，移除所有上面没有引信标记的火焰。然后从每个火焰障碍物上移除一个引信标记。'''
-        '''Clan Wren Commandos''':
+        "Clan Wren Commandos":
            display_name: "雷恩氏族突击队(Clan Wren Commandos)"
            text: '''先攻值: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, 射程: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>类型:</b> 装置, 遥控机 %LINEBREAK% 在一架敌方战机与你重叠后，它获得1个扭力标记。%LINEBREAK% <b>激活阶段:</b> 在这个阶段开始时，你可以使用 [1 %TURNLEFT%], [2 %STRAIGHT%], 或 [1 %TURNRIGHT%] 移动条前进。%LINEBREAK% <b>交战阶段：</b> 如果距离0有敌方战机则你无法发起攻击。你必须花费1个 %CHARGE% 才能攻击。当你进行攻击时，可以将一个 %FOCUS% 结果改为 %HIT% 结果。'''
-        '''Death Watch Commandos''':
+        "Death Watch Commandos":
            display_name: "死神卫突击队(Death Watch Commandos)"
            text: '''先攻值: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, 射程: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>类型:</b> 装置, 遥控机 %LINEBREAK% 在一架敌方战机与你重叠后，它获得1个扭力标记。%LINEBREAK% <b>激活阶段:</b> 在这个阶段开始时，你可以使用 [1 %TURNLEFT%], [2 %STRAIGHT%], 或 [1 %TURNRIGHT%] 移动条前进。%LINEBREAK% <b>交战阶段：</b> 如果距离0有敌方战机则你无法发起攻击。你必须花费1个 %CHARGE% 才能攻击。当你进行攻击时，可以将一个 %FOCUS% 结果改为 %HIT% 结果。'''
-        '''Nite Owl Commandos''':
+        "Nite Owl Commandos":
            display_name: "夜鸮突击队(Nite Owl Commandos)"
            text: '''先攻值: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, 射程: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>类型:</b> 装置, 遥控机 %LINEBREAK% 在一架敌方战机与你重叠后，它获得1个扭力标记。%LINEBREAK% <b>激活阶段:</b> 在这个阶段开始时，你可以使用 [1 %TURNLEFT%], [2 %STRAIGHT%], 或 [1 %TURNRIGHT%] 移动条前进。%LINEBREAK% <b>交战阶段：</b> 如果距离0有敌方战机则你无法发起攻击。你必须花费1个 %CHARGE% 才能攻击。当你进行攻击时，可以将一个 %FOCUS% 结果改为 %HIT% 结果。'''
-        '''Imperial Super Commandos''':
+        "Imperial Super Commandos":
            display_name: "帝国超级突击队(Imperial Super Commandos)"
            text: '''先攻值: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, 射程: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>类型:</b> 装置, 遥控机 %LINEBREAK% 在一架敌方战机与你重叠后，它获得1个扭力标记。%LINEBREAK% <b>激活阶段:</b> 在这个阶段开始时，你可以使用 [1 %TURNLEFT%], [2 %STRAIGHT%], 或 [1 %TURNRIGHT%] 移动条前进。%LINEBREAK% <b>交战阶段：</b> 如果距离0有敌方战机则你无法发起攻击。你必须花费1个 %CHARGE% 才能攻击。当你进行攻击时，可以将一个 %FOCUS% 结果改为 %HIT% 结果。'''
-        '''Mandalorian Super Commandos''':
+        "Mandalorian Super Commandos":
            display_name: "曼达洛人超级突击队(Mandalorian Super Commandos)"
            text: '''先攻值: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, 射程: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <b>类型:</b> 装置, 遥控机 %LINEBREAK% 在一架敌方战机与你重叠后，它获得1个扭力标记。%LINEBREAK% <b>激活阶段:</b> 在这个阶段开始时，你可以使用 [1 %TURNLEFT%], [2 %STRAIGHT%], 或 [1 %TURNRIGHT%] 移动条前进。%LINEBREAK% <b>交战阶段：</b> 如果距离0有敌方战机则你无法发起攻击。你必须花费1个 %CHARGE% 才能攻击。当你进行攻击时，可以将一个 %FOCUS% 结果改为 %HIT% 结果。'''
-        '''Guarded''':
+        "Guarded":
            display_name: '护卫 (Guarded)'
            text: '''当你进行防御时，如果你不在攻击者的 %BULLSEYEARC% ，每有一架在攻击范围内进行计算或闪避的友方<b>磁卫保护者</b>，你可以额外投1个防御骰。'''
-        '''Sickening Maneuver''':
+        "Sickening Maneuver":
            display_name: '作呕机动 (Sickening Maneuver)'
            text: '''即使在有压力的情况下，你也可以进行红色移动。%LINEBREAK% 在你展示倾斜 [%BANKLEFT% 或 %BANKRIGHT%] 或转向 [%TURNLEFT% 或 %TURNRIGHT%] 移动后，你<b>必须</b>获得1个扭力标记，并以侧滑的方式进行该移动。%LINEBREAK% 在你展示一个直线 [%STRAIGHT%] 移动后，你必须以红色掉头移动[%KTURN%]来进行该移动。%LINEBREAK% 在进行一次移动后，移除此状态。'''
-        '''Primed For Speed''':
+        "Primed For Speed":
            display_name: '横冲直撞 (Primed for Speed)'
            text: '''在你的行动栏中添加一个白色 %SLAM% 行动。%LINEBREAK% 在你执行一次 %SLAM% 行动后，你<b>必须</b>受到1个 %HIT% 伤害来移除一个解除武装标记。'''
-        '''Broken Trust''':
+        "Broken Trust":
            display_name: '破碎的信任 (Broken Trust)'
            text: '''将友方战机视为盟友。%LINEBREAK% 非敌方战机将你视为盟友。%LINEBREAK% 在你进行攻击时，在宣布防御者之前，射界范围中没有压力的每架同盟战机都会获得1个压力标记。在你防御或进行攻击后，如果防御者受到至少1张正面伤害卡，或被摧毁，则移除此状态。'''
 

@@ -17,7 +17,7 @@ module.exports = (grunt) ->
                     'app/javascripts/translations.js': ['coffeescripts/translations/*.coffee']
         sass:
             options:
-                implementation: require('node-sass') 
+                implementation: require('sass') 
             compile:
                 expand: true
                 cwd: 'stylesheets/'
@@ -73,7 +73,7 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks 'grunt-contrib-pug'
     grunt.loadNpmTasks 'grunt-sass'
     grunt.loadNpmTasks 'grunt-contrib-uglify'
-    grunt.loadNpmTasks 'grunt-iced-coffee'
+    grunt.loadNpmTasks 'grunt-contrib-coffee'
 
     grunt.registerTask 'default', [
         'bower'

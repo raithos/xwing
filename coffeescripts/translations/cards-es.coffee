@@ -4037,7 +4037,7 @@ exportObj.cardLoaders['Español'] = () ->
         'Optimized Prototype':
            display_name: """Prototipo optimizado"""
            text: """Cuando estés efectuando un ataque de armamento principal %FRONTARC% contra una nave que esté fijada como blanco por una nave aliada equipada con la mejora <strong>Director Krennic</strong> puedes gastar 1 resultado %HIT%, %CRIT% o %FOCUS%. Si lo haces, elige entre: el defensor pierde 1 ficha de Escudos, o el defensor le da la vuelta a 1 de sus cartas de Daño que tenga boca abajo."""
-        '''I'll Show You the Dark Side''':
+        "I'll Show You the Dark Side":
            display_name: """Yo te mostraré el Lado Oscuro"""
            text: """Cuando se asigna esta carta, si no hay ninguna carta de daño boca arriba, el jugador que la asignó busca en el mazo de daños 1 carta de daño de piloto y la coloca boca arriba sobre esta carta. Luego baraja el mazo de daños. Cuando vas a sufrir 1 %CRIT% de daño, en su lugar recibes la carta de daño boca arriba en esta carta. Luego, retire esta carta."""
         'Proton Bomb':
@@ -4067,7 +4067,7 @@ exportObj.cardLoaders['Español'] = () ->
         'Buzz Droid Swarm':
            display_name: """Enjambre de Droide Zumbador"""
            text: """Iniciativa: 0 <br>%AGILITY%: 1 <br>%HULL%: 1 %LINEBREAK% <strong>Tipo:</strong> Nave, Distante %LINEBREAK% <strong>Fase del sistema, activación y resolución:</strong> Sin efecto. %LINEBREAK%<strong>Fase de compromiso:</strong> Cuando te involucres, cada nave enemiga a alcance 0 del Enjambre de Droide Zumbador sufre 1 %CRIT%. %LINEBREAK%<strong>Otras reglas:</strong> Después de que una nave enemiga haya superpuesto o se haya movido a través de un enjambre de droide zumbador, el jugador que controla el enjambre lo coloca ajustando su pestaña entre las ranuras delanteras o traseras de esa nave (la nave está a alcance 0 del enjambre). El enjambre no puede ajustarse entre un par de ranuras si eso lo hace superponerse con un objeto. Si no puede ajustarse entre las ranuras de una nave, su controlador debe ajustarlo entre el otro par de ranuras de la nave. Si no puede ajustarse entre ese otro par de ranuras, el enjambre y la nave que lo ha superpuesto o ha pasado a través de él sufren cada uno 1 daño %HIT%. %LINEBREAK%<i>Errata (1.4): Agilidad aumentada a 3.</i>"""
-        '''It's the Resistance''':
+        "It's the Resistance":
            display_name: """Es la Resistencia"""
            text: """<strong>Configuración:</strong> Comienzas en reserva. %LINEBREAK%Cuando despliegues, colócate completamente a alcance 1 de cualquier borde del área de juego y más allá de alcance 3 de cualquier nave enemiga. %LINEBREAK%Al comienzo de la ronda, si todas las cargas del <b>GA-97</b> aliado están activas, <b>debes</b> desplegarte. Luego, retira esta carta. %LINEBREAK%Después de que el aliado <b>GA-97</b> sea destruido, <b>debes</b> desplegarte. Luego, gana 1 ficha de desarme y retira esta carta."""
         'Electro-Proton Bomb':
@@ -4106,7 +4106,7 @@ exportObj.cardLoaders['Español'] = () ->
         'You Should Thank Me':
            display_name: """Deberías Agradecerme"""
            text: """Este estado se asigna boca abajo. Révelalo después de defender. %LINEBREAK%Después de defender, <b>Zam Wesell</b> recupera 1 %CHARGE%. Luego puedes apuntar al atacante. %LINEBREAK%Al final de la fase de compromiso, si esta carta está boca abajo y estás en el arco de tiro de una nave enemiga, puedes revelar esta carta y gastar 2 %CHARGE% de <b>Zam Wesell</b>. En ese caso, puedes realizar un ataque adicional. %LINEBREAK%Al comienzo de la fase de sistema, retira este estado."""
-        '''You'd Better Mean Business''':
+        "You'd Better Mean Business":
            display_name: """Deberías Tomarlo en Serio"""
            text: """Este estado se asigna boca abajo. Révelalo después de defender. %LINEBREAK%Después de defender, puedes gastar 2 %CHARGE% de <b>Zam Wesell</b>. En ese caso, realiza un ataque adicional contra el atacante. %LINEBREAK%Al final de la fase de compromiso, si esta carta está boca abajo y estás en el arco de tiro de una nave enemiga, puedes revelar esta carta. En ese caso, <b>Zam Wesell</b> recupera 2 %CHARGE%. %LINEBREAK%Al comienzo de la fase de sistema, retira este estado."""
         'Merciless Pursuit':
@@ -4153,7 +4153,7 @@ exportObj.cardLoaders['Español'] = () ->
            text: """Considera a las naves aliadas como amigas. %LINEBREAK%Las naves no enemigas te consideran amistoso. %LINEBREAK%Mientras realizas un ataque, antes de declarar al defensor, cada nave amistosa en su arco de ataque y que no esté bajo tensión, recibe 1 ficha de tensión. %LINEBREAK%Después de que hayas defendido o realizado un ataque, si al menos 1 carta de daño boca arriba ha sido asignada al defensor o si ha sido destruido, retira este estado."""
 
     chassis_translations =
-	    "Vectored Thrusters":
+       "Vectored Thrusters":
            display_name: "Propulsores vectoriales"
            text: """Después de que realices una acción, puedes realizar una acción %BOOST% roja."""
         "Advanced Targeting Computer":
