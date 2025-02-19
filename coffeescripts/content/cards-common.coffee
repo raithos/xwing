@@ -13076,7 +13076,6 @@ exportObj.basicCardData = ->
                 "Astromech"
                 "Modification"
                 "Modification"
-                "Modification"
             ]
         }
         {
@@ -13178,7 +13177,6 @@ exportObj.basicCardData = ->
                 "Force"
                 "Force"
                 "Astromech"
-                "Modification"
                 "Modification"
                 "Modification"
             ]
