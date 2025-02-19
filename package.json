@@ -18,15 +18,18 @@
     "grunt-contrib-copy": "*",
     "grunt-contrib-pug": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-iced-coffee": "*",
+    "grunt-contrib-coffee": "*",
     "grunt-sass": "*",
-    "iced-coffee-script": "*",
     "jstransformer-coffee-script": "*",
     "jstransformer-markdown": "*",
-    "node-sass": "*",
+    "sass": "*",
     "phantomjs-prebuilt": "*"
   },
   "engines": {
     "node": "*"
+  },
+  "dependencies": {
+    "install": "^0.13.0",
+    "sass": "^1.85.0"
   }
 }
