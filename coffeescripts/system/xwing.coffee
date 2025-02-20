@@ -1071,24 +1071,24 @@ class exportObj.SquadBuilder
                 """
                 @backend_status.show()
                 @backend_save_list_button.addClass 'disabled'
-                await @backend.save @serialize(), @current_squad.id, @current_squad.name, @faction, additional_data, defer(results)
-                if results.success
-                    @current_squad.dirty = false
-                    if @current_squad.id?
-                        @backend_status.html $.trim """
-                            <i class="fa fa-check"></i>&nbsp;<span class="translated" defaultText="Squad updated successfully."></span>
-                        """
+                await @backend.save @serialize(), @current_squad.id, @current_squad.name, @faction, additional_data, (results)->
+                    if results.success
+                        @current_squad.dirty = false
+                        if @current_squad.id?
+                            @backend_status.html $.trim """
+                                <i class="fa fa-check"></i>&nbsp;<span class="translated" defaultText="Squad updated successfully."></span>
+                            """
+                        else
+                            @backend_status.html $.trim """
+                                <i class="fa fa-check"></i>&nbsp;<span class="translated" defaultText="New squad saved successfully."></span>
+                            """
+                            @current_squad.id = results.id
+                        @container.trigger 'xwing-backend:squadDirtinessChanged'
                     else
                         @backend_status.html $.trim """
-                            <i class="fa fa-check"></i>&nbsp;<span class="translated" defaultText="New squad saved successfully."></span>
+                            <i class="fa fa-exclamation-circle"></i>&nbsp;#{results.error}
                         """
-                        @current_squad.id = results.id
-                    @container.trigger 'xwing-backend:squadDirtinessChanged'
-                else
-                    @backend_status.html $.trim """
-                        <i class="fa fa-exclamation-circle"></i>&nbsp;#{results.error}
-                    """
-                    @backend_save_list_button.removeClass 'disabled'
+                        @backend_save_list_button.removeClass 'disabled'
         @backend_save_list_as_button = $ @container.find('button.save-list-as')
         @backend_save_list_as_button.addClass 'disabled'
         @backend_save_list_as_button.click (e) =>
@@ -2004,8 +2004,8 @@ class exportObj.SquadBuilder
 
     removeShip: (ship, cb=$.noop) ->
         if ship?.destroy?
-            await ship.destroy defer()
-            await @container.trigger 'xwing:pointsUpdated', defer()
+            await ship.destroy $.noop
+            await @container.trigger 'xwing:pointsUpdated', $.noop
             @current_squad.dirty = true
             @container.trigger 'xwing-backend:squadDirtinessChanged'
             @ship_number_invalid_container.toggleClass 'd-none', (@ships.length < 10 and @ships.length > 3)
@@ -3784,7 +3784,7 @@ class Ship
             else
                 # unlink us from the linked ship, so we are not in a infinite recursive trap (it will otherwise attempt to remove us)
                 @linkedShip.linkedShip = null
-                await @builder.removeShip @linkedShip, defer()
+                await @builder.removeShip @linkedShip, $.noop
         cb()
 
     copyFrom: (other) ->
@@ -3901,7 +3901,7 @@ class Ship
                     @data = exportObj.ships[quickbuild.ship]
                     @builder.isUpdatingPoints = true # prevents unneccesary validations while still adding stuff
                     if new_pilot?.unique?
-                        await @builder.container.trigger 'xwing:claimUnique', [ new_pilot, 'Pilot', defer() ]
+                        await @builder.container.trigger 'xwing:claimUnique', [ new_pilot, 'Pilot', $.noop ]
                     @pilot = new_pilot
                     @setupAddons() if @pilot?
                     @copy_button.show()
@@ -3934,7 +3934,7 @@ class Ship
                             else
                                 # we are no longer part of a linked pair, so the linked ship should be removed
                                 @linkedShip.linkedShip = null
-                                await @builder.removeShip @linkedShip, defer()
+                                await @builder.removeShip @linkedShip, $.noop
                             @linkedShip = null
                     else if quickbuild.linkedId?
                         # we nare not already linked to another ship, but need one. Let's set one up
@@ -4035,7 +4035,7 @@ class Ship
             if new_pilot?
                 @data = exportObj.ships[new_pilot?.ship]
                 if new_pilot?.unique?
-                    await @builder.container.trigger 'xwing:claimUnique', [ new_pilot, 'Pilot', defer() ]
+                    await @builder.container.trigger 'xwing:claimUnique', [ new_pilot, 'Pilot', $.noop ]
                 @pilot = new_pilot
                 @setupAddons() if @pilot?
                 @copy_button.show()
@@ -4080,7 +4080,7 @@ class Ship
 
     resetPilot: ->
         if @pilot?.unique?
-            await @builder.container.trigger 'xwing:releaseUnique', [ @pilot, 'Pilot', defer() ]
+            await @builder.container.trigger 'xwing:releaseUnique', [ @pilot, 'Pilot', $.noop ]
         @pilot = null
 
     setupAddons: ->
@@ -4124,10 +4124,11 @@ class Ship
                 @upgrades.push upgrade
 
     resetAddons: ->
-        await ->
-            for upgrade in @upgrades
-                upgrade.destroy defer() if upgrade?
-        @upgrades = []
+        upgrades_destroyed = []
+        for upgrade in @upgrades
+                upgrades_destroyed.push(upgrade.destroy $.noop if upgrade?)
+        Promise.all(upgrades_destroyed).then(@upgrades = [])
+
 
     getPoints: ->
         if not @builder.isQuickbuild
@@ -4188,7 +4189,7 @@ class Ship
             # destroy wingmates
             dyingMate = @wingmates.pop()
             dyingMate.linkedShip = null # prevent the mate from killing us
-            await @builder.removeShip dyingMate, defer()
+            await @builder.removeShip dyingMate, $.noop
         @wingmate_selector.val wingmates
 
     removeFromWing: (ship) ->
@@ -5167,7 +5168,7 @@ class GenericAddon
     destroy: (cb, args...) ->
         return cb(args) if @destroyed
         if @data?.unique?
-            await @ship.builder.container.trigger 'xwing:releaseUnique', [ @data, @type, defer() ]
+            await @ship.builder.container.trigger 'xwing:releaseUnique', [ @data, @type, $.noop ]
         if @isStandardized()
             isLastShip = true
             for ship in @ship.builder.ships
@@ -5269,14 +5270,14 @@ class GenericAddon
     setData: (new_data) ->
         if new_data?.id != @data?.id
             if @data?.unique? or @data?.solitary?
-                await @ship.builder.container.trigger 'xwing:releaseUnique', [ @unadjusted_data, @type, defer() ]
+                await @ship.builder.container.trigger 'xwing:releaseUnique', [ @unadjusted_data, @type, $.noop ]
             if @isStandardized() and not @ship.hasFixedUpgrades
                 @ship.removeStandardizedList(@data)
             @rescindAddons()
             @deoccupyOtherUpgrades()
             if new_data?.unique? or new_data?.solitary?
                 try
-                    await @ship.builder.container.trigger 'xwing:claimUnique', [ new_data, @type, defer() ]
+                    await @ship.builder.container.trigger 'xwing:claimUnique', [ new_data, @type, $.noop ]
                 catch alreadyClaimed
                     @ship.builder.container.trigger 'xwing:pointsUpdated'
                     @lastSetValid = false
@@ -5339,9 +5340,10 @@ class GenericAddon
                 @conferredAddons.push addon
                 
     rescindAddons: ->
-        await ->
-            for addon in @conferredAddons
-                addon.destroy defer()
+        destroyed_addons = []
+        for addon in @conferredAddons
+            destroyed_addons.push(addon.destroy $.noop)
+        await Promise.all destroyed_addons
         for addon in @conferredAddons
             if addon instanceof exportObj.Upgrade
                 @ship.upgrades.removeItem addon
