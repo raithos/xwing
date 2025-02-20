@@ -115,9 +115,11 @@ exportObj.setupTranslationSupport = ->
             if language of exportObj.translations
                 $('.language-placeholder').text language
                 current_language = ""
+                builders_before = []
                 for builder in builders
                     current_language = builder.language
-                    await builder.container.trigger 'xwing:beforeLanguageLoad', $.noop
+                    builders_before.push new Promise((resolve,reject) => builder.container.trigger 'xwing:beforeLanguageLoad', resolve)
+                await Promise.all builders_before
                 if language != current_language
                     exportObj.loadCards language
                 exportObj.translateUIElements()

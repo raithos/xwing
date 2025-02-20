@@ -4126,7 +4126,7 @@ class Ship
     resetAddons: ->
         upgrades_destroyed = []
         for upgrade in @upgrades
-                upgrades_destroyed.push(upgrade.destroy $.noop if upgrade?)
+                upgrades_destroyed.push(new Promise((resolve,reject) => upgrade.destroy resolve))  if upgrade?
         Promise.all(upgrades_destroyed).then(@upgrades = [])
 
 
@@ -5340,7 +5340,7 @@ class GenericAddon
     rescindAddons: ->
         destroyed_addons = []
         for addon in @conferredAddons
-            destroyed_addons.push(addon.destroy $.noop)
+            destroyed_addons.push(new Promise ((resolve,reject) => addon.destroy resolve))
         await Promise.all destroyed_addons
         for addon in @conferredAddons
             if addon instanceof exportObj.Upgrade
