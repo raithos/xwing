@@ -73,7 +73,7 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks 'grunt-contrib-pug'
     grunt.loadNpmTasks 'grunt-sass'
     grunt.loadNpmTasks 'grunt-contrib-uglify'
-    grunt.loadNpmTasks 'grunt-iced-coffee'
+    grunt.loadNpmTasks 'grunt-contrib-coffee'
 
     grunt.registerTask 'default', [
         'bower'
