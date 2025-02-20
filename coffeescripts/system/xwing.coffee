@@ -3815,12 +3815,12 @@ class Ship
                 # Look for cheapest generic or available unique, otherwise do nothing
                 available_pilots = (pilot_data for pilot_data in @builder.getAvailablePilotsForShipIncluding(other.data.name) when not pilot_data.disabled)
                 if available_pilots.length > 0
-                    @setPilotById available_pilots[0].id, true
+                    await @setPilotById available_pilots[0].id, true
 
                 else
                     return
             else
-                @setPilotById other.pilot.id, true
+                await @setPilotById other.pilot.id, true
 
             # filter out upgrades that can be copied
             other_upgrades = {}
@@ -4030,8 +4030,8 @@ class Ship
                     if upgrade?.data?
                         old_upgrades[upgrade.slot] ?= []
                         old_upgrades[upgrade.slot].push upgrade.data.id
-            @resetPilot()
-            @resetAddons()
+            await @resetPilot()
+            await @resetAddons()
             if new_pilot?
                 @data = exportObj.ships[new_pilot?.ship]
                 if new_pilot?.unique?
