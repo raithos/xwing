@@ -3673,7 +3673,7 @@ exportObj.cardLoaders.English = () ->
            display_name: """Corvus"""
            text: """<strong>Setup:</strong> Place this ship as if it were a standard ship at initiative 5."""
         "Agent Terex (Epic)":
-           display_name: """Gideon Hask"""
+           display_name: """Agent Terex"""
            text: """After an enemy ship is destroyed during an attack, if the attacker is at range 1-2 of you, assign a focus token to them."""
         "Protectorate Gleb (Epic)":
            display_name: """Protectorate Gleb"""
