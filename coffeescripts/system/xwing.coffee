@@ -4055,7 +4055,7 @@ class Ship
                             # check if there exits old upgrades for this slot - if so, try to add the first of them
                             old_upgrade = (old_upgrades[upgrade.slot] ? []).shift()
                             if old_upgrade?
-                                upgrade.setById old_upgrade
+                                await upgrade.setById old_upgrade
                                 if not upgrade.lastSetValid
                                     # failed to add an upgrade, even though the required slot was there - retry later
                                     # perhaps another card is providing an required restriction (e.g. an action)
@@ -4802,7 +4802,7 @@ class Ship
 
                             for upgrade_selection in @upgrades
                                 if exportObj.slotsMatching(upgrade.slot, upgrade_selection.slot) and not upgrade_selection.isOccupied()
-                                    upgrade_selection.setById upgrade_id
+                                    await upgrade_selection.setById upgrade_id
                                     if upgrade_selection.lastSetValid
                                         upgrade_ids.splice(i,1) # added successfully, remove from list
                                     break
@@ -5271,7 +5271,7 @@ class GenericAddon
                 await new Promise((resolve,reject) => @ship.builder.container.trigger 'xwing:releaseUnique', [ @unadjusted_data, @type, resolve ])
             if @isStandardized() and not @ship.hasFixedUpgrades
                 @ship.removeStandardizedList(@data)
-            @rescindAddons()
+            await @rescindAddons()
             @deoccupyOtherUpgrades()
             if new_data?.unique? or new_data?.solitary?
                 try
