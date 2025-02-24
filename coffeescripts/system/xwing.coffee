@@ -1331,8 +1331,7 @@ class exportObj.SquadBuilder
                     @isUpdatingPoints = false
                     cb()
         .on 'xwing-backend:squadLoadRequested', (e, squad, cb=$.noop) =>
-            @onSquadLoadRequested squad
-            cb()
+            @onSquadLoadRequested squad, cb
         .on 'xwing-backend:squadDirtinessChanged', (e) =>
             @onSquadDirtinessChanged()
         .on 'xwing-backend:squadNameChanged', (e) =>
@@ -1698,18 +1697,23 @@ class exportObj.SquadBuilder
         cb @total_points
 
 
-    onSquadLoadRequested: (squad) =>
+    onSquadLoadRequested: (squad, cb=$.noop) =>
         @current_squad = squad
         @backend_delete_list_button.removeClass 'disabled'
         @updateObstacleSelect(@current_squad.additional_data.obstacles)
+        afterLoading: () =>
+            @notes.val(squad.additional_data.notes ? '')
+            @tag.val(squad.additional_data.tag ? '')
+            @backend_status.fadeOut 'slow'
+            @current_squad.dirty = false
+            @container.trigger 'xwing-backend:squadNameChanged'
+            @container.trigger 'xwing-backend:squadDirtinessChanged'
+            cb()
         if squad.serialized.length?
-            @loadFromSerialized squad.serialized
-        @notes.val(squad.additional_data.notes ? '')
-        @tag.val(squad.additional_data.tag ? '')
-        @backend_status.fadeOut 'slow'
-        @current_squad.dirty = false
-        @container.trigger 'xwing-backend:squadNameChanged'
-        @container.trigger 'xwing-backend:squadDirtinessChanged'
+            @loadFromSerialized squad.serialized, afterLoading
+        else:
+            afterLoading()
+
 
     onSquadDirtinessChanged: () =>
         #@current_squad.name = $.trim(@squad_name_input.val())
@@ -1841,7 +1845,7 @@ class exportObj.SquadBuilder
             $(window).trigger 'xwing:gameTypeChanged', gametype
 
 
-    loadFromSerialized: (serialized) ->
+    loadFromSerialized: (serialized, cb=$.noop) ->
         @suppress_automatic_new_ship = true
         # Clear all existing ships
         @removeAllShips()
@@ -1910,6 +1914,7 @@ class exportObj.SquadBuilder
         @suppress_automatic_new_ship = false
         # Finally, the unassigned ship
         @addShip()
+        cb()
 
 
     select_xws_view: () ->
