@@ -1709,7 +1709,7 @@ class exportObj.SquadBuilder
             @container.trigger 'xwing-backend:squadNameChanged'
             @container.trigger 'xwing-backend:squadDirtinessChanged'
             cb()
-        if squad.serialized.length?
+        if squad.serialized?.length?
             @loadFromSerialized squad.serialized, afterLoading
         else:
             afterLoading()
