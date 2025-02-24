@@ -1701,7 +1701,7 @@ class exportObj.SquadBuilder
         @current_squad = squad
         @backend_delete_list_button.removeClass 'disabled'
         @updateObstacleSelect(@current_squad.additional_data.obstacles)
-        afterLoading: () =>
+        afterLoading = () =>
             @notes.val(squad.additional_data.notes ? '')
             @tag.val(squad.additional_data.tag ? '')
             @backend_status.fadeOut 'slow'
@@ -3655,7 +3655,7 @@ class exportObj.SquadBuilder
 
         switch
             # Not doing backward compatibility pre-1.x
-            when version_list > [0, 1]
+            when version_list > [0, 1] or xws.ruleset == 'XWA'
                 xws_faction = exportObj.fromXWSFaction[xws.faction]
 
                 if @faction != xws_faction
@@ -3675,7 +3675,9 @@ class exportObj.SquadBuilder
                 success = true
                 error = ""
 
+                # we use our current gamemode as default, but switch to standard if we are in XWA but the loaded xws specifies AMG or vice versa
                 if @isStandard then gamemode = 'h' else if @isEpic then gamemode = 'e' else if @isBeta then gamemode = 'b' else gamemode = 's'
+                if xws.ruleset? and xws.ruleset == 'XWA' then gamemode = 'b' else if xws.ruleset? and xws.ruleset == 'AMG' and gamemode == 'b' then gamemode = 'h'
                 serialized_squad = ""
 
                 for pilot in xws.pilots
@@ -3738,11 +3740,20 @@ class exportObj.SquadBuilder
 
                 serialized_squad = serialized_squad_intro + serialized_squad
 
-                @loadFromSerialized(serialized_squad)
+                afterLoad = () =>
+                    @current_squad.dirty = true
+                    @container.trigger 'xwing-backend:squadNameChanged'
+                    @container.trigger 'xwing-backend:squadDirtinessChanged'
+                    cb
+                        success: success
+                        error: error
 
-                @current_squad.dirty = true
-                @container.trigger 'xwing-backend:squadNameChanged'
-                @container.trigger 'xwing-backend:squadDirtinessChanged'
+                @loadFromSerialized(serialized_squad, afterLoad)
+
+            else
+                success = false
+                error = "Unsupported XWS version"
+                cb success, error
 
 
         cb
