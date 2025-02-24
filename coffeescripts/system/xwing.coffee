@@ -1071,7 +1071,7 @@ class exportObj.SquadBuilder
                 """
                 @backend_status.show()
                 @backend_save_list_button.addClass 'disabled'
-                await @backend.save @serialize(), @current_squad.id, @current_squad.name, @faction, additional_data, (results)->
+                await @backend.save @serialize(), @current_squad.id, @current_squad.name, @faction, additional_data, (results)=>
                     if results.success
                         @current_squad.dirty = false
                         if @current_squad.id?
