@@ -1331,8 +1331,7 @@ class exportObj.SquadBuilder
                     @isUpdatingPoints = false
                     cb()
         .on 'xwing-backend:squadLoadRequested', (e, squad, cb=$.noop) =>
-            @onSquadLoadRequested squad
-            cb()
+            @onSquadLoadRequested squad, cb
         .on 'xwing-backend:squadDirtinessChanged', (e) =>
             @onSquadDirtinessChanged()
         .on 'xwing-backend:squadNameChanged', (e) =>
@@ -1698,18 +1697,23 @@ class exportObj.SquadBuilder
         cb @total_points
 
 
-    onSquadLoadRequested: (squad) =>
+    onSquadLoadRequested: (squad, cb=$.noop) =>
         @current_squad = squad
         @backend_delete_list_button.removeClass 'disabled'
         @updateObstacleSelect(@current_squad.additional_data.obstacles)
-        if squad.serialized.length?
-            @loadFromSerialized squad.serialized
-        @notes.val(squad.additional_data.notes ? '')
-        @tag.val(squad.additional_data.tag ? '')
-        @backend_status.fadeOut 'slow'
-        @current_squad.dirty = false
-        @container.trigger 'xwing-backend:squadNameChanged'
-        @container.trigger 'xwing-backend:squadDirtinessChanged'
+        afterLoading = () =>
+            @notes.val(squad.additional_data.notes ? '')
+            @tag.val(squad.additional_data.tag ? '')
+            @backend_status.fadeOut 'slow'
+            @current_squad.dirty = false
+            @container.trigger 'xwing-backend:squadNameChanged'
+            @container.trigger 'xwing-backend:squadDirtinessChanged'
+            cb()
+        if squad.serialized?.length?
+            @loadFromSerialized squad.serialized, afterLoading
+        else:
+            afterLoading()
+
 
     onSquadDirtinessChanged: () =>
         #@current_squad.name = $.trim(@squad_name_input.val())
@@ -1841,7 +1845,7 @@ class exportObj.SquadBuilder
             $(window).trigger 'xwing:gameTypeChanged', gametype
 
 
-    loadFromSerialized: (serialized) ->
+    loadFromSerialized: (serialized, cb=$.noop) ->
         @suppress_automatic_new_ship = true
         # Clear all existing ships
         @removeAllShips()
@@ -1910,6 +1914,7 @@ class exportObj.SquadBuilder
         @suppress_automatic_new_ship = false
         # Finally, the unassigned ship
         @addShip()
+        cb()
 
 
     select_xws_view: () ->
@@ -3650,7 +3655,7 @@ class exportObj.SquadBuilder
 
         switch
             # Not doing backward compatibility pre-1.x
-            when version_list > [0, 1]
+            when version_list > [0, 1] or xws.ruleset == 'XWA'
                 xws_faction = exportObj.fromXWSFaction[xws.faction]
 
                 if @faction != xws_faction
@@ -3670,7 +3675,9 @@ class exportObj.SquadBuilder
                 success = true
                 error = ""
 
+                # we use our current gamemode as default, but switch to standard if we are in XWA but the loaded xws specifies AMG or vice versa
                 if @isStandard then gamemode = 'h' else if @isEpic then gamemode = 'e' else if @isBeta then gamemode = 'b' else gamemode = 's'
+                if xws.ruleset? and xws.ruleset == 'XWA' then gamemode = 'b' else if xws.ruleset? and xws.ruleset == 'AMG' and gamemode == 'b' then gamemode = 'h'
                 serialized_squad = ""
 
                 for pilot in xws.pilots
@@ -3733,11 +3740,20 @@ class exportObj.SquadBuilder
 
                 serialized_squad = serialized_squad_intro + serialized_squad
 
-                @loadFromSerialized(serialized_squad)
+                afterLoad = () =>
+                    @current_squad.dirty = true
+                    @container.trigger 'xwing-backend:squadNameChanged'
+                    @container.trigger 'xwing-backend:squadDirtinessChanged'
+                    cb
+                        success: success
+                        error: error
 
-                @current_squad.dirty = true
-                @container.trigger 'xwing-backend:squadNameChanged'
-                @container.trigger 'xwing-backend:squadDirtinessChanged'
+                @loadFromSerialized(serialized_squad, afterLoad)
+
+            else
+                success = false
+                error = "Unsupported XWS version"
+                cb success, error
 
 
         cb

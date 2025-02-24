@@ -5820,6 +5820,7 @@ exportObj.basicCardData = ->
             ]
             slotsbeta: [
                 "Talent"
+                "Modification"
                 "Configuration"
             ]
         }
