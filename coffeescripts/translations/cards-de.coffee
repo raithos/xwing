@@ -1292,7 +1292,7 @@ exportObj.cardLoaders.Deutsch = () ->
            display_name: """Pionier aus dem Outer Rim"""
            text: """Befreundete Schiffe in Reichweite 0-1 können Angriffe in Reichweite 0 zu Hindernissen durchführen."""
         "Outer Rim Smuggler":
-           display_name: """Schmuggler aus dem """
+           display_name: """Schmuggler aus dem Outer Rim"""
            text: """<i class = flavor_text>Mit seiner robusten Bauweise und modularen Konstruktion gehört der YT-1300 zu den beliebtesten, weitverbreitetsten und am stärksten modifizierten Raumfrachtern der Galaxis. </i>"""
         "Overseer Yushyn":
            display_name: """Raffineriebetreiber Yushyn"""
