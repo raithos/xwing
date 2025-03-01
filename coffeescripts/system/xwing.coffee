@@ -1622,6 +1622,9 @@ class exportObj.SquadBuilder
             @current_squad.id = old_id # we want to keep the ID, so we allow people to use the save button
         else
             old_id = @current_squad.id
+            for ship in @ships
+                if ship.pilot?
+                    ship.setPilotById ship.pilot?.id
             @container.trigger 'xwing:pointsUpdated', $.noop
             @container.trigger 'xwing:shipUpdated'
         cb()
@@ -3777,6 +3780,7 @@ class Ship
         @wingmates = [] # stores wingmates (quickbuild stuff only) 
         @destroystate = 0
         @uitranslation = @builder.uitranslation
+        @usesBetaSlots = false # flag if we use beta slots. This is needed, if we switch betwen XWA/AMG points to rebuild the pilot if the slots change
 
         @setupUI()
 
@@ -4036,7 +4040,7 @@ class Ship
     setPilot: (new_pilot, noautoequip = false) ->
         # don't call this method directly, unless you know what you do. Use setPilotById for proper quickbuild handling
 
-        if new_pilot != @pilot
+        if new_pilot != @pilot or (@builder.isBeta and not @usesBetaSlots and @pilot.slotsbeta?) or (@usesBetaSlots and not @builder.isBeta)
             @builder.current_squad.dirty = true
             same_ship = @pilot? and new_pilot?.ship == @pilot.ship
             old_upgrades = {}
@@ -4103,6 +4107,7 @@ class Ship
         if not @builder.isQuickbuild
             if @pilot.upgrades?
                 @hasFixedUpgrades = true
+                @usesBetaSlots = false
                 for upgrade_name in @pilot.upgrades ? []
                     upgrade_data = exportObj.upgrades[upgrade_name]
                     if not upgrade_data?
@@ -4117,7 +4122,12 @@ class Ship
                     @upgrades.push upgrade
             else
                 @hasFixedUpgrades = false
-                if (@builder.isBeta and @pilot.slotsbeta?) then pilotslots = @pilot.slotsbeta else pilotslots = @pilot.slots
+                if (@builder.isBeta and @pilot.slotsbeta?) 
+                    pilotslots = @pilot.slotsbeta 
+                    @usesBetaSlots = true
+                else 
+                    @usesBetaSlots = false
+                    pilotslots = @pilot.slots
 
                 for slot in pilotslots ? []
                     @upgrades.push new exportObj.Upgrade
@@ -4236,7 +4246,6 @@ class Ship
                 chassis: if exportObj.ships[@pilot.ship].chassis then exportObj.ships[@pilot.ship].chassis else ""
                 xws: exportObj.ships[@pilot.ship].name.canonicalize()
                 icon: if exportObj.ships[@pilot.ship].icon then exportObj.ships[@pilot.ship].icon else exportObj.ships[@pilot.ship].name.canonicalize()
-
             @pilot_selector.select2 'data',
                 id: @pilot.id
                 text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then @pilot.skill + ' - ' else ''}#{if @pilot.display_name then @pilot.display_name else @pilot.name}#{if @quickbuildId != -1 then exportObj.quickbuildsById[@quickbuildId].suffix else ""} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isBeta and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)}#{if (@quickbuildId != -1 or not @pilot.loadout?) then "" else (if @builder.isBeta and @pilot.loadoutbeta? then "/#{@pilot.loadoutbeta}" else "/#{@pilot.loadout}")})"
