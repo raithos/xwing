@@ -4897,7 +4897,7 @@ class Ship
         if not @pilot?
             return true 
         unchanged = true
-        max_checks = 32 # that's a lot of addons
+        max_checks = 8 # that's a lot of addons
         
         if @builder.isEpic #Command Epic adding
             if @pilot.slots? and not ("Command" in @pilot.slots)
