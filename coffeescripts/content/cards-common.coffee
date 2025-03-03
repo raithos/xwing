@@ -2028,9 +2028,6 @@ exportObj.basicCardData = ->
                 [ 0, 0, 1, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0 ]
                 [ 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
             ]
-            autoequip: [
-                'Tractor Tentacles'
-            ]
 
     # name field is for convenience only
     pilotsById: [
