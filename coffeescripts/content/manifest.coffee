@@ -12207,6 +12207,11 @@ exportObj.manifestByExpansion =
             count: 1
         }
         {
+            name: "Vennie (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
             name: "Boba Fett (AaD)"
             type: 'pilot'
             count: 1
