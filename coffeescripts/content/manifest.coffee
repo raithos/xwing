@@ -12090,6 +12090,173 @@ exportObj.manifestByExpansion =
             count: 3
         }
     ]
+    "Print and Play": [
+        {
+            name: '"Whisper" (SSL)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Echo" (SSL)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Major Vynder (SSL)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Lieutenant Karsabi (SSL)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Kylo Ren (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Scorch" (EoD)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Longshot" (EoD)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: '"Midnight" (EoD)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Zeta 5 (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Omega 2 (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Lieutenant LeHuse (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Theta 3 (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Theta 4 (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Petty Officer Thanisson (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Poe Dameron (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Jaycris Tubbs (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Stomeroni Starck (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "C'ai Threnalli (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Ronith Blario (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Tallissan Lintra (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Zizi Tlo (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Pammich Nerro Goode (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Finch Dallow (EoD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Boba Fett (AaD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "The Mandalorian (AaD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Han Solo (AaD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Bo-Katan Kryze (AaD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Dengar (AaD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Bossk (AaD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Cad Bane (AaD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Fenn Rau (AaD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Prince Xizor (AaD)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Zuckuss (AaD)"
+            type: 'pilot'
+            count: 1
+        }
+    ]
 
 class exportObj.Collection
 

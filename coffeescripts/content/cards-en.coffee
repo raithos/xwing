@@ -889,8 +889,6 @@ exportObj.cardLoaders.English = () ->
         "Palob Godalhi":
            display_name: """Palob Godalhi"""
            text: """At the start of the Engagement Phase, you may choose 1 enemy ship in your firing arc at range 0-2. If you do, transfer 1 focus or evade token from that ship to yourself."""
-        "Pammich Nerro Goode":
-           text: """While you have 2 or fewer stress tokens, you may execute red maneuvers even while stressed"""
         "Partisan Renegade":
            display_name: """Partisan Renegade"""
            text: """<i class = flavor_text>Saw Gerrera's partisans were first established to oppose Separatist forces on Onderon during the Clone Wars, and continued to wage war against galactic tyranny as the Empire rose to power.</i>"""
@@ -2096,6 +2094,100 @@ exportObj.cardLoaders.English = () ->
         '"Echo" (SSL)':
            display_name: """“Echo” (SL)"""
            text: """After an enemy ship at range 0-1 performs an action on its action bar, you may spend 1 %CHARGE% to perform the same action, treating it as white."""
+        "Kylo Ren (EoD)":
+           display_name: """Kylo Ren (EoD)"""
+           text: """Before an enemy ship in your %BULLSEYEARC% is dealt a facedown damage card, you may spend 1 %FORCE%. If you do, that damage card is dealt face up instead."""
+        '"Scorch" (EoD)':
+           display_name: """“Scorch” (EoD)"""
+           text: """While you perform a primary attack, if you are not stressed, you may gain 1 stress token to roll 1 additional attack die."""
+        '"Longshot" (EoD)':
+           display_name: """“Longshot” (EoD)"""
+           text: """While you perform a primary attack at attack range 3, roll 1 additional attack die."""
+        '"Midnight" (EoD)':
+           display_name: """“Midnight” (EoD)"""
+           text: """While you defend or perform an attack, if you have a lock on the enemy ship, that ship's dice cannot be modified."""
+        "Zeta 5 (EoD)":
+           display_name: """Zeta 5 (EoD)"""
+           text: """While you perform an attack, if you are not shielded and the defender's initiative is higher than yours, add 1 %FOCUS% result."""
+        "Omega 2 (EoD)":
+           display_name: """Omega 2 (EoD)"""
+           text: """Friendly TIE ships can acquire locks onto objects at range 0-3 of you, ignoring range restrictions."""
+        "Lieutenant LeHuse (EoD)":
+           display_name: """Lieutenant LeHuse (EoD)"""
+           text: """At the start of the Engagement Phase, you may acquire a lock on an object at range 1-3 that has a friendly lock. If you do, break a friendly lock on that object."""
+        "Theta 3 (EoD)":
+           display_name: """Theta 3 (EoD)"""
+           text: """At the start of the engagement phase, if you have no green tokens, you may spend 1 %CHARGE% to gain an evade token."""
+        "Theta 4 (EoD)":
+           display_name: """Theta 4 (EoD)"""
+           text: """While an enemy ship in your %SINGLETURRETARC% performs an attack you may spend 1 %CHARGE%. If you do, spend 1 %CHARGE% from your %MISSILE% upgrade to choose two attack dice. The attacker must reroll those dice."""
+        "Petty Officer Thanisson (EoD)":
+           display_name: """Petty Officer Thanisson (EoD)"""
+           text: """During the Activation or Engagement Phase, after a ship in your %FRONTARC% at range 0-2 gains 1 deplete or strain token, you may spend 1%CHARGE%. If you do, that ship gains 1 stress token."""
+        "Poe Dameron (EoD)":
+           display_name: """Poe Dameron (EoD)"""
+           text: """After you perform an action, you may spend 1%CHARGE% to perform a white action, treating it as red."""
+        "Jaycris Tubbs (EoD)":
+           display_name: """Jaycris Tubbs (EoD)"""
+           text: """After you fully execute a blue maneuver, you may choose a friendly ship at range 0-1. If you do, that ship removes 1 stress token."""
+        "Stomeroni Starck (EoD)":
+           display_name: """Stomeroni Starck (EoD)"""
+           text: """<strong>Setup:</strong> Instead of a T-70 X-wing dial, this ship uses an RZ-2 A-wing dial."""
+        "C'ai Threnalli (EoD)":
+           display_name: """C'ai Threnalli (EoD)"""
+           text: """After you fully execute a maneuver, if you moved through a friendly ship, you may perform an %EVADE% action."""
+        "Ronith Blario (EoD)":
+           display_name: """Ronith Blario (EoD)"""
+           text: """While you defend or perform an attack, if the enemy ship is in another friendly ship's %SINGLETURRETARC%, you may spend 1 focus token from that friendly ship to change 1 of your %FOCUS% results to an %EVADE% or %HIT% result."""
+        "Tallissan Lintra (EoD)":
+           display_name: """Tallissan Lintra (EoD)"""
+           text: """While an enemy in your %BULLSEYEARC% performs an attack, you may spend 1%CHARGE%. If you do, the defender rolls 1 additional die."""
+        "Zizi Tlo (EoD)":
+           display_name: """Zizi Tlo (EoD)"""
+           text: """After you defend or perform an attack, you may spend 1%CHARGE% to gain 1 focus or evade token."""
+        "Pammich Nerro Goode (EoD)":
+           display_name: """Pammich Nerro Goode (EoD)"""
+           text: """While you have 2 or fewer stress tokens, you may execute red maneuvers even while stressed."""
+        "Finch Dallow (EoD)":
+           display_name: """Finch Dallow (EoD)"""
+           text: """If you would drop a device using a %STRAIGHT% template and you are not stressed, you may gain 1 stress token to use a [%BANKLEFT% or %BANKRIGHT%] template of the same speed instead."""
+        "Vennie (EoD)":
+           display_name: """Vennie (EoD)"""
+           text: """While you defend, if the attacker is in a friendly ship's %SINGLETURRETARC%, you may change 1 %FOCUS% result to an %EVADE% result."""
+        "Boba Fett (AaD)":
+           display_name: """Boba Fett (AaD)"""
+           text: """After another friendly ship defends, if you have a lock on the attacker, you may perform a bonus attack against the attacker."""
+        "The Mandalorian (AaD)":
+           display_name: """The Mandalorian (AaD)"""
+           text: """While you defend or perform an attack, if you are in the %FRONTARC% at range 1-2 of 2 or more enemy ships, you may change 1 of your blank results to a %FOCUS% result."""
+        "Han Solo (AaD)":
+           display_name: """Han Solo (AaD)"""
+           text: """While you defend or perform a primary attack, if the attack is obstructed by an obstacle, you may roll 1 additional die."""
+        "Bo-Katan Kryze (AaD)":
+           display_name: """Bo-Katan Kryze (AaD)"""
+           text: """While you perform an attack, if you are at range 0-1 of the defender, you may reroll 1 attack die."""
+        "Dengar (AaD)":
+           display_name: """Dengar (AaD)"""
+           text: """After you defend, if the attacker is in your %FRONTARC%, you may spend 1 %CHARGE% to perform a bonus attack against the attacker."""
+        "Bossk (AaD)":
+           display_name: """Bossk (AaD)"""
+           text: """While you perform an attack, after the Neutralize Results step, you may spend 1 %CRIT% result to add 2 %HIT% results."""
+        "Cad Bane (AaD)":
+           display_name: """Cad Bane (AaD)"""
+           text: """After you perform an attack that hits, you may spend 2 %CHARGE% to transfer 1 of your non-lock red or orange tokens to the defender."""
+        "Cad Bane (AaD)":
+           display_name: """Cad Bane (AaD)"""
+           text: """After you perform an attack that hits, you may spend 2 %CHARGE% to transfer 1 of your non-lock red or orange tokens to the defender."""
+        "Fenn Rau (AaD)":
+           display_name: """Fenn Rau (AaD)"""
+           text: """While you defend or perform an attack, if the attack range is 1, you may roll 1 additional die."""
+        "Prince Xizor (AaD)":
+           display_name: """Prince Xizor (AaD)"""
+           text: """When you perform an attack against a strained ship, you may remove 1 stress token."""
+        "Zuckuss (AaD)":
+           display_name: """Zuckuss (AaD)"""
+           text: """While you perform a primary attack, you may roll 1 additional attack die. If you do, the defender rolls 1 additional defense die."""
+
 
 
         # Epic Ships
@@ -3415,6 +3507,129 @@ exportObj.cardLoaders.English = () ->
         "Heavy Plasma Missiles (SL)":
            display_name: """Heavy Plasma Missiles"""
            text: """<strong>Attack (%LOCK%):</strong> Spend 1 %CHARGE%. After this attack hits, the defender loses 1 shield."""
+        "Determination (EoD)":
+           display_name: """Determination"""
+           text: """While you perform a primary attack, if the defender is in your %BULLSEYEARC%, you may suffer 1 %HIT% to add 1 %FOCUS% result."""
+        "Experimental Scanners (EoD)":
+           display_name: """Experimental Scanners"""
+           text: """You can acquire locks beyond range 3. You cannot acquire locks at range 1."""
+        "Advanced Warning Systems (EoD)":
+           display_name: """Advanced Warning Systems"""
+           text: """After you are declared the defender of an attack, if a friendly ship at range 0-2 has a lock on the attacker, you may perform a red %EVADE% action."""
+        "Targeting Relay (EoD)":
+           display_name: """Targeting Relay"""
+           text: """After a friendly ship acquires a lock on an enemy ship at range 0-1 of you, you may spend 1 %CHARGE% and gain a stress token. If you do, that friendly ship may gain a calculate token."""
+        "Interference Array (EoD)":
+           display_name: """Interference Array"""
+           text: """After you coordinate a ship, you may spend 1 %CHARGE%. If you do, assign a jam token to an enemy ship at range 0-1 of the coordinated ship."""
+        "BB-8 (EoD)":
+           display_name: """BB-8"""
+           text: """During the System Phase, you may spend 1%CHARGE% to perform a %BARRELROLL% or %BOOST% action. %LINEBREAK% Before you engage, you may spend 1%CHARGE% and gain a strain token. If you do, you may remove 1 disarm token."""
+        "Primed Overdrive Thrusters (EoD)":
+           display_name: """Primed Overdrive Thrusters"""
+           text: """While you perform a red %BOOST%, %BARRELROLL%, or %SLAM% action, you must use a template 1 speed higher if able. Then, you may gain 1 strain token to remove 1 stress token."""
+        "Black One (EoD)":
+           display_name: """Black One"""
+           text: """After you perform a %SLAM% action, lose 1%CHARGE%. If this upgrade has 0 active %CHARGE%, you cannot perform the %SLAM% action."""
+        "For The Cause (EoD)":
+           display_name: """For The Cause"""
+           text: """While you defend or perform an attack, you may spend 1 non-blank result to choose a friendly strained or depleted ship at range 1-2. That ship may remove 1 strain or deplete token."""
+        "R0 Astromech (EoD)":
+           display_name: """R0 Astromech"""
+           text: """After you reveal a basic maneuver, you may reduce its difficulty. If you do, after the Check Difficulty step, gain 1 strain token."""
+        "Accelerated Sensor Array (EoD)":
+           display_name: """Accelerated Sensor Array"""
+           text: """While you defend or perform a primary attack, if the speed of your revealed maneuver is 3-5, you may reroll 1 die. If your revealed maneuver is an advanced maneuver, you may reroll up to  2 dice instead."""
+        "Repulsorlift Engines (EoD)":
+           display_name: """Repulsorlift Engines"""
+           text: """While you perform a %BARRELROLL% action, you may gain 1 strain token to use the %BANKLEFT% or %BANKRIGHT% template instead of the %STRAIGHT% template."""
+        "Escort Fighter (EoD)":
+           display_name: """Escort Fighter"""
+           text: """While a friendly non-small ship defends, if you are in the attacker's firing arc, you may spend 1 %CHARGE% and gain 1 strain token to add 1 %FOCUS% result to the roll."""
+        "Precision Holo-Targeter (EoD)":
+           display_name: """Precision Holo-Targeter"""
+           text: """While you perform a primary attack, if you are not in the defender's firing arc, the defender rolls 1 fewer defense die."""
+        "R0-GR (EoD)":
+           display_name: """R0-GR"""
+           text: """While you have 2 or fewer stress tokens, you may perform %COORDINATE% and %JAM% actions, even while stressed. %LINEBREAK% After you perform a %COORDINATE% or %JAM% action, gain 1 calculate token."""
+        "Black Squadron R4 (EoD)":
+           display_name: """Black Squadron R4"""
+           text: """After you fully execute a blue maneuver, you may spend 1%CHARGE% to remove all of your stress tokens."""
+        "Nix Jerd (EoD)":
+           display_name: """Nix Jerd"""
+           text: """While you perform a %RELOAD% action, you may spend 1 %CHARGE% and gain 1 strain token. If you do, you may recover 1 additional %CHARGE% on a %DEVICE% upgrade."""
+        "Paige Tico (EoD)":
+           display_name: """Paige Tico"""
+           text: """While you have exactly 1 disarm token, you can still perform %SINGLETURRETARC% attacks. After you perform an attack, you may drop a bomb or rotate your %SINGLETURRETARC% indicator."""
+        "Dedicated Gunners (EoD)":
+           display_name: """Dedicated Gunners"""
+           text: """While you perform a primary attack, if the defender is in your %SINGLETURRETARC%, you may spend 1 focus token to roll 1 additional attack die. %LINEBREAK% After you perform a primary attack, you may perform a bonus %SINGLETURRETARC% attack using a %SINGLETURRETARC% you did not already attack from this round."""
+        "Homing Beacon (AaD)":
+           display_name: """Homing Beacon"""
+           text: """While you perform a %LOCK% action, you may spend 1 %CHARGE% to ignore range restrictions. %LINEBREAK% After you fully execute an advanced maneuver, if there is an enemy ship at range 1-2 in your %FRONTARC%, you may spend 1 %CHARGE% to acquire a lock on that ship."""
+        "Fennec Shand (AaD)":
+           display_name: """Fennec Shand"""
+           text: """While you defend or perform an attack, if you have a lock on the enemy ship, the enemy ship rolls 1 fewer die."""
+        "The Child (AaD)":
+           display_name: """The Child"""
+           text: """After you defend, if you suffered damage during that attack, recover 1 %FORCE%."""
+        "Kineso-Switch (AaD)":
+           display_name: """Kineso-Switch"""
+           text: """After you perform a %SLAM% action, if you fully executed the maneuver, you may spend 1 %CHARGE% to break all locks assigned to you."""
+        "L3-37 (AaD)":
+           display_name: """L3-37"""
+           text: """While you defend, you may spend 1 %CHARGE%. If you do, the attacker must reroll all attack dice. %LINEBREAK% If this %CHARGE% is inactive, decrease the difficulty of your bank [%BANKLEFT% and %BANKRIGHT%] maneuvers. %LINEBREAK% This upgrade's %CHARGE% cannot be recovered."""
+        "Tobias Beckett (AaD)":
+           display_name: """Tobias Beckett"""
+           text: """While you perform an attack, if you are stressed, you may reroll up to 2 attack dice. Then suffer 1 %CRIT% damage if 1 or more of the rerolled results is a %CRIT% result."""
+        "Lando's Millennium Falcon (AaD)":
+           display_name: """Lando's Millennium Falcon"""
+           text: """While you perform a primary attack, if the defender has a non-lock red or orange token, roll 1 additional attack die."""
+        "Mandalorian Tactics (AaD)":
+           display_name: """Mandalorian Tactics"""
+           text: """While defending, if there is at least 1 enemy ship at range 0, you may reroll 1 of your blank results."""
+        "Nite Owl Sentries (AaD)":
+           display_name: """Nite Owl Sentries"""
+           text: """During the System Phase, you may spend 3%CHARGE%. %LINEBREAK% At the end of the Activation Phase, if this upgrade has 0 active %CHARGE%, each enemy ship at range 0-1 of you rolls 1 attack die. On a %HIT% or %CRIT% result it suffers a %HIT%."""
+        "R2-G8 (AaD)":
+           display_name: """R2-G8"""
+           text: """After you perform a primary attack that hits, you may spend 2 %CHARGE% to choose an enemy ship at range 0-1 of the defender. If you do, that ship gains a strain token."""
+        "Synchronized Handling (AaD)":
+           display_name: """Synchronized Handling"""
+           text: """Before you engage, you may spend 1 %CHARGE% to gain a %CALCULATE% token. %LINEBREAK% After you fully execute a turn [%TURNLEFT%], bank [%BANKLEFT%] or Segnor's Loop [%SLOOPLEFT%] maneuver, recover 1%CHARGE%."""
+        "Starboard Thrusters (AaD)":
+           display_name: """Starboard Thrusters"""
+           text: """After you reveal a turn [%TURNLEFT%] or Segnor's Loop [%SLOOPLEFT%] maneuver,  you may spend 1 %CHARGE%. If you do, decrease the difficulty of that maneuver. After you execute a white Segnor's Loop [%SLOOPLEFT%], gain 1 strain token."""
+        "Embo (AaD)":
+           display_name: """Embo"""
+           text: """At the start of the Engagement Phase, if there is an enemy ship at range 0, you may perform a red %REINFORCE% action."""
+        "Flechette Cannons (AaD)":
+           display_name: """Flechette Cannons"""
+           text: """<strong>Attack:</strong> After this attack hits, if the defender is in your %BULLSEYEARC%, the defender gains 1 strain token."""
+        "Todo 360 (AaD)":
+           display_name: """Todo 360"""
+           text: """During the System Phase, you may spend 1 %CHARGE%. If you do, you may remove 1 stress token to gain 1 strain token and 1 calculate token."""
+        "Xanadu Blood (AaD)":
+           display_name: """Xanadu Blood"""
+           text: """After you decloak, you may choose an enemy ship in your %BULLSEYEARC%. If you do, that ship gains 1 strain token."""
+        "Adaptable Power Systems (AaD)":
+           display_name: """Adaptable Power Systems"""
+           text: """After you fully execute a red maneuver or perform a red action, you may spend 1 %CHARGE%. If you do, you may gain 1 deplete token to remove 1 stress token. %LINEBREAK% Before you engage, you may spend 1 %CHARGE%. If you do, you may gain 1 strain token to remove 1 deplete token."""
+        "Crime Lord (AaD)":
+           display_name: """Crime Lord"""
+           text: """After you defend, if the attacker is in your %FRONTARC%, you may spend 1 %CHARGE%. If you do, the attacker gains 1 strain token."""
+        "Virago (AaD)":
+           display_name: """Virago"""
+           text: """During the System Phase you may perform a red %BARRELROLL% or red %BOOST% action."""
+        "Persistent Tracker (AaD)":
+           display_name: """Persistent Tracker"""
+           text: """During the System Phase, you may spend 3 %CHARGE%. %LINEBREAK% During the Activation Phase, if this upgrade has 0 active %CHARGE%, you can perform actions and execute red maneuvers, even while stressed."""
+        "4-LOM (AaD)":
+           display_name: """4-LOM"""
+           text: """WAt the start of the End Phase, you may spend 1 calculate token and choose an enemy ship at range 0-1. If you do, transfer 1 of your stress tokens to that ship."""
+        "Mist Hunter (AaD)":
+           display_name: """Mist Hunter"""
+           text: """After you perform a %CANNON% attack, you may gain 1 strain token to perform a bonus primary attack against the same target."""
 
 
         # Epic upgrades
@@ -4027,6 +4242,39 @@ exportObj.cardLoaders.English = () ->
         "Tractor Grasp":
            display_name: "Tractor Grasp"
            text: """After you perform a <b>Tractor Tentacles</b> attack that hits, the defender gains 1 tractor token."""
+        "Merciless":
+           display_name: "Merciless"
+           text: """While you perform an attack, you may choose another friendly ship at range 0-1 of the defender. If you do, that ship gains a strain token and you may reroll a blank result."""
+        "Heavy Weapon Turret (EoD)":
+           display_name: "Heavy Weapon Turret"
+           text: """After you perform an action, you may perform a white %ROTATEARC% action. You can only rotate your %SINGLETURRETARC% arc to your %FRONTARC% or %REARARC%. You must treat the %FRONTARC% requirement of your equipped %MISSILE% upgrades as %SINGLETURRETARC%."""
+        "Adaptive S-Foils":
+           display_name: "Adaptive S-Foils"
+           text: """After you perform a %BARRELROLL% action, gain a deplete token. While you perform an attack, before rolling attack dice, if the defender is in your %BULLSEYEARC%, you may remove 1 deplete token."""
+        "Leave No One Behind":
+           display_name: "Leave No One Behind"
+           text: """After you perform an action, if you have fewer than 2 stress tokens, you may gain 1 stress token. If you do, another friendly small ship at range 0-1 may gain 1 deplete token to perform a %BOOST% action."""
+        "Modular Bombing Magazine":
+           display_name: "Modular Bombing Magazine"
+           text: """When you drop a device, you may set the template with its middle line aligned with the hashmark on the base in your %LEFTARC% or %RIGHTARC%."""
+        "Restored Speedster":
+           display_name: "Restored Speedster"
+           text: """While you have exactly 1 disarm token, you may perform primary attacks against enemy objects in your %BULLSEYEARC%."""
+        "Coaxium Injectors":
+           display_name: "Coaxium Injectors"
+           text: """After you fully execute a speed 3 or 4 maneuver, you may spend 1 %CHARGE% to perform a red %SLAM%  action, even while stressed. After you perform a %SLAM% action, you suffer 1 %CRIT% unless you expose 1 of your damage cards."""
+        "Winged Reversal":
+           display_name: "Winged Reversal"
+           text: """After you reveal a turn [%TURNLEFT% or %TURNRIGHT%] maneuver, you may spend 1 %CHARGE%, gain 1 strain token and increase its difficulty. If you do, perform that maneuver as a Tallon Roll [%TROLLLEFT% or %TROLLRIGHT%] maneuver in the same direction instead."""
+        "Imposing Behemoth":
+           display_name: "Imposing Behemoth"
+           text: """While an enemy ship at range 0 defends, if you are reinforced and the defender is in the %FULLFRONTARC% or %FULLREARARC% matching your reinforce token, that enemy ship rolls 1 fewer defense die."""
+        "Adaptative Microthrusters":
+           display_name: "Adaptative Microthrusters"
+           text: """While you perform a barrel roll, you may spend 1 %CHARGE% to use the %BANKLEFT% or %BANKRIGHT% template instead of the %STRAIGHT% template."""
+        "Enduring Limitations":
+           display_name: "Enduring Limitations"
+           text: """At the end of the Activation Phase, if you have 3 or more stress tokens, you must remove 1 stress token and suffer 1 %HIT% damage."""
 
     damage_translations =
         "Panicked Pilot":

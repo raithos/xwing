@@ -1338,7 +1338,7 @@ exportObj.basicCardData = ->
             ]
         "Naboo Royal N-1 Starfighter":
             name: "Naboo Royal N-1 Starfighter"
-            factions: ["Galactic Republic"]
+            factions: ["Galactic Republic", "Scum and Villainy"]
             attack: 2
             agility: 2
             hull: 3
@@ -12425,7 +12425,7 @@ exportObj.basicCardData = ->
             points: 4
             loadout: 7
             pointsbeta: 5
-            loadoutbeta: 18
+            loadoutbeta: 16
             keyword: ["Mandalorian"]
             slots: [
                 "Talent"
@@ -16493,6 +16493,640 @@ exportObj.basicCardData = ->
                 "Tractor Tentacles"
                 "Drill Beak (Epic)"
                 "Nautolan's Revenge (Epic)"
+            ]
+        }
+        {
+            name: "Kylo Ren (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 692
+            faction: "First Order"
+            ship: "TIE/vn Silencer"
+            skill: 5
+            points: 7
+            force: 3
+            upgrades: [
+                "Determination (EoD)"
+                "Malice"
+                "Proton Torpedoes"
+            ]
+        }
+        {
+            name: '"Scorch" (EoD)'
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 693
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 4
+            points: 4
+            chassis: "Merciless"
+            upgrades: [
+                "Determination (EoD)"
+                "Fanatical"
+            ]
+        }
+        {
+            name: '"Longshot" (EoD)'
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 694
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 3
+            points: 3
+            chassis: "Merciless"
+            upgrades: [
+                "Determination (EoD)"
+                "Fanatical"
+                "Experimental Scanners (EoD)"
+            ]
+        }
+        {
+            name: '"Midnight" (EoD)'
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 695
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 6
+            points: 4
+            chassis: "Merciless"
+            upgrades: [
+                "Targeting Synchronizer"
+                "Advanced Warning Systems (EoD)"
+            ]
+        }
+        {
+            name: "Zeta 5 (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 696
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 2
+            points: 3
+            chassis: "Merciless"
+            upgrades: [
+                "Determination (EoD)"
+                "Pattern Analyzer"
+                "Targeting Matrix (BoE)"
+            ]
+        }
+        {
+            name: "Omega 2 (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 697
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 3
+            points: 3
+            chassis: "Merciless"
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Evade"
+                    "Lock"
+                    "Barrel Roll"
+                    "R-> Evade"
+                ]
+            upgrades: [
+                "Determination (EoD)"
+                "Targeting Relay (EoD)"
+            ]
+        }
+        {
+            name: "Lieutenant LeHuse (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 698
+            faction: "First Order"
+            ship: "TIE/sf Fighter"
+            skill: 5
+            points: 4
+            chassis: "Heavy Weapon Turret (EoD)"
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Evade"
+                    "Lock"
+                    "Barrel Roll"
+                    "Reload"
+                    "> Lock"
+                ]
+            upgrades: [
+                "Determination (EoD)"
+                "Concussion Missiles"
+                "First Order Ordnance Tech"
+            ]
+        }
+        {
+            name: "Theta 3 (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 699
+            faction: "First Order"
+            ship: "TIE/sf Fighter"
+            skill: 3
+            points: 4
+            charge: 2
+            chassis: "Heavy Weapon Turret (EoD)"
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Evade"
+                    "Lock"
+                    "Barrel Roll"
+                    "Reload"
+                    "> Lock"
+                ]
+            upgrades: [
+                "Seeker Missiles (YLF)"
+                "Passive Sensors"
+                "First Order Ordnance Tech"
+            ]
+        }
+        {
+            name: "Theta 4 (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 700
+            faction: "First Order"
+            ship: "TIE/sf Fighter"
+            skill: 4
+            points: 4
+            charge: 1
+            recurring: 1
+            chassis: "Heavy Weapon Turret (EoD)"
+            upgrades: [
+                "Determination (EoD)"
+                "Barrage Rockets"
+                "Pattern Analyzer"
+            ]
+        }
+        {
+            name: "Petty Officer Thanisson (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 701
+            faction: "First Order"
+            ship: "Upsilon-Class Command Shuttle"
+            skill: 1
+            points: 6
+            charge: 1
+            recurring: 1
+            chassis: ""
+            upgrades: [
+                "General Hux"
+                "Advanced Sensors"
+                "Interference Array (EoD)"
+            ]
+        }
+        {
+            name: "Poe Dameron (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 702
+            faction: "Resistance"
+            ship: "T-70 X-wing"
+            skill: 6
+            points: 6
+            charge: 1
+            recurring: 1
+            chassis: "Adaptive S-Foils"
+            ship_override:
+                actions: [
+                    "Focus"
+                    "R-> Barrel Roll"
+                    "Lock"
+                    "Barrel Roll"
+                    "Boost"
+                    "Slam"
+                ]
+            upgrades: [
+                "Heroic"
+                "BB-8 (EoD)"
+                "Primed Overdrive Thrusters (EoD)"
+                "Black One (EoD)"
+            ]
+        }
+        {
+            name: "Jaycris Tubbs (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 703
+            faction: "Resistance"
+            ship: "T-70 X-wing"
+            skill: 1
+            points: 4
+            chassis: "Adaptive S-Foils"
+            ship_override:
+                actions: [
+                    "Focus"
+                    "R-> Barrel Roll"
+                    "Lock"
+                    "Barrel Roll"
+                    "Boost"
+                    "R-> Focus"
+                ]
+            upgrades: [
+                "For The Cause (EoD)"
+                "R0 Astromech (EoD)"
+            ]
+        }
+        {
+            name: "Stomeroni Starck (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 704
+            faction: "Resistance"
+            ship: "T-70 X-wing"
+            skill: 4
+            points: 5
+            chassis: "Adaptive S-Foils"
+            ship_override:
+                actions: [
+                    "Focus"
+                    "R-> Barrel Roll"
+                    "Lock"
+                    "Barrel Roll"
+                    "Boost"
+                    "R-> Focus"
+                ]
+            upgrades: [
+                "For The Cause (EoD)"
+                "Accelerated Sensor Array (EoD)"
+                "R5-X3"
+            ]
+        }
+        {
+            name: "C'ai Threnalli (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 705
+            faction: "Resistance"
+            ship: "T-70 X-wing"
+            skill: 4
+            points: 4
+            chassis: "Adaptive S-Foils"
+            ship_override:
+                actions: [
+                    "Focus"
+                    "R-> Barrel Roll"
+                    "Lock"
+                    "Barrel Roll"
+                    "Boost"
+                    "R-> Focus"
+                ]
+            upgrades: [
+                "For The Cause (EoD)"
+                "Heroic"
+                "BB Astromech"
+                "Repulsorlift Engines (EoD)"
+            ]
+        }
+        {
+            name: "Ronith Blario (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 706
+            faction: "Resistance"
+            ship: "RZ-2 A-wing"
+            skill: 2
+            points: 3
+            upgrades: [
+                "Escort Fighter (EoD)"
+                "Heroic"
+                "Starbird Slash"
+            ]
+        }
+        {
+            name: "Tallissan Lintra (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 707
+            faction: "Resistance"
+            ship: "RZ-2 A-wing"
+            skill: 5
+            points: 4
+            charge: 1
+            recurring: 1
+            ship_override:
+                actions: [
+                    "Focus"
+                    "R-> Coordinate"
+                    "Evade"
+                    "Lock"
+                    "Barrel Roll"
+                    "Boost"
+                ]
+            upgrades: [
+                "For The Cause (EoD)"
+                "Heroic"
+                "Push The Limit (BoE)"
+                "XX-23 S-Thread Tracers"
+            ]
+        }
+        {
+            name: "Zizi Tlo (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 708
+            faction: "Resistance"
+            ship: "RZ-2 A-wing"
+            skill: 5
+            points: 4
+            charge: 1
+            recurring: 1
+            upgrades: [
+                "For The Cause (EoD)"
+                "Heroic"
+                "Precision Holo-Targeter (EoD)"
+            ]
+        }
+        {
+            name: "Pammich Nerro Goode (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 709
+            faction: "Resistance"
+            ship: "Resistance Transport"
+            skill: 3
+            points: 4
+            chassis: "Leave No One Behind"
+            upgrades: [
+                "For The Cause (EoD)"
+                "R0-GR (EoD)"
+                "Black Squadron R4 (EoD)"
+            ]
+        }
+        {
+            name: "Finch Dallow (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 710
+            faction: "Resistance"
+            ship: "MG-100 StarFortress"
+            skill: 4
+            points: 6
+            chassis: "Modular Bombing Magazine"
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Lock"
+                    "Rotate Arc"
+                    "Reload"
+                    "R-> Reinforce"
+                ]
+            upgrades: [
+                "Nix Jerd (EoD)"
+                "Paige Tico (EoD)"
+                "Proton Bombs"
+                "Thermal Detonators"
+            ]
+        }
+        {
+            name: "Vennie (EoD)"
+            xwsaddon: "evacuationofdqar"
+            unique: true
+            id: 711
+            faction: "Resistance"
+            ship: "MG-100 StarFortress"
+            skill: 2
+            points: 6
+            chassis: "Modular Bombing Magazine"
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Lock"
+                    "Rotate Arc"
+                    "R-> Focus"
+                    "Reload"
+                ]
+            upgrades: [
+                "Perceptive Copilot"
+                "Dedicated Gunners (EoD)"
+                "Proton Bombs"
+            ]
+        }
+        {
+            name: "Boba Fett (AaD)"
+            xwsaddon: "armedanddangerous"
+            unique: true
+            id: 712
+            faction: "Scum and Villainy"
+            ship: "Firespray-class Patrol Craft"
+            skill: 5
+            points: 7
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Lock"
+                    "Boost"
+                    "R-> Lock"
+                ]
+            upgrades: [
+                "Homing Beacon (AaD)"
+                "Fennec Shand (AaD)"
+                "Seismic Charges"
+                "Slave I (Separatist)"
+            ]
+        }
+        {
+            name: "The Mandalorian (AaD)"
+            xwsaddon: "armedanddangerous"
+            unique: true
+            id: 713
+            faction: "Scum and Villainy"
+            ship: "Naboo Royal N-1 Starfighter"
+            skill: 5
+            points: 4
+            chassis: "Restored Speedster"
+            force: 2
+            forcerecurring: 0
+            ship_override:
+                actions: [
+                    "Focus"
+                    "Lock"
+                    "Barrel Roll"
+                    "Boost"
+                    "Slam"
+                    "R-> Lock"
+                ]
+            upgrades: [
+                "Outmaneuver"
+                "The Child (AaD)"
+                "Kineso-Switch (AaD)" 
+                "Calibrated Laser Targeting"
+            ]
+        }
+        {
+            name: "Han Solo (AaD)"
+            xwsaddon: "armedanddangerous"
+            unique: true
+            id: 714
+            faction: "Scum and Villainy"
+            ship: "Customized YT-1300 Light Freighter"
+            skill: 6
+            points: 6
+            charge: 1
+            chassis: "Coaxium Injectors"
+            ship_override:
+                shields: 5
+                actions: [
+                    "Focus"
+                    "Lock"
+                    "R-Boost"
+                    "Rotate"
+                    "R-> Focus"
+                ]
+            upgrades: [
+                "Chewbacca"
+                "L3-37 (AaD)"
+                "Tobias Beckett (AaD)" 
+                "Lando's Millennium Falcon (AaD)"
+            ]
+        }
+        {
+            name: "Bo-Katan Kryze (AaD)"
+            xwsaddon: "armedanddangerous"
+            unique: true
+            id: 715
+            faction: "Scum and Villainy"
+            ship: "Gauntlet Fighter"
+            skill: 4
+            points: 6
+            charge: 2
+            chassis: "Winged Reversal"
+            upgrades: [
+                "Mandalorian Tactics (AaD)"
+                "Nite Owl Sentries (AaD)"
+                "Veteran Tail Gunner" 
+            ]
+        }
+        {
+            name: "Dengar (AaD)"
+            xwsaddon: "armedanddangerous"
+            unique: true
+            id: 716
+            faction: "Scum and Villainy"
+            ship: "JumpMaster 5000"
+            skill: 6
+            points: 6
+            charge: 1
+            recurring: 1
+            upgrades: [
+                "R2-G8 (AaD)"
+                "Synchronized Handling (AaD)"
+                "Starboard Thrusters (AaD)"
+                "Punishing One"
+            ]
+        }
+        {
+            name: "Bossk (AaD)"
+            xwsaddon: "armedanddangerous"
+            unique: true
+            id: 717
+            faction: "Scum and Villainy"
+            ship: "YV-666 Light Freighter"
+            skill: 4
+            points: 6
+            chassis: "Imposing Behemoth"
+            upgrades: [
+                "Embo (AaD)"
+                "Contraband Cybernetics"
+            ]
+        }
+        {
+            name: "Cad Bane (AaD)"
+            xwsaddon: "armedanddangerous"
+            unique: true
+            id: 718
+            faction: "Scum and Villainy"
+            ship: "Rogue-class Starfighter"
+            skill: 4
+            points: 4
+            charge: 2
+            recurring: 1
+            ship_override:
+                actions: [
+                    "Focus"
+                    "R-> Boost"
+                    "Focus"
+                    "R-> Barrel Roll"
+                    "Evade"
+                    "R-> Barrel Roll"
+                    "Lock"
+                    "R-Cloak"
+                ]
+            upgrades: [
+                "Flechette Cannons (AaD)"
+                "Todo 360 (AaD)"
+                "Xanadu Blood (AaD)"
+            ]
+        }
+        {
+            name: "Fenn Rau (AaD)"
+            xwsaddon: "armedanddangerous"
+            unique: true
+            id: 719
+            faction: "Scum and Villainy"
+            ship: "Fang Fighter"
+            skill: 6
+            points: 6
+            ship_override:
+                hull: 5
+            upgrades: [
+                "Fearless"
+                "Adaptable Power Systems (AaD)"
+                "Beskar Reinforced Plating"
+            ]
+        }
+        {
+            name: "Prince Xizor (AaD)"
+            xwsaddon: "armedanddangerous"
+            unique: true
+            id: 720
+            faction: "Scum and Villainy"
+            ship: "StarViper-class Attack Platform"
+            skill: 4
+            points: 5
+            charge: 3
+            chassis: "Adaptative Microthrusters"
+            ship_override:
+                shields: 2
+            upgrades: [
+                "Crime Lord (AaD)"
+                "Mandalorian Optics"
+                "Virago (AaD)"
+            ]
+        }
+        {
+            name: "Zuckuss (AaD)"
+            xwsaddon: "armedanddangerous"
+            unique: true
+            id: 721
+            faction: "Scum and Villainy"
+            ship: "G-1A Starfighter"
+            skill: 3
+            points: 5
+            chassis: "Enduring Limitations"
+            ship_override:
+                shields: 5
+                actions: [
+                    "Focus"
+                    "Lock"
+                    "Barrel Roll"
+                    "R-> Calculate"
+                    "Jam"
+                    "R-> Calculate"
+                ]
+            upgrades: [
+                "Persistent Tracker (AaD)"
+                "Tractor Beam"
+                "4-LOM (AaD)"
+                "Mist Hunter (AaD)"
             ]
         }
     ]
@@ -22135,6 +22769,296 @@ exportObj.basicCardData = ->
             attackdt: 2
             range: """1-2"""
         }
+        {
+            name: "Determination (EoD)"
+            id: 573
+            standard: true
+            slot: "Talent"
+        }
+        {
+            name: "Experimental Scanners (EoD)"
+            id: 574
+            standard: true
+            slot: "Tech"
+        }
+        {
+            name: "Advanced Warning Systems (EoD)"
+            id: 575
+            standard: true
+            slot: "Modification"
+        }
+        {
+            name: "Targeting Relay (EoD)"
+            id: 576
+            standard: true
+            slot: "Modification"
+            charge: 2
+        }
+        {
+            name: "Interference Array (EoD)"
+            id: 577
+            standard: true
+            slot: "Tech"
+            charge: 2
+        }
+        {
+            name: "BB-8 (EoD)"
+            id: 578
+            standard: true
+            unique: true
+            slot: "Astromech"
+            charge: 2     
+        }
+        {
+            name: "Primed Overdrive Thrusters (EoD)"
+            id: 579
+            standard: true
+            unique: true
+            slot: "Tech"
+        }
+        {
+            name: "Black One (EoD)"
+            id: 580
+            standard: true
+            unique: true
+            slot: "Title"
+            charge: 2
+        }
+        {
+            name: "For The Cause (EoD)"
+            id: 581
+            standard: true
+            slot: "Talent"
+        }
+        {
+            name: "R0 Astromech (EoD)"
+            id: 582
+            standard: true
+            slot: "Astromech"
+        }
+        {
+            name: "Accelerated Sensor Array (EoD)"
+            id: 583
+            standard: true
+            slot: "Tech"
+        }
+        {
+            name: "Repulsorlift Engines (EoD)"
+            id: 584
+            standard: true
+            slot: "Modification"
+        }
+        {
+            name: "Escort Fighter (EoD)"
+            id: 585
+            standard: true
+            slot: "Talent"
+            charge: 1
+            recurring: 1
+        }
+        {
+            name: "Precision Holo-Targeter (EoD)"
+            id: 586
+            standard: true
+            slot: "Tech"
+        }
+        {
+            name: "R0-GR (EoD)"
+            id: 587
+            standard: true
+            unique: true
+            slot: "Tech"
+        }
+        {
+            name: "Black Squadron R4 (EoD)"
+            id: 588
+            standard: true
+            unique: true
+            slot: "Tech"
+            charge: 2
+        }
+        {
+            name: "Nix Jerd (EoD)"
+            id: 589
+            standard: true
+            unique: true
+            slot: "Crew"
+            charge: 2
+        }
+        {
+            name: "Paige Tico (EoD)"
+            id: 590
+            standard: true
+            unique: true
+            slot: "Gunner"
+            charge: 2
+        }
+        {
+            name: "Dedicated Gunners (EoD)"
+            id: 591
+            standard: true
+            slot: "Gunner"
+        }
+        {
+            name: "Homing Beacon (AaD)"
+            id: 592
+            standard: true
+            slot: "Sensor"
+            charge: 2
+        }
+        {
+            name: "Fennec Shand (AaD)"
+            id: 593
+            standard: true
+            unique: true
+            slot: "Gunner"
+        }
+        {
+            name: "The Child (AaD)"
+            id: 594
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "Kineso-Switch (AaD)"
+            id: 595
+            standard: true
+            slot: "Illicit"
+            charge: 2
+        }
+        {
+            name: "L3-37 (AaD)"
+            id: 596
+            standard: true
+            unique: true
+            slot: "Crew"
+            charge: 1
+        }
+        {
+            name: "Tobias Beckett (AaD)"
+            id: 597
+            standard: true
+            unique: true
+            slot: "Gunner"
+        }
+        {
+            name: "Lando's Millennium Falcon (AaD)"
+            id: 598
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "Mandalorian Tactics (AaD)"
+            id: 599
+            standard: true
+            slot: "Talent"
+        }
+        {
+            name: "Nite Owl Sentries (AaD)"
+            id: 600
+            standard: true
+            unique: true
+            slot: "Crew"
+            charge: 3
+            recurring: 1
+        }
+        {
+            name: "R2-G8 (AaD)"
+            id: 601
+            standard: true
+            slot: "Astromech"
+            unique: true
+        }
+        {
+            name: "Synchronized Handling (AaD)"
+            id: 602
+            standard: true
+            slot: "Tech"
+            charge: 1
+        }
+        {
+            name: "Starboard Thrusters (AaD)"
+            id: 603
+            standard: true
+            slot: "Modification"
+            charge: 2
+        }
+        {
+            name: "Embo (AaD)"
+            id: 604
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "Flechette Cannons (AaD)"
+            id: 605
+            standard: true
+            slot: "Cannon"
+            attack: 3
+            range: """2-3"""
+        }
+        {
+            name: "Todo 360 (AaD)"
+            id: 606
+            standard: true
+            unique: true
+            slot: "Crew"
+            charge: 2
+        }
+        {
+            name: "Xanadu Blood (AaD)"
+            id: 607
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "Adaptable Power Systems (AaD)"
+            id: 608
+            standard: true
+            slot: "Modification"
+            charge: 2
+        }
+        {
+            name: "Crime Lord (AaD)"
+            id: 609
+            standard: true
+            slot: "Talent"
+            charge: 2
+            recurring: 1
+        }
+        {
+            name: "Virago (AaD)"
+            id: 610
+            standard: true
+            unique: true
+            slot: "Title"
+        }
+        {
+            name: "Persistent Tracker (AaD)"
+            id: 611
+            standard: true
+            slot: "Talent"
+            charge: 3
+            recurring: 1
+        }
+        {
+            name: "4-LOM (AaD)"
+            id: 612
+            standard: true
+            unique: true
+            slot: "Crew"
+        }
+        {
+            name: "Mist Hunter (AaD)"
+            id: 613
+            standard: true
+            unique: true
+            slot: "Title"
+        }
     ]
 
 
@@ -22587,6 +23511,50 @@ exportObj.basicCardData = ->
         {
             name: "Tractor Grasp"
             id: 61
+        }
+        {
+            name: "Merciless"
+            id: 62
+        }
+        {
+            name: "Heavy Weapon Turret (EoD)"
+            id: 63
+        }
+        {
+            name: "Enduring Limitations"
+            id: 64
+        }
+        {
+            name: "Adaptive S-Foils"
+            id: 65
+        }
+        {
+            name: "Leave No One Behind"
+            id: 66
+        }
+        {
+            name: "Modular Bombing Magazine"
+            id: 67
+        }
+        {
+            name: "Restored Speedster"
+            id: 68
+        }
+        {
+            name: "Coaxium Injectors"
+            id: 69
+        }
+        {
+            name: "Winged Reversal"
+            id: 70
+        }
+        {
+            name: "Imposing Behemoth"
+            id: 71
+        }
+        {
+            name: "Adaptative Microthrusters"
+            id: 72
         }
 
     ]
