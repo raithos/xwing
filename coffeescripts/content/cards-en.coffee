@@ -3626,7 +3626,7 @@ exportObj.cardLoaders.English = () ->
            text: """During the System Phase, you may spend 3 %CHARGE%. %LINEBREAK% During the Activation Phase, if this upgrade has 0 active %CHARGE%, you can perform actions and execute red maneuvers, even while stressed."""
         "4-LOM (AaD)":
            display_name: """4-LOM"""
-           text: """WAt the start of the End Phase, you may spend 1 calculate token and choose an enemy ship at range 0-1. If you do, transfer 1 of your stress tokens to that ship."""
+           text: """At the start of the End Phase, you may spend 1 calculate token and choose an enemy ship at range 0-1. If you do, transfer 1 of your stress tokens to that ship."""
         "Mist Hunter (AaD)":
            display_name: """Mist Hunter"""
            text: """After you perform a %CANNON% attack, you may gain 1 strain token to perform a bonus primary attack against the same target."""

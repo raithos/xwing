@@ -16978,7 +16978,7 @@ exportObj.basicCardData = ->
                     "Focus"
                     "Lock"
                     "R-Boost"
-                    "Rotate"
+                    "Rotate Arc"
                     "R-> Focus"
                 ]
             upgrades: [
@@ -24157,6 +24157,8 @@ exportObj.epicExclusions = (data) ->
 exportObj.standardCheck = (data, faction='', shipCheck=false, onlyBanList=false) ->
     if (shipCheck)
         if (data.name in exportObj.standardPilotExclusions)
+            return false
+        if (data.name.search("(EoD)") > 0 or data.name.search("(AaD)") > 0) # temporary fix for non amg content
             return false
         if onlyBanList == false
             for ship in exportObj.standardShipInclusions
