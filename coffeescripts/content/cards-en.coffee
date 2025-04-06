@@ -3561,6 +3561,15 @@ exportObj.cardLoaders.English = () ->
         "Paige Tico (EoD)":
            display_name: """Paige Tico"""
            text: """While you have exactly 1 disarm token, you can still perform %SINGLETURRETARC% attacks. After you perform an attack, you may drop a bomb or rotate your %SINGLETURRETARC% indicator."""
+        "First Order Ordnance Tech (EoD)":
+           display_name: """First Order Ordnance Tech"""
+           text: """After you gain a disarm token, gain 1 calculate token. %LINEBREAK% While you have exactly 1 disarm token, you can still perform %FRONTARC% primary attacks."""
+        "Threat Sensors (EoD)":
+           display_name: """Threat Sensors"""
+           text: """While you defend, if you are not stressed, you may reroll 1 %FOCUS% result."""
+        "General Hux (EoD)":
+           display_name: """General Hux"""
+           text: """While you perform a white %COORDINATE% action, if you choose a friendly TIE/fo or TIE/sf, you may treat that action as red. If you do, coordinate up to 2 additional friendly TIE/fo or TIE/sf, and each ship you coordinate must perform the same action, treating it as red."""
         "Dedicated Gunners (EoD)":
            display_name: """Dedicated Gunners"""
            text: """While you perform a primary attack, if the defender is in your %SINGLETURRETARC%, you may spend 1 focus token to roll 1 additional attack die. %LINEBREAK% After you perform a primary attack, you may perform a bonus %SINGLETURRETARC% attack using a %SINGLETURRETARC% you did not already attack from this round."""
@@ -3630,6 +3639,9 @@ exportObj.cardLoaders.English = () ->
         "Mist Hunter (AaD)":
            display_name: """Mist Hunter"""
            text: """After you perform a %CANNON% attack, you may gain 1 strain token to perform a bonus primary attack against the same target."""
+        "Hound's Tooth (AaD)":
+           display_name: """Hound's Tooth"""
+           text: """While you perform an attack, if you are reinforced and the defender is in the %FULLFRONTARC% or %FULLREARARC% matching your reinforce token, you may change 1 of your %FOCUS% results to a %HIT% result. If the defender is stressed, you may change 1 of your %focus% results to a %CRIT% result instead."""
 
 
         # Epic upgrades

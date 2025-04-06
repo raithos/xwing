@@ -152,7 +152,7 @@ class exportObj.SquadBuilder
         # a squad given in the link is loaded on construction of that builder. It will set all gamemodes of already existing builders accordingly, but we did not exists back than. So we copy over the gamemode
         @isStandard = exportObj.builders[0]?.isStandard ? true
         @isEpic = exportObj.builders[0]?.isEpic ? false
-        @isBeta = exportObj.builders[0]?.isBeta ? false
+        @isXwa = exportObj.builders[0]?.isXwa ? false
         @isQuickbuild = exportObj.builders[0]?.isQuickbuild ? false
 
         @backend = null
@@ -252,7 +252,7 @@ class exportObj.SquadBuilder
                     </div>
                     <br class="hide-on-mobile" />
                     <select class="game-type-selector">
-                        <option value="xwabeta" class="translated" defaultText="XWA Beta">#{@uitranslation("XWA Beta")}</option>
+                        <option value="xwa" class="translated" defaultText="XWA">#{@uitranslation("XWA")}</option>
                         <option value="standard" class="translated" defaultText="Standard" selected="selected">#{@uitranslation("Standard")}</option>
                         <option value="extended" class="translated" defaultText="Extended">#{@uitranslation("Extended")}</option>
                         <option value="epic" class="translated" defaultText="Epic">#{@uitranslation("Epic")}</option>
@@ -1465,13 +1465,13 @@ class exportObj.SquadBuilder
                 @printable_container.find('.squad-name').append """ <i class="xwing-miniatures-font xwing-miniatures-font-first-player-1"></i>"""
             if @isEpic
                 @printable_container.find('.squad-name').append """ <i class="xwing-miniatures-font xwing-miniatures-font-energy"></i>""" 
-            if @isBeta
+            if @isXwa
                 @printable_container.find('.squad-name').append """ <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>""" 
 
             versioninfo = "09/06/2024"
             rules = "AMG"
-            if @isBeta
-                versioninfo = "BV5"
+            if @isXwa
+                versioninfo = "R1"
                 rules = "XWA"
 
             # Version number
@@ -1595,19 +1595,19 @@ class exportObj.SquadBuilder
     onGameTypeChanged: (gametype, cb=$.noop) =>
         oldQuickbuild = @isQuickbuild
         @isStandard = false
-        @isBeta = false
+        @isXwa = false
         @isEpic = false
         @isQuickbuild = false
         @epic_not_legal_container.toggleClass 'd-none', true
         switch gametype
-            when 'xwabeta'
-                @isBeta = true
+            when 'xwa'
+                @isXwa = true
                 @desired_points_input.val 20
             when 'extended'
                 @desired_points_input.val 20
             when 'epic'
                 @isEpic = true
-                @isBeta = true
+                @isXwa = true
                 @desired_points_input.val 20
                 @epic_not_legal_container.toggleClass 'd-none', false
             when 'quickbuild'
@@ -1665,7 +1665,7 @@ class exportObj.SquadBuilder
         @unreleased_content_used_container.toggleClass 'd-none', not unreleased_content_used
 
         if @isStandard == false then gamemode = "(Extended)" else gamemode = "(Standard)"
-        if @isBeta then gamemode = "(XWA Beta)" 
+        if @isXwa then gamemode = "(XWA xwa)" 
         if @isEpic then gamemode = "(Epic)"
         @fancy_total_points_container.text """(#{@total_points}) #{gamemode}"""
         
@@ -1834,7 +1834,7 @@ class exportObj.SquadBuilder
                 'h'
             when 'extended'
                 's'
-            when 'xwabeta'
+            when 'xwa'
                 'b'
             when 'epic'
                 'e'
@@ -1891,7 +1891,7 @@ class exportObj.SquadBuilder
                 when 'h'
                     @changeGameTypeOnSquadLoad 'standard'
                 when 'b'
-                    @changeGameTypeOnSquadLoad 'xwabeta'
+                    @changeGameTypeOnSquadLoad 'xwa'
                 when 'e'
                     @changeGameTypeOnSquadLoad 'epic'
                 when 'q'
@@ -2096,7 +2096,7 @@ class exportObj.SquadBuilder
             if include_pilot? and include_pilot.unique? and (@matcher(include_pilot.name, term) or (include_pilot.display_name and @matcher(include_pilot.display_name, term)) )
                 eligible_faction_pilots.push include_pilot
 
-            retval = ({ id: pilot.id, text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then pilot.skill + ' - ' else ''}#{if pilot.display_name then pilot.display_name else pilot.name} (#{if (@isBeta and pilot.pointsbeta?) then pilot.pointsbeta else pilot.points}#{if pilot.loadout? then (if (@isBeta and pilot.loadoutbeta?) then "/#{pilot.loadoutbeta}" else "/#{pilot.loadout}") else ""})", points: (if (@isBeta and pilot.pointsbeta?) then pilot.pointsbeta else pilot.points), ship: pilot.ship, name: pilot.name, display_name: pilot.display_name, disabled: pilot not in eligible_faction_pilots } for pilot in available_faction_pilots)
+            retval = ({ id: pilot.id, text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then pilot.skill + ' - ' else ''}#{if pilot.display_name then pilot.display_name else pilot.name} (#{if (@isXwa and pilot.pointsxwa?) then pilot.pointsxwa else pilot.points}#{if pilot.loadout? then (if (@isXwa and pilot.loadoutxwa?) then "/#{pilot.loadoutxwa}" else "/#{pilot.loadout}") else ""})", points: (if (@isXwa and pilot.pointsxwa?) then pilot.pointsxwa else pilot.points), ship: pilot.ship, name: pilot.name, display_name: pilot.display_name, disabled: pilot not in eligible_faction_pilots } for pilot in available_faction_pilots)
         else
             # select according to quickbuild cards
             # filter for faction and ship
@@ -2212,7 +2212,7 @@ class exportObj.SquadBuilder
 
         points_without_include_upgrade = ship.upgrade_points_total - this_upgrade_obj.getPoints(include_upgrade)
 
-        eligible_upgrades = (upgrade for upgrade_name, upgrade of available_upgrades when (upgrade not in @uniques_in_use['Upgrade']) and ship.standardized_check(upgrade) and ship.restriction_check((if (ship.builder.isBeta and upgrade.restrictionsbeta?) then upgrade.restrictionsbeta else (if upgrade.restrictions then upgrade.restrictions else undefined)),this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade, upgrade) and upgrade not in upgrades_in_use and ((not upgrade.max_per_squad?) or ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) and (not upgrade.solitary? or (upgrade.slot not in @uniques_in_use['Slot'] or include_upgrade?.solitary?)))
+        eligible_upgrades = (upgrade for upgrade_name, upgrade of available_upgrades when (upgrade not in @uniques_in_use['Upgrade']) and ship.standardized_check(upgrade) and ship.restriction_check((if (ship.builder.isXwa and upgrade.restrictionsxwa?) then upgrade.restrictionsxwa else (if upgrade.restrictions then upgrade.restrictions else undefined)),this_upgrade_obj, this_upgrade_obj.getPoints(upgrade), points_without_include_upgrade, upgrade) and upgrade not in upgrades_in_use and ((not upgrade.max_per_squad?) or ship.builder.countUpgrades(upgrade.canonical_name) < upgrade.max_per_squad) and (not upgrade.solitary? or (upgrade.slot not in @uniques_in_use['Slot'] or include_upgrade?.solitary?)))
 
         for equipped_upgrade in (upgrade.data for upgrade in ship.upgrades when upgrade?.data?)
             eligible_upgrades.removeItem equipped_upgrade
@@ -2471,12 +2471,12 @@ class exportObj.SquadBuilder
                             continue
                         if not (pilot.skill in possible_inis)
                             possible_inis.push(pilot.skill)
-                        if @isBeta and pilot.pointsbeta?
-                            possible_costs.push(pilot.pointsbeta)
+                        if @isXwa and pilot.pointsxwa?
+                            possible_costs.push(pilot.pointsxwa)
                         else
                             possible_costs.push(pilot.points)
-                        if @isBeta and pilot.loadoutbeta?
-                            possible_loadout.push(pilot.loadoutbeta)
+                        if @isXwa and pilot.loadoutxwa?
+                            possible_loadout.push(pilot.loadoutxwa)
                         else
                             if pilot.loadout? then possible_loadout.push(pilot.loadout)
                         if pilot.slots?
@@ -2690,10 +2690,10 @@ class exportObj.SquadBuilder
                     container.find('tr.info-skill td.info-data').text data.skill
                     container.find('tr.info-skill').toggle(data.skill?)
 
-                    container.find('tr.info-points td.info-data').text (if @isBeta and data.pointsbeta? then data.pointsbeta else data.points)
+                    container.find('tr.info-points td.info-data').text (if @isXwa and data.pointsxwa? then data.pointsxwa else data.points)
                     container.find('tr.info-points').show()
 
-                    container.find('tr.info-loadout td.info-data').text (if @isBeta and data.loadoutbeta? then data.loadoutbeta else data.loadout)
+                    container.find('tr.info-loadout td.info-data').text (if @isXwa and data.loadoutxwa? then data.loadoutxwa else data.loadout)
                     if data.upgrades?
                         container.find('tr.info-loadout').hide()
                     else
@@ -2801,8 +2801,8 @@ class exportObj.SquadBuilder
                         container.find('tr.info-upgrades').hide()
                     else
                         container.find('tr.info-upgrades').show()
-                        if @isBeta and data.slotsbeta?
-                            container.find('tr.info-upgrades td.info-data').html(if data.slotsbeta? then (exportObj.translate('sloticon', slot) for slot in data.slotsbeta).join(' ') else (if data.upgrades? then @listStandardUpgrades(data.upgrades) else 'None'))
+                        if @isXwa and data.slotsxwa?
+                            container.find('tr.info-upgrades td.info-data').html(if data.slotsxwa? then (exportObj.translate('sloticon', slot) for slot in data.slotsxwa).join(' ') else (if data.upgrades? then @listStandardUpgrades(data.upgrades) else 'None'))
                         else
                             container.find('tr.info-upgrades td.info-data').html(if data.slots? then (exportObj.translate('sloticon', slot) for slot in data.slots).join(' ') else (if data.upgrades? then @listStandardUpgrades(data.upgrades) else 'None'))
                     container.find('p.info-maneuvers').show()
@@ -2966,7 +2966,7 @@ class exportObj.SquadBuilder
                         container.find('.info-collection').hide()
                     container.find('.info-name').html """#{uniquedots}#{if data.display_name then data.display_name else data.name}#{if (exportObj.isReleased(data) or data.standard?) then  "" else " (#{@uitranslation('unreleased')})"}#{if data.standard? then " (S)" else ""}"""
                     
-                    if @isBeta and data.pointsbeta? then points = data.pointsbeta else points = data.points
+                    if @isXwa and data.pointsxwa? then points = data.pointsxwa else points = data.points
                     if Array.isArray(points)
                         point_info = "<i>" + @uitranslation("varPointCostsPoints", points)
                         switch data.variablepoints
@@ -3426,9 +3426,9 @@ class exportObj.SquadBuilder
         uniquetext = comma = othertext = text = ''
         ignoreShip = false
         standardized = card.standardized?
-        if (@isBeta and card.standardizedbeta?) then standardized = card.standardizedbeta
+        if (@isXwa and card.standardizedxwa?) then standardized = card.standardizedxwa
         if card.restrictions? then card_restrictions = card.restrictions
-        if (@isBeta and card.restrictionsbeta?) then card_restrictions = card.restrictionsbeta
+        if (@isXwa and card.restrictionsxwa?) then card_restrictions = card.restrictionsxwa
         if card_restrictions?
             for r in card_restrictions
                 switch r[0]
@@ -3572,8 +3572,8 @@ class exportObj.SquadBuilder
         # Often you will want JSON.stringify(builder.toXWS())
         versioninfo = "09/06/2024"
         rules = "AMG"
-        if @isBeta
-            versioninfo = "BV5"
+        if @isXwa
+            versioninfo = "R1"
             rules = "XWA"
 
         xws =
@@ -3680,7 +3680,7 @@ class exportObj.SquadBuilder
                 error = ""
 
                 # we use our current gamemode as default, but switch to standard if we are in XWA but the loaded xws specifies AMG or vice versa
-                if @isStandard then gamemode = 'h' else if @isEpic then gamemode = 'e' else if @isBeta then gamemode = 'b' else gamemode = 's'
+                if @isStandard then gamemode = 'h' else if @isEpic then gamemode = 'e' else if @isXwa then gamemode = 'b' else gamemode = 's'
                 if xws.ruleset? and xws.ruleset == 'XWA' then gamemode = 'b' else if xws.ruleset? and xws.ruleset == 'AMG' and gamemode == 'b' then gamemode = 'h'
                 serialized_squad = ""
 
@@ -3781,7 +3781,7 @@ class Ship
         @wingmates = [] # stores wingmates (quickbuild stuff only) 
         @destroystate = 0
         @uitranslation = @builder.uitranslation
-        @usesBetaSlots = false # flag if we use beta slots. This is needed, if we switch betwen XWA/AMG points to rebuild the pilot if the slots change
+        @usesxwaSlots = false # flag if we use xwa slots. This is needed, if we switch betwen XWA/AMG points to rebuild the pilot if the slots change
 
         @setupUI()
 
@@ -4041,7 +4041,7 @@ class Ship
     setPilot: (new_pilot, noautoequip = false) ->
         # don't call this method directly, unless you know what you do. Use setPilotById for proper quickbuild handling
 
-        if new_pilot != @pilot or (@builder.isBeta and not @usesBetaSlots and @pilot.slotsbeta?) or (@usesBetaSlots and not @builder.isBeta)
+        if new_pilot != @pilot or (@builder.isXwa and not @usesxwaSlots and @pilot.slotsxwa?) or (@usesxwaSlots and not @builder.isXwa)
             @builder.current_squad.dirty = true
             same_ship = @pilot? and new_pilot?.ship == @pilot.ship
             old_upgrades = {}
@@ -4108,7 +4108,7 @@ class Ship
         if not @builder.isQuickbuild
             if @pilot.upgrades?
                 @hasFixedUpgrades = true
-                @usesBetaSlots = false
+                @usesxwaSlots = false
                 for upgrade_name in @pilot.upgrades ? []
                     upgrade_data = exportObj.upgrades[upgrade_name]
                     if not upgrade_data?
@@ -4123,11 +4123,11 @@ class Ship
                     @upgrades.push upgrade
             else
                 @hasFixedUpgrades = false
-                if (@builder.isBeta and @pilot.slotsbeta?) 
-                    pilotslots = @pilot.slotsbeta 
-                    @usesBetaSlots = true
+                if (@builder.isXwa and @pilot.slotsxwa?) 
+                    pilotslots = @pilot.slotsxwa 
+                    @usesxwaSlots = true
                 else 
-                    @usesBetaSlots = false
+                    @usesxwaSlots = false
                     pilotslots = @pilot.slots
 
                 for slot in pilotslots ? []
@@ -4249,7 +4249,7 @@ class Ship
                 icon: if exportObj.ships[@pilot.ship].icon then exportObj.ships[@pilot.ship].icon else exportObj.ships[@pilot.ship].name.canonicalize()
             @pilot_selector.select2 'data',
                 id: @pilot.id
-                text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then @pilot.skill + ' - ' else ''}#{if @pilot.display_name then @pilot.display_name else @pilot.name}#{if @quickbuildId != -1 then exportObj.quickbuildsById[@quickbuildId].suffix else ""} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isBeta and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)}#{if (@quickbuildId != -1 or not @pilot.loadout?) then "" else (if @builder.isBeta and @pilot.loadoutbeta? then "/#{@pilot.loadoutbeta}" else "/#{@pilot.loadout}")})"
+                text: "#{if exportObj.settings?.initiative_prefix? and exportObj.settings.initiative_prefix then @pilot.skill + ' - ' else ''}#{if @pilot.display_name then @pilot.display_name else @pilot.name}#{if @quickbuildId != -1 then exportObj.quickbuildsById[@quickbuildId].suffix else ""} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isXwa and @pilot.pointsxwa?) then @pilot.pointsxwa else @pilot.points)}#{if (@quickbuildId != -1 or not @pilot.loadout?) then "" else (if @builder.isXwa and @pilot.loadoutxwa? then "/#{@pilot.loadoutxwa}" else "/#{@pilot.loadout}")})"
                 chassis: if @pilot.chassis? then @pilot.chassis else ""
             @pilot_selector.data('select2').container.show()
             for upgrade in @upgrades
@@ -4624,7 +4624,7 @@ class Ship
                 <div class="pilot-header-text">#{if @pilot.display_name then @pilot.display_name else @pilot.name} <i class="xwing-miniatures-ship xwing-miniatures-ship-#{@data.name.canonicalize()}"></i><span class="fancy-ship-type"> #{if @data.display_name then @data.display_name else @data.name}</span></div>
                 <div class="mask">
                     <div class="outer-circle">
-                        <div class="inner-circle pilot-points">#{if @quickbuildId != -1 then (if @primary then @getPoints() else '*') else (if (@builder.isBeta and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)}</div>
+                        <div class="inner-circle pilot-points">#{if @quickbuildId != -1 then (if @primary then @getPoints() else '*') else (if (@builder.isXwa and @pilot.pointsxwa?) then @pilot.pointsxwa else @pilot.points)}</div>
                     </div>
                 </div>
             </div>
@@ -4695,7 +4695,7 @@ class Ship
         
         html += $.trim """
             <div class="ship-points-total">
-                <strong>#{@uitranslation("Ship Cost")}: #{@getPoints()}, #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")}), #{@uitranslation("Half Points")}: #{HalfPoints}, #{@uitranslation("Damage Threshold")}: #{Threshold}</strong> 
+                <strong>#{@uitranslation("Ship Cost")}: #{@getPoints()}, #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isXwa and @pilot.loadoutxwa?) then "/#{@pilot.loadoutxwa}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")}), #{@uitranslation("Half Points")}: #{HalfPoints}, #{@uitranslation("Damage Threshold")}: #{Threshold}</strong> 
             </div>
         """
 
@@ -4705,7 +4705,7 @@ class Ship
         table_html = $.trim """
             <tr class="simple-pilot">
                 <td class="name">#{if @pilot.display_name then @pilot.display_name else @pilot.name} &mdash; #{if @data.display_name then @data.display_name else @data.name}</td>
-                <td class="points">#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isBeta and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)}</td>
+                <td class="points">#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isXwa and @pilot.pointsxwa?) then @pilot.pointsxwa else @pilot.points)}</td>
             </tr>
         """
 
@@ -4720,13 +4720,13 @@ class Ship
         halfPoints = Math.floor @getPoints() / 2        
         threshold = Math.floor (@effectiveStats()['hull'] + @effectiveStats()['shields']) / 2
 
-        table_html += """<tr class="simple-ship-half-points"><td colspan="2">#{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")}) #{@uitranslation("Half Points")}: #{halfPoints} #{@uitranslation("Damage Threshold")}: #{threshold}</td></tr>"""
+        table_html += """<tr class="simple-ship-half-points"><td colspan="2">#{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isXwa and @pilot.loadoutxwa?) then "/#{@pilot.loadoutxwa}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")}) #{@uitranslation("Half Points")}: #{halfPoints} #{@uitranslation("Damage Threshold")}: #{threshold}</td></tr>"""
 
         table_html += '<tr><td>&nbsp;</td><td></td></tr>'
         table_html
 
     toSimpleCopy: ->
-        simplecopy = """#{@pilot.display_name} – #{@data.display_name} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isBeta and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)})    \n"""
+        simplecopy = """#{@pilot.display_name} – #{@data.display_name} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isXwa and @pilot.pointsxwa?) then @pilot.pointsxwa else @pilot.points)})    \n"""
         slotted_upgrades = (upgrade for upgrade in @upgrades when upgrade.data?)
         if slotted_upgrades.length > 0
             simplecopy +="    "
@@ -4741,13 +4741,13 @@ class Ship
         halfPoints = Math.floor @getPoints() / 2        
         threshold = Math.floor (@effectiveStats()['hull'] + @effectiveStats()['shields']) / 2
 
-        simplecopy += """#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}    \n    \n"""
+        simplecopy += """#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isXwa and @pilot.loadoutxwa?) then "/#{@pilot.loadoutxwa}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}    \n    \n"""
 
         simplecopy
         
         
     toRedditText: ->
-        reddit = """**#{@pilot.name} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isBeta and @pilot.pointsbeta?) then @pilot.pointsbeta else @pilot.points)})**    \n"""
+        reddit = """**#{@pilot.name} (#{if @quickbuildId != -1 then (if @primary then exportObj.quickbuildsById[@quickbuildId].threat else 0) else (if (@builder.isXwa and @pilot.pointsxwa?) then @pilot.pointsxwa else @pilot.points)})**    \n"""
         slotted_upgrades = (upgrade for upgrade in @upgrades when upgrade.data?)
         if slotted_upgrades.length > 0
             halfPoints = Math.floor @getPoints() / 2
@@ -4759,7 +4759,7 @@ class Ship
                 upgrade_reddit = upgrade.toRedditText points
                 reddit_upgrades.push upgrade_reddit if upgrade_reddit?
             reddit += reddit_upgrades.join "    "
-            reddit += """&nbsp;*#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isBeta and @pilot.loadoutbeta?) then "/#{@pilot.loadoutbeta}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}*    \n"""
+            reddit += """&nbsp;*#{@uitranslation("Ship Cost")}: #{@getPoints()}  #{@uitranslation("Loadout")}: (#{@upgrade_points_total}#{if (@builder.isXwa and @pilot.loadoutxwa?) then "/#{@pilot.loadoutxwa}" else (if @pilot.loadout? then "/#{@pilot.loadout}" else "")})  #{@uitranslation("Half Points")}: #{halfPoints}  #{@uitranslation("Damage Threshold")}: #{threshold}*    \n"""
             
         reddit
 
@@ -4864,10 +4864,10 @@ class Ship
             loadout: @pilot.loadout ? 0
             skill: @pilot.skill ? 0
 
-        # override when in XWA beta mode
-        if @builder.isBeta
-            if @pilot.pointsbeta? then stats.points = @pilot.pointsbeta
-            if @pilot.loadoutbeta? then stats.loadout = @pilot.loadoutbeta
+        # override when in XWA mode
+        if @builder.isXwa
+            if @pilot.pointsxwa? then stats.points = @pilot.pointsxwa
+            if @pilot.loadoutxwa? then stats.loadout = @pilot.loadoutxwa
 
         # need a deep copy of maneuvers array
         maneuvers_override = @pilot.ship_override?.maneuvers ? @data.maneuvers
@@ -4937,8 +4937,8 @@ class Ship
                     if func?
                         meets_restrictions = meets_restrictions and upgrade?.data?.validation_func(this, upgrade)
                     # moved occupied slots off of validation func
-                    if @builder.isBeta and upgrade?.data?.also_occupies_upgrades_beta?
-                        for upgradeslot in upgrade.data.also_occupies_upgrades_beta
+                    if @builder.isXwa and upgrade?.data?.also_occupies_upgrades_xwa?
+                        for upgradeslot in upgrade.data.also_occupies_upgrades_xwa
                             meets_restrictions = meets_restrictions and upgrade.occupiesAnUpgradeSlot(upgradeslot)
                     else
                         if upgrade?.data?.also_occupies_upgrades?
@@ -5058,9 +5058,9 @@ class Ship
     standardized_check: (upgrade_data) ->
         # condition checks
         checkstandard = false
-        if @builder.isBeta
-            if upgrade_data.standardizedbeta?
-                checkstandard = upgrade_data.standardizedbeta
+        if @builder.isXwa
+            if upgrade_data.standardizedxwa?
+                checkstandard = upgrade_data.standardizedxwa
         else 
             if upgrade_data.standardized?
                 checkstandard = true
@@ -5068,8 +5068,8 @@ class Ship
         if checkstandard
             for ship in @builder.ships
                 if ship?.data? and ship.data.name == @data.name
-                    if @builder.isBeta
-                        if upgrade_data.restrictionsbeta? then restrictions = upgrade_data.restrictionsbeta else (if upgrade_data.restrictions? then restrictions = upgrade_data.restrictions)
+                    if @builder.isXwa
+                        if upgrade_data.restrictionsxwa? then restrictions = upgrade_data.restrictionsxwa else (if upgrade_data.restrictions? then restrictions = upgrade_data.restrictions)
                     if restrictions? and ship.restriction_check(restrictions, upgrade_data) and not (ship.pilot?.upgrades?)
                         if ship.pilot.loadout? and (upgrade_data.points + ship.upgrade_points_total > ship.pilot.loadout)
                             return false
@@ -5209,9 +5209,9 @@ class GenericAddon
         cb args
 
     isStandardized: ->
-        if @ship.builder.isBeta
-            if @data?.standardizedbeta?
-                return @data.standardizedbeta
+        if @ship.builder.isXwa
+            if @data?.standardizedxwa?
+                return @data.standardizedxwa
         if @data?.standardized?
             return true
         return false
@@ -5378,8 +5378,8 @@ class GenericAddon
 
     getPoints: (data = @data, ship = @ship) ->
         # Moar special case jankiness
-        if @ship?.builder.isBeta and data?.pointsbeta?
-            points = data.pointsbeta
+        if @ship?.builder.isXwa and data?.pointsxwa?
+            points = data.pointsxwa
         else 
             points = data?.points ? 0
 
@@ -5577,8 +5577,8 @@ class GenericAddon
 
     occupyOtherUpgrades: ->
         checkupgrades = []
-        if @ship.builder.isBeta and @data?.also_occupies_upgrades_beta?
-            checkupgrades = @data?.also_occupies_upgrades_beta
+        if @ship.builder.isXwa and @data?.also_occupies_upgrades_xwa?
+            checkupgrades = @data?.also_occupies_upgrades_xwa
         else
             if @data?.also_occupies_upgrades?
                 checkupgrades = @data?.also_occupies_upgrades
