@@ -532,16 +532,16 @@ class exportObj.CardBrowser
 
 
     getPoints: (a) ->
-        if @use_xwa_points.checked and a.pointsbeta?
-            return a.pointsbeta
+        if @use_xwa_points.checked and a.pointsxwa?
+            return a.pointsxwa
         return a.points
     getLoadout: (a) ->
-        if @use_xwa_points.checked and a.loadoutbeta?
-            return a.loadoutbeta
+        if @use_xwa_points.checked and a.loadoutxwa?
+            return a.loadoutxwa
         return a.loadout
     getSlots: (a) ->
-        if @use_xwa_points.checked and a.slotsbeta?
-            return a.slotsbeta
+        if @use_xwa_points.checked and a.slotsxwa?
+            return a.slotsxwa
         return a.slots
 
     prepareData: () ->
@@ -598,7 +598,7 @@ class exportObj.CardBrowser
         # Selects previously selected card if there is one
         
         if @use_xwa_points.checked?
-            exportObj.builders[7].isBeta = @use_xwa_points.checked
+            exportObj.builders[7].isXwa = @use_xwa_points.checked
 
         if @card_selector?
             @card_selector.empty()
