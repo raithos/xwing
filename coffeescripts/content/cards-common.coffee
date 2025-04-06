@@ -16754,6 +16754,14 @@ exportObj.basicCardData = ->
                     "Boost"
                     "R-> Focus"
                 ]
+                maneuvers: [
+                    [ 0, 0, 0, 0, 0, 0, 0, 0]
+                    [ 2, 0, 0, 0, 2, 0, 0, 0]
+                    [ 1, 1, 1, 1, 1, 0, 0, 0]
+                    [ 2, 1, 1, 1, 2, 0, 3, 3]
+                    [ 0, 0, 1, 0, 0, 0, 0, 0]
+                    [ 0, 0, 1, 0, 0, 3, 0, 0]
+                ]
             upgrades: [
                 "For The Cause (EoD)"
                 "Accelerated Sensor Array (EoD)"

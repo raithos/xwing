@@ -2806,7 +2806,8 @@ class exportObj.SquadBuilder
                         else
                             container.find('tr.info-upgrades td.info-data').html(if data.slots? then (exportObj.translate('sloticon', slot) for slot in data.slots).join(' ') else (if data.upgrades? then @listStandardUpgrades(data.upgrades) else 'None'))
                     container.find('p.info-maneuvers').show()
-                    container.find('p.info-maneuvers').html(@getManeuverTableHTML(effective_stats?.maneuvers ? ship.maneuvers, ship.maneuvers))
+                    maneuvers_override = data.ship_override?.maneuvers ? ship.maneuvers
+                    container.find('p.info-maneuvers').html(@getManeuverTableHTML(effective_stats?.maneuvers ? maneuvers_override, maneuvers_override))
                 when 'Quickbuild'
                     container.find('.info-type').text @uitranslation('Quickbuild')
                     container.find('.info-sources').hide() # there are different sources for the pilot and the upgrade cards, so we won't display any
@@ -4869,9 +4870,10 @@ class Ship
             if @pilot.loadoutbeta? then stats.loadout = @pilot.loadoutbeta
 
         # need a deep copy of maneuvers array
+        maneuvers_override = @pilot.ship_override?.maneuvers ? @data.maneuvers
         stats.maneuvers = []
-        for s in [0 ... (@data.maneuvers ? []).length]
-            stats.maneuvers[s] = @data.maneuvers[s].slice 0
+        for s in [0 ... (maneuvers_override ? []).length]
+            stats.maneuvers[s] = maneuvers_override[s].slice 0
 
         # Droid conversion of Focus to Calculate
         if @pilot.keyword? and ("Droid" in @pilot.keyword) and stats.actions?
