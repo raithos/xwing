@@ -150,9 +150,9 @@ class exportObj.SquadBuilder
             fill_zero_pts: false
         @total_points = 0
         # a squad given in the link is loaded on construction of that builder. It will set all gamemodes of already existing builders accordingly, but we did not exists back than. So we copy over the gamemode
-        @isStandard = exportObj.builders[0]?.isStandard ? true
+        @isStandard = exportObj.builders[0]?.isStandard ? false
         @isEpic = exportObj.builders[0]?.isEpic ? false
-        @isXwa = exportObj.builders[0]?.isXwa ? false
+        @isXwa = exportObj.builders[0]?.isXwa ? true
         @isQuickbuild = exportObj.builders[0]?.isQuickbuild ? false
 
         @backend = null
@@ -252,8 +252,8 @@ class exportObj.SquadBuilder
                     </div>
                     <br class="hide-on-mobile" />
                     <select class="game-type-selector">
-                        <option value="xwa" class="translated" defaultText="XWA">#{@uitranslation("XWA")}</option>
-                        <option value="standard" class="translated" defaultText="Standard" selected="selected">#{@uitranslation("Standard")}</option>
+                        <option value="xwa" class="translated" defaultText="XWA" selected="selected">#{@uitranslation("XWA")}</option>
+                        <option value="standard" class="translated" defaultText="Standard">#{@uitranslation("Standard")}</option>
                         <option value="extended" class="translated" defaultText="Extended">#{@uitranslation("Extended")}</option>
                         <option value="epic" class="translated" defaultText="Epic">#{@uitranslation("Epic")}</option>
                         <option value="quickbuild" class="translated" defaultText="Quickbuild">#{@uitranslation("Standard")}</option>
@@ -1665,7 +1665,7 @@ class exportObj.SquadBuilder
         @unreleased_content_used_container.toggleClass 'd-none', not unreleased_content_used
 
         if @isStandard == false then gamemode = "(Extended)" else gamemode = "(Standard)"
-        if @isXwa then gamemode = "(XWA xwa)" 
+        if @isXwa then gamemode = "(XWA)" 
         if @isEpic then gamemode = "(Epic)"
         @fancy_total_points_container.text """(#{@total_points}) #{gamemode}"""
         
