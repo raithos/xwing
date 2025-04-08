@@ -2190,7 +2190,6 @@ exportObj.cardLoaders.English = () ->
            text: """While you perform a primary attack, you may roll 1 additional attack die. If you do, the defender rolls 1 additional defense die."""
 
 
-
         # Epic Ships
         "Republic Judiciary":
            display_name: """Republic Judiciary"""
@@ -3131,7 +3130,6 @@ exportObj.cardLoaders.English = () ->
            text: """After you perform a special attack with the %LOCK% requirement, you may acquire a lock on the defender."""
         "False Transponder Codes":
            text: """After you acquire a lock on an object or an object acquires a lock on you, if you have 1 active %CHARGE%, lose 1 %CHARGE% and jam that object, ignoring range restrictions."""
-
         "Vectored Cannons (RZ-1)":
            text: """Gain a %SINGLETURRETARC% indicator. Treat the arc requirement of your %FRONTARC% primary attack as %SINGLETURRETARC%. %LINEBREAK% Replace your <strong>Vectored Thrusters</strong> ship ability with the following: %LINEBREAK%<strong>Vectored Cannons:</strong> During the System Phase, you may perform a red %BOOST% or red %ROTATEARC% action. You can rotate your %SINGLETURRETARC% indicator only to your %FRONTARC% or %REARARC%."""
         "B6 Blade Wing Prototype (Epic)":
@@ -3643,6 +3641,9 @@ exportObj.cardLoaders.English = () ->
         "Hound's Tooth (AaD)":
            display_name: """Hound's Tooth"""
            text: """While you perform an attack, if you are reinforced and the defender is in the %FULLFRONTARC% or %FULLREARARC% matching your reinforce token, you may change 1 of your %FOCUS% results to a %HIT% result. If the defender is stressed, you may change 1 of your %focus% results to a %CRIT% result instead."""
+        "Chewbacca (AaD)":
+           display_name: """Chewbacca"""
+           text: """During the System Phase, you may spend 2 %CHARGE% to repair 1 faceup damage card."""
 
 
         # Epic upgrades
