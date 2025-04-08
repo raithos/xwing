@@ -16999,7 +16999,7 @@ exportObj.basicCardData = ->
                     "R-> Focus"
                 ]
             upgrades: [
-                "Chewbacca"
+                "Chewbacca (AaD)"
                 "L3-37 (AaD)"
                 "Tobias Beckett (AaD)" 
                 "Lando's Millennium Falcon (AaD)"
@@ -23105,6 +23105,15 @@ exportObj.basicCardData = ->
             standard: true
             unique: true
             slot: "Title"
+        }
+        {
+            name: "Chewbacca (AaD)"
+            id: 618
+            standard: true
+            unique: true
+            slot: "Crew"
+            charge: 2
+            recurring: 1
         }
     ]
 

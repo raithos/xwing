@@ -3855,7 +3855,9 @@ class Ship
                 if not upgrade.isOccupied() # an earlier set double-slot upgrade may already use this slot
                     other_upgrade = (other_upgrades[upgrade.slot] ? []).shift()
                     if other_upgrade?
-                        upgrade.setById other_upgrade.data.id
+                        await upgrade.setById other_upgrade.data.id
+                        # it would be cool if upgrade.setById would return whether it succeeded (as promise), so we could attempt to add all
+                        # upgrades, wait for all promises to resolve, and then retry the rejected upgrades. Instead, we wait for each upgrade individually.
                         if not upgrade.lastSetValid
                             delayed_upgrades[other_upgrade.data.id] = upgrade
             for id, upgrade of delayed_upgrades
