@@ -650,7 +650,7 @@ class exportObj.SquadBuilder
             @onGameTypeChanged @game_type_selector.val()
         @desired_points_input = $ @points_container.find('.desired-points')
         @desired_points_input.change (e) =>
-            @onPointsUpdated $.noop
+            @container.trigger 'xwing:pointsUpdated'
         @points_remaining_span = $ @points_container.find('.points-remaining')
         @points_destroyed_span = $ @points_container.find('.points-destroyed')
         @points_remaining_container = $ @points_container.find('.points-remaining-container')
@@ -4483,7 +4483,7 @@ class Ship
                     @points_destroyed_button_span.html '<i class="fas fa-circle"></i>'
 
 
-            @builder.onPointsUpdated()
+            @builder.container.trigger 'xwing:pointsUpdated'
         @points_destroyed_button.hide()
     
     teardownUI: ->
@@ -4947,14 +4947,14 @@ class Ship
                             for upgradeslot in upgrade.data.also_occupies_upgrades
                                 meets_restrictions = meets_restrictions and upgrade.occupiesAnUpgradeSlot(upgradeslot)
 
-                    restrictions = upgrade?.data?.restrictions ? undefined
+                    restrictions = if upgrade?.data?.restrictionsxwa? and @builder.isXwa then upgrade?.data?.restrictionsxwa else upgrade?.data?.restrictions ? undefined
                     # always perform this check, even if no special restrictions for this upgrade exists, to check for allowed points
                     meets_restrictions = meets_restrictions and @restriction_check(restrictions, upgrade, upgrade.getPoints(), @upgrade_points_total)
 
                 # ignore those checks if this is a pilot with upgrades or quickbuild
                 if (not meets_restrictions or (upgrade?.data? and (upgrade.data in equipped_upgrades or (upgrade.data.faction? and not @builder.isOurFaction(upgrade.data.faction,@pilot.faction)) or not @builder.isItemAvailable(upgrade.data)))) and not pilot_upgrades_check and not @builder.isQuickbuild
-                    console.log "Invalid upgrade: #{upgrade?.data?.name}, check #{@pilot?.upgrades} on pilot #{@pilot?.name}"
-                    upgrade.setById null
+                    console.log "Invalid upgrade: #{upgrade?.data?.name} on pilot #{@pilot?.name}"
+                    await upgrade.setById null
                     valid = false
                     unchanged = false
                     break
@@ -5327,7 +5327,7 @@ class GenericAddon
                 @deoccupyOtherUpgrades()
 
             # this will remove not allowed upgrades (is also done on pointsUpdated). We do it explicitly so we can tell if the setData was successfull
-            @lastSetValid = @ship.validate()
+            await @lastSetValid = @ship.validate()
             @ship.builder.container.trigger 'xwing:pointsUpdated'
 
     conferAddons: ->
