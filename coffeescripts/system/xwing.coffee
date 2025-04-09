@@ -169,7 +169,7 @@ class exportObj.SquadBuilder
         if @faction == "All"
             @game_type_selector.val("epic").trigger('change')
         else
-            @game_type_selector.val (exportObj.builders[0] ? @).game_type_selector.val()
+            @game_type_selector.val((exportObj.builders[0] ? @).game_type_selector.val()).trigger('change')
         @setupEventHandlers()
 
         window.setInterval @updatePermaLink, 250
