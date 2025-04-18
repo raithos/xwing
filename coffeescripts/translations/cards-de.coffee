@@ -460,7 +460,7 @@ is an authorization system which lets you prove your identity at a web site with
         "Copy URL": "Link kopieren"
         "Reset Obstacles": "Alle löschen"
         "Enable Ban List (Not Standard)": "Bannliste außerhalb von Standard"
-        "Epic Unofficial": "Von AMG wurden keine Punkte für Epische Karten veröffentlicht. Die Werte hier sind unabhängig und willkürlich gewählt, teilweise unausgewogen und werden nicht aktualisiert. "
+        "Epic Unofficial": "Epische Punkte werden von XWA verwaltet."
         damageHeader: (translator, type) ->
             "Schadenskarte (#{translator 'types', type})"
 
