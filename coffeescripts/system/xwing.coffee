@@ -125,6 +125,8 @@ class exportObj.SquadBuilder
         @printable_container = $ args.printable_container
         @tab = $ args.tab
         @show_points_destroyed = false
+        
+        @isCurrentlyLoadingSquad = false
 
         # internal state
         @ships = []
@@ -1827,7 +1829,6 @@ class exportObj.SquadBuilder
         @showObstaclesSelectInfo()
 
     serialize: ->
-
         serialization_version = 9
         game_type_abbrev = switch @game_type_selector.val()
             when 'standard'
@@ -1884,7 +1885,7 @@ class exportObj.SquadBuilder
                 @suppress_automatic_new_ship = false
                 @addShip()
                 return
-
+            @isCurrentlyLoadingSquad = true
             switch game_type_abbrev
                 when 's'
                     @changeGameTypeOnSquadLoad 'extended'
@@ -1913,10 +1914,13 @@ class exportObj.SquadBuilder
                         # create ship, if the ship was so invalid, that it in fact decided to not exist
                         ship[0] = @addShip()
                     ship[0].fromSerialized version, ship[1]
+            @isCurrentlyLoadingSquad = false
 
         @suppress_automatic_new_ship = false
         # Finally, the unassigned ship
         @addShip()
+        
+        @container.trigger 'xwing:pointsUpdated'
         cb()
 
 
@@ -4895,6 +4899,9 @@ class Ship
         stats
 
     validate: ->
+        # while we load a squad we defer the validation to after everything is loaded, as there might be a lot of mutual dependencies.
+        if @builder.isCurrentlyLoadingSquad
+            return true
         # Remove addons that violate their validation functions (if any) one by one until everything checks out
         # Returns true, if nothing has been changed, and false otherwise
         # check if we are an empty selection, which is always valid
