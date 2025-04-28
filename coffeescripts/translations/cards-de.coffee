@@ -2205,7 +2205,7 @@ exportObj.cardLoaders.Deutsch = () ->
            text: "Nachdem du einen Angriff durchgeführt hast, falls der Verteidiger zerstört worden ist, erhältst du 1 Stressmarker.%LINEBREAK% Nachdem ein befreundetes Schiff in Reichweite 0-3 zerstört worden ist, entferne 1 Stressmarker."
         "Lieutenant Lorrir":
            display_name: "Lieutenant Lorrir"
-           text: "Solange du eine Fassrolle fliegst, <strong>musst</strong> du die [%TURNLEFT% oder %TURNRIGHT%]-Schablone statt der [%STRAIGHT%]-Schablone verwenden."
+           text: "Solange du eine Fassrolle fliegst, <strong>musst</strong> du die [%BANKLEFT% oder %BANKRIGHT%]-Schablone statt der [%STRAIGHT%]-Schablone verwenden."
         "Iden Versio (BoY)":
            display_name: "Iden Versio"
            text: "Bevor ein befreundeter TIE in Reichweite 0-1 Schaden erleiden würde, darfst du 2 %CHARGE% ausgeben. Falls du das tust, verhindere 1 %HIT% oder %CRIT%."
