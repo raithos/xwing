@@ -3945,7 +3945,7 @@ exportObj.cardLoaders.English = () ->
            text: """After you perform an attack, if you have not targetted the defender in a previous attack this round and you are focused, you may recover 1 %ENERGY%"""
         "Hosnian Lament (Epic)":
            display_name: """Hosnian Lament"""
-           text: """After you perform an attack, if you have not targetted the defender in a previous attack this round and you are focused, you may recover 1 %ENERGY%"""
+           text: """While a friendly ship at range 0-2 is defending, if it suffers 2 or more damage during the attack, you may spend 1 %ENERGY% to assign a strain token to the attacker."""
         "Planetary Ion Bombardment (Epic)":
            display_name: """Planetary Ion Bombardment"""
            text: """<strong>Bonus Attack (%LOCK%):</strong> Attack 1 medium, large or huge ship. If this attack hits, all %HIT%/%CRIT% results inflict ion tokens instead of damage."""
