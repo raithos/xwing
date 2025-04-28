@@ -3942,7 +3942,7 @@ exportObj.cardLoaders.English = () ->
            text: """After you perform an attack, if you have not targetted the defender in a previous attack this round and you are focused, you may recover 1 %ENERGY%"""
         "GA-75 (Epic)":
            display_name: """GA-75"""
-           text: """After you perform an attack, if you have not targetted the defender in a previous attack this round and you are focused, you may recover 1 %ENERGY%"""
+           text: """Setup: Before placing forces, you may spend 2 %CHARGE%. If you do, choose a friendly ship with a <strong>Wing Leader</strong> upgrade. Assign the <strong>It's the Resistance</strong> condition to it."""
         "Hosnian Lament (Epic)":
            display_name: """Hosnian Lament"""
            text: """While a friendly ship at range 0-2 is defending, if it suffers 2 or more damage during the attack, you may spend 1 %ENERGY% to assign a strain token to the attacker."""
