@@ -190,24 +190,24 @@ body
     .outer-circle
       width: $header-circle-diameter
       height: $header-circle-diameter
-      border-radius: $header-circle-diameter / 2
-      margin-left: -$header-circle-diameter / 2
+      border-radius: calc($header-circle-diameter/2)
+      margin-left: -1*calc($header-circle-diameter/2)
       background-color: white
 
       .inner-circle
         width: $header-circle-diameter - $header-circle-border-width
         height: $header-circle-diameter - $header-circle-border-width
-        border-radius: ($header-circle-diameter - $header-circle-border-width) / 2
+        border-radius: calc(($header-circle-diameter - $header-circle-border-width)/2)
         background-color: gray
         position: relative
-        top: $header-circle-border-width / 2
-        left: $header-circle-border-width / 2
+        top: calc($header-circle-border-width/2)
+        left: calc($header-circle-border-width/2)
         line-height: $header-circle-diameter - $header-circle-border-width
-        font-size: $fancy-header-height / 2
+        font-size: calc($fancy-header-height/2)
         text-align: center
 
   .fancy-under-header
-    border: $fancy-header-height / 2 solid gray
+    border: calc($fancy-header-height/2) solid gray
     border-left-color: transparent
     border-bottom-color: transparent
     border-right-color: transparent
@@ -254,20 +254,20 @@ body
       .outer-circle
         width: $pilot-circle-diameter
         height: $pilot-circle-diameter
-        border-radius: $pilot-circle-diameter / 2
-        margin-left: -$pilot-circle-diameter / 2
+        border-radius: calc($pilot-circle-diameter/2)
+        margin-left: -1*calc($pilot-circle-diameter/2)
         background-color: white
 
         .inner-circle
           width: $pilot-circle-diameter - $pilot-circle-border-width
           height: $pilot-circle-diameter - $pilot-circle-border-width
-          border-radius: ($pilot-circle-diameter - $pilot-circle-border-width) / 2
+          border-radius: calc(($pilot-circle-diameter - $pilot-circle-border-width)/2)
           background-color: gray
           position: relative
-          top: $pilot-circle-border-width / 2
-          left: $pilot-circle-border-width / 2
-          line-height: $pilot-circle-diameter - ($pilot-circle-border-width / 2)
-          font-size: $fancy-pilot-header-height / 2
+          top: calc($pilot-circle-border-width/2)
+          left: calc($pilot-circle-border-width/2)
+          line-height: $pilot-circle-diameter - calc($pilot-circle-border-width/2)
+          font-size: calc($fancy-pilot-header-height/2)
           text-align: center
           color: white
 
@@ -348,19 +348,19 @@ body
         .outer-circle
           width: $upgrade-circle-diameter
           height: $upgrade-circle-diameter
-          border-radius: $upgrade-circle-diameter / 2
+          border-radius: calc($upgrade-circle-diameter/2)
           background-color: white
 
           .inner-circle
             width: $upgrade-circle-diameter - $upgrade-circle-border-width
             height: $upgrade-circle-diameter - $upgrade-circle-border-width
-            border-radius: ($upgrade-circle-diameter - $upgrade-circle-border-width) / 2
+            border-radius: calc(($upgrade-circle-diameter - $upgrade-circle-border-width)/2)
             background-color: gray
             position: relative
-            top: $upgrade-circle-border-width / 2
-            left: $upgrade-circle-border-width / 2
+            top: calc($upgrade-circle-border-width/2)
+            left: calc($upgrade-circle-border-width/2)
             line-height: $upgrade-circle-diameter
-            font-size: $fancy-pilot-header-height / 2
+            font-size: calc($fancy-pilot-header-height/2)
             text-align: center
             color: white
 
