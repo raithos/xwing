@@ -22692,6 +22692,8 @@ exportObj.basicCardData = ->
             standard: true
             unique: true
             slot: "Crew"
+            charge: 2
+            recurring: true
         }
         {
             name: "Hosnian Lament (Epic)"
