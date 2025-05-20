@@ -7621,6 +7621,7 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Tech"
                 "Modification"
+                "Modification"
             ]
         }
         {
