@@ -5547,7 +5547,6 @@ exportObj.basicCardData = ->
             slotsxwa: [
                 "Sensor"
                 "Cannon"
-                "Cannon"
                 "Crew"
                 "Crew"
                 "Modification"
