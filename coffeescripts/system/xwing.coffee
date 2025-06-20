@@ -3902,8 +3902,7 @@ class Ship
         if @builder.show_points_destroyed == true
             @points_destroyed_button.fadeIn 'fast'
 
-        # Ship background, Commented out to comply with AMG policies
-        # @row.addClass "ship-#{ship_type.toLowerCase().replace(/[^a-z0-9]/gi, '')}"
+        @row.addClass "ship-#{ship_type.toLowerCase().replace(/[^a-z0-9]/gi, '')}"
 
         @builder.container.trigger 'xwing:shipUpdated'
 
