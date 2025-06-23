@@ -175,7 +175,7 @@ exportObj.translations.English =
         "Intro Card YASB": """
                     <h2>YASB for X-Wing Miniatures</h2>
                     <p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures. For more information about the game or game resources, visit <a href="https://xwhub.com/">XW Hub</a>.</p>
-                    <p>XWA Version: R1</p>
+                    <p>XWA Version: R2</p>
                     <p>AMG Version: 09/06/2024</p>
                     <h5>Credits</h5>
                     <p>Built upon the amazing original <a href="https://geordanr.github.io/xwing/">Yet Another Squad Builder</a>.</p>
