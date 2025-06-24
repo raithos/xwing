@@ -9836,7 +9836,7 @@ exportObj.basicCardData = ->
             points: 4
             loadout: 14
             pointsxwa: 4
-            loadoutxwa: 20
+            loadoutxwa: 16
             slots: [
                 "Talent"
                 "Missile"
@@ -13135,8 +13135,6 @@ exportObj.basicCardData = ->
             force: 2
             points: 5
             loadout: 10
-            pointsxwa: 4
-            loadoutxwa: 5
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -14657,8 +14655,8 @@ exportObj.basicCardData = ->
             skill: 5
             points: 4
             loadout: 10
-            pointsxwa: 5
-            loadoutxwa: 16
+            pointsxwa: 4
+            loadoutxwa: 8
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
@@ -14783,8 +14781,8 @@ exportObj.basicCardData = ->
             charge: 1
             points: 4
             loadout: 10
-            pointsxwa: 4
-            loadoutxwa: 6
+            pointsxwa: 5
+            loadoutxwa: 16
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
