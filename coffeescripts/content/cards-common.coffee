@@ -2195,6 +2195,12 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Configuration"
             ]
+            slotsxwa: [
+                "Torpedo",
+                "Astromech"
+                "Modification"
+                "Configuration"
+            ]
         }
         {
             name: "Edrio Two Tubes"
@@ -11590,8 +11596,8 @@ exportObj.basicCardData = ->
             force: 3
             points: 4
             loadout: 7
-            pointsxwa: 5
-            loadoutxwa: 16
+            pointsxwa: 4
+            loadoutxwa: 5
             slots: [
                 "Force"
                 "Force"
