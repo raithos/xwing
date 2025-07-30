@@ -4947,11 +4947,23 @@ class Ship
                     # moved occupied slots off of validation func
                     if @builder.isXwa and upgrade?.data?.also_occupies_upgrades_xwa?
                         for upgradeslot in upgrade.data.also_occupies_upgrades_xwa
-                            meets_restrictions = meets_restrictions and upgrade.occupiesAnUpgradeSlot(upgradeslot)
+                            if not upgrade.occupiesAnUpgradeSlot(upgradeslot)
+                                # perhaps the upgrade simply does not occupy the required slots, because the slots
+                                # did not (yet) exist when the upgrade was added - so we give it another chance
+                                upgrade.deoccupyOtherUpgrades()
+                                upgrade.occupyOtherUpgrades()
+                                # now we try again and keep the result (if we are not in this if branch, we don't need to change meets_restrictions
+                                meets_restrictions = meets_restrictions and upgrade.occupiesAnUpgradeSlot(upgradeslot)
                     else
                         if upgrade?.data?.also_occupies_upgrades?
                             for upgradeslot in upgrade.data.also_occupies_upgrades
-                                meets_restrictions = meets_restrictions and upgrade.occupiesAnUpgradeSlot(upgradeslot)
+                                if not upgrade.occupiesAnUpgradeSlot(upgradeslot)
+                                    # perhaps the upgrade simply does not occupy the required slots, because the slots
+                                    # did not (yet) exist when the upgrade was added - so we give it another chance
+                                    upgrade.deoccupyOtherUpgrades()
+                                    upgrade.occupyOtherUpgrades()
+                                    # now we try again and keep the result (if we are not in this if branch, we don't need to change meets_restrictions)
+                                    meets_restrictions = meets_restrictions and upgrade.occupiesAnUpgradeSlot(upgradeslot)
 
                     restrictions = if upgrade?.data?.restrictionsxwa? and @builder.isXwa then upgrade?.data?.restrictionsxwa else upgrade?.data?.restrictions ? undefined
                     # always perform this check, even if no special restrictions for this upgrade exists, to check for allowed points
