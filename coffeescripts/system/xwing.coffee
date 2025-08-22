@@ -2868,7 +2868,7 @@ class exportObj.SquadBuilder
                     container.find('tr.info-engagement').show()
 
                     container.find('tr.info-attack td.info-data').text(pilot.ship_override?.attack ? ship.attack)
-                    container.find('tr.info-attack').toggle((pilot.data.ship_override?.attack ? ship.attack) > 0)
+                    container.find('tr.info-attack').toggle((pilot.data?.ship_override?.attack ? ship.attack) > 0)
 
                     container.find('tr.info-attack-fullfront td.info-data').text(ship.attackf)
                     container.find('tr.info-attack-fullfront').toggle(ship.attackf?)
