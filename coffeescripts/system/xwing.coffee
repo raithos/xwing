@@ -3919,8 +3919,8 @@ class Ship
                     # @linkedShip = null the ghost hera has wingmates and a linked phantom. We can't assume that we are done here...
                 @quickbuildId = id
                 @builder.current_squad.dirty = true
-                @resetPilot()
-                @resetAddons()
+                await @resetPilot()
+                await @resetAddons()
                 if id? and id > -1
                     quickbuild = exportObj.quickbuildsById[parseInt id]
                     new_pilot = exportObj.pilots[quickbuild.pilot]
