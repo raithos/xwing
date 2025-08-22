@@ -7882,6 +7882,124 @@ exportObj.basicQuickBuilds = ->
                 "Shield Upgrade"
             ]
         }
+        {
+            id: 639
+            faction: "Galactic Republic"
+            pilot: "7th Sky Corps Pilot"
+            ship: "Clone Z-95 Headhunter"
+            threat: 1
+            upgrades: [
+                "Angled Deflectors"
+            ]
+        }
+        {
+            id: 640
+            faction: "Galactic Republic"
+            pilot: '"Stub"'
+            ship: "Clone Z-95 Headhunter"
+            threat: 2
+            upgrades: [
+                "Elusive"
+                "Afterburners"
+                "Proton Torpedoes"
+            ]
+        }
+        {
+            id: 641
+            faction: "Galactic Republic"
+            pilot: '"Boost"'
+            ship: "Clone Z-95 Headhunter"
+            threat: 2
+            upgrades: [
+                "Enduring"
+                "Hull Upgrade"
+                "Homing Torpedoes"
+            ]
+        }
+        {
+            id: 642
+            faction: "Galactic Republic"
+            pilot: '"Drift"'
+            ship: "Clone Z-95 Headhunter"
+            threat: 2
+            upgrades: [
+                "Elusive"
+                "Afterburners"
+                "Homing Torpedoes"
+            ]
+        }
+        {
+            id: 643
+            faction: "Galactic Republic"
+            pilot: '"Hawk" (Z-95)'
+            ship: "Clone Z-95 Headhunter"
+            threat: 2
+            upgrades: [
+                "Outmaneuver"
+                "Afterburners"
+                "Mag-Pulse Warheads"
+            ]
+        }
+        {
+            id: 644
+            faction: "Galactic Republic"
+            pilot: '"Knack"'
+            ship: "Clone Z-95 Headhunter"
+            threat: 2
+            upgrades: [
+                "Outmaneuver"
+                "Proton Torpedoes"
+                "Predator"
+            ]
+        }
+        {
+            id: 645
+            faction: "Galactic Republic"
+            pilot: "Reaper Squadron Scout"
+            ship: "Clone Z-95 Headhunter"
+            threat: 2
+            upgrades: [
+                "Outmaneuver"
+                "Mag-Pulse Warheads"
+                "Fire-Control System"
+                "Shield Upgrade"
+            ]
+        }
+        {
+            id: 646
+            faction: "Galactic Republic"
+            pilot: '"Warthog" (Z-95)'
+            ship: "Clone Z-95 Headhunter"
+            threat: 2
+            upgrades: [
+                "Elusive"
+                "Proton Torpedoes"
+            ]
+        }
+        {
+            id: 647
+            faction: "Galactic Republic"
+            pilot: '"Killer"'
+            ship: "Clone Z-95 Headhunter"
+            threat: 2
+            upgrades: [
+                "Proton Torpedoes"
+                "Afterburners"
+            ]
+        }
+        {
+            id: 648
+            faction: "Galactic Republic"
+            pilot: '"Slider"'
+            ship: "Clone Z-95 Headhunter"
+            threat: 3
+            upgrades: [
+                "Outmaneuver"
+                "Afterburners"
+                "Proton Torpedoes"
+                "Shield Upgrade"
+            ]
+        }
     ]
 
 exportObj.setupQuickBuilds = (basic_cards) ->
