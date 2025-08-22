@@ -1525,7 +1525,7 @@ class exportObj.SquadBuilder
                 </div>
                 """
                 text = JSON.stringify(@toXWS())
-                console.log "#{text}"
+                # console.log "#{text}"
                 @printable_container.find('.xws-container .qrcode').qrcode
                     render: 'div'
                     ec: 'M'
@@ -5287,7 +5287,7 @@ class GenericAddon
         
         @upgrade_query_modal.click (e) =>
             if @data
-                console.log "#{@data.name}"
+                # console.log "#{@data.name}"
                 @ship.builder.showTooltip 'Addon', @data, ({addon_type: @type} if @data?) , @ship.builder.mobile_tooltip_modal, true
                 @ship.builder.mobile_tooltip_modal.modal 'show'
 
