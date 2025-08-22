@@ -1153,7 +1153,7 @@ class exportObj.SquadBuilder
 
         # conditions
         @condition_container = $ document.createElement('div')
-        @condition_container.addClass 'conditions-container d-flex flex-wrap'
+        @condition_container.addClass 'conditions-container d-flex flex-wrap col-md-9'
         @container.append @condition_container
 
         @mobile_tooltip_modal = $ document.createElement 'DIV'
@@ -2462,7 +2462,7 @@ class exportObj.SquadBuilder
         if data != @tooltip_currently_displaying or force_update
             switch type
                 when 'Ship'
-            # we get all pilots for the ship, to display stuff like available slots which are treated as pilot properties, not ship properties (which makes sense, as they depend on the pilot, e.g. talent or force slots)
+                    # we get all pilots for the ship, to display stuff like available slots which are treated as pilot properties, not ship properties (which makes sense, as they depend on the pilot, e.g. talent or force slots)
                     possible_inis = []
                     possible_costs = []
                     possible_loadout = []
