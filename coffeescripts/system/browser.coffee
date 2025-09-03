@@ -685,7 +685,7 @@ class exportObj.CardBrowser
             @card_viewer_conditions_container.text ''
             conditions.forEach (condition) =>
                 condition_container = $ document.createElement('div')
-                condition_container.addClass 'conditions-container d-flex flex-wrap'
+                condition_container.addClass 'conditions-container d-flex flex-wrap col-md-9'
                 condition_container.append conditionToHTML(condition)
                 @card_viewer_conditions_container.append condition_container
             @card_viewer_conditions_container.show()
