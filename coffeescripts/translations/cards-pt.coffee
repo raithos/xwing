@@ -4289,6 +4289,75 @@ exportObj.cardLoaders.Português = () ->
         "Modified for Organics":
            display_name: "Modificado para Orgânicos"
            text: """Esta nave não é afetada pela restrição <strong>Padronizada</strong>. Reduza a dificuldade de suas manobras curvas suave [%BANKLEFT% ou %BANKRIGHT%] de velocidade 2 e 3. Aumente a dificuldade de suas curvas [%TURNLEFT% ou %TURNRIGHT%] de velocidade 3."""
+         "Locked S-Foils":
+           display_name: "S-Foils Travados"
+           text: """Depois que você realizar uma ação %BOOST%, receba uma ficha de exaustão."""
+        "Gyro-Cockpit":
+           display_name: "Gyro-Cockpit"
+           text: """Depois que você receber uma ficha de estresse, você pode gastar 2 %CHARGE% para receber uma ficha de desvio. Quando você soltar um dispositivo, você pode gastar 1 %CHARGE% para alinhar o gabarito com a linha da base em seu %LEFTARC% ou %RIGHTARC%."""
+        "High Stakes":
+           display_name: "Apostando Alto"
+           text: """Depois que você realizar uma ação vermelha, você pode rolar um dado de ataque. Em um resultado %HIT%/%CRIT%, remova 1 ficha de estresse."""
+        "Chiss Engineering":
+           display_name: "Engenharia Chiss"
+           text: """Depois que você completar uma manobra de velocidade 3-5, você pode realizar uma ação %LOCK%. Quando realizar um ataque, se você não estiver estressado, você pode gastar 1 %SHIELD% para aplicar o bônus de alcance 1."""
+        "Formed Up":
+           display_name: "Em Formação"
+           text: """No fim da Fase Final, se houver outra nave <strong>Caça TIE/ln</strong> amiga em alcance 0-1, você pode remover 1 ficha de estresse."""
+        "Prioritized Weapons Systems":
+           display_name: "Sistemas de Armas Priorizados"
+           text: """Antes de você engajar, você pode receber 1 ficha de desgaste para remover 1 ficha de desarme."""
+        "Broadside Batteries":
+           display_name: "Canhões de Bordo"
+           text: """Você pode adquirir miras e realizar ataques primários em alcance 1-4."""
+        "Concentrated Batteries":
+           display_name: "Canhões Concentrados"
+           text: """Quando você realizar um ataque primário, %TORPEDO%, ou %MISSILE%, se o defensor estiver em seu %BULLSEYEARC%, role 1 dado de ataque adicional."""
+        "Docking Clamps":
+           display_name: "Garras de Acoplagem"
+           text: """Você pode acoplar até 4 naves pequenas."""
+        "Resupply Craft":
+           display_name: "Nave de Reabastecimento"
+           text: """Depois que outra nave amiga em alcance 0-1 realizar uma ação, você pode gastar 1 %ENERGY%. Se você fizer isso, ela remove 1 ficha laranja ou vermelha, ou recupera 1 escudo."""
+        "Overdrive Burners":
+           display_name: "Combustor Sobrecarregado"
+           text: """Quando você defender, se a velocidade da sua manobra revelada for 3-5, role 1 dado de defesa adicional."""
+        "Tractor Grasp":
+           display_name: "Alcance de Tração"
+           text: """Depois que você realizar um ataque <b>Tentaculos de Tração</b> que acertou, o defensor recebe 1 ficha de tração."""
+        "Merciless":
+           display_name: "Impiedoso"
+           text: """Quando você realizar um ataque, você pode escolher outra nave em alcance 0-1 do defensor. Se fizer isso, essa nave recebe uma ficha de desgaste e você pode rerolar um resultado em branco."""
+        "Heavy Weapon Turret (EoD)":
+           display_name: "Torre de Arma Pesada"
+           text: """Depois que você realizar uma ação, você pode realizar uma ação %ROTATEARC% branca. Você pode rotacionar seu arco %SINGLETURRETARC% apenas para seu %FRONTARC% ou %REARARC%. Você deve tratar o pre-requisito %FRONTARC% das suas melhorias %MISSILE% como %SINGLETURRETARC%."""
+        "Adaptive S-Foils":
+           display_name: "S-Foils Adaptaveis"
+           text: """Depois que você realizar uma ação %BARRELROLL%, receba uma ficha de exaustão. Quando você realizar um ataque, antes de rolar os dados, se o defensor estiver em seu %BULLSEYEARC%, você pode remover 1 ficha de exaustão."""
+        "Leave No One Behind":
+           display_name: "Ninguém Fica Para Trás"
+           text: """Depois que você realizar uma ação, se você tiver menos do que 2 fichas de estresse, você pode receber 1 ficha de estresse. Se você fizer isso, outra nave amiga pequena em alcance 0-1 pode receber 1 ficha de exaustão para realizar uma ação %BOOST%."""
+        "Modular Bombing Magazine":
+           display_name: "Carregador de Bombardeio Modular"
+           text: """Quando você soltar um dispositivo, você pode alinhar o gabarito com as linhas da base no %LEFTARC% ou %RIGHTARC%."""
+        "Restored Speedster":
+           display_name: "Possante Restaurado"
+           text: """Enquanto você possuir exatamente 1 ficha de desarme, você pode realizar ataques primários contra objetos em seu %BULLSEYEARC%."""
+        "Coaxium Injectors":
+           display_name: "Injetores de Coaxium"
+           text: """Depois que você executar completamente uma manobra de velocidade 3 ou 4, você pode gastar 1 %CHARGE% para realizar uma ação %SLAM% vermelha, mesmo se estiver estressado. Depois que você realizar uma ação %SLAM%, você sofre 1 %CRIT% a menos que você exponha 1 carta de dano."""
+        "Winged Reversal":
+           display_name: "Inversão de Asas"
+           text: """Depois que você revelar uma manobra curva fechada [%TURNLEFT% ou %TURNRIGHT%], você pode gastar 1 %CHARGE%, receber 1 ficha de desgaste e aumentar a dificuldade da manobra. Se você fizer isso, realize essa manobra como uma Curva Tallon [%TROLLLEFT% ou %TROLLRIGHT%] da mesma direção."""
+        "Imposing Behemoth":
+           display_name: "Gigante Imponente"
+           text: """Quando uma nave inimiga em alcance 0 defender, se você estiver reforçando e o defensor estiver no %FULLFRONTARC% ou %FULLREARARC% da sua ficha de reforço, essa nave inimiga rola 1 dado de defesa a menos."""
+        "Adaptative Microthrusters":
+           display_name: "Micropropulsores Adaptáveis"
+           text: """Quando você realizar uma pirueta, você pode gastar 1 %CHARGE% para o usar o gabarito %BANKLEFT% ou %BANKRIGHT% ao invés do gabarito %STRAIGHT%."""
+        "Enduring Limitations":
+           display_name: "Limite da Resistência"
+           text: """No final da Fase de Ativação, se você possuir 3 ou mais fichas de estresse, você deve remover 1 ficha de estresse e sofrer 1 dano %HIT%."""
 
     damage_translations =
         "Panicked Pilot":
