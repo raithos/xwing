@@ -3728,11 +3728,11 @@ Aktion durchgeführt hast, darfst du bis zu 2&nbsp;%ENERGY% ausgeben, um ebenso
            display_name: "General Grievous"
            text: "Während der Kampfphase, bei Initiative 4, darfst du 1 %ENERGY% ausgeben, um einen Bonus %HARDPOINT% Angriff durchzuführen.%LINEBREAK%%LINEBREAK%Du kannst Angriffe gegen befreundete Schiffe durchführen.%LINEBREAK%%LINEBREAK%Nachdem du einen Angriffdurchgeführt hast, falls der Verteidiger zerstört worden ist, darf jedes befreundete Schiff in Reichweiter 0-2 von ihm eine %CALCULATE%-Aktion durchführen."
         "Burnout Thrusters":
-           display_name: "extreme Schubdüsen"
-           text: "Nachdem du eine %SLAM% -Aktion durchführt hast, verlierst du 1 %%CHARGE%. Dann darfst du 1 Erschöpfungsmarker erhalten, um 1 Entwaffnetmarker zu entferne.%LINEBREAK% Falls deine %CHARGE% inaktiv ist, kannst du eine %SLAM%- Aktion nicht durchführen."
+           display_name: "Extreme Schubdüsen"
+           text: "Nachdem du eine %SLAM% -Aktion durchgeführt hast, verlierst du 1 %%CHARGE%. Dann darfst du 1 Erschöpfungsmarker erhalten, um 1 Entwaffnetmarker zu entferne.%LINEBREAK% Falls deine %CHARGE% inaktiv ist, kannst du eine %SLAM%- Aktion nicht durchführen."
         "Drop-Seat Bay":
            display_name: "Sitzaufhängung"
-           text: "FAlls du ein %CREW%-Remote unter Verwendung einer Gerade-Schablone [%STRAIGHT%] abwerfen würdest, darfst du stattdessen eine Drehschablone {%BANKLEFT% oder %BANKRIGHT%] derselben Geschwindigkeit verwenden. Du kannst die Mittellinie jender Schalbone bündig an der Markierung an der linken oder rechten Seite deines Schiffes platzieren, stt ander den hinteren Stoppern. "
+           text: "Falls du ein %CREW%-Remote unter Verwendung einer Gerade-Schablone [%STRAIGHT%] abwerfen würdest, darfst du stattdessen eine Drehschablone {%BANKLEFT% oder %BANKRIGHT%] derselben Geschwindigkeit verwenden. Du kannst die Mittellinie jender Schalbone bündig an der Markierung an der linken oder rechten Seite deines Schiffes platzieren, stt ander den hinteren Stoppern. "
         "Combat Boarding Tube":
            display_name: "Gefechts-Ausstiegsluke"
            text: "Falls du während der Systemphase ein %CREW% - Remote abwerfen würdest und ein feindliches mittleres ,großes oder riesiges Schiff in Reichweite 0-1 in deinem %REARARC% ist, darfst du jenes Gerät stattdessen so in deinem %REARARC% in Reichweite 0-1 auf der Spielfläche platzieren, dass es in Reichweite 0 jenes Schiffes ist. Dann erhält jenes feindliche Schiff 1 Erschöpfungs-,Anstrengungs- oder Stressmarker deiner Wahl."
