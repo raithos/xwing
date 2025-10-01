@@ -4881,6 +4881,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Sensor"
                 "Modification"
+                "Modification"
                 "HardpointShip"
             ]
         }
