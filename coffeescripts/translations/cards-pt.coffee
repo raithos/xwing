@@ -943,6 +943,9 @@ exportObj.cardLoaders.Português = () ->
         "4-LOM":
            display_name: """4-LOM"""
            text: """Após você executar completamente uma manobra vermelha, receba 1 ficha de cálculo. No início da Fase Final, você pode escolher 1 nave em alcance 0-1. Se o fizer, transfira 1 de suas fichas de estresse para a nave escolhida."""
+        "Zuckuss (AaD)":
+           display_name: """Zuckuss (AaD)"""
+           text: """Quando você realizar um ataque primário, você pode rolar 1 dado de ataque adicional. Se o fizer, o defensor rola 1 dado de defesa adicional."""
 
        #Fang Fighter
         "Zealous Recruit":
@@ -969,6 +972,9 @@ exportObj.cardLoaders.Português = () ->
         "Tor Phun":
            display_name: """Tor Phun"""
            text: """Depois que você realizar um ataque, se o defensor foi destruído, você pode realizar uma ação, mesmo se estiver estressado. E então você pode receber 2 fichas de desgaste para realizar um ataque bônus."""
+        "Fenn Rau (AaD)":
+           display_name: """Fenn Rau (AaD)"""
+           text: """Quando você defender ou realizar um ataque, se o alcance do ataque for 1, você pode rolar 1 dado adicional."""
 
        #Kihraxz
         "Cartel Marauder":
@@ -1060,6 +1066,9 @@ exportObj.cardLoaders.Português = () ->
         "Han Solo (Scum)":
            display_name: """Han Solo"""
            text: """Quando você defender ou realizar um ataque, se o ataque estiver obstruído por um obstáculo, você pode rolar 1 dado adicional."""
+        "Han Solo (AaD)":
+           display_name: """Han Solo (AaD)"""
+           text: """Quando você defender ou realizar um ataque, se o ataque estiver obstruído por um obstáculo, você pode rolar 1 dado adicional."""
 
       #YV-666
         "Trandoshan Slaver":
@@ -1077,6 +1086,9 @@ exportObj.cardLoaders.Português = () ->
         "Doctor Aphra":
            display_name: """Dra. Aphra"""
            text: """Antes de você engajar, você pode gastar 1 ficha verde e 1 %CHARGE%. Se o fizer, você pode escolher outra nave em alcance 0-1 que não esteja estressada. A nave escolhida recebe 1 ficha de estresse."""
+        "Bossk (AaD)":
+           display_name: """Bossk (AaD)"""
+           text: """Quando você realizar um ataque primário, após a etapa Neutralizar Resultados, você pode gastar 1 resultado %CRIT% para adicionar 2 resultados %HIT%."""
 
       #Jumpaster-5000
         "Contracted Scout":
@@ -1093,6 +1105,9 @@ exportObj.cardLoaders.Português = () ->
            text: """No início da Fase de Engajamento, você pode escolher uma nave amiga em alcance 0-1. Se o fizer, transfira todas as fichas verdes atribuidas a você para a nave escolhida."""
         "Dengar":
            display_name: """Dengar"""
+           text: """Após você defender, se o atacante estiver em seu %FRONTARC%, você pode gastar 1 %CHARGE% para realizar um ataque bônus contra o atacante."""
+        "Dengar (AaD)":
+           display_name: """Dengar (AaD)"""
            text: """Após você defender, se o atacante estiver em seu %FRONTARC%, você pode gastar 1 %CHARGE% para realizar um ataque bônus contra o atacante."""
 
        #M3-A
@@ -1160,6 +1175,9 @@ exportObj.cardLoaders.Português = () ->
         "Hondo Ohnaka":
            display_name: """Hondo Ohnaka"""
            text: """<strong>Ação:</strong> Escolha 2 naves que não sejam enormes em alcance 0-3 de você que não sejam amigas entre si. Cada uma das naves podem realizar uma ação da sua barra de ações, mesmo se estiverem estressadas, na ordem que você definir. E então, receba 1 ficha de cálculo."""
+        "Boba Fett (AaD)":
+           display_name: """Boba Fett (AaD)"""
+           text: """Quando outra nave amiga defender, se você tiver uma mira no atacante, você pode realizar um ataque bônus contra o atacante."""
 
       #Lancer Class
         "Shadowport Hunter":
@@ -1175,6 +1193,12 @@ exportObj.cardLoaders.Português = () ->
            display_name: """Asajj Ventress"""
            text: """No início da Fase de Engajamento, você pode escolher 1 nave inimiga em seu %SINGLETURRETARC% em alcance 0-2 e gastar 1 %FORCE%. Se o fizer, a nave escolhida recebe 1 ficha de estresse a menos que ela remova 1 ficha verde."""
 
+       #Naboo
+        "The Mandalorian (AaD)":
+           display_name: """The Mandalorian (AaD)"""
+           text: """Quando você defender ou realizar um ataque, se você estiver no %FRONTARC% e em alcance 1-2 de 2 ou mais naves inimigas, você pode mudar 1 de seus resultados em branco para um resultado %FOCUS%."""
+
+            
       #Starviper
         "Black Sun Enforcer":
            display_name: """Executor do Sol Negro"""
@@ -1191,6 +1215,9 @@ exportObj.cardLoaders.Português = () ->
         "Guri":
            display_name: """Guri"""
            text: """No início da Fase de Engajamento, se houver ao menos 1 nave inimiga em alcance 0-1, você pode receber 1 ficha de foco."""
+        "Prince Xizor (AaD)":
+           display_name: """Prince Xizor (AaD)"""
+           text: """Quando você realizar um ataque contra uma nave desgastada, você pode remover 1 ficha de estresse."""
 
       #Quadjumper
         "Jakku Gunrunner":
@@ -1265,7 +1292,10 @@ exportObj.cardLoaders.Português = () ->
         "Rook Kast":
            display_name: """Rook Kast"""
            text: """Antes de você engajar, você pode receber 1 ficha de desgaste. Quando você realizar um ataque primário, se você estiver desgastado, você pode mudar 1 de seus resultados %FOCUS% ou em branco para um resultado %HIT%."""
-
+        "Bo-Katan Kryze (AaD)":
+           display_name: """Bo-Katan Kryze (AaD)"""
+           text: """Quando você realizar um ataque, se você estiver em alcance 0-1 do defensor, você pode rerolar 1 dado de ataque."""
+        
       #Rogue Class Scum
         "Outer Rim Hunter":
            display_name: """Caçador da Orla Exterior"""
@@ -1278,6 +1308,9 @@ exportObj.cardLoaders.Português = () ->
            text: """Quando você defender, depois da etapa de Neutralizar Resultados, se houver mais resultado %HIT%/%CRIT% do que seus %SHIELD% ativos, você pode mudar 1 resultado %HIT% para um resultado %CRIT% e cancelar 1 resultado %HIT%."""
         "Cad Bane":
            display_name: """Cad Bane"""
+           text: """Depois que você realizar um ataque que acertou, você pode gastar 2 %CHARGE% para transferir 1 de suas fichas laranjas ou vermelhas que não seja uma mira para o defensor."""
+        "Cad Bane (AaD)":
+           display_name: """Cad Bane (AaD)"""
            text: """Depois que você realizar um ataque que acertou, você pode gastar 2 %CHARGE% para transferir 1 de suas fichas laranjas ou vermelhas que não seja uma mira para o defensor."""
 
                   #ST-70
@@ -2204,6 +2237,16 @@ exportObj.cardLoaders.Português = () ->
         "Zari Bangel":
            display_name: """Zari Bangel"""
            text: """Você não pula a etapa Realizar Ação após você executar parcialmente uma manobra."""
+        "Tallissan Lintra (EoD)":
+           display_name: """Tallissan Lintra (EoD)"""
+           text: """Quando uma nave inimiga em seu %BULLSEYEARC% realiza um ataque, você pode gastar 1 %CHARGE%. Se fizer isso, o defensor rola 1 dado de defesa adicional."""
+        "Zizi Tlo (EoD)":
+           display_name: """Zizi Tlo (EoD)"""
+           text: """Depois que você defender ou realizar um ataque, você pode gastar 1 %CHARGE% para receber 1 ficha de foco ou desvio."""
+        "Pammich Nerro Goode (EoD)":
+           display_name: """Pammich Nerro Goode (EoD)"""
+           text: """Enquanto você tiver 2 ou menos fichas de estresse, você pode realizar manobras vermelhas mesmo se estiver estressado."""
+        
 
        #Fireball
         "Colossus Station Mechanic":
@@ -2241,6 +2284,12 @@ exportObj.cardLoaders.Português = () ->
         "Paige Tico":
            display_name: """Paige Tico"""
            text: """Após você soltar um dispositivo, você pode gastar 1 %CHARGE% para soltar um dispositivo adicional."""
+        "Finch Dallow (EoD)":
+           display_name: """Finch Dallow (EoD)"""
+           text: """Se você for soltar um dispositivo usando uma régua %STRAIGHT% e não estiver estressado, voê pode receber 1 ficha de estresse para usar uma régua [%BANKLEFT% or %BANKRIGHT%] da mesma velocidade."""
+        "Vennie (EoD)":
+           display_name: """Vennie (EoD)"""
+           text: """Quando você defender, se o atacante estiver no %SINGLETURRETARC% de uma nave amiga, você pode mudar 1 resultado %FOCUS% para um resultado %EVADE%."""
 
        #Transport POD
         "BB-8":
@@ -2328,6 +2377,21 @@ exportObj.cardLoaders.Português = () ->
         "Zay Versio":
            display_name: """Zay Versio"""
            text: """Quando você defender, se o atacante estiver danificado, você pode rerolar 1 dado de defesa."""
+        "Poe Dameron (EoD)":
+           display_name: """Poe Dameron (EoD)"""
+           text: """Depois que você realizar uma ação, você pode gastar 1 %CHARGE% para realizar uma ação branca, tratando-a como uma ação vermelha."""
+        "Jaycris Tubbs (EoD)":
+           display_name: """Jaycris Tubbs (EoD)"""
+           text: """Depois que você executar completamente uma manobra azul, você pode escolher uma nave amiga em alcance 0-1. Se o fizer, essa nave remove 1 ficha de estresse."""
+        "Stomeroni Starck (EoD)":
+           display_name: """Stomeroni Starck (EoD)"""
+           text: """<strong>Setup:</strong> Ao invés do disco de manobras da x-wing T-70, esta nave usa o disco de manobras da RZ-2."""
+        "C'ai Threnalli (EoD)":
+           display_name: """C'ai Threnalli (EoD)"""
+           text: """Depois que você executar completamente uma manobra, se você voou através de uma nave amiga, você pode realizar uma ação %EVADE%."""
+        "Ronith Blario (EoD)":
+           display_name: """Ronith Blario (EoD)"""
+           text: """Quando você defender ou realizar um ataque, se a nave inimiga estiver no %SINGLETURRETARC% de outra nave amiga, você pode gastar 1 ficha de foco daquela nave amiga para mudar 1 de seus resultados %FOCUS% para um resultado %EVADE% ou %HIT%."""
 
       #YT-1300 Resistance
         "Resistance Sympathizer":
