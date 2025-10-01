@@ -4111,6 +4111,171 @@ exportObj.cardLoaders.Português = () ->
         "Ion Maneuvering Jet (BoE)":
            display_name: """Jato de Manobra Iônica"""
            text: """Depois que você executar completamente uma Manobra Koiogran [%KTURN%], você pode gastar 1 %CHARGE% para realizar uma ação, mesmo se estiver estressado."""
+         "Without A Trace (SL)":
+           display_name: """Sem Vestígios"""
+           text: """Depois que você receber uma ficha de camuflagem, você pode remover 1 ficha vermelha. Enquanto você estiver camuflado, naves inimigas não podem adquirir miras em você."""
+        "Relay System (SL)":
+           display_name: """Sistemas de Transmissão"""
+           text: """Depois que uma nave em alcance 0-2 realizar uma ação %LOCK%, você pode adquirir uma mira no mesmo objeto. %LINEBREAK% Depois que você realizar um ataque que acertou, você pode gastar uma mira que possua no defensor. Se você fizer isso, outra nave amiga em alcance 0-1 pode adquirir uma mira no defensor."""
+        "Stygium Reserve (SL)":
+           display_name: """Reservas de Stygium"""
+           text: """Depois que você executar completamente uma manobra, você pode gastar 1 %CHARGE% para realizar uma ação %BOOST%, mesmo se estiver estressado."""
+        "Silent Hunter (SL)":
+           display_name: """Caçador Silencioso"""
+           text: """Depois que você descamuflar, você pode adquirir uma mira em uma nave em seu %BULLSEYEARC%."""
+        "Stealth Gambit (SL)":
+           display_name: """Aposta em Furtividade"""
+           text: """Após uma nave amiga realizar um ataque que acerte uma nave inimiga em seu %FRONTARC%, se você estiver camuflado, você pode receber uma ficha de desgaste para remover sua ficha de camuflagem e realizar um ataque primário bônus contra o defensor. %LINEBREAK% No fim da Fase de Engajamento, se você estiver desgastado, receba uma ficha de desvio."""
+        "Manual Ailerons (SL)":
+           display_name: """Ailerons Manuais"""
+           text: """Quando você descamuflar, você pode gastar 1 %CHARGE% para usar o gabarito [2 %BANKLEFT%] ou [2 %BANKRIGHT%] ao invés do gabarito [2 %STRAIGHT%]."""
+        "Saturation Rockets (SL)":
+           display_name: """Saturação de Foguetes"""
+           text: """<strong>Ataque:</strong> Gaste 2 %CHARGE%. Se o defensor estiver em seu %FRONTARC%, você pode gastar 1 %CHARGE% adicional para rolar 1 dado de ataque adicional. %LINEBREAK% Depois deste ataque, você pode gastar 1 %CHARGE% para realizar este ataque contra um alvo diferente em alcance 0-1 do defensor, sem pagar o custo de %CHARGE%."""
+        "Long-Range Scanners (SL)":
+           display_name: """Escaners de Longo Alcance"""
+           text: """Antes de você realizar uma ação %LOCK%, você pode gastar 1 %CHARGE%. Se você fizer isso, você pode adquirir miras em qualquer alcance durante essa ação."""
+        "Heavy Plasma Missiles (SL)":
+           display_name: """Mísseis de Plasma Pesados"""
+           text: """<strong>Ataque (%LOCK%):</strong> Gaste 1 %CHARGE%. Depois que este ataque acertar, o defensor perde 1 escudo."""
+        "Determination (EoD)":
+           display_name: """Determinação"""
+           text: """Quando você realizar um ataque primário, se o defensor estiver em seu %BULLSEYEARC%, você pode sofrer 1 %HIT% para adicinar 1 resultado %FOCUS%."""
+        "Experimental Scanners (EoD)":
+           display_name: """Escaners Experimentais"""
+           text: """Você pode adquirir miras além do alcance 3. Você não pode adquirir miras em alcance 1."""
+        "Advanced Warning Systems (EoD)":
+           display_name: """Sistemas de Alerta Avançados"""
+           text: """Depois que você for declarado como defensor de um ataque, se uma nave amiga em alcance 0-2 possuir uma mira no atacante, você pode realizar uma ação %EVADE% vermelha."""
+        "Targeting Relay (EoD)":
+           display_name: """Transmissão de Alvos"""
+           text: """Depois que uma nave amiga adquirir uma mira em uma nave inimiga em alcance 0-1 de você, você pode gastar 1 %CHARGE% e receber uma ficha de estresse. Se você fizer isso, essa nave amiga pode receber uma ficha de cálculo."""
+        "Interference Array (EoD)":
+           display_name: """Vetor de Interferência"""
+           text: """Depois que você coordenar uma nave, você pode gastar 1 %CHARGE%. Se você fizer isso, coloque uma ficha de interferência em uma nave inimiga em alcance 0-1 da nave coordenada."""
+        "BB-8 (EoD)":
+           display_name: """BB-8"""
+           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para realizar uma ação %BARRELROLL% ou %BOOST%. %LINEBREAK% Antes de você engajar, você pode gastar 1 %CHARGE% e receber uma ficha de desgaste. Se o fizer, você pode remover 1 ficha de desarme."""
+        "Primed Overdrive Thrusters (EoD)":
+           display_name: """Propulsores Preparados Sobrecarregados"""
+           text: """Quando você realizar uma ação %BOOST%, %BARRELROLL%, ou %SLAM% vermelha, você deve usar um gabarito de 1 velocidade maior se for possível. Então, você pode receber 1 ficha de desgaste para remover 1 ficha de estresse."""
+        "Black One (EoD)":
+           display_name: """Black One"""
+           text: """Depois que você realizar uma ação %SLAM%, perca 1 %CHARGE%. Se esta melhoria possuir 0 %CHARGE% ativas, você não poderá realizar a ação %SLAM%."""
+        "For The Cause (EoD)":
+           display_name: """Pela Causa"""
+           text: """Quando você defende ou realiza um ataque, você pode gastar 1 resultado que não seja branco para escolher uma nave amiga desgastada ou exausta em alcance 1-2. Essa nave pode remover 1 ficha de desgaste ou exaustão."""
+        "R0 Astromech (EoD)":
+           display_name: """Astromecânico R0"""
+           text: """Depois que você revelar uma manobra básica, você pode reduzir sua dificuldade. Se fizer isso, depois do passo de checar a dificuldade, receba 1 ficha de desgaste."""
+        "Accelerated Sensor Array (EoD)":
+           display_name: """Vetor de Sensores Acelerados"""
+           text: """Quando você defender ou realizar um ataque primário, se a velocidade da sua manobra revelada for 3-5, você pode rerolar 1 dado. Se sua manobra revelada for uma manobra avançada, você pode rerolar até 2 dados."""
+        "Repulsorlift Engines (EoD)":
+           display_name: """Motores Repulsorlift"""
+           text: """Quando você reazliar uma ação %BARRELROLL%, você pode receber 1 ficha de desgaste para usar o gabarito %BANKLEFT% ou %BANKRIGHT% ao invés do gabarito %STRAIGHT%."""
+        "Escort Fighter (EoD)":
+           display_name: """Caça de Escolta"""
+           text: """Quando uma nave amiga que não seja pequena defender, se você estiver no arco de tiro do atacante, você pode gastar 1 %CHARGE% e receber 1 ficha de desgaste para adicinar 1 resultado %FOCUS% a rolagem."""
+        "Precision Holo-Targeter (EoD)":
+           display_name: """Holo-Targeter Preciso"""
+           text: """Quando você realizar um ataque primário, se você não estiver no arco de tiro do defensor, o defensor rola 1 dado de defesa a menos."""
+        "R0-GR (EoD)":
+           display_name: """R0-GR"""
+           text: """Enquanto você tiver 2 ou menos fichas de estresse, você pode realizar ações de %COORDINATE% e %JAM%, mesmo se estiver estressado. %LINEBREAK% Depois que você realizar uma ação %COORDINATE% ou %JAM%, receba 1 ficha de cálculo."""
+        "Black Squadron R4 (EoD)":
+           display_name: """R4 do Esquadrão Negro"""
+           text: """Depois que você executar completamente uma manobra azul, você pode gastar 1 %CHARGE% para remover todas as suas fichas de estresse."""
+        "Nix Jerd (EoD)":
+           display_name: """Nix Jerd"""
+           text: """Quando você realizar uma ação %RELOAD%, você pode gastar 1 %CHARGE% e receber 1 ficha de desgaste. Se fizer isso, você pode recuperar 1 %CHARGE% adicional em uma melhoria %DEVICE%."""
+        "Paige Tico (EoD)":
+           display_name: """Paige Tico"""
+           text: """Enquanto você possuir exatamente 1 ficha de desarme, você ainda pode realizar ataques %SINGLETURRETARC%. Após realizar um ataque, você pode soltar uma bomba ou girar seu indicador %SINGLETURRETARC%."""
+        "First Order Ordnance Tech (EoD)":
+           display_name: """Técnico de Ordenança da Primeira Ordem"""
+           text: """Depois que você receber uma ficha de desarme, receba 1 ficha de cálculo. %LINEBREAK% Enquanto você possuir exatamente 1 ficha de desarme, você pode realizar ataques primários %FRONTARC%."""
+        "Threat Sensors (EoD)":
+           display_name: """Sensores de Ameaça"""
+           text: """Quando você defender, se você não estiver estressado, você pode rerolar 1 resultado %FOCUS%."""
+        "General Hux (EoD)":
+           display_name: """General Hux"""
+           text: """Quando você realizar uma ação %COORDINATE% branca, se você escolher uma nave TIE/fo ou TIE/sf amiga, você pode tratar essa ação como vermelha. Se você fizer isso, coordene até 2 TIE/fo ou TIE/sf amigas adicionais, e cada nave que você coordenou deve realiar a mesma ação, tratando-a como vermelha."""
+        "Dedicated Gunners (EoD)":
+           display_name: """Atiradores Dedicados"""
+           text: """Quando você realizar um ataque primário, se o defensor estiver em seu %SINGLETURRETARC%, você pode gastar 1 ficha de foco para rolar 1 dado de ataque adicional. %LINEBREAK% Depois que você realizar um ataque primário, você pode realizar um ataque %SINGLETURRETARC% bônus usando um %SINGLETURRETARC% que você já não tenha usado nessa rodada."""
+        "Homing Beacon (AaD)":
+           display_name: """Sensor Guiado"""
+           text: """Quando você realizar uma ação %LOCK%, você pode gastar 1 %CHARGE% para ignorar restrições de alcance. %LINEBREAK% Depois que você completar uma manobra avançada, se houver uma nave inimiga em alcance 1-2 em seu %FRONTARC%, você pode gastar 1 %CHARGE% para adquirir uma mira nessa nave."""
+        "Fennec Shand (AaD)":
+           display_name: """Fennec Shand"""
+           text: """Quando você defender ou realizar um ataque, se você possuir uma mira na nave inimiga, a nave inimiga rola 1 dado de defesa a menos."""
+        "The Child (AaD)":
+           display_name: """A Criança"""
+           text: """Depois que você defender, se você sofreu dano durante este ataque, recupere 1 %FORCE%."""
+        "Kineso-Switch (AaD)":
+           display_name: """Kineso-Switch"""
+           text: """Depois que você realizar uma ação %SLAM%, se você executou completamente a manobra, você pode gastar 1 %CHARGE% para quebrar todas as miras em você."""
+        "L3-37 (AaD)":
+           display_name: """L3-37"""
+           text: """Quando você defender, você pode gastar 1 %CHARGE%. Se fizer isso, o atacante deve rerolar todos os dados de ataque. %LINEBREAK% Se esta %CHARGE% estiver inativa, reduza a dificuldade de suas manobras curvas [%BANKLEFT% e %BANKRIGHT%]. %LINEBREAK% A %CHARGE% dessa melhoria não pode ser recuperada."""
+        "Tobias Beckett (AaD)":
+           display_name: """Tobias Beckett"""
+           text: """Quando você realizar um ataque, se você estiver estressado, você pode rerolar até 2 dados de ataque. Então sofra 1 dano %CRIT% se 1 ou mais resultados rerolados foram resultados %CRIT%."""
+        "Lando's Millennium Falcon (AaD)":
+           display_name: """Millennium Falcon do Lando"""
+           text: """Quando você realizar um ataque primário, se o defensor possuir uma ficha laranja ou vermelha que não seja uma mira, role 1 dado de ataque adicional."""
+        "Mandalorian Tactics (AaD)":
+           display_name: """Taticas Mandalorianas"""
+           text: """Quando defender, se houver pelo menos 1 nave inimiga em alcance 0, você pode rerolar 1 de seus resultados em branco."""
+        "Nite Owl Sentries (AaD)":
+           display_name: """Sentinelas Nite Owl"""
+           text: """Durante a Fase de Sistema, você pode gastar 3 %CHARGE%. %LINEBREAK% No começo da Fase de Ativação, se esta melhoria possuir 0 %CHARGE% ativas, cada nave inimiga em alcance 0-1 de você rola 1 dado de ataque. Em um resultado %HIT% ou %CRIT% a nave sofre um %HIT%."""
+        "R2-G8 (AaD)":
+           display_name: """R2-G8"""
+           text: """Depois que você realizar um ataque primário que acertou, você pode gastar 2 %CHARGE% para escolher uma nave inimiga em alcance 0-1 do defensor. Se você fizer isso, aquela nave recebe 1 ficha de desgaste."""
+        "Synchronized Handling (AaD)":
+           display_name: """Pilotagem Sincronizada"""
+           text: """Antes de você engajar, você pode gastar 1 %CHARGE% para receber 1 ficha %CALCULATE%. %LINEBREAK% Depois que você completar uma manobra curva fechada [%TURNLEFT%], curva suave [%BANKLEFT%] ou um Loop de Segnor [%SLOOPLEFT%], recupere 1 %CHARGE%."""
+        "Starboard Thrusters (AaD)":
+           display_name: """Propulsores de Estibordo"""
+           text: """Depois que você revelar uma manobra curva fechada [%TURNLEFT%] ou Loop de Segnor [%SLOOPLEFT%],  você pode gastar 1 %CHARGE%. Se fizer isso, reduza a dificuldade dessa manobra. Depois que você completar um Loop de Segnor [%SLOOPLEFT%] branco, receba 1 ficha de desgaste."""
+        "Embo (AaD)":
+           display_name: """Embo"""
+           text: """No começo da Fase de Engajamento, se houver uma nave inimiga em alcance 0, você pode realizar uma ação %REINFORCE% vermelha."""
+        "Flechette Cannons (AaD)":
+           display_name: """Canhões de Flechetes"""
+           text: """<strong>Ataque:</strong> Depois que este ataque acertar, se o defensor estiver em seu %BULLSEYEARC%, o defensor recebe 1 ficha de desgaste."""
+        "Todo 360 (AaD)":
+           display_name: """Todo 360"""
+           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE%. Se fizer isso, você pode remover 1 ficha de estresse para receber 1 ficha de desgaste e 1 ficha de cálculo."""
+        "Xanadu Blood (AaD)":
+           display_name: """Xanadu Blood"""
+           text: """Depois que você descamuflar, você pode escolher uma nave inimiga em seu %BULLSEYEARC%. Se fizer isso, essa nave recebe 1 ficha de desgaste."""
+        "Adaptable Power Systems (AaD)":
+           display_name: """Sistemas de Energia Adaptáveis"""
+           text: """Depois que você executar completamente uma manobra vermelha ou realizar uma ação vermelha, você pode gastar 1 %CHARGE%. Se fizer isso, você pode receber 1 ficha de exaustão para remover 1 ficha de estresse. %LINEBREAK% Antes de você engajar, você pode gastar 1 %CHARGE%. Se fizer isso, você pode receber 1 ficha de desgaste para remover 1 ficha de exaustão."""
+        "Crime Lord (AaD)":
+           display_name: """Senhor do Crime"""
+           text: """Depois que você defender, se o atacante estiver em seu %FRONTARC%, você pode gastar 1 %CHARGE%. Se fizer isso, o atacante recebe 1 ficha de desgaste."""
+        "Virago (AaD)":
+           display_name: """Virago"""
+           text: """Durante a Fase de Sistema você pode realizar uma ação %BARRELROLL% ou %BOOST% vermelha."""
+        "Persistent Tracker (AaD)":
+           display_name: """Rastreador Persistente"""
+           text: """Durante a Fase de Sistema, você pode gastar 3 %CHARGE%. %LINEBREAK% Durante a Fase de Ativação, se essa melhoria possuir 0 %CHARGE% ativas, você pode realizar ações e manobras vermelhas, mesmo se estiver estressado."""
+        "4-LOM (AaD)":
+           display_name: """4-LOM"""
+           text: """No começo da Fase Final, você pode gastar 1 ficha de cálculoe escolher uma nave inimiga em alcance 0-1. Se fizer isso, transfira 1 das suas fichas de estresse para essa nave."""
+        "Mist Hunter (AaD)":
+           display_name: """Mist Hunter"""
+           text: """Depois que você realizar um ataque %CANNON%, você pode receber 1 ficha de desgaste para realizar um ataque primário bônus contra o mesmo alvo."""
+        "Hound's Tooth (AaD)":
+           display_name: """Hound's Tooth"""
+           text: """Quando você realizar um ataque, se você estiver reforçando e se o defensor estiver no %FULLFRONTARC% ou %FULLREARARC% da sua ficha de reforço, você pode mudar 1 dos seus resultados %FOCUS% para um resultado %HIT%. Se o defensor estiver estressado, você pode ao invés disso, mudar 1 de seus resultados %FOCUS% para um resultado %CRIT%."""
+        "Chewbacca (AaD)":
+           display_name: """Chewbacca"""
+           text: """Durante a Fase de Sistema, você pode gastar 2 %CHARGE% para reparar 1 carta de dano virada para cima."""
 
     condition_translations = 
     
