@@ -1397,6 +1397,12 @@ exportObj.cardLoaders.Português = () ->
         "Major Vynder":
            display_name: """Major Vynder"""
            text: """Quando você defender, se você estiver desarmado, role 1 dado de defesa adicional."""
+        "Major Vynder (SSL)":
+           display_name: """Major Vynder (SL)"""
+           text: """Depois que você realizar um ataque %MISSILE%, você pode realizar um ataque %CANNON% bônus. Quando você realizar este ataque bônus, você pode mudar 1 reaultado %FOCUS% para um resultado %HIT%."""
+        "Lieutenant Karsabi (SSL)":
+           display_name: """Lieutenant Karsabi (SL)"""
+           text: """Quando você realizar uma ação %RELOAD%, a melhoria escolhida recupera 1 %CHARGE% adicional."""
 
        #TIE/V1
         "Baron of the Empire":
@@ -1596,6 +1602,12 @@ exportObj.cardLoaders.Português = () ->
         '"Whisper"':
            display_name: """“Whisper”"""
            text: """Após você realizar um ataque que acertou, receba 1 ficha de desvio."""
+        '"Whisper" (SSL)':
+           display_name: """“Whisper” (SL)"""
+           text: """Depois que você realizar um ataque, você pode gastar 1 %CHARGE% para realizar uma ação %CLOAK%."""
+        '"Echo" (SSL)':
+           display_name: """“Echo” (SL)"""
+           text: """Depois que uma nave inimiga em alcance 0-1 realizar uma ação da sua barra de ações, você pode gastar 1 %CHARGE% para realizar a mesma ação, tratando a ação como branca."""
 
        #TIE Punisher
         "Cutlass Squadron Pilot":
@@ -1700,6 +1712,21 @@ exportObj.cardLoaders.Português = () ->
         "Lin Gaava":
            display_name: """Lin Gaava"""
            text: """<strong>Preparação:</strong> Depois de posicionar as forças, aplique a condição <strong>Preparado para velocidade</strong> a você e mais 2 outras caças TIE/fo ou TIE/sf amigas que não possuam melhorias %MODIFICATION% equipadas."""
+        '"Scorch" (EoD)':
+           display_name: """“Scorch” (EoD)"""
+           text: """Quando você realizar um ataque primário, se você não estiver estressado, você pode receber 1 ficha de estresse para rolar 1 dado de ataque adicional."""
+        '"Longshot" (EoD)':
+           display_name: """“Longshot” (EoD)"""
+           text: """Quando você realizar um ataque primário em alcance 3, role 1 dado de ataque adicional."""
+        '"Midnight" (EoD)':
+           display_name: """“Midnight” (EoD)"""
+           text: """Quando você defender ou realizar um ataque, se você tiver uma mira na nave inimiga, os dados daquela nave não podem ser modificados."""
+        "Zeta 5 (EoD)":
+           display_name: """Zeta 5 (EoD)"""
+           text: """Quando você realizar um ataque, se você não possuir escudos e a iniciativa do defensor for maior que a sua, adicione 1 resultado %FOCUS%."""
+        "Omega 2 (EoD)":
+           display_name: """Omega 2 (EoD)"""
+           text: """Naves TIE amigas podem adquirir miras em objetos em alcance 0-3 de você, ignorando restrições de alcance."""
 
        #Upsilon
         "Starkiller Base Pilot":
@@ -1720,7 +1747,10 @@ exportObj.cardLoaders.Português = () ->
         "Lieutenant Dormitz":
            display_name: """Lieutenant Dormitz"""
            text: """<strong>Preparação:</strong> Após você ser posicionado, outras naves amigas pequenas podem ser colocadas em qualquer lugar na área de jogo em alcance 0-2 de você."""
-
+        "Petty Officer Thanisson (EoD)":
+           display_name: """Suboficial Thanisson (EoD)"""
+           text: """Durante a Fase de Ativação ou Fase de Engajamento, depois que uma nave em seu %FRONTARC% em alcance 0-2 receber 1 ficha de desgaste ou exaustão, você pode gastar 1 1%CHARGE%. Se fizer isso, aquela nave recebe 1 ficha de estresse."""
+            
        #TIE/FO Bomber
         "Sienar-Jaemus Test Pilot":
            display_name: """Piloto de Testes da Sienar-Jaemus"""
@@ -1766,6 +1796,9 @@ exportObj.cardLoaders.Português = () ->
         "Kylo Ren":
            display_name: """Kylo Ren"""
            text: """Após você defender, você pode gastar 1 %FORCE% para atribuir a condição <strong>Contemple o Lado Sombrio</strong> ao atacante."""
+        "Kylo Ren (EoD)":
+           display_name: """Kylo Ren (EoD)"""
+           text: """Antes de uma nave inimiga em seu %BULLSEYEARC% receber uma carta de dano virada para baixo, você pode gastar 1 %FORCE%. Se fizer isso, essa carta da dano é recebida virada para cima."""
 
        #TIE Whisper
         "Red Fury Zealot":
@@ -1820,6 +1853,15 @@ exportObj.cardLoaders.Português = () ->
         '"Quickdraw"':
            display_name: """“Quickdraw”"""
            text: """Após você perder um escudo, você pode gastar 1 %CHARGE%. Se o fizer, você pode realizar um ataque primário bônus."""
+        "Lieutenant LeHuse (EoD)":
+           display_name: """Tenente LeHuse (EoD)"""
+           text: """No começo da Fase de Engajamento, você pode adquirir uma mira em um objeto em alcance 1-3 que tenha uma mira amiga. Se você fizer isso, quebre a mira amiga no objeto."""
+        "Theta 3 (EoD)":
+           display_name: """Theta 3 (EoD)"""
+           text: """No começo da Fase de Engajamento, se você não possuir fichas verdes, você pode gastar 1 %CHARGE% para receber 1 ficha de desvio."""
+        "Theta 4 (EoD)":
+           display_name: """Theta 4 (EoD)"""
+           text: """Quando uma nave inimiga em seu %SINGLETURRETARC% realizar um ataque, você pode gastar 1 %CHARGE%. Se fizer isso, gaste 1 %CHARGE% da sua melhoria %MISSILE% para escolher dois dados de ataque. O atacante deve rerolar esses dados."""
 
        #XI-Class
         "First Order Courier":
