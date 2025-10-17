@@ -7992,7 +7992,7 @@ exportObj.basicCardData = ->
             skill: 2
             points: 7
             loadout: 8
-            pointsxwa: 7
+            pointsxwa: 6
             loadoutxwa: 17
             slots: [
                 "Tech"
