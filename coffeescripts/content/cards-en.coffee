@@ -175,11 +175,14 @@ exportObj.translations.English =
         "Intro Card YASB": """
                     <h2>YASB for X-Wing Miniatures</h2>
                     <p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures. For more information about the game or game resources, visit <a href="https://xwhub.com/">XW Hub</a>.</p>
-                    <p>XWA Version: R2</p>
-                    <p>AMG Version: 09/06/2024</p>
+                    <p>XWA Version: 50P-1.0
+                    <br><a href="https://yasb.app/old/">Link here for the previous points.</a>
+                    <br><a href="https://yasb.app/AMG/">Link here for the last AMG points.</a>
+                    <br><a href="https://raithos.github.io/">Link here for the last 2.0 points.</a></p>
+                    
                     <h5>Credits</h5>
                     <p>Built upon the amazing original <a href="https://geordanr.github.io/xwing/">Yet Another Squad Builder</a>.</p>
-                    <p>YASB is updated and maintained by Stephen Kim.</p>
+                    <p>YASB is updated and maintained by Stephen Kim with help from Patrick Mischke.</p>
                     <p>Additional credits to:<br>
                     2.5 Update Data: Devon Monkhouse, Perry Low, Andrew Oehler.<br>
                     2.0 launch data: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>
@@ -187,7 +190,7 @@ exportObj.translations.English =
                     Site logo: Thomas Kohler<br>
                     Quick Build Support: Patrick Mischke</p>
 
-                    <p>This builder is unofficial and is not affiliated with Atomic Mass Games, Lucasfilm Ltd., or Disney.</p>
+                    <p>This builder is unofficial and is not affiliated with Atomic Mass Games, Fantasy Flight Games, Lucasfilm, or Disney.</p>
                     <p><a href="privacy.html">Privacy Policy</a></p>
 
                     <p>This site will always be free, and always 100% available for all people to use. If you want to support me, I also have a podcast, please check that out!</p>
@@ -1565,6 +1568,36 @@ exportObj.cardLoaders.English = () ->
         "Aftab Ackbar":
            text: """After you execute a red basic maneuver or perform a red action, if you have exactly 1 stress token, you may gain 1 strain token to remove that stress token. """
         "Zorii Bliss":
+           text: """After a ship at range 1 performs an action during its Perform Action step, if that action is on your action bar, you may spend 1 %CHARGE% to perform that action, treating it as red."""
+        "New Republic Patrol (Wartime)":
+           display_name: """New Republic Patrol"""
+           text: """"""
+        "Kijimi Spice Runner (Wartime)":
+           display_name: """Kijimi Spice Runner"""
+           text: """"""
+        "Corus Kapellim (Wartime)":
+           display_name: """Corus Kapellim"""
+           text: """Before you engage, you may choose 1 ship in your firing arc at range 0-1. If you do, transfer 1 green token from that ship to yourself. """
+        "C'ai Threnalli (Y-Wing) (Wartime)":
+           display_name: """C'ai Threnalli"""
+           text: """After you fully execute a maneuver, if you moved through a friendly ship, you may perform an %EVADE% action. """
+        "Lega Fossang (Wartime)":
+           display_name: """Lega Fossang"""
+           text: """While you perform a primary or %TURRET% attack, you may reroll 1 attack die for each friendly device or calculating friendly ship in the attack arc. """
+        "Shasa Zaro (Wartime)":
+           display_name: """Shasa Zaro"""
+           text: """After you defend, you may choose a friendly ship in your %FULLREARARC% at range 0-2 and 1 of your green tokens. If you do, that ship gains a matching token. """
+        "Teza Nasz (Wartime)":
+           display_name: """Teza Nasz"""
+           text: """While a friendly ship at range 0-2 performs an attack, if the defender has a ship friendly to the attacker in each of its side arcs (%LEFTARC% or %RIGHTARC%), the attacker may reroll 1 attack die. """
+        "Wilsa Teshlo (Wartime)":
+           display_name: """Wilsa Teshlo"""
+           text: """After you perform an attack, if the defender was dealt a faceup damage card, the defender gains 1 strain token unless it chooses 1 non-recurring %CHARGE% from 1 of its equipped upgrades and loses that %CHARGE%. """
+        "Aftab Ackbar (Wartime)":
+           display_name: """Aftab Ackbar"""
+           text: """After you execute a red basic maneuver or perform a red action, if you have exactly 1 stress token, you may gain 1 strain token to remove that stress token. """
+        "Zorii Bliss (Wartime)":
+           display_name: """Zorii Bliss"""
            text: """After a ship at range 1 performs an action during its Perform Action step, if that action is on your action bar, you may spend 1 %CHARGE% to perform that action, treating it as red."""
         "Kylo Ren (TIE Whisper)":
            display_name: """Kylo Ren"""
