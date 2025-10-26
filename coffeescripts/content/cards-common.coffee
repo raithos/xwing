@@ -10799,7 +10799,6 @@ exportObj.basicCardData = ->
                 "Tech"
                 "Tech"
                 "Modification"
-                "Configuration"
             ]
         }
         {
