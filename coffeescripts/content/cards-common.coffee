@@ -8730,7 +8730,7 @@ exportObj.basicCardData = ->
             loadout: 5
             slots: [
                 "Missile"
-                "Crew"
+                "Astromech"
                 "Illicit"
                 "Modification"
             ]
