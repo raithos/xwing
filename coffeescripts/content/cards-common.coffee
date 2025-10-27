@@ -22400,7 +22400,7 @@ exportObj.restrictedShips = [
     {name: 'Freighter Captain', limit: 1}
     {name: 'Contracted Scout', limit: 2}
     {name: 'Cartel Spacer', limit: 3}
-    {name: '104th Battalion Pilot', limit: 3}
+    {name: '104th Battalion Pilot', limit: 2}
     {name: 'Epsilon Squadron Cadet', limit: 4}
 ]
 
