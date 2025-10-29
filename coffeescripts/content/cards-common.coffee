@@ -9937,7 +9937,7 @@ exportObj.basicCardData = ->
             loadout: 8
             slots: [
                 "Talent"
-                "Cannon"
+                "Missile"
                 "Tech"
                 "Modification"
             ]
