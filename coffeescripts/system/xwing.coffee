@@ -2180,7 +2180,12 @@ class exportObj.SquadBuilder
         # returns number of upgrades with given canonical name equipped
         count = 0
         for ship in @ships
-            if not ship.pilot?.upgrades?
+            if ship.pilot?.upgrades?
+                for upgrade in ship.pilot.upgrades
+                    upgradeData = exportObj.upgrades[upgrade]
+                    if upgradeData?.canonical_name == canonical_name
+                        count++
+            else
                 for upgrade in ship.upgrades
                     if upgrade?.data?.canonical_name == canonical_name
                         count++
@@ -2215,6 +2220,22 @@ class exportObj.SquadBuilder
 
         if isPilot 
             count = @countPilots(card.canonical_name) 
+            # need to also do upgrade checks...
+            if card.upgrades?
+                for upgrade in card.upgrades
+                    upgradeData = exportObj.upgrades[upgrade]
+                    upgradeLimit = 0
+                    upgradeCount = 0
+                    if upgradeData.unique?
+                        upgradeLimit = 1
+                    else if upgradeData.restricted?
+                        upgradeLimit = upgradeData.restricted
+                    else if upgradeData.max_per_squad?
+                        upgradeLimit = upgradeData.max_per_squad
+                    if upgradeLimit > 0
+                        upgradeCount = @countUpgrades(upgradeData.canonical_name)
+                        if upgradeCount >= upgradeLimit
+                            return true
         else 
             count = @countUpgrades(card.canonical_name)
 
