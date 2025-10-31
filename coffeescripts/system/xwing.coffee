@@ -2226,9 +2226,7 @@ class exportObj.SquadBuilder
                     upgradeData = exportObj.upgrades[upgrade]
                     upgradeLimit = 0
                     upgradeCount = 0
-                    if upgradeData.unique?
-                        upgradeLimit = 1
-                    else if upgradeData.restricted?
+                    if upgradeData.restricted?
                         upgradeLimit = upgradeData.restricted
                     else if upgradeData.max_per_squad?
                         upgradeLimit = upgradeData.max_per_squad
@@ -2689,7 +2687,6 @@ class exportObj.SquadBuilder
                             ++count
                         uniquedots = uniquedots.concat("&nbsp;")
                     else if data.restricted?
-                        console.log "Found restricted tag"
                         count = 0
                         while (count < data.restricted)
                             uniquedots = uniquedots.concat("&#9672;")
