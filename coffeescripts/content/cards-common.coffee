@@ -5937,7 +5937,6 @@ exportObj.basicCardData = ->
             points: 6
             loadout: 2
             slots: [
-                "Talent"
                 "Modification"
             ]
         }
@@ -15325,6 +15324,7 @@ exportObj.basicCardData = ->
             name: "Zorii Bliss (Wartime)"
             id: 722
             unique: true
+            xwsaddon: "wartime"
             faction: "Resistance"
             ship: "BTA-NR2-W Y-wing"
             skill: 5
@@ -15349,6 +15349,7 @@ exportObj.basicCardData = ->
             name: "Teza Nasz (Wartime)"
             id: 723
             unique: true
+            xwsaddon: "wartime"
             faction: "Resistance"
             ship: "BTA-NR2-W Y-wing"
             skill: 4
@@ -15370,6 +15371,7 @@ exportObj.basicCardData = ->
             name: "Wilsa Teshlo (Wartime)"
             id: 724
             unique: true
+            xwsaddon: "wartime"
             faction: "Resistance"
             ship: "BTA-NR2-W Y-wing"
             skill: 4
@@ -15390,6 +15392,7 @@ exportObj.basicCardData = ->
             name: "Shasa Zaro (Wartime)"
             id: 725
             unique: true
+            xwsaddon: "wartime"
             faction: "Resistance"
             ship: "BTA-NR2-W Y-wing"
             skill: 3
@@ -15411,6 +15414,7 @@ exportObj.basicCardData = ->
             name: "Lega Fossang (Wartime)"
             id: 726
             unique: true
+            xwsaddon: "wartime"
             faction: "Resistance"
             ship: "BTA-NR2-W Y-wing"
             skill: 3
@@ -15431,6 +15435,7 @@ exportObj.basicCardData = ->
             name: "Aftab Ackbar (Wartime)"
             id: 727
             unique: true
+            xwsaddon: "wartime"
             faction: "Resistance"
             ship: "BTA-NR2-W Y-wing"
             skill: 2
@@ -15451,6 +15456,7 @@ exportObj.basicCardData = ->
             name: "Corus Kapellim (Wartime)"
             id: 728
             unique: true
+            xwsaddon: "wartime"
             faction: "Resistance"
             ship: "BTA-NR2-W Y-wing"
             skill: 1
@@ -15472,6 +15478,7 @@ exportObj.basicCardData = ->
             name: "C'ai Threnalli (Y-Wing) (Wartime)"
             id: 729
             unique: true
+            xwsaddon: "wartime"
             faction: "Resistance"
             ship: "BTA-NR2-W Y-wing"
             skill: 2
@@ -15492,6 +15499,7 @@ exportObj.basicCardData = ->
         {
             name: "New Republic Patrol (Wartime)"
             id: 730
+            xwsaddon: "wartime"
             faction: "Resistance"
             ship: "BTA-NR2-W Y-wing"
             skill: 3
@@ -15511,6 +15519,7 @@ exportObj.basicCardData = ->
         {
             name: "Kijimi Spice Runner (Wartime)"
             id: 731
+            xwsaddon: "wartime"
             faction: "Resistance"
             ship: "BTA-NR2-W Y-wing"
             skill: 2
