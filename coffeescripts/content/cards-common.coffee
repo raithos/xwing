@@ -7854,6 +7854,7 @@ exportObj.basicCardData = ->
             loadout: 12
             slots: [
                 "Talent"
+                "Talent"
                 "Torpedo"
                 "Sensor"
                 "Astromech"
@@ -10096,6 +10097,7 @@ exportObj.basicCardData = ->
             loadout: 11
             slots: [
                 "Talent"
+                "Talent"
                 "Sensor"
                 "Cannon"
                 "Missile"
@@ -10339,6 +10341,7 @@ exportObj.basicCardData = ->
             points: 10
             loadout: 8
             slots: [
+                "Talent"
                 "Talent"
                 "Modification"
                 "Configuration"
