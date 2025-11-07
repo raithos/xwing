@@ -245,8 +245,13 @@ is an authorization system which lets you prove your identity at a web site with
                     """
         "Intro Card YASB": """
                     <h2>YASB für X-Wing 2.5 </h2>
-                    <p>YASB (engl. Yet Another Squad Builder, dt. Noch ein Staffel-Bauer) hilft dir, einfach und unkompliziert deine Staffeln für das X-Wing Miniaturenspiel von <a href="https://www.atomicmassgames.com/">Atomic Mass Games</a> zu erstellen.</p>
-                    <h5>Impressum</h5>
+                    <p>YASB (engl. Yet Another Squad Builder, dt. Noch ein Staffel-Bauer) hilft dir, einfach und unkompliziert deine Staffeln für das X-Wing Miniaturenspiel von <a href="https://www.atomicmassgames.com/">Atomic Mass Games</a> zu erstellen. Für mehr Informationen über das aktuelle Fanprojekt zur Pflege vom Spiel, schau unter <a href="https://xwhub.com/">XW Hub</a> vorbei.</p>
+                    <p>XWA Version: 50P-1.0
+                    <br><a href="https://yasb.app/old/">Hier finden sich die Punkte der vorherigen Iteration.</a>
+                    <br><a href="https://yasb.app/AMG/">Hier finden sich die Punkte der letzten AMG Version.</a>
+                    <br><a href="https://raithos.github.io/">Hier finden sich die Punkte der letzten 2.0 Version.</a></p>
+
+                    <h5>Dankeschön</h5>
                     <p>Eine Weiterentwicklung des hervorragenden <a href="https://geordanr.github.io/xwing/">Yet Another Squad Builder</a> für die erste Edition.</p>
                     <p>YASB wird von Stephen Kim und Patrick Mischke gepflegt.</p>
                     <p>Besonderes Dankeschön an:<br>
@@ -259,8 +264,10 @@ is an authorization system which lets you prove your identity at a web site with
 
                     <p>Diese Seite ist inoffiziell und nicht lizensiert von oder sonst irgendwie mit Atomic Mass Games, Lucasfilm Ltd. oder Disney verbunden.</p>
 
+                    <p><a href="privacy.html">Datenschutzerklärung</a></p>
+
                     <p>Diese Seite steht dir dauerhaft kostenfrei zur Verfügung. YASB ist ein Open-Source Projekt, wenn du etwas beitragen möchtest, ist Hilfe immer willkommen. Aufgrund wiederholter Fragen hier ein Paypal-Link von Stephen Kim.</p>
-                    <p><button class="btn btn-primary paypal" onclick="window.open('https://paypal.me/raithos');">Über Paypal unterstützen</button></p>
+                    <p><button class="btn btn-success podcast" onclick="window.open('http://offmeta.club');">Off-Meta Podcast</button> <button class="btn btn-primary paypal" onclick="window.open('https://paypal.me/raithos');">Spenden</button> <button class="btn btn-primary patreon" onclick="window.open('https://www.patreon.com/raithos');">Patreon</button> </p>
         """
         "Continue to OAuth provider": "Dies wird ein neues Fenster beim gewählten Anbieter öffnen. Es kann sein, dass du Pop-Ups erlauben musst."
         "iOS requires cross-site control": """Unter iOS musst du eventuell erst "cross-site control" aktivieren, damit OAuth nutzen kannst."""
