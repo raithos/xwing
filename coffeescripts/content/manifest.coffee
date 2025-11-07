@@ -9595,6 +9595,56 @@ exportObj.manifestByExpansion =
             count: 2
         }
         {
+            name: 'Aftab Ackbar (Wartime)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "C'ai Threnalli (Y-Wing) (Wartime)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Corus Kapellim (Wartime)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Lega Fossang (Wartime)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Shasa Zaro (Wartime)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Teza Nasz (Wartime)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Wilsa Teshlo (Wartime)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'Zorii Bliss (Wartime)'
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: 'New Republic Patrol (Wartime)'
+            type: 'pilot'
+            count: 2
+        }
+        {
+            name: 'Kijimi Spice Runner (Wartime)'
+            type: 'pilot'
+            count: 2
+        }        
+        {
             name: 'Babu Frik'
             type: 'upgrade'
             count: 1
