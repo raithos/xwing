@@ -80,7 +80,7 @@ class exportObj.CardBrowser
                                             <span class="translated" defaultText="from"></span> <input type="number" class="minimum-point-cost advanced-search-number-input" value="0" /> 
                                         </label>
                                         <label class = "advanced-search-label set-maximum-points">
-                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-point-cost advanced-search-number-input" value="20" /> 
+                                            <span class="translated" defaultText="to"></span> <input type="number" class="maximum-point-cost advanced-search-number-input" value="50" /> 
                                         </label>
                                     </div>
                                     <div class = "advanced-search-loadout-selection-container">
@@ -832,7 +832,7 @@ class exportObj.CardBrowser
             return false unless actions? and ((("R> " + action) in actions) or (("> " + action) in actions))
 
         # check if point costs matches
-        if @minimum_point_costs.value > 0 or @maximum_point_costs.value < 20
+        if @minimum_point_costs.value > 0 or @maximum_point_costs.value < 50
             return false unless (@getPoints(card.data) >= @minimum_point_costs.value and @getPoints(card.data) <= @maximum_point_costs.value) or (card.data.variablepoints?)
             if card.data.variablepoints?
                 matching_points = false

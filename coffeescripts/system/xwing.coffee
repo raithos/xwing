@@ -1867,7 +1867,7 @@ class exportObj.SquadBuilder
                     if parseInt(game_type_and_point_abbrev.split('=')[1])
                         p = parseInt(game_type_and_point_abbrev.split('=')[1])
                     else
-                        p = 20
+                        p = 50
                     g = game_type_and_point_abbrev.split('=')[0]
                     [ g, p, s ]
 
