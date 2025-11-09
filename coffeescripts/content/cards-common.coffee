@@ -22432,6 +22432,7 @@ exportObj.restrictedUpgrades = [
     {name: 'Snap Shot', limit: 3}
     {name: 'Swarm Tactics', limit: 3}
     {name: 'Veteran Turret Gunner', limit: 3}
+    {name: 'Battle Meditation', limit: 3}
 ]
 
 
