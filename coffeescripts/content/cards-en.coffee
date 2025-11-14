@@ -1817,7 +1817,7 @@ exportObj.cardLoaders.English = () ->
            text: """At the start of the End Phase, you may perform a purple %COORDINATE% action, even while stressed %LINEBREAK% After you perform a %COORDINATE% action, if the chosen ship has the <b>Born for This</b> ship ability, you may coordinate 1 additional ship."""
         '"Odd Ball" (SoC)':
            display_name: """“Odd Ball” (SoC)"""
-           text: """After you fully execute a red maneuver or perform a red action, you camy choose a friendly ship at range 0-3 and an enemy at range 0-1. The chosen frendly ship gains a lock on the enemy ship."""
+           text: """After you fully execute a red maneuver or perform a red action, you may choose a friendly ship at range 0-3 and an enemy at range 0-1. The chosen frendly ship gains a lock on the enemy ship."""
         '"Wolffe" (SoC)':
            display_name: """“Wolffe” (SoC)"""
            text: """While you perform a primary %FRONTARC% attack, you may spend 1 %CHARGE% to reroll 1 attack die. While you perform a primary %REARARC% attack, you may recover 1 %CHARGE% to roll 1 additional die."""

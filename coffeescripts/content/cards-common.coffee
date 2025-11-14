@@ -22419,8 +22419,8 @@ exportObj.restrictedUpgrades = [
     {name: 'Autoblasters', limit: 2}
     {name: 'Barrage Rockets', limit: 2}
     {name: 'Ensnare', limit: 2}
-    {name: 'Homing Missile', limit: 2}
-    {name: 'Homing Torpedo', limit: 2}
+    {name: 'Homing Missiles', limit: 2}
+    {name: 'Homing Torpedoes', limit: 2}
     {name: 'Hotshot Gunner', limit: 2}
     {name: 'Juke', limit: 2}
     {name: 'Suppressive Gunner', limit: 2}
