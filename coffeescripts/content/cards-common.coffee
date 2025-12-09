@@ -3266,7 +3266,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "Sheathipede-Class Shuttle"
             skill: 6
-            points: 10
+            points: 11
             loadout: 10
             keyword: ["Mandalorian","Spectre"]
             slots: [
@@ -3785,8 +3785,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Fang Fighter"
             skill: 6
-            points: 13
-            loadout: 5
+            points: 14
+            loadout: 7
             keyword: ["Mandalorian"]
             slots: [
                 "Talent"
@@ -3885,7 +3885,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Firespray-class Patrol Craft"
             skill: 5
-            points: 20
+            points: 21
             loadout: 20
             keyword: ["Bounty Hunter"]
             slots: [
@@ -6307,7 +6307,7 @@ exportObj.basicCardData = ->
             ship: "Scavenged YT-1300"
             skill: 6
             points: 18
-            loadout: 23
+            loadout: 19
             slots: [
                 "Talent"
                 "Missile"
@@ -6882,8 +6882,8 @@ exportObj.basicCardData = ->
             ship: "Delta-7 Aethersprite"
             skill: 5
             force: 3
-            points: 13
-            loadout: 10
+            points: 12
+            loadout: 8
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -7362,7 +7362,7 @@ exportObj.basicCardData = ->
             ship: "Belbullab-22 Starfighter"
             unique: true
             skill: 4
-            points: 12
+            points: 13
             loadout: 20
             slots: [
                 "Talent"
@@ -7832,8 +7832,8 @@ exportObj.basicCardData = ->
             faction: "Galactic Republic"
             ship: "Naboo Royal N-1 Starfighter"
             skill: 4
-            points: 11
-            loadout: 15
+            points: 10
+            loadout: 12
             slots: [
                 "Talent"
                 "Torpedo"
@@ -7850,8 +7850,8 @@ exportObj.basicCardData = ->
             faction: "Galactic Republic"
             ship: "Naboo Royal N-1 Starfighter"
             skill: 5
-            points: 10
-            loadout: 12
+            points: 11
+            loadout: 16
             slots: [
                 "Talent"
                 "Talent"
@@ -9704,7 +9704,7 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Nimbus-class V-wing"
             points: 10
-            loadout: 14
+            loadout: 17
             charge: 1
             recurring: 1
             keyword: ["Clone"]
@@ -10355,7 +10355,7 @@ exportObj.basicCardData = ->
             keyword: ["Dark Side", "Sith"]
             skill: 6
             force: 3
-            points: 21
+            points: 22
             loadout: 14
             slots: [
                 "Force"
@@ -11211,7 +11211,6 @@ exportObj.basicCardData = ->
                 "Illicit"
                 "Modification"
                 "Modification"
-                "Title"
                 "Configuration"
             ]
         }
@@ -11372,7 +11371,7 @@ exportObj.basicCardData = ->
             ship: "ST-70 Assault Ship"
             skill: 5
             points: 16
-            loadout: 16
+            loadout: 18
             unique: true
             keyword: ["Bounty Hunter", "Mandalorian"]
             slots: [
@@ -11567,8 +11566,8 @@ exportObj.basicCardData = ->
             ship: "Delta-7b Aethersprite"
             skill: 5
             force: 3
-            points: 15
-            loadout: 11
+            points: 14
+            loadout: 8
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -14925,7 +14924,7 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "T-70 X-wing"
             skill: 4
-            points: 13
+            points: 14
             chassis: "Adaptive S-Foils"
             ship_override:
                 actions: [
@@ -20114,7 +20113,7 @@ exportObj.basicCardData = ->
         {
             name: "The Child"
             id: 453
-            points: 7
+            points: 9
             unique: true
             slot: "Crew"
             force: 2

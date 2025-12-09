@@ -1469,7 +1469,7 @@ class exportObj.SquadBuilder
             if @isBeta
                 @printable_container.find('.squad-name').append """ <i class="xwing-miniatures-font xwing-miniatures-font-point"></i>""" 
 
-            versioninfo = "50P-1.0"
+            versioninfo = "50P-1.1"
             rules = "XWA"
 
             # Version number
@@ -3624,7 +3624,7 @@ class exportObj.SquadBuilder
 
     toXWS: ->
         # Often you will want JSON.stringify(builder.toXWS())
-        versioninfo = "50P-1.0"
+        versioninfo = "50P-1.1"
         rules = "XWA"
 
         xws =
