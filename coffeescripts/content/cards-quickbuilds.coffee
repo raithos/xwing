@@ -5690,7 +5690,7 @@ exportObj.basicQuickBuilds = ->
         {
             id: 465
             faction: "Galactic Republic"
-            pilot: '"Odd Ball"'
+            pilot: '"Odd Ball" (V-wing)'
             ship: "Nimbus-class V-wing"
             threat: 2
             upgrades: [
