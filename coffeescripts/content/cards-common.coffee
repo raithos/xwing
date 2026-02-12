@@ -9675,6 +9675,7 @@ exportObj.basicCardData = ->
             loadout: 10
             keyword: ["Clone"]
             slots: [
+                "Talent"
                 "Astromech"
                 "Modification"
                 "Configuration"
