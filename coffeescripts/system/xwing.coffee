@@ -3790,7 +3790,7 @@ class exportObj.SquadBuilder
                                     gamemode = 's'
                     serialized_squad += "XY"
 
-                serialized_squad_intro = "v9Z" + gamemode + "Z50Z" # serialization v9, extended squad, 50 points
+                serialized_squad_intro = "v10Z" + gamemode + "Z50Z" # serialization v9, extended squad, 50 points
                 # serialization schema SHIPID:UPGRADEID,UPGRADEID,...,UPGRADEID:;SHIPID:UPGRADEID,...
 
                 serialized_squad = serialized_squad_intro + serialized_squad
