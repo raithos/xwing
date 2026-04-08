@@ -603,6 +603,20 @@ exportObj.cardLoaders.Deutsch = () ->
     exportObj.renameShip """Belbullab-22 Starfighter""", """Bellbullab-22 Sternenjäger"""
     exportObj.renameShip """Vulture-class Droid Fighter""", """Droidenjäger der Vulture-Klasse"""
     exportObj.renameShip """Sith Infiltrator""", """Sith-Infiltrator"""
+    exportObj.renameShip """TIE/wi Whisper Modified Interceptor""", """Modifizierter TIE/wi-Whisper-Abfangjäger"""
+    exportObj.renameShip """Droid Tri-fighter""", """Droidendreifachjäger"""
+    exportObj.renameShip """HMP Droid Gunship""", """HMP-Droiden-Kanonenboot"""
+    exportObj.renameShip """Nantex-Class Starfighter""", """Sternenjäger der Nantex-Klasse"""
+    exportObj.renameShip """Naboo Royal N-1 Starfighter""", """Königlicher N-1-Sternenjäger von Naboo"""
+    exportObj.renameShip """Rogue-class Starfighter""", """Sternenjäger der Rogue-Klasse"""
+    exportObj.renameShip """Gauntlet Fighter""", """Gauntlet-Jäger"""
+    exportObj.renameShip """Hyena-class Droid Bomber""", """Droidenbomber der Hyena-Klasse"""
+    exportObj.renameShip """LAAT/i Gunship""", """LAAT/i-Kanonenboot"""
+    exportObj.renameShip """Nimbus-class V-wing""", """V-Flügler der Nimbus-Klasse"""
+    exportObj.renameShip """Clone Z-95 Headhunter""", """Klon-Z-95-Kopfjäger"""
+    exportObj.renameShip """TIE/ba Interceptor""", """TIE/ba-Abfangjäger"""
+    exportObj.renameShip """TIE/se Bomber""", """TIE/se-Bomber"""
+    exportObj.renameShip """ST-70 Assault Ship""", """ST-70-Angriffsschiff"""
 
     pilot_translations =
         "0-66":
@@ -3841,259 +3855,388 @@ Aktion durchgeführt hast, darfst du bis zu 2&nbsp;%ENERGY% ausgeben, um ebenso
            text: "<b>Aktion:</b> Gib 1 %CHARGE% aus, um 1 verdeckte Schadenskarte zu reparieren.<LINEBREAK><b>Aktion:</b> Repariere 1 offene <strong> Schiff- </strong> Schadenskarte."
 
     condition_translations =
-        'Suppressive Fire':
-           display_name: 'Sperrfeuer'
-           text: '''Solange du einen Angriff gegen ein anderes Schiff als <strong>Captain Rex</strong> durchführst, wirf 1 Angriffswürfel weniger. %LINEBREAK%Nachdem <strong>Captain Rex</strong> verteidigt hat, entferne diese Karte. <strong>Captain Rex</strong>Am Ende der Kampfphase, falls <strong>Captain Rex</strong> in dieser Phase keinen Angriff durchgeführt hat, entferne diese Karte. %LINEBREAK%Nachdem <strong>Captain Rex</strong> zerstört worden ist, entferne diese Karte.'''
-        'Hunted':
-           display_name: 'Gejagt'
-           text: '''Nachdem du zerstört worden bist, musst du ein anderes befreundetes Schiff wählen und ihm diesen Zustand zuordnen, falls möglich.'''
-        'Listening Device':
-           display_name: 'Abhörgerät'
-           text: '''Während der Systemphase, falls ein feindliches Schiff mit der Aufwertung <strong>Informant</strong> in Reichweite 0-2 ist, drehe dein Rad auf die offene Seite.'''
-        'Optimized Prototype':
-           display_name: 'Optimierter Prototyp'
-           text: '''Solange du einen %FRONTARC%-Primärangriff gegen ein Schiff durchführst, das von einem befreundeten Schiff mit der Aufwertung <strong>Direktor Krennic</strong> als Ziel erfasst ist, darfst du 1 %HIT%-, %CRIT%- oder %FOCUS%-Ergebnis ausgeben. Falls du das tust, wähle 1 der folgenden Optionen: Der Verteidiger verliert 1 Schild oder der Verteidiger dreht 1 seiner verdeckten Schadenskarten um.  %LINEBREAK% <i>Errata: „oder“ statt „/“ (1. Edition)</i>'''
-        'Proton Bomb':
-           display_name: """Protonenbombe"""
-           text: '''<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, erleidet jedes Schiff und Remote in Reichweite 0–1 1 %CRIT%-Schaden.'''
-        'Seismic Charge':
-           display_name: """Seismische Bombe"""
-           text: '''<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wähle 1 Hindernis in Reichweite 0–1. Jedes Schiff und Remote in Reichweite 0–1 zu jenem Hindernis erleidet 1 %HIT%-Schaden. Dann entferne jenes Hindernis.'''
-        'Bomblet':
-           display_name: """Streubombe"""
-           text: '''<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff und Remote in Reichweite 0–1 2 Angriffswürfel. Jedes Schiff und Remote erleidet 1 %HIT%-Schaden für jedes %HIT%/%CRIT%-Ergebnis.'''
-        'Concussion Bomb':
-           display_name: """Erschütterungsbombe"""
-           text: '''<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wird jedem Schiff und Remote in Reichweite 0–1 1 verdeckte Schadenskarte zugeteilt. Dann <strong>muss</strong> jedes Schiff in Reichweite 0–1 1 Schadenskarte offenlegen, es sei denn, es erhält 1 Anstrengungsmarker.'''
-        'Thermal Detonator':
-           display_name: """Thermaldetonator"""
-           text: '''<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff und Remote in Reichweite 0–1 1 Angriffswürfel. Jedes Schiff erhält 1 Anstrengungsmarker für jedes %FOCUS%-Ergebnis und jedes Schiff und Remote erleidet 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis.'''
         "Blazer Bomb":
-           display_name: """Brandbombe"""
-           text: '''<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. %LINEBREAK% Sobald dieses Gerät detoniert, wirft jedes Schiff und jedes Remote in Reichweite 0–1 1 Angriffswürfel. Jedes Schiff oder Remote erleidet 1 %HIT%-Schaden für jedes %HIT%/%CRIT%-Ergebnis. %LINEBREAK% Nachdem dieses Gerät detoniert ist, wird ein Brand so platziert, dass seine Stopper bündig an der Aussparung des Geräts anliegen. %LINEBREAK% Ein Brand ist ein Hindernis. Nachdem dieses Hindernis platziert worden ist, wird ein Zeitzünder darauf platziert.%LINEBREAK% Während der Endphase wird jeder Brand ohne Zeitzünder entfernt, dann wird 1 Zeitzünder von jedem Brand entfernt..'''
+            display_name: "Brandbombe"
+            text: "<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. %LINEBREAK% Sobald dieses Gerät detoniert, wirft jedes Schiff und Remote in Reichweite 0-1 1 Angriffswürfel. Jedes Schiff oder Remote erleidet 1 %HIT%-Schaden für jedes %HIT%/%CRIT%-Ergebnis. %LINEBREAK% Nachdem dieses Gerät detoniert ist, wird ein Brand so platziert, dass seine Stopper bündig an der Aussparung des Geräts anliegen. %LINEBREAK% Ein Brand ist ein Hindernis. Nachdem dieses Hindernis platziert worden ist, wird ein Zeitzünder darauf platziert. %LINEBREAK% Während der Endphase wird jeder Brand ohne Zeitzünder entfernt, dann wird 1 Zeitzünder von jedem Brand entfernt."
+        "I'll Show You the Dark Side":
+            display_name: "Ich zeige dir die dunkle Seite"
+            text: " Sobald diese Karte zugeordnet wird, falls keine offene Schadenskarte darauf liegt, sucht der Spieler, der sie zugeordnet hat, im Schadensstapel nach 1 Pilot-Schadenskarte und platziert sie offen auf dieser Karte. Dann mische den Schadensstapel. Sobald du 1 %CRIT%-Schaden erleiden würdest, wird dir stattdessen die offene Schadenskarte von dieser Karte zugeteilt. Dann entferne diese Karte. "
+        'Proton Bomb':
+            display_name: "Protonenbombe"
+            text: "<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, erleidet jedes Schiff und Remote in Reichweite 0-1 1 %CRIT%-Schaden.%LINEBREAK%<i>Errata (Offizieller Regelthread 03/2019): Hinzugefügt: und Remote</i>"
+        'Seismic Charge':
+            display_name: "Seismische Bombe"
+            text: "<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wähle 1 Hindernis in Reichweite 0-1. Das Hindernis fügt jedem Schiff und Remote in Reichweite 0-1 1 %HIT%-Schaden zu. Dann entferne jenes Hindernis.%LINEBREAK%<i>Errata (Offizieller Regelthread 03/2019): Hinzugefügt: und Remote</i> "
+        'Bomblet':
+            display_name: "Streubombe"
+            text: "<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff und Remote in Reichweite 0-1 2 Angriffswürfel. Jedes Schiff und Remote erleidet 1 %HIT%-Schaden für jedes %HIT%/%CRIT%-Ergebnis.%LINEBREAK%<i>Errata (Offizieller Regelthread 03/2019): Hinzugefügt: und Remote</i>"
         'Loose Cargo':
-           display_name: """Freie Fracht"""
-           text: '''<strong>Typ:</strong> Hindernis, platziert %LINEBREAK% Freie Fracht ist eine Trümmerwolke..'''
+            display_name: "Freie Fracht"
+            text: "<strong>Typ:</strong> Hindernis, platziert %LINEBREAK% "
         'Spare Parts':
-           display_name: "Ersatzteile"
-           text: '''<strong>Typ:</strong> Hindernis, platziert %LINEBREAK% Ersatzteile sind eine Trümmerwolke. %LINEBREAK% Sobald dieses Objekt abgeworfen wird, wird es zwischen den hinteren Stopper des Schiffes angelegt.'''
+            display_name: "Ersatzteile"
+            text: "<strong>Typ:</strong> Hindernis, platziert %LINEBREAK% Sobald dieses Objekt abgeworfen wird, wird die Aussparung zwischen den hinteren Stoppern des Schiffes eingepasst."
         'Conner Net':
-           display_name: """Connernetz"""
-           text: '''<strong>Typ:</strong> Gerät, Mine %LINEBREAK% Nachdem ein Schiff sich durch dieses Gerät hindurchbewegt oder sich mit ihm überschnitten hat, detoniert es. Sobald dieses Gerät detoniert, erleidet das Schiff 1 %HIT%-Schaden und erhält 3 Ionenmarker.'''
-        'Electro-Proton Bomb':
-           display_name: "Elektro-Protonen-Bombe"
-           text: '''<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff und jedes Remote in Reichweite 0–2 4 Angriffswürfel. Jedes Schiff verliert 1 Schild für jedes Leerseiten-Ergebnis, erhält 1 Ionenmarker für jedes %FOCUS%/%HIT%-Ergebnis und erhält 1 Entwaffnet-Marker für jedes %CRIT%-Ergebnis. Jedes Remote in Reichweite 0–1 verliert 1 Schild für jedes Leerseiten-Ergebnis und erleidet 1 Schaden für jedes %FOCUS%/%HIT%-Ergebnis.'''
-        'Ion Bomb':
-           display_name: "Ionenbombe"
-           text: '''<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, erhält jedes Schiff in Reichweite 0–1 3 Ionenmarker und jedes Remote in Reichweite 0–1 erleidet 1 %HIT%-Schaden.'''
+            display_name: "Connernetz"
+            text: "<strong>Typ:</strong> Gerät, Mine %LINEBREAK% Nachdem ein Schiff sich durch dieses Gerät hindurchbewegt oder es überschnitten hat, detoniert es. Sobald dieses Gerät detoniert, erleidet das Schiff 1 %HIT%-Schaden und erhält 3 Ionenmarker."
         'Proximity Mine':
-           display_name: """Annäherungsmine"""
-           text: '''<strong>Typ:</strong> Gerät, Mine %LINEBREAK% Nachdem sich ein Schiff durch dieses Gerät hindurchbewegt oder mit ihm überschnitten hat, detoniert es. Sobald dieses Gerät detoniert, wirft jenes Schiff 2 Angriffswürfel. Jenes Schiff erleidet dann 1 %HIT%-Schaden plus 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis.%LINEBREAK%<i>Errata: Zusätzlicher automatischer Schaden</i>'''
-        'Cluster Mine':
-           display_name: """Clustermine"""
-           text: '''<strong>Typ:</strong> Gerät, Mine %LINEBREAK%Ein Clusterminenset besteht aus 3 einzelnen Clusterminen-Geräten. %LINEBREAK% Sobald ein Clusterminenset platziert wird, platziert man die mittlere Clustermine wie gewohnt, dann werden zwei zusätzliche Clusterminen in den Aussparungen platziert.%LINEBREAK% Nachdem sich ein Schiff durch eine einzelne Clustermine hindurchbewegt oder sie überschnitten hat, detoniert sie. Andere Clusterminen des Sets, die nicht von der Bewegung oder Überschneidung betroffen waren, detonieren nicht. %LINEBREAK% Sobald eines dieser Geräte detoniert, wirft jenes Schiff 2 Angriffswürfel. Jenes Schiff erleidet dann 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis.'''
-        'Rattled':
-           display_name: 'Aus der Fassung'
-           text: 'Nachdem eine Bombe oder Mine in Reichweite 0-1 detoniert ist, erleide 1 %CRIT% Schaden. Dann entferne diese Karte. %LINEBREAK% <strong>Aktion:</strong> Falls keine Bomben oder Minen in Reichweite 0-1 sind, entferne diese Karte.'
-        "I'll Show You the Dark Side": 
-           display_name: 'Ich zeige dir die dunkle Seite'
-           text: 'Sobald diese Karte zugeordnet wird, falls keine offene Schadenskarte darauf liegt, sucht der Spieler, der sie zugeordnet hat, im Schadensstapel nach 1 <strong>Pilot</strong>-Schadenskarte und platziert sie offen auf dieser Karte. Dann mische den Schadensstapel. %LINEBREAK%Sobald du 1 %CRIT%-Schaden erleiden würdest, wird dir stattdessen die offene Schadenskarte auf dieser Karte zugeteilt. Dann entferne diese Karte. '
-        'Buzz Droid Swarm':
-           display_name: 'Buzz-Droidenschwarm'
-           text: '''INIT: 0 <br>Wendigkeit: 1 <br>Hülle: 1 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% <strong>System-, Aktivierungs- und Endphase:</strong> Kein Effekt. %LINEBREAK%<strong>Kampfphase:</strong> Sobald du kämpfst, erleidet jedes feindliche Schiff in Reichweite 0 des Buzz-Droidenschwarms 1 %CRIT%-Schaden. %LINEBREAK%<strong>Sonstige Regeln:</strong>Nachdem sich ein feindliches Schiff durch einen Buzz-Droidenschwarm hindurchbewegt oder ihn überschnitten hat, positioniert der kontrollierende Spieler des Schwarms diesen neu, indem er ihn an die vorderen oder hinteren Stopper jenes Schiffes anlegt (das Schiff ist in Reichweite 0 des Schwarms). Würde dies zur Überschneidung mit einem Objekt führen, kann der Schwarm nicht angelegt werden. Falls der Schwarm am gewählten Stopperpaar nicht platziert werden kann, muss sein kontrollierender Spieler ihn an das andere Stopperpaar des Schiffes anlegen. Kann er auch am anderen Stopperpaar nicht angelegt werden, erhalten der Schwarm und das feindliche Schiff, das sich durch ihn hindurchbewegt oder ihn überschnitten hat, je 1 %HIT%-Schaden. %LINEBREAK%<i>Errata (since rules reference 1.4): Wendigkeit angepasst.</i>'''
+            display_name: "Annäherungsmine"
+            text: "<strong>Typ:</strong> Gerät, Mine %LINEBREAK% Nachdem ein Schiff sich durch dieses Gerät hindurchbewegt oder es überschnitten hat, detoniert es. Sobald dieses Gerät detoniert, wirft jenes Schiff 2 Angriffswürfel. Jenes Schiff erleidet dann 1 %HIT%-Schaden plus 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis.%LINEBREAK%<i>Errata (seit Referenzhandbuch 1.0.2): Hinzugefügt: 1 %HIT% plus</i>"
         'DRK-1 Probe Droid':
-           display_name: 'DRK-1-Sondendroide'
-           text: '''INIT: 0 <br>Wendigkeit: 3 <br>Hülle: 1 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK%  <strong>Systemphase:</strong> Der kontrollierende Spieler des DRK-1-Sondendroiden darf die [2 %BANKLEFT%]-, [2 %STRAIGHT%]- oder [2 %BANKRIGHT%]-Schablone wählen und an einem beliebigen Stopperpaar des DRK-1-Sondendroiden anlegen. Dann positioniert er das Remote neu, indem er den DRK-1-Sondendroiden am anderen Ende der Schablone platziert.Er kann dabei auch in Überschneidung mit einem Objekt platziert werden. Falls der DRK-1-Sondendroide ein Schiff überschneidet, wird die Position des Schiffes mit einer Positionsmarkierung festgehalten. Dann wird das Schiff auf dem Remote platziert.%LINEBREAK%<strong>Aktivierungs-, Kampf- und Endphase:</strong> Kein Effekt. %LINEBREAK%<strong>Sonstige Regeln:</strong> Solange ein Schiff ein Objekt als Ziel erfasst oder ein Störsignal zu einem feindlichen Schiff sendet, darf es die Reichweite von einem befreundeten DRK-1-Sondendroiden aus messen. Nachdem ein feindliches Schiff ein Manöver ausgeführt hat, das zur Überschneidung mit einem DRK-1-Sondendroiden führt, wirft der kontrollierende Spieler des Schiffes 1 Angriffswürfel. Bei einem %FOCUS%-Ergebnis erleidet der DRK-1-Sondendroide 1 %HIT%-Schaden.'''
-        'Sensor Buoy':
-           display_name: "Sensorboje"
-           text: '''INIT: 0 <br>Wendigkeit: 3 <br>Hülle: 2 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% Sensorbojen sind Remotes, die paarweise auftauchen (eine ist rot, eine blau und beide haben eine eigene Remotekarte) und durch die Aufwertungskarte <strong>Sensorbojen</strong> platziert werden. Abgesehen davon, dass sie Remotes sind und mit jener Karte interagieren, haben sie keine zusätzlichen Regeln.'''
-        'Tracking Torpedoes':
-           display_name: 'Zielsuch-Torpedos'
-           text: '''INIT: 0 <br>Wendigkeit: 3 <br>Hülle: 3 %LINEBREAK%<strong>Typ:</strong> Gerät, Remote %LINEBREAK% <strong>Systemphase:</strong> Bei der Initiative dieses Remotes positioniert sein kontrollierender Spieler dieses Remote unter Verwendung der [3 %BANKLEFT%]-, [3 %BANKRIGHT%]-, oder [4 %STRAIGHT%]-Schablone vorwärts neu. %LINEBREAK% <strong>Aktivierungsphase:</strong> Kein Effekt. %LINEBREAK% <strong>Kampfphase:</strong> Bei der Initiative dieses Remotes detoniert es, falls ein Objekt, das von ihm als Ziel erfasst ist, in seinem %FRONTARC% in Reichweite 0–1 ist.%LINEBREAK%<strong>Endphase:</strong> Während der Endphase <strong>muss</strong> dieses Remote, falls es kein Objekt als Ziel erfasst hat, ein Objekt in seinem %FRONTARC% in Reichweite 1–3 als Ziel erfassen, falls möglich. %LINEBREAK% <strong>Sonstige Regeln:</strong> Nachdem dieses Remote zerstört worden ist, wirf 1 Angriffswürfel. Bei einem %HIT%- oder %CRIT%-Ergebnis detoniert es. %LINEBREAK% Sobald dieses Remote detoniert, wirft jedes Schiff, Remote und Konstrukt in Reichweite 0 oder in seinem %FRONTARC% in Reichweite 1 4 Angriffswürfel und erleidet 1 Schaden für jedes passende %HIT%- oder %CRIT%-Ergebnis.'''
-        'Electro-Chaff Cloud':
-           display_name: 'Elektrodüppel-Wolke'
-           text: '''<strong>Typ:</strong>Hindernis, Gerät %LINEBREAK% Während der Endphase wird jede Elektrodüppel-Wolke ohne Zeitzünder entfernt, dann wird ein Zeitzünder von jeder Elektrodüppel-Wolke entfernt. Eine Elektrodüppel-Wolke kann nie mehr als 1 Zeitzünder haben.'''
+            display_name: "DRK-1-Sondendroide"
+            text: "INIT: 0 <br>WENDIGKEIT: 3 <br>HÜLLE: 1 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% <strong>Systemphase:</strong> Der Spieler, der den DRK-1-Sondendroiden kontrolliert, darf eine [2 %BANKLEFT%]-, [2 %STRAIGHT%]- oder [2 %BANKRIGHT%]-Schablone und einen beliebigen Satz Stopper des DRK-1 wählen. Dann wird das Remote neu platziert, indem der DRK-1 am anderen Ende der Schablone platziert wird. Er kann dabei ein Objekt überschneiden. %LINEBREAK%Falls der DRK-1 ein Schiff überschneidet, verwende die Positionsmarkierung, um die Position des Schiffes zu markieren, dann platziere das Schiff über dem Remote. %LINEBREAK%<strong>Aktivierungs-, Kampf- und Endphase:</strong> Kein Effekt. %LINEBREAK%<strong>Weitere Regeln:</strong> Solange ein Schiff ein Objekt als Ziel erfasst oder ein feindliches Schiff stört, darf es die Reichweite von einem befreundeten DRK-1-Sondendroiden messen. Nachdem ein feindliches Schiff ein Manöver ausgeführt hat, das es dazu bringt, einen DRK-1-Sondendroiden zu überschneiden, wirft der Spieler, der das Schiff kontrolliert, 1 Angriffswürfel. Bei einem %FOCUS%-Ergebnis erleidet der DRK-1-Sondendroide 1 %HIT%-Schaden."
+        'Buzz Droid Swarm':
+            display_name: "Buzz-Droiden-Schwarm"
+            text: "INIT: 0 <br>WENDIGKEIT: 1 <br>HÜLLE: 1 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% <strong>System-, Aktivierungs- und Endphase:</strong> Kein Effekt. %LINEBREAK%<strong>Kampfphase:</strong> Sobald du kämpfst, erleidet jedes feindliche Schiff in Reichweite 0 zum Buzz-Droiden-Schwarm 1 %CRIT%-Schaden. %LINEBREAK%<strong>Weitere Regeln:</strong> Nachdem ein feindliches Schiff einen Buzz-Droiden-Schwarm überschnitten hat oder sich durch ihn hindurchbewegt hat, platziert der Spieler, der den Schwarm kontrolliert, ihn neu, indem er die Aussparung bündig an die vorderen oder hinteren Stopper jenes Schiffes anlegt (das Schiff ist in Reichweite 0 zum Schwarm). Der Schwarm kann nicht an einem Satz Stopper des Schiffes platziert werden, falls er dadurch ein Objekt überschneiden würde. Falls der Schwarm nicht an dem gewählten Satz Stopper platziert werden kann, muss sein Spieler ihn am anderen Satz Stopper des Schiffes platzieren. Falls er dort ebenfalls nicht platziert werden kann, erleiden der Schwarm und das feindliche Schiff jeweils 1 %HIT%-Schaden. %LINEBREAK%<i>Errata (seit Referenzhandbuch 1.4): Wendigkeit aus Balancierungsgründen angepasst.</i>"
         "It's the Resistance":
-           display_name: "Das ist der Widerstand"
-           text: "<b>Aufbau:</b> Beginne in der Reserve. %LINEBREAK% Sobald du abgesetzt wirst, wirst du innerhalb von Reichweite 1 eines beliebigen Spielflächenrandes und jenseits von Reichweite 3 aller feindlichen Schiffe platziert.%LINEBREAK%Zu Beginn der Runde, falls alle %CHARGE% des befreundeten <strong>GA-97</strong> aktiv sind, <strong>musst</stong> du abgesetzt werden. Dann erhalte 1 Entwaffnet-Msrker und entferne die Karte."
-        "Decoyed":
-           display_name: "Durch ein Double geschützt"
-           text: "Solange du verteidigst, darf jede befreundete <strong>Zofe von Naboo</strong> im Angriffswinkel 1 Ausweichmarker ausgeben, um 1 deiner Ergebniss in ein %EVADE% - Ergebnis zu ändern. %LINEBREAK% Falls du ein Könglicher N-1 Sternjäger von Naboo bist, darf stattdessen jede befreundete <strong>Zofe von Naboo</strong> im Angriffswinkel 1 Ausweichmarker ausgebe, um 1 %EVADE% -Ergebnis hinzuzufügen."
-        "Compromising Intel":
-           display_name: "Kompromittierende Information"
-           text: "Während der Systemphase, falls die feindliche <strong> Vi Moradi</strong> in Reichweite 0-3 ist, drehe dein Rad auf die offene Seite.%LINEBREAK% Solange du gegen die feindliche <strong> Vi Moradi </strong> verteidigst oder einen Angriff gegen sie durchführst, kannst du keine Fokusmarker ausgeben."
-        "You Should Thank Me":
-           display_name: "Du solltest mir danken"
-           text: "Dieser Zustand wird verdeckt zugeordnet. Decke ihn auf, nachdem du verteidigt hast.%LINEBREAK% Nachdem du verteidigt hast, stellt <strong>Zam Wesell</strong> 1 %CHARGE% wieder her. Dann darfst du den Angreifer als Ziel erfassen. %LINEBREAK% Am Ende der Kampfphase, falls diese Karte verdeckt ist und im Feuerwinkel eines feindlichen Schiffes bist, darfst du diese Karte aufdecken und 2 %CHARGE% von <strong>Zam Wesell</strong> ausgeben. Falls du das tust, darfst du einen Bonusangriff durchführen.%LINEBREAK% Zu Beginn der Systemphase entferne diesen Zustand."
+            display_name: "Es ist der Widerstand"
+            text: "<strong>Aufbau:</strong> Beginne in der Reserve. %LINEBREAK% Sobald du aufgestellt wirst, wirst du in Reichweite 1 zu einem beliebigen Tischrand und jenseits von Reichweite 3 zu jedem feindlichen Schiff platziert. %LINEBREAK% Am Anfang der Runde, falls alle %CHARGE% des befreundeten <strong>GA-97</strong> aktiv sind, <strong>musst</strong> du dich aufstellen. Dann entferne diese Karte. Nachdem der befreundete <strong>GA-97</strong> zerstört worden ist, <strong>musst</strong> du dich aufstellen. Dann erhalte 1 Entwaffnet-Marker und entferne diese Karte."
+        'Electro-Proton Bomb':
+            display_name: "Elektro-Protonen-Bombe"
+            text: "<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff und Remote in Reichweite 0-2 4 Angriffswürfel. Jedes Schiff verliert 1 Schild für jedes Leerseiten-Ergebnis, erhält 1 Ionenmarker für jedes %FOCUS%/%HIT%-Ergebnis und erhält 1 Entwaffnet-Marker für jedes %CRIT%-Ergebnis. Jedes Remote in Reichweite 0-1 verliert 1 Schild für jedes Leerseiten-Ergebnis und erleidet 1 Schaden für jedes %FOCUS%/%HIT%-Ergebnis."
+        'Decoyed':
+            display_name: "Gelockt"
+            text: "Solange du verteidigst, darf jede befreundete <strong>Zofe von Naboo</strong> im Angriffswinkel 1 Ausweichmarker ausgeben, um 1 deiner Ergebnisse in ein %EVADE%-Ergebnis zu ändern. %LINEBREAK% Falls du ein Königlicher N-1-Sternenjäger von Naboo bist, darf jede befreundete <strong>Zofe von Naboo</strong> im Angriffswinkel stattdessen 1 Ausweichmarker ausgeben, um 1 %EVADE%-Ergebnis hinzuzufügen."
+        'Compromising Intel':
+            display_name: "Kompromittierende Informationen"
+            text: "Während der Systemphase, falls die feindliche <strong>Vi Moradi</strong> in Reichweite 0-3 ist, drehe dein Rad auf die offene Seite. %LINEBREAK% Solange du gegen die feindliche <strong>Vi Moradi</strong> verteidigst oder sie angreifst, kannst du keine Fokussierungsmarker ausgeben."
+        'Cluster Mine':
+            display_name: "Clustermine"
+            text: "<strong>Typ:</strong> Gerät, Mine %LINEBREAK% Ein Clusterminenset besteht aus 3 einzelnen Clusterminen-Geräten. %LINEBREAK% Sobald ein Clusterminenset platziert wird, wird die mittlere Clustermine wie gewohnt platziert, dann werden zwei zusätzliche Clusterminen in den Aussparungen platziert. %LINEBREAK% Nachdem ein Schiff sich durch eine einzelne Clustermine hindurchbewegt oder sie überschnitten hat, detoniert sie. Andere Clusterminen des Sets, die nicht betroffen waren, detonieren nicht. %LINEBREAK% Sobald eines dieser Geräte detoniert, wirft jenes Schiff 2 Angriffswürfel. Jenes Schiff erleidet dann 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis."
+        'Ion Bomb':
+            display_name: "Ionenbombe"
+            text: "<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, erhält jedes Schiff in Reichweite 0-1 3 Ionenmarker und jedes Remote in Reichweite 0-1 erleidet 1 %HIT%-Schaden."
+        'Concussion Bomb':
+            display_name: "Erschütterungsbombe"
+            text: "<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wird jedem Schiff und Remote in Reichweite 0-1 1 verdeckte Schadenskarte zugeteilt. Dann muss jedes Schiff in Reichweite 0-1 1 Schadenskarte offenlegen, es sei denn, es erhält 1 Anstrengungsmarker."
+        'Thermal Detonator':
+            display_name: "Thermaldetonator"
+            text: "<strong>Typ:</strong> Gerät, Bombe %LINEBREAK% Am Ende der Aktivierungsphase detoniert dieses Gerät. Sobald dieses Gerät detoniert, wirft jedes Schiff und Remote in Reichweite 0-1 1 Angriffswürfel. Jedes Schiff erhält 1 Anstrengungsmarker für jedes %FOCUS%-Ergebnis und jedes Schiff und Remote erleidet 1 %HIT%/%CRIT%-Schaden für jedes passende Ergebnis."
+        'Sensor Buoy':
+            display_name: "Sensorboje"
+            text: "INIT: 0 <br>WENDIGKEIT: 3 <br>HÜLLE: 2 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% Sensorbojen sind Remotes, die paarweise kommen (eine rote und eine blaue, jede mit eigener Remote-Karte) und von der Aufwertungskarte <strong>Sensorbojen-Suite</strong> platziert werden. Abgesehen davon, dass sie Remotes sind und mit jener Karte interagieren, haben sie keine zusätzlichen Regeln."
+        'Electro-Chaff Cloud':
+            display_name: "Elektrodüppel-Wolke"
+            text: "Eine Elektrodüppel-Wolke ist ein Gerät und ein Hindernis. %LINEBREAK% Während der Endphase wird jede Elektrodüppel-Wolke ohne Zeitzünder entfernt, dann wird ein Zeitzünder von jeder Elektrodüppel-Wolke entfernt. Eine Elektrodüppel-Wolke kann niemals mehr als einen Zeitzünder haben."
+        'Tracking Torpedoes':
+            display_name: "Verfolgungstorpedos"
+            text: "INIT: 0 <br>WENDIGKEIT: 3 <br>HÜLLE: 3 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK%<strong>Systemphase:</strong> Bei der Initiative dieses Remotes platziert sein kontrollierender Spieler dieses Remote vorwärts neu, unter Verwendung der [3 %BANKLEFT%]-, [3 %BANKRIGHT%]- oder [4 %STRAIGHT%]-Schablone. %LINEBREAK% <strong>Aktivierungsphase:</strong> Kein Effekt. %LINEBREAK% <strong>Kampfphase:</strong> Bei der Initiative dieses Remotes, falls ein Objekt, das es als Ziel erfasst hat, in seinem %FRONTARC% in Reichweite 0-1 ist, detoniert dieses Remote. Endphase: Während der Endphase, falls dieses Remote kein Objekt als Ziel erfasst hat, muss es ein Objekt in seinem %FRONTARC% in Reichweite 1-3 als Ziel erfassen, falls möglich. %LINEBREAK% <strong>Weitere Regeln:</strong> Nachdem dieses Remote zerstört worden ist, wirf 1 Angriffswürfel. Bei einem %HIT%- oder %CRIT%-Ergebnis detoniert dieses Remote. %LINEBREAK% Sobald dieses Remote detoniert, wirft jedes Schiff, Remote und Konstrukt in Reichweite 0 oder in seinem %FRONTARC% in Reichweite 1 4 Angriffswürfel und erleidet 1 Schaden für jedes passende %HIT%- oder %CRIT%-Ergebnis."
+        'Fearful Prey':
+            display_name: "Ängstliche Beute"
+            text: "Nachdem du gegen einen feindlichen <strong>Angstjäger</strong> verteidigt hast, falls du nicht mindestens 1 grünen Marker während des Angriffs ausgegeben hast, erhalte 1 Anstrengungsmarker."
+        'You Should Thank Me':
+            display_name: "Du solltest mir danken"
+            text: "Dieser Zustand wird verdeckt zugeordnet. Decke ihn auf, nachdem du verteidigt hast. %LINEBREAK% Nachdem du verteidigt hast, stellt <strong>Zam Wesell</strong> 1 %CHARGE% wieder her. Dann darfst du den Angreifer als Ziel erfassen. %LINEBREAK% Am Ende der Kampfphase, falls diese Karte verdeckt ist und du im Feuerwinkel eines feindlichen Schiffes bist, darfst du diese Karte aufdecken und 2 %CHARGE% von <strong>Zam Wesell</strong> ausgeben. Falls du das tust, darfst du einen Bonusangriff durchführen. %LINEBREAK% Am Anfang der Systemphase entferne diesen Zustand."
         "You'd Better Mean Business":
-           display_name: "Wehe, du meinst es nicht Ernst"
-           text: "Dieser Zustand wird verdeckt zugeordnet. Decke ihn auf, nachdem du verteidigt hast. %LINEBREAK% Nachdem du verteidigt hast, darfst du 2 %CHARGE% von <strong>Zam Wesell</strong> ausgeben. FAlls du das tust, führe einen Bonusangriff gegen den Angreifer durch.%LINEBREAK% Am Ende der Kampfphase, falls diese Karte verdeckt ist und du im Feuerwinkel eines feindlichen Schiffes bist, darfst du diese Karte aufdecken. Falls du das tust, stellt <strong>Zam Wesell</strong> 2 %CHARGE% wieder her.%LINEBREAK% Zu Beginn der Systemphase entferne diesen Zustand."
+            display_name: "Das ist hoffentlich dein Ernst"
+            text: "Dieser Zustand wird verdeckt zugeordnet. Decke ihn auf, nachdem du verteidigt hast. %LINEBREAK% Nachdem du verteidigt hast, darfst du 2 %CHARGE% von <strong>Zam Wesell</strong> ausgeben. Falls du das tust, führe einen Bonusangriff gegen den Angreifer durch. %LINEBREAK% Am Ende der Kampfphase, falls diese Karte verdeckt ist und du im Feuerwinkel eines feindlichen Schiffes bist, darfst du diese Karte aufdecken. Falls du das tust, stellt <strong>Zam Wesell</strong> 2 %CHARGE% wieder her. %LINEBREAK% Am Anfang der Systemphase entferne diesen Zustand."
         "Merciless Pursuit":
-           display_name: "Gnadenlose Verfolgung"
-           text: "Nachdem du einen Angriff durchgeführt hast, falls der Verteidiger <strong>Das Kind</strong> ausgerüstet hat, darfst du den Verteidiger als Ziel erfassen."
+            display_name: "Gnadenlose Verfolgung"
+            text: "Nachdem du einen Angriff durchgeführt hast, falls der Verteidiger mit <b>Das Kind</b> ausgerüstet ist, darfst du den Verteidiger als Ziel erfassen."
         "Marked for Elimination":
-           display_name: "Als Beute markiert"
-           text: "Solange du verteidigst, falls der Angreifer <strong>PEILSENDER</strong> ausgerüstet hat und dich als Ziel erfasst hat, kannst du keine grünen Marker ausgeben."
+            display_name: "Zur Eliminierung markiert"
+            text: "Solange du verteidigst, falls der Angreifer mit <b>Peilsender</b> ausgerüstet ist und dich als Ziel erfasst hat, kannst du keine grünen Marker ausgeben."
         "False Friend":
-           display_name: "Falscher Freund"
-           text: "Falls während der Systemphase ein feindliches Schiff mit der Aufwertung <strong>Tal Merrik</strong> in Reichweite 0-2 ist oder ein feindliches Remote in Reichweite 0-2 ist, drehe dein Rad auf die offene Seite.%LINEBREAK%<b>Aktion:</b> Erhalte1 Erschöpfungs- und 1 Stressmarker, um diesen Zustand abzulegen."
+            display_name: "Falscher Freund"
+            text: "Während der Systemphase, falls ein feindliches Schiff mit der Aufwertung <b>Tal Merrik</b> in Reichweite 0-2 ist oder ein feindliches Remote in Reichweite 0-2 ist, drehe dein Rad auf die offene Seite. %LINEBREAK% <strong>Aktion:</strong> Erhalte 1 Erschöpfungsmarker und einen Stressmarker, um diesen Zustand abzulegen."
         "Trials of the Darksaber":
-           display_name: "Das Dunkelschwert"
-           text: "Solange du einen Angriff in Angriffsreichweite 0-2 durchführst, darfst du 1 %CRIT%-Ergebnis ausgeben. Falls du das tust, falls der Spieler des verteidigenden Schiffes mehr verdiente %?% als du hat, verliert er 1 verdiente %?% . Platziere jene %?% auf diese Karte.%LINEBREAK% Nachdem du verteidigt hast, falls du von einem feindlichen Schiff in Angriffsreichweite 0-2 zerstört worden bist, ordne dem Angreifer den Zustand <strong>DAS DUNKELSCHWERT</strong> zu (Alle %?% bleiben auf dieser Karte.%LINEBREAK%Am Spielende verdient dieses Schiff alle %?% auf dieser Karte."
+            display_name: "Prüfungen des Dunkelschwerts"
+            text: "Solange du einen Angriff in Angriffsreichweite 0-2 durchführst, darfst du 1 %CRIT%-Ergebnis ausgeben. Falls du das tust, falls der Spieler des verteidigenden Schiffes mehr %MISSIONPOINT% erzielt hat als du, verliert er 1 erzielten %MISSIONPOINT%. Platziere diesen %MISSIONPOINT% auf dieser Karte. %LINEBREAK% Nachdem du verteidigt hast, falls du von einem feindlichen Schiff in Angriffsreichweite 0-2 zerstört worden bist, ordne dem Angreifer den Zustand <b>Prüfungen des Dunkelschwerts</b> zu (alle %MISSIONPOINT% verbleiben auf dieser Karte). %LINEBREAK% Am Ende des Spiels erhält dieses Schiff alle %MISSIONPOINT% auf dieser Karte."
         "Guarded":
-           display_name: "Beschützt"
-           text: "Solange du verteidigst, falls du nicht im %BULLSARC% des Angreifers bist, wirfst du 1 zusätzlichen Verteidigungswürfel für jeden befreundeten berechnenden oder ausweichenden <strong>BESCHÜTZER DER MAGNAWÄCHTER</strong> im Angriffswinkel."
+            display_name: "Beschützt"
+            text: "Solange du verteidigst, falls du nicht im %BULLSEYEARC% des Angreifers bist, wirf 1 zusätzlichen Verteidigungswürfel für jeden befreundeten <b>MagnaWächter-Beschützer</b>, der berechnet oder ausweicht und im Angriffswinkel ist."
         "Sickening Maneuver":
-           display_name: "Schwindelerregendes Manöver"
-           text: "Du kannst rote Manöver ausführen, aus solange du gestresst bist.%LINEBREAK%Nachdem du ein Drehmanöver [%TURNLEFT% oder %TURNRIGHT%] oder ein Wendemanöver [%BANKLEFT% oder BANKRIGHT%] aufgedeckt hast, <strong>musst</strong> du 1 Anstrengunsmarker erhalten und jenes MAnöver als Slip ausführen.%LINEBREAK% Nachdem du ein Geradenmanöver [%STRAIGHT%] aufgedeckt hast, musst du jenes Manöver als rote Koiogran.Wende [%KTURN%] ausführen.%LINEBREAK%Nachdem du ein Manöver ausgeführt hast, entfernst du diesen Zustand."
+            display_name: "Übelkeit erregendes Manöver"
+            text: "Du kannst rote Manöver ausführen, auch wenn du gestresst bist. %LINEBREAK% Nachdem du ein Drehmanöver [%BANKLEFT% oder %BANKRIGHT%] oder Wendemanöver [%TURNLEFT% oder %TURNRIGHT%] aufgedeckt hast, <b>musst</b> du 1 Anstrengungsmarker erhalten und das Manöver als Slip ausführen.%LINEBREAK% Nachdem du ein Geradeaus-Manöver [%STRAIGHT%] aufgedeckt hast, musst du jenes Manöver als rote Koiogran-Wende [%KTURN%] ausführen. %LINEBREAK% Nachdem du ein Manöver ausgeführt hast, entferne diesen Zustand."
         "Primed For Speed":
-           display_name: "Bleifuss"
-           text: "Füge deiner Aktionsleiste eine weisse %SLAM% -Aktionhinzu.%LINEBREAK% Nachdem du eine %SLAM% -Aktion durchgeführt hast, <strong>musst</strong> du 1 %HIT%-Schaden erleiden, um 1 Entwaffnet-Marker zu entfernen."
+            display_name: "Bereit für Geschwindigkeit"
+            text: "Füge deiner Aktionsleiste eine weiße %SLAM%-Aktion hinzu. %LINEBREAK% Nachdem du einen SLAM durchgeführt hast, musst du 1 %HIT%-Schaden erleiden, um 1 Entwaffnet-Marker zu entfernen."
         "Broken Trust":
-           display_name: "Vertrauensbruch"
-           text: "Behandle befreundete Schiffe , als wären sie verbündet.%LINEBREAK%Nicht-feindliche Schiffe behandeln dich, als wärst du verbündet.%LINEREAK% Solange du einen Angriff durchführst, bevor du den Verteidiger deklarierst, erhält jedes verbündete Schiff im Angriffswinkel,das nicht gestresst ist, 1 Stressmarker.%LINEBREAK%Nachdem du verteidigt oder einen Angriff durchgeführt hast, falls dem Verteidiger mindestens 1 offene Schadenskarte zugeteilt oder zerstört worden ist, entfernst du diesen Zustand."
+            display_name: "Gebrochenes Vertrauen"
+            text: "Behandle befreundete Schiffe als verbündet.%LINEBREAK% Nicht-feindliche Schiffe behandeln dich als verbündet.%LINEBREAK% Solange du einen Angriff durchführst, bevor du den Verteidiger deklarierst, erhält jedes verbündete Schiff im Angriffswinkel, das nicht gestresst ist, 1 Stressmarker. Nachdem du verteidigt oder einen Angriff durchgeführt hast, falls dem Verteidiger mindestens 1 offene Schadenskarte zugeteilt wurde oder er zerstört wurde, entferne diesen Zustand."
+        "Clan Wren Commandos":
+            display_name: "Clan-Wren-Kommandos"
+            text: "INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, REICHWEITE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% Nachdem ein feindliches Schiff dich überschnitten hat, erhält es 1 Anstrengungsmarker. %LINEBREAK% <strong>Aktivierungsphase:</strong> Am Anfang dieser Phase darfst du dich vorwärts neu platzieren, unter Verwendung einer [1 %TURNLEFT%]-, [2 %STRAIGHT%]- oder [1 %TURNRIGHT%]-Schablone.%LINEBREAK% <strong>Kampfphase:</strong> Du kannst nicht angreifen, falls feindliche Schiffe in Reichweite 0 sind. Um einen Angriff durchzuführen, musst du 1 %CHARGE% ausgeben. Solange du einen Angriff durchführst, darfst du 1 %FOCUS%-Ergebnis in ein %HIT%-Ergebnis ändern."
+        "Death Watch Commandos":
+            display_name: "Death-Watch-Kommandos"
+            text: "INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, REICHWEITE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% Nachdem ein feindliches Schiff dich überschnitten hat, erhält es 1 Anstrengungsmarker.%LINEBREAK% <strong>Aktivierungsphase:</strong> Am Anfang dieser Phase darfst du dich vorwärts neu platzieren, unter Verwendung einer [1 %TURNLEFT%]-, [2 %STRAIGHT%]- oder [1 %TURNRIGHT%]-Schablone.%LINEBREAK% <strong>Kampfphase:</strong> Du kannst nicht angreifen, falls feindliche Schiffe in Reichweite 0 sind. Um einen Angriff durchzuführen, musst du 1 %CHARGE% ausgeben. Solange du einen Angriff durchführst, darfst du 1 %FOCUS%-Ergebnis in ein %HIT%-Ergebnis ändern."
+        "Nite Owl Commandos":
+            display_name: "Nite-Owl-Kommandos"
+            text: "INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, REICHWEITE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% Nachdem ein feindliches Schiff dich überschnitten hat, erhält es 1 Anstrengungsmarker.%LINEBREAK% <strong>Aktivierungsphase:</strong> Am Anfang dieser Phase darfst du dich vorwärts neu platzieren, unter Verwendung einer [1 %TURNLEFT%]-, [2 %STRAIGHT%]- oder [1 %TURNRIGHT%]-Schablone.%LINEBREAK% <strong>Kampfphase:</strong> Du kannst nicht angreifen, falls feindliche Schiffe in Reichweite 0 sind. Um einen Angriff durchzuführen, musst du 1 %CHARGE% ausgeben. Solange du einen Angriff durchführst, darfst du 1 %FOCUS%-Ergebnis in ein %HIT%-Ergebnis ändern."
+        "Imperial Super Commandos":
+            display_name: "Imperiale Superkommandos"
+            text: "INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, REICHWEITE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% Nachdem ein feindliches Schiff dich überschnitten hat, erhält es 1 Anstrengungsmarker.%LINEBREAK% <strong>Aktivierungsphase:</strong> Am Anfang dieser Phase darfst du dich vorwärts neu platzieren, unter Verwendung einer [1 %TURNLEFT%]-, [2 %STRAIGHT%]- oder [1 %TURNRIGHT%]-Schablone.%LINEBREAK% <strong>Kampfphase:</strong> Du kannst nicht angreifen, falls feindliche Schiffe in Reichweite 0 sind. Um einen Angriff durchzuführen, musst du 1 %CHARGE% ausgeben. Solange du einen Angriff durchführst, darfst du 1 %FOCUS%-Ergebnis in ein %HIT%-Ergebnis ändern."
+        "Mandalorian Super Commandos":
+            display_name: "Mandalorianische Superkommandos"
+            text: "INIT: 2 <br> %FRONTARC%: 2 %RANGEBONUS%, REICHWEITE: 1-2 <br>%AGILITY%: 2, %HULL%: 2, %CHARGE%: 2 %LINEBREAK% <strong>Typ:</strong> Gerät, Remote %LINEBREAK% Nachdem ein feindliches Schiff dich überschnitten hat, erhält es 1 Anstrengungsmarker.%LINEBREAK% <strong>Aktivierungsphase:</strong> Am Anfang dieser Phase darfst du dich vorwärts neu platzieren, unter Verwendung einer [1 %TURNLEFT%]-, [2 %STRAIGHT%]- oder [1 %TURNRIGHT%]-Schablone.%LINEBREAK% <strong>Kampfphase:</strong> Du kannst nicht angreifen, falls feindliche Schiffe in Reichweite 0 sind. Um einen Angriff durchzuführen, musst du 1 %CHARGE% ausgeben. Solange du einen Angriff durchführst, darfst du 1 %FOCUS%-Ergebnis in ein %HIT%-Ergebnis ändern."
 
     chassis_translations =
         "Vectored Thrusters":
-           display_name: 'Schwenkbare Schubdüsen'
-           text: """Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%-Aktion durchführen."""
+            display_name: "Schwenkbare Schubdüsen"
+            text: """Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%-Aktion durchführen."""
         "Advanced Targeting Computer":
-           display_name: "Verbesserter Zielcomputer"
-           text: """Solange du einen Primärangriff gegen einen Verteidiger durchführst, den du als Ziel erfasst hast, wirf 1 zusätzlichen Angriffswürfel und ändere 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis."""
+            display_name: "Verbesserter Zielcomputer"
+            text: """Solange du einen Primärangriff gegen einen Verteidiger durchführst, den du als Ziel erfasst hast, wirf 1 zusätzlichen Angriffswürfel und ändere 1 %HIT%-Ergebnis in ein %CRIT%-Ergebnis."""
         "Autothrusters":
-           display_name: "Automatische Schubdüsen"
-           text: """Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."""
+            display_name: "Automatische Schubdüsen"
+            text: """Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BARRELROLL%-Aktion oder eine rote %BOOST%-Aktion durchführen."""
         "Nimble Bomber":
-           display_name: "Wendiger Bomber"
-           text: """Falls du unter Verwendung einer %STRAIGHT%-Schablone ein Gerät abwerfen würdest, darfst du stattdessen eine %BANKLEFT%- oder %BANKRIGHT%-Schablone derselben Geschwindigkeit verwenden."""
+            display_name: "Wendiger Bomber"
+            text: """Falls du unter Verwendung einer %STRAIGHT%-Schablone ein Gerät abwerfen würdest, darfst du stattdessen eine %BANKLEFT%- oder %BANKRIGHT%-Schablone derselben Geschwindigkeit verwenden."""
         "Full Throttle":
-           display_name: "Vollgas"
-           text: """Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%&nbsp;-Aktion durchführen."""
+            display_name: "Vollgas"
+            text: """Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %EVADE%-Aktion durchführen."""
         "Experimental Scanners":
-           display_name: "Experimentelle Scanner"
-           text: """Du kannst Ziele jenseits von Reichweite 3 erfassen. Du kannst keine Ziele in Reichweite 1 erfassen."""
+            display_name: "Experimentelle Scanner"
+            text: """Du kannst Ziele jenseits von Reichweite 3 erfassen. Du kannst keine Ziele in Reichweite 1 erfassen."""
         "Stygium Array":
-           display_name: "Stygium-Gitter"
-           text: """Nachdem du dich enttarnt hast, darfst du eine %EVADE%-Aktion durchführen. Zu Beginn der Endphase darfst du 1 Ausweichmarker ausgeben, um 1 Tarnungsmarker zu erhalten."""
+            display_name: "Stygium-Gitter"
+            text: """Nachdem du dich enttarnt hast, darfst du eine %EVADE%-Aktion durchführen. Zu Beginn der Endphase darfst du 1 Ausweichmarker ausgeben, um 1 Tarnungsmarker zu erhalten."""
         "Sensor Blindspot":
-           display_name: "Toter Winkel"
-           text: """Solange du einen Primärangriff in Reichweite 0-1 durchführst, wende den Bonus für Reichweite 0-1 nicht an und wirf 1 Angriffswürfel weniger."""
+            display_name: "Toter Winkel"
+            text: """Solange du einen Primärangriff in Angriffsreichweite 0-1 durchführst, wende den Bonus für Reichweite 0-1 nicht an und wirf 1 Angriffswürfel weniger."""
         "Microthrusters":
-           display_name: "Mikrodüsen"
-           text: """Solange du eine Fassrolle durchführst, <b>musst</b> du die %BANKLEFT%- oder %BANKRIGHT%-Schablone anstatt der %STRAIGHT%-Schablone verwenden."""
+            display_name: "Mikrodüsen"
+            text: """Solange du eine Fassrolle durchführst, <b>musst</b> du die %BANKLEFT%- oder %BANKRIGHT%-Schablone anstatt der %STRAIGHT%-Schablone verwenden."""
         "Weapon Hardpoint":
-           display_name: "Waffenaufhängung"
-           text: """Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."""
+            display_name: "Waffenaufhängung"
+            text: """Du kannst 1 %CANNON%-, %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten."""
         "Advanced Droid Brain":
-           display_name: "Hochentwickeltes Droidengehirn"
-           text: """Nachdem du eine %CALCULATE%-Aktion durchgeführt hast, erhalte 1 Berechnungsmarker."""
+            display_name: "Hochentwickeltes Droidengehirn"
+            text: """Nachdem du eine %CALCULATE%-Aktion durchgeführt hast, erhalte 1 Berechnungsmarker."""
         "Tail Gun":
-           display_name: "Heckgeschütz"
-           text: """Solange du ein angedocktes Schiff hast, hast du eine %REARARC%-Primärwaffe mit einem Angriffswert in Höhe des Angriffswertes der %FRONTARC%-Primärwaffe deines angedockten Schiffes."""
+            display_name: "Heckgeschütz"
+            text: """Solange du ein angedocktes Schiff hast, hast du eine %REARARC%-Primärwaffe mit einem Angriffswert in Höhe des Angriffswertes der %FRONTARC%-Primärwaffe deines angedockten Schiffes."""
         "Locked and Loaded":
-           display_name: "Geladen und entsichert"
-           text: """Solange du angedockt bist, nachdem dein Trägerschiff einen %FRONTARC%-Primärangriff oder %TURRET%-Angriff durchgeführt hat, darf es einen Bonus-%REARARC%-Primärangriff durchführen."""
+            display_name: "Geladen und entsichert"
+            text: """Solange du angedockt bist, nachdem dein Trägerschiff einen %FRONTARC%-Primärangriff oder %TURRET%-Angriff durchgeführt hat, darf es einen Bonus-%REARARC%-Primärangriff durchführen."""
         "Concordia Faceoff":
-           display_name: "Concordianischer Wirbel"
-           text: """Solange du verteidigst, falls die Angriffsreichweite 1 ist und du im %FRONTARC% des Angreifers bist, ändere 1 Ergebnis in ein %EVADE%-Ergebnis."""
+            display_name: "Concordianischer Wirbel"
+            text: """Solange du verteidigst, falls die Angriffsreichweite 1 ist und du im %FRONTARC% des Angreifers bist, ändere 1 Ergebnis in ein %EVADE%-Ergebnis."""
         "Spacetug Tractor Array":
-           display_name: "Schlepperstrahl"
-           text: """<strong>Aktion:</strong> Wähle ein Schiff in deinem %FRONTARC% in Reichweite 1. Jenes Schiff erhält 1 Fangstrahlmarker oder 2 Fangstrahlmarker, falls es in deinem %BULLSEYEARC% in Reichweite 1 ist."""
+            display_name: "Schlepperstrahl"
+            text: """ <strong>Aktion:</strong> Wähle ein Schiff in deinem %FRONTARC% in Reichweite 1. Jenes Schiff erhält 1 Fangstrahlmarker oder 2 Fangstrahlmarker, falls es in deinem %BULLSEYEARC% in Reichweite 1 ist."""
         "Hope":
-           display_name: "Hoffnung"
-           text: """Nachdem ein anderes befreundetes Schiff in Reichweite 0-3 zerstört worden ist, darfst du eine &nbsp;%FOCUS%- oder&nbsp;%BOOST%-Aktion durchführen."""
+            display_name: "Hoffnung"
+            text: """Nachdem ein anderes befreundetes Schiff in Reichweite 0-3 zerstört worden ist, darfst du eine %FOCUS%- oder %BOOST%-Aktion durchführen."""
         "Sensitive Controls":
-           display_name: "Genaue Steuerung"
-           text: """Während der Systemphase darfst du eine rote&nbsp;%BARRELROLL%- oder eine rote&nbsp;%BOOST%-Aktion durchführen."""
+            display_name: "Genaue Steuerung"
+            text: """Während der Systemphase darfst du eine rote %BARRELROLL%- oder eine rote %BOOST%-Aktion durchführen."""
         "Vectored Cannons":
-           display_name: "Schwenkbare Kanonen"
-           text: """Während der Systemphase darfst du eine rote&nbsp;%BOOST%- oder eine rote&nbsp;%ROTATEARC%-Aktion durchführen. Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren."""
+            display_name: "Schwenkbare Kanonen"
+            text: """Während der Systemphase darfst du eine rote %BOOST%- oder eine rote %ROTATEARC%-Aktion durchführen. Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren."""
         "Advanced Fire Control":
-           display_name: "Verbesserte Feuerkontrolle"
-           text: """Nachdem du einen&nbsp;%CANNON%- oder&nbsp;%MISSILE%-Angriff durchgeführt hast, falls du den Verteidiger als Ziel erfasst hast, darfst du einen Bonus-Primärangriff gegen den Verteidiger durchführen."""
+            display_name: "Verbesserte Feuerkontrolle"
+            text: """Nachdem du einen %CANNON%- oder %MISSILE%-Angriff durchgeführt hast, falls du den Verteidiger als Ziel erfasst hast, darfst du einen Bonus-Primärangriff gegen den Verteidiger durchführen."""
         "Networked Calculations":
-           display_name: "Vernetzte Berechnungssysteme"
-           text: """Solange du verteidigst oder einen Angriff durchführst, darfst du 1 Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1 %FOCUS%-Ergebnis in ein %EVADE%-oder %HIT%-Ergebnis zu ändern."""
+            display_name: "Vernetzte Berechnungssysteme"
+            text: """Solange du verteidigst oder einen Angriff durchführst, darfst du 1 Berechnungsmarker von einem befreundeten Schiff in Reichweite 0-1 ausgeben, um 1 %FOCUS%-Ergebnis in ein %EVADE%- oder %HIT%-Ergebnis zu ändern."""
         "Independent Calculations":
-           display_name: "Autonome Berechnungssysteme"
-           text: """Solange du eine weiße&nbsp;%CALCULATE%-Aktion durchführst, darfst du sie behandeln, als wäre sie rot, um 1 zusätzlichen Berechnungsmarker zu erhalten. Andere Schiffe können deine Berechnungsmarker nicht unter Verwendung der Schiffsfähigkeit <strong>Vernetzte Berechnungssysteme</strong> ausgeben."""
+            display_name: "Autonome Berechnungssysteme"
+            text: """Solange du eine weiße %CALCULATE%-Aktion durchführst, darfst du sie behandeln, als wäre sie rot, um 1 zusätzlichen Berechnungsmarker zu erhalten. Andere Schiffe können deine Berechnungsmarker nicht unter Verwendung der Schiffsfähigkeit <strong>Vernetzte Berechnungssysteme</strong> ausgeben."""
         "Adaptive Ailerons":
-           display_name: "Adaptive Querruder"
-           text: """Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du Schub geben.  %LINEBREAK% <i>Errata (seit Referenzhandbuch 1.4.2): Schub statt weißem 1 Manöver</i>"""
+            display_name: "Adaptive Querruder"
+            text: """Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, <b>musst</b> du Schub geben. %LINEBREAK% <i>Errata (seit Referenzhandbuch 1.4.2): Schiffsfähigkeit modifiziert</i>"""
         "Dead to Rights":
-           display_name: "Todsicherer Treffer"
-           text: """Solange du einen Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, können Verteidigungswürfel nicht unter Verwendung von grünen Markern modifiziert werden."""
+            display_name: "Todsicherer Treffer"
+            text: """Solange du einen Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, können Verteidigungswürfel nicht unter Verwendung von grünen Markern modifiziert werden."""
         "Comms Shuttle":
-           display_name: "Kommunikationsantennen"
-           text: """Solange du angedockt bist, erhält dein Trägerschiff %COORDINATE%. Bevor dein Trägerschiff aktiviert wird, darf es eine %COORDINATE%-Aktion durchführen."""
+            display_name: "Kommunikationsantennen"
+            text: """Solange du angedockt bist, erhält dein Trägerschiff %COORDINATE%. Bevor dein Trägerschiff aktiviert wird, darf es eine %COORDINATE%-Aktion durchführen."""
         "Controlled Ailerons":
-           display_name: "Kontrollierte Querruder"
-           text: """Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, darfst du Schub geben. %LINEBREAK% <i>Errata (since rules reference 1.4.2): Schiffsfähigkeit umbenannt, Schub statt weißem 1 Manöver und optional</i>"""
+            display_name: "Kontrollierte Querruder"
+            text: """Bevor du dein Rad aufdeckst, falls du nicht gestresst bist, darfst du Schub geben. %LINEBREAK% <i>Errata (seit Referenzhandbuch 1.4.2): Schiffsfähigkeit modifiziert</i>"""
         "Co-Pilot":
-           display_name: "Co-Pilot"
-           text: """Solange du angedockt bist, hat dein Träger-Schiff deine Piloten-Fähigkeit zusätzlich zu seiner eigenen."""
+            display_name: "Co-Pilot"
+            text: """Solange du angedockt bist, hat dein Trägerschiff deine Pilotenfähigkeit zusätzlich zu seiner eigenen."""
         "Rigged Energy Cells":
-           display_name: "Manipulierte Energiezellen"
-           text: """Während der Systemphase, falls du nicht angedockt bist, verliere 1 %CHARGE%. Am Ende der Aktivierungsphase, falls du 0 %CHARGE% hast, wirst du zerstört. Bevor du entfernt wirst, erleidet jedes Schiff in Reichweite 0-1 1 %CRIT%-Schaden."""
+            display_name: "Manipulierte Energiezellen"
+            text: """Während der Systemphase, falls du nicht angedockt bist, verliere 1 %CHARGE%. Am Ende der Aktivierungsphase, falls du 0 %CHARGE% hast, wirst du zerstört. Bevor du entfernt wirst, erleidet jedes Schiff in Reichweite 0-1 1 %CRIT%-Schaden."""
         "Refined Gyrostabilizers":
-           display_name: "Optimierte Gyrostabilisatoren"
-           text: """Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%- oder eine rote %ROTATEARC%-Aktion durchführen."""
+            display_name: "Optimierte Gyrostabilisatoren"
+            text: """Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Nachdem du eine Aktion durchgeführt hast, darfst du eine rote %BOOST%- oder eine rote %ROTATEARC%-Aktion durchführen."""
         "Heavy Weapon Turret":
-           display_name: "Schwerer Geschützturm"
-           text: """Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Du <b>musst</b> die %FRONTARC%-Voraussetzung deiner ausgerüsteten %MISSILE%-Aufwertungen behandeln, als wäre sie %SINGLETURRETARC%."""
+            display_name: "Schwerer Geschützturm"
+            text: """Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Du <b>musst</b> die %FRONTARC%-Voraussetzung deiner ausgerüsteten %MISSILE%-Aufwertungen behandeln, als wäre sie %SINGLETURRETARC%."""
         "Linked Battery":
-           display_name: "Gekoppelte Geschützbatterie"
-           text: """Solange du einen %CANNON%-Angriff durchführst, wirf 1 zusätzlichen Würfel."""
+            display_name: "Gekoppelte Geschützbatterie"
+            text: """Solange du einen %CANNON%-Angriff durchführst, wirf 1 zusätzlichen Würfel."""
         "Notched Stabilizers":
-           display_name: "Stabilisatorkerbe"
-           text: """Solange du dich bewegst, ignorierst du Asteroiden."""
+            display_name: "Stabilisatorkerbe"
+            text: """Solange du dich bewegst, ignorierst du Asteroiden."""
         "Fine-Tuned Controls":
-           display_name: "Präzisionssteuerung"
-           text: """Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%-Aktion durchzuführen."""
+            display_name: "Feinabgestimmte Steuerung"
+            text: """Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 %FORCE% ausgeben, um eine %BOOST%- oder %BARRELROLL%-Aktion durchzuführen."""
         "Pinpoint Tractor Array":
-           display_name: "Fangstrahl-Zielsystem"
-           text: """Du kannst deinen %SINGLETURRETARC% nicht auf deinen %REARARC%rotieren. Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 Fangstrahlmarker erhalten, um eine&nbsp;%ROTATEARC%&nbsp;-Aktion durchzuführen. %LINEBREAK%<i>Errata (since rules reference 1.4):  "vollständig" ergänzt</i>"""
+            display_name: "Präzisions-Fangstrahl"
+            text: """Du kannst deinen %SINGLETURRETARC% nicht auf deinen %REARARC% rotieren. Nachdem du ein Manöver vollständig ausgeführt hast, darfst du 1 Fangstrahlmarker erhalten, um eine %ROTATEARC%-Aktion durchzuführen. %LINEBREAK%<i>Errata (seit Referenzhandbuch 1.4): „vollständig" hinzugefügt</i>"""
         "Plated Hull":
-           display_name: "Gepanzerte Hülle"
-           text: """Solange du verteidigst, falls du nicht kritisch beschädigt bist, ändere 1&nbsp;%CRIT%&nbsp;-Ergebnis in ein&nbsp;%HIT%&nbsp;-Ergebnis."""
+            display_name: "Gepanzerter Rumpf"
+            text: """Solange du verteidigst, falls du nicht kritisch beschädigt bist, ändere 1 %CRIT% in ein %HIT%-Ergebnis."""
         "Solo":
-           display_name: "Solo"
-           text: "Solange du verteidigst oder einen Angriff durchführst, falls kein anderes befreundetes Schiff in Reichweite 0-1 ist, darfst du 1 %CHARGE% ausgeben, um 1 deiner Würfel neu zu werfen."
+            display_name: "Solo"
+            text: """Solange du verteidigst oder einen Angriff durchführst, falls keine anderen befreundeten Schiffe in Reichweite 0-1 sind, darfst du 1 %CHARGE% ausgeben, um einen deiner Würfel neu zu werfen."""
         "Pursuit Craft":
-           display_name: "Jagdschiff"
-           text: "Nachdem du absetzt worden bist, darfst du ein Schiff als Ziel erfassen, das von der befreundeten <strong>Reißzahn</strong> als Ziel erfasst ist."
+            display_name: "Jagdschiff"
+            text: """Nachdem du dich aufgestellt hast, darfst du ein Objekt als Ziel erfassen, das der befreundete <strong>Hound's Tooth</strong> als Ziel erfasst hat."""
         "Explosion with Wings":
-           display_name: "Explosion mit Flügeln"
-           text: "<b>Aufbau:</b> Dir wird 1 verdeckte Schadenskarte zugeteilt. Nachdem du eine %SLAM%-Aktion durchgeführt hast, darfst du 1 Schadenskarte offenlegen, um 1 Entwaffnetmarker zu entfernen."
+            display_name: "Explosion mit Flügeln"
+            text: """Dir wird 1 verdeckte Schadenskarte zugeteilt. Nachdem du eine %SLAM%-Aktion durchgeführt hast, darfst du 1 Schadenskarte offenlegen, um 1 Entwaffnet-Marker zu entfernen."""
         "Fine-Tuned Thrusters":
-           display_name: "Präzisionsdüsen"
-           text: "Nachdem du ein Manöver vollständig ausgeführt hast, falls du nicht erschöpft oder angestrengt bist, darfst du 1 Erschöpfungs- oder Anstrengungsmarker erhalten, um eine %LOCK%- oder %BARRELROLL%-Aktion durchzuführen."
+            display_name: "Feinabgestimmte Schubdüsen"
+            text: """Nachdem du ein Manöver vollständig ausgeführt hast, falls du weder erschöpft noch angestrengt bist, darfst du 1 Erschöpfungs- oder Anstrengungsmarker erhalten, um eine %LOCK%- oder %BARRELROLL%-Aktion durchzuführen."""
         "Fire Convergence":
-           display_name: "Gebündeltes Feuer"
-           text: "Solange ein befreundetes Schiff einen Nicht-%ROTATEARC%-Angriff durchführt, falls der Verteidiger in deinem %ROTATEARC% ist, darfst du 1 %CHARGE% ausgeben. Falls du das tust, darf der Angreifer bis zu 2 Angriffswürfel neu werfen."
+            display_name: "Feuerkonvergenz"
+            text: """Solange ein befreundetes Schiff einen Nicht-%SINGLETURRETARC%-Angriff durchführt, falls der Verteidiger in deinem Geschützturm-Winkel ist, darfst du 1 Ladungsmarker ausgeben. Falls du das tust, darf der Angreifer bis zu 2 Ergebnisse neu werfen."""
         "Rotating Cannons":
-           display_name: "Drehgeschütz"
-           text: "Du kannst deinen %ROTATEARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Du <strong>musst</strong> die %FRONTARC%-Vorraussetzung deiner ausgerüsteten %CANNON%-Aufwertungen behandeln, als wäre sie %ROTATEARC%."
+            display_name: "Rotierende Kanonen"
+            text: """Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Du musst die %FRONTARC%-Voraussetzung deiner ausgerüsteten %CANNON%-Aufwertungen behandeln, als wäre sie %SINGLETURRETARC%."""
         "Twin Ion Engines":
-           display_name: "Zwillings-Ionenantrieb"
-           text: 'Ignoriere die Schiffsbeschränkung "TIE" auf Aufwertungskarten.'
+            display_name: "Zwillings-Ionenantrieb"
+            text: """Ignoriere die Schiffseinschränkung „TIE" auf Aufwertungskarten."""
         "Intuitive Controls":
-           display_name: "Intuitive Steuerung"
-           text: "Während der Systemphase darfst du eine violette %BARRELROLL% oder eine violette %BOOST%-Aktion durchführen."
+            display_name: "Intuitive Steuerung"
+            text: """Während der Systemphase darfst du eine violette %BARRELROLL%- oder %BOOST%-Aktion durchführen."""
         "Intuitive Interface":
-           display_name: "Intuitive Schnittstelle"
-           text: "Nachdem du eine Aktion durchgeführt hast, die deiner Aktionsleiste durch eine %TALENT%-,%ILLICIT%- oder %MODIFICATION%-Aufwertung hinzugefügt wurde, darfst du eine %CALCULATE%-Aktion durchführen."
+            display_name: "Intuitive Schnittstelle"
+            text: """Nachdem du eine Aktion durchgeführt hast, die deiner Aktionsleiste durch eine %TALENT%-, %ILLICIT%- oder %MODIFICATION%-Aufwertung hinzugefügt wurde, darfst du eine %CALCULATE%-Aktion durchführen."""
         "Pursuit Thrusters":
-           display_name: "Jagddüsen"
-           text: "Während der Systemphase darfst du eine %BOOST%-Aktion durchführen."
+            display_name: "Verfolgungsschubdüsen"
+            text: """Während der Systemphase darfst du eine %BOOST%-Aktion durchführen."""
         "Versatile Frame":
-           display_name: "Vielseitige Konstruktion"
-           text: "Du kannst 1 %TORPEDO% oder %MISSILE%-Aufwertung ausrüsten. Solange dein aufgedecktes Manöver blau ist, füge deiner Aktionsleiste einen weißen %BOOST% hinzu."
+            display_name: "Vielseitiger Rahmen"
+            text: """Du kannst 1 %TORPEDO%- oder %MISSILE%-Aufwertung ausrüsten. Solange dein aufgedecktes Manöver blau ist, füge deiner Aktionsleiste eine weiße %BOOST%-Aktion hinzu."""
         "Born for This":
-           display_name: "Dafür geboren"
-           text: "Solange ein anderes befreundetes Schiff inReichweite 0-2 verteidigt, falls du nicht angestrengt bist, darf jenes Schiff deine Fokus- und Ausweichmarker ausgeben, als hätte es sie selbst. Falls es das tut, erhältst du 1 Anstrengungsmarker."
+            display_name: "Dafür geboren"
+            text: """Solange ein anderes befreundetes Schiff in Reichweite 0-2 verteidigt, falls du nicht angestrengt bist, darf es deine Fokussierungs- und Ausweichmarker ausgeben, als hätte es sie. Falls es das tut, erhältst du 1 Anstrengungsmarker."""
         "Modified for Organics":
-           display_name: "auf organische Piloten angepasst"
-           text: "Dieses Schiff ist nicht von der Beschränkung <strong>GENORMT</strong> betroffen. Verringere die Schwierigkeit deiner Drehmanöver [%TURNLEFT% oder %TURNRIGHT%] mit Geschwindigkeit 2-3. Erhöhe die Schwierigkeit deiner Wendemanöver [%BANKLEFT% oder %BANKRIGHT%] mit Geschwindigkeit 3."
+            display_name: "Modifiziert für Organische"
+            text: """Dieses Schiff wird nicht von der <strong>Genormt</strong>-Einschränkung beeinflusst. Verringere die Schwierigkeit deiner Drehmanöver [%BANKLEFT% oder %BANKRIGHT%] mit Geschwindigkeit 2 und 3. Erhöhe die Schwierigkeit deiner Wendemanöver [%TURNLEFT% oder %TURNRIGHT%] mit Geschwindigkeit 3."""
+        "Sensor Blackout":
+            display_name: "Sensorausfall"
+            text: """Solange du einen Primärangriff in Reichweite 0-1 durchführst, wirf 1 Angriffswürfel weniger. %LINEBREAK% Solange du in Reichweite 1 verteidigst, wirf 1 Verteidigungswürfel weniger."""
+        "Networked Aim":
+            display_name: "Vernetztes Zielen"
+            text: """Du kannst deine Zielerfassungen nicht ausgeben, um Angriffswürfel neu zu werfen. Solange du einen Angriff durchführst, darfst du eine Anzahl von Angriffswürfeln bis zur Anzahl befreundeter Zielerfassungen auf dem Verteidiger neu werfen."""
+        "Devastating Barrage":
+            display_name: "Verheerendes Sperrfeuer"
+            text: """Solange du einen %TORPEDO%- oder %MISSILE%-Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, können deine %CRIT%-Ergebnisse nicht durch %EVADE%-Ergebnisse negiert werden."""
+        "Locked S-Foils":
+            display_name: "Arretierte S-Flügel"
+            text: """Nachdem du eine %BOOST%-Aktion durchgeführt hast, erhalte einen Erschöpfungsmarker."""
+        "Gyro-Cockpit":
+            display_name: "Gyro-Cockpit"
+            text: """Nachdem du einen Stressmarker erhalten hast, darfst du 2 %CHARGE% ausgeben, um einen Ausweichmarker zu erhalten. Sobald du ein Gerät abwirfst, darfst du 1 %CHARGE% ausgeben, um die Schablone mit ihrer Mittellinie am Basishashmark in deinem %LEFTARC% oder %RIGHTARC% auszurichten."""
+        "High Stakes":
+            display_name: "Hohes Risiko"
+            text: """Nachdem du eine rote Aktion durchgeführt hast, darfst du einen Angriffswürfel werfen. Bei einem %HIT%/%CRIT%-Ergebnis entferne 1 Stress."""
+        "Chiss Engineering":
+            display_name: "Chiss-Ingenieurskunst"
+            text: """Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du eine %LOCK%-Aktion durchführen. Solange du angreifst, falls du nicht gestresst bist, darfst du 1 %SHIELD% ausgeben, um den Reichweite-1-Bonus anzuwenden."""
+        "Formed Up":
+            display_name: "Formiert"
+            text: """Am Ende der Endphase, falls ein anderer befreundeter <strong>TIE/ln-Jäger</strong> in Reichweite 0-1 ist, darfst du 1 Stressmarker entfernen."""
+        "Prioritized Weapons Systems":
+            display_name: "Priorisierte Waffensysteme"
+            text: """Bevor du kämpfst, darfst du einen Anstrengungsmarker erhalten, um einen Entwaffnet-Marker zu entfernen."""
+        "Broadside Batteries":
+            display_name: "Breitseiten-Batterien"
+            text: """Du kannst Ziele erfassen und Primärangriffe in Reichweite 1-4 durchführen."""
+        "Concentrated Batteries":
+            display_name: "Konzentrierte Batterien"
+            text: """Solange du einen Primär-, %TORPEDO%- oder %MISSILE%-Angriff durchführst, falls der Verteidiger in deinem %BULLSEYEARC% ist, wirf 1 zusätzlichen Würfel."""
+        "Docking Clamps":
+            display_name: "Andockklemmen"
+            text: """Bis zu 4 kleine Schiffe können bei dir andocken."""
+        "Resupply Craft":
+            display_name: "Versorgungsschiff"
+            text: """Nachdem ein anderes befreundetes Schiff in Reichweite 0-1 eine Aktion durchgeführt hat, darfst du 1 %ENERGY% ausgeben. Falls du das tust, entfernt es 1 orangefarbenen oder roten Marker oder stellt 1 Schild wieder her."""
+        "Overdrive Burners":
+            display_name: "Überlastungsbrenner"
+            text: """Solange du verteidigst, falls dein aufgedecktes Manöver Geschwindigkeit 3-5 hat, wirf 1 zusätzlichen Verteidigungswürfel."""
+        "Tractor Grasp":
+            display_name: "Fangstrahlgriff"
+            text: """Nachdem du einen <b>Fangstrahltentakel</b>-Angriff durchgeführt hast, der getroffen hat, erhält der Verteidiger 1 Fangstrahlmarker."""
+        "Merciless":
+            display_name: "Gnadenlos"
+            text: """Solange du einen Angriff durchführst, darfst du ein anderes befreundetes Schiff in Reichweite 0-1 zum Verteidiger wählen. Falls du das tust, erhält jenes Schiff einen Anstrengungsmarker und du darfst ein Leerseiten-Ergebnis neu werfen."""
+        "Heavy Weapon Turret (EoD)":
+            display_name: "Schwerer Geschützturm"
+            text: """Nachdem du eine Aktion durchgeführt hast, darfst du eine weiße %ROTATEARC%-Aktion durchführen. Du kannst deinen %SINGLETURRETARC%-Anzeiger nur auf deinen %FRONTARC% oder %REARARC% rotieren. Du musst die %FRONTARC%-Voraussetzung deiner ausgerüsteten %MISSILE%-Aufwertungen behandeln, als wäre sie %SINGLETURRETARC%."""
+        "Adaptive S-Foils":
+            display_name: "Adaptive S-Flügel"
+            text: """Nachdem du eine %BARRELROLL%-Aktion durchgeführt hast, erhalte einen Erschöpfungsmarker. Solange du einen Angriff durchführst, bevor du Angriffswürfel wirfst, falls der Verteidiger in deinem %BULLSEYEARC% ist, darfst du 1 Erschöpfungsmarker entfernen."""
+        "Leave No One Behind":
+            display_name: "Niemanden zurücklassen"
+            text: """Nachdem du eine Aktion durchgeführt hast, falls du weniger als 2 Stressmarker hast, darfst du 1 Stressmarker erhalten. Falls du das tust, darf ein anderes befreundetes kleines Schiff in Reichweite 0-1 einen Erschöpfungsmarker erhalten, um eine %BOOST%-Aktion durchzuführen."""
+        "Modular Bombing Magazine":
+            display_name: "Modulares Bombenmagazin"
+            text: """Sobald du ein Gerät abwirfst, darfst du die Schablone mit ihrer Mittellinie am Basishashmark in deinem %LEFTARC% oder %RIGHTARC% ausrichten."""
+        "Restored Speedster":
+            display_name: "Restaurierter Renngleiter"
+            text: """Solange du genau 1 Entwaffnet-Marker hast, darfst du Primärangriffe gegen feindliche Objekte in deinem %BULLSEYEARC% durchführen."""
+        "Coaxium Injectors":
+            display_name: "Coaxium-Injektoren"
+            text: """Nachdem du ein Manöver mit Geschwindigkeit 3 oder 4 vollständig ausgeführt hast, darfst du 1 %CHARGE% ausgeben, um eine rote %SLAM%-Aktion durchzuführen, selbst wenn du gestresst bist. Nachdem du eine %SLAM%-Aktion durchgeführt hast, erleide 1 %CRIT%, es sei denn, du legst 1 deiner Schadenskarten offen."""
+        "Winged Reversal":
+            display_name: "Geflügelte Umkehr"
+            text: """Nachdem du ein Wendemanöver [%TURNLEFT% oder %TURNRIGHT%] aufgedeckt hast, darfst du 1 %CHARGE% ausgeben, 1 Anstrengungsmarker erhalten und dessen Schwierigkeit erhöhen. Falls du das tust, führe stattdessen jenes Manöver als Tallon-Rolle [%TROLLLEFT% oder %TROLLRIGHT%] in derselben Richtung aus."""
+        "Imposing Behemoth":
+            display_name: "Imposanter Koloss"
+            text: """Solange ein feindliches Schiff in Reichweite 0 verteidigt, falls du verstärkt bist und der Verteidiger im %FULLFRONTARC% oder %FULLREARARC% passend zu deinem Verstärkungsmarker ist, wirft jenes feindliche Schiff 1 Verteidigungswürfel weniger."""
+        "Adaptative Microthrusters":
+            display_name: "Adaptive Mikrodüsen"
+            text: """Solange du eine Fassrolle durchführst, darfst du 1 %CHARGE% ausgeben, um die %BANKLEFT%- oder %BANKRIGHT%-Schablone anstatt der %STRAIGHT%-Schablone zu verwenden."""
+        "Enduring Limitations":
+            display_name: "Andauernde Beschränkungen"
+            text: """Am Ende der Aktivierungsphase, falls du 3 oder mehr Stressmarker hast, musst du 1 Stressmarker entfernen und 1 %HIT%-Schaden erleiden."""
 
-    exportObj.setupTranslationCardData pilot_translations, upgrade_translations, condition_translations, chassis_translations
+
+
+    damage_translations =
+        "Panicked Pilot":
+            display_name: "Panischer Pilot"
+            text: "Erhalte 2 Stressmarker. Dann repariere diese Karte."
+        "Blinded Pilot":
+            display_name: "Geblendeter Pilot"
+            text: "Solange du einen Angriff durchführst, kannst du deine Würfel nur modifizieren, indem du %FORCE% für ihren Standardeffekt ausgibst.%LINEBREAK%<strong>Aktion:</strong> Repariere diese Karte."
+        "Wounded Pilot":
+            display_name: "Verwundeter Pilot"
+            text: "Nachdem du eine Aktion durchgeführt hast, wirf 1 Angriffswürfel. Bei einem %HIT%- oder %CRIT%-Ergebnis erhalte 1 Stressmarker.%LINEBREAK%<strong>Aktion:</strong> Repariere diese Karte."
+        "Stunned Pilot":
+            display_name: "Betäubter Pilot"
+            text: "Nachdem du ein Manöver ausgeführt hast, falls du dich durch ein Hindernis hindurchbewegt oder es überschnitten hast, erleide 1 %HIT%-Schaden."
+        "Console Fire":
+            display_name: "Konsolenbrand"
+            text: "Bevor du kämpfst, wirf 1 Angriffswürfel. Bei einem %HIT%-Ergebnis erleide 1 %HIT%-Schaden. %LINEBREAK%<strong>Aktion:</strong> Repariere diese Karte."
+        "Damaged Engine":
+            display_name: "Beschädigter Antrieb"
+            text: "Erhöhe die Schwierigkeit deiner Drehmanöver (%TURNLEFT% und %TURNRIGHT%)."
+        "Weapons Failure":
+            display_name: "Waffenausfall"
+            text: "Solange du einen Angriff durchführst, wirf 1 Angriffswürfel weniger. %LINEBREAK%<strong>Aktion:</strong> Repariere diese Karte."
+        "Hull Breach":
+            display_name: "Hüllenbruch"
+            text: "Bevor du 1 oder mehr %HIT%-Schaden erleiden würdest, erleide stattdessen ebenso viel %CRIT%-Schaden.%LINEBREAK%<strong>Aktion:</strong> Repariere diese Karte."
+        "Structural Damage":
+            display_name: "Strukturschaden"
+            text: "Solange du verteidigst, wirf 1 Verteidigungswürfel weniger."
+        "Damaged Sensor Array":
+            display_name: "Beschädigtes Sensorenpaket"
+            text: "Du kannst keine Aktionen durchführen außer der %FOCUS%-Aktion und Aktionen von Schadenskarten.%LINEBREAK%<strong>Aktion:</strong> Repariere diese Karte."
+        "Loose Stabilizer":
+            display_name: "Lockerer Stabilisator"
+            text: "Nachdem du ein Nicht-Geradeaus-Manöver (%STRAIGHT%) ausgeführt hast, erleide 1 %HIT%-Schaden und repariere diese Karte. %LINEBREAK%<strong>Aktion:</strong> Repariere diese Karte."
+        "Disabled Power Regulator":
+            display_name: "Defekter Energieregler"
+            text: "Bevor du kämpfst, erhalte 1 Ionenmarker. Nachdem du ein Ionenmanöver ausgeführt hast, repariere diese Karte."
+        "Fuel Leak":
+            display_name: "Treibstoffleck"
+            text: "Nachdem du 1 %CRIT%-Schaden erlitten hast, erleide 1 %HIT%-Schaden und repariere diese Karte.%LINEBREAK%<strong>Aktion:</strong> Repariere diese Karte."
+        "Direct Hit!":
+            display_name: "Volltreffer!"
+            text: "Erleide 1 %HIT%-Schaden. Dann repariere diese Karte."
+
+
+
+    exportObj.setupTranslationCardData pilot_translations, upgrade_translations, condition_translations, chassis_translations, damage_translations
