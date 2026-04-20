@@ -9189,6 +9189,7 @@ exportObj.basicCardData = ->
             keyword: ["Droid"]
             slots: [
                 "Missile"
+                "Missile"
                 "Device"
                 "Modification"
                 "Configuration"
