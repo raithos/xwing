@@ -7954,6 +7954,7 @@ exportObj.basicCardData = ->
             loadout: 6
             slots: [
                 "Sensor"
+                "Tech"
                 "Crew"
                 "Crew"
                 "Device"
