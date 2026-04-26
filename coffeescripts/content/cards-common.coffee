@@ -21640,9 +21640,8 @@ exportObj.basicCardData = ->
             slot: "Crew"
             charge: 2
             recurring: 1
-            restrictions: [
-                ["Action", "R-Jam"]
-            ]
+            modifier_func: (stats) ->
+                stats.actions.push 'R-Jam' if 'R-Jam' not in stats.actions
         }
         {
             name: "Fennec Shand"
@@ -21667,6 +21666,8 @@ exportObj.basicCardData = ->
             restrictions: [
                 ["Action", "Jam"]
             ]
+            modifier_func: (stats) ->
+                stats.actions.push 'Jam' if 'Jam' not in stats.actions
         }
         {
             name: "Wedge Antilles"
