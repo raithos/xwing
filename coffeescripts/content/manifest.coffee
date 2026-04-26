@@ -12311,6 +12311,161 @@ exportObj.manifestByExpansion =
             type: 'pilot'
             count: 1
         }
+        {
+            name: "Hera Syndulla (LaR)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Carnor Jax"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Thweek"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Kazuda Xiono (LaR)"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Tamara Ryvora"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Quinlan Vos"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Ursa Wren"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "DIS-L9B2"
+            type: 'pilot'
+            count: 1
+        }
+        {
+            name: "Ahsoka Tano (LaR)"
+            type: 'upgrade'
+            count: 1
+        }
+        {
+            name: "Thrawn"
+            type: 'upgrade'
+            count: 1
+        }
+        {
+            name: "Fennec Shand"
+            type: 'upgrade'
+            count: 1
+        }
+        {
+            name: "Zorii Bliss"
+            type: 'upgrade'
+            count: 1
+        }
+        {
+            name: "Wedge Antilles"
+            type: 'upgrade'
+            count: 1
+        }
+        {
+            name: "Captive"
+            type: 'upgrade'
+            count: 1
+        }
+        {
+            name: "Gravitic Well"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "R7-T1"
+            type: 'upgrade'
+            count: 1
+        }
+        {
+            name: "Modified R4-P Unit"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Flight-Assist Astromech"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Unhinged Astromech"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Roiling Anger"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Seeker Missiles"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Targeting Matrix"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Retrofitted Autothrusters"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Automated Loaders"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Parting Gift"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Blindspot Targeter"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Targeting Relay"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "T-SJ1A Targeting Computer"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Winged Reversal"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Precision-Tuned Cannons"
+            type: 'upgrade'
+            count: 8
+        }
+        {
+            name: "Burst Laser Turret"
+            type: 'upgrade'
+            count: 8
+        }
     ]
 
 class exportObj.Collection
