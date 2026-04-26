@@ -246,7 +246,7 @@ is an authorization system which lets you prove your identity at a web site with
         "Intro Card YASB": """
                     <h2>YASB für X-Wing 2.5 </h2>
                     <p>YASB (engl. Yet Another Squad Builder, dt. Noch ein Staffel-Bauer) hilft dir, einfach und unkompliziert deine Staffeln für das X-Wing Miniaturenspiel von <a href="https://www.atomicmassgames.com/">Atomic Mass Games</a> zu erstellen. Für mehr Informationen über das aktuelle Fanprojekt zur Pflege vom Spiel, schau unter <a href="https://xwhub.com/">XW Hub</a> vorbei.</p>
-                    <p>XWA Version: 50P-1.1
+                    <p>XWA Version: 50P-2.0
                     <br><a href="https://yasb.app/old/">Hier finden sich die Punkte der vorherigen Iteration.</a>
                     <br><a href="https://yasb.app/AMG/">Hier finden sich die Punkte der letzten AMG Version.</a>
                     <br><a href="https://raithos.github.io/">Hier finden sich die Punkte der letzten 2.0 Version.</a></p>

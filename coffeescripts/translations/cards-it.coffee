@@ -248,7 +248,7 @@ sloticon:
         "Intro Card YASB": """
                     <h2>YASB per X-Wing 2.5 </h2>
                     <p>YASB (acronimo inglese di Yet Another Squad Builder, ovvero Ancora un Altro Costruttore di Squadriglie) ti aiuta a creare in modo semplice e diretto le tue squadriglie per il Gioco di Miniature X-Wing di <a href="https://www.atomicmassgames.com/">Atomic Mass Games</a>. Per maggiori informazioni sul progetto fan-made attuale per mantenere il gioco, visita <a href="https://xwhub.com/">XW Hub</a>.</p>
-                    <p>Versione XWA: 50P-1.1
+                    <p>Versione XWA: 50P-2.0
                     <br><a href="https://yasb.app/old/">Qui si trovano i punti della precedente iterazione.</a>
                     <br><a href="https://yasb.app/AMG/">Qui si trovano i punti dell'ultima versione AMG.</a>
                     <br><a href="https://raithos.github.io/">Qui si trovano i punti dell'ultima versione 2.0.</a></p>

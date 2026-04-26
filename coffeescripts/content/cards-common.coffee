@@ -2078,8 +2078,8 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "T-65 X-wing"
             skill: 2
-            points: 10
-            loadout: 10
+            points: 9
+            loadout: 3
             slots: [
                 "Torpedo"
                 "Astromech"
@@ -2198,8 +2198,8 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "T-65 X-wing"
             skill: 2
-            points: 11
-            loadout: 16
+            points: 10
+            loadout: 11
             keyword: ["Partisan"]
             slots: [
                 "Missile"
@@ -2343,7 +2343,7 @@ exportObj.basicCardData = ->
             ship: "BTL-S8 K-wing"
             skill: 4
             points: 12
-            loadout: 13
+            loadout: 16
             slots: [
                 "Talent"
                 "Torpedo"
@@ -2364,7 +2364,7 @@ exportObj.basicCardData = ->
             ship: "BTL-S8 K-wing"
             skill: 3
             points: 12
-            loadout: 11
+            loadout: 14
             slots: [
                 "Torpedo"
                 "Missile"
@@ -2408,13 +2408,14 @@ exportObj.basicCardData = ->
             ship: "E-wing"
             skill: 5
             points: 14
-            loadout: 12
+            loadout: 14
             slots: [
                 "Talent"
                 "Talent"
                 "Sensor"
                 "Torpedo"
                 "Astromech"
+                "Tech"
                 "Modification"
             ]
         }
@@ -2426,12 +2427,13 @@ exportObj.basicCardData = ->
             ship: "E-wing"
             skill: 4
             points: 15
-            loadout: 18
+            loadout: 20
             slots: [
                 "Talent"
                 "Sensor"
                 "Torpedo"
                 "Astromech"
+                "Tech"
                 "Modification"
             ]
         }
@@ -2448,6 +2450,7 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Torpedo"
                 "Astromech"
+                "Tech"
                 "Modification"
             ]
         }
@@ -2463,6 +2466,7 @@ exportObj.basicCardData = ->
                 "Sensor"
                 "Torpedo"
                 "Astromech"
+                "Tech"
                 "Modification"
             ]
         }
@@ -2578,7 +2582,7 @@ exportObj.basicCardData = ->
             ship: "UT-60D U-wing"
             skill: 4
             points: 11
-            loadout: 10
+            loadout: 12
             slots: [
                 "Sensor"
                 "Crew"
@@ -2595,7 +2599,7 @@ exportObj.basicCardData = ->
             ship: "UT-60D U-wing"
             skill: 3
             points: 12
-            loadout: 12
+            loadout: 14
             slots: [
                 "Talent"
                 "Sensor"
@@ -2725,12 +2729,13 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "YT-2400 Light Freighter"
             skill: 5
-            points: 20
+            points: 19
             loadout: 20
             slots: [
                 "Talent"
                 "Missile"
                 "Crew"
+                "Gunner"
                 "Illicit"
                 "Illicit"
                 "Modification"
@@ -2746,13 +2751,14 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "YT-2400 Light Freighter"
             skill: 3
-            points: 20
+            points: 19
             loadout: 19
             keyword: ["Droid"]
             slots: [
                 "Talent"
                 "Missile"
                 "Crew"
+                "Gunner"
                 "Illicit"
                 "Illicit"
                 "Modification"
@@ -2788,15 +2794,15 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "Modified YT-1300 Light Freighter"
             skill: 6
-            points: 20
-            loadout: 21
+            points: 19
+            loadout: 18
             slots: [
                 "Talent"
                 "Talent"
                 "Missile"
                 "Crew"
                 "Crew"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Illicit"
                 "Modification"
@@ -2812,14 +2818,14 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "Modified YT-1300 Light Freighter"
             skill: 5
-            points: 19
-            loadout: 20
+            points: 18
+            loadout: 16
             slots: [
                 "Talent"
                 "Missile"
                 "Crew"
                 "Crew"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Illicit"
                 "Modification"
@@ -2836,14 +2842,14 @@ exportObj.basicCardData = ->
             skill: 4
             charge: 1
             recurring: 1
-            points: 17
+            points: 16
             loadout: 15
             slots: [
                 "Talent"
                 "Missile"
                 "Crew"
                 "Crew"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Illicit"
                 "Modification"
@@ -2875,8 +2881,8 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "HWK-290 Light Freighter"
             skill: 5
-            points: 15
-            loadout: 15
+            points: 14
+            loadout: 10
             slots: [
                 "Talent"
                 "Crew"
@@ -2941,8 +2947,8 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "RZ-1 A-wing"
             skill: 4
-            points: 11
-            loadout: 16
+            points: 9
+            loadout: 6
             slots: [
                 "Talent"
                 "Talent"
@@ -2959,7 +2965,7 @@ exportObj.basicCardData = ->
             ship: "RZ-1 A-wing"
             skill: 3
             points: 9
-            loadout: 7
+            loadout: 10
             slots: [
                 "Talent"
                 "Missile"
@@ -2973,8 +2979,8 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "RZ-1 A-wing"
             skill: 3
-            points: 9
-            loadout: 9
+            points: 8
+            loadout: 6
             slots: [
                 "Talent"
                 "Missile"
@@ -3019,8 +3025,8 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "Z-95-AF4 Headhunter"
             skill: 4
-            points: 9
-            loadout: 17
+            points: 8
+            loadout: 10
             slots: [
                 "Talent"
                 "Missile"
@@ -3033,8 +3039,8 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "Z-95-AF4 Headhunter"
             skill: 2
-            points: 8
-            loadout: 16
+            points: 7
+            loadout: 11
             slots: [
                 "Talent"
                 "Missile"
@@ -3107,7 +3113,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "VCX-100 Light Freighter"
             skill: 5
-            points: 18
+            points: 17
             loadout: 19
             keyword: ["Spectre"]
             slots: [
@@ -3132,7 +3138,7 @@ exportObj.basicCardData = ->
             skill: 3
             keyword: ["Light Side", "Jedi", "Spectre"]
             force: 2
-            points: 19
+            points: 18
             loadout: 20
             slots: [
                 "Force"
@@ -3193,7 +3199,7 @@ exportObj.basicCardData = ->
             ship: "Attack Shuttle"
             skill: 5
             points: 10
-            loadout: 12
+            loadout: 15
             keyword: ["Spectre"]
             slots: [
                 "Talent"
@@ -3232,7 +3238,7 @@ exportObj.basicCardData = ->
             keyword: ["Light Side","Spectre"]
             force: 1
             points: 9
-            loadout: 6
+            loadout: 8
             slots: [
                 "Force"
                 "Turret"
@@ -3338,7 +3344,7 @@ exportObj.basicCardData = ->
             ship: "A/SF-01 B-wing"
             skill: 4
             points: 12
-            loadout: 10
+            loadout: 12
             slots: [
                 "Talent"
                 "Sensor"
@@ -3396,7 +3402,7 @@ exportObj.basicCardData = ->
             ship: "A/SF-01 B-wing"
             skill: 2
             points: 10
-            loadout: 8
+            loadout: 10
             slots: [
                 "Sensor"
                 "Cannon"
@@ -3420,7 +3426,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Astromech"
                 "Torpedo"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Modification"
             ]
@@ -3438,7 +3444,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Astromech"
                 "Torpedo"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Modification"
             ]
@@ -3456,7 +3462,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Astromech"
                 "Torpedo"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Modification"
             ]
@@ -3474,7 +3480,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Astromech"
                 "Torpedo"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Modification"
             ]
@@ -3486,8 +3492,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Aggressor Assault Fighter"
             skill: 4
-            points: 17
-            loadout: 22
+            points: 16
+            loadout: 20
             keyword: ["Bounty Hunter","Droid"]
             slots: [
                 "Talent"
@@ -3507,7 +3513,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Aggressor Assault Fighter"
             skill: 4
-            points: 16
+            points: 15
             loadout: 18
             keyword: ["Bounty Hunter","Droid"]
             slots: [
@@ -3528,7 +3534,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Aggressor Assault Fighter"
             skill: 4
-            points: 16
+            points: 15
             loadout: 18
             keyword: ["Bounty Hunter","Droid"]
             slots: [
@@ -3549,7 +3555,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Aggressor Assault Fighter"
             skill: 4
-            points: 15
+            points: 14
             loadout: 16
             keyword: ["Bounty Hunter","Droid"]
             slots: [
@@ -3785,8 +3791,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Fang Fighter"
             skill: 6
-            points: 14
-            loadout: 7
+            points: 16
+            loadout: 12
             keyword: ["Mandalorian"]
             slots: [
                 "Talent"
@@ -3838,7 +3844,7 @@ exportObj.basicCardData = ->
             ship: "Fang Fighter"
             skill: 4
             points: 11
-            loadout: 8
+            loadout: 10
             keyword: ["Mandalorian"]
             slots: [
                 "Talent"
@@ -3907,8 +3913,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Firespray-class Patrol Craft"
             skill: 4
-            points: 18
-            loadout: 20
+            points: 17
+            loadout: 16
             slots: [
                 "Talent"
                 "Cannon"
@@ -3928,7 +3934,7 @@ exportObj.basicCardData = ->
             ship: "Firespray-class Patrol Craft"
             skill: 4
             points: 15
-            loadout: 8
+            loadout: 12
             slots: [
                 "Talent"
                 "Cannon"
@@ -3948,7 +3954,7 @@ exportObj.basicCardData = ->
             ship: "Firespray-class Patrol Craft"
             skill: 3
             points: 16
-            loadout: 13
+            loadout: 18
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
@@ -3958,6 +3964,7 @@ exportObj.basicCardData = ->
                 "Device"
                 "Illicit"
                 "Modification"
+                "Title"
             ]
         }
         {
@@ -3967,8 +3974,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Firespray-class Patrol Craft"
             skill: 3
-            points: 17
-            loadout: 18
+            points: 16
+            loadout: 15
             slots: [
                 "Talent"
                 "Cannon"
@@ -4061,7 +4068,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "HWK-290 Light Freighter"
             skill: 3
-            points: 12
+            points: 11
             loadout: 8
             slots: [
                 "Talent"
@@ -4082,7 +4089,7 @@ exportObj.basicCardData = ->
             charge: 3
             recurring: 1
             points: 11
-            loadout: 9
+            loadout: 12
             slots: [
                 "Talent"
                 "Crew"
@@ -4100,7 +4107,7 @@ exportObj.basicCardData = ->
             ship: "HWK-290 Light Freighter"
             skill: 2
             points: 9
-            loadout: 10
+            loadout: 8
             slots: [
                 "Crew"
                 "Device"
@@ -4214,7 +4221,7 @@ exportObj.basicCardData = ->
             ship: "Kihraxz Fighter"
             skill: 4
             points: 11
-            loadout: 14
+            loadout: 16
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
@@ -4233,7 +4240,7 @@ exportObj.basicCardData = ->
             ship: "Kihraxz Fighter"
             skill: 4
             points: 10
-            loadout: 8
+            loadout: 10
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
@@ -4252,7 +4259,7 @@ exportObj.basicCardData = ->
             ship: "Kihraxz Fighter"
             skill: 3
             points: 10
-            loadout: 11
+            loadout: 13
             slots: [
                 "Missile"
                 "Illicit"
@@ -4301,8 +4308,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Lancer-Class Pursuit Craft"
             skill: 4
-            points: 16
-            loadout: 16
+            points: 15
+            loadout: 12
             force: 2
             keyword: ["Bounty Hunter","Dark Side"]
             slots: [
@@ -4320,8 +4327,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Lancer-Class Pursuit Craft"
             skill: 5
-            points: 16
-            loadout: 15
+            points: 15
+            loadout: 12
             keyword: ["Bounty Hunter","Mandalorian"]
             slots: [
                 "Talent"
@@ -4339,8 +4346,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Lancer-Class Pursuit Craft"
             skill: 3
-            points: 15
-            loadout: 16
+            points: 14
+            loadout: 13
             keyword: ["Bounty Hunter","Mandalorian"]
             slots: [
                 "Talent"
@@ -4374,8 +4381,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "M12-L Kimogila Fighter"
             skill: 4
-            points: 13
-            loadout: 16
+            points: 12
+            loadout: 14
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
@@ -4395,7 +4402,7 @@ exportObj.basicCardData = ->
             skill: 3
             charge: 2
             points: 11
-            loadout: 10
+            loadout: 13
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
@@ -4413,7 +4420,7 @@ exportObj.basicCardData = ->
             ship: "M12-L Kimogila Fighter"
             skill: 3
             points: 10
-            loadout: 6
+            loadout: 8
             slots: [
                 "Torpedo"
                 "Missile"
@@ -4444,8 +4451,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "M3-A Interceptor"
             skill: 4
-            points: 10
-            loadout: 14
+            points: 9
+            loadout: 13
             slots: [
                 "Talent"
                 "Illicit"
@@ -4681,6 +4688,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Torpedo"
                 "Illicit"
                 "Modification"
@@ -4695,10 +4703,11 @@ exportObj.basicCardData = ->
             ship: "StarViper-class Attack Platform"
             skill: 4
             points: 12
-            loadout: 12
+            loadout: 14
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Torpedo"
                 "Illicit"
                 "Modification"
@@ -4713,11 +4722,12 @@ exportObj.basicCardData = ->
             ship: "StarViper-class Attack Platform"
             skill: 4
             points: 10
-            loadout: 6
+            loadout: 10
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Torpedo"
                 "Illicit"
                 "Modification"
@@ -4730,10 +4740,11 @@ exportObj.basicCardData = ->
             ship: "StarViper-class Attack Platform"
             skill: 3
             points: 11
-            loadout: 9
+            loadout: 11
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Torpedo"
                 "Illicit"
                 "Modification"
@@ -4746,9 +4757,10 @@ exportObj.basicCardData = ->
             ship: "StarViper-class Attack Platform"
             skill: 2
             points: 10
-            loadout: 7
+            loadout: 9
             slots: [
                 "Sensor"
+                "Tech"
                 "Torpedo"
                 "Illicit"
                 "Modification"
@@ -4780,8 +4792,8 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "YV-666 Light Freighter"
             skill: 4
-            points: 16
-            loadout: 18
+            points: 17
+            loadout: 21
             keyword: ["Bounty Hunter"]
             slots: [
                 "Talent"
@@ -4932,11 +4944,12 @@ exportObj.basicCardData = ->
             ship: "Alpha-Class Star Wing"
             skill: 4
             points: 11
-            loadout: 16
+            loadout: 19
             slots: [
                 "Talent"
                 "Sensor"
                 "Missile"
+                "Modification"
                 "Modification"
                 "Configuration"
             ]
@@ -4949,11 +4962,12 @@ exportObj.basicCardData = ->
             ship: "Alpha-Class Star Wing"
             skill: 3
             points: 10
-            loadout: 13
+            loadout: 15
             slots: [
                 "Talent"
                 "Sensor"
                 "Missile"
+                "Modification"
                 "Modification"
                 "Configuration"
             ]
@@ -4965,11 +4979,12 @@ exportObj.basicCardData = ->
             ship: "Alpha-Class Star Wing"
             skill: 3
             points: 11
-            loadout: 17
+            loadout: 19
             slots: [
                 "Talent"
                 "Sensor"
                 "Missile"
+                "Modification"
                 "Modification"
                 "Configuration"
             ]
@@ -4981,10 +4996,11 @@ exportObj.basicCardData = ->
             ship: "Alpha-Class Star Wing"
             skill: 2
             points: 9
-            loadout: 8
+            loadout: 9
             slots: [
                 "Sensor"
                 "Missile"
+                "Modification"
                 "Modification"
                 "Configuration"
             ]
@@ -5137,8 +5153,8 @@ exportObj.basicCardData = ->
             ship: "TIE Advanced x1"
             skill: 6
             keyword: ["Dark Side","Sith"]
-            points: 15
-            loadout: 7
+            points: 16
+            loadout: 10
             force: 3
             slots: [
                 "Force"
@@ -5173,7 +5189,7 @@ exportObj.basicCardData = ->
             ship: "TIE Advanced x1"
             skill: 4
             points: 10
-            loadout: 7
+            loadout: 9
             slots: [
                 "Talent"
                 "Sensor"
@@ -5189,7 +5205,7 @@ exportObj.basicCardData = ->
             ship: "TIE Advanced x1"
             skill: 3
             points: 10
-            loadout: 11
+            loadout: 13
             slots: [
                 "Sensor"
                 "Missile"
@@ -5232,8 +5248,8 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE/in Interceptor"
             skill: 6
-            points: 12
-            loadout: 8
+            points: 13
+            loadout: 10
             slots: [
                 "Talent"
                 "Talent"
@@ -5262,8 +5278,8 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE/in Interceptor"
             skill: 4
-            points: 10
-            loadout: 10
+            points: 9
+            loadout: 6
             slots: [
                 "Talent"
                 "Modification"
@@ -5290,8 +5306,8 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE Reaper"
             skill: 4
-            points: 13
-            loadout: 19
+            points: 12
+            loadout: 15
             slots: [
                 "Talent"
                 "Crew"
@@ -5422,7 +5438,7 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE/ca Punisher"
             skill: 5
-            points: 15
+            points: 14
             loadout: 20
             slots: [
                 "Talent"
@@ -5480,11 +5496,12 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE/d Defender"
             skill: 4
-            points: 17
-            loadout: 12
+            points: 16
+            loadout: 8
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Cannon"
                 "Cannon"
                 "Missile"
@@ -5500,10 +5517,11 @@ exportObj.basicCardData = ->
             ship: "TIE/d Defender"
             skill: 4
             points: 16
-            loadout: 9
+            loadout: 11
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Cannon"
                 "Missile"
                 "Modification"
@@ -5523,6 +5541,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Cannon"
                 "Missile"
                 "Modification"
@@ -5540,6 +5559,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Cannon"
                 "Missile"
                 "Modification"
@@ -5557,6 +5577,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Sensor"
                 "Cannon"
+                "Tech"
                 "Missile"
                 "Modification"
                 "Configuration"
@@ -5574,6 +5595,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Gunner"
                 "Modification"
             ]
@@ -5590,6 +5612,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Gunner"
                 "Modification"
             ]
@@ -5605,6 +5628,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Gunner"
                 "Modification"
             ]
@@ -5619,6 +5643,7 @@ exportObj.basicCardData = ->
             loadout: 10
             slots: [
                 "Sensor"
+                "Tech"
                 "Gunner"
                 "Modification"
             ]
@@ -5685,7 +5710,7 @@ exportObj.basicCardData = ->
             ship: "TIE/sa Bomber"
             skill: 2
             points: 9
-            loadout: 12
+            loadout: 13
             slots: [
                 "Torpedo"
                 "Missile"
@@ -5735,7 +5760,7 @@ exportObj.basicCardData = ->
             ship: "TIE/sk Striker"
             skill: 4
             points: 10
-            loadout: 10
+            loadout: 12
             slots: [
                 "Gunner"
                 "Device"
@@ -5749,7 +5774,7 @@ exportObj.basicCardData = ->
             ship: "TIE/sk Striker"
             skill: 4
             points: 10
-            loadout: 11
+            loadout: 13
             slots: [
                 "Talent"
                 "Gunner"
@@ -5766,7 +5791,7 @@ exportObj.basicCardData = ->
             ship: "TIE/sk Striker"
             skill: 5
             points: 11
-            loadout: 17
+            loadout: 19
             slots: [
                 "Talent"
                 "Gunner"
@@ -5782,7 +5807,7 @@ exportObj.basicCardData = ->
             ship: "TIE/sk Striker"
             skill: 3
             points: 9
-            loadout: 8
+            loadout: 10
             slots: [
                 "Talent"
                 "Gunner"
@@ -5797,7 +5822,7 @@ exportObj.basicCardData = ->
             ship: "TIE/sk Striker"
             skill: 1
             points: 8
-            loadout: 4
+            loadout: 5
             slots: [
                 "Gunner"
                 "Device"
@@ -5832,8 +5857,8 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "VT-49 Decimator"
             skill: 3
-            points: 17
-            loadout: 18
+            points: 16
+            loadout: 14
             slots: [
                 "Talent"
                 "Torpedo"
@@ -6038,7 +6063,7 @@ exportObj.basicCardData = ->
             ship: "TIE/ln Fighter"
             skill: 2
             points: 5
-            loadout: 2
+            loadout: 0
             slots: [
                 "Modification"
             ]
@@ -6076,8 +6101,8 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "T-70 X-wing"
             skill: 6
-            points: 18
-            loadout: 24
+            points: 17
+            loadout: 20
             charge: 1
             recurring: 1
             slots: [
@@ -6143,7 +6168,7 @@ exportObj.basicCardData = ->
             force: 2
             keyword: ["Dark Side"]
             points: 16
-            loadout: 10
+            loadout: 12
             applies_condition: '''I'll Show You the Dark Side'''.canonicalize()
             slots: [
                 "Force"
@@ -6179,7 +6204,7 @@ exportObj.basicCardData = ->
             faction: "First Order"
             ship: "Upsilon-Class Command Shuttle"
             skill: 2
-            points: 18
+            points: 17
             loadout: 22
             slots: [
                 "Tech"
@@ -6199,8 +6224,8 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "RZ-2 A-wing"
             skill: 5
-            points: 10
-            loadout: 8
+            points: 9
+            loadout: 5
             slots: [
                 "Talent"
                 "Talent"
@@ -6241,8 +6266,8 @@ exportObj.basicCardData = ->
             faction: "First Order"
             ship: "TIE/sf Fighter"
             skill: 4
-            points: 12
-            loadout: 19
+            points: 11
+            loadout: 15
             slots: [
                 "Talent"
                 "Sensor"
@@ -6284,7 +6309,7 @@ exportObj.basicCardData = ->
             keyword: ["Light Side"]
             skill: 5
             points: 19
-            loadout: 21
+            loadout: 23
             force: 2
             slots: [
                 "Force"
@@ -6292,7 +6317,7 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Crew"
                 "Crew"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Illicit"
                 "Illicit"
@@ -6314,7 +6339,7 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Crew"
                 "Crew"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Illicit"
                 "Illicit"
@@ -6329,14 +6354,14 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "Scavenged YT-1300"
             skill: 4
-            points: 17
-            loadout: 18
+            points: 16
+            loadout: 14
             slots: [
                 "Talent"
                 "Missile"
                 "Crew"
                 "Crew"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Illicit"
                 "Illicit"
@@ -6396,8 +6421,8 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "MG-100 StarFortress"
             skill: 4
-            points: 17
-            loadout: 28
+            points: 15
+            loadout: 18
             slots: [
                 "Talent"
                 "Sensor"
@@ -6417,7 +6442,7 @@ exportObj.basicCardData = ->
             faction: "First Order"
             ship: "Upsilon-Class Command Shuttle"
             skill: 4
-            points: 18
+            points: 17
             loadout: 25
             slots: [
                 "Talent"
@@ -6506,8 +6531,8 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "T-70 X-wing"
             skill: 4
-            points: 13
-            loadout: 17
+            points: 12
+            loadout: 14
             slots: [
                 "Talent"
                 "Torpedo"
@@ -6525,7 +6550,7 @@ exportObj.basicCardData = ->
             ship: "T-70 X-wing"
             skill: 3
             points: 11
-            loadout: 9
+            loadout: 11
             slots: [
                 "Talent"
                 "Astromech"
@@ -6786,8 +6811,8 @@ exportObj.basicCardData = ->
             ship: "Delta-7 Aethersprite"
             skill: 6
             force: 3
-            points: 14
-            loadout: 12
+            points: 13
+            loadout: 8
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -6826,8 +6851,8 @@ exportObj.basicCardData = ->
             ship: "Delta-7 Aethersprite"
             skill: 4
             force: 1
-            points: 10
-            loadout: 10
+            points: 11
+            loadout: 6
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -6902,7 +6927,7 @@ exportObj.basicCardData = ->
             ship: "Vulture-class Droid Fighter"
             skill: 1
             points: 5
-            loadout: 2
+            loadout: 3
             keyword: ["Droid"]
             slots: [
                 "Missile"
@@ -6936,7 +6961,7 @@ exportObj.basicCardData = ->
             faction: "First Order"
             ship: "Upsilon-Class Command Shuttle"
             skill: 1
-            points: 16
+            points: 15
             loadout: 15
             charge: 1
             recurring: 1
@@ -6958,7 +6983,7 @@ exportObj.basicCardData = ->
             faction: "First Order"
             ship: "Upsilon-Class Command Shuttle"
             skill: 4
-            points: 17
+            points: 16
             loadout: 19
             charge: 2
             slots: [
@@ -6981,7 +7006,7 @@ exportObj.basicCardData = ->
             ship: "TIE/vn Silencer"
             skill: 3
             points: 14
-            loadout: 15
+            loadout: 17
             slots: [
                 "Tech"
                 "Torpedo"
@@ -6997,8 +7022,8 @@ exportObj.basicCardData = ->
             faction: "First Order"
             ship: "TIE/vn Silencer"
             skill: 4
-            points: 14
-            loadout: 13
+            points: 13
+            loadout: 8
             slots: [
                 "Talent"
                 "Tech"
@@ -7032,7 +7057,7 @@ exportObj.basicCardData = ->
             ship: "TIE/vn Silencer"
             skill: 1
             points: 11
-            loadout: 5
+            loadout: 7
             slots: [
                 "Tech"
                 "Torpedo"
@@ -7047,7 +7072,7 @@ exportObj.basicCardData = ->
             ship: "TIE/vn Silencer"
             skill: 4
             points: 12
-            loadout: 5
+            loadout: 7
             slots: [
                 "Talent"
                 "Tech"
@@ -7064,7 +7089,7 @@ exportObj.basicCardData = ->
             ship: "Upsilon-Class Command Shuttle"
             skill: 2
             points: 15
-            loadout: 10
+            loadout: 18
             slots: [
                 "Tech"
                 "Tech"
@@ -7085,7 +7110,7 @@ exportObj.basicCardData = ->
             skill: 3
             charge: 2
             recurring: 1
-            points: 17
+            points: 16
             loadout: 17
             slots: [
                 "Tech"
@@ -7123,6 +7148,7 @@ exportObj.basicCardData = ->
             points: 15
             loadout: 22
             slots: [
+                "Sensor"
                 "Tech"
                 "Crew"
                 "Gunner"
@@ -7140,8 +7166,9 @@ exportObj.basicCardData = ->
             ship: "MG-100 StarFortress"
             skill: 3
             points: 15
-            loadout: 19
+            loadout: 20
             slots: [
+                "Sensor"
                 "Tech"
                 "Crew"
                 "Gunner"
@@ -7160,8 +7187,9 @@ exportObj.basicCardData = ->
             ship: "MG-100 StarFortress"
             skill: 3
             points: 16
-            loadout: 23
+            loadout: 24
             slots: [
+                "Sensor"
                 "Sensor"
                 "Tech"
                 "Crew"
@@ -7180,8 +7208,9 @@ exportObj.basicCardData = ->
             ship: "MG-100 StarFortress"
             skill: 2
             points: 17
-            loadout: 27
+            loadout: 28
             slots: [
+                "Sensor"
                 "Tech"
                 "Crew"
                 "Gunner"
@@ -7213,7 +7242,7 @@ exportObj.basicCardData = ->
             ship: "T-70 X-wing"
             skill: 3
             points: 12
-            loadout: 10
+            loadout: 12
             charge: 1
             recurring: 1
             slots: [
@@ -7250,7 +7279,7 @@ exportObj.basicCardData = ->
             ship: "T-70 X-wing"
             skill: 5
             points: 14
-            loadout: 16
+            loadout: 18
             slots: [
                 "Talent"
                 "Astromech"
@@ -7268,8 +7297,8 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "T-70 X-wing"
             skill: 5
-            points: 14
-            loadout: 16
+            points: 13
+            loadout: 12
             slots: [
                 "Talent"
                 "Astromech"
@@ -7286,7 +7315,7 @@ exportObj.basicCardData = ->
             ship: "RZ-2 A-wing"
             skill: 3
             points: 9
-            loadout: 8
+            loadout: 10
             slots: [
                 "Talent"
                 "Talent"
@@ -7302,7 +7331,7 @@ exportObj.basicCardData = ->
             ship: "RZ-2 A-wing"
             skill: 1
             points: 8
-            loadout: 3
+            loadout: 4
             slots: [
                 "Talent"
                 "Tech"
@@ -7514,8 +7543,8 @@ exportObj.basicCardData = ->
             ship: "Delta-7 Aethersprite"
             skill: 4
             force: 3
-            points: 11
-            loadout: 10
+            points: 10
+            loadout: 8
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -7533,8 +7562,8 @@ exportObj.basicCardData = ->
             faction: "Galactic Republic"
             ship: "V-19 Torrent Starfighter"
             skill: 4
-            points: 8
-            loadout: 11
+            points: 7
+            loadout: 7
             keyword: ["Clone"]
             slots: [
                 "Talent"
@@ -7601,11 +7630,12 @@ exportObj.basicCardData = ->
             faction: "Galactic Republic"
             ship: "V-19 Torrent Starfighter"
             skill: 2
-            points: 8
-            loadout: 13
+            points: 9
+            loadout: 8
             keyword: ["Clone"]
             slots: [
                 "Talent"
+                "Missile"
                 "Missile"
                 "Modification"
                 "Modification"
@@ -7638,6 +7668,7 @@ exportObj.basicCardData = ->
             loadout: 2
             keyword: ["Clone"]
             slots: [
+                "Talent"
                 "Missile"
                 "Modification"
                 "Modification"
@@ -7652,13 +7683,14 @@ exportObj.basicCardData = ->
             skill: 4
             force: 1
             points: 9
-            loadout: 7
+            loadout: 9
             keyword: ["Light Side"]
             slots: [
                 "Force"
                 "Talent"
                 "Torpedo"
                 "Sensor"
+                "Tech"
                 "Astromech"
                 "Modification"
             ]
@@ -7669,12 +7701,13 @@ exportObj.basicCardData = ->
             faction: "Galactic Republic"
             ship: "Naboo Royal N-1 Starfighter"
             skill: 2
-            points: 8
-            loadout: 6
+            points: 7
+            loadout: 3
             slots: [
                 "Talent"
                 "Torpedo"
                 "Sensor"
+                "Tech"
                 "Astromech"
                 "Modification"
             ]
@@ -7796,13 +7829,14 @@ exportObj.basicCardData = ->
             faction: "Galactic Republic"
             ship: "Naboo Royal N-1 Starfighter"
             skill: 1
-            points: 9
-            loadout: 9
+            points: 8
+            loadout: 4
             applies_condition: '''Decoyed'''.canonicalize()
             slots: [
                 "Talent"
                 "Torpedo"
                 "Sensor"
+                "Tech"
                 "Astromech"
                 "Modification"
             ]
@@ -7816,11 +7850,12 @@ exportObj.basicCardData = ->
             ship: "Naboo Royal N-1 Starfighter"
             skill: 3
             points: 10
-            loadout: 14
+            loadout: 16
             slots: [
                 "Talent"
                 "Torpedo"
                 "Sensor"
+                "Tech"
                 "Astromech"
                 "Modification"
             ]
@@ -7834,11 +7869,12 @@ exportObj.basicCardData = ->
             ship: "Naboo Royal N-1 Starfighter"
             skill: 4
             points: 10
-            loadout: 12
+            loadout: 13
             slots: [
                 "Talent"
                 "Torpedo"
                 "Sensor"
+                "Tech"
                 "Astromech"
                 "Modification"
             ]
@@ -7858,6 +7894,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Torpedo"
                 "Sensor"
+                "Tech"
                 "Astromech"
                 "Modification"
             ]
@@ -7870,13 +7907,14 @@ exportObj.basicCardData = ->
             ship: "Sith Infiltrator"
             skill: 3
             force: 3
-            points: 15
-            loadout: 10
+            points: 14
+            loadout: 8
             keyword: ["Dark Side","Sith"]
             slots: [
                 "Force"
                 "Force"
                 "Sensor"
+                "Tech"
                 "Crew"
                 "Crew"
                 "Device"
@@ -7891,11 +7929,12 @@ exportObj.basicCardData = ->
             faction: "Separatist Alliance"
             ship: "Sith Infiltrator"
             skill: 3
-            points: 13
-            loadout: 13
+            points: 12
+            loadout: 7
             keyword: ["Droid"]
             slots: [
                 "Sensor"
+                "Tech"
                 "Torpedo"
                 "Crew"
                 "Crew"
@@ -8168,8 +8207,8 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "Resistance Transport"
             skill: 4
-            points: 12
-            loadout: 18
+            points: 11
+            loadout: 13
             slots: [
                 "Talent"
                 "Tech"
@@ -8214,6 +8253,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Modification"
                 "Modification"
+                "Configuration"
             ]
         }
         {
@@ -8228,6 +8268,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Modification"
                 "Modification"
+                "Configuration"
             ]
         }
         {
@@ -8237,12 +8278,13 @@ exportObj.basicCardData = ->
             faction: "Separatist Alliance"
             ship: "Nantex-Class Starfighter"
             skill: 2
-            points: 8
-            loadout: 5
+            points: 9
+            loadout: 11
             slots: [
                 "Talent"
                 "Modification"
                 "Modification"
+                "Configuration"
             ]
         }
         {
@@ -8259,6 +8301,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Modification"
                 "Modification"
+                "Configuration"
             ]
         }
         {
@@ -8276,6 +8319,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Modification"
                 "Modification"
+                "Configuration"
             ]
         }
         {
@@ -8292,6 +8336,7 @@ exportObj.basicCardData = ->
                 "Talent"
                 "Modification"
                 "Modification"
+                "Configuration"
             ]
         }
         {
@@ -8302,8 +8347,8 @@ exportObj.basicCardData = ->
             ship: "BTL-B Y-wing"
             skill: 6
             force: 3
-            points: 13
-            loadout: 16
+            points: 12
+            loadout: 14
             keyword: ["Jedi", "Light Side"]
             slots: [
                 "Force"
@@ -8457,7 +8502,7 @@ exportObj.basicCardData = ->
             ship: "CR90 Corellian Corvette"
             skill: 8
             engagement: 0
-            points: 36
+            points: 35
             loadout: 40
             slots: [
                 "Command"
@@ -8523,7 +8568,7 @@ exportObj.basicCardData = ->
             ship: "Raider-class Corvette"
             skill: 8
             engagement: 0
-            points: 39
+            points: 38
             loadout: 50
             slots: [
                 "Command"
@@ -8607,7 +8652,7 @@ exportObj.basicCardData = ->
             ship: "Gozanti-class Cruiser"
             skill: 7
             engagement: 1
-            points: 26
+            points: 25
             loadout: 40
             slots: [
                 "Command"
@@ -8689,8 +8734,8 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Fireball"
             skill: 4
-            points: 10
-            loadout: 15
+            points: 11
+            loadout: 18
             slots: [
                 "Talent"
                 "Missile"
@@ -8708,8 +8753,8 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Fireball"
             skill: 1
-            points: 6
-            loadout: 5
+            points: 7
+            loadout: 10
             keyword: ["Droid"]
             slots: [
                 "Missile"
@@ -8725,8 +8770,8 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "Fireball"
             skill: 2
-            points: 7
-            loadout: 5
+            points: 6
+            loadout: 3
             slots: [
                 "Missile"
                 "Astromech"
@@ -8741,8 +8786,8 @@ exportObj.basicCardData = ->
             unique: true
             skill: 6
             ship: "TIE/ba Interceptor"
-            points: 14
-            loadout: 17
+            points: 13
+            loadout: 14
             slots: [
                 "Talent"
                 "Talent"
@@ -8759,8 +8804,8 @@ exportObj.basicCardData = ->
             unique: true
             skill: 5
             ship: "TIE/ba Interceptor"
-            points: 13
-            loadout: 15
+            points: 12
+            loadout: 12
             slots: [
                 "Talent"
                 "Talent"
@@ -8827,7 +8872,7 @@ exportObj.basicCardData = ->
             skill: 2
             ship: "TIE/vn Silencer"
             points: 13
-            loadout: 8
+            loadout: 11
             slots: [
                 "Tech"
                 "Torpedo"
@@ -8845,8 +8890,8 @@ exportObj.basicCardData = ->
             charge: 1
             recurring: 1
             ship: "RZ-2 A-wing"
-            points: 11
-            loadout: 14
+            points: 10
+            loadout: 8
             slots: [
                 "Talent"
                 "Talent"
@@ -8863,8 +8908,8 @@ exportObj.basicCardData = ->
             unique: true
             skill: 2
             ship: "RZ-2 A-wing"
-            points: 9
-            loadout: 9
+            points: 8
+            loadout: 5
             slots: [
                 "Talent"
                 "Missile"
@@ -8880,7 +8925,7 @@ exportObj.basicCardData = ->
             skill: 5
             ship: "MG-100 StarFortress"
             points: 16
-            loadout: 21
+            loadout: 24
             charge: 1
             recurring: 1
             slots: [
@@ -8972,7 +9017,7 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Crew"
                 "Crew"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Illicit"
                 "Modification"
@@ -9006,7 +9051,7 @@ exportObj.basicCardData = ->
             skill: 2
             ship: "TIE/sk Striker"
             points: 9
-            loadout: 14
+            loadout: 16
             slots: [
                 "Gunner"
                 "Device"
@@ -9042,8 +9087,8 @@ exportObj.basicCardData = ->
             unique: true
             skill: 5
             ship: "TIE/sf Fighter"
-            points: 13
-            loadout: 25
+            points: 12
+            loadout: 20
             slots: [
                 "Talent"
                 "Sensor"
@@ -9184,10 +9229,11 @@ exportObj.basicCardData = ->
             faction: "Separatist Alliance"
             skill: 1
             ship: "HMP Droid Gunship"
-            points: 10
-            loadout: 13
+            points: 9
+            loadout: 7
             keyword: ["Droid"]
             slots: [
+                "Missile"
                 "Missile"
                 "Device"
                 "Modification"
@@ -9212,8 +9258,8 @@ exportObj.basicCardData = ->
             faction: "Separatist Alliance"
             skill: 3
             ship: "HMP Droid Gunship"
-            points: 11
-            loadout: 15
+            points: 10
+            loadout: 12
             keyword: ["Droid"]
             slots: [
                 "Missile"
@@ -9231,7 +9277,7 @@ exportObj.basicCardData = ->
             max_per_squad: 2
             ship: "HMP Droid Gunship"
             points: 10
-            loadout: 12
+            loadout: 13
             keyword: ["Droid"]
             slots: [
                 "Cannon"
@@ -9267,8 +9313,8 @@ exportObj.basicCardData = ->
             skill: 3
             unique: true
             ship: "HMP Droid Gunship"
-            points: 11
-            loadout: 17
+            points: 10
+            loadout: 13
             keyword: ["Droid"]
             slots: [
                 "Missile"
@@ -9287,8 +9333,8 @@ exportObj.basicCardData = ->
             skill: 3
             max_per_squad: 2
             ship: "HMP Droid Gunship"
-            points: 10
-            loadout: 12
+            points: 9
+            loadout: 9
             keyword: ["Droid"]
             slots: [
                 "Missile"
@@ -9352,8 +9398,8 @@ exportObj.basicCardData = ->
             charge: 2
             recurring: 1
             ship: "LAAT/i Gunship"
-            points: 13
-            loadout: 16
+            points: 12
+            loadout: 13
             keyword: ["Clone"]
             slots: [
                 "Talent"
@@ -9432,7 +9478,7 @@ exportObj.basicCardData = ->
             unique: true
             ship: "TIE/rb Heavy"
             points: 10
-            loadout: 9
+            loadout: 13
             slots: [
                 "Cannon"
                 "Cannon"
@@ -9448,8 +9494,8 @@ exportObj.basicCardData = ->
             skill: 4
             unique: true
             ship: "TIE/rb Heavy"
-            points: 11
-            loadout: 17
+            points: 10
+            loadout: 15
             slots: [
                 "Talent"
                 "Cannon"
@@ -9506,7 +9552,7 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Droid Tri-fighter"
             points: 10
-            loadout: 12
+            loadout: 14
             slots: [
                 "Talent"
                 "Sensor"
@@ -9616,7 +9662,7 @@ exportObj.basicCardData = ->
             skill: 5
             charge: 4
             ship: "Firespray-class Patrol Craft"
-            points: 19
+            points: 18
             loadout: 12
             keyword: ["Bounty Hunter"]
             slots: [
@@ -9638,7 +9684,7 @@ exportObj.basicCardData = ->
             skill: 6
             unique: true
             ship: "Firespray-class Patrol Craft"
-            points: 20
+            points: 19
             loadout: 20
             keyword: ["Bounty Hunter"]
             slots: [
@@ -9689,8 +9735,8 @@ exportObj.basicCardData = ->
             skill: 3
             unique: true
             ship: "Nimbus-class V-wing"
-            points: 8
-            loadout: 7
+            points: 7
+            loadout: 6
             slots: [
                 "Astromech"
                 "Modification"
@@ -9723,8 +9769,8 @@ exportObj.basicCardData = ->
             skill: 5
             unique: true
             ship: "Nimbus-class V-wing"
-            points: 9
-            loadout: 8
+            points: 8
+            loadout: 7
             keyword: ["Clone"]
             slots: [
                 "Talent"
@@ -9741,7 +9787,7 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Nimbus-class V-wing"
             points: 9
-            loadout: 9
+            loadout: 11
             keyword: ["Clone"]
             slots: [
                 "Talent"
@@ -9776,7 +9822,7 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Eta-2 Actis"
             points: 10
-            loadout: 8
+            loadout: 11
             force: 3
             keyword: ["Jedi", "Light Side"]
             slots: [
@@ -9795,8 +9841,8 @@ exportObj.basicCardData = ->
             skill: 4
             unique: true
             ship: "Eta-2 Actis"
-            points: 12
-            loadout: 14
+            points: 11
+            loadout: 11
             force: 2
             keyword: ["Jedi", "Light Side"]
             slots: [
@@ -9816,7 +9862,7 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Eta-2 Actis"
             points: 11
-            loadout: 11
+            loadout: 14
             force: 2
             keyword: ["Jedi", "Light Side"]
             slots: [
@@ -9836,8 +9882,8 @@ exportObj.basicCardData = ->
             unique: true
             ship: "Eta-2 Actis"
             force: 3
-            points: 12
-            loadout: 12
+            points: 11
+            loadout: 10
             keyword: ["Jedi", "Light Side"]
             slots: [
                 "Force"
@@ -9857,7 +9903,7 @@ exportObj.basicCardData = ->
             force: 3
             ship: "Eta-2 Actis"
             points: 12
-            loadout: 10
+            loadout: 13
             keyword: ["Jedi", "Light Side", "Dark Side"]
             slots: [
                 "Force"
@@ -9918,7 +9964,7 @@ exportObj.basicCardData = ->
             skill: 1
             ship: "RZ-2 A-wing"
             points: 8
-            loadout: 4
+            loadout: 5
             slots: [
                 "Talent"
                 "Missile"
@@ -9950,7 +9996,7 @@ exportObj.basicCardData = ->
             skill: 4
             ship: "RZ-2 A-wing"
             points: 8
-            loadout: 3
+            loadout: 4
             slots: [
                 "Talent"
                 "Missile"
@@ -9965,8 +10011,8 @@ exportObj.basicCardData = ->
             unique: true
             skill: 5
             ship: "RZ-2 A-wing"
-            points: 10
-            loadout: 11
+            points: 9
+            loadout: 8
             slots: [
                 "Talent"
                 "Talent"
@@ -10018,8 +10064,8 @@ exportObj.basicCardData = ->
             keyword: ["Spectre"]
             ship: "A/SF-01 B-wing"
             skill: 6
-            points: 15
-            loadout: 21
+            points: 14
+            loadout: 16
             slots: [
                 "Talent"
                 "Talent"
@@ -10041,8 +10087,8 @@ exportObj.basicCardData = ->
             ship: "RZ-1 A-wing"
             keyword: ["Spectre"]
             skill: 6
-            points: 12
-            loadout: 15
+            points: 11
+            loadout: 10
             slots: [
                 "Talent"
                 "Talent"
@@ -10058,8 +10104,8 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "RZ-1 A-wing"
             skill: 4
-            points: 11
-            loadout: 16
+            points: 10
+            loadout: 12
             slots: [
                 "Talent"
                 "Talent"
@@ -10094,12 +10140,13 @@ exportObj.basicCardData = ->
             skill: 5
             charge: 1
             recurring: -1
-            points: 17
-            loadout: 11
+            points: 15
+            loadout: 6
             slots: [
                 "Talent"
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Cannon"
                 "Missile"
                 "Modification"
@@ -10147,7 +10194,7 @@ exportObj.basicCardData = ->
             skill: 3
             force: 1
             points: 9
-            loadout: 5
+            loadout: 7
             slots: [
                 "Force"
                 "Crew"
@@ -10235,7 +10282,7 @@ exportObj.basicCardData = ->
             ship: "RZ-1 A-wing"
             skill: 4
             points: 9
-            loadout: 10
+            loadout: 12
             slots: [
                 "Talent"
                 "Talent"
@@ -10361,6 +10408,7 @@ exportObj.basicCardData = ->
             slots: [
                 "Force"
                 "Force"
+                "Tech"
                 "Cannon"
                 "Missile"
                 "Modification"
@@ -10374,11 +10422,12 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE/d Defender"
             skill: 3
-            points: 16
-            loadout: 10
+            points: 15
+            loadout: 7
             slots: [
                 "Talent"
                 "Sensor"
+                "Tech"
                 "Cannon"
                 "Missile"
                 "Modification"
@@ -10464,8 +10513,8 @@ exportObj.basicCardData = ->
             ship: "Trident-class Assault Ship"
             skill: 8
             engagement: 0
-            points: 26
-            loadout: 45
+            points: 25
+            loadout: 40
             slots: [
                 "Command"
                 "Torpedo"
@@ -10508,8 +10557,8 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "BTA-NR2 Y-wing"
             skill: 5
-            points: 10
-            loadout: 16
+            points: 11
+            loadout: 20
             charge: 1
             recurring: 1
             slots: [
@@ -10698,8 +10747,8 @@ exportObj.basicCardData = ->
             keyword: ["Dark Side", "Light Side"]
             skill: 5
             force: 3
-            points: 15
-            loadout: 15
+            points: 14
+            loadout: 12
             slots: [
                 "Force"
                 "Force"
@@ -10717,8 +10766,8 @@ exportObj.basicCardData = ->
             faction: "First Order"
             ship: "TIE/wi Whisper Modified Interceptor"
             skill: 5
-            points: 13
-            loadout: 17
+            points: 12
+            loadout: 14
             slots: [
                 "Talent"
                 "Cannon"
@@ -10756,7 +10805,7 @@ exportObj.basicCardData = ->
             ship: "TIE/wi Whisper Modified Interceptor"
             skill: 3
             points: 11
-            loadout: 10
+            loadout: 13
             slots: [
                 "Talent"
                 "Missile"
@@ -10774,7 +10823,7 @@ exportObj.basicCardData = ->
             ship: "TIE/wi Whisper Modified Interceptor"
             skill: 4
             points: 10
-            loadout: 5
+            loadout: 8
             slots: [
                 "Talent"
                 "Missile"
@@ -11070,7 +11119,7 @@ exportObj.basicCardData = ->
             ship: "Gauntlet Fighter"
             skill: 2
             points: 15
-            loadout: 20
+            loadout: 18
             unique: true
             keyword: ["Mandalorian"]
             slots: [
@@ -11116,7 +11165,7 @@ exportObj.basicCardData = ->
             ship: "Gauntlet Fighter"
             skill: 4
             points: 16
-            loadout: 20
+            loadout: 22
             unique: true
             keyword: ["Mandalorian"]
             slots: [
@@ -11138,7 +11187,7 @@ exportObj.basicCardData = ->
             ship: "Gauntlet Fighter"
             skill: 2
             points: 15
-            loadout: 20
+            loadout: 18
             unique: true
             keyword: ["Mandalorian"]
             slots: [
@@ -11182,7 +11231,7 @@ exportObj.basicCardData = ->
             ship: "Gauntlet Fighter"
             skill: 1
             points: 15
-            loadout: 20
+            loadout: 18
             keyword: ["Mandalorian"]
             slots: [
                 "Crew"
@@ -11243,7 +11292,7 @@ exportObj.basicCardData = ->
             ship: "Gauntlet Fighter"
             skill: 2
             points: 15
-            loadout: 20
+            loadout: 18
             keyword: ["Mandalorian"]
             slots: [
                 "Crew"
@@ -11285,7 +11334,7 @@ exportObj.basicCardData = ->
             ship: "Gauntlet Fighter"
             skill: 2
             points: 15
-            loadout: 20
+            loadout: 18
             unique: true
             keyword: ["Mandalorian"]
             slots: [
@@ -11306,8 +11355,8 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "Gauntlet Fighter"
             skill: 2
-            points: 16
-            loadout: 18
+            points: 15
+            loadout: 16
             keyword: ["Droid","Spectre"]
             unique: true
             slots: [
@@ -11464,7 +11513,7 @@ exportObj.basicCardData = ->
             skill: 4
             force: 3
             points: 13
-            loadout: 8
+            loadout: 9
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -11499,8 +11548,8 @@ exportObj.basicCardData = ->
             ship: "Delta-7b Aethersprite"
             skill: 4
             force: 2
-            points: 13
-            loadout: 8
+            points: 12
+            loadout: 6
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -11534,8 +11583,8 @@ exportObj.basicCardData = ->
             ship: "Delta-7b Aethersprite"
             skill: 3
             force: 2
-            points: 13
-            loadout: 10
+            points: 12
+            loadout: 8
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -11779,7 +11828,7 @@ exportObj.basicCardData = ->
             ship: "Clone Z-95 Headhunter"
             skill: 5
             points: 8
-            loadout: 11
+            loadout: 13
             keyword: ["Clone"]
             slots: [
                 "Talent"
@@ -11799,7 +11848,7 @@ exportObj.basicCardData = ->
             charge: 2
             recurring: 1
             points: 7
-            loadout: 5
+            loadout: 6
             keyword: ["Clone"]
             slots: [
                 "Talent"
@@ -11816,7 +11865,7 @@ exportObj.basicCardData = ->
             ship: "Clone Z-95 Headhunter"
             skill: 4
             points: 8
-            loadout: 10
+            loadout: 12
             keyword: ["Clone"]
             slots: [
                 "Talent"
@@ -11833,7 +11882,7 @@ exportObj.basicCardData = ->
             ship: "Clone Z-95 Headhunter"
             skill: 3
             points: 9
-            loadout: 17
+            loadout: 21
             keyword: ["Clone"]
             slots: [
                 "Talent"
@@ -11850,7 +11899,7 @@ exportObj.basicCardData = ->
             ship: "Clone Z-95 Headhunter"
             skill: 3
             points: 8
-            loadout: 10
+            loadout: 12
             keyword: ["Clone"]
             slots: [
                 "Talent"
@@ -11867,7 +11916,7 @@ exportObj.basicCardData = ->
             ship: "Clone Z-95 Headhunter"
             skill: 3
             points: 8
-            loadout: 12
+            loadout: 13
             keyword: ["Clone"]
             slots: [
                 "Talent"
@@ -11884,7 +11933,7 @@ exportObj.basicCardData = ->
             ship: "Clone Z-95 Headhunter"
             skill: 3
             points: 8
-            loadout: 10
+            loadout: 11
             keyword: ["Clone"]
             slots: [
                 "Talent"
@@ -11901,7 +11950,7 @@ exportObj.basicCardData = ->
             ship: "Clone Z-95 Headhunter"
             skill: 2
             points: 7
-            loadout: 5
+            loadout: 6
             keyword: ["Clone"]
             slots: [
                 "Sensor"
@@ -11932,7 +11981,7 @@ exportObj.basicCardData = ->
             ship: "Clone Z-95 Headhunter"
             skill: 2
             points: 7
-            loadout: 8
+            loadout: 10
             keyword: ["Clone"]
             slots: [
                 "Sensor"
@@ -11963,7 +12012,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "T-65 X-wing"
             skill: 5
-            points: 16
+            points: 15
             force: 2
             chassis: "Hope"
             upgrades: [
@@ -12014,7 +12063,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "T-65 X-wing"
             skill: 5
-            points: 15
+            points: 13
             chassis: "Hope"
             upgrades: [
                 "Attack Speed (BoY)"
@@ -12165,7 +12214,7 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE/ln Fighter"
             skill: 6
-            points: 9
+            points: 10
             ship_override:
                 hull: 4
             upgrades: [
@@ -12358,7 +12407,7 @@ exportObj.basicCardData = ->
             faction: "Galactic Republic"
             ship: "ARC-170 Starfighter"
             skill: 5
-            points: 13
+            points: 12
             chassis: "Born for This"
             ship_override:
                 shields: 4
@@ -12409,7 +12458,7 @@ exportObj.basicCardData = ->
             faction: "Galactic Republic"
             ship: "Nimbus-class V-wing"
             skill: 5
-            points: 10
+            points: 9
             chassis: "Born for This"
             upgrades: [
                 "Ion Limiter Override"
@@ -12480,7 +12529,7 @@ exportObj.basicCardData = ->
             faction: "Separatist Alliance"
             ship: "Sith Infiltrator"
             skill: 5
-            points: 16
+            points: 15
             force: 3
             keyword: ["Dark Side"]
             upgrades: [
@@ -12551,7 +12600,7 @@ exportObj.basicCardData = ->
             faction: "Separatist Alliance"
             ship: "Droid Tri-fighter"
             skill: 3
-            points: 10
+            points: 9
             upgrades: [
                 "Marksmanship"
                 "Afterburners"
@@ -12566,7 +12615,7 @@ exportObj.basicCardData = ->
             faction: "Separatist Alliance"
             ship: "Droid Tri-fighter"
             skill: 4
-            points: 11
+            points: 10
             upgrades: [
                 "Outmaneuver"
                 "Afterburners"
@@ -12641,8 +12690,8 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "T-65 X-wing"
             skill: 5
-            points: 12
-            loadout: 13
+            points: 13
+            loadout: 18
             slots: [
                 "Talent"
                 "Torpedo"
@@ -12695,7 +12744,7 @@ exportObj.basicCardData = ->
             ship: "RZ-1 A-wing"
             skill: 3
             points: 10
-            loadout: 12
+            loadout: 15
             force: 1
             forcerecurring: 0
             slots: [
@@ -12748,7 +12797,7 @@ exportObj.basicCardData = ->
             ship: "TIE Advanced x1"
             skill: 5
             points: 11
-            loadout: 11
+            loadout: 13
             slots: [
                 "Talent"
                 "Talent"
@@ -12765,8 +12814,8 @@ exportObj.basicCardData = ->
             ship: "TIE/in Interceptor"
             skill: 4
             force: 2
-            points: 13
-            loadout: 14
+            points: 12
+            loadout: 12
             keyword: ["Dark Side"]
             slots: [
                 "Force"
@@ -12820,7 +12869,7 @@ exportObj.basicCardData = ->
                 "Missile"
                 "Crew"
                 "Crew"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Illicit"
                 "Illicit"
@@ -12837,14 +12886,14 @@ exportObj.basicCardData = ->
             skill: 5
             charge: 3
             recurring: 1
-            points: 18
-            loadout: 20
+            points: 17
+            loadout: 17
             slots: [
                 "Talent"
                 "Missile"
                 "Crew"
                 "Crew"
-                "Gunner"
+                "Crew"
                 "Gunner"
                 "Illicit"
                 "Illicit"
@@ -12860,7 +12909,7 @@ exportObj.basicCardData = ->
             ship: "T-70 X-wing"
             skill: 4
             points: 13
-            loadout: 15
+            loadout: 17
             slots: [
                 "Talent"
                 "Missile"
@@ -13005,7 +13054,7 @@ exportObj.basicCardData = ->
             ship: "Droid Tri-fighter"
             skill: 5
             points: 10
-            loadout: 9
+            loadout: 11
             chassis: "Modified for Organics"
             keyword: ["Bounty Hunter"]
             slots: [
@@ -13080,8 +13129,8 @@ exportObj.basicCardData = ->
             ship: "Vulture-class Droid Fighter"
             skill: 1
             charge: 3
-            points: 7
-            loadout: 10
+            points: 6
+            loadout: 4
             keyword: ["Droid"]
             slots: [
                 "Missile"
@@ -13140,7 +13189,7 @@ exportObj.basicCardData = ->
             ship: "Delta-7b Aethersprite"
             skill: 5
             force: 2
-            points: 14
+            points: 13
             loadout: 7
             keyword: ["Jedi","Light Side"]
             slots: [
@@ -13183,7 +13232,7 @@ exportObj.basicCardData = ->
             skill: 4
             force: 2
             points: 10
-            loadout: 8
+            loadout: 11
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -13220,11 +13269,12 @@ exportObj.basicCardData = ->
             ship: "Naboo Royal N-1 Starfighter"
             skill: 3
             points: 9
-            loadout: 11
+            loadout: 13
             slots: [
                 "Talent"
                 "Torpedo"
                 "Sensor"
+                "Tech"
                 "Astromech"
                 "Modification"
             ]
@@ -13513,7 +13563,7 @@ exportObj.basicCardData = ->
             ship: "T-65 X-wing"
             skill: 5
             force: 2
-            points: 16
+            points: 15
             upgrades: [
                 "Instinctive Aim"
                 "Proton Torpedoes"
@@ -13574,7 +13624,7 @@ exportObj.basicCardData = ->
             faction: "Galactic Empire"
             ship: "TIE/sa Bomber"
             skill: 4
-            points: 11
+            points: 10
             upgrades: [
                 "Top Cover (TBE)"
                 "Barrage Rockets"
@@ -13614,12 +13664,13 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "YT-2400 Light Freighter"
             skill: 5
-            points: 19
-            loadout: 20
+            points: 18
+            loadout: 24
             slots: [
                 "Talent"
                 "Missile"
                 "Crew"
+                "Gunner"
                 "Illicit"
                 "Illicit"
                 "Modification"
@@ -13634,7 +13685,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "YT-2400 Light Freighter"
             skill: 5
-            points: 17
+            points: 16
             upgrades: [
                 "Mercenary (YLF)"
                 "Seeker Missiles (YLF)"
@@ -13650,7 +13701,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "YT-2400 Light Freighter"
             skill: 5
-            points: 17
+            points: 16
             upgrades: [
                 "Mercenary (YLF)"
                 "Seeker Missiles (YLF)"
@@ -13666,13 +13717,14 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "YT-2400 Light Freighter"
             skill: 3
-            points: 17
+            points: 16
             loadout: 10
             keyword: ["Droid"]
             slots: [
                 "Talent"
                 "Missile"
                 "Crew"
+                "Gunner"
                 "Illicit"
                 "Illicit"
                 "Modification"
@@ -13687,7 +13739,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "YT-2400 Light Freighter"
             skill: 3
-            points: 16
+            points: 15
             upgrades: [
                 "Efficient Processing (YLF)"
                 "Seeker Missiles (YLF)"
@@ -13710,7 +13762,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "YT-2400 Light Freighter"
             skill: 3
-            points: 16
+            points: 15
             upgrades: [
                 "Efficient Processing (YLF)"
                 "Seeker Missiles (YLF)"
@@ -13733,7 +13785,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "RZ-1 A-wing"
             skill: 3
-            points: 10
+            points: 9
             chassis: "Vectored Cannons"
             upgrades: [
                 "It's A Trap! (BoE)"
@@ -13869,7 +13921,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "A/SF-01 B-wing"
             skill: 5
-            points: 16
+            points: 15
             charge: 2
             recurring: 1
             chassis: "Gyro-Cockpit"
@@ -13924,7 +13976,7 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "T-65 X-wing"
             skill: 6
-            points: 16
+            points: 15
             chassis: "Locked S-Foils"
             ship_override:
                 shields: 3
@@ -14006,7 +14058,7 @@ exportObj.basicCardData = ->
             ship: "TIE/d Defender"
             skill: 4
             charge: 2
-            points: 17
+            points: 16
             chassis: "Chiss Engineering"
             ship_override:
                 actions: [
@@ -14094,7 +14146,7 @@ exportObj.basicCardData = ->
             ship: "TIE/in Interceptor"
             skill: 6
             charge: 2
-            points: 14
+            points: 15
             chassis: "Sensitive Controls"
             upgrades: [
                 "Apex Predator (BoE)"
@@ -14390,7 +14442,7 @@ exportObj.basicCardData = ->
             ship: "Raider-class Corvette"
             skill: 8
             engagement: 0
-            points: 33
+            points: 32
             ship_override:
                 actions: [
                     "Focus"
@@ -14418,7 +14470,7 @@ exportObj.basicCardData = ->
             ship: "Raider-class Corvette"
             skill: 8
             engagement: 0
-            points: 34
+            points: 33
             ship_override:
                 actions: [
                     "Focus"
@@ -14676,7 +14728,7 @@ exportObj.basicCardData = ->
             faction: "First Order"
             ship: "TIE/vn Silencer"
             skill: 5
-            points: 18
+            points: 17
             force: 3
             upgrades: [
                 "Determination (EoD)"
@@ -14804,7 +14856,7 @@ exportObj.basicCardData = ->
             faction: "First Order"
             ship: "TIE/sf Fighter"
             skill: 3
-            points: 11
+            points: 10
             charge: 2
             chassis: "Heavy Weapon Turret (EoD)"
             ship_override:
@@ -14925,7 +14977,7 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "T-70 X-wing"
             skill: 4
-            points: 14
+            points: 13
             chassis: "Adaptive S-Foils"
             ship_override:
                 actions: [
@@ -15084,7 +15136,7 @@ exportObj.basicCardData = ->
             faction: "Resistance"
             ship: "MG-100 StarFortress"
             skill: 2
-            points: 16
+            points: 17
             chassis: "Modular Bombing Magazine"
             ship_override:
                 actions: [
@@ -15131,7 +15183,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Naboo Royal N-1 Starfighter"
             skill: 5
-            points: 11
+            points: 10
             chassis: "Restored Speedster"
             force: 2
             forcerecurring: 0
@@ -15159,7 +15211,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Customized YT-1300 Light Freighter"
             skill: 6
-            points: 16
+            points: 15
             charge: 1
             chassis: "Coaxium Injectors"
             ship_override:
@@ -15265,7 +15317,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Fang Fighter"
             skill: 6
-            points: 15
+            points: 17
             ship_override:
                 hull: 5
             upgrades: [
@@ -15535,6 +15587,170 @@ exportObj.basicCardData = ->
                 "Illicit"
                 "Modification"
                 "Modification"
+            ]
+        }
+        {
+            name: "Hera Syndulla (LaR)"
+            id: 732
+            xwsaddon: "legendsandrelics"
+            unique: true
+            faction: "Rebel Alliance"
+            ship: "VCX-100 Light Freighter"
+            skill: 6
+            points: 18
+            loadout: 20
+            keyword: ["Spectre"]
+            slots: [
+                "Talent"
+                "Talent"
+                "Torpedo"
+                "Sensor"
+                "Turret"
+                "Crew"
+                "Crew"
+                "Gunner"
+                "Modification"
+                "Title"
+            ]
+        }
+        {
+            name: "Carnor Jax"
+            id: 733
+            xwsaddon: "legendsandrelics"
+            unique: true
+            faction: "Galactic Empire"
+            ship: "TIE/in Interceptor"
+            skill: 5
+            force: 1
+            points: 12
+            loadout: 4
+            slots: [
+                "Force"
+                "Modification"
+                "Configuration"
+            ]
+        }
+        {
+            name: "Thweek"
+            id: 734
+            xwsaddon: "legendsandrelics"
+            unique: true
+            faction: "Scum and Villainy"
+            ship: "StarViper-class Attack Platform"
+            skill: 4
+            points: 12
+            loadout: 11
+            slots: [
+                "Talent"
+                "Sensor"
+                "Tech"
+                "Illicit"
+                "Modification"
+                "Torpedo"
+            ]
+        }
+        {
+            name: "Kazuda Xiono (LaR)"
+            id: 735
+            xwsaddon: "legendsandrelics"
+            unique: true
+            faction: "Resistance"
+            ship: "T-70 X-wing"
+            skill: 4
+            points: 12
+            loadout: 13
+            slots: [
+                "Talent"
+                "Astromech"
+                "Modification"
+                "Tech"
+                "Configuration"
+            ]
+        }
+        {
+            name: "Tamara Ryvora"
+            id: 736
+            xwsaddon: "legendsandrelics"
+            unique: true
+            faction: "First Order"
+            ship: "TIE/fo Fighter"
+            skill: 4
+            points: 9
+            loadout: 8
+            slots: [
+                "Talent"
+                "Sensor"
+                "Modification"
+                "Modification"
+                "Tech"
+                "Missile"
+            ]
+        }
+        {
+            name: "Quinlan Vos"
+            id: 737
+            xwsaddon: "legendsandrelics"
+            unique: true
+            faction: "Galactic Republic"
+            ship: "Eta-2 Actis"
+            skill: 4
+            force: 2
+            points: 11
+            loadout: 14
+            keyword: ["Jedi","Light Side","Dark Side"]
+            slots: [
+                "Force"
+                "Force"
+                "Talent"
+                "Astromech"
+                "Illicit"
+                "Modification"
+                "Cannon"
+            ]
+        }
+        {
+            name: "Ursa Wren"
+            id: 738
+            xwsaddon: "legendsandrelics"
+            unique: true
+            faction: "Galactic Republic"
+            ship: "Gauntlet Fighter"
+            skill: 3
+            points: 15
+            loadout: 17
+            keyword: ["Mandalorian"]
+            slots: [
+                "Talent"
+                "Crew"
+                "Gunner"
+                "Illicit"
+                "Modification"
+                "Modification"
+                "Device"
+                "Configuration"
+            ]
+        }
+        {
+            name: "DIS-L9B2"
+            id: 739
+            xwsaddon: "legendsandrelics"
+            unique: true
+            faction: "Separatist Alliance"
+            ship: "Droid Tri-fighter"
+            skill: 6
+            points: 11
+            loadout: 11
+            charge: 1
+            recurring: 1
+            keyword: ["Droid"]
+            slots: [
+                "Talent"
+                "Sensor"
+                "Modification"
+                "Modification"
+                "Cannon"
+                "Missile"
+                "Configuration"
             ]
         }
     ]
@@ -15851,7 +16067,7 @@ exportObj.basicCardData = ->
             name: "Grand Moff Tarkin"
             id: 34
             slot: "Crew"
-            points: 3
+            points: 5
             unique: true
             faction: "Galactic Empire"
             charge: 2
@@ -15898,7 +16114,7 @@ exportObj.basicCardData = ->
             name: "Jabba the Hutt"
             id: 39
             slot: "Crew"
-            points: 11
+            points: 14
             unique: true
             faction: "Scum and Villainy"
             charge: 4
@@ -16232,7 +16448,7 @@ exportObj.basicCardData = ->
             name: "Bistan"
             id: 77
             slot: "Gunner"
-            points: 16
+            points: 50
             unique: true
             faction: "Rebel Alliance"
         }
@@ -16556,7 +16772,7 @@ exportObj.basicCardData = ->
             name: "Trajectory Simulator"
             id: 114
             slot: "Sensor"
-            points: 10
+            points: 8
         }
         {
             name: "Composure"
@@ -17384,7 +17600,7 @@ exportObj.basicCardData = ->
             name: "Biohexacrypt Codes"
             id: 202
             slot: "Tech"
-            points: 1
+            points: 2
             faction: "First Order"
             restrictions: [
                 ["Action", "Lock"]
@@ -17709,7 +17925,7 @@ exportObj.basicCardData = ->
             name: "Delayed Fuses"
             id: 236
             slot: "Modification"
-            points: 1
+            points: 2
         }
         {
             name: "Landing Struts"
@@ -21402,6 +21618,245 @@ exportObj.basicCardData = ->
             slot: "Crew"
             charge: 2
             recurring: 1
+        }
+        {
+            name: "Ahsoka Tano (LaR)"
+            id: 619
+            xwsaddon: "legendsandrelics"
+            unique: true
+            points: 10
+            faction: "Rebel Alliance"
+            slot: "Crew"
+            force: 1
+        }
+        {
+            name: "Thrawn"
+            id: 620
+            xwsaddon: "legendsandrelics"
+            unique: true
+            points: 6
+            faction: "Galactic Empire"
+            slot: "Crew"
+            charge: 2
+            recurring: 1
+            restrictions: [
+                ["Action", "R-Jam"]
+            ]
+        }
+        {
+            name: "Fennec Shand"
+            id: 621
+            xwsaddon: "legendsandrelics"
+            unique: true
+            points: 6
+            faction: "Scum"
+            slot: "Crew"
+            charge: 2
+        }
+        {
+            name: "Zorii Bliss"
+            id: 622
+            xwsaddon: "legendsandrelics"
+            unique: true
+            points: 5
+            faction: "Resistance"
+            slot: "Crew"
+            charge: 1
+            recurring: 1
+            restrictions: [
+                ["Action", "Jam"]
+            ]
+        }
+        {
+            name: "Wedge Antilles"
+            id: 623
+            xwsaddon: "legendsandrelics"
+            unique: true
+            points: 10
+            faction: "Resistance"
+            slot: "Gunner"
+        }
+        {
+            name: "Captive"
+            id: 624
+            xwsaddon: "legendsandrelics"
+            unique: true
+            points: 8
+            faction: ["Galactic Empire","First Order", "Separatist Alliance"]
+            slot: "Crew"
+            charge: 1
+            recurring: 1
+        }
+        {
+            name: "Gravitic Well"
+            id: 625
+            xwsaddon: "legendsandrelics"
+            points: 5
+            standardized: true
+            ship: "Nantex-Class Starfighter"
+            slot: "Configuration"
+        }
+        {
+            name: "R7-T1"
+            id: 626
+            xwsaddon: "legendsandrelics"
+            unique: true
+            points: 5
+            faction: ["Rebel Alliance", "Resistance"]
+            slot: "Astromech"
+            modifier_func: (stats) ->
+                stats.actions.push '*Lock'
+                stats.actions.push 'R-> Boost'
+            restrictions: [
+                ["Action", "W-Lock"]
+                ["Base", "Small"]
+            ]
+        }
+        {
+            name: "Modified R4-P Unit"
+            id: 627
+            xwsaddon: "legendsandrelics"
+            points: 5
+            faction: "Rebel Alliance"
+            slot: "Astromech"
+            charge: 1
+        }
+        {
+            name: "Flight-Assist Astromech"
+            id: 628
+            xwsaddon: "legendsandrelics"
+            points: 3
+            slot: "Astromech"
+            charge: 2
+            restrictions: [
+                ["Base", "Small"]
+            ]
+        }
+        {
+            name: "Unhinged Astromech"
+            id: 629
+            xwsaddon: "legendsandrelics"
+            points: 3
+            slot: "Astromech"
+            modifier_func: (stats) ->
+                if stats.maneuvers[1]?
+                    for turn in [0 ... stats.maneuvers[1].length]
+                        if turn > 4
+                            continue
+                        if stats.maneuvers[3][turn] > 1
+                            stats.maneuvers[3][turn]--
+        }
+        {
+            name: "Roiling Anger"
+            id: 630
+            xwsaddon: "legendsandrelics"
+            points: 2
+            slot: "Force"
+            restrictions: [
+                ["Keyword", "Dark Side"]
+            ]
+        }
+        {
+            name: "Seeker Missiles"
+            id: 631
+            xwsaddon: "legendsandrelics"
+            points: 10
+            slot: "Missile"
+            charge: 4
+            attack: 3
+            range: """2-3"""
+            rangebonus: true
+        }
+        {
+            name: "Targeting Matrix"
+            id: 632
+            xwsaddon: "legendsandrelics"
+            points: 4
+            slot: "Modification"
+        }
+        {
+            name: "Retrofitted Autothrusters"
+            id: 633
+            xwsaddon: "legendsandrelics"
+            points: 6
+            slot: "Modification"
+            charge: 2
+            restrictions: [
+                ["Base", "Small"]
+            ]
+        }
+        {
+            name: "Automated Loaders"
+            id: 634
+            xwsaddon: "legendsandrelics"
+            points: 3
+            slot: "Modification"
+            charge: 1
+            restrictions: [
+                ["Action", "Reload"]
+            ]
+        }
+        {
+            name: "Parting Gift"
+            id: 635
+            xwsaddon: "legendsandrelics"
+            points: 2
+            slot: "Talent"
+        }
+        {
+            name: "Blindspot Targeter"
+            id: 636
+            xwsaddon: "legendsandrelics"
+            points: 8
+            slot: "Sensor"
+        }
+        {
+            name: "Targeting Relay"
+            id: 637
+            xwsaddon: "legendsandrelics"
+            points: 3
+            slot: "Tech"
+            charge: 2
+        }
+        {
+            name: "T-SJ1A Targeting Computer"
+            id: 638
+            xwsaddon: "legendsandrelics"
+            points: 4
+            slot: "Tech"
+            faction: "First Order"
+            charge: 1
+        }
+        {
+            name: "Winged Reversal"
+            id: 639
+            xwsaddon: "legendsandrelics"
+            points: 0
+            slot: "Configuration"
+            charge: 2
+            ship: ["UT-60D U-wing", "Gauntlet Fighter"]
+        }
+        {
+            name: "Precision-Tuned Cannons"
+            id: 640
+            xwsaddon: "legendsandrelics"
+            points: 3
+            attack: 2
+            range: """2-3"""
+            slot: "Cannon"
+        }
+        {
+            name: "Burst Laser Turret"
+            id: 641
+            xwsaddon: "legendsandrelics"
+            points: 4
+            attackt: 2
+            range: """1-2"""
+            slot: "Turret"
+            charge: 2
+            recurring: 1
+            modifier_func: (stats) ->
+                stats.actions.push 'Rotate Arc' if 'Rotate Arc' not in stats.actions
         }
     ]
 

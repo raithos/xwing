@@ -175,7 +175,7 @@ exportObj.translations.English =
         "Intro Card YASB": """
                     <h2>YASB for X-Wing Miniatures</h2>
                     <p>YASB (Yet Another Squad Builder) is a simple, fast, squad builder for X-Wing Miniatures. For more information about the game or game resources, visit <a href="https://xwhub.com/">XW Hub</a>.</p>
-                    <p>XWA Version: 50P-1.1
+                    <p>XWA Version: 50P-2.0
                     <br><a href="https://yasb.app/old/">Link here for the previous points.</a>
                     <br><a href="https://yasb.app/AMG/">Link here for the last AMG points.</a>
                     <br><a href="https://raithos.github.io/">Link here for the last 2.0 points.</a></p>
@@ -1742,6 +1742,30 @@ exportObj.cardLoaders.English = () ->
         "Reaper Squadron Scout":
            display_name: """Reaper Squadron Scout"""
            text: """"""
+        "Hera Syndulla (LaR)":
+           display_name: """Hera Syndulla (LaR)"""
+           text: """After you fully execute a red maneuver, you may coordinate a friendly ship at range 1-3."""
+        "Carnor Jax":
+           display_name: """Carnor Jax"""
+           text: """While an enemy ship at range 0-1 in your %FRONTARC% defends or performs an attack, before the Roll Attack Dice step, you may spend 1 %FORCE%. If you do, that ship's dice cannot be modified."""
+        "Thweek":
+           display_name: """Thweek"""
+           text: """During the System Phase, you may gain 1 tractor token. At the start of the Engagement Phase, you may gain 1 deplete token to remove 1 tractor token."""
+        "Kazuda Xiono (LaR)":
+           display_name: """Kazuda Xiono"""
+           text: """While you defend or perform an attack, if the enemy ship has more damage cards than you have, you may change 1 %FOCUS% result to an %EVADE% or %HIT% result."""
+        "Tamara Ryvora":
+           display_name: """Tamara Ryvora"""
+           text: """While a ship you are locking performs an attack, you may choose 1 attack die. If you do, the attacker rerolls that die."""
+        "Quinlan Vos":
+           display_name: """Quinlan Vos"""
+           text: """After you perform a %BARRELROLL% or %BOOST% action, you may acquire a lock on a ship in your %BULLSEYEARC%."""
+        "Ursa Wren":
+           display_name: """Ursa Wren"""
+           text: """After you acquire a lock on an enemy ship, if there are no enemy ships at range 0-1 of you, you may gain 1 reinforce token."""
+        "DIS-L9B2":
+           display_name: """DIS-L9B2"""
+           text: """At the start of the Engagement Phase, if there is an enemy ship in your %BULLSEYEARC%, you must spend 1 %CHARGE%. During the Engagement Phase, if your %CHARGE% is active, treat your initiative value as 1."""
 
         # Battle of Yavin Pilots
         "Han Solo (BoY)":
@@ -3677,6 +3701,75 @@ exportObj.cardLoaders.English = () ->
         "Chewbacca (AaD)":
            display_name: """Chewbacca"""
            text: """During the System Phase, you may spend 2 %CHARGE% to repair 1 faceup damage card."""
+        "Ahsoka Tano (LaR)":
+           display_name: """Ahsoka Tano"""
+           text: """Before you activate, you may spend 1 %FORCE% to ignore obstacles until the end of this phase. If you do, and you move through an obstacle, you may acquire a lock on an enemy ship in your %FRONTARC% at range 1."""
+        "Thrawn":
+           display_name: """Thrawn"""
+           text: """While you perform a %JAM% or %COORDINATE% action, you may spend 1 %CHARGE% to increase the range requirement for that action by 1. %LINEBREAK% After you perform a %JAM% or %COORDINATE% action, you may spend 2 %CHARGE% to perform a %JAM% or %COORDINATE% action, treating it as red."""
+        "Fennec Shand":
+           display_name: """Fennec Shand"""
+           text: """After you fully execute a maneuver or perform a %BARRELROLL% or %BOOST% action, you may spend 1 %CHARGE%. If you do, choose an enemy ship in your %BULLSEYEARC%. That ship gains 1 strain token, and you may acquire a lock on it."""
+        "Zorii Bliss":
+           display_name: """Zorii Bliss"""
+           text: """After a jammed enemy ship at range 1-2 removes a green token, you may spend 1 %CHARGE% to gain a matching token."""
+        "Wedge Antilles":
+           display_name: """Wedge Antilles"""
+           text: """While you perform a %SINGLETURRETARC% attack, if you are not in the defender's firing arc, the defender rolls 1 fewer defense die."""
+        "Captive":
+           display_name: """Captive"""
+           text: """After you are declared the defender of an attack, you may spend 1 %CHARGE% to assign the attacker 1 deplete token."""
+        "Gravitic Well":
+           display_name: """Gravitic Well"""
+           text: """At the start of the Engagement Phase, if you are tractored, each other small ship at range 0-1 gains 1 strain token. %LINEBREAK% Replace any instance of 'if the defender is tractored' in your pilot ability with 'if you are tractored'."""
+        "R7-T1":
+           display_name: """R7-T1"""
+           text: """ """
+        "Modified R4-P Unit":
+           display_name: """Modified R4-P Unit"""
+           text: """Before you execute a red maneuver, you may spend 1 %CHARGE%. If you do, while you execute that maneuver, reduce its difficulty."""
+        "Flight-Assist Astromech":
+           display_name: """Flight-Assist Astromech"""
+           text: """While you perform a white %BARRELROLL% or white %BOOST% action, you may spend 1 %CHARGE%. If you do, treat the action as red, and use a speed 2 template while performing the action.  """
+        "Unhinged Astromech":
+           display_name: """Unhinged Astromech"""
+           text: """Decrease the difficulty of your speed 3 basic maneuvers [%TURNLEFT%, %BANKLEFT%, %STRAIGHT%, %BANKRIGHT%, %TURNRIGHT%]. """
+        "Roiling Anger":
+           display_name: """Roiling Anger"""
+           text: """At the start of the Engagement Phase, if you are in an enemy ship's %FRONTARC%, you may gain 1 strain token to recover 1 %FORCE%."""
+        "Seeker Missiles":
+           display_name: """Seeker Missiles"""
+           text: """<strong>Attack (%LOCK%):</strong> Spend 1 %CHARGE%. During the Modify Attack Dice step, you may spend up to 2 additional %CHARGE%. Change 1 %FOCUS% result to a %HIT% result for each %CHARGE% spent this way."""
+        "Targeting Matrix":
+           display_name: """Targeting Matrix"""
+           text: """While attacking, at the end of the Neutralize Results step, you may spend 1 %FOCUS% result. If you do, after the attack is resolved, the defender gains 1 strain token."""
+        "Retrofitted Autothrusters":
+           display_name: """Retrofitted Autothrusters"""
+           text: """After you fully execute a speed 3 turn [%TURNLEFT% or %TURNRIGHT%], bank [%BANKLEFT% or %BANKRIGHT%], Tallon Roll [%TROLLLEFT% or %TROLLRIGHT%], or Segnor's Loop [%SLOOPLEFT% or %SLOOPRIGHT%] maneuver, you may spend 1 %CHARGE% to perform a %BARRELROLL% action, even while stressed."""
+        "Automated Loaders":
+           display_name: """Automated Loaders"""
+           text: """After you perform a primary attack, you may spend 1 %CHARGE% to perform a %RELOAD% action."""
+        "Parting Gift":
+           display_name: """Parting Gift"""
+           text: """When you are destroyed, before you are removed, you may spend 1 %CHARGE% on an equipped %DEVICE% upgrade to drop or launch a bomb using a speed 1 straight or bank [%BANKLEFT%, %STRAIGHT%, %BANKRIGHT%] template."""
+        "Blindspot Targeter":
+           display_name: """Blindspot Targeter"""
+           text: """While you perform a primary attack, if you are not in the defender's firing arc, you may change 1 %FOCUS% result to a %HIT% result."""
+        "Targeting Relay":
+           display_name: """Targeting Relay"""
+           text: """After a friendly ship acquires a lock on an enemy ship at range 0-1 of you, you may spend 1 %CHARGE% and gain 1 stress token. If you do, that friendly ship may gain 1 calculate token."""
+        "T-SJ1A Targeting Computer":
+           display_name: """T-SJ1A Targeting Computer"""
+           text: """While you perform a primary attack, if the defender does not have any green tokens, you may spend 1 %CHARGE% and 1 %CRIT% result. If you do, add 2 %HIT% results."""
+        "Winged Reversal":
+           display_name: """Winged Reversal"""
+           text: """After you reveal a turn [%TURNLEFT% or %TURNRIGHT%] maneuver, you may spend 1 %CHARGE%, gain 1 strain token and increase its difficulty. If you do, perform that maneuver as a Tallon Roll [%TROLLLEFT% or %TROLLRIGHT%] maneuver in the same direction instead."""
+        "Precision-Tuned Cannons":
+           display_name: """Precision-Tuned Cannons"""
+           text: """<strong>Attack:</strong> If the defender is in your %BULLSEYEARC%, add 1 %FOCUS% result."""
+        "Burst Laser Turret":
+           display_name: """Burst Laser Turret"""
+           text: """<strong>Attack:</strong> Spend 1 %CHARGE%. You may spend 1 %CHARGE% to roll 1 additional attack die to a maximum of 3."""
 
 
         # Epic upgrades
