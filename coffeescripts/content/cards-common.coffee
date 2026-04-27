@@ -15666,6 +15666,7 @@ exportObj.basicCardData = ->
                 "Modification"
                 "Tech"
                 "Configuration"
+                "HardpointShip"
             ]
         }
         {
