@@ -22040,6 +22040,7 @@ exportObj.basicCardData = ->
         {
             name: '''Guarded'''
             id: 40
+            unique: true
         }
         {
             name: '''Sickening Maneuver'''
