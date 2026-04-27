@@ -6851,8 +6851,8 @@ exportObj.basicCardData = ->
             ship: "Delta-7 Aethersprite"
             skill: 4
             force: 1
-            points: 11
-            loadout: 6
+            points: 10
+            loadout: 10
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -11567,8 +11567,8 @@ exportObj.basicCardData = ->
             ship: "Delta-7b Aethersprite"
             skill: 4
             force: 1
-            points: 12
-            loadout: 9
+            points: 11
+            loadout: 6
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
@@ -12964,7 +12964,7 @@ exportObj.basicCardData = ->
             faction: "Scum and Villainy"
             ship: "Firespray-class Patrol Craft"
             skill: 1
-            points: 17
+            points: 16
             loadout: 12
             slots: [
                 "Cannon"
