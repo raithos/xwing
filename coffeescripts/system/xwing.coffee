@@ -5129,12 +5129,13 @@ class Ship
         else 
             if upgrade_data.standardized?
                 checkstandard = true
+        if upgrade_data.restrictions? then restrictions = upgrade_data.restrictions
+        if @builder.isBeta
+            if upgrade_data.restrictionsbeta? then restrictions = upgrade_data.restrictionsbeta
 
         if checkstandard
             for ship in @builder.ships
                 if ship?.data? and ship.data.name == @data.name
-                    if @builder.isBeta
-                        if upgrade_data.restrictionsbeta? then restrictions = upgrade_data.restrictionsbeta else (if upgrade_data.restrictions? then restrictions = upgrade_data.restrictions)
                     if restrictions? and ship.restriction_check(restrictions, upgrade_data) and not (ship.pilot?.upgrades?)
                         if ship.pilot.loadout? and (upgrade_data.points + ship.upgrade_points_total > ship.pilot.loadout)
                             return false
