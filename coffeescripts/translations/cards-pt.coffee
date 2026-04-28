@@ -2774,6 +2774,31 @@ exportObj.cardLoaders.Português = () ->
            display_name: """Cimitarra 3 (BsE)"""
            text: """Depois que você soltar uma bomba, você pode gastar 1 %CHARGE% para realizar uma ação %BOOST%."""
 
+         "Hera Syndulla (LaR)":
+           display_name: """Hera Syndulla (LaR)"""
+           text: """Depois que você completar uma manobra vermelha, você pode coordenar uma nave amiga em alcance 1-3."""
+        "Carnor Jax":
+           display_name: """Carnor Jax"""
+           text: """Quando uma nave inimiga em alcance 0-1 em seu %FRONTARC% defender ou realizar um ataque, antes do passo Rolar Dados de Ataque, você pode gastar 1 %FORCE%. Se você fizer isso, os dados dessa nave não podem ser modificados."""
+        "Thweek":
+           display_name: """Thweek"""
+           text: """Durante a Fase de Sistema, você pode receber 1 ficha de tração. No início da Fase de Engajamento, você pode receber 1 ficha de exaustão para remover 1 ficha de tração."""
+        "Kazuda Xiono (LaR)":
+           display_name: """Kazuda Xiono"""
+           text: """Quando você defender ou realizar um ataque, se a nave inimiga possuir mais cartas de danos do que você, você pode mudar 1 resultado %FOCUS% para um resultado %EVADE% ou %HIT%."""
+        "Tamara Ryvora":
+           display_name: """Tamara Ryvora"""
+           text: """Quando uma nave que você possuir mira realizar um ataque, você pode escolher 1 dadod de ataque. Se você fizer isso, o atacante rerola aquele dado."""
+        "Quinlan Vos":
+           display_name: """Quinlan Vos"""
+           text: """Depois que você realizar uma ação %BARRELROLL% ou %BOOST%, você pode adquirir uma mira em uma nave em seu %BULLSEYEARC%."""
+        "Ursa Wren":
+           display_name: """Ursa Wren"""
+           text: """Depois que você adquirir uma mira em uma nave inimiga, se não houver naves inimigas em alcance 0-1 de você, você pode receber 1 ficha de reforço."""
+        "DIS-L9B2":
+           display_name: """DIS-L9B2"""
+           text: """No começo da Fase de Engajamento, se houver uma nave inimiga em seu %BULLSEYEARC%, você deve gastar 1 %CHARGE%. Durante a Fase de Engajamento, se sua %CHARGE% estiver ativa, trate sua iniciativa como se fosse 1."""
+
     upgrade_translations =
      #Atiradores
         "Ahsoka Tano":
@@ -4276,6 +4301,75 @@ exportObj.cardLoaders.Português = () ->
         "Chewbacca (AaD)":
            display_name: """Chewbacca"""
            text: """Durante a Fase de Sistema, você pode gastar 2 %CHARGE% para reparar 1 carta de dano virada para cima."""
+        "Ahsoka Tano (LaR)":
+           display_name: """Ahsoka Tano"""
+           text: """Antes de você ativar, você pode gastar 1 %FORCE% para ignorar obstáculos até o final dessa fase. Se você fizer isso, e se mover através de um obstáculo, você pode adquirir uma mira em uma nave em seu %FRONTARC% em alcance 1."""
+        "Thrawn":
+           display_name: """Thrawn"""
+           text: """Quando você realizar uma ação %JAM% ou %COORDINATE%, você pode gastar 1 %CHARGE% para aumentar o requisito de alcance daquela ação em 1. %LINEBREAK% Depois que você realizar uma ação %JAM% ou %COORDINATE%, você pode gastar 2 %CHARGE% para realizar uma ação %JAM% ou %COORDINATE%, tratando-a como vermelha."""
+        "Fennec Shand":
+           display_name: """Fennec Shand"""
+           text: """Depois que você completar uma manobra ou realizar uma ação %BARRELROLL% ou %BOOST%, você pode gastar 1 %CHARGE%. Se você fizer isso, escolha uma nave inimiga em seu %BULLSEYEARC%. Essa nave recebe 1 ficha de desgaste, e você pode adquirir uma mira nessa nave."""
+        "Zorii Bliss":
+           display_name: """Zorii Bliss"""
+           text: """Depois que uma nave inimiga em alcance 1-2 remover uma ficha verde, você pode gastar 1 %CHARGE% para receber uma ficha do mesmo tipo."""
+        "Wedge Antilles":
+           display_name: """Wedge Antilles"""
+           text: """Quando você realizar um ataque %SINGLETURRETARC%, se você não estiver no arco de tiro do defensor, o defensor rola 1 dado de defesa a menos."""
+        "Captive":
+           display_name: """Cativo"""
+           text: """Depois que você for declarado o defensor de um ataque, você pode gastar 1 %CHARGE% para dar ao atacante uma ficha de exaustão."""
+        "Gravitic Well":
+           display_name: """Poço Gravítico"""
+           text: """No começo da Fase de Engajamento, se você estiver tracionado, todas as outras naves pequenas em alcance 0-1 recebem 1 ficha de tração. %LINEBREAK% Substitua qualquer instância de 'se o defensor estiver tracionado' em sua habilidade de piloto por 'se você estiver tracionado'."""
+        "R7-T1":
+           display_name: """R7-T1"""
+           text: """ """
+        "Modified R4-P Unit":
+           display_name: """Unidade R4-P Modificada"""
+           text: """Antes de você realizar uma manobra vermelha, você pode gastar 1 %CHARGE%. Se você fizer isso, quando executar aquela manobra, reduza sua dificuldade."""
+        "Flight-Assist Astromech":
+           display_name: """Astromecânico de Assistência de Voo"""
+           text: """Quando você realizar uma ação %BARRELROLL% branca ou %BOOST% branca, você pode gastar 1 %CHARGE%. Se você fizer isso, trate a ação como vermelha, e use um gabarito de velocidade 2 para realizar a ação. """
+        "Unhinged Astromech":
+           display_name: """Astromecânico Desvairado"""
+           text: """Reduza a dificuldade de suas manobras básicas de velocidade 3 [%TURNLEFT%, %BANKLEFT%, %STRAIGHT%, %BANKRIGHT%, %TURNRIGHT%]. """
+        "Roiling Anger":
+           display_name: """Fúria Turbulenta"""
+           text: """No começo da Fase de Engajamento, se você estiver no %FRONTARC% de uma nave inimiga, você pode receber 1 ficha de desgaste para recuperar 1 %FORCE%."""
+        "Seeker Missiles":
+           display_name: """Mísseis Buscadores"""
+           text: """<strong>Ataque (%LOCK%):</strong> Gaste 1 %CHARGE%. Durante o passo Modificar Dados de Ataque, você pode gastar até 2 %CHARGE% adicionais. Modifique 1 resultado %FOCUS% para um resultado %HIT% para cada %CHARGE% extra que foi gasta."""
+        "Targeting Matrix":
+           display_name: """Matriz de Alvo"""
+           text: """Quando realizar um ataque, no final do passo Neutralizar Resultados, você pode gastar 1 resultado %FOCUS%. Se fizer isso, após o ataque ser resolvido, o defensor recebe 1 ficha de desgaste."""
+        "Retrofitted Autothrusters":
+           display_name: """Autopropulsores Reformados"""
+           text: """Depois que você executar completamente uma manobra curva fechada [%TURNLEFT% ou %TURNRIGHT%], curva suave [%BANKLEFT% ou %BANKRIGHT%], Curva Tallon [%TROLLLEFT% ou %TROLLRIGHT%], ou Loop de Segnor [%SLOOPLEFT% ou %SLOOPRIGHT%] de velocidade 3, você pode gastar 1 %CHARGE% para realizar uma ação %BARRELROLL%, mesmo se estiver estressado."""
+        "Automated Loaders":
+           display_name: """Carregadores Automatizados"""
+           text: """Depois que você realizar um ataque primário, você pode gastar 1 %CHARGE% para realizar uma ação %RELOAD%."""
+        "Parting Gift":
+           display_name: """Presente de Despedida"""
+           text: """Quando você for destruído, antes de ser removido, você pode gastar 1 %CHARGE% em uma melhoria %DEVICE% equipada para soltar ou lançar uma bomba usando o gabarito 1 reto ou curva suave [%BANKLEFT%, %STRAIGHT%, %BANKRIGHT%]."""
+        "Blindspot Targeter":
+           display_name: """de Ponto CegoBlindspot Targeter"""
+           text: """Quando você realizar um ataque primário, se você não estiver no arco de tiro do defensor, você pode mudar 1 resultado %FOCUS% para um resultado %HIT%."""
+        "Targeting Relay":
+           display_name: """Relé de Alvo"""
+           text: """Depois que uma nave amiga adquire uma mira em uma nave inimiga em alcance 0-1 de você, você pode gastar 1 %CHARGE% e receber 1 ficha de estresse. Se você fizer isso, essa nave amiga pode receber 1 ficha de cálculo."""
+        "T-SJ1A Targeting Computer":
+           display_name: """Computador de Mira T-SJ1A"""
+           text: """Quando você realizar um ataque primário, se o defensor não possuir fichas verdes, você pode gastar 1 %CHARGE% e 1 resultado %CRIT%. Se fizer isso, adicione 2 resultados %HIT%."""
+        "Winged Reversal":
+           display_name: """Guinada"""
+           text: """Depois que você revelar uma manobra curva fechada [%TURNLEFT% or %TURNRIGHT%], você pode gastar 1 %CHARGE%, receber 1 ficha de desgaste e aumentar sua dificuldade. Se você fizer isso, realize essa manobra como uma Curva Tallon [%TROLLLEFT% or %TROLLRIGHT%] na mesma direção."""
+        "Precision-Tuned Cannons":
+           display_name: """Canhões Ajustados com Precisão"""
+           text: """<strong>Ataque:</strong> Se o defensor estiver em seu %BULLSEYEARC%, adicione 1 resultado %FOCUS%."""
+        "Burst Laser Turret":
+           display_name: """Torre de Rajada de Laser"""
+           text: """<strong>Ataque:</strong> Gaste 1 %CHARGE%. Você pode gastar 1 %CHARGE% para rolar 1 dado de ataque adicional para um máximo de 3 dados."""
 
     condition_translations = 
     
