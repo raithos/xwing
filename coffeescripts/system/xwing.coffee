@@ -4141,10 +4141,7 @@ class Ship
                     standard_check = false
                     for upgrade in @upgrades
                         if standard_upgrade_to_check? and (upgrade?.data?.name? and (upgrade.data.name == standard_upgrade_to_check.name))
-                            standard_check = true                         
-                    if standard_upgrade_to_check? and (standard_check == false)
-                        @removeStandardizedList(standard_upgrade_to_check)
-
+                            standard_check = true
             else
                 @copy_button.hide()
             @row.removeClass('unsortable')
@@ -5365,7 +5362,10 @@ class GenericAddon
             if @data?.unique? or @data?.solitary?
                 await new Promise((resolve,reject) => @ship.builder.container.trigger 'xwing:releaseUnique', [ @unadjusted_data, @type, resolve ])
             if @isStandardized() and not @ship.hasFixedUpgrades
-                @ship.removeStandardizedList(@data)
+                if @data.restrictions?
+                    if @ship.restriction_check(@data.restrictions, @data)
+                        @ship.removeStandardizedList(@data)
+                        
             await @rescindAddons()
             @deoccupyOtherUpgrades()
             if new_data?.unique? or new_data?.solitary?

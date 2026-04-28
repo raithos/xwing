@@ -2093,8 +2093,8 @@ exportObj.basicCardData = ->
             faction: "Rebel Alliance"
             ship: "T-65 X-wing"
             skill: 3
-            points: 11
-            loadout: 14
+            points: 10
+            loadout: 10
             slots: [
                 "Talent"
                 "Torpedo"
@@ -15625,6 +15625,7 @@ exportObj.basicCardData = ->
             force: 1
             points: 12
             loadout: 4
+            keyword: ["Dark Side"]
             slots: [
                 "Force"
                 "Modification"
