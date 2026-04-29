@@ -6795,6 +6795,7 @@ exportObj.basicCardData = ->
                 "Force"
                 "Force"
                 "Sensor"
+                "Tech"
                 "Torpedo"
                 "Crew"
                 "Crew"
