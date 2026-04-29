@@ -21028,7 +21028,6 @@ exportObj.basicCardData = ->
         {
             name: "C-3PO (Epic)"
             id: 536
-            xwsaddon: "epicsl"
             standard: true
             unique: true
             slot: "Crew"
