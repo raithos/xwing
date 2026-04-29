@@ -4120,13 +4120,22 @@ class Ship
                         for upgrade in @upgrades
                             if exportObj.slotsMatching(upgrade.slot, auto_equip_upgrade.slot)
                                 upgrade.setData auto_equip_upgrade
+                # check if we need to add a standard upgrade
+                # see if ship is supposed to be standardized
+                standard_upgrade_to_check = @checkStandardizedList(@pilot.ship)
+                if standard_upgrade_to_check?
+                    old_upgrades[standard_upgrade_to_check.slot] ?= []
+                    if standard_upgrade_to_check.id not in old_upgrades[standard_upgrade_to_check.slot]
+                        # if that upgrade was not present in the old upgrades, but is required now, we add it at first position
+                        old_upgrades[standard_upgrade_to_check.slot].unshift standard_upgrade_to_check.id
+                
                 if same_ship and not @pilot.upgrades?
                     # two cycles, in case an old upgrade is adding slots that are required for other old upgrades
                     for _ in [1..2]
                         delayed_upgrades = {}
                         for upgrade in @upgrades
                             # check if there exits old upgrades for this slot - if so, try to add the first of them
-                            old_upgrade = (old_upgrades[upgrade.slot] ? []).shift()
+                            old_upgrade = (old_upgrades[upgrade.slot] ? []).pop()
                             if old_upgrade?
                                 await upgrade.setById old_upgrade
                                 if not upgrade.lastSetValid
@@ -4136,12 +4145,6 @@ class Ship
                         for id, upgrade of delayed_upgrades
                             upgrade.setById id
                         # last check for standardized
-                    # see if ship is supposed to be standardized
-                    standard_upgrade_to_check = @checkStandardizedList(@pilot.ship)
-                    standard_check = false
-                    for upgrade in @upgrades
-                        if standard_upgrade_to_check? and (upgrade?.data?.name? and (upgrade.data.name == standard_upgrade_to_check.name))
-                            standard_check = true
             else
                 @copy_button.hide()
             @row.removeClass('unsortable')
@@ -5135,6 +5138,7 @@ class Ship
 
         if checkstandard
             for ship in @builder.ships
+                if ship == this then continue
                 if ship?.data? and ship.data.name == @data.name
                     if restrictions? and ship.restriction_check(restrictions, upgrade_data) and not (ship.pilot?.upgrades?)
                         if ship.pilot.loadout? and (upgrade_data.points + ship.upgrade_points_total > ship.pilot.loadout)
