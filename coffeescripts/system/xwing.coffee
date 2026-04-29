@@ -5135,6 +5135,7 @@ class Ship
 
         if checkstandard
             for ship in @builder.ships
+                if ship == this then continue
                 if ship?.data? and ship.data.name == @data.name
                     if restrictions? and ship.restriction_check(restrictions, upgrade_data) and not (ship.pilot?.upgrades?)
                         if ship.pilot.loadout? and (upgrade_data.points + ship.upgrade_points_total > ship.pilot.loadout)
