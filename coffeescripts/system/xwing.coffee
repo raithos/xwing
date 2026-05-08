@@ -5370,6 +5370,8 @@ class GenericAddon
                 if @data.restrictions?
                     if @ship.restriction_check(@data.restrictions, @data)
                         @ship.removeStandardizedList(@data)
+                else
+                    @ship.removeStandardizedList(@data)
                         
             await @rescindAddons()
             @deoccupyOtherUpgrades()
