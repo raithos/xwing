@@ -2777,7 +2777,7 @@ exportObj.basicCardData = ->
             loadout: 14
             slots: [
                 "Missile"
-                "Gunner"
+                "Crew"
                 "Illicit"
                 "Illicit"
                 "Modification"
