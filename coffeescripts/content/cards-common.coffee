@@ -11501,6 +11501,7 @@ exportObj.basicCardData = ->
             keyword: ["Jedi","Light Side"]
             slots: [
                 "Force"
+                "Force"
                 "Astromech"
                 "Modification"
             ]
