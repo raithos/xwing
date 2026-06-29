@@ -5,28 +5,41 @@ exportObj.codeToLanguage.pt = 'Português'
 
 exportObj.translations ?= {}
 exportObj.translations.Português =
-# ui translation goes here
+    sloticon:
+        "Astromech": '<i class="xwing-miniatures-font xwing-miniatures-font-astromech"></i>'
+        "Force": '<i class="xwing-miniatures-font xwing-miniatures-font-forcepower"></i>'
+        "Bomb": '<i class="xwing-miniatures-font xwing-miniatures-font-bomb"></i>'
+        "Cannon": '<i class="xwing-miniatures-font xwing-miniatures-font-cannon"></i>'
+        "Crew": '<i class="xwing-miniatures-font xwing-miniatures-font-crew"></i>'
+        "Talent": '<i class="xwing-miniatures-font xwing-miniatures-font-talent"></i>'
+        "Missile": '<i class="xwing-miniatures-font xwing-miniatures-font-missile"></i>'
+        "Sensor": '<i class="xwing-miniatures-font xwing-miniatures-font-sensor"></i>'
+        "Torpedo": '<i class="xwing-miniatures-font xwing-miniatures-font-torpedo"></i>'
+        "Turret": '<i class="xwing-miniatures-font xwing-miniatures-font-turret"></i>'
+        "Illicit": '<i class="xwing-miniatures-font xwing-miniatures-font-illicit"></i>'
+        "Configuration": '<i class="xwing-miniatures-font xwing-miniatures-font-config"></i>'
+        "Modification": '<i class="xwing-miniatures-font xwing-miniatures-font-modification"></i>'
+        "Gunner": '<i class="xwing-miniatures-font xwing-miniatures-font-gunner"></i>'
+        "Device": '<i class="xwing-miniatures-font xwing-miniatures-font-device"></i>'
+        "Tech": '<i class="xwing-miniatures-font xwing-miniatures-font-tech"></i>'
+        "Title": '<i class="xwing-miniatures-font xwing-miniatures-font-title"></i>'
+        "Hardpoint": '<i class="xwing-miniatures-font xwing-miniatures-font-hardpoint"></i>'
+        "Team": '<i class="xwing-miniatures-font xwing-miniatures-font-team"></i>'
+        "Cargo": '<i class="xwing-miniatures-font xwing-miniatures-font-cargo"></i>'
+        "Command": '<i class="xwing-miniatures-font xwing-miniatures-font-command"></i>'
+        "HardpointShip": '<i class="xwing-miniatures-font xwing-miniatures-font-hardpoint"></i>'
+        "VersatileShip": '<i class="xwing-miniatures-font xwing-miniatures-font-hardpoint"></i>'
+        "Tactical Relay": '<i class="xwing-miniatures-font xwing-miniatures-font-tacticalrelay"></i>'
+
     restrictions:
         "Restrictions": "Restrições"
         "Initiative": "Iniciativa"
         "Agility": "Agilidade"
         "Non-Limited": "Não-Limitado"
-        " or Squad Including": " ou Squadrão Incluindo"
+        " or Squad Including": " ou Esquadrão Incluindo"
         "Ship": "Nave"
         "Extra": "Extra"
-        "Vectored Thrusters": "Propulsores Vetorizados"
-        "Autothrusters": "Autopropulsores"
-        "Networked Calculations": "Cálculos Interligados"
-        "X-wing": "X-wing"
-        "Limited": "Limitado"
-        "Light Side": "Lado da Luz"
-        "Dark Side": "Lado Sombrio"
-        "Mandalorian": "Mandaloriano"
-        "TIE": "TIE"
-        "Bounty Hunter": "Caçador de Recompensas"
-        "Clone": "Clone"
-        "A-wing": "A-wing"
-        "Y-wing": "Y-wing"
+        
     faction:
         "Rebel Alliance": "Aliança Rebelde"
         "Galactic Empire": "Império Galático"
@@ -79,10 +92,10 @@ exportObj.translations.Português =
         "Saw's Renegades Expansion Pack": "Pacote de Expansão Renegados de Saw"
         "TIE Reaper Expansion Pack": "Pacote de Expansão TIE Reaper "
         "ARC-170 Starfighter Expansion": "Pacote de Expansão ARC-170 Starfighter Expansion"
+        "Loose Ships": "Naves Soltas"
         "Fugitives and Collaborators Squadron Pack": "Pacote de Esquadrão Fugitivos e Colaboradores"
         "First Order Conversion Kit": "Kit de Conversão Primeira Ordem"
         "M3-A Interceptor Expansion Pack": "Pacote de Expansão M3-A Interceptor "
-        "Loose Ships": "Naves Soltas"
     ui:
         "shipSelectorPlaceholder": "Selecione uma Nave"
         "pilotSelectorPlaceholder": "Selecione um Piloto"
@@ -92,8 +105,11 @@ exportObj.translations.Português =
         "titlePlaceholder": "Sem Título"
         upgradeHeader: (translator, slot) ->
             "#{translator 'slot', slot} Melhoria"
+        damageHeader: (translator, type) ->
+            "Carta de Dano (#{translator 'types', type})"
         "unreleased": "Não Lançado"
-        "epic": "épico"
+        "epic": "Épico"
+        "XWA": "XWA"
         "Quickbuild": "Construção Rápida"
         "limited": "limitado"
         "Unreleased content warning": "Este esquadrão usa conteúdo não lançado!"
@@ -101,6 +117,7 @@ exportObj.translations.Português =
         "Collection warning": "Você não consegue preencher essa lista usando sua coleção!"
         "Ship number warning": "Um esquadrão legal para torneios deve conter 3-8 naves!"
         "Multi-Faction warning": "Listas Multi-Facção NUNCA são legais para torneios!"
+        "Epic Unofficial": "Os pontos do Épico agora são gerenciados pela XWA."
         "XWS Import Dialog": "Importe sua lista por XWS no YASB.<br><i>XWS é um formato comum para compartilhar listas entre aplicativos.</i>"
         "Copy below simple text": "<p>Copie o texto abaixo e cole em outro lugar.</p>"
         "Copy below markdown": "<p>Copie o texto abaixo e cole em sua postagem do reddit.</p><p>Confira que o editor de postagem esteja definido no modo markdown.</p>"
@@ -115,11 +132,11 @@ exportObj.translations.Português =
         "View in YASB": "Ver no YASB 2"
         "YASB advertisment": "YASB 2 é uma forma simples, rápida e fácil de construir esquadrões para o X-Wing Miniatures da Atomic Mass Games."
         collectionContentShips: (translator, number) ->
-            "You have #{number} #{if number == 1 then 'modelo' else 'modelos'} de nave na sua coleção."
+            "Você possui #{number} #{if number == 1 then 'modelo' else 'modelos'} de nave na sua coleção."
         collectionContentShipsAndPilots: (translator, data) -> # data[0] is ships, data[1] is pilots
-            "You have #{data[0]} ship #{if data[0] == 1 then 'model' else 'models'} and #{data[1]} pilot #{if data[1] == 1 then 'card' else 'cards'} in your collection."
+            "Você possui #{data[0]} ship #{if data[0] == 1 then 'modelo' else 'modelos'} and #{data[1]} pilot #{if data[1] == 1 then 'carta' else 'cartas'} na sua coleção."
         collectionContentUpgrades: (translator, number) ->
-            "You have #{number} in your collection."
+            "Você possui #{number} na sua coleção."
         varPointCostsPoints: (translator, points) ->
             "<b>Custo em Pontos:</b> #{points} when "
         varPointCostsConditionAgility: (translator, values) ->
@@ -128,12 +145,14 @@ exportObj.translations.Português =
             "iniciativa é #{values}"
         varPointCostsConditionBase: (translator, values) ->
             "tamanho de base é pequeno, médio, grande ou enrome"
+        varPointCostsConditionFaction: (translator, values) ->
+            "facção é #{values}"
         "Missing Item List:": "Para montar este esquadrão você precisa dos seguintes itens adicionais:" 
         pilotFlyingShip: (translator, pilot, ship) ->
             "Piloto #{pilot} pilotando #{ship}"
         "Placeholder Textsearch Browser": "Procure por nome, texto ou nave"
         noXYselected: (translator, xy) ->
-            "No #{translator('ui', xy)} selected"
+            "Não #{translator('ui', xy)} selecionado"
         "Select a card": "Selecione uma carta da lista a esquerda."
         yourXYsquads: (translator, faction) ->
             "Seus Esquadrões #{translator('faction', faction)}"
@@ -145,7 +164,7 @@ exportObj.translations.Português =
         "select OAuth provider": "Selecione um dos provedores Oauth para entrar e começar a salvar esquadrões."
         "OAuth explanation" : """
                     <p>
-                        <a href="http://en.wikipedia.org/wiki/OAuth" target="_blank">OAuth</a> é um sistema de de autorização que permite que você prove sua identeidade em um site sem precisar criar uma nova conta. Ao invés disso, você pede para que algum provedor em que já possua uma conta (ex. Google ou Facebook) prove para este site que você é quem diz ser. Dessa forma, da próxima vez que você visitar, este site vai se lembrar que você é aquele usuário do Google.
+                        <a href="http://en.wikipedia.org/wiki/OAuth" target="_blank">OAuth</a> é um sistema de autorização que permite que você prove sua identeidade em um site sem precisar criar uma nova conta. Ao invés disso, você pede para que algum provedor em que já possua uma conta (ex. Google ou Facebook) prove para este site que você é quem diz ser. Dessa forma, da próxima vez que você visitar, este site vai se lembrar que você é aquele usuário do Google.
                     </p>
                     <p>
                         A melhor parte disso é que você não precisa criar um novo nome de usuário ou se lembrar de outra senha. e não se preocupe, eu não vou coletar quaisquer dados seus do provedors about you. Eu defini o escopo de dados para o menor possível, mas alguns lugares enviam no mínimo um punhado de dados. Eu os descarto. Tudo o que eu olho é um identificador único (normalmente um número gigante).
@@ -155,20 +174,27 @@ exportObj.translations.Português =
                     </p>
                     """
         "Intro Card YASB": """
-                    <h2>YASB para X-Wing 2.5</h2>
-                    <p>YASB (Yet Another Squad Builder) é uma forma simples, rápida e fácil de construir esquadrões para o X-Wing Miniatures da <a href="https://www.atomicmassgames.com/">Atomic Mass Games</a>.</p>
-                    <p>Current Version: 11/25/2022</p>
+                    <h2>YASB para Jogo de Miniaturas X-Wing</h2>
+                    <p>YASB (Yet Another Squad Builder) é um construtor de esquadrões simples e rápido para o Jogo de Miniaturas X-Wing. Para mais informações sobre os recursos do jogo, visite <a href="https://xwhub.com/">XW Hub</a>.</p>
+                    <p>Versão XWA: 50P-2.0</p>
+                    <br><a href="https://yasb.app/old/">Link para os pontos anteriores.</a>
+                    <br><a href="https://yasb.app/AMG/">Link para os últimos pontos da AMG.</a>
+                    <br><a href="https://raithos.github.io/">Link para os últimos pontos do 2.0.</a></p>
+                    
                     <h5>Creditos</h5>
                     <p>Feito a partir do maravilhoso original <a href="https://geordanr.github.io/xwing/">Yet Another Squad Builder</a>.</p>
-                    <p>YASB é atualizado e mantido por Stephen Kim.</p>
+                    <p>YASB é atualizado e mantido por Stephen Kim com a ajuda de Patrick Mischke.</p>
                     <p>Créditos adicionais:<br>
                     Dados de Atualização 2.5: Devon Monkhouse, Perry Low, Andrew Oehler.<br>
                     Dados de Lançamento 2.0: Evan Cameron, Jonathan Hon, Devon Monkhouse, and Mark Stewart.<br>
                     Equipe de Tradução: Patrick Mischke, godgremos, Clément Bourgoin, ManuelWittke, kksuke, Rodrigo Marshal, Shavarski<br>
                     Logo do site: Thomas Kohler<br>
                     Suporte de Quick Build: Patrick Mischke</p>
+                    
                     <p>Este construtor não é oficial e não está afiliado a Atomic Mass Games, Lucasfilm Ltd., ou Disney.</p>
-                    <p>Este site sempre será gratuito, e sempre estára 100% disponível para que todos possam usá-lo. Entretanto, se você quiser doar, há um botão preparado para você.</p>
+                    <p><a href="privacy.html">Política de Privacidade</a></p>
+                    
+                    <p>Este site sempre será gratuito, e sempre estará 100% disponível para que todos possam usá-lo. Entretanto, se você quiser doar, há um botão preparado para você.</p>
                     <p><button class="btn btn-primary paypal" onclick="window.open('https://paypal.me/raithos');">Faça uma Doação</button> <button class="btn btn-primary paypal" onclick="window.open('https://www.patreon.com/raithos');">Patreon</button></p>
         """
         "Continue to OAuth provider": "Isto abrirá uma nova janela para permitir que você autentique com o provedor escolhido. Você talvez precise permitir pop ups para este site."
@@ -183,7 +209,7 @@ exportObj.translations.Português =
             "Removes: #{translator('ui', data)}"
         "Less upgrades": "Menos melhorias"
         "Epic": "Épico"
-        "Hyperspace": "Hyperespace"
+        "Hyperspace": "Hyperespaço"
         "Extended": "Estendido"
         "Unnamed Squadron": "Esquadrão Sem Nome"
         "Unsaved Squadron": "Esquadrão não Salvo"
@@ -359,9 +385,9 @@ exportObj.translations.Português =
         "Pride of Mandalore Debris 1": "Destroços Orgulho de Mandalore 1"
         "Pride of Mandalore Debris 2": "Destroços Orgulho de Mandalore 2"
         "Pride of Mandalore Debris 3": "Destroços Orgulho de Mandalore 3"
-        "Pride of Mandalore Rock 1": "Pedra Orgulho de Mandalore 1"
-        "Pride of Mandalore Rock 2": "Pedra Orgulho de Mandalore 2"
-        "Pride of Mandalore Rock 3": "Pedra Orgulho de Mandalore 3"
+        "Pride of Mandalore Rock 1": "Asteróide Orgulho de Mandalore 1"
+        "Pride of Mandalore Rock 2": "Asteróide Orgulho de Mandalore 2"
+        "Pride of Mandalore Rock 3": "Asteróide Orgulho de Mandalore 3"
         "Undamaged": "Não-Danificado"
         "Standard": "Padrão"
         "Faction": "Fação"
@@ -393,7 +419,7 @@ exportObj.translations.Português =
         'modifications': 'Modificação'
         'titles': 'Título'
         'ships' : 'Nave'
-    
+
     gameterms:
         'Small': 'Pequena'
         'Medium': 'Média'
@@ -407,522 +433,422 @@ exportObj.translations.Português =
         'Modification': 'Modificação'
         'Title': 'Título'
         'Ship': 'Nave'
+        'Damage': 'Dano'
+
     rulestypes:
         'glossary': 'Glossário'
         'faq': 'FAQ'
+
     action:
         'Boost': 'Impulso'
 
 exportObj.cardLoaders ?= {}
 exportObj.cardLoaders.Português = () ->
     exportObj.cardLanguage = 'Português'
- # Rename ships
-    exportObj.renameShip """Modified YT-1300 Light Freighter""", """Cargueiro Leve YT-1300 Modificado"""
-    exportObj.renameShip """StarViper-class Attack Platform""", """Plataforma de Ataque Classe Starviper"""
-    exportObj.renameShip """Scurrg H-6 Bomber""", """Bombardeiro Scurrg-H-6"""
-    exportObj.renameShip """YT-2400 Light Freighter""", """Cargueiro Leve YT-2400"""
-    exportObj.renameShip """Auzituck Gunship""", """Nave de Ataque Auzituck"""
-    exportObj.renameShip """Kihraxz Fighter""", """Caça Kihraxz"""
-    exportObj.renameShip """Sheathipede-Class Shuttle""", """Transporte Classe Sheathipede"""
-    exportObj.renameShip """Quadrijet Transfer Spacetug""", """Rebocador Orbital Quadrijet"""
-    exportObj.renameShip """Firespray-class Patrol Craft""", """Nave de Patrulha Classe Firespray"""
-    exportObj.renameShip """TIE/ln Fighter""", """Caça TIE/ln"""
-    exportObj.renameShip """BTL-A4 Y-wing""", """Y-Wing BTL-A4"""
-    exportObj.renameShip """TIE Advanced x1""", """TIE Advanced x1"""
-    exportObj.renameShip """Alpha-Class Star Wing""", """Star Wing Classe Alfa"""
-    exportObj.renameShip """UT-60D U-wing""", """U-Wing UT-60D"""
-    exportObj.renameShip """TIE/sk Striker""", """TIE/sk Striker"""
-    exportObj.renameShip """A/SF-01 B-wing""", """B-Wing A/SF-01"""
-    exportObj.renameShip """TIE/d Defender""", """TIE/d Defender"""
-    exportObj.renameShip """TIE/sa Bomber""", """TIE/sa Bomber"""
-    exportObj.renameShip """TIE/ca Punisher""", """TIE/ca Punisher"""
-    exportObj.renameShip """Aggressor Assault Fighter""", """Caça de Assalto Aggressor"""
-    exportObj.renameShip """G-1A Starfighter""", """Caça Estelar G-1A"""
-    exportObj.renameShip """VCX-100 Light Freighter""", """Cargueiro Leve VCX-100"""
-    exportObj.renameShip """YV-666 Light Freighter""", """Cargueiro Leve YV-666"""
-    exportObj.renameShip """TIE Advanced v1""", """TIE Advanced v1"""
-    exportObj.renameShip """Lambda-class T-4a Shuttle""", """Transporte T-4A Classe Lambda"""
-    exportObj.renameShip """TIE/ph Phantom""", """TIE/ph Phantom"""
-    exportObj.renameShip """VT-49 Decimator""", """VT-49 Decimator"""
-    exportObj.renameShip """TIE/ag Aggressor""", """TIE/ag Agressor"""
-    exportObj.renameShip """BTL-S8 K-wing""", """K-Wing BTL-S8"""
-    exportObj.renameShip """ARC-170 Starfighter""", """Caça Estelar ARC-170"""
-    exportObj.renameShip """Attack Shuttle""", """Transporte de Ataque"""
-    exportObj.renameShip """T-65 X-wing""", """X-Wing T-65"""
-    exportObj.renameShip """HWK-290 Light Freighter""", """Cargueiro Leve HWK-290"""
-    exportObj.renameShip """RZ-1 A-wing""", """A-Wing RZ-1"""
-    exportObj.renameShip """Fang Fighter""", """Caça Fang"""
-    exportObj.renameShip """Z-95-AF4 Headhunter""", """Z-95-AF4 Headhunter"""
-    exportObj.renameShip """M12-L Kimogila Fighter""", """Caça Kimogila M12-L"""
-    exportObj.renameShip """E-wing""", """E-Wing"""
-    exportObj.renameShip """TIE/in Interceptor""", """TIE/in Interceptor"""
-    exportObj.renameShip """Lancer-Class Pursuit Craft""", """Nave de Perseguição Classe Lancer"""
-    exportObj.renameShip """TIE Reaper""", """TIE Reaper"""
-    exportObj.renameShip """M3-A Interceptor""", """M3-A Interceptor"""
-    exportObj.renameShip """JumpMaster 5000""", """JumpMaster 5000"""
-    exportObj.renameShip """Customized YT-1300 Light Freighter""", """Cargueiro Leve YT-1300 Customizado"""
-    exportObj.renameShip """Escape Craft""", """Nave de Fuga"""
-    exportObj.renameShip """TIE/fo Fighter""", """Caça TIE/fo"""
-    exportObj.renameShip """TIE/sf Fighter""", """Caça TIE/sf"""
-    exportObj.renameShip """Upsilon-Class Command Shuttle""", """Transporte de Comando Classe Ípsilon"""
-    exportObj.renameShip """TIE/vn Silencer""", """TIE/vn Silencer"""
-    exportObj.renameShip """T-70 X-wing""", """X-Wing T-70"""
-    exportObj.renameShip """RZ-2 A-wing""", """A-Wing RZ-2"""
-    exportObj.renameShip """MG-100 StarFortress""", """MG-100 StarFortress"""
-    exportObj.renameShip """Modified TIE/ln Fighter""", """Caça TIE/ln Modificado"""
-    exportObj.renameShip """Scavenged YT-1300""", """YT-1300 Recuperada"""
-    exportObj.renameShip """V-19 Torrent Starfighter""", """Caça Estelar V-19 Torrent"""    
-    exportObj.renameShip """Belbullab-22 Starfighter""", """Caça Estelar Bellbullab-22"""
-    exportObj.renameShip """Vulture-class Droid Fighter""", """Caça Dróide Classe Vulture"""
-    exportObj.renameShip """Sith Infiltrator""", """Sith-Infiltrator"""
-    exportObj.renameShip """Delta-7 Aethersprite""", """Delta-7 Aethersprite"""
-    exportObj.renameShip """Delta-7b Aethersprite""", """Delta-7b Aethersprite"""
-    exportObj.renameShip """Naboo Royal N-1 Starfighter""", """Caça Estelar Real de Naboo N-1"""
-    exportObj.renameShip """Hyena-class Droid Bomber""", """Bombardeiro Dróide Classe Hyena"""
-    exportObj.renameShip """Resistance Transport Pod""", """Módulo de Transporte da Resistência"""
-    exportObj.renameShip """Resistance Transport""", """Transporte da Resistência"""
-    exportObj.renameShip """Nantex-Class Starfighter""", """Caça Estelar Classe Nantex"""
-    exportObj.renameShip """TIE/ba Interceptor""", """TIE/ba Interceptor"""
-    exportObj.renameShip """Xi-class Light Shuttle""", """Transporte Leve Classe Xi"""
-    exportObj.renameShip """HMP Droid Gunship""", """Nave de Ataque Droide HMP"""
-    exportObj.renameShip """LAAT/i Gunship""", """Nave de Ataque LAAT/i"""
-    exportObj.renameShip """TIE/rb Heavy""", """TIE/rb Heavy"""
-    exportObj.renameShip """Droid Tri-fighter""", """Dróide Tri-fighter"""
-    exportObj.renameShip """Nimbus-class V-wing""", """V-Wing Classe Nimbus"""
-    exportObj.renameShip """Eta-2 Actis""", """Actis Eta-2"""
-    exportObj.renameShip """Syliure-class Hyperspace Ring""", """Anel de Hiperespaço classe Syliure"""
-    exportObj.renameShip """BTA-NR2 Y-wing""", """Y-Wing BTA-NR2"""
-    exportObj.renameShip """TIE/wi Whisper Modified Interceptor""", """Interceptador Modificado TIE/wi Whisper"""
-    exportObj.renameShip """TIE/se Bomber""", """Bombardeiro TIE/se"""
-    exportObj.renameShip """Gauntlet Fighter""", """Caça Gauntlet"""
-    exportObj.renameShip """ST-70 Assault Ship""", """Nave de Assalto ST-70"""
-    exportObj.renameShip """Clone Z-95 Headhunter""", """Z-95 Headhunter Clone"""
-    exportObj.renameShip """Rogue-class Starfighter""", """Caça Estelar Classe Rogue"""
-    exportObj.renameShip """CR90 Corellian Corvette""", """Corveta Coreliana CR90"""
-    exportObj.renameShip """Raider-class Corvette""", """Corveta Classe Raider"""
-    exportObj.renameShip """GR-75 Medium Transport""", """Transporte Médio GR-75"""
-    exportObj.renameShip """Gozanti-class Cruiser""", """Cruzador Classe Gozanti"""
-    exportObj.renameShip """C-ROC Cruiser""", """Cruzador C-ROC"""
-    exportObj.renameShip """Trident-class Assault Ship""", """Nave de Assalto Classe Trident"""
- 
+
+    for ship of exportObj.ships
+      exportObj.renameShip ship, ship
 
     pilot_translations =
-#Rebel Alliance Pilots
-        #ARC-170       
-        "Ibtisam":
-           display_name: """Ibtisam"""
-           text: """Após você executar completamente uma manobra, se você estiver estressado, você pode rolar 1 dado de ataque. Em um resultado %HIT% ou %CRIT%, remova 1 ficha de estresse."""
-        "Garven Dreis":
-           display_name: """Garven Dreis"""
-           text: """Após você gastar uma ficha de foco, você pode escolher 1 nave amiga em alcance 1-3. A nave escolhida recebe 1 ficha de foco."""
-        "Shara Bey":
-           display_name: """Shara Bey"""
-           text: """Quando você defender ou realizar um ataque primário, você pode gastar 1 mira que você possua na nave inimiga para adicionar 1 resultado %FOCUS% ao resultado de seus dados."""
-        "Norra Wexley":
-           display_name: """Norra Wexley"""
-           text: """Quando você defender, se houver uma nave inimiga em alcance 0-1, adicione 1 resultado %EVADE% ao resultado de seus dados."""
-
-       #RZ-1 A-wing 
-        "Phoenix Squadron Pilot":
-           display_name: """Piloto do Esquadrão Fênix"""
-           text: """<i class = flavor_text>Liderados pelo Comandante Jun Sato, os bravos porém inexperientes pilotos do Esquadrão Fênix enfrentam situações impressionantes em suas batalhas contra o Império Galático.</i>"""
-        "Green Squadron Pilot":
-           display_name: """Piloto do Esquadrão Verde"""
-           text: """<i class = flavor_text>Devido aos seus controles sensitivos e alta manobrabilidade, somente os pilotos mais talentosos ocupavam a cabine de uma A-wing."""
-        "Derek Klivian":
-           display_name: """Derek Klivian"""
-           text: """Após você adquirir ou gastar uma mira, você pode remover 1 ficha vermelha de si mesmo."""
-        "Arvel Crynyd":
-           display_name: """Arvel Crynyd"""
-           text: """Se você falharia uma ação %BOOST% por sobrepor outra nave, ao invés disso, resolva-a como se estivesse executando parcialmente uma manobra.%LINEBREAK% Quando Você realizar um ataque em alcance 0, trate-o como um ataque em alcance 1."""
-        "Shara Bey (A-Wing)":
-           display_name: """Shara Bey"""
-           text: """Quando você defender ou realizar um ataque primário, você pode gastar 1 mira que você possua na nave inimiga para adicionar 1 resultado %FOCUS% ao resultado de seus dados."""
-        "Jake Farrell":
-           display_name: """Jake Farrell"""
-           text: """Após você realizar uma ação %BARRELROLL% ou %BOOST%, você pode escolher uma nave amiga em alcance 0-1. A nave escolhida pode realizar uma ação %FOCUS%."""
-        "Wedge Antilles (A-Wing)":
-           display_name: """Wedge Antilles"""
-           text: """Quando você realizar um ataque primário, se o defensor estiver em seu %FRONTARC%, o defensor rola 1 dado de defesa a menos."""
-        "Sabine Wren (A-Wing)":
-           display_name: """Sabine Wren"""
-           text: """Quando você defender ou realizar um ataque, se o alcance do ataque for 1 e você estiver no %FRONTARC% da nave inimiga, você pode trocar 1 dos seus resultados para um resultado %EVADE% ou %HIT%."""
-        "Hera Syndulla (A-Wing)":
-           display_name: """Hera Syndulla"""
-           text: """Quando outra nave amiga em alcance 1-2 defender ou realizar um ataque, durante uma etapa Modificar Dados, você pode transferir 1 das suas fichas de foco, desvio ou mira para aquela nave."""
-        "Ahsoka Tano (A-Wing)":
-           display_name: """Ahsoka Tano"""
-           text: """Após você executar completamente uma manobra, você pode escolher uma nave amiga em alcance 1-2 e gastar 2 %FORCE%. A nave escolhida pode realizar uma ação, mesmo estressada."""
-        "Keo Venzee":
-           display_name: """Keo Venzee"""
-           text: """Se você não tiver %FORCE% ativa, depois que você revelar uma manobra curva [%BANKLEFT% ou %BANKRIGHT%] ou curva fechada [%TURNLEFT% ou %TURNRIGHT%], você pode aumentar a dificuldade da manobra, se o fizer, realize essa manobra como uma derrapagem e recupere 1 %FORCE%."""
-        "Tycho Celchu":
-           display_name: """Tycho Celchu"""
-           text: """Enquanto você possuir 2 fichas de estresse ou menos, você pode realizar ações, mesmo se estiver estressado."""
-
-       #B-wing
-        "Blue Squadron Pilot":
-           display_name: """Piloto do Esquadrão Azul"""
-           text: """<i class = flavor_text>Devido ao seu conjunto de armas pesadas e escudo resiliente, a B-wing se consolidou como o caça de assalto mais inovador da Aliança Rebelde.</i>"""
-        "Blade Squadron Veteran":
-           display_name: """Veterano do Esquadrão Lâmina"""
-           text: """<i class = flavor_text>Um sistema de estabilização giroscópica único foi projetado em volta da cabine da B-wing, garantindo que o piloto permaneça estacionário durante o voo..</i>"""
-        "Netrem Pollard":
-           display_name: """Netrem Pollard"""
-           text: """Após você realizar uma pirueta, você pode escolher 1 nave amiga que não está estressada em alcance 0-1. A nave escolhida recebe 1 ficha de estresse, então você rotaciona 180º."""
-        "Ten Numb":
-           display_name: """Ten Numb"""
-           text: """Quando você defender ou realizar um ataque, você pode gastar 1 ficha de estresse para mudar todos os seus resultados %FOCUS% para resultados %EVADE% ou %HIT%."""
-        "Gina Moonsong":
-           display_name: """Gina Moonsong"""
-           text: """No início da Fase de Engajamento, você deve transferir 1 de suas fichas de estresse para outra nave amiga em alcance 0-2."""
-        "Braylen Stramm":
-           display_name: """Braylen Stramm"""
-           text: """Quando você defender ou realizar um ataque, se você estiver estressado, você pode rerrolar até 2 de seus dados."""
-        "Hera Syndulla (B-Wing)":
-           display_name: """Hera Syndulla"""
-           text: """Quando outra nave amiga em alcance 1-2 defender ou realizar um ataque, durante uma etapa Modificar Dados, você pode transferir 1 das suas fichas de foco, desvio ou mira para aquela nave."""
-
-       #Rebel Tie/ln
-        '"Zeb" Orrelios (TIE Fighter)':
-           display_name: """“Zeb” Orrelios"""
-           text: """Quando você defender, os resultados %CRIT% são neutralizados antes dos resultados %HIT%."""
-        "Captain Rex":
-           display_name: """Capitão Rex"""
-           text: """Após você realizar um ataque, atribua a condição <strong>Tiro Supressivo</strong> ao defensor."""
-        "Ezra Bridger (TIE Fighter)":
-           display_name: """Ezra Bridger"""
-           text: """Quando você defender ou realizar um ataque, se você estiver estressado, você pode gastar 1 %FORCE% para mudar até 2 de seus resultados %FOCUS% para resultados %EVADE% ou %HIT%."""
-        "Sabine Wren (TIE Fighter)":
-           display_name: """Sabine Wren"""
-           text: """Antes de você ativar, você pode realizar 1 ação %BARRELROLL% ou %BOOST%."""
-
-       #E-wing
-        "Knave Squadron Escort":
-           display_name: """Escolta do Esq. Valete"""
-           text: """<i class = flavor_text>Projetada para combinar as melhores características das séries X-wing e A-wing, a E-wing apresenta poder de fogo, velocidade e manobrabilidade superiores."""
-        "Rogue Squadron Escort":
-           display_name: """Escolta do Esq. Rogue"""
-           text: """<i class = flavor_text>Os pilotos de elite do Esquadrão Rogue estão entre os melhores da Rebelião."""
-        "Gavin Darklighter":
-           display_name: """Gavin Darklighter"""
-           text: """Quando uma nave amiga realizar um ataque, se o defensor estiver em seu %FRONTARC%, o atacante pode mudar 1 resultado %HIT% para um resultado %CRIT%."""
-        "Corran Horn":
-           display_name: """Corran Horn"""
-           text: """Em iniciativa 0, você pode realizar um ataque primário bônus contra uma nave inimiga em seu %BULLSEYEARC%. Se o fizer, no início da próxima Fase de Planejamento, receba 1 ficha de desarmamento."""
-
-       #HWK-290
-        "Rebel Scout":
-           display_name: """Batedor Rebelde"""
-           text: """<i class = flavor_text>Projetadas pela Corellian Engineering Corporation para se parecerem com pássaros em voo, as naves da série “hawk” são naves de transporte exemplares. Rápidas e robustas, a HWK-290 é comumente empregada por agentes Rebeldes como base de operações móvel.</i>"""
-        "Kyle Katarn":
-           display_name: """Kyle Katarn"""
-           text: """No início da Fase de Engajamento, você pode transferir 1 de suas fichas de foco para uma nave amiga em seu arco de tiro."""
-        "Roark Garnet":
-           display_name: """Roark Garnet"""
-           text: """No início da Fase de Engajamento, você pode escolher 1 nave em seu arco de tiro. Se o fizer, a nave escolhida engaja no valor de iniciativa 7, ao invés do valor de iniciativa normal dela."""
-        "Jan Ors":
-           display_name: """Jan Ors"""
-           text: """Quando uma nave amiga em seu arco de tiro realizar um ataque primário, se você não estiver estressado, você pode receber 1 ficha de estresse. Se o fizer, a nave amiga pode rolar 1 dado de ataque adicional."""
-
-       #K-wing
-        "Warden Squadron Pilot":
-           display_name: """Piloto do Esq. Protetor"""
-           text: """<i class = flavor_text>A K-wing fabricada pela Koensayr Manufacturing dispunha de um avançado Motor de Aceleração Sub-Luz (SLAM) e incríveis 18 pontos de encaixe, garantindo velocidade e poder de fogo sem igual.</i>"""
-        "Miranda Doni":
-           display_name: """Miranda Doni"""
-           text: """Quando você realizar um ataque primário, você pode gastar 1 escudo para rolar dado de ataque adicional ou, se não possuir escudos, você pode rolar 1 dado de ataque a menos para recuperar 1 escudo."""
-        "Esege Tuketu":
-           display_name: """Esege Tuketu"""
-           text: """Quando uma nave amiga em alcance 0-2 defender ou realizar um ataque, ela pode gastar as suas fichas de foco como se fossem dela."""
-
-       #Fang Fighter
-        "Bodica Venj":
-           display_name: """Bodica Venj"""
-           text: """Depois que outra nave amiga defender, se você não estiver exausto, você pode realizar um ataque primário bônus contra o atacante. Se você fizer isso, depois de realizar este ataque, receba uma ficha de exaustão."""
-        "Clan Wren Volunteer":
-           display_name: """Voluntário do Clã Wren"""
-           text: """Quando você realizar um ataque em alcance 1, se a velocidade da sua manobra revelada for igual a de uma nave amiga em alcance 1, você pode rerolar 1 dado de ataque.."""
-        "Dirk Ullodin":
-           display_name: """Dirk Ullodin"""
-           text: """Depois que você realizar completamente uma manobra vermelha ou realizar uma ação vermelha, você pode travar uma mira em uma nave inimiga em seu %FRONTARC% em alcance 1."""
-        "Fenn Rau (Rebel Fang)":
-           display_name: """Fenn Rau"""
-           text: """Antes de uma nave amiga em alcance 1-2 engajar, se houver uma nave inimiga no %FRONTARC% dela em alcance 1, essa nave amiga pode remover 1 ficha vermelha que não seja uma mira."""
-
-       #Auzituck
-        "Kashyyyk Defender":
-           display_name: """Defensor Kashyyyk"""
-           text: """<i class = flavor_text>Equipada com três canhões laser paralelos Sureggi de longo alcance, a Nave de Ataque Auzituck age como um poderoso dissuasor das operações escravagistas do sistema Kashyyyk.</i>"""
-        "Lowhhrick":
-           display_name: """Lowhhrick"""
-           text: """Após uma nave amiga em alcance 0-1 se tornar defensora, você pode gastar 1 ficha de reforço. Se o fizer, a nave defensora recebe 1 ficha de desvio."""
-        "Wullffwarro":
-           display_name: """Wullffwarro"""
-           text: """Quando você realizar um ataque primário, se você estiver danificado, você pode rolar 1 dado de ataque adicional."""
-
-       #Sheathipede
+        "0-66":
+           display_name: """0-66"""
+           text: """Após você defender, você pode gastar 1 ficha de cálculo para realizar uma ação."""
+        "104th Battalion Pilot":
+           display_name: """Piloto do Batalhão 104"""
+           text: """<i class = flavor_text>A ARC-170 foi projetada como um caça de escolta pesado com lasers dianteiras e traseiras potentes, artilharia e um astromecânico para navegação. Esquadrões dessa poderosa nave reforçavam a presença da Marinha da República em qualquer batalha que participassem.</i>"""
+        "4-LOM":
+           display_name: """4-LOM"""
+           text: """Após você executar completamente uma manobra vermelha, receba 1 ficha de cálculo.%LINEBREAK%No início da Fase Final, você pode escolher 1 nave em alcance 0-1. Se o fizer, transfira 1 de suas fichas de estresse para a nave escolhida."""
+        "Nashtah Pup":
+           display_name: """Nashtah Pup"""
+           text: """Você pode desacoplar apenas por uma desacoplagem de emergência e possui o nome, a iniciativa, a habilidade de piloto e a %CHARGE% da <strong> Hound’s Tooth</strong> amiga destruída.%LINEBREAK%<strong> Módulo de Fuga: Preparação:</strong> Requer a <strong>Hound’s Tooth</strong>. Você <b>deve</b> iniciar o jogo acoplado na <strong>Hound’s Tooth</strong>."""
         "AP-5":
            display_name: """AP-5"""
-           text: """Quando você coordenar, se escolher uma nave com exatamente 1 ficha de estresse, ela pode realizar ações."""
-        '"Zeb" Orrelios (Sheathipede)':
-           display_name: """“Zeb” Orrelios"""
-           text: """Quando você defender, os resultados %CRIT% são neutralizados antes dos resultados %HIT%."""
-        "Ezra Bridger (Sheathipede)":
-           display_name: """Ezra Bridger"""
-           text: """Quando você defender ou realizar um ataque, se você estiver estressado, você pode gastar 1 %FORCE% para mudar até 2 de seus resultados %FOCUS% para resultados %EVADE% ou %HIT%."""
-        "Fenn Rau (Sheathipede)":
-           display_name: """Fenn Rau"""
-           text: """Antes de uma nave inimiga em seu arco de tiro engajar, se você não estiver estressado, você pode receber 1 ficha de estresse. Se o fizer, a nave inimiga engajando não pode gastar fichas para modificar dados enquanto estiver realizando um ataque nesta fase."""
-
-       #Attack Shuttle
-        '"Zeb" Orrelios':
-           display_name: """“Zeb” Orrelios"""
-           text: """Quando você defender, os resultados %CRIT% são neutralizados antes dos resultados %HIT%."""
-        "Ezra Bridger":
-           display_name: """Ezra Bridger"""
-           text: """Quando você defender ou realizar um ataque, se você estiver estressado, você pode gastar 1 %FORCE% para mudar até 2 de seus resultados %FOCUS% para resultados %EVADE% ou %HIT%."""
-        "Sabine Wren":
-           display_name: """Sabine Wren"""
-           text: """Antes de você ativar, você pode realizar 1 ação %BARRELROLL% ou %BOOST%."""
-        "Hera Syndulla":
-           display_name: """Hera Syndulla"""
-           text: """Após você revelar uma manobra vermelha ou azul, você pode colocar seu disco em outra manobra de mesma dificuldade."""
-
-       #U-wing
-        "Blue Squadron Scout":
-           display_name: """Batedor do Esq. Azul"""
-           text: """<i class = flavor_text>Usada para deslocar tropas encoberta pela escuridão ou até focos de batalha, a U-wing UT-60D atende a necessidade da aliança de ter um transporte de tropas rápido e robusto.</i>"""
-        "Partisan Renegade":
-           display_name: """Partidário Renegado """
-           text: """<i class = flavor_text>Os partidários de Saw Gerrera foram estabelecidos para opor forças Separatistas em Onderon durante as Guerras Clônicas, e continuaram a guerrear contra a tirania galáctica quando o Império assumiu o poder.</i>"""
-        "Heff Tobber":
-           display_name: """Heff Tobber"""
-           text: """Após uma nave inimiga executar uma manobra, se ela estiver em alcance 0, você pode realizar uma ação."""
-        "Benthic Two Tubes":
-           display_name: """Benthic Two Tubes"""
-           text: """Após você realizar uma ação %FOCUS%, você pode transferir 1 de suas fichas de foco para uma nave amiga em alcance 1-2."""
-        "K-2SO":
-           display_name: """K-2SO"""
-           text: """Após receber uma ficha de estresse, receba 1 ficha de cálculo."""
-        "Bodhi Rook":
-           display_name: """Bodhi Rook"""
-           text: """Naves amigas podem adquirir miras em objetos em alcance 0-3 de qualquer nave amiga."""
-        "Magva Yarro":
-           display_name: """Magva Yarro"""
-           text: """Quando uma nave amiga em alcance 0-2 defender, o atacante não pode rerrolar mais que 1 dado de ataque."""
-        "Cassian Andor":
-           display_name: """Cassian Andor"""
-           text: """No início da Fase de Ativação, você pode escolher 1 nave amiga em alcance 1-3. Se o fizer, a nave escolhida remove 1 ficha de estresse."""
-        "Saw Gerrera":
-           display_name: """Saw Gerrera"""
-           text: """Quando uma nave amiga danificada em alcance 0-3 realizar um ataque, ela pode rerrolar 1 dado de ataque."""
-
-       #VCX-100
-        "Lothal Rebel":
-           display_name: """Rebelde de Lothal"""
-           text: """<i class = flavor_text>Mais um projeto de sucesso de cargueiro da Corellian Engineering Corporation, o VCX-100 é maior que a popular série YT, dispondo de mais espaço interno e maior capacidade de personalização.</i>"""
-        '"Chopper"':
-           display_name: """Chopper"""
-           text: """No início da Fase de Engajamento, cada nave inimiga em alcance 0 recebe 2 fichas de interferência."""
-        "Alexsandr Kallus":
-           display_name: """Alexsandr Kallus"""
-           text: """Quando você defender, se o atacante modificou qualquer dado de ataque, você pode rolar 1 dado adicional de defesa."""
-        "Hera Syndulla (VCX-100)":
-           display_name: """Hera Syndulla"""
-           text: """Após você revelar uma manobra vermelha ou azul, você pode colocar seu disco em outra manobra de mesma dificuldade."""
-        "Kanan Jarrus":
-           display_name: """Kanan Jarrus"""
-           text: """Quando uma nave amiga em seu arco de tiro defender, você pode gastar 1 %FORCE%. Se o fizer, o atacante rola 1 dado de ataque a menos."""
-
-       #X-wing T-65
-        "Blue Squadron Escort":
-           display_name: """Escolta do Esquadrão Azul"""
-           text: """<i class = flavor_text>Projetada pela Incom Corporation, a X-wing T-65 se mostrou rapidamente ser um dos veículos militares mais efetivos da galáxia e uma dádiva para a Rebelião.</i>"""
-        "Cavern Angels Zealot":
-           display_name: """Fanático dos Cavern Angels"""
-           text: """<i class = flavor_text>Diferente da maioria das células Rebeldes, os partidários de Saw estão prontos para usar métodos extremos para prejudicar os objetivos do Império Galáctico em batalhas brutais, de Geonosis a Jedha.</i>"""
-        "Red Squadron Veteran":
-           display_name: """Veterano do Esq. Vermelho"""
-           text: """<i class = flavor_text>Criado para ser um esquadrão de caças estelares de elite, o Esquadrão Vermelho inclui alguns dos melhores pilotos da Aliança Rebelde.</i>"""
-        "Edrio Two Tubes":
-           display_name: """Edrio Two Tubes"""
-           text: """Antes de você ativar, se você estiver focado, você pode realizar uma ação."""
-        "Leevan Tenza":
-           display_name: """Leevan Tenza"""
-           text: """Após você realizar uma ação %BARRELROLL% ou %BOOST%, você pode realizar uma ação %EVADE% vermelha."""
-        "Jek Porkins":
-           display_name: """Jek Porkins"""
-           text: """Após receber uma ficha de estresse, você pode rolar 1 dado de ataque para removê-la. Em um resultado %HIT%, sofra 1 dano %HIT%."""
-        "Kullbee Sperado":
-           display_name: """Kullbee Sperado"""
-           text: """Após você realizar uma ação %BARRELROLL% ou %BOOST%, você pode virar sua carta de melhoria %CONFIG% equipada."""
-        "Garven Dreis (X-Wing)":
-           display_name: """Garven Dreis"""
-           text: """Após você gastar uma ficha de foco, você pode escolher 1 nave amiga em alcance 1-3. A nave escolhida recebe 1 ficha de foco."""
-        "Biggs Darklighter":
-           display_name: """Biggs Darklighter"""
-           text: """Quando outra nave amiga em alcance 0-1 defender, antes da etapa Neutralizar Resultados, se você estiver no arco de ataque, você pode sofrer 1 dano %HIT% ou %CRIT% para cancelar 1 resultado correspondente."""
-        "Thane Kyrell":
-           display_name: """Thane Kyrell"""
-           text: """Quando você realizar um ataque, você pode gastar 1 resultado %FOCUS%, %HIT% ou %CRIT% para olhar as cartas de dano viradas para baixo do defensor, escolher 1 e expô-la."""
-        "Wedge Antilles":
-           display_name: """Wedge Antilles"""
-           text: """Quando você realizar um ataque, o defensor rola 1 dado de defesa a menos."""
-        "Luke Skywalker":
-           display_name: """Luke Skywalker"""
-           text: """Após você se tornar o defensor (antes dos dados serem rolados), você pode recuperar 1 %FORCE%."""
-        "Corran Horn (X-Wing)":
-           display_name: """Corran Horn"""
-           text: """Depois de declarar o defensor de um ataque, se você possuir uma mira no defensor, uma nave amiga pode transferir uma mira que tenha em você para o defensor."""
-        "Biggs Darklighter (BoY)":
-           display_name: """Biggs Darklighter (BdY)"""
-           text: """Durante a Fase de Sistema, você pode escolher 1 nave amiga em alcance 1. Se o fizer, trate sua iniciativa igual a da nave escolhida até o fim da fase de Ativação."""
-        "Garven Dreis (BoY)":
-           display_name: """Garven Dreis (BdY)"""
-           text: """Depois que você gastar uma ficha de foco, você pode escolher 1 nave amiga em alcance 1-3. Essa nave recebe 1 ficha de foco."""
-        "Jek Porkins (BoY)":
-           display_name: """Jek Porkins (BdY)"""
-           text: """Depois que você receber uma ficha de estresse, você pode rolar 1 dado de ataque para removê-la. Em um resultado %HIT%, sofra 1 dano %HIT%."""
-        "Luke Skywalker (BoY)":
-           display_name: """Luke Skywalker (BdY)"""
-           text: """Depois que você for declarado como defensor durante um ataque, você pode recuperar 1 %FORCE%."""
-        "Wedge Antilles (BoY)":
-           display_name: """Wedge Antilles (BdY)"""
-           text: """Quando você realizar um ataque primário, se houver outra nave amiga no arco de tiro do defensor, o defensor rola 1 dado de defesa a menos."""
-        "Wes Janson":
-           display_name: """Wes Janson"""
-           text: """Depois que você realizar um ataque, você pode gastar 1 %CHARGE% para que o defensor receba 1 ficha de interferência.%LINEBREAK%Depois que você defender, você pode gastar 1 %CHARGE% para que o defensor receba 1 ficha de interferência."""
-
-       #YT-1300
-        "Outer Rim Smuggler":
-           display_name: """Contrabandistada Orla Exterior"""
-           text: """<i class = flavor_text>Conhecido por sua durabilidade e modularidade, a YT-1300 é um dos cargueiros mais populares, mais usados e mais extensivamente personalizados da galáxia.</i>"""
-        "Chewbacca":
-           display_name: """Chewbacca"""
-           text: """Antes de receber uma carta de dano virada para cima, você pode gastar 1 %CHARGE% para, ao invés disso, receber a carta virada para baixo."""
-        "Leia Organa":
-           display_name: """Leia Organa"""
-           text: """Após uma nave amiga executar completamente uma manobra vermelha, se ela estiver em alcance 0-3, você pode gastar 1 %FORCE%. Se o fizer, a nave amiga recebe 1 ficha de foco ou recupera 1 %FORCE%."""
-        "Lando Calrissian":
-           display_name: """Lando Calrissian"""
-           text: """Após você executar completamente uma manobra azul, você pode escolher uma nave amiga em alcance 0-3. A nave escolhida pode realizar uma ação."""
-        "Han Solo":
-           display_name: """Han Solo"""
-           text: """Após você rolar dados, se você estiver em alcance 0-1 de um obstáculo, você pode rerrolar todos os seus dados. Para todos os outros efeitos, isto não conta como uma rerrolagem."""
-        "Han Solo (BoY)":
-           display_name: """Han Solo (BdY)"""
-           text: """Depois de realizar um ataque que acertou, você pode gastar 1 %CHARGE% para realizar uma ação %COORDINATE%.%LINEBREAK%<strong>Solo:</strong> Quando você defender ou realizar um ataque, se não houver outras naves amigas em alcance 0-1, você pode gastar 1 %CHARGE% para rerolar 1 de seus dados."""
-
-       #YT-2400
-        "Wild Space Fringer":
-           display_name: """Marginal do Espaço Selvagem"""
-           text: """<i class = flavor_text>Apesar dos cargueiros leves YT-2400 de fábrica possuírem um grande espaço de carga, esse espaço geralmente é ocupado por sistemas bélicos modificados e motores turbinados."""
-        '"Leebo"':
-           display_name: """“Leebo”"""
-           text: """Após você defender ou realizar um ataque, se você gastou uma ficha de cálculo, receba 1 ficha de cálculo."""
-        "Dash Rendar":
-           display_name: """Dash Rendar"""
-           text: """Quando você se move, você ignora obstáculos."""
-
-        #Expansão YT-2400
-        "Dash Rendar (YLF)":
-           display_name: """Dash Rendar (YLF)"""
-           text: """Durante a Fase de Engajamento, você ignora os efeitos dos obstáculos que você estiver sobrepondo."""
-        "Dash Rendar (YLF-SL)":
-           display_name: """Dash Rendar (YLF-SL)"""
-           text: """Depois que você receber uma ficha vermelha como resultado de se mover através ou sobrepor um obstáculo, você pode transferir esta ficha vermelha para uma nave amiga em alcance 0-1."""
-        "Dash Rendar (Scum)":
-           display_name: """Dash Rendar"""
-           text: """Depois que você receber uma ficha vermelha como resultado de se mover através ou sobrepor um obstáculo, você pode transferir esta ficha vermelha para uma nave amiga em alcance 0-1."""            
-        '"Leebo" (YLF)':
-           display_name: """“Leebo” (YLF)"""
-           text: """Depois que você se defender ou realizar um ataque, se você gastou uma ficha de cálculo, receba 1 ficha de cálculo."""
-        '"Leebo" (YLF-SL)':
-           display_name: """“Leebo” (YLF-SL)"""
-           text: """No começo da Fase de Engajamento, você pode gastar uma ficha de cálculo para adquirir uma mira em uma nave inimiga em alcance 2-3."""
-        '"Leebo" (Scum)':
-           display_name: """“Leebo”"""
-           text: """No começo da Fase de Engajamento, você pode gastar uma ficha de cálculo para adquirir uma mira em uma nave inimiga em alcance 2-3."""            
-
-
-       #Y-wing
-        "Gray Squadron Bomber":
-           display_name: """Bombardeiro do Esquadrão Cinza"""
-           text: """<i class = flavor_text>Muito tempo depois da Y-wing ser descontinuada pelo Império Galático, sua durabilidade, confiabilidade e armamento pesado ainda faz dela um recurso fundamental à frota Rebelde.</i>"""
-        "Gold Squadron Veteran":
-           display_name: """Veterano do Esquadrão Dourado"""
-           text: """<i class = flavor_text>Comandado por Jon “Dutch” Vander, o Esquadrão Ouro desempenhou um papel fundamental nas Batalhas de Scarif e Yavin.</i>"""
-        "Evaan Verlaine":
-           display_name: """Evaan Verlaine"""
-           text: """No início da Fase de Engajamento, você pode gastar 1 ficha de foco para escolher uma nave amiga em alcance 0-1. Se você fizer isso, a nave escolhida rola 1 dado de defesa adicional quando defender até o final da rodada."""
-        "Horton Salm":
-           display_name: """Horton Salm"""
-           text: """Quando realizar um ataque, você pode rerrolar 1 dado de ataque para cada outra nave amiga em alcance 0-1 do defensor."""
-        '"Dutch" Vander':
-           display_name: """“Dutch” Vander"""
-           text: """Após você realizar a ação %LOCK%, você pode escolher 1 nave amiga em alcance 1-3. A nave escolhida pode adquirir uma mira no objeto que você travou a mira, ignorando as restrições de alcance."""
-        "Norra Wexley (Y-Wing)":
-           display_name: """Norra Wexley"""
-           text: """Quando você defender, se houver uma nave inimiga em alcance 0-1, adicione 1 resultado %EVADE% ao resultado de seus dados."""
-        '"Pops" Krail':
-           display_name: """“Pops” Krail"""
-           text: """Depois que você executar completamente uma manobra branca, você pode escolher uma nave amiga em alcance 0-1. A nave escolhida pode realizar uma ação %FOCUS%."""
-        "Dex Tiree (BoY)":
-           display_name: """Dex Tiree (BdY)"""
-           text: """Quando você defender, se houver pelo menos 1 outra nave amiga em alcance 0-1, você pode rolar 1 dado de defesa adicional."""
-        "Hol Okand (BoY)":
-           display_name: """Hol Okand (BdY)"""
-           text: """Durante a Fase de Sistema, se não houver naves inimigas em alcance 1-2, você pode recuperar 1 %CHARGE% em qualquer melhoria."""
-        '"Pops" Krail (BoY)':
-           display_name: """“Pops” Krail (BdY)"""
-           text: """Quando você realizar um ataque %SINGLETURRETARC%, você pode rerolar até 2 dados de ataque."""
-        '"Dutch" Vander (BoY)':
-           display_name: """“Dutch” Vander (BdY)"""
-           text: """Depois que você gastar uma mira durante um ataque, escolha uma nave amiga em alcance 1-3. A nave escolhida pode adquirir uma mira no defensor."""
-
-       #Z-95
-        "Bandit Squadron Pilot":
-           display_name: """Piloto do Esquadrão Bandido"""
-           text: """<i class = flavor_text>A Z-95 Headhunter foi a principal inspiração da Incom Corporation para criar o caça estelar X-wing T-65. Apesar de ser considerada ultrapassada para os padrões modernos, ela continua sendo um caça versátil e potente.</i>"""
-        "Tala Squadron Pilot":
-           display_name: """Piloto do Esq. Tala"""
-           text: """<i class = flavor_text>A série AF4 é o modelo mais recente de uma longa lista de projetos Headhunter. Barata e relativamente durável, ela é uma das naves favoritas entre grupos independentes como a Rebelião.</i>"""
-        "Lieutenant Blount":
-           display_name: """Tenente Blount"""
-           text: """Quando você realizar um ataque primário, se houver ao menos 1 outra nave amiga em alcance 0-1 do defensor, você pode rolar 1 dado de ataque adicional."""
+           text: """Quando você coordenar, se você escolher uma nave com exatamente 1 ficha de estresse, ela pode realizar ações. """
+        "Academy Pilot":
+           display_name: """Piloto da Academia"""
+           text: """<i class = flavor_text>Desenvolvida pela Sienar Fleet Systems e produzida em uma escala assustadora, a rápida e ágil TIE/ln é utilizada pelo Império Galático como seu principal caça estelar.</i>"""
+        "Ahhav":
+           display_name: """Ahhav"""
+           text: """Quando você defender ou realizar um ataque, se a nave inimiga for maior que você, role 1 dado adicional."""
+        "Ahsoka Tano":
+           display_name: """Ahsoka Tano"""
+           text: """Após você executar completamente uma manobra, você pode escolher uma nave amiga em alcance 0-1 e gastar 1 %FORCE%. A nave escolhida pode realizar uma ação, mesmo se estiver estressada."""
+        "Ahsoka Tano (Delta-7b)":
+           display_name: """Ahsoka Tano"""
+           text: """Após você executar completamente uma manobra, você pode escolher uma nave amiga em alcance 0-1 e gastar 1 %FORCE%. A nave escolhida pode realizar uma ação, mesmo se estiver estressada."""
         "Airen Cracken":
            display_name: """Airen Cracken"""
            text: """Após você realizar um ataque, você pode escolher 1 nave amiga em alcance 1. A nave escolhida pode realizar uma ação, tratando-a como vermelha."""
-
-       #Gauntlet Fighter
-        "Mandalorian Resistance Pilot":
-           display_name: """Piloto da Resistência Mandaloriana"""
-           text: """Alguns guerreiros mandalorianos, como os do Clã Kryze, não se curvaram e continuam lutando contra o governo colaboracionista do Clã Saxon e seus mestres imperiais. A mistura de velocidade e poder de fogo do Caça Gauntlet fazem dele o transporte ideal para seus ataques."""
-        "Ezra Bridger (Gauntlet Fighter)":
-           display_name: """Ezra Bridger"""
-           text: """Quando você defender ou realizar um ataque, se você estiver estressado, você pode gastar 1 %FORCE% para mudar até 2 de seus resultados %FOCUS% para resultados %EVADE% ou %HIT%."""
-        '"Chopper" (Gauntlet Fighter)':
-           display_name: """Chopper"""
-           text: """No início da Fase de Engajamento, cada nave inimiga em alcance 0 recebe 2 fichas de interferência."""
-
-#Scum Pilots
-       
-       #Scurrg
-        "Lok Revenant":
-           display_name: """Espectro de Lok"""
-           text: """<i class = flavor_text>A Nubian Design Collective criou o Bombardeiro Scurrg H-6 tendo em mente a versatilidade em combate, equipando-o com escudos reforçados e um vasto conjunto de armamentos destrutivos.</i>"""
-        "Sol Sixxa":
-           display_name: """Sol Sixxa"""
-           text: """Se você for soltar um dispositivo usando um gabarito [1&nbsp;%STRAIGHT%], você pode soltá-lo usando, ao invés desse, qualquer outro gabarito de velocidade 1."""
+        "Alpha Squadron Pilot":
+           display_name: """Piloto do Esquadrão Alfa"""
+           text: """<i class = flavor_text>A Sienar Fleet Systems projetou a TIE interceptor com quatro canhões lasers em suas asas, um aumento drástico em seu poder de fogo se comparado com seus antecessores.</i>"""
+        "Anakin Skywalker":
+           display_name: """Anakin Skywalker"""
+           text: """Após você executar completamente uma manobra, se houver uma nave inimiga em seu %FRONTARC% em alcance 0-1 ou em seu %BULLSEYEARC%, você pode gastar 1 %FORCE% para remover 1 ficha de estresse."""
+        "Anakin Skywalker (Delta-7b)":
+           display_name: """Anakin Skywalker"""
+           text: """Após você executar completamente uma manobra, se houver uma nave inimiga em seu %FRONTARC% em alcance 0-1 ou em seu %BULLSEYEARC%, você pode gastar 1 %FORCE% para remover 1 ficha de estresse."""
+        "Anakin Skywalker (N-1 Starfighter)":
+           display_name: """Anakin Skywalker"""
+           text: """Antes de você revelar sua manobra, você pode gastar 1 %FORCE% para realizar uma pirueta (isso não é uma ação)."""
+        "Arvel Crynyd":
+           display_name: """Arvel Crynyd"""
+           text: """Se você falharia uma ação %BOOST% por sobrepor outra nave, ao invés disso, você pode resolvê-la como se estivesse executando parcialmente uma manobra.%LINEBREAK% Quando Você realizar um ataque em alcance 0, trate-o como um ataque em alcance 1. %LINEBREAK%<i>Errata (desde o rules reference 1.4): Alterada a segunda parte da habilidade.</i>"""
+        "Asajj Ventress":
+           display_name: """Asajj Ventress"""
+           text: """No início da Fase de Engajamento, você pode escolher 1 nave inimiga em seu %SINGLETURRETARC% em alcance 0-2 e gastar 1 %FORCE%. Se o fizer, a nave escolhida recebe 1 ficha de estresse a menos que ela remova 1 ficha verde."""
+        "Autopilot Drone":
+           display_name: """Piloto Automático"""
+           text: """<i class = flavor_text>Às vezes, os avisos dos fabricantes devem ser desobedecidos."""
+        "Bandit Squadron Pilot":
+           display_name: """Piloto do Esquadrão Bandido"""
+           text: """<i class = flavor_text>A Z-95 Headhunter foi a principal inspiração da Incom Corporation para criar o caça estelar X-wing T-65. Apesar de ser considerada ultrapassada para os padrões modernos, ela continua sendo um caça versátil e potente.</i>"""
+        "Baktoid Prototype":
+           display_name: """Protótipo da Baktoid"""
+           text: """Quando você realizar um ataque especial, se uma nave amiga com a habilidade de nave <b>Cálculos Interligados</b> tiver uma mira no defensor, você pode ignorar o requisito %FOCUS%, %CALCULATE% ou %LOCK% do ataque. """
+        "Baron of the Empire":
+           display_name: """Barão do Império"""
+           text: """<i class = flavor_text>A TIE Advanced v1 da Sienar Fleet Systems é um projeto de caça estelar revolucionário, apresentando motores aprimorados, um lança-mísseis e s-foils dobráveis.</i>"""
+        "Barriss Offee":
+           display_name: """Barriss Offee"""
+           text: """Quando uma nave amiga em alcance 0-2 realizar um ataque, se o defensor estiver no %BULLSEYEARC% do atacante, você pode gastar 1 %FORCE% para mudar 1 resultado %FOCUS% para um resultado %HIT% ou 1 resultado %HIT% para um resultado %CRIT%."""
+        "Barriss Offee (Delta-7b)":
+           display_name: """Barriss Offee"""
+           text: """Quando uma nave amiga em alcance 0-2 realizar um ataque, se o defensor estiver no %BULLSEYEARC% do atacante, você pode gastar 1 %FORCE% para mudar 1 resultado %FOCUS% para um resultado %HIT% ou 1 resultado %HIT% para um resultado %CRIT%."""
+        "Ben Teene":
+           display_name: """Ben Teene"""
+           text: """Após você realizar um ataque, se o defensor estiver em seu %SINGLETURRETARC%, atribua a condição <strong>Aturdido</strong> ao defensor."""
+        "Benthic Two Tubes":
+           display_name: """Benthic Two Tubes"""
+           text: """Após você realizar uma ação %FOCUS%, você pode transferir 1 de suas fichas de foco para uma nave amiga em alcance 1-2."""
+        "Biggs Darklighter":
+           display_name: """Biggs Darklighter"""
+           text: """Quando outra nave amiga em alcance 0-1 defender, antes da etapa Neutralizar Resultados, se você estiver no arco de ataque, você pode sofrer 1 dano %HIT% ou %CRIT% para cancelar 1 resultado correspondente."""
+        "Binayre Pirate":
+           display_name: """Pirata Binayre"""
+           text: """<i class = flavor_text>Operando à partir dos Mundos Gêmeos, Talus e Tralus, a gangue de contrabandistas de Kath Scarlet nunca foi reconhecida por boa reputação ou confiabilidade, mesmo por outros criminosos.</i>"""
+        "Black Squadron Ace":
+           display_name: """Ás do Esquadrão Preto"""
+           text: """<i class = flavor_text>O pilotos de TIE/ln de elite do Esquadrão Preto acompanharam Darth Vader em um ataque devastador contra as forças Rebeldes na Batalha de Yavin.</i>"""
+        "Black Squadron Scout":
+           display_name: """Batedor do Esq. Preto"""
+           text: """<i class = flavor_text>Estas naves atmosféricas amplamente armadas utilizam suas asas móveis especializadas para obter velocidade e agilidade adicionais.</i>"""
+        "Black Squadron Ace (T-70)":
+           display_name: """Ás do Esquadrão Preto"""
+           text: """<i class = flavor_text>Durante a Guerra Fria, o Esquadrão Preto de Poe Dameron realizou audaciosas operações secretas contra a Primeira Ordem resistindo aos tratados promulgados pelo Senado da Nova República.</i>"""
+        "Black Squadron Scout":
+           display_name: """Batedor do Esq. Preto"""
+           text: """<i class = flavor_text>Estas naves atmosféricas amplamente armadas utilizam suas asas móveis especializadas para obter velocidade e agilidade adicionais.</i>"""
+        "Black Sun Ace":
+           display_name: """Ás do Sol Negro"""
+           text: """<i class = flavor_text>O caça de assalto Kihraxz foi especialmente desenvolvido para a organização criminosa Sol Negro, cujos áses muito bem pagos exigiam uma nave ágil e poderosa à altura de suas habilidades.</i>"""
+        "Black Sun Assassin":
+           display_name: """Assassino do Sol Negro"""
+           text: """<i class = flavor_text>Apesar de assassinatos serem normalmente executados com um tiro certeiro ou com uma substância colocada em uma bebida, uma nave em chamas caindo do céu manda um outro tipo bem especial de mensagem.</i> """
+        "Black Sun Enforcer":
+           display_name: """Executor do Sol Negro"""
+           text: """<i class = flavor_text>O príncipe Xizor em pessoa colaborou com a MandalMotors para desenvolver o projeto da plataforma de ataque classe StarViper, um dos caças estelares mais formidáveis da galáxia.</i> """
+        "Black Sun Soldier":
+           display_name: """Soldado do Sol Negro"""
+           text: """<i class = flavor_text>O vasto e influente sindicato criminoso Sol Negro está sempre em busca de pilotos talentosos, contanto que eles não questionem o que precisam fazer para receber seus créditos.</i>"""
+        "Blade Squadron Veteran":
+           display_name: """Veterano do Esquadrão Lâmina"""
+           text: """<i class = flavor_text>Um sistema de estabilização giroscópica único foi projetado em volta da cabine da B-wing, garantindo que o piloto permaneça estacionário durante o voo..</i>"""
+        "Blue Squadron Escort":
+           display_name: """Escolta do Esquadrão Azul"""
+           text: """<i class = flavor_text>Projetada pela Incom Corporation, a X-wing T-65 se mostrou rapidamente ser um dos veículos militares mais efetivos da galáxia e uma dádiva para a Rebelião.</i>"""
+        "Blue Squadron Pilot":
+           display_name: """Piloto do Esquadrão Azul"""
+           text: """<i class = flavor_text>Devido ao seu conjunto de armas pesadas e escudo resiliente, a B-wing se consolidou como o caça de assalto mais inovador da Aliança Rebelde.</i>"""
+        "Blue Squadron Protector":
+           display_name: """Protetor do Esquadrão Azul"""
+           text: """<i class = flavor_text>Os pilotos clones de elite do Esquadrão Azul são treinados para pilotar seus V-19 em conjunto com Jedi e frequentemente apoiar comandantes famosos como Anakin Skywalker e Ahsoka Tano.</i>"""
+        "Blue Squadron Recruit":
+           display_name: """Recruta do Esquadrão Azul"""
+           text: """<i class = flavor_text>Muitas crianças por toda a galáxia cresceram ouvindo histórias de atos heroicos realizados durante a Guerra Civil Galáctica, e muitos aprenderam a voar nas mesmas cabines em que seus pais lutaram contra o Império.</i>"""
+        "Blue Squadron Rookie":
+           display_name: """Novato do Esquadrão Azul"""
+           text: """<i class = flavor_text>A X-wing T-70 da Incom-FreiTek foi projetada visando aperfeiçoar ainda mais a flexibilidade tática da venerável T-65. Seu soquete avançado de droide é compatível com uma grande variedade de astromecânicos, e seus encaixes modulares de armas permitem que seu arsenal seja adaptado para missões específicas.</i>"""
+        "Blue Squadron Scout":
+           display_name: """Batedor do Esq. Azul"""
+           text: """<i class = flavor_text>Usada para deslocar tropas encoberta pela escuridão ou até focos de batalha, a U-wing UT-60D atende a necessidade da aliança de ter um transporte de tropas rápido e robusto.</i>"""
+        "Boba Fett":
+           display_name: """Boba Fett"""
+           text: """Quando você defender ou realizar um ataque, você pode rerrolar 1 dos seus dados para cada nave inimiga em alcance 0-1."""
+        "Bodhi Rook":
+           display_name: """Bodhi Rook"""
+           text: """Naves amigas podem adquirir miras em objetos em alcance 0-3 de qualquer nave amiga."""
+        "Bossk":
+           display_name: """Bossk"""
+           text: """Quando você realizar um ataque primário, após a etapa Neutralizar Resultados, você pode gastar 1 resultado %CRIT% para adicionar 2 resultados %HIT%."""
+        "Bounty Hunter":
+           display_name: """Caçador de Recompensas"""
+           text: """<i class = flavor_text>A infame nave de patrulha classe Firespray é assim reconhecida devido à sua associação com os caçadores de recompensa Jango Fett e Boba Fett, que equipavam suas naves com incontáveis armamamentos letais.</i>"""
+        "Braylen Stramm":
+           display_name: """Braylen Stramm"""
+           text: """Quando você defender ou realizar um ataque, se você estiver estressado, você pode rerrolar até 2 de seus dados."""
+        "Captain Cardinal":
+           display_name: """Capitão Cardinal"""
+           text: """Quando uma nave amiga em alcance 1-2 de iniciativa mais baixa que a sua defender ou realizar um ataque, se você tiver ao menos 1 %CHARGE%, ela pode rerrolar 1 resultado %FOCUS%.%LINEBREAK% Após uma nave inimiga em alcance 0-3 ser destruída, perca 1 %CHARGE%."""
+        "Captain Feroph":
+           display_name: """Capitão Feroph"""
+           text: """Quando você defender, se o atacante não possuir fichas verdes, você pode mudar 1 de seus resultados em branco ou %FOCUS% para um resultado %EVADE%."""
+        "Captain Jonus":
+           display_name: """Capitão Jonus"""
+           text: """Quando uma nave amiga em alcance 0-1 realizar um ataque %TORPEDO% ou %MISSILE%, o atacante pode rerrolar até 2 dados de ataque. """
+        "Captain Jostero":
+           display_name: """Capitão Jostero"""
+           text: """Após uma nave inimiga sofrer dano, se ela não estiver defendendo, você pode realizar um ataque bônus contra ela."""
+        "Captain Kagi":
+           display_name: """Capitão Kagi"""
+           text: """No início da Fase de Engajamento, você pode escolher 1 ou mais naves amigas em alcance 0-3. Se o fizer, transfira todas as fichas de mira inimigas das naves escolhidas para você."""
         "Captain Nym":
            display_name: """Capitão Nym"""
            text: """Antes de uma bomba ou mina amiga detonar, você pode gastar 1 %CHARGE% para evitar que ela detone.%LINEBREAK%Quando você defender contra um ataque obstruído por uma bomba ou mina, role 1 dado de defesa adicional."""
-
-       #Aggressor
+        "Captain Oicunn":
+           display_name: """Capitão Oicunn"""
+           text: """Quando você realizar um ataque em alcance 0, trate-o como um ataque em alcance 1.  %LINEBREAK%<i>Errata (Desde a referência de regras 1.4): Habilidade modificada para funcionar com as novas regras básicas</i>"""
+        "Captain Rex":
+           display_name: """Capitão Rex"""
+           text: """Após você realizar um ataque, atribua a condição <strong>Tiro Supressivo</strong> ao defensor."""
+        "Captain Sear":
+           display_name: """Capitão Sear"""
+           text: """Quando uma nave amiga em alcance 0-3 realizar um ataque primário, se o defensor estiver no %BULLSEYEARC% do atacante, antes da etapa Neutralizar Resultados, a nave amiga pode gastar 1 ficha de cálculo para cancelar 1 resultado %EVADE%."""
+        "Captain Seevor":
+           display_name: """Capitão Seevor"""
+           text: """Quando você defender ou realizar um ataque, antes dos dados de ataque serem rolados, se você não estiver no %BULLSEYEARC% do inimigo, você pode gastar 1 %CHARGE%. Se o fizer, a nave inimiga recebe 1 ficha de interferência."""
+        "Cartel Executioner":
+           display_name: """Carrasco de Cartel"""
+           text: """<i class = flavor_text>Muitos pilotos veteranos à serviço dos kajidics Hutt e outras organizações criminosas escolhem a M12-L Kimogila devido à sua reputação aterradora e seu poder de fogo.</i>"""
+        "Cartel Marauder":
+           display_name: """Saqueador de Cartel"""
+           text: """<i class = flavor_text>A versátil Kihraxz foi projetada com base no popular caça estelar X-wing da Incom, porém uma série de kits de modificação garantiu uma gama enorme de variações.</i> """
+        "Cartel Spacer":
+           display_name: """Piloto de Cartel"""
+           text: """<i class = flavor_text>As M3-A "Scyk" Interceptors da MandalMotors foram compradas em grandes quantidades pelo Cartel Hutt e pelos contrabandistas Car'das devido à sua capacidade de customização e seu baixo custo.</i> """
+        "Cassian Andor":
+           display_name: """Cassian Andor"""
+           text: """No início da Fase de Ativação, você pode escolher 1 nave amiga em alcance 1-3. Se o fizer, a nave escolhida remove 1 ficha de estresse."""
+        "Cat":
+           display_name: """Cat"""
+           text: """Quando você realizar um ataque primário, se o defensor estiver em alcance 0-1 de pelo menos 1 dispositivo amigo, role 1 dado adicional."""
+        "Cavern Angels Zealot":
+           display_name: """Fanático dos Cavern Angels"""
+           text: """<i class = flavor_text>Diferente da maioria das células Rebeldes, os partidários de Saw estão prontos para usar métodos extremos para prejudicar os objetivos do Império Galáctico em batalhas brutais, de Geonosis a Jedha.</i>"""
+        "Chewbacca":
+           display_name: """Chewbacca"""
+           text: """Antes de receber uma carta de dano virada para cima, você pode gastar 1 %CHARGE% para, ao invés disso, receber a carta virada para baixo."""
+        "Chewbacca (Resistance)":
+           display_name: """Chewbacca"""
+           text: """Após uma nave amiga em alcance 0-3 ser destruída, antes da nave ser removida, você pode realizar um ação. Então, você pode realizar um ataque bônus.%LINEBREAK%<i><strong>Nota:</strong>A frase "antes da nave ser removida" não está impressa na carta, mas estava no construtor oficial.</i>"""
+        "Cobalt Squadron Bomber":
+           display_name: """Bombardeiro do Esquadrão Cobalto"""
+           text: """<i class = flavor_text>Com seus porões carregados de bombas de prótons ou de suprimentos de emergência, a tripulação das StarFortresses do Esquadrão Cobalto dedicam suas vidas para fazer a diferença na galáxia.</i>"""
+        "Colonel Jendon":
+           display_name: """Coronel Jendon"""
+           text: """No início da Fase de Ativação, você pode gastar 1 %CHARGE%. Se o fizer, quando naves amigas adquirirem miras nessa rodada, elas devem adquirir miras além do alcance 3 ao invés de em alcance 0-3."""
+        "Colonel Vessery":
+           display_name: """Coronel Vessery"""
+           text: """Quando você realizar um ataque contra uma nave mirada, após você rolar os dados de ataque, você pode adquirir uma mira no defensor."""
+        "Commander Malarus":
+           display_name: """Comandante Malarus"""
+           text: """No início da Fase de Engajamento, você pode gastar 1 %CHARGE% e receber 1 ficha de estresse. Se o fizer, até o final da rodada, quando você defender ou realizar um ataque, você pode mudar todos os seus resultados %FOCUS% para resultados %EVADE% ou %HIT%."""
+        "Constable Zuvio":
+           display_name: """Condestável Zuvio"""
+           text: """Se você for soltar um dispositivo, você pode, ao invés disso, lançá-lo usando um gabarito [1 %STRAIGHT%]."""
+        "Contracted Scout":
+           display_name: """Batedor Contratado"""
+           text: """<i class = flavor_text>Construída para reconhecimento de longa distância e para traçar novas rotas pelo hiperespaço, a levemente armada JumpMaster 5000 geralmente é atualizada extensivamente com melhorias personalizadas.</i>"""
+        "Corran Horn":
+           display_name: """Corran Horn"""
+           text: """Em iniciativa 0, você pode realizar um ataque primário bônus contra uma nave inimiga em seu %BULLSEYEARC%. Se o fizer, no início da próxima Fase de Planejamento, receba 1 ficha de desarmamento."""
+        "Count Dooku":
+           display_name: """Conde Dookan"""
+           text: """Após você defender, se o atacante estiver em seu arco de tiro, você pode gastar 1 %FORCE% para remover 1 de suas fichas azuis ou vermelhas.%LINEBREAK%Após você realizar um ataque que acerte, você pode gastar 1 %FORCE% para realizar uma ação."""
+        "Countess Ryad":
+           display_name: """Condessa Ryad"""
+           text: """Quando você for executar uma manobra %STRAIGHT%, você pode aumentar a dificuldade da manobra. Se o fizer, execute-a como uma manobra %KTURN%."""
+        "Crymorah Goon":
+           display_name: """Capanga de Crymorah"""
+           text: """<i class = flavor_text>Apesar de não muito ágil, a fuselagem pesada, o escudo potente e os canhões em torre da Y-wing fazem dela uma ótima nave de patrulha.</i>"""
+        "Cutlass Squadron Pilot":
+           display_name: """Piloto do Esq. Espada"""
+           text: """<i class = flavor_text>O projeto da TIE punisher se desenvolveu em torno do sucesso da TIE bomber, com a adição de escudo, um segundo lançador de bombas e outros três módulos bélicos, cada um equipado com um motor iônico gêmeo.</i>"""
+        "DBS-32C":
+           display_name: """DBS-32C"""
+           text: """No início da Fase de Engajamento, você pode gastar 1 ficha de cálculo para realizar uma ação %COORDINATE%. Você não pode coordenar naves que não possuem a habilidade de nave <b>Cálculos Interligados</b>. """
+        "DBS-404":
+           display_name: """DBS-404"""
+           text: """Quando você realiza um ataque em alcance 1, você <B>deve</B> rolar 1 dado de ataque adicional.  Após o ataque acertar, sofra 1 dano %CRIT%.%LINEBREAK%<i>Errata (Desde RR 1.4): Alterada a restrição da habilidade"</i>"""
+        "DFS-081":
+           display_name: """DFS-081"""
+           text: """Quando uma nave amiga em alcance 0-1 defender, ela pode gastar 1 ficha de cálculo para mudar todos os resultados %CRIT% para resultados %HIT%."""
+        "DFS-311":
+           display_name: """DFS-311"""
+           text: """No início da Fase de Engajamento, você pode transferir 1 de suas fichas de cálculo para outra nave amiga em alcance 0-3."""
+        "Dace Bonearm":
+           display_name: """Dace Bonearm"""
+           text: """Após uma nave inimiga em alcance 0-3 receber ao menos 1 ficha de íon, você pode gastar 3 %CHARGE%. Se o fizer, a nave inimiga recebe 2 fichas de íon adicionais."""
+        "Dalan Oberos (StarViper)":
+           display_name: """Dalan Oberos"""
+           text: """Após você executar completamente uma manobra, você pode receber 1 ficha de estresse para rotacionar sua nave 90º."""
+        "Dalan Oberos":
+           display_name: """Dalan Oberos"""
+           text: """No início da Fase de Engajamento, você pode escolher 1 nave com escudos em seu %BULLSEYEARC% e gastar 1 %CHARGE%. Se o fizer, a nave escolhida perde 1 escudo e você recupera 1 escudo."""
+        "Dark Courier":
+           display_name: """Dark Courier"""
+           text: """<i class = flavor_text>A nave chamada Scimitar foi muito modificada, equipada com tecnologias de camuflagem e dispositivos de vigilância avançados para missões de infiltração e assassinato.</i>"""
+        "Darth Maul":
+           display_name: """Darth Maul"""
+           text: """Após você realizar um ataque, você pode gastar 2 %FORCE% para realizar um ataque primário bônus contra um alvo diferente. Se o seu ataque errou, você pode realizar o ataque primário bônus, ao invés disso, contra o mesmo alvo."""
+        "Darth Vader":
+           display_name: """Darth Vader"""
+           text: """Após você realizar uma ação, você pode gastar 1 %FORCE% para realizar uma ação."""
+        "Dash Rendar":
+           display_name: """Dash Rendar"""
+           text: """Quando você se move, você ignora obstáculos."""
+        "Del Meeko":
+           display_name: """Del Meeko"""
+           text: """Quando uma nave amiga em alcance 0-2 defender de um atacante danificado, o defensor pode rerrolar 1 dado de defesa."""
+        "Delta Squadron Pilot":
+           display_name: """Piloto do Esq. Delta"""
+           text: """<i class = flavor_text>Além de seus lança-mísseis e dos seis canhões laser montados em suas asas, a formidável TIE defender é equipada com escudos defletores e um hiperpropulsor.</i>"""
+        "Dengar":
+           display_name: """Dengar"""
+           text: """Após você defender, se o atacante estiver em seu %FRONTARC%, você pode gastar 1 %CHARGE% para realizar um ataque bônus contra o atacante."""
+        "Drea Renthal":
+           display_name: """Drea Renthal"""
+           text: """Quando uma nave amiga não limitada realizar um ataque, se o defensor estiver em seu arco de tiro, o atacante pode rerrolar 1 dado de ataque."""
+        "Edon Kappehl":
+           display_name: """Edon Kappehl"""
+           text: """Após você executar completamente uma manobra azul ou branca, se você não soltou nem lançou um dispositivo nesta rodada, você pode soltar 1 dispositivo."""
+        "Edrio Two Tubes":
+           display_name: """Edrio Two Tubes"""
+           text: """Antes de você ativar, se você estiver focado, você pode realizar uma ação."""
+        "Ello Asty":
+           display_name: """Ello Asty"""
+           text: """Após você revelar uma manobra Curva Tallon [%TROLLLEFT% ou %TROLLRIGHT%] vermelha, se você tiver 2 ou menos fichas de estresse, trate essa manobra como se ela fosse branca."""
+        "Emon Azzameen":
+           display_name: """Emon Azzameen"""
+           text: """Se você for soltar um dispositivo usando um gabarito [1 %STRAIGHT%], você pode usar, ao invés disso, o gabarito [3 %TURNLEFT%], [3 %STRAIGHT%], [3 %TURNRIGHT%]."""
+        "Epsilon Squadron Cadet":
+           display_name: """Cadete do Esquadrão Épsilon"""
+           text: """<i class = flavor_text>Treinados desde a infância a bordo dos Destróieres Estelares classe Resurgent nos confins do espaço, muitos pilotos de TIE da Primeira Ordem nunca sequer pisaram na superfície de um planeta.</i>"""
+        "Esege Tuketu":
+           display_name: """Esege Tuketu"""
+           text: """Quando uma nave amiga em alcance 0-2 defender ou realizar um ataque, ela pode gastar as suas fichas de foco como se fossem dela."""
+        "Evaan Verlaine":
+           display_name: """Evaan Verlaine"""
+           text: """No início da Fase de Engajamento, você pode gastar 1 ficha de foco para escolher uma nave amiga em alcance 0-1. Se você fizer isso, a nave escolhida rola 1 dado de defesa adicional quando defender até o final da rodada."""
+        "Ezra Bridger":
+           display_name: """Ezra Bridger"""
+           text: """Quando você defender ou realizar um ataque, se você estiver estressado, você pode gastar 1 %FORCE% para mudar até 2 de seus resultados %FOCUS% para resultados %EVADE% ou %HIT%."""
+        "Ezra Bridger (Sheathipede)":
+           display_name: """Ezra Bridger"""
+           text: """Quando você defender ou realizar um ataque, se você estiver estressado, você pode gastar 1 %FORCE% para mudar até 2 de seus resultados %FOCUS% para resultados %EVADE% ou %HIT%. """
+        "Ezra Bridger (TIE Fighter)":
+           display_name: """Ezra Bridger"""
+           text: """Quando você defender ou realizar um ataque, se você estiver estressado, você pode gastar 1 %FORCE% para mudar até 2 de seus resultados %FOCUS% para resultados %EVADE% ou %HIT%."""
+        "Feethan Ottraw Autopilot":
+           display_name: """Autopiloto da Feethan Ottraw"""
+           text: """<i class = flavor_text>Ao contrário dos caças mais descartáveis que também construiu para os Separatistas, a Feethan Ottraw Scalable Assemblies projetou o Belbullab-22 com uma sólida mistura de poder de fogo, durabilidade e velocidade.</i>"""
+        "Fenn Rau (Sheathipede)":
+           display_name: """Fenn Rau"""
+           text: """Antes de uma nave inimiga em seu arco de tiro engajar, se você não estiver estressado, você pode receber 1 ficha de estresse. Se o fizer, a nave inimiga engajando não pode gastar fichas para modificar dados enquanto estiver realizando um ataque nesta fase. %LINEBREAK% <i>Errata (since rules reference 1.1.0): Replaced "After an enemy ship in your firing arc engages")</i>"""
+        "Fenn Rau":
+           display_name: """Fenn Rau"""
+           text: """Quando você defender ou realizar um ataque, se o alcance do ataque for 1, você pode rolar 1 dado adicional."""
+        "Finch Dallow":
+           display_name: """Finch Dallow"""
+           text: """Quando você for soltar uma bomba, em vez disso, você pode colocá-la na área de jogo tocando sua nave."""
+        "First Order Test Pilot":
+           display_name: """Piloto de Testes da Primeira Ordem"""
+           text: """<i class = flavor_text>Projetada para altas velocidades e com uma manobrabilidade incrível, a TIE Silencer é devastadora nas mãos daqueles capazes de utilizar seu potencial máximo. Pilotos menos experientes perdem facilmente o controle desta ágil nave.</i> """
+        "Foreman Proach":
+           display_name: """Chefe Proach"""
+           text: """Antes de você engajar, você pode escolher 1 nave inimiga em seu %BULLSEYEARC% em alcance 1-2 e receber 1 ficha de desarmamento. Se o fizer, a nave escolhida recebe 1 ficha de tração."""
+        "Freighter Captain":
+           display_name: """Capitão de Cargueiro"""
+           text: """<i class = flavor_text>Muitos pilotos ganhavam a vida em viagens à Orla Exterior, onde a diferença entre contrabando e comércio legalizado é muitas vezes inexistente. Às margens da civilização, os compradores raramente questionavam a origem das mercadorias, pelo menos enquanto o preço era baixo o suficiente.</i>"""
+        "Gamma Squadron Ace":
+           display_name: """Ás do Esquadrão Gama"""
+           text: """<i class = flavor_text>Apesar de sacrificar boa parte de sua velocidade e agilidade se comparada com uma TIE/ln, a capacidade de carga aumentada da TIE bomber pode carregar poder de fogo para destruir virtualmente qualquer alvo inimigo.</i> """
+        "Gand Findsman":
+           display_name: """Findsman Gand"""
+           text: """<i class = flavor_text>Os lendários Rastreadores de Gand veneram a névoa que encobre seu planeta natal, usando sinais, presságios e rituais mágicos para rastrear suas presas.</i>"""
+        "Garven Dreis (X-Wing)":
+           display_name: """Garven Dreis"""
+           text: """Após você gastar uma ficha de foco, você pode escolher 1 nave amiga em alcance 1-3. A nave escolhida recebe 1 ficha de foco."""
+        "Garven Dreis":
+           display_name: """Garven Dreis"""
+           text: """Após você gastar uma ficha de foco, você pode escolher 1 nave amiga em alcance 1-3. A nave escolhida recebe 1 ficha de foco."""
+        "Gavin Darklighter":
+           display_name: """Gavin Darklighter"""
+           text: """Quando uma nave amiga realizar um ataque, se o defensor estiver em seu %FRONTARC%, o atacante pode mudar 1 resultado %HIT% para um resultado %CRIT%."""
+        "General Grievous":
+           display_name: """General Grievous"""
+           text: """Quando você realizar um ataque primário, se você não estiver no arco de tiro do defensor, você pode rerrolar até 2 dados de ataque."""
+        "Genesis Red":
+           display_name: """Gênesis Vermelho"""
+           text: """Após você adquirir uma mira, você deve remover todas as suas fichas de foco e desvio. Então, receba a mesma quantidade de fichas de foco e desvio que a nave mirada possui."""
+        "Gideon Hask":
+           display_name: """Gideon Hask"""
+           text: """Quando você realizar um ataque contra um defensor danificado, role 1 dado de ataque adicional."""
+        "Gold Squadron Trooper":
+           display_name: """Soldado do Esquadrão Ouro"""
+           text: """<i class = flavor_text>O caça estelar V-19 Torrent foi projetado como um escolta leve para os ágeis interceptadores Delta-7 pilotados pelos Cavaleiros Jedi e possui um perfil de voo único para refletir essa função.</i>"""
+        "Gold Squadron Veteran":
+           display_name: """Veterano do Esquadrão Dourado"""
+           text: """<i class = flavor_text>Comandado por Jon “Dutch” Vander, o Esquadrão Ouro desempenhou um papel fundamental nas Batalhas de Scarif e Yavin.</i>"""
+        "Grand Inquisitor":
+           display_name: """Grande Inquisidor"""
+           text: """Quando você defender em alcance de ataque 1, você pode gastar 1 %FORCE% para impedir o bônus de alcance 1.%LINEBREAK%Quando você realizar um ataque contra um defensor em alcance de ataque 2-3, você pode gastar 1 %FORCE% para aplicar o bônus de alcance 1."""
+        "Gray Squadron Bomber":
+           display_name: """Bombardeiro do Esquadrão Cinza"""
+           text: """<i class = flavor_text>Muito tempo depois da Y-wing ser descontinuada pelo Império Galático, sua durabilidade, confiabilidade e armamento pesado ainda faz dela um recurso fundamental à frota Rebelde.</i>"""
+        "Graz":
+           display_name: """Graz"""
+           text: """Quando você defender, se você estiver atrás do atacante, role 1 dado de defesa adicional.%LINEBREAK%Quando você atacar, se você estiver atrás do defensor, role 1 dado de ataque adicional."""
+        "Green Squadron Expert":
+           display_name: """Green Squadron Expert"""
+           text: """<i class = flavor_text>Anos de modificações de batalha foram padronizadas no projeto da RZ-2, mas os pilotos mais ousados enxergam a confiabilidade avançada da nave como um desafio para testar ainda mais os limites de sua performance.</i>"""
+        "Green Squadron Pilot":
+           display_name: """Piloto do Esquadrão Verde"""
+           text: """<i class = flavor_text>Devido aos seus controles sensitivos e alta manobrabilidade, somente os pilotos mais talentosos ocupavam a cabine de uma A-wing.</i>"""
+        "Greer Sonnel":
+           display_name: """Greer Sonnel"""
+           text: """Após você executar completamente uma manobra, você pode rotacionar seu %SINGLETURRETARC%."""
+        "Guri":
+           display_name: """Guri"""
+           text: """No início da Fase de Engajamento, se houver ao menos 1 nave inimiga em alcance 0-1, você pode receber 1 ficha de foco."""
+        "Han Solo":
+           display_name: """Han Solo"""
+           text: """Após você rolar dados, se você estiver em alcance 0-1 de um obstáculo, você pode rerrolar todos os seus dados. Para todos os outros efeitos, isto não conta como uma rerrolagem."""
+        "Han Solo (Scum)":
+           display_name: """Han Solo"""
+           text: """Quando você defender ou realizar um ataque, se o ataque estiver obstruído por um obstáculo, você pode rolar 1 dado adicional."""
+        "Han Solo (Resistance)":
+           display_name: """Han Solo"""
+           text: """<strong>Preparação:</strong> Você consegue ser posicionado em qualquer lugar da área de jogo além de alcance 3 de naves inimigas."""
+        "Heff Tobber":
+           display_name: """Heff Tobber"""
+           text: """Após uma nave inimiga executar uma manobra, se ela estiver em alcance 0, você pode realizar uma ação."""
+        "Hera Syndulla":
+           display_name: """Hera Syndulla"""
+           text: """Após você revelar uma manobra vermelha ou azul, você pode colocar seu disco em outra manobra de mesma dificuldade."""
+        "Hera Syndulla (VCX-100)":
+           display_name: """Hera Syndulla"""
+           text: """Após você revelar uma manobra vermelha ou azul, você pode colocar seu disco em outra manobra de mesma dificuldade."""
+        "Hired Gun":
+           display_name: """Mercenário"""
+           text: """<i class = flavor_text>A mera menção de créditos Imperiais pode atrair uma legião de indivíduos não muito confiáveis para o seu lado.</i>"""
+        "Horton Salm":
+           display_name: """Horton Salm"""
+           text: """Quando realizar um ataque, você pode rerrolar 1 dado de ataque para cada outra nave amiga em alcance 0-1 do defensor."""
         "IG-88A":
            display_name: """IG-88A"""
-           text: """No início da Fase de Engajamento, você pode escolher 1 nave amiga em alcance 1-3 que tenha %CALCULATE% na barra de ações. Se o fizer, transfira 1 de suas fichas de cálculo para ela."""
+           text: """No início da Fase de Engajamento, você pode escolher 1 nave amiga em alcance 1-3 que tenha %CALCULATE% na barra de ações. Se o fizer, transfira 1 de suas fichas de cálculo para ela. """
         "IG-88B":
            display_name: """IG-88B"""
            text: """Após você realizar um ataque que errou, você pode fazer um ataque %CANNON% bônus.%LINEBREAK%<strong>Cérebro Droide Avançado:</strong> Após realizar uma ação %CALCULATE%, receba 1 ficha de cálculo."""
@@ -932,1208 +858,678 @@ exportObj.cardLoaders.Português = () ->
         "IG-88D":
            display_name: """IG-88D"""
            text: """Quando você executar uma manobra Loop de Segnor (%SLOOPLEFT% ou %SLOOPRIGHT%), você pode usar outro gabarito de mesma velocidade de: curva acentuada (%TURNLEFT% ou %TURNRIGHT%) da mesma direção ou linha reta (%STRAIGHT%)."""
-
-       #G1-A
-        "Gand Findsman":
-           display_name: """Findsman Gand"""
-           text: """<i class = flavor_text>Os lendários Rastreadores de Gand veneram a névoa que encobre seu planeta natal, usando sinais, presságios e rituais mágicos para rastrear suas presas.</i>"""
-        "Zuckuss":
-           display_name: """Zuckuss"""
-           text: """Quando você realizar um ataque primário, você pode rolar 1 dado de ataque adicional. Se o fizer, o defensor rola 1 dado de defesa adicional."""
-        "4-LOM":
-           display_name: """4-LOM"""
-           text: """Após você executar completamente uma manobra vermelha, receba 1 ficha de cálculo. No início da Fase Final, você pode escolher 1 nave em alcance 0-1. Se o fizer, transfira 1 de suas fichas de estresse para a nave escolhida."""
-        "Zuckuss (AaD)":
-           display_name: """Zuckuss (AaD)"""
-           text: """Quando você realizar um ataque primário, você pode rolar 1 dado de ataque adicional. Se o fizer, o defensor rola 1 dado de defesa adicional."""
-
-       #Fang Fighter
-        "Zealous Recruit":
-           display_name: """Recruta Diligente"""
-           text: """<i class = flavor_text>Os pilotos do caça Mandaloriano Fang devem dominar a manobra Afronta de Concordia, aproveitando a silhueta esguia de suas naves para executar ataques frontais mortais.</i>"""
-        "Skull Squadron Pilot":
-           display_name: """Piloto do Esq. Caveira"""
-           text: """<i class = flavor_text>Os ases do Esquadrão Caveira preferem aproximações agressivas, utilizando a tecnologia de asas pivotantes para alcançar uma agilidade imbatível durante perseguições.</i>"""
-        "Joy Rekkoff":
-           display_name: """Joy Rekkoff"""
-           text: """Quando você realizar um ataque, você pode gastar 1 %CHARGE% de uma melhoria %TORPEDO% equipada. Se o fizer, o defensor rola 1 dado de defesa a menos."""
-        "Kad Solus":
-           display_name: """Kad Solus"""
-           text: """Após você executar completamente uma manobra vermelha, receba 2 fichas de foco."""
-        "Old Teroch":
-           display_name: """Velho Teroch"""
-           text: """No início da Fase de Engajamento, você pode escolher 1 nave inimiga em alcance 1. Se o fizer e estiver no %FRONTARC% da nave escolhida, ela remove todas as fichas verdes dela."""
-        "Fenn Rau":
-           display_name: """Fenn Rau"""
-           text: """Quando você defender ou realizar um ataque, se o alcance do ataque for 1, você pode rolar 1 dado adicional."""
-        "Mandalorian Royal Guard":
-           display_name: """Guarda Real Mandaloriana"""
-           text: """Quando uma nave amiga que não seja pequena defende, se você estiver no arco de ataque, você pode receber 1 ficha de de exaustão e 1 ficha de desgaste. Se o fizer, o defensor pode mudar 1 resultado para um resultado %EVADE%."""
-        "Tor Phun":
-           display_name: """Tor Phun"""
-           text: """Depois que você realizar um ataque, se o defensor foi destruído, você pode realizar uma ação, mesmo se estiver estressado. E então você pode receber 2 fichas de desgaste para realizar um ataque bônus."""
-        "Fenn Rau (AaD)":
-           display_name: """Fenn Rau (AaD)"""
-           text: """Quando você defender ou realizar um ataque, se o alcance do ataque for 1, você pode rolar 1 dado adicional."""
-
-       #Kihraxz
-        "Cartel Marauder":
-           display_name: """Saqueador de Cartel"""
-           text: """<i class = flavor_text>A versátil Kihraxz foi projetada com base no popular caça estelar X-wing da Incom, porém uma série de kits de modificação garantiu uma gama enorme de variações.</i>"""
-        "Black Sun Ace":
-           display_name: """Ás do Sol Negro"""
-           text: """<i class = flavor_text>O caça de assalto Kihraxz foi especialmente desenvolvido para a organização criminosa Sol Negro, cujos áses muito bem pagos exigiam uma nave ágil e poderosa à altura de suas habilidades.</i>"""
-        "Captain Jostero":
-           display_name: """Capitão Jostero"""
-           text: """Após uma nave inimiga sofrer dano, se ela não estiver defendendo, você pode realizar um ataque bônus contra ela."""
-        "Viktor Hel":
-           display_name: """Viktor Hel"""
-           text: """Após você defender, se você não rolou exatamente 2 dados de defesa, o atacante recebe 1 ficha de estresse."""
-        "Graz":
-           display_name: """Graz"""
-           text: """Quando você defender, se você estiver atrás do atacante, role 1 dado de defesa adicional.%LINEBREAK%Quando você atacar, se você estiver atrás do defensor, role 1 dado de ataque adicional."""
-        "Talonbane Cobra":
-           display_name: """Talonbane Cobra"""
-           text: """Quando você defender em alcance de ataque 3 ou realizar um ataque em alcance de ataque 1, role 1 dado adicional."""
-
-       #Kimogila
-        "Cartel Executioner":
-           display_name: """Carrasco de Cartel"""
-           text: """<i class = flavor_text>Muitos pilotos veteranos à serviço dos kajidics Hutt e outras organizações criminosas escolhem a M12-L Kimogila devido à sua reputação aterradora e seu poder de fogo."""
-        "Dalan Oberos":
-           display_name: """Dalan Oberos"""
-           text: """No início da Fase de Engajamento, você pode escolher 1 nave com escudos em seu %BULLSEYEARC% e gastar 1 %CHARGE%. Se o fizer, a nave escolhida perde 1 escudo e você recupera 1 escudo."""
-        "Torani Kulda":
-           display_name: """Torani Kulda"""
-           text: """Após você realizar um ataque, cada nave inimiga em seu %BULLSEYEARC% sofre 1 dano %HIT% a menos que ela remova 1 ficha verde."""
-
-       #Mining TIE
-        "Mining Guild Sentry":
-           display_name: """Sentinela da Guilda dos Mineradores"""
-           text: """<i class = flavor_text>Como parte do acordo com o Império, a Guilda dos Mineradores recebe TIE/ln Fighters modificadas para proteger suas operações. Estas naves tiveram alguns painéis solares removidos de seus estabilizadores para favorecer a visibilidade, e apresentam sistemas de suporte à vida mais completos para beneficiar seus pilotos contratados."""
-        "Mining Guild Surveyor":
-           display_name: """Inspetor da Guilda dos Mineradores"""
-           text: """<i class = flavor_text>Com os projetos de construção do Império consumindo recursos em um ritmo nunca visto antes, a Guilda dos Mineradores explora impiedosamente novos depósitos de minério de doonium em mundos como Batonn, Lothal e Umbara."""
-        "Overseer Yushyn":
-           display_name: """Supervisor Yushyn"""
-           text: """Antes de uma nave amiga em alcance 1 receber uma ficha de desarmamento, se ela não estiver estressada, você pode gastar 1 %CHARGE%. Se o fizer, ao invés da ficha de desarmamento, ela recebe 1 ficha de estresse."""
-        "Ahhav":
-           display_name: """Ahhav"""
-           text: """Quando você defender ou realizar um ataque, se a nave inimiga for maior que você, role 1 dado adicional."""
-        "Captain Seevor":
-           display_name: """Capitão Seevor"""
-           text: """Quando você defender ou realizar um ataque, antes dos dados de ataque serem rolados, se você não estiver no %BULLSEYEARC% do inimigo, você pode gastar 1 %CHARGE%. Se o fizer, a nave inimiga recebe 1 ficha de interferência."""
-        "Foreman Proach":
-           display_name: """Chefe Proach"""
-           text: """Antes de você engajar, você pode escolher 1 nave inimiga em seu %BULLSEYEARC% em alcance 1-2 e receber 1 ficha de desarmamento. Se o fizer, a nave escolhida recebe 1 ficha de tração."""
-        "Lapin":
-           display_name: """Lapin"""
-           text: """Quando você defender ou realizar um ataque, se a nave inimiga estiver estressada, os dados dessa nave não podem ser modificados."""
-
-       #HWK290
-        "Spice Runner":
-           display_name: """Contrabandista de Especiarias"""
-           text: """<i class = flavor_text>Apesar de ter espaço de carga limitado se comparada com outros cargueiros leves, a pequena e ágil HWK-290 é uma das escolhas de contrabandistas especializados em transportar bens discretamente.</i>"""
-        "Dace Bonearm":
-           display_name: """Dace Bonearm"""
-           text: """Após uma nave inimiga em alcance 0-3 receber ao menos 1 ficha de íon, você pode gastar 3 %CHARGE%. Se o fizer, a nave inimiga recebe 2 fichas de íon adicionais."""
-        "Gamut Key":
-           display_name: """Gamut Key"""
-           text: """No início da Fase Final, você pode gastar 2 %CHARGE% para escolher você mesmo ou uma nave em seu %SINGLETURRETARC% com 1 ou mais fichas circulares. Durante a Fase Final, fichas circulares não são removidas da nave escolhida."""
-        "Tápusk":
-           display_name: """Tápusk"""
-           text: """Durante a Fase Final, antes que uma nave inimiga em seu %SINGLETURRETARC% recupera 1 %CHARGE% ou %FORCE% recursiva, você pode gastar 2 %CHARGE%. Se o fizer, a nave inimiga não recupera aquela %CHARGE% ou %FORCE%."""        
-        "Torkil Mux":
-           display_name: """Torkil Mux"""
-           text: """No início da Fase de Engajamento, você pode escolher 1 nave em seu arco de tiro. Se o fizer, a nave escolhida engaja na iniciativa 0 ao invés do seu valor normal de iniciativa nessa rodada."""
-        "Palob Godalhi":
-           display_name: """Palob Godalhi"""
-           text: """No início da Fase de Engajamento, você pode escolher 1 nave inimiga em seu arco de tiro em alcance 0-2. Se o fizer, transfira 1 ficha de foco ou desvio da nave escolhida para você."""
-        "Kanan Jarrus (HWK-290)":
-           display_name: """Kanan Jarrus"""
-           text: """Quando você ou uma nave em seu %SINGLETURRETARC% defender, você pode gastar 1 %FOCE%. Se o fizer, o atacante rola 1 dado de ataque a menos."""
-
-       #YT-1300 Scum
-        "Freighter Captain":
-           display_name: """Capitão de Cargueiro"""
-           text: """<i class = flavor_text>Muitos pilotos ganhavam a vida em viagens à Orla Exterior, onde a diferença entre contrabando e comércio legalizado é muitas vezes inexistente. Às margens da civilização, os compradores raramente questionavam a origem das mercadorias, pelo menos enquanto o preço era baixo o suficiente.</i>"""
-        "L3-37":
-           display_name: """L3-37"""
-           text: """Se você não tiver escudos, diminua a dificuldade das suas manobras de curva (%BANKLEFT% e %BANKRIGHT%)."""
-        "Lando Calrissian (Scum)":
-           display_name: """Lando Calrissian"""
-           text: """Após você rolar dados, se você não estiver estressado, você pode receber 1 ficha de estresse para rerrolar todos os seus resultados em branco."""
-        "Han Solo (Scum)":
-           display_name: """Han Solo"""
-           text: """Quando você defender ou realizar um ataque, se o ataque estiver obstruído por um obstáculo, você pode rolar 1 dado adicional."""
-        "Han Solo (AaD)":
-           display_name: """Han Solo (AaD)"""
-           text: """Quando você defender ou realizar um ataque, se o ataque estiver obstruído por um obstáculo, você pode rolar 1 dado adicional."""
-
-      #YV-666
-        "Trandoshan Slaver":
-           display_name: """Escravista Trandoshano"""
-           text: """<i class = flavor_text>O design espaçoso de convés triplo da YV-666 faz dela uma nave muito popular entre os caçadores de recompensa e escravistas, que normalmente reformam um convés inteiro para o transporte de prisioneiros.</i>"""
-        "Latts Razzi":
-           display_name: """Latts Razzi"""
-           text: """No início da Fase de Engajamento, você pode escolher uma nave em alcance 1 e gastar uma mira que você tem na nave escolhida. Se o fizer, a nave escolhida recebe 1 ficha de tração."""
-        "Bossk":
-           display_name: """Bossk"""
-           text: """Quando você realizar um ataque primário, após a etapa Neutralizar Resultados, você pode gastar 1 resultado %CRIT% para adicionar 2 resultados %HIT%."""
-        "Moralo Eval":
-           display_name: """Moralo Eval"""
-           text: """Se você iria fugir, você pode gastar 1 %CHARGE%. Se o fizer, coloque-se na reserva, ao invés de fugir. No início da próxima Fase de Planejamento, coloque-se dentro do alcance 1 da borda da área de jogo pela qual você fugiu."""
-        "Doctor Aphra":
-           display_name: """Dra. Aphra"""
-           text: """Antes de você engajar, você pode gastar 1 ficha verde e 1 %CHARGE%. Se o fizer, você pode escolher outra nave em alcance 0-1 que não esteja estressada. A nave escolhida recebe 1 ficha de estresse."""
-        "Bossk (AaD)":
-           display_name: """Bossk (AaD)"""
-           text: """Quando você realizar um ataque primário, após a etapa Neutralizar Resultados, você pode gastar 1 resultado %CRIT% para adicionar 2 resultados %HIT%."""
-
-      #Jumpaster-5000
-        "Contracted Scout":
-           display_name: """Batedor Contratado"""
-           text: """<i class = flavor_text>Construída para reconhecimento de longa distância e para traçar novas rotas pelo hiperespaço, a levemente armada JumpMaster 5000 geralmente é atualizada extensivamente com melhorias personalizadas.</i>"""
-        "Nom Lumb":
-           display_name: """Nom Lumb"""
-           text: """Após você se tornar o defensor, se o atacante não estiver em seu %SINGLETURRETARC%, você deve rotacionar seu indicador %SINGLETURRETARC% para o arco convencional que o atacante está."""
-        "Tel Trevura":
-           display_name: """Tel Trevura"""
-           text: """Se você seria destruído, você pode gastar 1 %CHARGE%. Se o fizer, descarte todas as suas cartas de dano, sofra 5 danos %HIT%, e coloque-se na reserva. No início da próxima Fase de Planejamento, posicione-se dentro do alcance 1 da sua borda de jogador."""
-        "Manaroo":
-           display_name: """Manaroo"""
-           text: """No início da Fase de Engajamento, você pode escolher uma nave amiga em alcance 0-1. Se o fizer, transfira todas as fichas verdes atribuidas a você para a nave escolhida."""
-        "Dengar":
-           display_name: """Dengar"""
-           text: """Após você defender, se o atacante estiver em seu %FRONTARC%, você pode gastar 1 %CHARGE% para realizar um ataque bônus contra o atacante."""
-        "Dengar (AaD)":
-           display_name: """Dengar (AaD)"""
-           text: """Após você defender, se o atacante estiver em seu %FRONTARC%, você pode gastar 1 %CHARGE% para realizar um ataque bônus contra o atacante."""
-
-       #M3-A
-        "Cartel Spacer":
-           display_name: """Piloto de Cartel"""
-           text: """<i class = flavor_text>As M3-A "Scyk" Interceptors da MandalMotors foram compradas em grandes quantidades pelo Cartel Hutt e pelos contrabandistas Car'das devido à sua capacidade de customização e seu baixo custo."""
-        "Tansarii Point Veteran":
-           display_name: """Veterano de Ponto Tansarii"""
-           text: """<i class = flavor_text>A derrota do ás do Sol Negro Talonbane Cobra para contrabandistas Car'das virou o jogo durante a Batalha da Estação Ponto Tansarii. Os sobreviventes do combate são respeitados por todo o setor."""
-        "Sunny Bounder":
-           display_name: """Sunny Bounder"""
-           text: """Quando você defender ou realizar um ataque, após você rolar ou rerrolar seus dados, se você obteve o mesmo resultado em todos os dados, você pode adicionar 1 resultado correspondente."""
-        "G4R-GOR V/M":
-           display_name: """G4R-GOR V/M"""
-           text: """Após você defender, cada outra nave em alcance 0 sofre 1 dano %CRIT%."""
-        "Inaldra":
-           display_name: """Inaldra"""
-           text: """Quando você defender ou realizar um ataque, você pode sofrer 1 dano %HIT% para rerrolar qualquer número de seus dados."""
-        "Laetin A'shera":
-           display_name: """Laetin A’shera"""
-           text: """Após você defender ou realizar um ataque, se o ataque errou, receba 1 ficha de desvio."""
-        "Genesis Red":
-           display_name: """Gênesis Vermelho"""
-           text: """Após você adquirir uma mira, você deve remover todas as suas fichas de foco e desvio. Então, receba a mesma quantidade de fichas de foco e desvio que a nave mirada possui."""
-        "Quinn Jast":
-           display_name: """Quinn Jast"""
-           text: """No início da Fase de Engajamento, você pode receber 1 ficha de desarmamento para recuperar 1 %CHARGE% de uma de suas melhorias equipadas."""
-        "Serissu":
-           display_name: """Serissu"""
-           text: """Quando uma nave amiga em alcance 0-1 defender, ela pode rerrolar 1 dos dados dela."""
-
-      #Scape Craft
-        "Autopilot Drone":
-           display_name: """Piloto Automático"""
-           text: """<i class = flavor_text>Às vezes, os avisos dos fabricantes devem ser desobedecidos. %LINEBREAK%<strong>Células de Energia Viciadas:</strong> Durante a Fase de Sistema, se você não estiver acoplado, perca 1 %CHARGE%. No final da Fase de Ativação, se você tiver 0 %CHARGE%, você é destruído. Antes de você ser removido, cada nave em alcance 0-1 sofre 1 dano %CRIT%."""
-        "L3-37 (Escape Craft)":
-           display_name: """L3-37"""
-           text: """Se você não tiver escudos, diminua a dificuldade das suas manobras de curva (%BANKLEFT% e %BANKRIGHT%)."""
-        "Outer Rim Pioneer":
-           display_name: """Pioneiro da Orla Exterior"""
-           text: """Naves amigas em alcance 0-1 podem realizar ataques em alcance 0 de obstáculos."""
-        "Lando Calrissian (Scum) (Escape Craft)":
-           display_name: """Lando Calrissian"""
-           text: """Após você rolar dados, se você não estiver estressado, você pode receber 1 ficha de estresse para rerrolar todos os seus resultados em branco."""
-
-      #Firespray
-        "Bounty Hunter":
-           display_name: """Caçador de Recompensas"""
-           text: """<i class = flavor_text>A infame nave de patrulha classe Firespray é assim reconhecida devido à sua associação com os caçadores de recompensa Jango Fett e Boba Fett, que equipavam suas naves com incontáveis armamamentos letais.</i>"""
-        "Krassis Trelix":
-           display_name: """Krassis Trelix"""
-           text: """Você pode realizar ataques especiais %FRONTARC% usando seu %REARARC%.%LINEBREAK%Quando você realizar um ataque especial, você pode rerrolar 1 dado de ataque."""
-        "Koshka Frost":
-           display_name: """Koshka Frost"""
-           text: """Quando você realizar um ataque, se a nave inimiga estiver estressada, você pode rerrolar 1 dos seus dados."""
-        "Emon Azzameen":
-           display_name: """Emon Azzameen"""
-           text: """Se você for soltar um dispositivo usando um gabarito [1 %STRAIGHT%], você pode usar, ao invés disso, o gabarito [3 %TURNLEFT%], [3 %STRAIGHT%], [3 %TURNRIGHT%]."""
-        "Kath Scarlet":
-           display_name: """Kath Scarlet"""
-           text: """Quando você realizar um ataque primário, se houver ao menos 1 nave amiga não limitada em alcance 0 do defensor, role 1 dado de ataque adicional."""
-        "Boba Fett":
-           display_name: """Boba Fett"""
-           text: """Quando você defender ou realizar um ataque, você pode rerrolar 1 dos seus dados para cada nave inimiga em alcance 0-1."""
-        "Hondo Ohnaka":
-           display_name: """Hondo Ohnaka"""
-           text: """<strong>Ação:</strong> Escolha 2 naves que não sejam enormes em alcance 0-3 de você que não sejam amigas entre si. Cada uma das naves podem realizar uma ação da sua barra de ações, mesmo se estiverem estressadas, na ordem que você definir. E então, receba 1 ficha de cálculo."""
-        "Boba Fett (AaD)":
-           display_name: """Boba Fett (AaD)"""
-           text: """Quando outra nave amiga defender, se você tiver uma mira no atacante, você pode realizar um ataque bônus contra o atacante."""
-
-      #Lancer Class
-        "Shadowport Hunter":
-           display_name: """Caçador de Shadowport"""
-           text: """<i class = flavor_text>As organizações criminosas potencializam as habilidades mortais de seus leais contratados com as melhores tecnologias disponíveis, como a veloz e formidável nave de perseguição classe Lancer.</i>"""
-        "Sabine Wren (Scum)":
-           display_name: """Sabine Wren (Scum)"""
-           text: """Quando você defender, se o atacante estiver em seu %SINGLETURRETARC% em alcance 0-2, você pode adicionar 1 resultado %FOCUS% ao resultado de seus dados."""
-        "Ketsu Onyo":
-           display_name: """Ketsu Onyo"""
-           text: """No início da Fase de Engajamento, você pode escolher 1 nave que esteja tanto em seu %FRONTARC% quanto em seu %SINGLETURRETARC% em alcance 0-1. Se o fizer, a nave escolhida recebe 1 ficha de tração."""
-        "Asajj Ventress":
-           display_name: """Asajj Ventress"""
-           text: """No início da Fase de Engajamento, você pode escolher 1 nave inimiga em seu %SINGLETURRETARC% em alcance 0-2 e gastar 1 %FORCE%. Se o fizer, a nave escolhida recebe 1 ficha de estresse a menos que ela remova 1 ficha verde."""
-
-       #Naboo
-        "The Mandalorian (AaD)":
-           display_name: """The Mandalorian (AaD)"""
-           text: """Quando você defender ou realizar um ataque, se você estiver no %FRONTARC% e em alcance 1-2 de 2 ou mais naves inimigas, você pode mudar 1 de seus resultados em branco para um resultado %FOCUS%."""
-
-            
-      #Starviper
-        "Black Sun Enforcer":
-           display_name: """Executor do Sol Negro"""
-           text: """<i class = flavor_text>O príncipe Xizor em pessoa colaborou com a MandalMotors para desenvolver o projeto da plataforma de ataque classe StarViper, um dos caças estelares mais formidáveis da galáxia."""
-        "Black Sun Assassin":
-           display_name: """Assassino do Sol Negro"""
-           text: """<i class = flavor_text>Apesar de assassinatos serem normalmente executados com um tiro certeiro ou com uma substância colocada em uma bebida, uma nave em chamas caindo do céu manda um outro tipo bem especial de mensagem."""
-        "Dalan Oberos (StarViper)":
-           display_name: """Dalan Oberos"""
-           text: """Após você executar completamente uma manobra, você pode receber 1 ficha de estresse para rotacionar sua nave 90º."""
-        "Prince Xizor":
-           display_name: """Príncipe Xizor"""
-           text: """Quando você defender, após a etapa Neutralizar Resultados, outra nave amiga em alcance 0-1 e no arco de ataque pode sofrer 1 dano %HIT% ou %CRIT%. Se ela o fizer, cancele 1 resultado correspondente."""
-        "Guri":
-           display_name: """Guri"""
-           text: """No início da Fase de Engajamento, se houver ao menos 1 nave inimiga em alcance 0-1, você pode receber 1 ficha de foco."""
-        "Prince Xizor (AaD)":
-           display_name: """Prince Xizor (AaD)"""
-           text: """Quando você realizar um ataque contra uma nave desgastada, você pode remover 1 ficha de estresse."""
-
-      #Quadjumper
-        "Jakku Gunrunner":
-           display_name: """Contrabandistade Armas de Jakku"""
-           text: """<i class = flavor_text>O rebocador orbital Quadrijet, comumente chamado de "Quadjumper", é ágil tanto no espaço quanto na atmosfera, o que o tornou popular entre contrabandistas e exploradores."""
-        "Unkar Plutt":
-           display_name: """Unkar Plutt"""
-           text: """No início da Fase de Engajamento, se houver uma ou mais outras naves em alcance 0, você e cada outra nave em alcance 0 recebem 1 ficha de tração."""
-        "Sarco Plank":
-           display_name: """Sarco Plank"""
-           text: """Quando você defender, você pode tratar seu valor de agilidade como se fosse igual à velocidade da manobra que você executou nesta rodada."""
-        "Constable Zuvio":
-           display_name: """Condestável Zuvio"""
-           text: """Se você for soltar um dispositivo, você pode, ao invés disso, lançá-lo usando um gabarito [1 %STRAIGHT%]."""
-
-       #Y-wing scum
-        "Crymorah Goon":
-           display_name: """Capanga de Crymorah"""
-           text: """<i class = flavor_text>Apesar de não muito ágil, a fuselagem pesada, o escudo potente e os canhões em torre da Y-wing fazem dela uma ótima nave de patrulha.</i>"""
-        "Jinata Security Officer":
-           display_name: """Oficial da Segurança Jinata"""
-           text: """<i class = flavor_text>Com sede na antiga fortaleza Imperial de Vardos, a Segurança Jinata continua seus esforços de reconstrução no planeta devastado, até mesmo colaborando com o programa de rearmamento da Primeira Ordem.</i>"""
-        "Hired Gun":
-           display_name: """Mercenário"""
-           text: """<i class = flavor_text>A mera menção de créditos Imperiais pode atrair uma legião de indivíduos não muito confiáveis para o seu lado.</i>"""
-        "Amaxine Warrior":
-           display_name: """Guerreiro Amaxine"""
-           text: """<i class = flavor_text>Décadas após a Batalha de Endor, antigos Imperiais permanecem ativos na Nova República. Muitos se juntaram a organizações paramilitares, como os Guerreiros Amaxine, que se apropriam das tradições e cultura marciais para espalhar a ideologia detestável da Primeira Ordem entre aqueles mais vulneráveis a ela.</i>"""
-        "Padric":
-           display_name: """Padric"""
-           text: """Após um dispositivo amigo no qual você possui uma mira detonar, cada nave inimiga em alcance 0-1 desse dispositivo recebe 1 ficha de desgaste."""
-        "Arliz Hadrassian":
-           display_name: """Arliz Hadrassian"""
-           text: """Quando você realizar um ataque %FRONTARC%, se você estiver danificado, você pode mudar 1 dos seus resultados %FOCUS% para um resultado %CRIT%.%LINEBREAK%Quando você defender, se você estiver danificado, antes da etapa Modificar Dados de Defesa, você deve mudar 1 dos seus resultados %FOCUS% para um resultado em branco."""
-        "Leema Kai":
-           display_name: """Leema Kai"""
-           text: """Antes de você engajar, se você não estiver no %FRONTARC% de qualquer nave inimiga, você pode adquirir uma mira em uma nave inimiga em seu %FULLFRONTARC%."""
-        "Kavil":
-           display_name: """Kavil"""
-           text: """Quando realizar um ataque não %FRONTARC%, role 1 dado de ataque adicional."""
-        "Drea Renthal":
-           display_name: """Drea Renthal"""
-           text: """Quando uma nave amiga não limitada realizar um ataque, se o defensor estiver em seu arco de tiro, o atacante pode rerrolar 1 dado de ataque."""
-
-       #Z-95 Scum
-        "Binayre Pirate":
-           display_name: """Pirata Binayre"""
-           text: """<i class = flavor_text>Operando à partir dos Mundos Gêmeos, Talus e Tralus, a gangue de contrabandistas de Kath Scarlet nunca foi reconhecida por boa reputação ou confiabilidade, mesmo por outros criminosos.</i>"""
-        "Black Sun Soldier":
-           display_name: """Soldado do Sol Negro"""
-           text: """<i class = flavor_text>O vasto e influente sindicato criminoso Sol Negro está sempre em busca de pilotos talentosos, contanto que eles não questionem o que precisam fazer para receber seus créditos.</i>"""
-        "Nashtah Pup":
-           display_name: """Nashtah Pup"""
-           text: """Você pode desacoplar apenas por uma desacoplagem de emergência e possui o nome, a iniciativa, a habilidade de piloto e a %CHARGE% da Hound’s Tooth amiga destruída.%LINEBREAK%<strong> Módulo de Fuga: Preparação:</strong: Requer a Hound’s Tooth. Você deve iniciar o jogo acoplado na <strong>Hound’s Tooth</strong>."""
-        "Kaa'to Leeachos":
-           display_name: """Kaa’to Leeachos"""
-           text: """No início da Fase de Engajamento, você pode escolher 1 nave amiga em alcance 0-2. Se o fizer, transfira 1 ficha de foco ou desvio da nave escolhida para você."""
-        "Bossk (Z-95 Headhunter)":
-           display_name: """Bossk"""
-           text: """Quando você realizar um ataque primário, após a etapa Neutralizar Resultados, você pode gastar 1 resultado %CRIT% para adicionar 2 resultados %HIT%.%LINEBREAK%<strong>Nave de Persguição:</strong> Após você desacoplar, você pode adquirir uma mira em uma nave que a <strong>Hound’s Tooth</strong> amiga possui mira."""
-        "N'dru Suhlak":
-           display_name: """N’dru Suhlak"""
-           text: """Quando você realizar um ataque primário, se não houver outra nave amiga em alcance 0-2, role 1 dado de ataque adicional."""
-
-      #Gauntlet Scum
-        "Shadow Collective Operator":
-           display_name: """Operador do Coletivo das Sombras"""
-           text: """<i class = flavor_text>Os antigos soldados do Olho da Morte que juraram lealdade a Lorde Maul continuam operando seus versáteis Caça Gauntlet, muitas vezes os utilizando como bombardeiros nas lutas pessoais de Maul.</i>"""       
-        "Maul":
-           display_name: """Maul"""
-           text: """Quando você realizar uma ação %COORDINATE%, se você escolher uma nave com um valor de iniciativa menor que o seu, você pode gastar 1 %FORCE%. Se o fizer, trate a ação como branca e você pode coordenar 1 nave amiga adicional com um valor de iniciativa menor que o seu; cada nave amiga que você coordenar dessa forma recebe 1 ficha de desgaste"""
-        "Rook Kast":
-           display_name: """Rook Kast"""
-           text: """Antes de você engajar, você pode receber 1 ficha de desgaste. Quando você realizar um ataque primário, se você estiver desgastado, você pode mudar 1 de seus resultados %FOCUS% ou em branco para um resultado %HIT%."""
-        "Bo-Katan Kryze (AaD)":
-           display_name: """Bo-Katan Kryze (AaD)"""
-           text: """Quando você realizar um ataque, se você estiver em alcance 0-1 do defensor, você pode rerolar 1 dado de ataque."""
-        
-      #Rogue Class Scum
-        "Outer Rim Hunter":
-           display_name: """Caçador da Orla Exterior"""
-           text: """<i class = flavor_text>Devido a sua associação com Cad Bane, o Caça Estelar Classe Rogue passou a ser usado por outros caçadores de recompensas, principalmente aqueles que operam na perigosa Orla Exterior.</i>"""       
-        "Nom Lumb (Rogue)":
-           display_name: """Nom Lumb"""
-           text: """No começo da Fase de Engajamento, você pode escolher 1 nave inimiga em seu %FRONTARC%. Se o fizer, trate sua iniciativa igual a daquela nave até o fim da rodada."""
-        "Durge":
-           display_name: """Durge"""
-           text: """Quando você defender, depois da etapa de Neutralizar Resultados, se houver mais resultado %HIT%/%CRIT% do que seus %SHIELD% ativos, você pode mudar 1 resultado %HIT% para um resultado %CRIT% e cancelar 1 resultado %HIT%."""
-        "Cad Bane":
-           display_name: """Cad Bane"""
-           text: """Depois que você realizar um ataque que acertou, você pode gastar 2 %CHARGE% para transferir 1 de suas fichas laranjas ou vermelhas que não seja uma mira para o defensor."""
-        "Cad Bane (AaD)":
-           display_name: """Cad Bane (AaD)"""
-           text: """Depois que você realizar um ataque que acertou, você pode gastar 2 %CHARGE% para transferir 1 de suas fichas laranjas ou vermelhas que não seja uma mira para o defensor."""
-
-                  #ST-70
-        "Outer Rim Enforcer":
-           display_name: """Executor da Orla Exterior"""
-           text: """<i class = flavor_text>Designada como uma nave militar, a Nave de Ataque ST70 é uma nave durável e versátil. Para alguem viajando pela Orla Exterior, esta nave pode ser um transporte, nave de combate, e casa, tudo em um lugar só.</i>"""
-        "Guild Bounty Hunter":
-           display_name: """Caçador de Recompensas da Guilda"""
-           text: """Quando você realizar um ataque em alcance 1-2, você pode gastar 1 %CHARGE% não recursiva de 1 de suas melhorias %ILLICIT% equipadas para mudar 1 resultado %FOCUS% para um resultado %CRIT%"""
-        "Q9-0":
-           text: """Depois que você completar uma manobra avançada, você pode realizar uma ação %CALCULATE% ou %BARRELROLL%, mesmo se estiver estressado. Se o fizer, receba uma ficha de desgaste."""
-        "The Mandalorian":
-           display_name: """O Mandaloriano"""
-           text: """Quando você defender ou realizar um ataque, se você estiver no %FRONTARC% em alcance 1-2 de 2 ou mais naves inimigas, você pode mudar 1 resultado em branco para um resultado %FOCUS%."""
-    #Imperial Pilots
-       #TIE/ln
-        "Academy Pilot":
-           display_name: """Piloto da Academia"""
-           text: """<i class = flavor_text>Desenvolvida pela Sienar Fleet Systems e produzida em uma escala assustadora, a rápida e ágil TIE/ln é utilizada pelo Império Galático como seu principal caça estelar.</i>"""
-        "Obsidian Squadron Pilot":
-           display_name: """Piloto do Esquadrão Obsidiana"""
-           text: """<i class = flavor_text>O sistema do Motor Iônico Gêmeo da TIE fighter foi projetado para entregar velocidade, fazendo da TIE/ln uma das mais ágeis naves estelares já produzidas.</i>"""
-        "Black Squadron Ace":
-           display_name: """Ás do Esquadrão Preto"""
-           text: """<i class = flavor_text>O pilotos de TIE/ln de elite do Esquadrão Preto acompanharam Darth Vader em um ataque devastador contra as forças Rebeldes na Batalha de Yavin.</i>"""
-        '"Night Beast"':
-           display_name: """“Night Beast”"""
-           text: """Após você executar completamente uma manobra azul, você pode realizar uma ação %FOCUS%."""
-        "Valen Rudor":
-           display_name: """Valen Rudor"""
-           text: """Após uma nave amiga em alcance 0-1 defender (após o dano ser resolvido, se houver), você pode realizar uma ação."""
-        '"Wampa"':
-           display_name: """“Wampa”"""
-           text: """Quando você realizar um ataque, você pode gastar 1 %CHARGE% para rolar 1 dado de ataque adicional.%LINEBREAK%Após defender, perca 1 %CHARGE%."""
-        "Del Meeko":
-           display_name: """Del Meeko"""
-           text: """Quando uma nave amiga em alcance 0-2 defender de um atacante danificado, o defensor pode rerrolar 1 dado de defesa."""
-        "Gideon Hask":
-           display_name: """Gideon Hask"""
-           text: """Quando você realizar um ataque contra um defensor danificado, role 1 dado de ataque adicional."""
-        "Seyn Marana":
-           display_name: """Seyn Marana"""
-           text: """Quando você realizar um ataque, você pode gastar 1  resultado %CRIT%. Se o fizer, cause 1 carta virada para baixo no defensor, então cancele o restante de seus resultados."""
-        '"Mauler" Mithel':
-           display_name: """“Mauler” Mithel"""
-           text: """Quando você realizar um ataque em alcance de ataque 1, role 1 dado de ataque adicional."""
-        '"Scourge" Skutu':
-           display_name: """“Scourge” Skutu"""
-           text: """Quando você realizar um ataque contra um defensor em seu %BULLSEYEARC%, role 1 dado de ataque adicional."""
+        "Ibtisam":
+           display_name: """Ibtisam"""
+           text: """Após você executar completamente uma manobra, se você estiver estressado, você pode rolar 1 dado de ataque. Em um resultado %HIT% ou %CRIT%, remova 1 ficha de estresse."""
         "Iden Versio":
            display_name: """Iden Versio"""
            text: """Antes de um caça TIE/ln amigo em alcance 0-1 sofrer 1 ou mais danos, você pode gastar 1 %CHARGE%. Se o fizer, previna aquele dano."""
-        '"Howlrunner"':
-           display_name: """“Howlrunner”"""
-           text: """Quando uma nave amiga em alcance 0-1 realizar um ataque primário, ela pode rerrolar 1 dado de ataque."""
-        '"Backstabber" (BoY)': 
-           display_name: """“Backstabber” (BdY)"""
-           text: """Quando você realizar um ataque primário, se um Darth Vader ou “Mauler” Mithel amigo estiver em seu %LEFTARC% ou %RIGHTARC% em alcance 0-1, role 1 dado de ataque adicional."""
-        '"Dark Curse" (BoY)':
-           display_name: """“Dark Curse” (BdY)"""
-           text: """Quando você defender, os dados do atacante não podem ser modificados."""
-        '"Mauler" Mithel (BoY)':
-           display_name: """“Mauler” Mithel (BdY)"""
-           text: """Quando você realizar um ataque primário, se um Darth Vader ou  “Backstabber” amigo estiver em seu %LEFTARC% ou %RIGHTARC% em alcance 0-1, role 1 dado de ataque adicional."""
-        '"Wampa" (BoY)':
-           display_name: """“Wampa” (BdY)"""
-           text: """Quando você realizar um ataque você pode gastar 1 %CHARGE% para rolar 1 dado de ataque adicional.%LINEBREAK%Depois que você defender, perca 1 %CHARGE%."""
-        "ISB Jingoist":
-           display_name: """Extremista do BSI"""
-           text: """Antes de você engajar, você pode escolher 1 nave inimiga em seu %FRONTARC% em alcance 0-1. Se você o fizer, essa nave recebe 1 ficha de desgaste ou exaustão a sua escolha a menos que ele decida remover 1 ficha verde."""
-        "Magna Tolvan":
-           display_name: """Magna Tolvan"""
-           text: """Enquanto você possuir 2 fichas de estresse ou menos, você pode realizar ações brancas, mesmo estressado.%LINEBREAK%Depois que você receber uma ficha de estresse, você pode realizar uma ação branca, se possível."""
-        "Yrica Quell":
-           display_name: """Yrica Quell"""
-           text: """Depois que você realizar completamente uma manobra, você pode adquirir uma mira em uma nave inimiga em seu %BULLSEYEARC%."""
-        "Moff Gideon":
-           display_name: """Moff Gideon"""
-           text: """Quando uma nave inimiga em alcance 1-3 defender, antes dos dados de ataque serem rolados, você pode gastar 1 %CHARGE% e escolher uma nave amiga em alcance 0-1 do defensor. Se o fizer, dados de defesa não poderão ser modificados durante este ataque e a nave amiga escolhida recebe 1 ficha de desgaste."""
-        "Patrol Leader":
-           display_name: """Líder de Patrulha"""
-           text: """<i class = flavor_text>Receber o comando de uma VT-49 Decimator é visto como uma promoção considerável para um oficial comum da Marinha Imperial.</i>"""
-        "Captain Oicunn":
-           display_name: """Capitão Oicunn"""
-           text: """Quando você realizar um ataque em alcance 0, trate-o como um ataque em alcance 1.  %LINEBREAK%<i>Errata (Desde a referência de regras 1.4): Habilidade modificada para funcionar com as novas regras básicas</i>"""
-        "Morna Kee":
-           display_name: """Morna Kee"""
-           text: """Durante a Fase Final, você pode gastar 1 %CHARGE% para virar uma das suas fichas de reforço para seu outro arco completo ao invés de removê-la."""
-        "Rear Admiral Chiraneau":
-           display_name: """Almirante deRetaguarda Chiraneau"""
-           text: """Quando você realizar um ataque, se você estiver reforçado e o defensor estiver no %FULLFRONTARC% ou %FULLREARARC% correspondente à sua ficha de reforço, você pode mudar 1 dos seus resultados %FOCUS% para um resultado %CRIT%."""
-
-       #Lambda Shuttle
-        "Omicron Group Pilot":
-           display_name: """Piloto do Grupo Omicron"""
-           text: """<i class = flavor_text>Famosa por seu design de três asas e conjunto de sensores avançados, a transporte classe Lambda desempenha um papel crítico como uma nave leve de utilidade da Marinha Imperial.</i>"""
-        "Lieutenant Sai":
-           display_name: """Tenente Sai"""
-           text: """Após você realizar uma ação %COORDINATE%, se a nave escolhida realizou uma ação presente na sua barra de ações, você pode realizar essa ação."""
-        "Captain Kagi":
-           display_name: """Capitão Kagi"""
-           text: """No início da Fase de Engajamento, você pode escolher 1 ou mais naves amigas em alcance 0-3. Se o fizer, transfira todas as fichas de mira inimigas das naves escolhidas para você."""
-        "Colonel Jendon":
-           display_name: """Coronel Jendon"""
-           text: """No início da Fase de Ativação, você pode gastar 1 %CHARGE%. Se o fizer, quando naves amigas adquirirem miras nessa rodada, elas devem adquirir miras além do alcance 3 ao invés de em alcance 0-3."""
-
-       #Alpha Class
-        "Nu Squadron Pilot":
-           display_name: """Piloto do Esquadrão Nu"""
-           text: """<i class = flavor_text>Com design inspirado por outras naves da Cygnus Spaceworks, a star wing classe Alfa é uma nave versátil designada a unidades especiais da Marinha Imperial que precisam de um caça estelar capaz de ser equipado para executar os mais diversos tipos de missão.</i>"""
-        "Rho Squadron Pilot":
-           display_name: """Piloto do Esquadrão Rô"""
-           text: """<i class = flavor_text>Os pilotos de elite do Esquadrão Rô incitavam o terror contra a Rebelião, usando o efeito devastador tanto da configuração de assalto Xg-1 quanto da carga de arsenal Os-1 da star wing classe Alfa.</i>"""
-        "Lieutenant Karsabi":
-           display_name: """Tenente Karsabi"""
-           text: """Após você receber uma ficha de desarmamento, se você não estiver estressado, você pode receber 1 ficha de estresse para remover 1 ficha de desarmamento."""
-        "Major Vynder":
-           display_name: """Major Vynder"""
-           text: """Quando você defender, se você estiver desarmado, role 1 dado de defesa adicional."""
-        "Major Vynder (SSL)":
-           display_name: """Major Vynder (SL)"""
-           text: """Depois que você realizar um ataque %MISSILE%, você pode realizar um ataque %CANNON% bônus. Quando você realizar este ataque bônus, você pode mudar 1 reaultado %FOCUS% para um resultado %HIT%."""
-        "Lieutenant Karsabi (SSL)":
-           display_name: """Lieutenant Karsabi (SL)"""
-           text: """Quando você realizar uma ação %RELOAD%, a melhoria escolhida recupera 1 %CHARGE% adicional."""
-
-       #TIE/V1
-        "Baron of the Empire":
-           display_name: """Barão do Império"""
-           text: """<i class = flavor_text>A TIE Advanced v1 da Sienar Fleet Systems é um projeto de caça estelar revolucionário, apresentando motores aprimorados, um lança-mísseis e s-foils dobráveis.</i>"""
+        "Imdaar Test Pilot":
+           display_name: """Piloto de Testes de Imdaar"""
+           text: """<i class = flavor_text>Sendo o principal resultado de uma base de pesquisa escondida em Imdaar Alfa, a TIE phantom alcançou algo que muitos julgavam impossível: um pequeno caça estelar equipado com um dispositivo de camuflagem avançado.</i>"""
+        "Inaldra":
+           display_name: """Inaldra"""
+           text: """Quando você defender ou realizar um ataque, você pode sofrer 1 dano %HIT% para rerrolar qualquer número de seus dados. """
         "Inquisitor":
            display_name: """Inquisidor"""
            text: """<i class = flavor_text>Os temidos Inquisidores tinham uma grande autonomia e acesso às tecnologias mais recentes do Império, como o protótipo TIE Advanced v1.</i>"""
-        "Fifth Brother":
-           display_name: """Quinto Irmão"""
-           text: """Quando você realizar um ataque, após a etapa Neutralizar Resultados, se o ataque acertou, você pode gastar 2 %FORCE% para adicionar 1 resultado %CRIT%."""
-        "Seventh Sister":
-           display_name: """Sétima Irmã"""
-           text: """Quando você realizar um ataque primário, antes da etapa Neutralizar Resultados, você pode gastar 2 %FORCE% para cancelar 1 resultado %EVADE%."""
-        "Grand Inquisitor":
-           display_name: """Grande Inquisidor"""
-           text: """Quando você defender em alcance de ataque 1, você pode gastar 1 %FORCE% para impedir o bônus de alcance 1.%LINEBREAK%Quando você realizar um ataque contra um defensor em alcance de ataque 2-3, você pode gastar 1 %FORCE% para aplicar o bônus de alcance 1."""
-
-      #TIE X1
-        "Tempest Squadron Pilot":
-           display_name: """Piloto do Esquadrão Tempestade"""
-           text: """<i class = flavor_text>A TIE Advanced aprimorou o projeto do popular TIE/In ao adicionar escudo, um sistema de armas mais avançado, painéis solares curvos e um hiperpropulsor."""
-        "Storm Squadron Ace":
-           display_name: """Ás do Esquadrão Tormenta"""
-           text: """<i class = flavor_text>A TIE Advanced x1 foi produzida em quantidade limitada, porém os engenheiros da Sienar incorporaram muitas de suas melhores qualidades em seu próximo modelo de TIE: a TIE Interceptor."""
-        "Zertik Strom":
-           display_name: """Zertik Strom"""
-           text: """Durante a Fase Final, você pode gastar uma mira que você adquiriu em uma nave inimiga para expor 1 das cartas de dano dela."""
-        "Ved Foslo":
-           display_name: """Ved Foslo"""
-           text: """Quando você executar uma manobra, você pode executar uma manobra de mesma direção e dificuldade com velocidade 1 maior ou menor."""
-        "Maarek Stele":
-           display_name: """Maarek Stele"""
-           text: """Quando você realizar um ataque, se o defensor for receber uma carta de dano virada para cima, ao invés disso, compre 3 cartas de dano, escolha 1 e descarte o resto."""
-        "Darth Vader":
-           display_name: """Darth Vader"""
-           text: """Após você realizar uma ação, você pode gastar 1 %FORCE% para realizar uma ação."""
-        "Darth Vader (BoY)":
-           display_name: """Darth Vader (BdY)"""
-           text: """Quando você realizar um ataque, você pode gastar 1 %FORCE% para mudar 1 resultado em branco para um resultado %HIT%."""
-        "Juno Eclipse":
-           display_name: """Juno Eclipse"""
-           text: """Depois de você realizar uma ação, você pode realizar uma ação %BOOST% vermelha."""
-
-       #TIE Aggressor
-        "Sienar Specialist":
-           display_name: """Especialista Sienar"""
-           text: """<i class = flavor_text>Durante o desenvolvimento da TIE aggressor, a Sienar Fleet Systems valorizou mais a sua performance e versatilidade do que o custo-benefício.</i>"""
-        "Onyx Squadron Scout":
-           display_name: """Batedor do Esquadrão Ônix"""
-           text: """<i class = flavor_text>Projetada para batalhas duradouras, a TIE/ag é pilotada principalmente por pilotos de elite treinados para dominar tanto seu armamento exclusivo quanto sua agilidade com eficiência total.</i>"""
-        '"Double Edge"':
-           display_name: """“Double Edge”"""
-           text: """Após realizar um ataque %TURRET% ou %MISSILE% que errou, você pode realizar um ataque bônus usando uma arma diferente."""
-        "Lieutenant Kestal":
-           display_name: """Tenente Kestal"""
-           text: """Quando você realizar um ataque, após o defensor rolar os dados de defesa, você pode gastar 1 ficha de foco para cancelar todos os resultados em branco/%FOCUS% do defensor."""
-
-       #TIE Bomber
-        "Scimitar Squadron Pilot":
-           display_name: """Piloto do Esq. Cimitarra"""
-           text: """<i class = flavor_text>A TIE/sa é excepcionalmente ágil para um bombardeiro, permitindo que ela localize seu alvo enquanto evita danos colaterais excessivos da área ao seu redor."""
-        "Gamma Squadron Ace":
-           display_name: """Ás do Esquadrão Gama"""
-           text: """<i class = flavor_text>Apesar de sacrificar boa parte de sua velocidade e agilidade se comparada com uma TIE/ln, a capacidade de carga aumentada da TIE bomber pode carregar poder de fogo para destruir virtualmente qualquer alvo inimigo.</i> """
-        '"Deathfire"':
-           display_name: """“Deathfire”"""
-           text: """Após você ser destruído, antes de você ser removido, você pode realizar um ataque e soltar ou lançar um dispositivo."""
-        "Tomax Bren":
-           display_name: """Tomax Bren"""
-           text: """Após você realizar uma ação %RELOAD%, você pode recuperar 1 %CHARGE% em uma das suas cartas melhorias %TALENT% equipadas."""
-        "Major Rhymer":
-           display_name: """Major Rhymer"""
-           text: """Quando realizar um ataque %TORPEDO% ou %MISSILE%, você pode aumentar ou diminuir o requisito de alcance em 1, até um limite de 0-3."""
-        "Captain Jonus":
-           display_name: """Capitão Jonus"""
-           text: """Quando uma nave amiga em alcance 0-1 realizar um ataque %TORPEDO% ou %MISSILE%, o atacante pode rerrolar até 2 dados de ataque."""
-        
-        # TIE Bomber (TBE)
-        '"Deathfire" (TBE)':
-           display_name: """“Deathfire” (TBE)"""
-           text: """Depois que você realizar completamente uma manobra 3-5, se você não tiver soltado ou lançado um dispositivo nessa rodada, você pode gastar 2 %CHARGE% para soltar ou lançar uma bomba usando o gabarito [3 %STRAIGHT%]."""
-        "Major Rhymer (TBE)":
-           display_name: """Major Rhymer (TBE)"""
-           text: """Quando você realizar um ataque %TORPEDO%, se o defensor estiver em seu %BULLSEYEARC%, mude 1 resultado %FOCUS% para um resultado %CRIT%."""
-        "Captain Jonus (TBE)":
-           display_name: """Capitão Jonus (TBE)"""
-           text: """Depois que você soltar ou lançar um dispositivo, receba uma ficha de desvio."""
-        "Tomax Bren (TBE)":
-           display_name: """Tomax Bren (TBE)"""
-           text: """Depois que você realizar uma ação %BARRELROLL%, você pode gastar 2 %CHARGE%. Se você fizer isso, receba uma ficha de foco."""
-
-
-       #TIE Defender
-        "Delta Squadron Pilot":
-           display_name: """Piloto do Esq. Delta"""
-           text: """<i class = flavor_text>Além de seus lança-mísseis e dos seis canhões laser montados em suas asas, a formidável TIE defender é equipada com escudos defletores e um hiperpropulsor.</i>"""
-        "Onyx Squadron Ace":
-           display_name: """Ás do Esquadrão Ônix"""
-           text: """<i class = flavor_text>A experimental TIE defender desbanca qualquer outro caça estelar contemporâneo, porém seu tamanho, velocidade e capacidade bélica vem acompanhados de um custo à altura de sua tremenda capacidade.</i>"""
-        "Captain Dobbs":
-           display_name: """Capitão Dobbs"""
-           text: """Quando outra nave aliada em alcance 0-1 defender, antes da etapa Neutralizar Resultados, se você estiver no arco de ataque e não estiver ionizado, você pode receber 1 ficha de íon para cancelar 1 resultado %HIT%."""
-        "Rexler Brath":
-           display_name: """Rexler Brath"""
-           text: """Após você realizar um ataque que acerte, se você estiver desviando, exponha 1 das cartas de dano do defensor."""
-        "Countess Ryad":
-           display_name: """Condessa Ryad"""
-           text: """Quando você for executar uma manobra %STRAIGHT%, você pode aumentar a dificuldade da manobra. Se o fizer, execute-a como uma manobra %KTURN%."""
-        "Colonel Vessery":
-           display_name: """Coronel Vessery"""
-           text: """Quando você realizar um ataque contra uma nave mirada, após você rolar os dados de ataque, você pode adquirir uma mira no defensor."""
-        "Vult Skerris":
-           display_name: """Vult Skerris"""
-           text: """<strong>Ação:</strong> Receba 1 ficha de exaustão para recuperar 1 %CHARGE%.%LINEBREAK%Antes de você engajar, você pode gastar 1 %CHARGE% para realizar uma ação."""
-        "Darth Vader (TIE Defender)":
-           display_name: """Darth Vader"""
-           text: """Você não pode gastar %FORCE%, exceto quando atacando. Quando você realizar um ataque, você pode gastar 1 %FORCE% para mudar 1 resultado em branco para um resultado %HIT%."""
-
-       #TIE Heavy
-        "Carida Academy Cadet":
-           display_name: """Cadete da Academia Carida"""
-           text: """<i class = flavor_text>Na Academia Carida, cadetes da Marinha Imperial são ensinados a serem implacáveis e leais, priorizando a vitória acima da vida de seus companheiros.</i>"""
-        "Onyx Squadron Sentry":
-           display_name: """Sentinela do Esquadrão Ônix"""
-           text: """<i class = flavor_text>A TIE/rb heavy, às vezes chamada de “bruta”, é projetada para flexibilidade operacional. Sua armadura pesada e capacidade de transportar um copiloto droide integrado MGK-300 faz dela uma excelente nave de patrulha.</i>"""
-        "Lyttan Dree":
-           display_name: """Lyttan Dree"""
-           text: """Quando uma nave amiga em alcance 0-2 realiza um ataque, se você estiver no %LEFTARC% ou %RIGHTARC% do defensor, o atacante pode rerrolar 1 dado de ataque."""
-        '"Rampage"':
-           display_name: """“Rampage”"""
-           text: """Após você executar uma manobra de velocidade 3-4, você pode escolher uma nave em seu %SINGLETURRETARC% em alcance 0-1. Se o fizer, a nave escolhida recebe 1 ficha de desgaste, ou 2 fichas de desgaste se você estiver danificado."""
-        "Flight Leader Ubbel":
-           display_name: """Líder de Vôo Ubbel"""
-           text: """Depois que uma nave amiga em alcance 0-2 defender, se ela recebeu uma carta de dano, você pode realizar um ataque bônus contra o atacante."""
-
-       #TIE Interceptor
-        "Alpha Squadron Pilot":
-           display_name: """Piloto do Esquadrão Alfa"""
-           text: """<i class = flavor_text>A Sienar Fleet Systems projetou a TIE interceptor com quatro canhões lasers em suas asas, um aumento drástico em seu poder de fogo se comparado com seus antecessores."""
-        "Saber Squadron Ace":
-           display_name: """Ás do Esq. Sabre"""
-           text: """<i class = flavor_text>Liderados pelo Barão Soontir Fel, os pilotos do Esquadrão Sabre estão entre os melhores pilotos do Império. Suas TIE interceptors são marcadas com listras vermelhas para identificar pilotos com pelo menos dez abates confirmados."""
-        "Nash Windrider":
-           display_text: """Nash Windrider"""
-           text: """Durante a Fase de Engajamento, após uma nave pequena amiga em alcance 0-3 ser destruída, se aquela nave não tiver engajado nessa fase, você pode gastar 1 %CHARGE%. Se o fizer, a nave engaja na iniciativa atual."""
-        "Lieutenant Lorrir":
-           display_text: """Tenente Lorrir"""
-           text: """Quando você realizar uma pirueta, você <b>deve</b> usar o gabarito [%BANKLEFT% ou %BANKRIGHT%] ao invés do gabarito [%STRAIGHT%]."""
-        "Turr Phennir":
-           display_name: """Turr Phennir"""
-           text: """Após você realizar um ataque, você pode realizar uma ação %BARRELROLL% ou %BOOST%, mesmo estressado."""
-        "Commandant Goran":
-           display_text: """Comandante Goran"""
-           text: """No começo da Fase de Engajamento, escolha uma nave amiga em alcance 0-3 com uma iniciativa menor que a sua. A nave escolhida recebe 1 ficha de desvio e remove 1 ficha vermelha que não seja estresse.%LINEBREAK%<i>Errata (desde a referência de regras 1.4): habilidade refeita</i>"""
-        "Vult Skerris (TIE Interceptor)":
-           display_name: """Vult Skerris"""
-           text: """<strong>Ação:</strong> Receba 1 ficha de exaustão para recuperar 1 %CHARGE%.%LINEBREAK%Antes de você engajar, você pode gastar 1 %CHARGE% para realizar uma ação."""
-        "Gideon Hask (TIE Interceptor)":
-           display_name: """Gideon Hask"""
-           text: """Quando você realizar um ataque contra um defensor danificado, role 1 dado de ataque adicional."""
-        "Ciena Ree":
-           display_name: """Ciena Ree"""
-           text: """Após você realizar um ataque, se o defensor foi destruído, receba 1 ficha de estresse. Após uma nave amiga em alcance 0-3 ser destruída, remova 1 ficha de estresse."""
-        "Soontir Fel":
-           display_name: """Soontir Fel"""
-           text: """No início da Fase de Engajamento, se houver uma nave inimiga em seu %BULLSEYEARC%, receba 1 ficha de foco."""
-        "Second Sister":
-           display_name: """Segunda Irmã"""
-           text: """Quando você realizar um ataque, depois do passo Neutralizar Resultados, se o ataque tiver acertado, você pode gastar 2 %FORCE%. Se o fizer, mude todos os seus resultados %HIT% para resultados %CRIT%."""
-        "Iden Versio (BoY)": 
-           display_name: """Iden Versio (BdY)"""
-           text: """Antes de uma TIE amiga em alcance 0-1 receber dano, você pode gastar 2 %CHARGE%. Se o fizer, evite 1 dano.%LINEBREAK%<i>Errata (desde a referência de regras 1.4.4): Habilidade de piloto corrigida</i>"""
-        "Sigma 4 (BoY)":
-           display_name: """Sigma 4 (BdY)"""
-           text: """Depois que você realizar uma ação %BARRELROLL%, você pode gastar 1 %CHARGE% para realizar uma ação %BOOST%."""
-        "Sigma 5 (BoY)":
-           display_name: """Sigma 5 (BdY)"""
-           text: """Depois que você realizar um ataque que acertou, você pode gastar 1 %CHARGE% para realizar uma ação %EVADE%."""
-        "Sigma 6 (BoY)":
-           display_name: """Sigma 6 (BdY)"""
-           text: """Depois que você executar completamente uma manobra 3-5, você pode gastar 1 %CHARGE% para realizar uma ação %SLAM%."""
-        "Sigma 7 (BoY)":
-           display_name: """Sigma 7 (BdY)"""
-           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para travar uma mira em uma nave inimiga em alcance 0-1."""
-
-       #TIE Phantom
-        "Imdaar Test Pilot":
-           display_name: """Piloto de Testes de Imdaar"""
-           text: """<i class = flavor_text>Sendo o principal resultado de uma base de pesquisa escondida em Imdaar Alfa, a TIE phantom alcançou algo que muitos julgavam impossível: um pequeno caça estelar equipado com um dispositivo de camuflagem avançado."""
-        "Sigma Squadron Ace":
-           display_name: """Ás do Esquadrão Sigma"""
-           text: """<i class = flavor_text>Dispondo de um hiperpropulsor e escudos, a TIE phantom também é equipada com cinco canhões laser, garantindo um poder de fogo considerável para um caça Imperial."""
-        '"Echo"':
-           display_name: """“Echo”"""
-           text: """Quando descamuflar, você deve usar o gabarito [2 %BANKLEFT%] ou [2 %BANKRIGHT%] ao invés do gabarito [2 %STRAIGHT%]."""
-        '"Whisper"':
-           display_name: """“Whisper”"""
-           text: """Após você realizar um ataque que acertou, receba 1 ficha de desvio."""
-        '"Whisper" (SSL)':
-           display_name: """“Whisper” (SL)"""
-           text: """Depois que você realizar um ataque, você pode gastar 1 %CHARGE% para realizar uma ação %CLOAK%."""
-        '"Echo" (SSL)':
-           display_name: """“Echo” (SL)"""
-           text: """Depois que uma nave inimiga em alcance 0-1 realizar uma ação da sua barra de ações, você pode gastar 1 %CHARGE% para realizar a mesma ação, tratando a ação como branca."""
-
-       #TIE Punisher
-        "Cutlass Squadron Pilot":
-           display_name: """Piloto do Esq. Espada"""
-           text: """<i class = flavor_text>O projeto da TIE punisher se desenvolveu em torno do sucesso da TIE bomber, com a adição de escudo, um segundo lançador de bombas e outros três módulos bélicos, cada um equipado com um motor iônico gêmeo.</i>"""
-        '"Deathrain"':
-           display_name: """“Deathrain”"""
-           text: """Após soltar ou lançar um dispositivo, você pode realizar uma ação."""
-        '"Redline"':
-           display_name: """“Redline”"""
-           text: """Você pode ter até 2 miras travadas.%LINEBREAK%Após você realizar uma ação, você pode adquirir uma mira."""
-
-       #TIE Reaper
-        "Scarif Base Pilot":
-           display_name: """Piloto da Base de Scarif"""
-           text: """<i class = flavor_text>A TIE reaper foi desenvolvida para transportar tropas de elite até focos de conflito no campo de batalha, e deslocou notavelmente os temidos death troopers do Diretor Krennic durante a Batalha de Scarif."""
-        '"Vizier"':
-           display_name: """“Vizier”"""
-           text: """Após você se mover usando sua habilidade de nave <b>Ailerons Controlados</b>, você pode realizar uma ação %COORDINATE%. Se o fizer, pule sua etapa Realizar Ação."""
-        "Captain Feroph":
-           display_name: """Capitão Feroph"""
-           text: """Quando você defender, se o atacante não possuir fichas verdes, você pode mudar 1 de seus resultados em branco ou %FOCUS% para um resultado %EVADE%."""
-        "Major Vermeil":
-           display_name: """Major Vermeil"""
-           text: """Quando você realizar um ataque, se o defensor não possuir fichas verdes, você pode mudar 1 de seus resultados em branco ou %FOCUS% para um resultado %HIT%."""
-
-       #TIE Striker
-        "Planetary Sentinel":
-           display_name: """Sentinela Planetário"""
-           text: """<i class = flavor_text>Para proteger suas várias instalações militares, o Império precisa de uma força de defesa rápida e vigilante."""
-        "Black Squadron Scout":
-           display_name: """Batedor do Esq. Preto"""
-           text: """<i class = flavor_text>Estas naves atmosféricas amplamente armadas utilizam suas asas móveis especializadas para obter velocidade e agilidade adicionais."""
-        '"Vagabond"':
-           display_name: """Vagabond"""
-           text: """Após você se mover usando seus <strong>Ailerons Adaptáveis</strong>, se você não estiver estressado, você pode soltar 1 dispositivo."""
-        '"Countdown"':
-           display_name: """“Countdown”"""
-           text: """Quando você defender, após a etapa Neutralizar Resultados, se você não estiver estressado, você pode sofrer 1 %HIT% e receber 1 ficha de estresse. Se o fizer, cancele todos os resultados dos dados."""
-        '"Pure Sabacc"':
-           display_name: """“Pure Sabacc”"""
-           text: """Quando você realizar um ataque, se você possuir 1 ou menos cartas de dano, você pode rolar 1 dado de ataque adicional."""
-        '"Duchess"':
-           display_name: """“Duchess”"""
-           text: """Você pode escolher não usar seus <strong>Ailerons Adaptáveis</strong>.%LINEBREAK%Você pode usar seus <strong>Ailerons Adaptáveis</strong>, mesmo estressado."""
-
-       #Gauntlet Imperial
-        "Imperial Super Commando":
-           display_name: """Super Soldado Imperial"""
-           text: """<i class = flavor_text>Sob a liderança do Vice-Rei Gar Saxon, os guerreiros impiedosos que uma vez serviram Lorde Maul foram transformados em executores da nova ordem. O Caça Gauntlet Mandaloriano continua a servir como transporte de combate preferido por esses Super Soldados."""
-        "Gar Saxon":
-           display_name: """Gar Saxon"""
-           text: """Quando uma unidade amiga em alcance 0-2 realiza um ataque primário, se o atacante estiver no %REARARC% do defensor, você pode gastar 1 %CHARGE%. Se o fizer, o atacante rola 1 dado adicional."""
-        "Captain Hark":
-           display_name: """Captão Hark"""
-           text: """Depois que você revelar uma manobra [0 %STOP%], se você estiver equipado com <strong>Asas Giratórias (Abaixadas)</strong>, você deve, ao invés disso, realizar uma derrapagem [1 %BANKLEFT%] ou [1 %BANKRIGHT%] da mesma dificuldade, você deve virar a carta <strong>Asas Giratórias (Abaixadas)</strong>."""
-
-    #First Order
-       #TIE/FO
-        "Epsilon Squadron Cadet":
-           display_name: """Cadete do Esquadrão Épsilon"""
-           text: """<i class = flavor_text>Treinados desde a infância a bordo dos Destróieres Estelares classe Resurgent nos confins do espaço, muitos pilotos de TIE da Primeira Ordem nunca sequer pisaram na superfície de um planeta.</i>"""
-        "Zeta Squadron Pilot":
-           display_name: """Zeta Squadron Pilot"""
-           text: """<i class = flavor_text>Livres da morosa burocracia galáctica, as tecnologias originalmente desenvolvidas para o programa TIE Advanced do Império agora são empregadas em massa nos caças estelares da Primeira Ordem. Como resultado, os pilotos das TIE/fo desfrutam de maiores taxas de sobrevivência que seus antecessores do Império Galático.</i>"""
-        "Omega Squadron Ace":
-           display_name: """Omega Squadron Ace"""
-           text: """<i class = flavor_text>Apenas pilotos que demonstram habilidade excepcional e dedicação inabalável são recompensados com as cobiçadas posições nos esquadrões da Primeira Ordem que realizam missões secretas contra a Nova República durante a Guerra Fria.</i>"""
-        "Lieutenant Rivas":
-           display_name: """Tenente Rivas"""
-           text: """Após uma nave em alcance 1-2 receber uma ficha vermelha ou laranja, se você não tiver uma mira travada nessa nave, você pode adquirir uma mira nela."""
-        "TN-3465":
-           display_name: """TN-3465"""
-           text: """Quando outra nave amiga realizar um ataque, se você estiver em alcance 0-1 do defensor, você pode sofrer 1 dano %CRIT% para mudar 1 dos resultados do atacante para um resultado %CRIT%."""
-        '"Longshot"':
-           display_name: """“Longshot”"""
-           text: """Quando você realizar um ataque primário em alcance de ataque 3, role 1 dado de ataque adicional."""
-        '"Muse"':
-           display_name: """“Muse”"""
-           text: """No início da Fase de Engajamento, você pode escolher uma nave amiga em alcance 0-1. Se o fizer, a nave escolhida remove 1 ficha de estresse."""
-        '"Null"':
-           display_name: """“Null”"""
-           text: """Enquanto não estiver danificado, trate sua iniciativa como se ela fosse 7."""
-        '"Static"':
-           display_name: """“Static”"""
-           text: """Quando você realizar um ataque primário, você pode gastar sua mira que está no defensor e uma ficha de foco para mudar todos os seus resultados para resultados %CRIT%."""
-        "Commander Malarus":
-           display_name: """Comandante Malarus"""
-           text: """No início da Fase de Engajamento, você pode gastar 1 %CHARGE% e receber 1 ficha de estresse. Se o fizer, até o final da rodada, quando você defender ou realizar um ataque, você pode mudar todos os seus resultados %FOCUS% para resultados %EVADE% ou %HIT%."""
-        '"Scorch"':
-           display_name: """“Scorch”"""
-           text: """Quando você realizar um ataque primário, se você não estiver estressado, você pode receber 1 ficha de estresse para rolar 1 dado de ataque adicional."""
-        '"Midnight"':
-           display_name: """“Midnight”"""
-           text: """Quando você defender ou realizar um ataque, se você possuir uma mira na nave inimiga, os dados dela não podem ser modificados."""
-        "DT-798":
-           display_name: """DT-798"""
-           text: """Quando você realizar um ataque primário, se você não estiver desgastado, você pode receber 1 ficha de desgaste para rolar 1 dado adicional"""
-        "Lieutenant Galek":
-           display_name: """Tenente Galek"""
-           text: """Depois que outra nave amiga em alcance 0-2 for destruída, você pode realizar uma ação %COORDINATE%, mesmo se estiver estressado. Quando você coordenar, a nave que você escolher só poderá realizar uma ação se esta ação também estiver na sua barra de ações."""
-        "Lin Gaava":
-           display_name: """Lin Gaava"""
-           text: """<strong>Preparação:</strong> Depois de posicionar as forças, aplique a condição <strong>Preparado para velocidade</strong> a você e mais 2 outras caças TIE/fo ou TIE/sf amigas que não possuam melhorias %MODIFICATION% equipadas."""
-        '"Scorch" (EoD)':
-           display_name: """“Scorch” (EoD)"""
-           text: """Quando você realizar um ataque primário, se você não estiver estressado, você pode receber 1 ficha de estresse para rolar 1 dado de ataque adicional."""
-        '"Longshot" (EoD)':
-           display_name: """“Longshot” (EoD)"""
-           text: """Quando você realizar um ataque primário em alcance 3, role 1 dado de ataque adicional."""
-        '"Midnight" (EoD)':
-           display_name: """“Midnight” (EoD)"""
-           text: """Quando você defender ou realizar um ataque, se você tiver uma mira na nave inimiga, os dados daquela nave não podem ser modificados."""
-        "Zeta 5 (EoD)":
-           display_name: """Zeta 5 (EoD)"""
-           text: """Quando você realizar um ataque, se você não possuir escudos e a iniciativa do defensor for maior que a sua, adicione 1 resultado %FOCUS%."""
-        "Omega 2 (EoD)":
-           display_name: """Omega 2 (EoD)"""
-           text: """Naves TIE amigas podem adquirir miras em objetos em alcance 0-3 de você, ignorando restrições de alcance."""
-
-       #Upsilon
-        "Starkiller Base Pilot":
-           display_name: """Starkiller Base Pilot"""
-           text: """<i class = flavor_text>A nave de comando classe Ípsilon serve de base de operações para muitos oficiais e agentes sênior da Primeira Ordem. Seus poderosos sensores e equipamentos de comunicação os permitem orquestrar a propagação do terror pela galáxia."""
-        "Petty Officer Thanisson":
-           display_name: """Suboficial Thanisson"""
-           text: """Durante a Fase de Ativação ou de Engajamento, após uma nave em seu %FRONTARC% em alcance 0-2 receber 1 ficha de estresse, você pode gastar 1 %CHARGE%. Se o fizer, a nave que recebeu a ficha de estresse recebe 1 ficha de tração."""
-        "Major Stridan":
-           display_name: """Major Stridan"""
-           text: """Quando você coordenar ou resolver o efeito de uma de suas melhorias, você pode tratar naves amigas em alcance 2-3 como se estivessem em alcance 0 ou 1."""
-        "Captain Cardinal":
-           display_name: """Capitão Cardinal"""
-           text: """Quando uma nave amiga em alcance 1-2 de iniciativa mais baixa que a sua defender ou realizar um ataque, se você tiver ao menos 1 %CHARGE%, ela pode rerrolar 1 resultado %FOCUS%.%LINEBREAK% Após uma nave inimiga em alcance 0-3 ser destruída, perca 1 %CHARGE%."""
-        "Lieutenant Tavson":
-           display_name: """Tenente Tavson"""
-           text: """Após você sofrer dano, você pode gastar 1 %CHARGE% para realizar uma ação."""
-        "Lieutenant Dormitz":
-           display_name: """Lieutenant Dormitz"""
-           text: """<strong>Preparação:</strong> Após você ser posicionado, outras naves amigas pequenas podem ser colocadas em qualquer lugar na área de jogo em alcance 0-2 de você."""
-        "Petty Officer Thanisson (EoD)":
-           display_name: """Suboficial Thanisson (EoD)"""
-           text: """Durante a Fase de Ativação ou Fase de Engajamento, depois que uma nave em seu %FRONTARC% em alcance 0-2 receber 1 ficha de desgaste ou exaustão, você pode gastar 1 1%CHARGE%. Se fizer isso, aquela nave recebe 1 ficha de estresse."""
-            
-       #TIE/FO Bomber
-        "Sienar-Jaemus Test Pilot":
-           display_name: """Piloto de Testes da Sienar-Jaemus"""
-           text: """<i class = flavor_text>Equipada com quatro canhões laser e sistemas avançados, a TIE/se Bomber é uma nave altamente manobrável que traz uma artilharia devastadora para aqueles que ousam enfrentar a Primeira Ordem.</i>"""
-        "First Order Cadet":
-           display_name: """Cadete da Primeira Ordem"""
-           text: """<i class = flavor_text>Os exercícios com tiros reais da Primeira Ordem têm como objetivo erradicar os fracos, reforçando a máxima que apenas os fortes sobrevivem.</i>"""
-        '"Dread"':
-           display_name: """“Dread”"""
-           text: """Após você recarregar, cada nave no seu %BULLSEYEARC% recebe 1 ficha de exaustão."""
-        '"Scorch" (TIE/Se Bomber)':
-           display_name: '''"Scorch"'''
-           text: """Quando uma nave amiga em alcance 0-1 realizar um ataque primário, ela pode gastar 1 resultado %HIT%. Se a nave amiga o fizer, o defensor recebe 1 ficha de desgaste."""
-        '"Breach"':
-           display_name: """“Breach”"""           
-           text: """Após você executar completamente uma manobra ou realizar uma ação %BOOST%, se você se moveu através de uma nave inimiga, você pode adquirir uma mira nela."""
-        '"Grudge"':
-           display_name: """“Grudge”""" 
-           text: """Quando uma bomba ou mina amiga em alcance 0-2 detonar, cada vez que dados de ataque forem rolados para resolver o efeito dela, você pode rerrolar até 1 desses dados."""
-        "Jul Jerjerrod":
-           display_name: """Jul Jerjerrod"""
-           text: """Depois que você realizar uma ação %BOOST%, você pode gastar 1 %CHARGE% para remover 1 ficha laranja ou vermelha que não seja uma mira."""
-      
-       #TIE Silencer
-        "Sienar-Jaemus Engineer":
-           display_name: """Engenheiro da Sienar-Jaemus"""
-           text: """<i class = flavor_text>Projetada pela Sienar-Jaemus Fleet Systems como sucessora da renomada TIE Defender, a TIE/vn Silencer incorpora tecnologias de ponta desenvolvidas em laboratórios de pesquisa escondidos nas Regiões Desconhecidas.</i>"""
-        "First Order Test Pilot":
-           display_name: """Piloto de Testes da Primeira Ordem"""
-           text: """<i class = flavor_text>Projetada para altas velocidades e com uma manobrabilidade incrível, a TIE Silencer é devastadora nas mãos daqueles capazes de utilizar seu potencial máximo. Pilotos menos experientes perdem facilmente o controle desta ágil nave.</i>"""
-        '"Avenger"':
-           display_name: """“Avenger”"""
-           text: """Após outra nave amiga ser destruída, você pode realizar uma ação, mesmo se estiver estressado."""
-        '"Recoil"':
-           display_name: """“Recoil”"""
-           text: """Quando você estiver estressado, você pode tratar as naves inimigas em seu %FRONTARC% em alcance 0-1 como se estivessem em seu %BULLSEYEARC%."""
-        '"Rush"':
-           display_name: """“Rush”"""
-           text: """Enquanto você estiver danificado, trate sua iniciativa como se fosse 6."""
-        '"Blackout"':
-           display_name: """“Blackout”"""
-           text: """Quando você realizar um ataque, se o ataque estiver obstruído por um obstáculo, o defensor rola 2 dados de defesa a menos."""
-        "Kylo Ren":
-           display_name: """Kylo Ren"""
-           text: """Após você defender, você pode gastar 1 %FORCE% para atribuir a condição <strong>Contemple o Lado Sombrio</strong> ao atacante."""
-        "Kylo Ren (EoD)":
-           display_name: """Kylo Ren (EoD)"""
-           text: """Antes de uma nave inimiga em seu %BULLSEYEARC% receber uma carta de dano virada para baixo, você pode gastar 1 %FORCE%. Se fizer isso, essa carta da dano é recebida virada para cima."""
-
-       #TIE Whisper
-        "Red Fury Zealot":
-           display_name: """Fanático da Red Fury"""
-           text: """<i class = flavor_text>Também chamada de Red Fury, a Legião 709 é encarregada pelo Líder Supremo Kylo Ren em erradicar os dissidentes Posto de Black Spire.</i>"""
-        "709th Legion Ace":
-           display_name: """Ás da Legião 709"""
-           text: """<i class = flavor_text>Comandada pelo Líder Supremo Kylo Ren, a Legião 709 luta sem misericórdia ou remorso para esmagar a Resistência e espalhar o domínio da Primeira Ordem pela galáxia.</i>"""
-        "Kylo Ren (TIE Whisper)":
-           display_name: """Kylo Ren"""
-           text: """Antes de uma nave inimiga em seu %BULLSEYEARC% receber uma carta de dano virada para baixo, você pode gastar 1 %FORCE%. Se o fizer, a carta de dano é atribuída virada para cima."""
-        '"Wrath"':
-           display_name: """“Wrath”"""
-           text: """Após você realizar um ataque %BULLSEYEARC%, se você tiver 1 ou mais fichas laranjas ou vermelhas, exceto mira, você pode realizar um ataque bônus contra um alvo diferente."""
-        '"Nightfall"':
-           display_name: """“Nightfall”"""
-           text: """Após você executar completamente uma manobra ou realizar uma ação %BOOST%, cada nave que você se moveu através recebe 2 fichas de interferência."""
-        '"Whirlwind"':
-           display_name: """“Whirlwind”"""
-           text: """Antes de você engajar, você pode remover qualquer número de fichas de interferência, então você pode receber 1 ficha de foco para cada nave inimiga que tem você no %FRONTARC% dela."""
-
-       #TIE/BA
-        "First Order Provocateur":
-           display_name: """Provocador da Primeira Ordem"""
-           text: """<i class = flavor_text>A visão do Major Vonreg guiou o aprimoramento de projetos consolidados enquanto planejava essa nave única, precisa e letal da Sienar-Jaemus Fleet Systems.</i>"""
-        "Major Vonreg":
-           display_name: """Major Vonreg"""
-           text: """Durante a Fase de Sistema, você pode escolher 1 nave inimiga em seu %BULLSEYEARC%. A nave escolhida recebe 1 ficha de exaustão ou desgaste, à sua escolha."""
-        '"Ember"':
-           display_name: """“Ember”"""
-           text: """Quando você realizar um ataque, se houver uma nave danificada amiga do defensor em alcance 0-1 do defensor, o defensor não pode gastar fichas de foco ou de cálculo."""
-        '"Holo"':
-           display_name: """“Holo”"""
-           text: """No início da Fase de Engajamento, você <b>deve</b> transferir 1 de suas fichas para outra nave amiga em alcance 0-2."""
-
-       #TIE/SF
-        "Zeta Squadron Survivor":
-           display_name: """Sobrevivente do Esquadrão Zeta"""
-           text: """<i class = flavor_text>Humilhados por seu fracasso, o restante dos pilotos da Base Starkiller estão ávidos para mostrar seu valor perseguindo a Resistência."""
-        "Omega Squadron Expert":
-           display_name: """Perito do Esquadrão Ômega"""
-           text: """<i class = flavor_text>A TIE/sf é um caça estelar versátil com arsenal especializado e sistemas experimentais para operações de longo alcance das Forças Especiais da Primeira Ordem."""
-        "Captain Phasma":
-           display_name: """Capitã Phasma"""
-           text: """Quando você defender, após a etapa Neutralizar Resultados, outra nave amiga em alcance 0-1 <b>deve</b> sofrer 1 dano %HIT%/%CRIT% para cancelar 1 resultado correspondente."""
-        '"Backdraft"':
-           display_name: """“Backdraft”"""
-           text: """Quando você realizar um ataque primário %SINGLETURRETARC%, se o defensor estiver em seu %REARARC%, role 1 dado adicional."""
-        "Lieutenant LeHuse":
-           display_name: """Tenente LeHuse"""
-           text: """Quando você realizar um ataque, você pode gastar a mira que outra nave amiga tenha no defensor para rerrolar qualquer número dos seus resultados."""
-        '"Quickdraw"':
-           display_name: """“Quickdraw”"""
-           text: """Após você perder um escudo, você pode gastar 1 %CHARGE%. Se o fizer, você pode realizar um ataque primário bônus."""
-        "Lieutenant LeHuse (EoD)":
-           display_name: """Tenente LeHuse (EoD)"""
-           text: """No começo da Fase de Engajamento, você pode adquirir uma mira em um objeto em alcance 1-3 que tenha uma mira amiga. Se você fizer isso, quebre a mira amiga no objeto."""
-        "Theta 3 (EoD)":
-           display_name: """Theta 3 (EoD)"""
-           text: """No começo da Fase de Engajamento, se você não possuir fichas verdes, você pode gastar 1 %CHARGE% para receber 1 ficha de desvio."""
-        "Theta 4 (EoD)":
-           display_name: """Theta 4 (EoD)"""
-           text: """Quando uma nave inimiga em seu %SINGLETURRETARC% realizar um ataque, você pode gastar 1 %CHARGE%. Se fizer isso, gaste 1 %CHARGE% da sua melhoria %MISSILE% para escolher dois dados de ataque. O atacante deve rerolar esses dados."""
-
-       #XI-Class
-        "First Order Courier":
-           display_name: """Mensageiro da Primeira Ordem"""
-           text: """<i class = flavor_text>A Primeira Ordem se esconde em várias bases escondidas em cantos obscuros da galáxia, espalhando lentamente sua influência insidiosa."""
-        "Agent Terex":
-           display_name: """Agente Terex"""
-           text: """<strong>Preparação:</strong> Após posicionar as forças, escolha qualquer número de suas melhorias %ILLICIT% equipadas e as equipe em caças TIE/fo ou TIE/sf amigos. Cada nave pode receber apenas 1 %ILLICIT% dessa maneira.%LINEBREAK%<strong>Fim de Jogo:</strong> Retorne todas as melhorias %ILLICIT% para suas naves originais."""
-        "Gideon Hask (Xi Shuttle)":
-           display_name: """Gideon Hask"""
-           text: """Quando você ou uma nave amiga pequena em alcance 0-2 realizar um ataque primário contra um defensor danificado, se o atacante rolou 2 ou menos dados de ataque, ele pode receber 1 ficha de desgaste para rolar 1 dado de ataque adicional."""
-        "Commander Malarus (Xi Shuttle)":
-           display_name: """Comandante Malarus"""
-           text: """Quando uma nave amiga em alcance 0-2 realizar um ataque primário, antes da etapa Modificar Dados, se ela tiver 1 ou mais resultados em branco, a nave <b>deve</b> receber 1 ficha de desgaste para rerrolar 1 resultado em branco, se possível. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Adicionado janela de habilidade para impedir que jogadores evitem a parte ruim da habilidade</i>"""
-        "Agent Tierny":
-           display_name: """Agente Tierny"""
-           text: """<strong>Preparação:</strong> Depois de posicionar forças, você <b>deve</b> aplicar a condição <strong>Confiança Quebrada</strong> a uma nave inimiga."""
-
-     #Republic
-       #ARC-170 Republic
-        "104th Battalion Pilot":
-           display_name: """Piloto do Batalhão 104"""
-           text: """<i class = flavor_text>A ARC-170 foi projetada como um caça de escolta pesado com lasers dianteiras e traseiras potentes, artilharia e um astromecânico para navegação. Esquadrões dessa poderosa nave reforçavam a presença da Marinha da República em qualquer batalha que participassem.</i>"""
-        "Squad Seven Veteran":
-           display_name: """Veterano do Esquadrão Sete"""
-           text: """<i class = flavor_text>A Esquadrilha Clone Sete serviu como parte da Frota Open Circle sob o comando de Generais Jedi lendários como Plo Koon e Obi-Wan Kenobi e conquistou a glória em batalhas como a de Coruscant e Cato Neimoidia.</i>"""
-        '"Jag"':
-           display_name: """“Jag”"""
-           text: """Após uma nave amiga em alcance 1-2 em seu %LEFTARC% ou %RIGHTARC% defender, você pode adquirir uma mira no atacante."""
-        '"Odd Ball" (ARC-170)':
-           display_name: """“Odd Ball”"""
-           text: """Após você executar completamente uma manobra vermelha ou realizar uma ação vermelha, se houver uma nave inimiga em seu %BULLSEYEARC%, você pode adquirir uma mira nessa nave."""
-        '"Wolffe"':
-           display_name: """“Wolffe”"""
-           text: """Quando você realizar um ataque primário %FRONTARC%, você pode gastar 1 %CHARGE% para rerrolar 1 dado de ataque.%LINEBREAK%Quando você realizar um ataque primário %REARARC%, você pode recuperar 1 %CHARGE% para rolar 1 dado de ataque adicional."""
-        '"Sinker"':
-           display_name: """“Sinker”"""
-           text: """Quando uma nave amiga em alcance 1-2 em seu %LEFTARC% ou %RIGHTARC% realizar um ataque primário, ela pode rerrolar 1 dado de ataque."""
-        '"Odd Ball" (SoC)':
-           display_name: """“Odd Ball” (CdC)"""
-           text: """Depois que você realizar completamente uma manobra vermelha ou realizar uma ação vermelha, você pode escolher uma nave amiga em alcance 0-3 e uma nave inimiga em alcance 0-1. A nave amiga escolhida adquire uma mira na nave inimiga."""
-        '"Wolffe" (SoC)':
-           display_name: """“Wolffe” (CdC)"""
-           text: """Quando você realizar um ataque primário %FRONTARC%, você pode gastar 1 %CHARGE% para rerolar 1 dado de ataque.%LINEBREAK%Quando você realizar um ataque primário %REARARC%, você pode recuperar 1 %CHARGE% para rolar 1 dado de ataque adicional."""
-        '"Jag" (SoC)':
-           display_name: """“Jag” (CdC)"""
-           text: """Depois que uma nave amiga em alcance 0-2 em seu %LEFTARC% ou %RIGHTARC% realiza um ataque, se você não estiver desgastado, você pode adquirir uma mira no defensor."""
-
-       #Delta-7
+        "Jake Farrell":
+           display_name: """Jake Farrell"""
+           text: """Após você realizar uma ação %BARRELROLL% ou %BOOST%, você pode escolher uma nave amiga em alcance 0-1. A nave escolhida pode realizar uma ação %FOCUS%."""
+        "Jakku Gunrunner":
+           display_name: """Contrabandistade Armas de Jakku"""
+           text: """<i class = flavor_text>O rebocador orbital Quadrijet, comumente chamado de "Quadjumper", é ágil tanto no espaço quanto na atmosfera, o que o tornou popular entre contrabandistas e exploradores.</i> """
+        "Jan Ors":
+           display_name: """Jan Ors"""
+           text: """Quando uma nave amiga em seu arco de tiro realizar um ataque primário, se você não estiver estressado, você pode receber 1 ficha de estresse. Se o fizer, a nave amiga pode rolar 1 dado de ataque adicional."""
+        "Jaycris Tubbs":
+           display_name: """Jaycris Tubbs"""
+           text: """Após você executar completamente uma manobra azul, você pode escolher uma nave amiga em alcance 0-1. Se o fizer, a nave escolhida remove 1 ficha de estresse."""
         "Jedi Knight":
            display_name: """Cavaleiro Jedi"""
            text: """<i class = flavor_text>Quando as Guerras Clônicas começaram, os Cavaleiros Jedi se uniram em prol da preservação da República, assumindo o comando de legiões de soldados clones e os liderando em batalha.</i>"""
-        "Barriss Offee":
-           display_name: """Barriss Offee"""
-           text: """Quando uma nave amiga em alcance 0-2 realizar um ataque, se o defensor estiver no %BULLSEYEARC% do atacante, você pode gastar 1 %FORCE% para mudar 1 resultado %FOCUS% para um resultado %HIT% ou 1 resultado %HIT% para um resultado %CRIT%."""
-        "Luminara Unduli":
-           display_name: """Luminara Unduli"""
-           text: """Quando uma nave amiga em alcance 0-2 defender, se ela não estiver no %BULLSEYEARC% do atacante, você pode gastar 1 %FORCE%. Se o fizer, mude 1 resultado %CRIT% para um resultado %HIT% ou 1 resultado %HIT% para um resultado %FOCUS%."""
-        "Saesee Tiin":
-           display_name: """Saesee Tiin"""
-           text: """Após uma nave amiga em alcance 0-2 revelar o disco dela, você pode gastar 1 %FORCE%. Se o fizer, coloque o disco dela em outra manobra de mesma velocidade e dificuldade."""
-        "Ahsoka Tano":
-           display_name: """Ahsoka Tano"""
-           text: """Após você executar completamente uma manobra, você pode escolher uma nave amiga em alcance 0-1 e gastar 1 %FORCE%. A nave escolhida pode fazer uma ação, mesmo estressada."""
-        "Plo Koon":
-           display_name: """Plo Koon"""
-           text: """No início da Fase de Engajamento, você pode gastar 1 %FORCE% e escolher outra nave amiga em alcance 0-2. Se o fizer, você pode transferir 1 ficha verde para a nave escolhida ou transferir 1 ficha laranja da nave escolhida para você."""
-        "Mace Windu":
-           display_name: """Mace Windu"""
-           text: """Após você executar completamente uma manobra vermelha, recupere 1 %FORCE%."""
-        "Obi-Wan Kenobi":
-           display_name: """Obi-Wan Kenobi"""
-           text: """Após uma nave amiga em alcance 0-2 gastar uma ficha de foco, você pode gastar 1 %FORCE%. Se o fizer, a nave amiga recebe 1 ficha de foco."""
-        "Anakin Skywalker":
-           display_name: """Anakin Skywalker"""
-           text: """Após você executar completamente uma manobra, se houver uma nave inimiga em seu %FRONTARC% em alcance 0-1 ou em seu %BULLSEYEARC%, você pode gastar 1 %FORCE% para remover 1 ficha de estresse."""
-        "Adi Gallia":
-           display_name: """Adi Gallia"""
-           text: """Quando você se defender de um ataque em alcance 1, você pode gastar 1 %FORCE%. Se o fizer, o atacante não pode aplicar o bônus de alcance.%LINEBREAK%Quando você realizar um ataque contra um defensor em alcance 3, você pode gastar 1 %FORCE%. Se o fizer, o defensor não pode aplicar o bônus de alcance."""
-
-       #Delta-7b
         "Jedi Knight (Delta-7b)":
            display_name: """Cavaleiro Jedi"""
            text: """<i class = flavor_text>Quando as Guerras Clônicas começaram, os Cavaleiros Jedi se uniram em prol da preservação da República, assumindo o comando de legiões de soldados clones e os liderando em batalha.</i>"""
-        "Barriss Offee (Delta-7b)":
-           display_name: """Barriss Offee"""
-           text: """Quando uma nave amiga em alcance 0-2 realizar um ataque, se o defensor estiver no %BULLSEYEARC% do atacante, você pode gastar 1 %FORCE% para mudar 1 resultado %FOCUS% para um resultado %HIT% ou 1 resultado %HIT% para um resultado %CRIT%."""
+        "Jek Porkins":
+           display_name: """Jek Porkins"""
+           text: """Após receber uma ficha de estresse, você pode rolar 1 dado de ataque para removê-la. Em um resultado %HIT%, sofra 1 dano %HIT%."""
+        "Jessika Pava":
+           display_name: """Jessika Pava"""
+           text: """Quando você defender ou realizar um ataque, você pode gastar 1 %CHARGE% ou 1 %CHARGE% não recursiva de sua melhoria %ASTROMECH% equipada para rerrolar até 1 de seus dados para cada outra nave amiga em alcance 0-1."""
+        "Joph Seastriker":
+           display_name: """Joph Seastriker"""
+           text: """Após você perder 1 escudo, receba 1 ficha de desvio."""
+        "Joy Rekkoff":
+           display_name: """Joy Rekkoff"""
+           text: """Quando você realizar um ataque, você pode gastar 1 %CHARGE% de uma melhoria %TORPEDO% equipada. Se o fizer, o defensor rola 1 dado de defesa a menos."""
+        "Kaa'to Leeachos":
+           display_name: """Kaa’to Leeachos"""
+           text: """No início da Fase de Engajamento, você pode escolher 1 nave amiga em alcance 0-2. Se o fizer, transfira 1 ficha de foco ou desvio da nave escolhida para você. """
+        "Kad Solus":
+           display_name: """Kad Solus"""
+           text: """Após você executar completamente uma manobra vermelha, receba 2 fichas de foco."""
+        "Kanan Jarrus":
+           display_name: """Kanan Jarrus"""
+           text: """Quando uma nave amiga em seu arco de tiro defender, você pode gastar 1 %FORCE%. Se o fizer, o atacante rola 1 dado de ataque a menos."""
+        "Kare Kun":
+           display_name: """Kare Kun"""
+           text: """Quando você impulsionar, você pode usar o gabarito [1 %TURNLEFT%] ou [1 %TURNRIGHT%]."""
+        "Kashyyyk Defender":
+           display_name: """Defensor Kashyyyk"""
+           text: """<i class = flavor_text>Equipada com três canhões laser paralelos Sureggi de longo alcance, a Nave de Ataque Auzituck age como um poderoso dissuasor das operações escravagistas do sistema Kashyyyk.</i>"""
+        "Kath Scarlet":
+           display_name: """Kath Scarlet"""
+           text: """Quando você realizar um ataque primário, se houver ao menos 1 nave amiga não limitada em alcance 0 do defensor, role 1 dado de ataque adicional."""
+        "Kavil":
+           display_name: """Kavil"""
+           text: """Quando realizar um ataque não %FRONTARC%, role 1 dado de ataque adicional."""
+        "Ketsu Onyo":
+           display_name: """Ketsu Onyo"""
+           text: """No início da Fase de Engajamento, você pode escolher 1 nave que esteja tanto em seu %FRONTARC% quanto em seu %SINGLETURRETARC% em alcance 0-1. Se o fizer, a nave escolhida recebe 1 ficha de tração."""
+        "Knave Squadron Escort":
+           display_name: """Escolta do Esq. Valete"""
+           text: """<i class = flavor_text>Projetada para combinar as melhores características das séries X-wing e A-wing, a E-wing apresenta poder de fogo, velocidade e manobrabilidade superiores.</i>"""
+        "Koshka Frost":
+           display_name: """Koshka Frost"""
+           text: """Quando você realizar um ataque, se a nave inimiga estiver estressada, você pode rerrolar 1 dos seus dados."""
+        "Krassis Trelix":
+           display_name: """Krassis Trelix"""
+           text: """Você pode realizar ataques especiais %FRONTARC% usando seu %REARARC%.%LINEBREAK%Quando você realizar um ataque especial, você pode rerrolar 1 dado de ataque."""
+        "Kullbee Sperado":
+           display_name: """Kullbee Sperado"""
+           text: """Após você realizar uma ação %BARRELROLL% ou %BOOST%, você pode virar sua carta de melhoria %CONFIGURATION% equipada."""
+        "Kyle Katarn":
+           display_name: """Kyle Katarn"""
+           text: """No início da Fase de Engajamento, você pode transferir 1 de suas fichas de foco para uma nave amiga em seu arco de tiro."""
+        "Kylo Ren":
+           display_name: """Kylo Ren"""
+           text: """Após você defender, você pode gastar 1 %FORCE% para atribuir a condição <strong>Contemple o Lado Sombrio</strong> ao atacante."""
+        "L3-37":
+           display_name: """L3-37"""
+           text: """Se você não tiver escudos, diminua a dificuldade das suas manobras de curva (%BANKLEFT% e %BANKRIGHT%)."""
+        "L3-37 (Escape Craft)":
+           display_name: """L3-37"""
+           text: """Se você não tiver escudos, diminua a dificuldade das suas manobras de curva (%BANKLEFT% e %BANKRIGHT%)."""
+        "Laetin A'shera":
+           display_name: """Laetin A’shera"""
+           text: """Após você defender ou realizar um ataque, se o ataque errou, receba 1 ficha de desvio."""
+        "Lando Calrissian":
+           display_name: """Lando Calrissian"""
+           text: """Após você executar completamente uma manobra azul, você pode escolher uma nave amiga em alcance 0-3. A nave escolhida pode realizar uma ação."""
+        "Lando Calrissian (Scum)":
+           display_name: """Lando Calrissian"""
+           text: """Após você rolar dados, se você não estiver estressado, você pode receber 1 ficha de estresse para rerrolar todos os seus resultados em branco."""
+        "Lando Calrissian (Scum) (Escape Craft)":
+           display_name: """Lando Calrissian"""
+           text: """Após você rolar dados, se você não estiver estressado, você pode receber 1 ficha de estresse para rerrolar todos os seus resultados em branco."""
+        "Latts Razzi":
+           display_name: """Latts Razzi"""
+           text: """No início da Fase de Engajamento, você pode escolher uma nave em alcance 1 e gastar uma mira que você tem na nave escolhida. Se o fizer, a nave escolhida recebe 1 ficha de tração."""
+        "Leevan Tenza":
+           display_name: """Leevan Tenza"""
+           text: """Após você realizar uma ação %BARRELROLL% ou %BOOST%, você pode realizar uma ação %EVADE% vermelha."""
+        "Lieutenant Bastian":
+           display_name: """Tenente Bastian"""
+           text: """Após uma nave em alcance 1-2 receber uma carta de dano, você pode adquirir uma mira nela."""
+        "Lieutenant Blount":
+           display_name: """Tenente Blount"""
+           text: """Quando você realizar um ataque primário, se houver ao menos 1 outra nave amiga em alcance 0-1 do defensor, você pode rolar 1 dado de ataque adicional."""
+        "Lieutenant Dormitz":
+           display_name: """Lieutenant Dormitz"""
+           text: """<strong>Preparação:</strong> Após você ser posicionado, outras naves amigas pequenas podem ser colocadas em qualquer lugar na área de jogo em alcance 0-2 de você. %LINEBREAK% <i>Errata (since rules reference 1.3.0): Replaced "other friendly ship" with "friendly small ships"</i>"""
+        "Lieutenant Karsabi":
+           display_name: """Tenente Karsabi"""
+           text: """Após você receber uma ficha de desarmamento, se você não estiver estressado, você pode receber 1 ficha de estresse para remover 1 ficha de desarmamento."""
+        "Lieutenant Kestal":
+           display_name: """Tenente Kestal"""
+           text: """Quando você realizar um ataque, após o defensor rolar os dados de defesa, você pode gastar 1 ficha de foco para cancelar todos os resultados em branco/%FOCUS% do defensor."""
+        "Lieutenant Rivas":
+           display_name: """Tenente Rivas"""
+           text: """Após uma nave em alcance 1-2 receber uma ficha vermelha ou laranja, se você não tiver uma mira travada nessa nave, você pode adquirir uma mira nela."""
+        "Lieutenant Sai":
+           display_name: """Tenente Sai"""
+           text: """Após você realizar uma ação %COORDINATE%, se a nave escolhida realizou uma ação presente na sua barra de ações, você pode realizar essa ação."""
+        "Lieutenant Tavson":
+           display_name: """Tenente Tavson"""
+           text: """Após você sofrer dano, você pode gastar 1 %CHARGE% para realizar uma ação."""
+        "Lok Revenant":
+           display_name: """Espectro de Lok"""
+           text: """<i class = flavor_text>A Nubian Design Collective criou o Bombardeiro Scurrg H-6 tendo em mente a versatilidade em combate, equipando-o com escudos reforçados e um vasto conjunto de armamentos destrutivos.</i>"""
+        "Lothal Rebel":
+           display_name: """Rebelde de Lothal"""
+           text: """<i class = flavor_text>Mais um projeto de sucesso de cargueiro da Corellian Engineering Corporation, o VCX-100 é maior que a popular série YT, dispondo de mais espaço interno e maior capacidade de personalização.</i>"""
+        "Lowhhrick":
+           display_name: """Lowhhrick"""
+           text: """Após uma nave amiga em alcance 0-1 se tornar defensora, você pode gastar 1 ficha de reforço. Se o fizer, a nave defensora recebe 1 ficha de desvio."""
+        "Luke Skywalker":
+           display_name: """Luke Skywalker"""
+           text: """Após você se tornar o defensor (antes dos dados serem rolados), você pode recuperar 1 %FORCE%."""
+        "Luminara Unduli":
+           display_name: """Luminara Unduli"""
+           text: """Quando uma nave amiga em alcance 0-2 defender, se ela não estiver no %BULLSEYEARC% do atacante, você pode gastar 1 %FORCE%. Se o fizer, mude 1 resultado %CRIT% para um resultado %HIT% ou 1 resultado %HIT% para um resultado %FOCUS%."""
         "Luminara Unduli (Delta-7b)":
            display_name: """Luminara Unduli"""
            text: """Quando uma nave amiga em alcance 0-2 defender, se ela não estiver no %BULLSEYEARC% do atacante, você pode gastar 1 %FORCE%. Se o fizer, mude 1 resultado %CRIT% para um resultado %HIT% ou 1 resultado %HIT% para um resultado %FOCUS%."""
-        "Saesee Tiin (Delta-7b)":
-           display_name: """Saesee Tiin"""
-           text: """Após uma nave amiga em alcance 0-2 revelar o disco dela, você pode gastar 1 %FORCE%. Se o fizer, coloque o disco dela em outra manobra de mesma velocidade e dificuldade."""
-        "Ahsoka Tano (Delta-7b)":
-           display_name: """Ahsoka Tano"""
-           text: """Após você executar completamente uma manobra, você pode escolher uma nave amiga em alcance 0-1 e gastar 1 %FORCE%. A nave escolhida pode fazer uma ação, mesmo estressada."""
-        "Plo Koon (Delta-7b)":
-           display_name: """Plo Koon"""
-           text: """No início da Fase de Engajamento, você pode gastar 1 %FORCE% e escolher outra nave amiga em alcance 0-2. Se o fizer, você pode transferir 1 ficha verde para a nave escolhida ou transferir 1 ficha laranja da nave escolhida para você."""
+        "L'ulo L'ampar":
+           display_name: """L'ulo L'ampar"""
+           text: """Quando você defender ou realizar um ataque primário, se estiver estressado, você <b>deve</b> rolar 1 dado de defesa a menos ou 1 dado de ataque adicional."""
+        "Maarek Stele":
+           display_name: """Maarek Stele"""
+           text: """Quando você realizar um ataque, se o defensor for receber uma carta de dano virada para cima, ao invés disso, compre 3 cartas de dano, escolha 1 e descarte o resto. """
+        "Mace Windu":
+           display_name: """Mace Windu"""
+           text: """Após você executar completamente uma manobra vermelha, recupere 1 %FORCE%."""
         "Mace Windu (Delta-7b)":
            display_name: """Mace Windu"""
            text: """Após você executar completamente uma manobra vermelha, recupere 1 %FORCE%."""
+        "Magva Yarro":
+           display_name: """Magva Yarro"""
+           text: """Quando uma nave amiga em alcance 0-2 defender, o atacante não pode rerrolar mais que 1 dado de ataque."""
+        "Major Rhymer":
+           display_name: """Major Rhymer"""
+           text: """Quando realizar um ataque %TORPEDO% ou %MISSILE%, você pode aumentar ou diminuir o requisito de alcance em 1, até um limite de 0-3. """
+        "Major Stridan":
+           display_name: """Major Stridan"""
+           text: """Quando você coordenar ou resolver o efeito de uma de suas melhorias, você pode tratar naves amigas em alcance 2-3 como se estivessem em alcance 0 ou 1."""
+        "Major Vermeil":
+           display_name: """Major Vermeil"""
+           text: """Quando você realizar um ataque, se o defensor não possuir fichas verdes, você pode mudar 1 de seus resultados em branco ou %FOCUS% para um resultado %HIT%."""
+        "Major Vynder":
+           display_name: """Major Vynder"""
+           text: """Quando você defender, se você estiver desarmado, role 1 dado de defesa adicional."""
+        "Manaroo":
+           display_name: """Manaroo"""
+           text: """No início da Fase de Engajamento, você pode escolher uma nave amiga em alcance 0-1. Se o fizer, transfira todas as fichas verdes atribuidas a você para a nave escolhida."""
+        "Mining Guild Sentry":
+           display_name: """Sentinela da Guilda dos Mineradores"""
+           text: """<i class = flavor_text>Como parte do acordo com o Império, a Guilda dos Mineradores recebe TIE/ln Fighters modificadas para proteger suas operações. Estas naves tiveram alguns painéis solares removidos de seus estabilizadores para favorecer a visibilidade, e apresentam sistemas de suporte à vida mais completos para beneficiar seus pilotos contratados.</i>"""
+        "Mining Guild Surveyor":
+           display_name: """Inspetor da Guilda dos Mineradores"""
+           text: """<i class = flavor_text>Com os projetos de construção do Império consumindo recursos em um ritmo nunca visto antes, a Guilda dos Mineradores explora impiedosamente novos depósitos de minério de doonium em mundos como Batonn, Lothal e Umbara.</i>"""
+        "Miranda Doni":
+           display_name: """Miranda Doni"""
+           text: """Quando você realizar um ataque primário, você pode gastar 1 escudo para rolar 1 dado de ataque adicional ou, se você não possuir escudos, você pode rolar 1 dado de ataque a menos para recuperar 1 escudo."""
+        "Moralo Eval":
+           display_name: """Moralo Eval"""
+           text: """Se você iria fugir, você pode gastar 1 %CHARGE%. Se o fizer, coloque-se na reserva, ao invés de fugir. No início da próxima Fase de Planejamento, coloque-se dentro do alcance 1 da borda da área de jogo pela qual você fugiu."""
+        "Nien Nunb":
+           display_name: """Nien Nunb"""
+           text: """Após você receber uma ficha de estresse, se houver uma nave inimiga em seu %FRONTARC% em alcance 0-1, você pode remover essa ficha de estresse."""
+        "Norra Wexley (Y-Wing)":
+           display_name: """Norra Wexley"""
+           text: """Quando você defender, se houver uma nave inimiga em alcance 0-1, adicione 1 resultado %EVADE% ao resultado de seus dados."""
+        "Norra Wexley":
+           display_name: """Norra Wexley"""
+           text: """Quando você defender, se houver uma nave inimiga em alcance 0-1, adicione 1 resultado %EVADE% ao resultado de seus dados. %LINEBREAK% <i>Errata (since rules reference 1.0.2): Removed “you may”</i>"""
+        "Nu Squadron Pilot":
+           display_name: """Piloto do Esquadrão Nu"""
+           text: """<i class = flavor_text>Com design inspirado por outras naves da Cygnus Spaceworks, a star wing classe Alfa é uma nave versátil designada a unidades especiais da Marinha Imperial que precisam de um caça estelar capaz de ser equipado para executar os mais diversos tipos de missão.</i>"""
+        "N'dru Suhlak":
+           display_name: """N’dru Suhlak"""
+           text: """Quando você realizar um ataque primário, se não houver outra nave amiga em alcance 0-2, role 1 dado de ataque adicional."""
+        "Obi-Wan Kenobi":
+           display_name: """Obi-Wan Kenobi"""
+           text: """Após uma nave amiga em alcance 0-2 gastar uma ficha de foco, você pode gastar 1 %FORCE%. Se o fizer, a nave amiga recebe 1 ficha de foco."""
         "Obi-Wan Kenobi (Delta-7b)":
            display_name: """Obi-Wan Kenobi"""
            text: """Após uma nave amiga em alcance 0-2 gastar uma ficha de foco, você pode gastar 1 %FORCE%. Se o fizer, a nave amiga recebe 1 ficha de foco."""
-        "Anakin Skywalker (Delta-7b)":
-           display_name: """Anakin Skywalker"""
-           text: """Após você executar completamente uma manobra, se houver uma nave inimiga em seu %FRONTARC% em alcance 0-1 ou em seu %BULLSEYEARC%, você pode gastar 1 %FORCE% para remover 1 ficha de estresse."""
-        "Adi Gallia (Delta-7B)":
-           display_name: """Adi Gallia"""
-           text: """Quando você se defender de um ataque em alcance 1, você pode gastar 1 %FORCE%. Se o fizer, o atacante não pode aplicar o bônus de alcance.%LINEBREAK%Quando você realizar um ataque contra um defensor em alcance 3, você pode gastar 1 %FORCE%. Se o fizer, o defensor não pode aplicar o bônus de alcance."""
-
-       #ETA-2
-        "Jedi General":
-           display_name: """General Jedi"""
-           text: """<i class = flavor_text>À medida que as Guerras Clônicas afetam as fileiras da Ordem Jedi, aqueles que permanecem devem assumir responsabilidades ainda maiores no Grande Exército da República.</i>"""
-        "Yoda":
-           display_name: """Yoda"""
-           text: """Após outra nave amiga em alcance 0-3 gastar 1 ou mais %FORCE%, você pode gastar 1 %FORCE%. Se o fizer, a nave amiga recupera 1 %FORCE%."""
-        "Shaak Ti":
-           display_name: """Shaak Ti"""
-           text: """No início da Fase Final, você pode gastar qualquer número de %FORCE% para escolher a mesma quantidade de naves em alcance 0-2. Cada nave escolhida não remove 1 ficha de foco ou desvio durante esta Fase Final."""
-        "Aayla Secura":
-           display_name: """Aayla Secura"""
-           text: """Quando uma nave inimiga em seu %FRONTARC% em alcance 0-1 realizar um ataque, o defensor pode mudar 1 resultado em branco para um resultado %FOCUS%."""
-        "Obi-Wan Kenobi (Eta-2)":
-           display_name: """Obi-Wan Kenobi"""
-           text: """Após você ou uma nave amiga <b>Anakin Skywalker</b> em alcance 0-3 realizar uma manobra, se houver mais naves inimigas do que outras naves amigas em alcance 0-1 da nave, você pode gastar 1 %FORCE%. Se o fizer, a nave recebe 1 ficha de foco."""
-        "Anakin Skywalker (Eta-2)":
-           display_name: """Anakin Skywalker"""
-           text: """Após você ou uma nave amiga <b>Obi-Wan Kenobi</b> em alcance 0-3 ralizar uma manobra, se houver mais naves inimigas do que outras naves amigas em alcance 0-1 da nave, você pode gastar 1 %FORCE%. Se o fizer, a nave remove 1 ficha vermelha à sua escolha."""
-        "Kit Fisto":
-           display_name: """Kit Fisto"""
-           text: """Quando outra nave amiga defender, se o atacante estiver no %BULLSEYEARC% dela, você pode gastar 1 %FORCE% para mudar 1 dos resultados em branco do defensor para um resultado %FOCUS%."""
-        "Obi-Wan Kenobi (SoC)":
-           display_name: """Obi-Wan Kenobi (CdC)"""
-           text: """Depois que você ou uma nave amiga <b>Anakin Skywalker</b> em alcance 0-3 realiza completamente uma manobra, se houver mais naves inimigas do que outras naves amigas em alcance 0-1 dessa nave, você pode gastar 1 %FORCE%. Se você fizer isso, essa nave pode realizar uma ação %BOOST%."""
-        "Shaak Ti (SoC)":
-           display_name: """Shaak Ti (CdC)"""
-           text: """No começo da Fase Final, você pode realizar uma ação %COORDINATE% roxa, mesmo se estiver estressado.%LINEBREAK%Depois que você realizar uma ação %COORDINATE%, se a nave escolhida possuir a a habilidade de nave  <b>Nascido para Isso</b>, você pode coordenar 1 nave adicional."""
-
-       #LAAT
-        "212th Battalion Pilot":
-           display_name: """Piloto do Batalhão 212"""
-           text: """<i class = flavor_text>Capaz de funcionar em tanto em ataques atmosféricos quanto em batalhas espaciais, a nave LAAT/I transporta tropas da República para as frentes de batalha em planetas sitiados pelos Separatistas.</i>"""
-        '"Hawk"':
-           display_name: """“Hawk”"""
-           text: """No início da Fase Final, cada nave amiga em alcance 0-1 que tem uma manobra revelada de velocidade 3-5 pode receber 1 ficha de desgaste para realizar uma ação %BARRELROLL% ou %BOOST%."""
-        '"Hound"':
-           display_name: """“Hound”"""
-           text: """Após uma nave amiga pequena em seu %SINGLETURRETARC% receber uma ficha de exaustão ou desgaste, se você não tiver fichas do mesmo tipo, você pode transferir a ficha para você."""
-        '"Warthog"':
-           display_name: """“Warthog”"""
-           text: """Após você ou uma nave amiga não limitada em alcance 0-2 ser destruída durante a Fase de Engajamento, a nave não é removida até o final da fase."""
-        '"Sicko"':
-           display_name: """“Sicko”"""
-           text: """Depois que você realizar uma manobra básica, você pode atribuir a condição <strong>Manobra Nauseante</strong> a você mesmo."""
-
-       #Naboo
-        "Bravo Flight Officer":
-           display_name: """Oficial do Esquadrão Bravo"""
-           text: """<i class = flavor_text>Os pilotos voluntários da Força Segurança Real de Naboo são dedicados a proteger as pessoas e os ideais de seu mundo natal e confiam em sua Rainha para enviá-los para a batalha apenas quando todas as outras opções falharem.</i>"""
+        "Obsidian Squadron Pilot":
+           display_name: """Piloto do Esquadrão Obsidiana"""
+           text: """<i class = flavor_text>O sistema do Motor Iônico Gêmeo da TIE fighter foi projetado para entregar velocidade, fazendo da TIE/ln uma das mais ágeis naves estelares já produzidas.</i>"""
+        "Old Teroch":
+           display_name: """Velho Teroch"""
+           text: """No início da Fase de Engajamento, você pode escolher 1 nave inimiga em alcance 1. Se o fizer e estiver no %FRONTARC% da nave escolhida, ela remove todas as fichas verdes dela."""
+        "Omega Squadron Ace":
+           display_name: """Omega Squadron Ace"""
+           text: """<i class = flavor_text>Apenas pilotos que demonstram habilidade excepcional e dedicação inabalável são recompensados com as cobiçadas posições nos esquadrões da Primeira Ordem que realizam missões secretas contra a Nova República durante a Guerra Fria.</i>"""
+        "Omega Squadron Expert":
+           display_name: """Perito do Esquadrão Ômega"""
+           text: """<i class = flavor_text>A TIE/sf é um caça estelar versátil com arsenal especializado e sistemas experimentais para operações de longo alcance das Forças Especiais da Primeira Ordem.</i>"""
+        "Omicron Group Pilot":
+           display_name: """Piloto do Grupo Omicron"""
+           text: """<i class = flavor_text>Famosa por seu design de três asas e conjunto de sensores avançados, a transporte classe Lambda desempenha um papel crítico como uma nave leve de utilidade da Marinha Imperial.</i>"""
+        "Onyx Squadron Ace":
+           display_name: """Ás do Esquadrão Ônix"""
+           text: """<i class = flavor_text>A experimental TIE defender desbanca qualquer outro caça estelar contemporâneo, porém seu tamanho, velocidade e capacidade bélica vem acompanhados de um custo à altura de sua tremenda capacidade.</i>"""
+        "Onyx Squadron Scout":
+           display_name: """Batedor do Esquadrão Ônix"""
+           text: """<i class = flavor_text>Projetada para batalhas duradouras, a TIE/ag é pilotada principalmente por pilotos de elite treinados para dominar tanto seu armamento exclusivo quanto sua agilidade com eficiência total.</i>"""
+        "Outer Rim Pioneer":
+           display_name: """Pioneiro da Orla Exterior"""
+           text: """Naves amigas em alcance 0-1 podem realizar ataques em alcance 0 de obstáculos."""
+        "Outer Rim Smuggler":
+           display_name: """Contrabandistada Orla Exterior"""
+           text: """<i class = flavor_text>Conhecido por sua durabilidade e modularidade, a YT-1300 é um dos cargueiros mais populares, mais usados e mais extensivamente personalizados da galáxia.</i>"""
+        "Overseer Yushyn":
+           display_name: """Supervisor Yushyn"""
+           text: """Antes de uma nave amiga em alcance 1 receber uma ficha de desarmamento, se ela não estiver estressada, você pode gastar 1 %CHARGE%. Se o fizer, ao invés da ficha de desarmamento, ela recebe 1 ficha de estresse."""
         "Padmé Amidala":
            display_name: """Padmé Amidala"""
-           text: """Quando uma nave inimiga em seu %FRONTARC% defender ou realizar um ataque, a nave inimiga pode modificar apenas 1 resultado %FOCUS% (outros resultados ainda podem ser modificados)."""
-        "Anakin Skywalker (N-1 Starfighter)":
-           display_name: """Anakin Skywalker"""
-           text: """Antes de você revelar sua manobra, você pode gastar 1 %FORCE% para realizar uma pirueta (isso não é uma ação)."""
-        "Ric Olié":
-           display_name: """Ric Olié"""
-           text: """Quando você defender ou realizar um ataque primário, se a velocidade da sua manobra revelada for maior que a da nave inimiga, role 1 dado adicional."""
-        "Dineé Ellberger":
-           display_name: """Dineé Ellberger"""
-           text: """Quando você defender ou realizar um ataque, se a velocidade da sua manobra revelada for a mesma que a da nave inimiga, os dados da nave inimiga não podem ser modificados."""
-        "Naboo Handmaiden":
-           display_name: """Serva de Naboo"""
-           text: """<strong>Preparação:</strong> Após posicionar as forças, atribua a condição <b>Chamariz</b> para 1 outra nave amiga que não seja <strong>Serva de Naboo.</strong>"""
-        "Gavyn Sykes":
-           display_name: """Gavyn Sykes"""
-           text: """Quando você defender ou realizar um ataque, se a velocidade da sua manobra revelada for maior do que a da nave inimiga, você pode rerolar seus resultados em branco."""
-
-       #V-19
-        "Gold Squadron Trooper":
-           display_name: """Soldado do Esquadrão Ouro"""
-           text: """<i class = flavor_text>O caça estelar V-19 Torrent foi projetado como um escolta leve para os ágeis interceptadores Delta-7 pilotados pelos Cavaleiros Jedi e possui um perfil de voo único para refletir essa função.</i>"""
-        "Blue Squadron Protector":
-           display_name: """Protetor do Esquadrão Azul"""
-           text: """<i class = flavor_text>Os pilotos clones de elite do Esquadrão Azul são treinados para pilotar seus V-19 em conjunto com Jedi e frequentemente apoiar comandantes famosos como Anakin Skywalker e Ahsoka Tano.</i>"""
-        '"Tucker"':
-           display_name: """“Tucker”"""
-           text: """Após uma nave amiga em alcance 1-2 realizar um ataque contra uma nave inimiga em seu %FRONTARC%, você pode realizar uma ação %FOCUS%."""
+           text: """Quando uma nave inimiga em seu %FRONTARC% defender ou realizar um ataque, a nave inimiga pode modificar apenas 1 resultado %FOCUS% (outros resultados ainda podem ser modificados). """
+        "Palob Godalhi":
+           display_name: """Palob Godalhi"""
+           text: """No início da Fase de Engajamento, você pode escolher 1 nave inimiga em seu arco de tiro em alcance 0-2. Se o fizer, transfira 1 ficha de foco ou desvio da nave escolhida para você."""
+        "Partisan Renegade":
+           display_name: """Partidário Renegado """
+           text: """<i class = flavor_text>Os partidários de Saw Gerrera foram estabelecidos para opor forças Separatistas em Onderon durante as Guerras Clônicas, e continuaram a guerrear contra a tirania galáctica quando o Império assumiu o poder.</i>"""
+        "Patrol Leader":
+           display_name: """Líder de Patrulha"""
+           text: """<i class = flavor_text>Receber o comando de uma VT-49 Decimator é visto como uma promoção considerável para um oficial comum da Marinha Imperial.</i>"""
+        "Petty Officer Thanisson":
+           display_name: """Suboficial Thanisson"""
+           text: """Durante a Fase de Ativação ou de Engajamento, após uma nave em seu %FRONTARC% em alcance 0-2 receber 1 ficha de estresse, você pode gastar 1 %CHARGE%. Se o fizer, a nave que recebeu a ficha de estresse recebe 1 ficha de tração."""
+        "Phoenix Squadron Pilot":
+           display_name: """Piloto do Esquadrão Fênix"""
+           text: """<i class = flavor_text>Liderados pelo Comandante Jun Sato, os bravos porém inexperientes pilotos do Esquadrão Fênix enfrentam situações impressionantes em suas batalhas contra o Império Galático.</i>"""
+        "Planetary Sentinel":
+           display_name: """Sentinela Planetário"""
+           text: """<i class = flavor_text>Para proteger suas várias instalações militares, o Império precisa de uma força de defesa rápida e vigilante.</i>"""
+        "Plo Koon":
+           display_name: """Plo Koon"""
+           text: """No início da Fase de Engajamento, você pode gastar 1 %FORCE% e escolher outra nave amiga em alcance 0-2. Se o fizer, você pode transferir 1 ficha verde para a nave escolhida ou transferir 1 ficha laranja da nave escolhida para você."""
+        "Plo Koon (Delta-7b)":
+           display_name: """Plo Koon"""
+           text: """No início da Fase de Engajamento, você pode gastar 1 %FORCE% e escolher outra nave amiga em alcance 0-2. Se o fizer, você pode transferir 1 ficha verde para a nave escolhida ou transferir 1 ficha laranja da nave escolhida para você."""
+        "Poe Dameron":
+           display_name: """Poe Dameron"""
+           text: """Após você realizar uma ação, você pode gastar 1 %CHARGE% para realizar uma ação branca, tratando-a como vermelha."""
+        "Prince Xizor":
+           display_name: """Príncipe Xizor"""
+           text: """Quando você defender, após a etapa Neutralizar Resultados, outra nave amiga em alcance 0-1 e no arco de ataque pode sofrer 1 dano %HIT% ou %CRIT%. Se ela o fizer, cancele 1 resultado correspondente."""
+        "Quinn Jast":
+           display_name: """Quinn Jast"""
+           text: """No início da Fase de Engajamento, você pode receber 1 ficha de desarmamento para recuperar 1 %CHARGE% de uma de suas melhorias equipadas. """
+        "Rear Admiral Chiraneau":
+           display_name: """Almirante deRetaguarda Chiraneau"""
+           text: """Quando você realizar um ataque, se você estiver reforçado e o defensor estiver no %FULLFRONTARC% ou %FULLREARARC% correspondente à sua ficha de reforço, você pode mudar 1 dos seus resultados %FOCUS% para um resultado %CRIT%."""
+        "Rebel Scout":
+           display_name: """Batedor Rebelde"""
+           text: """<i class = flavor_text>Projetadas pela Corellian Engineering Corporation para se parecerem com pássaros em voo, as naves da série “hawk” são naves de transporte exemplares. Rápidas e robustas, a HWK-290 é comumente empregada por agentes Rebeldes como base de operações móvel.</i>"""
+        "Red Squadron Expert":
+           display_name: """Perito do Esquadrão Vermelho"""
+           text: """<i class = flavor_text>Apesar da maior parte do Corpo de Caças Estelares da Resistência ser composta de jovens voluntários da Nova República, seus pelotões são reforçados por veteranos da Guerra Civil Galáctica determinados a concluir a tarefa que começaram décadas atrás.</i>"""
+        "Red Squadron Veteran":
+           display_name: """Veterano do Esq. Vermelho"""
+           text: """<i class = flavor_text>Criado para ser um esquadrão de caças estelares de elite, o Esquadrão Vermelho inclui alguns dos melhores pilotos da Aliança Rebelde.</i>"""
+        "Resistance Sympathizer":
+           display_name: """Simpatizante da Resistência"""
+           text: """<i class = flavor_text>Após testemunharem o Cataclisma de Hosnian, alguns espaçadores ajudaram voluntariamente a Resistência utilizando quaisquer naves que tinham.</i>"""
+        "Rexler Brath":
+           display_name: """Rexler Brath"""
+           text: """Após você realizar um ataque que acerte, se você estiver desviando, exponha 1 das cartas de dano do defensor."""
+        "Rey":
+           display_name: """Rey"""
+           text: """Quando você defender ou realizar um ataque, se a nave inimiga estiver em seu %FRONTARC%, você pode gastar 1 %FORCE% para mudar 1 de seus resultados em branco para um resultado %EVADE% ou %HIT%."""
+        "Rho Squadron Pilot":
+           display_name: """Piloto do Esquadrão Rô"""
+           text: """<i class = flavor_text>Os pilotos de elite do Esquadrão Rô incitavam o terror contra a Rebelião, usando o efeito devastador tanto da configuração de assalto Xg-1 quanto da carga de arsenal Os-1 da star wing classe Alfa.</i>"""
+        "Roark Garnet":
+           display_name: """Roark Garnet"""
+           text: """No início da Fase de Engajamento, você pode escolher 1 nave em seu arco de tiro. Se o fizer, a nave escolhida engaja no valor de iniciativa 7, ao invés do valor de iniciativa normal dela."""
+        "Rogue Squadron Escort":
+           display_name: """Escolta do Esq. Rogue"""
+           text: """<i class = flavor_text>Os pilotos de elite do Esquadrão Rogue estão entre os melhores da Rebelião.</i> """
+        "Rose Tico":
+           display_name: """Rose Tico"""
+           text: """Quando você defender ou realizar um ataque, você pode rerrolar até 1 dos seus resultados para cada outra nave amiga no arco de ataque."""
+        "Saber Squadron Ace":
+           display_name: """Ás do Esq. Sabre"""
+           text: """<i class = flavor_text>Liderados pelo Barão Soontir Fel, os pilotos do Esquadrão Sabre estão entre os melhores pilotos do Império. Suas TIE interceptors são marcadas com listras vermelhas para identificar pilotos com pelo menos dez abates confirmados. </i>"""
+        "Sabine Wren":
+           display_name: """Sabine Wren"""
+           text: """Antes de você ativar, você pode realizar 1 ação %BARRELROLL% ou %BOOST%."""
+        "Sabine Wren (TIE Fighter)":
+           display_name: """Sabine Wren"""
+           text: """Antes de você ativar, você pode realizar 1 ação %BARRELROLL% ou %BOOST%."""
+        "Sabine Wren (Scum)":
+           display_name: """Sabine Wren (Scum)"""
+           text: """Quando você defender, se o atacante estiver em seu %SINGLETURRETARC% em alcance 0-2, você pode adicionar 1 resultado %FOCUS% ao resultado de seus dados."""
+        "Saesee Tiin":
+           display_name: """Saesee Tiin"""
+           text: """Após uma nave amiga em alcance 0-2 revelar o disco dela, você pode gastar 1 %FORCE%. Se o fizer, coloque o disco dela em outra manobra de mesma velocidade e dificuldade."""
+        "Saesee Tiin (Delta-7b)":
+           display_name: """Saesee Tiin"""
+           text: """Após uma nave amiga em alcance 0-2 revelar o disco dela, você pode gastar 1 %FORCE%. Se o fizer, coloque o disco dela em outra manobra de mesma velocidade e dificuldade."""
+        "Sarco Plank":
+           display_name: """Sarco Plank"""
+           text: """Quando você defender, você pode tratar seu valor de agilidade como se fosse igual à velocidade da manobra que você executou nesta rodada."""
+        "Saw Gerrera":
+           display_name: """Saw Gerrera"""
+           text: """Quando uma nave amiga danificada em alcance 0-3 realizar um ataque, ela pode rerrolar 1 dado de ataque."""
+        "Scarif Base Pilot":
+           display_name: """Piloto da Base de Scarif"""
+           text: """<i class = flavor_text>A TIE reaper foi desenvolvida para transportar tropas de elite até focos de conflito no campo de batalha, e deslocou notavelmente os temidos death troopers do Diretor Krennic durante a Batalha de Scarif.</i>"""
+        "Scimitar Squadron Pilot":
+           display_name: """Piloto do Esq. Cimitarra"""
+           text: """<i class = flavor_text>A TIE/sa é excepcionalmente ágil para um bombardeiro, permitindo que ela localize seu alvo enquanto evita danos colaterais excessivos da área ao seu redor.</i> """
+        "Separatist Bomber":
+           display_name: """Bombardeiro Separatista"""
+           text: """<i class = flavor_text>Os exércitos droides dos Separatistas são insensíveis ao sofrimento dos civis e não se esforçam para limitar os danos colaterais.</i>"""
+        "Separatist Drone":
+           display_name: """Drone Separatista"""
+           text: """<i class = flavor_text>Com a escalada das Guerras Clônicas, a Aliança Separatista continua a desenvolver a tecnologia de caças estelares droides, assim como os droides táticos que os comandam.</i>"""
+        "Serissu":
+           display_name: """Serissu"""
+           text: """Quando uma nave amiga em alcance 0-1 defender, ela pode rerrolar 1 dos dados dela."""
+        "Seventh Sister":
+           display_name: """Sétima Irmã"""
+           text: """Quando você realizar um ataque primário, antes da etapa Neutralizar Resultados, você pode gastar 2 %FORCE% para cancelar 1 resultado %EVADE%."""
+        "Seyn Marana":
+           display_name: """Seyn Marana"""
+           text: """Quando você realizar um ataque, você pode gastar 1  resultado %CRIT%. Se o fizer, cause 1 carta virada para baixo no defensor, então cancele o restante de seus resultados."""
+        "Shadowport Hunter":
+           display_name: """Caçador de Shadowport"""
+           text: """<i class = flavor_text>As organizações criminosas potencializam as habilidades mortais de seus leais contratados com as melhores tecnologias disponíveis, como a veloz e formidável nave de perseguição classe Lancer.</i>"""
+        "Shara Bey":
+           display_name: """Shara Bey"""
+           text: """Quando você defender ou realizar um ataque primário, você pode gastar 1 mira que você possua na nave inimiga para adicionar 1 resultado %FOCUS% ao resultado de seus dados."""
+        "Sienar Specialist":
+           display_name: """Especialista Sienar"""
+           text: """<i class = flavor_text>Durante o desenvolvimento da TIE aggressor, a Sienar Fleet Systems valorizou mais a sua performance e versatilidade do que o custo-benefício.</i>"""
+        "Sienar-Jaemus Engineer":
+           display_name: """Engenheiro da Sienar-Jaemus"""
+           text: """<i class = flavor_text>Projetada pela Sienar-Jaemus Fleet Systems como sucessora da renomada TIE Defender, a TIE/vn Silencer incorpora tecnologias de ponta desenvolvidas em laboratórios de pesquisa escondidos nas Regiões Desconhecidas.</i>"""
+        "Sigma Squadron Ace":
+           display_name: """Ás do Esquadrão Sigma"""
+           text: """<i class = flavor_text>Dispondo de um hiperpropulsor e escudos, a TIE phantom também é equipada com cinco canhões laser, garantindo um poder de fogo considerável para um caça Imperial.</i>"""
+        "Skakoan Ace":
+           display_name: """Ás dos Skakoan"""
+           text: """<i class = flavor_text>Com seus poderosos motores, devastadores canhões de laser triplo e alta personalização, o Belbullab-22 é a nave escolhida por vários pilotos de elite da Aliança Separatista, incluindo o infame General Grievous.</i>"""
+        "Skull Squadron Pilot":
+           display_name: """Piloto do Esq. Caveira"""
+           text: """<i class = flavor_text>Os ases do Esquadrão Caveira preferem aproximações agressivas, utilizando a tecnologia de asas pivotantes para alcançar uma agilidade imbatível durante perseguições.</i> """
+        "Sol Sixxa":
+           display_name: """Sol Sixxa"""
+           text: """Se você for soltar um dispositivo usando um gabarito [1&nbsp;%STRAIGHT%], você pode soltá-lo usando, ao invés desse, qualquer outro gabarito de velocidade 1."""
+        "Soontir Fel":
+           display_name: """Soontir Fel"""
+           text: """No início da Fase de Engajamento, se houver uma nave inimiga em seu %BULLSEYEARC%, receba 1 ficha de foco."""
+        "Spice Runner":
+           display_name: """Contrabandista de Especiarias"""
+           text: """<i class = flavor_text>Apesar de ter espaço de carga limitada se comparada com outros cargueiros leves, a pequena e ágil HWK-290 é uma das escolhas de contrabandistas especializados em transportar bens discretamente.</i>"""
+        "Squad Seven Veteran":
+           display_name: """Veterano do Esquadrão Sete"""
+           text: """<i class = flavor_text>A Esquadrilha Clone Sete serviu como parte da Frota Open Circle sob o comando de Generais Jedi lendários como Plo Koon e Obi-Wan Kenobi e conquistou a glória em batalhas como a de Coruscant e Cato Neimoidia.</i>"""
+        "Starkiller Base Pilot":
+           display_name: """Starkiller Base Pilot"""
+           text: """<i class = flavor_text>A nave de comando classe Ípsilon serve de base de operações para muitos oficiais e agentes sênior da Primeira Ordem. Seus poderosos sensores e equipamentos de comunicação os permitem orquestrar a propagação do terror pela galáxia.</i>"""
+        "Storm Squadron Ace":
+           display_name: """Ás do Esquadrão Tormenta"""
+           text: """<i class = flavor_text>A TIE Advanced x1 foi produzida em quantidade limitada, porém os engenheiros da Sienar incorporaram muitas de suas melhores qualidades em seu próximo modelo de TIE: a TIE Interceptor.</i>"""
+        "Sunny Bounder":
+           display_name: """Sunny Bounder"""
+           text: """Quando você defender ou realizar um ataque, após você rolar ou rerrolar seus dados, se você obteve o mesmo resultado em todos os dados, você pode adicionar 1 resultado correspondente."""
+        "TN-3465":
+           display_name: """TN-3465"""
+           text: """Quando outra nave amiga realizar um ataque, se você estiver em alcance 0-1 do defensor, você pode sofrer 1 dano %CRIT% para mudar 1 dos resultados do atacante para um resultado %CRIT%."""
+        "Tala Squadron Pilot":
+           display_name: """Piloto do Esq. Tala"""
+           text: """<i class = flavor_text>A série AF4 é o modelo mais recente de uma longa lista de projetos Headhunter. Barata e relativamente durável, ela é uma das naves favoritas entre grupos independentes como a Rebelião.</i>"""
+        "Tallissan Lintra":
+           display_name: """Tallissan Lintra"""
+           text: """Quando uma nave inimiga em seu %SINGLETURRETARC% realizar um ataque, você pode gastar 1 %CHARGE%. Se o fizer, o defensor rola 1 dado adicional."""
+        "Talonbane Cobra":
+           display_name: """Talonbane Cobra"""
+           text: """Quando você defender em alcance de ataque 3 ou realizar um ataque em alcance de ataque 1, role 1 dado adicional."""
+        "Tansarii Point Veteran":
+           display_name: """Veterano de Ponto Tansarii"""
+           text: """<i class = flavor_text>A derrota do ás do Sol Negro Talonbane Cobra para contrabandistas Car'das virou o jogo durante a Batalha da Estação Ponto Tansarii. Os sobreviventes do combate são respeitados por todo o setor.</i> """
+        "Techno Union Bomber":
+           display_name: """Bombardeiro da União Tecnológica"""
+           text: """<i class = flavor_text>A Baktoid Armor Workshop desenvolveu a Hyena como uma nave de combate compatível com as táticas de enxame dos Vultures da Federação do Comércio.</i>"""
+        "Tel Trevura":
+           display_name: """Tel Trevura"""
+           text: """Se você seria destruído, você pode gastar 1 %CHARGE%. Se o fizer, descarte todas as suas cartas de dano, sofra 5 danos %HIT%, e coloque-se na reserva. No início da próxima Fase de Planejamento, posicione-se dentro do alcance 1 da sua borda de jogador."""
+        "Temmin Wexley":
+           display_name: """Temmin Wexley"""
+           text: """Após você executar completamente uma manobra de velocidade 2-4, você pode realizar uma ação %BOOST%."""
+        "Tempest Squadron Pilot":
+           display_name: """Piloto do Esquadrão Tempestade"""
+           text: """<i class = flavor_text>A TIE Advanced aprimorou o projeto do popular TIE/In ao adicionar escudo, um sistema de armas mais avançado, painéis solares curvos e um hiperpropulsor.</i>"""
+        "Ten Numb":
+           display_name: """Ten Numb"""
+           text: """Quando você defender ou realizar um ataque, você pode gastar 1 ficha de estresse para mudar todos os seus resultados %FOCUS% para resultados %EVADE% ou %HIT%."""
+        "Thane Kyrell":
+           display_name: """Thane Kyrell"""
+           text: """Quando você realizar um ataque, você pode gastar 1 resultado %FOCUS%, %HIT% ou %CRIT% para olhar as cartas de dano viradas para baixo do defensor, escolher 1 e expô-la."""
+        "Tomax Bren":
+           display_name: """Tomax Bren"""
+           text: """Após você realizar uma ação %RELOAD%, você pode recuperar 1 %CHARGE% em uma das suas cartas melhorias %TALENT% equipadas. """
+        "Torani Kulda":
+           display_name: """Torani Kulda"""
+           text: """Após você realizar um ataque, cada nave inimiga em seu %BULLSEYEARC% sofre 1 dano %HIT% a menos que ela remova 1 ficha verde."""
+        "Torkil Mux":
+           display_name: """Torkil Mux"""
+           text: """No início da Fase de Engajamento, você pode escolher 1 nave em seu arco de tiro. Se o fizer, a nave escolhida engaja na iniciativa 0 ao invés do seu valor normal de iniciativa nessa rodada."""
+        "Trade Federation Drone":
+           display_name: """Drone da Federação do Comércio"""
+           text: """<i class = flavor_text>A Federação do Comércio usou incontáveis droides Vulture na batalha de Naboo e continua a usar esses caças econômicos nas Guerras Clônicas.</i>"""
+        "Trandoshan Slaver":
+           display_name: """Escravista Trandoshano"""
+           text: """<i class = flavor_text>O design espaçoso de convés triplo da YV-666 faz dela uma nave muito popular entre os caçadores de recompensa e escravistas, que normalmente reformam um convés inteiro para o transporte de prisioneiros.</i>"""
+        "Turr Phennir":
+           display_name: """Turr Phennir"""
+           text: """Após você realizar um ataque, você pode realizar uma ação %BARRELROLL% ou %BOOST%, mesmo estressado."""
+        "Unkar Plutt":
+           display_name: """Unkar Plutt"""
+           text: """No início da Fase de Engajamento, se houver uma ou mais outras naves em alcance 0, você e cada outra nave em alcance 0 recebem 1 ficha de tração."""
+        "Valen Rudor":
+           display_name: """Valen Rudor"""
+           text: """Após uma nave amiga em alcance 0-1 defender (após o dano ser resolvido, se houver), você pode realizar uma ação."""
+        "Ved Foslo":
+           display_name: """Ved Foslo"""
+           text: """Quando você executar uma manobra, você pode executar uma manobra de mesma direção e dificuldade com velocidade 1 maior ou menor."""
+        "Vennie":
+           display_name: """Vennie"""
+           text: """Quando você defender, se o atacante estiver no %SINGLETURRETARC% de uma nave amiga, você pode adicionar 1 resultado %FOCUS% à sua rolagem."""
+        "Viktor Hel":
+           display_name: """Viktor Hel"""
+           text: """Depois que você defender, se você não rolou exatamente 2 dados de defesa, o atacante recebe 1 ficha de estresse."""
+        "Warden Squadron Pilot":
+           display_name: """Piloto do Esq. Protetor"""
+           text: """<i class = flavor_text>A K-wing fabricada pela Koensayr Manufacturing dispunha de um avançado Motor de Aceleração Sub-Luz (SLAM) e incríveis 18 pontos de encaixe, garantindo velocidade e poder de fogo sem igual.</i>"""
+        "Wat Tambor":
+           display_name: """Wat Tambor"""
+           text: """Quando você realizar um ataque primário, você pode rerrolar 1 dado de ataque para cada nave amiga calculando em alcance 1 do defensor."""
+        "Wedge Antilles":
+           display_name: """Wedge Antilles"""
+           text: """Quando você realizar um ataque, o defensor rola 1 dado de defesa a menos."""
+        "Wild Space Fringer":
+           display_name: """Marginal do Espaço Selvagem"""
+           text: """<i class = flavor_text>Apesar dos cargueiros leves YT-2400 de fábrica possuírem um grande espaço de carga, esse espaço geralmente é ocupado por sistemas bélicos modificados e motores turbinados.</i>"""
+        "Wullffwarro":
+           display_name: """Wullffwarro"""
+           text: """Quando você realizar um ataque primário, se você estiver danificado, você pode rolar 1 dado de ataque adicional."""
+        "Zari Bangel":
+           display_name: """Zari Bangel"""
+           text: """Você não pula a etapa Realizar Ação após você executar parcialmente uma manobra."""
+        "Zealous Recruit":
+           display_name: """Recruta Diligente"""
+           text: """<i class = flavor_text>Os pilotos do caça Mandaloriano Fang devem dominar a manobra Afronta de Concordia, aproveitando a silhueta esguia de suas naves para executar ataques frontais mortais.</i> """
+        "Zertik Strom":
+           display_name: """Zertik Strom"""
+           text: """Durante a Fase Final, você pode gastar uma mira que você adquiriu em uma nave inimiga para expor 1 das cartas de dano dela."""
+        "Zeta Squadron Pilot":
+           display_name: """Zeta Squadron Pilot"""
+           text: """<i class = flavor_text>Livres da morosa burocracia galáctica, as tecnologias originalmente desenvolvidas para o programa TIE Advanced do Império agora são empregadas em massa nos caças estelares da Primeira Ordem. Como resultado, os pilotos das TIE/fo desfrutam de maiores taxas de sobrevivência que seus antecessores do Império Galático.</i>"""
+        "Zeta Squadron Survivor":
+           display_name: """Sobrevivente do Esquadrão Zeta"""
+           text: """<i class = flavor_text>Humilhados por seu fracasso, o restante dos pilotos da Base Starkiller estão ávidos para mostrar seu valor perseguindo a Resistência.</i>"""
+        "Zuckuss":
+           display_name: """Zuckuss"""
+           text: """Quando você realizar um ataque primário, você pode rolar 1 dado de ataque adicional. Se o fizer, o defensor rola 1 dado de defesa adicional."""
+        '"Avenger"':
+           display_name: """“Avenger”"""
+           text: """Após outra nave amiga ser destruída, você pode realizar uma ação, mesmo se estiver estressado."""
         '"Axe"':
            display_name: """“Axe”"""
            text: """Após você defender ou realizar um ataque, você pode escolher uma nave amiga em alcance 1-2 em seu %LEFTARC% ou %RIGHTARC%. Se o fizer, transfira uma ficha verde para a nave escolhida."""
-        '"Swoop"':
-           display_name: """“Swoop”"""
-           text: """Após uma nave amiga pequena ou média executar completamente uma manobra de velocidade 3-4, se ela estiver em alcance 0-1, ela pode realizar uma ação %BOOST% vermelha."""
+        '"Backdraft"':
+           display_name: """“Backdraft”"""
+           text: """Quando você realizar um ataque primário %SINGLETURRETARC%, se o defensor estiver em seu %REARARC%, role 1 dado adicional."""
+        '"Blackout"':
+           display_name: """“Blackout”"""
+           text: """Quando você realizar um ataque, se o ataque estiver obstruído por um obstáculo, o defensor rola 2 dados de defesa a menos."""
+        '"Chopper"':
+           display_name: """Chopper"""
+           text: """No início da Fase de Engajamento, cada nave inimiga em alcance 0 recebe 2 fichas de interferência. """
+        '"Countdown"':
+           display_name: """“Countdown”"""
+           text: """Quando você defender, após a etapa Neutralizar Resultados, se você não estiver estressado, você pode sofrer 1 %HIT% e receber 1 ficha de estresse. Se o fizer, cancele todos os resultados dos dados."""
+        '"Deathfire"':
+           display_name: """“Deathfire”"""
+           text: """Após você ser destruído, antes de você ser removido, você pode realizar um ataque e soltar ou lançar um dispositivo."""
+        '"Deathrain"':
+           display_name: """“Deathrain”"""
+           text: """Após soltar ou lançar um dispositivo, você pode realizar uma ação."""
+        '"Double Edge"':
+           display_name: """“Double Edge”"""
+           text: """Após realizar um ataque %TURRET% ou %MISSILE% que errou, você pode realizar um ataque bônus usando uma arma diferente."""
+        '"Duchess"':
+           display_name: """“Duchess”"""
+           text: """Você pode escolher não usar seus <strong>Ailerons Adaptáveis</strong>.%LINEBREAK%Você pode usar seus <strong>Ailerons Adaptáveis</strong>, mesmo estressado."""
+        '"Dutch" Vander':
+           display_name: """“Dutch” Vander"""
+           text: """Após você realizar a ação %LOCK%, você pode escolher 1 nave amiga em alcance 1-3. A nave escolhida pode adquirir uma mira no objeto que você travou a mira, ignorando as restrições de alcance."""
+        '"Echo"':
+           display_name: """“Echo”"""
+           text: """Quando descamuflar, você deve usar o gabarito [2 %BANKLEFT%] ou [2 %BANKRIGHT%] ao invés do gabarito [2 %STRAIGHT%]."""
+        '"Howlrunner"':
+           display_name: """“Howlrunner”"""
+           text: """Quando uma nave amiga em alcance 0-1 realizar um ataque primário, ela pode rerrolar 1 dado de ataque."""
+        '"Jag"':
+           display_name: """“Jag”"""
+           text: """Após uma nave amiga em alcance 1-2 em seu %LEFTARC% ou %RIGHTARC% defender, você pode adquirir uma mira no atacante."""
         '"Kickback"':
            display_name: """“Kickback”"""
            text: """Após você realizar uma ação %BARRELROLL%, você pode realizar uma ação %LOCK% vermelha."""
+        '"Leebo"':
+           display_name: """“Leebo”"""
+           text: """Após você defender ou realizar um ataque, se você gastou uma ficha de cálculo, receba 1 ficha de cálculo."""
+        '"Longshot"':
+           display_name: """“Longshot”"""
+           text: """Quando você realizar um ataque primário em alcance de ataque 3, role 1 dado de ataque adicional."""
+        '"Mauler" Mithel':
+           display_name: """“Mauler” Mithel"""
+           text: """Quando você realizar um ataque em alcance de ataque 1, role 1 dado de ataque adicional."""
+        '"Midnight"':
+           display_name: """“Midnight”"""
+           text: """Quando você defender ou realizar um ataque, se você possuir uma mira na nave inimiga, os dados dela não podem ser modificados."""
+        '"Muse"':
+           display_name: """“Muse”"""
+           text: """No início da Fase de Engajamento, você pode escolher uma nave amiga em alcance 0-1. Se o fizer, a nave escolhida remove 1 ficha de estresse."""
+        '"Night Beast"':
+           display_name: """“Night Beast”"""
+           text: """Após você executar completamente uma manobra azul, você pode realizar uma ação %FOCUS%."""
+        '"Null"':
+           display_name: """“Null”"""
+           text: """Enquanto não estiver danificado, trate sua iniciativa como se ela fosse 7."""
         '"Odd Ball"':
            display_name: """“Odd Ball”"""
            text: """Após você executar completamente uma manobra vermelha ou realizar uma ação vermelha, se houver uma nave inimiga em seu %BULLSEYEARC%, você pode adquirir uma mira nessa nave."""
-        '"Slammer"':
-           display_name: """“Slammer”"""
-           text: """Depois que você realizar uma manobra, você pode gastar 2 %CHARGE% para realizar uma ação %SLAM%, mesmo se estiver estressado."""
-        '"Axe" (SoC)':
-           display_name: """“Axe” (SoC)"""
-           text: """Depois que você realizar um ataque, você pode escolher outra nave amiga com a habilidade <strong>Nascido para Isso</strong> em alcance 0-2 em seu %LEFTARC% ou %RIGHTARC%. A nave escolhida trava uma mira no defensor."""
-        '"Kickback" (SoC)':
-           display_name: """“Kickback” (SoC)"""
-           text: """Depois que você realizar uma ação %BARRELROLL%, você pode realizar uma ação %LOCK% vermelha. Se você o fizer, antes de realizar a ação %LOCK%, você pode receber 1 ficha de desgaste para tratar a ação como branca."""
-
-       #V-Wing
-        "Loyalist Volunteer":
-           display_name: """Voluntário Leal"""
-           text: """<i class = flavor_text>A V-wing Classe Nimbus Alpha-3 da Kuat Systems Engineering é a nave escolhida por pilotos de caças clones e não clones. As técnicas pioneiras para produção de seus motores de íons precisos seria crucial no desenvolvimento da série TIE pela Sienar Fleet Systems.</i>"""
-        "Shadow Squadron Escort":
-           display_name: """Escolta do Esquadrão Sombra"""
-           text: """<i class = flavor_text>Nos meses finais das Guerras Clônicas, as formações de clones de elite realizam missões críticas para o futuro da República, como a proteção do transporte pessoal do Supremo Chanceler Palpatine.</i>"""
-        "Wilhuff Tarkin":
-           display_name: """Wilhuff Tarkin"""
-           text: """Durante a Fase de Sistema, você pode escolher um objeto no qual você possui uma mira em alcance 1-3. Outra nave amiga em alcance 1-3 pode adquirir uma mira no objeto escolhido."""
-        '"Klick"':
-           display_name: """“Klick”"""
-           text: """Quando uma nave na qual você possui uma mira em alcance 1-3 defender ou realizar um ataque, você pode gastar 1 %CHARGE% para previnir que o bônus de alcance seja aplicado."""
-        '"Contrail"':
-           text: """Quando você defender ou realizar um ataque, se a direção da sua manobra revelada for a mesma da nave inimiga, você pode mudar 1 dos resultados %FOCUS% da nave inimiga para um resultado em branco."""
-        '"Odd Ball" (V-wing)':
+        '"Odd Ball" (ARC-170)':
            display_name: """“Odd Ball”"""
            text: """Após você executar completamente uma manobra vermelha ou realizar uma ação vermelha, se houver uma nave inimiga em seu %BULLSEYEARC%, você pode adquirir uma mira nessa nave."""
-        '"Contrail" (SoC)':
-           display_name: """“Contrail” (SoC)"""
-           text: """Quando você defender ou realizar um ataque se a direção da sua manobra revelada for igual a da nave inimiga, você pode mudar um dos resultados %FOCUS% da nave inimiga para um resultado em branco."""
-        '"Klick" (SoC)':
-           display_name: """“Klick” (SoC)"""
-           text: """Quando uma nave que você tenha mira em alcance 1-3 defender ou realizar um ataque, você pode gastar 1 %CHARGE% para evitar que bônus de alcance sejam aplicados."""
-
-       #Y-wing Republic
+        '"Pure Sabacc"':
+           display_name: """“Pure Sabacc”"""
+           text: """Quando você realizar um ataque, se você possuir 1 ou menos cartas de dano, você pode rolar 1 dado de ataque adicional."""
+        '"Quickdraw"':
+           display_name: """“Quickdraw”"""
+           text: """Após você perder um escudo, você pode gastar 1 %CHARGE%. Se o fizer, você pode realizar um ataque primário bônus."""
+        '"Recoil"':
+           display_name: """“Recoil”"""
+           text: """Quando você estiver estressado, você pode tratar as naves inimigas em seu %FRONTARC% em alcance 0-1 como se estivessem em seu %BULLSEYEARC%."""
+        '"Redline"':
+           display_name: """“Redline”"""
+           text: """Você pode ter até 2 miras travadas.%LINEBREAK%Após você realizar uma ação, você pode adquirir uma mira."""
+        '"Scorch"':
+           display_name: """“Scorch”"""
+           text: """Quando você realizar um ataque primário, se você não estiver estressado, você pode receber 1 ficha de estresse para rolar 1 dado de ataque adicional."""
+        '"Scourge" Skutu':
+           display_name: """“Scourge” Skutu"""
+           text: """Quando você realizar um ataque contra um defensor em seu %BULLSEYEARC%, role 1 dado de ataque adicional."""
+        '"Sinker"':
+           display_name: """“Sinker”"""
+           text: """Quando uma nave amiga em alcance 1-2 em seu %LEFTARC% ou %RIGHTARC% realizar um ataque primário, ela pode rerrolar 1 dado de ataque."""
+        '"Static"':
+           display_name: """“Static”"""
+           text: """Quando você realizar um ataque primário, você pode gastar sua mira que está no defensor e uma ficha de foco para mudar todos os seus resultados para resultados %CRIT%."""
+        '"Swoop"':
+           display_name: """“Swoop”"""
+           text: """Após uma nave amiga pequena ou média executar completamente uma manobra de velocidade 3-4, se ela estiver em alcance 0-1, ela pode realizar uma ação %BOOST% vermelha."""
+        '"Tucker"':
+           display_name: """“Tucker”"""
+           text: """Após uma nave amiga em alcance 1-2 realizar um ataque contra uma nave inimiga em seu %FRONTARC%, você pode realizar uma ação %FOCUS%."""
+        '"Vizier"':
+           display_name: """“Vizier”"""
+           text: """Após você se mover usando sua habilidade de nave <b>Ailerons Controlados</b>, você pode realizar uma ação %COORDINATE%. Se o fizer, pule sua etapa Realizar Ação."""
+        '"Wampa"':
+           display_name: """“Wampa”"""
+           text: """Quando você realizar um ataque, você pode gastar 1 %CHARGE% para rolar 1 dado de ataque adicional.%LINEBREAK%Após defender, perca 1 %CHARGE%."""
+        '"Whisper"':
+           display_name: """“Whisper”"""
+           text: """Após você realizar um ataque que acertou, receba 1 ficha de desvio."""
+        '"Wolffe"':
+           display_name: """“Wolffe”"""
+           text: """Quando você realizar um ataque primário %FRONTARC%, você pode gastar 1 %CHARGE% para rerrolar 1 dado de ataque.%LINEBREAK%Quando você realizar um ataque primário %REARARC%, você pode recuperar 1 %CHARGE% para rolar 1 dado de ataque adicional. """
+        '"Zeb" Orrelios':
+           display_name: """“Zeb” Orrelios"""
+           text: """Quando você defender, os resultados %CRIT% são neutralizados antes dos resultados %HIT%."""
+        '"Zeb" Orrelios (Sheathipede)':
+           display_name: """“Zeb” Orrelios"""
+           text: """Quando você defender, os resultados %CRIT% são neutralizados antes dos resultados %HIT%."""
+        '"Zeb" Orrelios (TIE Fighter)':
+           display_name: """“Zeb” Orrelios"""
+           text: """Quando você defender, os resultados %CRIT% são neutralizados antes dos resultados %HIT%."""
+        "Bombardment Drone":
+           display_name: """Drone de Bombardeio"""
+           text: """Se você for soltar um dispositivo, você pode, ao invés disso, lançá-lo, usando o mesmo gabarito."""
+        "Haor Chall Prototype":
+           display_name: """Haor Chall Prototype"""
+           text: """Após uma nave inimiga em seu %BULLSEYEARC% em alcance 0-2 declarar outra nave amiga como defensora, você pode realizar uma ação %CALCULATE% ou %LOCK%."""
+        "Precise Hunter":
+           display_name: """Caçador Preciso"""
+           text: """Quando você realizar um ataque, se o defensor estiver em seu %BULLSEYEARC%, você pode rerrolar 1 resultado em branco."""
+        "Rose Tico":
+           display_name: """Rose Tico"""
+           text: """Quando você defender ou realizar um ataque, você pode rerrolar até 1 dos seus resultados para cada outra nave amiga no arco de ataque."""
+        "Pammich Nerro Goode":
+           display_name: """Pammich Nerro Goode"""
+           text: """Enquanto você tiver 2 ou menos fichas de estresse, você pode executar manobras vermelhas mesmo estressado."""
+        "Padmé Amidala":
+           display_name: """Padmé Amidala"""
+           text: """Quando uma nave inimiga em seu %FRONTARC% defender ou realizar um ataque, a nave inimiga pode modificar apenas 1 resultado %FOCUS% (outros resultados ainda podem ser modificados). """
+        "Anakin Skywalker (N-1 Starfighter)":
+           display_name: """Anakin Skywalker"""
+           text: """Antes de você revelar sua manobra, você pode gastar 1 %FORCE% para realizar uma pirueta (isso não é uma ação). """
+        "Ric Olié":
+           display_name: """Ric Olié"""
+           text: """Quando você defender ou realizar um ataque primário, se a velocidade da sua manobra revelada for maior que a da nave inimiga, role 1 dado adicional. """
+        "Dineé Ellberger":
+           display_name: """Dineé Ellberger"""
+           text: """Quando você defender ou realizar um ataque, se a velocidade da sua manobra revelada for a mesma que a da nave inimiga, os dados da nave inimiga não podem ser modificados. """
+        "Naboo Handmaiden":
+           display_name: """Serva de Naboo"""
+           text: """<strong>Preparação:</strong> Após posicionar as forças, atribua a condição <b>Chamariz</b> para 1 outra nave amiga que não seja <strong>Serva de Naboo.</strong> """
+        "Bravo Flight Officer":
+           display_name: """Oficial do Esquadrão Bravo"""
+           text: """<i class = flavor_text>Os pilotos voluntários da Força Segurança Real de Naboo são dedicados a proteger as pessoas e os ideais de seu mundo natal e confiam em sua Rainha para enviá-los para a batalha apenas quando todas as outras opções falharem.</i>"""
+        "BB-8":
+           display_name: """BB-8"""
+           text: """Durante a Fase de Sistema, você pode realizar uma ação %BARRELROLL% ou %BOOST% vermelha. %LINEBREAK% <i>Errata (desde RR 1.4.2): Alterado o momento do efeito para Fase de Sistema</i>"""
+        "Finn":
+           display_name: """Finn"""
+           text: """Quando você defender ou realizar um ataque, você pode adicionar 1 resultado em branco, ou, ao invés disso, você pode receber 1 ficha de desgaste para adicionar 1 resultado %FOCUS%."""
+        "Cova Nell":
+           display_name: """Cova Nell"""
+           text: """Quando você defender ou realizar um ataque primário, se a sua manobra revelada for vermelha, role 1 dado adicional."""
+        "Nodin Chavdri":
+           display_name: """Nodin Chavdri"""
+           text: """Após você coordenar ou ser coordenado, se você tiver 2 ou menos fichas de estresse, você pode realizar 1 ação de sua barra de ações como uma ação vermelha, mesmo estressado."""
+        "Vi Moradi":
+           display_name: """Vi Moradi"""
+           text: """<strong>Preparação:</strong> Após posicionar as forças, atribua a condição <b>Informação Comprometedora</b> a 1 nave inimiga."""
         "Shadow Squadron Veteran":
            display_name: """Veterano do Esquadrão Sombra"""
            text: """<i class = flavor_text>A V-wing Classe Nimbus Alpha-3 da Kuat Systems Engineering é a nave escolhida por pilotos de caças clones e não clones. As técnicas pioneiras para produção de seus motores de íons precisos seria crucial no desenvolvimento da série TIE pela Sienar Fleet Systems.</i>"""
@@ -2158,11 +1554,498 @@ exportObj.cardLoaders.Português = () ->
         "Anakin Skywalker (Y-Wing)":
            display_name: """Anakin Skywalker"""
            text: """Após você executar completamente uma manobra, se houver uma nave inimiga em seu %FRONTARC% em alcance 0-1 ou em seu %BULLSEYEARC%, você pode gastar 1 %FORCE% para remover 1 ficha de estresse."""
-
-       #Z-95 Clone
-        "7th Sky Corps Pilot":
-           display_name: """Piloto da 7ª Sky Corps."""
-           text: """<i class = flavor_text>O caça estelar Z-95 ganhou respeito pela sua adaptabilidade e resistência, e o modelo da República para soldados clones foi adaptado para atender as habilidades únicas de seus pilotos.</i>"""
+        "Sun Fac":
+           display_name: """Sun Fac"""
+           text: """Quando você realizar um ataque primário, se o defensor estiver tracionado, role 1 dado de ataque adicional."""
+        "Stalgasin Hive Guard":
+           display_name: """Guarda da Colméia de Stalgasin"""
+           text: """<i class = flavor_text>Projetados para a fisiologia única dos pilotos Geonosianos, os caças estelares classe Nantex são capazes de manobras que destruiriam a maioria das naves - e pilotos.</i>"""
+        "Petranaki Arena Ace":
+           display_name: """Ás da Arena Petranaki"""
+           text: """<i class = flavor_text>A Arena Petranaki é uma construção enorme em Geonosis que foi um local chave na primeira batalha das Guerras Clônicas.</i>"""
+        "Berwer Kret":
+           display_name: """Berwer Kret"""
+           text: """Após você realizar um ataque que acerte, cada nave amiga com %CALCULATE% em sua barra de ação e com uma mira no defensor pode realizar uma ação %CALCULATE% vermelha. """
+        "Chertek":
+           display_name: """Chertek"""
+           text: """Quando você realizar um ataque primário, se o defendor estiver tracionado, você pode rerrolar até 2 dados de ataque. """
+        "Gorgol":
+           display_name: """Gorgol"""
+           text: """Durante a Fase de Sistema, você pode receber 1 ficha de desarmamento e escolher uma nave amiga em alcance 1-2. Se o fizer, a nave escolhida recebe 1 ficha de tração, então repara 1 de suas cartas de dano viradas para cima com o atributo Nave. """
+        "Kazuda Xiono":
+           display_name: """Kazuda Xiono"""
+           text: """Quando você defender ou realizar um ataque primário, se a iniciativa da nave inimiga for maior que o número de cartas de dano que você tem, você pode rolar 1 dado adicional. """
+        "Major Vonreg":
+           display_name: """Major Vonreg"""
+           text: """Durante a Fase de Sistema, você pode escolher 1 nave inimiga em seu %BULLSEYEARC%. A nave escolhida recebe 1 ficha de exaustão ou desgaste, à sua escolha. """
+        "First Order Provocateur":
+           display_name: """Provocador da Primeira Ordem"""
+           text: """<i class = flavor_text>A visão do Major Vonreg guiou o aprimoramento de projetos consolidados enquanto planejava essa nave única, precisa e letal da Sienar-Jaemus Fleet Systems.</i>"""
+        '"Ember"':
+           display_name: """“Ember”"""
+           text: """Quando você realizar um ataque, se houver uma nave danificada amiga do defensor em alcance 0-1 do defensor, o defensor não pode gastar fichas de foco ou de cálculo. """
+        '"Holo"':
+           display_name: """“Holo”"""
+           text: """No início da Fase de Engajamento, você <b>deve</b> transferir 1 de suas fichas para outra nave amiga em alcance 0-2. """
+        "Captain Phasma":
+           display_name: """Captã Phasma"""
+           text: """Quando você defender, após a etapa Neutralizar Resultados, outra nave amiga em alcance 0-1 <b>deve</b> sofrer 1 dano %HIT%/%CRIT% para cancelar 1 resultado correspondente. """
+        '"Rush"':
+           display_name: """“Rush”"""
+           text: """Enquanto você estiver danificado, trate sua iniciativa como se fosse 6. """
+        "Zizi Tlo":
+           display_name: """Zizi Tlo"""
+           text: """Após você defender ou realizar um ataque, você pode gastar 1 %CHARGE% para receber 1 ficha de foco ou desvio. """
+        "Ronith Blario":
+           display_name: """Ronith Blario"""
+           text: """Quando você defender ou realizar um ataque, se a nave inimiga está dentro do %SINGLETURRETARC% de outra nave amiga, você pode gastar 1 ficha de foco dessa nave amiga para mudar 1 dos seus resultados %FOCUS% para um resultado %HIT% ou %EVADE%."""
+        "Gina Moonsong":
+           display_name: """Gina Moonsong"""
+           text: """No início da Fase de Engajamento, você <b>deve</b> transferir 1 de suas fichas de estresse para outra nave amiga em alcance 0-2."""
+        "K-2SO":
+           display_name: """K-2SO"""
+           text: """Após receber uma ficha de estresse, receba 1 ficha de cálculo."""
+        "Alexsandr Kallus":
+           display_name: """Alexsandr Kallus"""
+           text: """Quando você defender, se o atacante modificou qualquer dado de ataque, você pode rolar 1 dado adicional de defesa.  <br><i>Errata (since rules reference 1.2.0): Added missing ship ability"""
+        "Leia Organa":
+           display_name: """Leia Organa"""
+           text: """Após uma nave amiga executar completamente uma manobra vermelha, se ela estiver em alcance 0-3, você pode gastar 1 %FORCE%. Se o fizer, a nave amiga recebe 1 ficha de foco ou recupera 1 %FORCE%."""
+        "Paige Tico":
+           display_name: """Paige Tico"""
+           text: """Após você soltar um dispositivo, você pode gastar 1 %CHARGE% para soltar um dispositivo adicional."""
+        "Fifth Brother":
+           display_name: """Quinto Irmão"""
+           text: """Quando você realizar um ataque, após a etapa Neutralizar Resultados, se o ataque acertou, você pode gastar 2 %FORCE% para adicionar 1 resultado %CRIT%."""
+        '"Vagabond"':
+           display_name: """Vagabond"""
+           text: """Após você se mover usando seus <strong>Ailerons Adaptáveis</strong>, se você não estiver estressado, você pode soltar 1 dispositivo. """
+        "Morna Kee":
+           display_name: """Morna Kee"""
+           text: """Durante a Fase Final, você pode gastar 1 %CHARGE% para virar uma das suas fichas de reforço para seu outro arco completo ao invés de removê-la."""
+        "Lieutenant LeHuse":
+           display_name: """Tenente LeHuse"""
+           text: """Quando você realizar um ataque, você pode gastar a mira que outra nave amiga tenha no defensor para rerrolar qualquer número dos seus resultados. """
+        "Logistics Division Pilot":
+           display_name: """Piloto da Divisão de Logística"""
+           text: """<i class = flavor_text>Sem o suporte da Nova República, membros da Resistência frequentemente trabalham dobrado como pilotos de transporte ou mecânicos, colocando suas habilidades e conhecimento técnico em uso na luta contra a Primeira Ordem.</i>"""
+        "Bossk (Z-95 Headhunter)":
+           display_name: """Bossk"""
+           text: """Quando você realizar um ataque primário, após a etapa Neutralizar Resultados, você pode gastar 1 resultado %CRIT% para adicionar 2 resultados %HIT%.%LINEBREAK%<strong>Nave de Persguição:</strong> Após você desacoplar, você pode adquirir uma mira em uma nave que a <strong>Hound’s Tooth</strong> amiga possui mira."""
+        "G4R-GOR V/M":
+           display_name: """G4R-GOR V/M"""
+           text: """Após você defender, cada outra nave em alcance 0 sofre 1 dano %CRIT%. """
+        "Nom Lumb":
+           display_name: """Nom Lumb"""
+           text: """Após você se tornar o defensor, se o atacante não estiver em seu %SINGLETURRETARC%, você deve rotacionar seu indicador %SINGLETURRETARC% para o arco convencional que o atacante está."""
+        "Jarek Yeager":
+           display_name: """Jarek Yeager"""
+           text: """Enquanto você tiver 2 fichas de estresse ou menos , se você estiver danificado, você pode executar manobras básicas vermelhas mesmo estressado. Se você estiver criticamente danificado, você pode executar manobras avançadas mesmo estressado. """
+        "R1-J5":
+           display_name: """R1-J5"""
+           text: """Antes que você exponha 1 de suas cartas de dano, você pode, ao invés disso, olhar suas cartas de dano viradas para baixo, escolher 1 e expor a carta escolhida. """
+        "Colossus Station Mechanic":
+           display_name: """Mecânico da Estação Colossus"""
+           text: """<i class = flavor_text>Alguns pilotos ambiciosos e talentosos começam suas carreiras na corrida em equipes de solo, trabalhando sem parar para manter naves desmanteladas no céu de mundos distantes como Castilon.</i>"""
+        "212th Battalion Pilot":
+           display_name: """Piloto do Batalhão 212"""
+           text: """<i class = flavor_text>Capaz de funcionar em tanto em ataques atmosféricos quanto em batalhas espaciais, a nave LAAT/I transporta tropas da República para as frentes de batalha em planetas sitiados pelos Separatistas.</i>"""
+        '"Hawk"':
+           display_name: """“Hawk”"""
+           text: """No início da Fase Final, cada nave amiga em alcance 0-1 que tem uma manobra revelada de velocidade 3-5 pode receber 1 ficha de desgaste para realizar uma ação %BARRELROLL% ou %BOOST%."""
+        '"Hound"':
+           display_name: """“Hound”"""
+           text: """Após uma nave amiga pequena em seu %SINGLETURRETARC% receber uma ficha de exaustão ou desgaste, se você não tiver fichas do mesmo tipo, você pode transferir a ficha para você. """
+        '"Warthog"':
+           display_name: """“Warthog”"""
+           text: """Após você ou uma nave amiga não limitada em alcance 0-2 ser destruída durante a Fase de Engajamento, a nave não é removida até o final da fase. """
+        "Baktoid Drone":
+           display_name: """Drone da Baktoid"""
+           text: """<i class = flavor_text>Um desenvolvimento tardio na guerra para a Confederação dos Sistemas Independentes, a nave de ataque droide usa repulsores especializados para bombardear agilmente alvos e destacar precisamente droides de batalha.</i>"""
+        "Separatist Predator":
+           display_name: """Predador Separatista"""
+           text: """<i class = flavor_text>Armado com artilharia e protegido por escudos, uma nave de ataque droide pode devastar formações de infantaria da República e caças estelares com a mesma proficiência.</i>"""
+        "DGS-286":
+           display_name: """DGS-286"""
+           text: """Antes de você engajar, você pode escolher outra nave amiga em alcance 0-1. A nave escolhida transfere 1 ficha de cálculo para você. """
+        "DGS-047":
+           display_name: """DGS-047"""
+           text: """Após você realizar um ataque, se o defensor estiver em seu %FRONTARC%, você pode adquirir uma mira nele. Se o defensor estiver em seu %BULLSEYEARC%, ele recebe 1 ficha de desgaste. """
+        "Geonosian Prototype":
+           display_name: """Protótipo Geonosiano"""
+           text: """Quando você realizar um ataque %MISSILE% ou %CANNON%, você pode remover 1 ficha de tração do defensor para rerrolar até 2 dados de ataque. """
+        "Onderon Oppressor":
+           display_name: """Opressor de Onderon"""
+           text: """Após você realizar uma pirueta ou derrapagem, se você estiver estressado, receba 1 ficha de cálculo. """
+        "Jedi General":
+           display_name: """General Jedi"""
+           text: """<i class = flavor_text>À medida que as Guerras Clônicas afetam as fileiras da Ordem Jedi, aqueles que permanecem devem assumir responsabilidades ainda maiores no Grande Exército da República.</i>"""
+        "Yoda":
+           display_name: """Yoda"""
+           text: """Após outra nave amiga em alcance 0-3 gastar 1 ou mais %FORCE%, você pode gastar 1 %FORCE%. Se o fizer, a nave amiga recupera 1 %FORCE%. """
+        "Shaak Ti":
+           display_name: """Shaak Ti"""
+           text: """No início da Fase Final, você pode gastar qualquer número de %FORCE% para escolher a mesma quantidade de naves em alcance 0-2. Cada nave escolhida não remove 1 ficha de foco ou desvio durante esta Fase Final. """
+        "Aayla Secura":
+           display_name: """Aayla Secura"""
+           text: """Quando uma nave inimiga em seu %FRONTARC% em alcance 0-1 realizar um ataque, o defensor pode mudar 1 resultado em branco para um resultado %FOCUS%. """
+        "Obi-Wan Kenobi (Eta-2)":
+           display_name: """Obi-Wan Kenobi"""
+           text: """Após você ou uma nave amiga <b>Anakin Skywalker</b> em alcance 0-3 realizar uma manobra, se houver mais naves inimigas do que outras naves amigas em alcance 0-1 da nave, você pode gastar 1 %FORCE%. Se o fizer, a nave recebe 1 ficha de foco. """
+        "Anakin Skywalker (Eta-2)":
+           display_name: """Anakin Skywalker"""
+           text: """Após você ou uma nave amiga <b>Obi-Wan Kenobi</b> em alcance 0-3 ralizar uma manobra, se houver mais naves inimigas do que outras naves amigas em alcance 0-1 da nave, você pode gastar 1 %FORCE%. Se o fizer, a nave remove 1 ficha vermelha à sua escolha. """
+        "TransGalMeg Control Link":
+           display_name: """TransGalMeg Control Link"""
+           text: """<strong>Hyperspace Docking Ring:</strong> 1 Delta-7 Aethersprite, Eta-2 Actis, or Nimbus-class V-wing can dock with you. %LINEBREAK% While a ship is docked with you, you gain that ship's initiative and are assigned that ship's dial. While you execute a maneuver, reduce its speed to 1. Before you execute an advanced maneuver, execute a white stationary maneuver (%STOP%) instead, then you may rotate 90º or 180º. %LINEBREAK% While no ship is docked with you, you are not assigned a maneuver dial and do not activate or engage."""
+        "Jango Fett":
+           display_name: """Jango Fett"""
+           text: """Quando você defender ou realizar um ataque primário, se a dificuldade da sua manobra revelada for menor que a da nave inimiga, você pode mudar 1 dos resultados %FOCUS% da nave inimiga para um resultado em branco."""
+        "Separatist Interceptor":
+           display_name: """Interceptador Separatista"""
+           text: """<i class = flavor_text>Introduzidos no final das Guerras Clônicas, esses caças estelares agressivos e os destrutivos buzz droides que carregam representam uma séria ameaça até mesmo para pilotos Jedi veteranos.</i>"""
+        "Colicoid Interceptor":
+           display_name: """Interceptador Colicóide"""
+           text: """<i class = flavor_text>Projetados pela Colicoid Creation Nest e fabricados pela Phlac-Arphocc Automata Industries, os processadores heurísticos dos Droid Tri-Fighters permitem que essas naves letais analisem e se adaptem às táticas inimigas em voo.</i>"""
+        "Phlac-Arphocc Prototype":
+           display_name: """Protótipo da Phlac-Arphocc"""
+           text: """Durante a Fase de Sistema, você pode gastar uma mira sua que está em uma nave para olhar o disco daquela nave. """
+        "Fearsome Predator":
+           display_name: """Predador Terrível"""
+           text: """<strong>Preparação:</strong> Após posicionar as forças, atribua a condição <b>Presa Assustada</b> a 1 nave inimiga. """
+        "DIS-347":
+           display_name: """DIS-347"""
+           text: """No início da Fase de Engajamento, você pode adquirir uma mira em um objeto em alcance 1-3 que está com uma mira amiga. """
+        "DIS-T81":
+           display_name: """DIS-T81"""
+           text: """Quando você defender ou realizar um ataque, você pode gastar 1 ficha de cálculo de uma nave amiga no arco de tiro da nave inimiga para mudar 1 resultado %FOCUS% para um resultado %EVADE% ou %HIT%. """
+        "Lyttan Dree":
+           display_name: """Lyttan Dree"""
+           text: """Quando uma nave amiga em alcance 0-2 realiza um ataque, se você estiver no %LEFTARC% ou %RIGHTARC% do defensor, o atacante pode rerrolar 1 dado de ataque. """
+        '"Rampage"':
+           display_name: """“Rampage”"""
+           text: """Após você executar uma manobra de velocidade 3-4, você pode escolher uma nave em seu %SINGLETURRETARC% em alcance 0-1. Se o fizer, a nave escolhida recebe 1 ficha de desgaste, ou 2 fichas de desgaste se você estiver danificado. """
+        "Onyx Squadron Sentry":
+           display_name: """Sentinela do Esquadrão Ônix"""
+           text: """<i class = flavor_text>A TIE/rb heavy, às vezes chamada de “bruta”, é projetada para flexibilidade operacional. Sua armadura pesada e capacidade de transportar um copiloto droide integrado MGK-300 faz dela uma excelente nave de patrulha.</i>"""
+        "Carida Academy Cadet":
+           display_name: """Cadete da Academia Carida"""
+           text: """<i class = flavor_text>Na Academia Carida, cadetes da Marinha Imperial são ensinados a serem implacáveis e leais, priorizando a vitória acima da vida de seus companheiros.</i>"""
+        "Poe Dameron (HoH)":
+           display_name: """Poe Dameron (AdE)"""
+           text: """Após uma nave amiga em alcance 0-2 realizar uma ação durante a ativação dela, você pode gastar 2 %CHARGE%. Se o fizer, a nave que realizou a ação pode realizar uma ação branca, tratando-a como vermelha. """
+        "Temmin Wexley (HoH)":
+           display_name: """Temmin Wexley (AdE)"""
+           text: """No início da Fase de Engajamento, cada X-wing T-70 amiga em alcance 0-3 pode receber 1 ficha de desgaste para virar sua melhoria %CONFIGURATION% equipada. Se a nave o fizer, ela ganha 1 ficha de cálculo. """
+        "C'ai Threnalli":
+           display_name: """C'ai Threnalli"""
+           text: """Após você executar completamente uma manobra, se você se moveu através de uma nave amiga, você pode realizar uma ação %EVADE%."""
+        "Nimi Chireen":
+           display_name: """Nimi Chireen"""
+           text: """Quando você realizar um ataque, se a iniciativa do defensor for maior que a sua, você pode mudar 1 resultado em branco para um resultado %FOCUS%."""
+        "Merl Cobben":
+           display_name: """Merl Cobben"""
+           text: """Quando uma nave amiga em alcance 0-2 realizar um ataque primário, se você estiver no %BULLSEYEARC% do defensor, o defensor rola 1 dado de defesa a menos."""
+        "Seftin Vanik":
+           display_name: """Seftin Vanik"""
+           text: """Após você realizar uma ação %BOOST%, você pode transferir 1 ficha de desvio para uma nave amiga em alcance 1."""
+        "Suralinda Javos":
+           display_name: """Suralinda Javos"""
+           text: """Após você executar parcialmente uma manobra, você pode receber 1 ficha de desgaste para rotacionar 90º ou 180º."""
+        "Wrobie Tyce":
+           display_name: """Wrobie Tyce"""
+           text: """Após você defender em alcance de ataque 1, se o atacante modificou os próprios dados, o atacante recebe 1 ficha de exaustão."""
+        "Agent Terex":
+           display_name: """Agente Terex"""
+           text: """<strong>Preparação:</strong> Após posicionar as forças, escolha qualquer número de suas melhorias %ILLICIT% equipadas e as equipe em caças TIE/fo ou TIE/sf amigos. Cada nave pode receber apenas 1 %ILLICIT% dessa maneira.%LINEBREAK%<strong>Fim de Jogo:</strong> Retorne todas as melhorias %ILLICIT% para suas naves originais."""
+        "Commander Malarus (Xi Shuttle)":
+           display_name: """Comandante Malarus"""
+           text: """Quando uma nave amiga em alcance 0-2 realizar um ataque primário, antes da etapa Modificar Dados, se ela tiver 1 ou mais resultados em branco, a nave <b>deve</b> receber 1 ficha de desgaste para rerrolar 1 resultado em branco, se possível. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Adicionado janela de habilidade para impedir que jogadores evitem a parte ruim da habilidade</i>"""
+        "Gideon Hask (Xi Shuttle)":
+           display_name: """Gideon Hask"""
+           text: """Quando você ou uma nave amiga pequena em alcance 0-2 realizar um ataque primário contra um defensor danificado, se o atacante rolou 2 ou menos dados de ataque, ele pode receber 1 ficha de desgaste para rolar 1 dado de ataque adicional."""
+        "Loyalist Volunteer":
+           display_name: """Voluntário Leal"""
+           text: """<i class = flavor_text>A V-wing Classe Nimbus Alpha-3 da Kuat Systems Engineering é a nave escolhida por pilotos de caças clones e não clones. As técnicas pioneiras para produção de seus motores de íons precisos seria crucial no desenvolvimento da série TIE pela Sienar Fleet Systems.</i>"""
+        "Shadow Squadron Escort":
+           display_name: """Escolta do Esquadrão Sombra"""
+           text: """<i class = flavor_text>Nos meses finais das Guerras Clônicas, as formações de clones de elite realizam missões críticas para o futuro da República, como a proteção do transporte pessoal do Supremo Chanceler Palpatine.</i>"""
+        "Wilhuff Tarkin":
+           display_name: """Wilhuff Tarkin"""
+           text: """Durante a Fase de Sistema, você pode escolher um objeto no qual você possui uma mira em alcance 1-3. Outra nave amiga em alcance 1-3 pode adquirir uma mira no objeto escolhido. """
+        '"Klick"':
+           display_name: """“Klick”"""
+           text: """Quando uma nave na qual você possui uma mira em alcance 1-3 defender ou realizar um ataque, você pode gastar 1 %CHARGE% para previnir que o bônus de alcance seja aplicado. """
+        '"Contrail"':
+           display_name: """“Contrail”"""
+           text: """Quando você defender ou realizar um ataque, se a direção da sua manobra revelada for a mesma da nave inimiga, você pode mudar 1 dos resultados %FOCUS% da nave inimiga para um resultado em branco. """
+        '"Odd Ball" (V-wing)':
+           display_name: """“Odd Ball”"""
+           text: """Após você executar completamente uma manobra vermelha ou realizar uma ação vermelha, se houver uma nave inimiga em seu %BULLSEYEARC%, você pode adquirir uma mira nessa nave. """
+        "Boba Fett (Separatist)":
+           display_name: """Boba Fett"""
+           text: """Quando você defender, se não houver outras naves amigas em alcance 0-2, você pode mudar 1 dos seus resultados em branco para um resultado %FOCUS%."""
+        "Zam Wesell":
+           display_name: """Zam Wesell"""
+           text: """<strong>Preparação:</strong> Perca 2 %CHARGE%.%LINEBREAK% Durante a Fase de Sistema, você pode atribuir uma das suas condições secretas virada para baixo a você mesmo: <strong>%LINEBREAK%Você Deveria Me Agradecer %LINEBREAK%É Melhor Falar Sério. </strong>"""
+        "Jango Fett":
+           display_name: """Jango Fett"""
+           text: """Quando você defender ou realizar um ataque primário, se a dificuldade da sua manobra revelada for menor que a da nave inimiga, você pode mudar 1 dos resultados %FOCUS% da nave inimiga para um resultado em branco."""
+        "Hera Syndulla (B-Wing)":
+           display_name: """Hera Syndulla"""
+           text: """Quando outra nave amiga em alcance 1-2 defender ou realizar um ataque, durante uma etapa Modificar Dados, você pode transferir 1 das suas fichas de foco, desvio ou mira para aquela nave. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Added a specific timing window to prevent players from circumventing the downsides of the Pilot Ability</i>"""
+        "Netrem Pollard":
+           display_name: """Netrem Pollard"""
+           text: """Após você realizar uma pirueta, você pode escolher 1 nave amiga que não está estressada em alcance 0-1. A nave escolhida recebe 1 ficha de estresse, então você rotaciona 180º."""
+        "Hera Syndulla (A-Wing)":
+           display_name: """Hera Syndulla"""
+           text: """Quando outra nave amiga em alcance 1-2 defender ou realizar um ataque, durante uma etapa Modificar Dados, você pode transferir 1 das suas fichas de foco, desvio ou mira para aquela nave. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Added a specific timing window to prevent players from circumventing the downsides of the Pilot Ability</i>"""
+        "Wedge Antilles (A-Wing)":
+           display_name: """Wedge Antilles"""
+           text: """Quando você realizar um ataque primário, se o defensor estiver em seu %FRONTARC%, o defensor rola 1 dado de defesa a menos. """
+        "Sabine Wren (A-Wing)":
+           display_name: """Sabine Wren"""
+           text: """Quando você defender ou realizar um ataque, se o alcance do ataque for 1 e  você estiver no %FRONTARC% da nave inimiga, você pode trocar 1 dos seus resultados para um resultado %EVADE% ou %HIT%. """
+        "Derek Klivian":
+           display_name: """Derek Klivian"""
+           text: """Após você adquirir ou gastar uma mira, você pode remover 1 ficha vermelha de si mesmo. """
+        "Ahsoka Tano (A-Wing)":
+           display_name: """Ahsoka Tano"""
+           text: """Após você executar completamente uma manobra, você pode escolher uma nave amiga em alcance 1-2 e gastar 2 %FORCE%. A nave escolhida pode realizar uma ação, mesmo se estiver estressada. """
+        "Shara Bey (A-Wing)":
+           display_name: """Shara Bey"""
+           text: """Quando você defender ou realizar um ataque primário, você pode gastar 1 mira que você possua na nave inimiga para adicionar 1 resultado %FOCUS% ao resultado de seus dados. """
+        "Darth Vader (TIE Defender)":
+           display_name: """Darth Vader"""
+           text: """Você não pode gastar %FORCE% exceto quando atacando. Quando você realizar um ataque, você pode gastar 1 %FORCE% para mudar 1 resultado em branco para um resultado %HIT%. """
+        "Captain Dobbs":
+           display_name: """Capitão Dobbs"""
+           text: """Quando outra nave aliada em alcance 0-1 defender, antes da etapa Neutralizar Resultados, se você estiver no arco de ataque e não estiver ionizado, você pode receber 1 ficha de íon para cancelar 1 resultado %HIT%. """
+        "Vult Skerris":
+           display_name: """Vult Skerris"""
+           text: """<strong>Ação:</strong> Receba 1 ficha de exaustão para recuperar 1 %CHARGE%.%LINEBREAK%Antes de você engajar, você pode gastar 1 %CHARGE% para realizar uma ação. """
+        "Vult Skerris (TIE Interceptor)":
+           display_name: """Vult Skerris"""
+           text: """<strong>Ação:</strong> Receba 1 ficha de exaustão para recuperar 1 %CHARGE%.%LINEBREAK%Antes de você engajar, você pode gastar 1 %CHARGE% para realizar uma ação. """
+        "Gideon Hask (TIE Interceptor)":
+           display_name: """Gideon Hask"""
+           text: """Quando você realizar um ataque contra um defensor danificado, role 1 dado de ataque adicional."""
+        "Commandant Goran":
+           display_name: """Comandante Goran"""
+           text: """No começo da Fase de Engajamento, escolha uma nave amiga em alcance 0-3 com uma iniciativa menor que a sua. A nave escolhida recebe 1 ficha de desvio e remove 1 ficha vermelha que não seja estresse.%LINEBREAK%<i>Errata (desde a referência de regras 1.4): habilidade refeita</i>"""
+        "Nash Windrider":
+           display_name: """Nash Windrider"""
+           text: """Durante a Fase de Engajamento, após uma nave pequena amiga em alcance 0-3 ser destruída, se aquela nave não tiver engajado nessa fase, você pode gastar 1 %CHARGE%. Se o fizer, a nave engaja na iniciativa atual. """
+        "Ciena Ree":
+           display_name: """Ciena Ree"""
+           text: """Após você realizar um ataque, se o defensor foi destruído, receba 1 ficha de estresse. Após uma nave amiga em alcance 0-3 ser destruída, remova 1 ficha de estresse. """
+        "Lieutenant Lorrir":
+           display_name: """Tenente Lorrir"""
+           text: """Quando você realizar uma pirueta, você <b>deve</b> usar o gabarito [%BANKLEFT% ou %BANKRIGHT%] ao invés do gabarito [%STRAIGHT%]. """
+        "Kanan Jarrus (HWK-290)":
+           display_name: """Kanan Jarrus"""
+           text: """Quando você ou uma nave em seu %SINGLETURRETARC% defender, você pode gastar 1 %FOCE%. Se o fizer, o atacante rola 1 dado de ataque a menos."""
+        "Tápusk":
+           display_name: """Tápusk"""
+           text: """Durante a Fase Final, antes que uma nave inimiga em seu %SINGLETURRETARC% recupera 1 %CHARGE% ou %FORCE% recursiva, você pode gastar 2 %CHARGE%. Se o fizer, a nave inimiga não recupera aquela %CHARGE% ou %FORCE%."""
+        "Gamut Key":
+           display_name: """Gamut Key"""
+           text: """No início da Fase Final, você pode gastar 2 %CHARGE% para escolher você mesmo ou uma nave em seu %SINGLETURRETARC% com 1 ou mais fichas circulares. Durante a Fase Final, fichas circulares não são removidas da nave escolhida."""
+        "Arliz Hadrassian":
+           display_name: """Arliz Hadrassian"""
+           text: """Quando você realizar um ataque %FRONTARC%, se você estiver danificado, você pode mudar 1 dos seus resultados %FOCUS% para um resultado %CRIT%.%LINEBREAK%Quando você defender, se você estiver danificado, antes da etapa Modificar Dados de Defesa, você deve mudar 1 dos seus resultados %FOCUS% para um resultado em branco. %LINEBREAK% <i>Errata (RR: 1.2.0 [06/14/2021]): Added a specific timing window to prevent players from circumventing the downsides of the Pilot Ability</i>"""
+        "Leema Kai":
+           display_name: """Leema Kai"""
+           text: """Antes de você engajar, se você não estiver no %FRONTARC% de qualquer nave inimiga, você pode adquirir uma mira em uma nave inimiga em seu %FULLFRONTARC%."""
+        "Padric":
+           display_name: """Padric"""
+           text: """Após um dispositivo amigo no qual você possui uma mira detonar, cada nave inimiga em alcance 0-1 desse dispositivo recebe 1 ficha de desgaste."""
+        "New Republic Patrol":
+           display_name: """Patrulha da Nova República"""
+           text: """<i class = flavor_text>Projetada para personalizações, a Y-wing BTA-NR2 é utilizada por várias organizações militares em toda a galáxia para diferentes funções, de naves de policiamento a bombardeiros de guerra.</i>"""
+        "Kijimi Spice Runner":
+           display_name: """Contrabandista de Kijimi"""
+           text: """<i class = flavor_text>Liderados por Zorii Bliss, os Contrabandistas de Especiarias de Kijimi deixaram de lado suas vidas mercenárias para enfrentar a Ordem Final na Batalha de Exogol.</i>"""
+        "Corus Kapellim":
+           display_name: """Corus Kapellim"""
+           text: """Antes de você engajar, você pode escolher 1 nave em seu arco de tiro em alcance 0-1. Se o fizer, transfira 1 ficha verde da nave escolhida para você. """
+        "C'ai Threnalli (Y-Wing)":
+           display_name: """C'ai Threnalli"""
+           text: """Após você executar completamente uma manobra, se você se moveu através de uma nave amiga, você pode realizar uma ação %EVADE%. """
+        "Lega Fossang":
+           display_name: """Lega Fossang"""
+           text: """Quando você realizar um ataque primário ou %TURRET%, você pode rerrolar 1 dado de ataque para cada dispositivo aliado ou nave amiga calculando no arco de ataque. """
+        "Shasa Zaro":
+           display_name: """Shasa Zaro"""
+           text: """Após você defender, você pode escolher uma nave amiga em seu %FULLREARARC% em alcance 0-2 e 1 de suas fichas verdes. Se o fizer, a nave escolhida ganha uma ficha correspondente. """
+        "Teza Nasz":
+           display_name: """Teza Nasz"""
+           text: """Quando uma nave amiga em alcance 0-2 realizar um ataque, se o defensor tiver uma nave amiga do atacante em cada um de seus arcos laterais (%LEFTARC% e %RIGHTARC%), o atacante pode rerrolar 1 dado de ataque. """
+        "Wilsa Teshlo":
+           display_name: """Wilsa Teshlo"""
+           text: """Após você realizar um ataque, se o defensor recebeu uma carta de dano virada para cima, o defensor recebe 1 ficha de desgaste a menos que o defensor escolha 1 %CHARGE% não recursiva de 1 de suas melhorias equipadas e perca a %CHARGE% escolhida. """
+        "Aftab Ackbar":
+           display_name: """Aftab Ackbar"""
+           text: """Após você executar completamente uma manobra básica vermelha ou realizar uma ação vermelha, se você tiver exatamente 1 ficha de estresse, você pode ganhar 1 ficha de desgaste para remover a ficha de estresse. """
+        "Zorii Bliss":
+           display_name: """Zorii Bliss"""
+           text: """Após uma nave em alcance 1 realizar uma ação durante sua etapa Realizar Ação, se a ação realizada estiver em sua barra de ações, você pode gastar 1 %CHARGE% para realizar a ação, tratando-a como vermelha."""
+        "New Republic Patrol (Wartime)":
+           display_name: """New Republic Patrol"""
+           text: """<i class = flavor_text>Projetada para personalizações, a Y-wing BTA-NR2 é utilizada por várias organizações militares em toda a galáxia para diferentes funções, de naves de policiamento a bombardeiros de guerra.</i>"""
+        "Kijimi Spice Runner (Wartime)":
+           display_name: """Kijimi Spice Runner"""
+           text: """<i class = flavor_text>Liderados por Zorii Bliss, os Contrabandistas de Especiarias de Kijimi deixaram de lado suas vidas mercenárias para enfrentar a Ordem Final na Batalha de Exogol.</i>"""
+        "Corus Kapellim (Wartime)":
+           display_name: """Corus Kapellim"""
+           text: """Antes de você engajar, você pode escolher 1 nave em seu arco de tiro em alcance 0-1. Se o fizer, transfira 1 ficha verde da nave escolhida para você. """
+        "C'ai Threnalli (Y-Wing) (Wartime)":
+           display_name: """C'ai Threnalli"""
+           text: """Após você executar completamente uma manobra, se você se moveu através de uma nave amiga, você pode realizar uma ação %EVADE%. """
+        "Lega Fossang (Wartime)":
+           display_name: """Lega Fossang"""
+           text: """Quando você realizar um ataque primário ou %TURRET%, você pode rerrolar 1 dado de ataque para cada dispositivo aliado ou nave amiga calculando no arco de ataque. """
+        "Shasa Zaro (Wartime)":
+           display_name: """Shasa Zaro"""
+           text: """Após você defender, você pode escolher uma nave amiga em seu %FULLREARARC% em alcance 0-2 e 1 de suas fichas verdes. Se o fizer, a nave escolhida ganha uma ficha correspondente. """
+        "Teza Nasz (Wartime)":
+           display_name: """Teza Nasz"""
+           text: """Quando uma nave amiga em alcance 0-2 realizar um ataque, se o defensor tiver uma nave amiga do atacante em cada um de seus arcos laterais (%LEFTARC% e %RIGHTARC%), o atacante pode rerrolar 1 dado de ataque. """
+        "Wilsa Teshlo (Wartime)":
+           display_name: """Wilsa Teshlo"""
+           text: """Após você realizar um ataque, se o defensor recebeu uma carta de dano virada para cima, o defensor recebe 1 ficha de desgaste a menos que o defensor escolha 1 %CHARGE% não recursiva de 1 de suas melhorias equipadas e perca a %CHARGE% escolhida. """
+        "Aftab Ackbar (Wartime)":
+           display_name: """Aftab Ackbar"""
+           text: """Após você executar completamente uma manobra básica vermelha ou realizar uma ação vermelha, se você tiver exatamente 1 ficha de estresse, você pode ganhar 1 ficha de desgaste para remover a ficha de estresse. """
+        "Zorii Bliss (Wartime)":
+           display_name: """Zorii Bliss"""
+           text: """Após uma nave em alcance 1 realizar uma ação durante sua etapa Realizar Ação, se a ação realizada estiver em sua barra de ações, você pode gastar 1 %CHARGE% para realizar a ação, tratando-a como vermelha."""
+        "Kylo Ren (TIE Whisper)":
+           display_name: """Kylo Ren"""
+           text: """Antes de uma nave inimiga em seu %BULLSEYEARC% receber uma carta de dano virada para baixo, você pode gastar 1 %FORCE%. Se o fizer, a carta de dano é atribuída virada para cima. """
+        '"Wrath"':
+           display_name: """“Wrath”"""
+           text: """Após você realizar um ataque %BULLSEYEARC%, se você tiver 1 ou mais fichas laranjas ou vermelhas, exceto mira, você pode realizar um ataque bônus contra um alvo diferente. """
+        '"Nightfall"':
+           display_name: """“Nightfall”"""
+           text: """Após você executar completamente uma manobra ou realizar uma ação %BOOST%, cada nave que você se moveu através recebe 2 fichas de interferência. """
+        '"Whirlwind"':
+           display_name: """“Whirlwind”"""
+           text: """Antes de você engajar, você pode remover qualquer número de fichas de interferência, então você pode receber 1 ficha de foco para cada nave inimiga que tem você no %FRONTARC% dela. """
+        "709th Legion Ace":
+           display_name: """Ás da Legião 709"""
+           text: """<i class = flavor_text>Comandada pelo Líder Supremo Kylo Ren, a Legião 709 luta sem misericórdia ou remorso para esmagar a Resistência e espalhar o domínio da Primeira Ordem pela galáxia.</i>"""
+        "Red Fury Zealot":
+           display_name: """Fanático da Red Fury"""
+           text: """<i class = flavor_text>Também chamada de Red Fury, a Legião 709 é encarregada pelo Líder Supremo Kylo Ren em erradicar os dissidentes Posto de Black Spire.</i>"""
+        "Sienar-Jaemus Test Pilot":
+           display_name: """Piloto de Testes da Sienar-Jaemus"""
+           text: """<i class = flavor_text>Equipada com quatro canhões laser e sistemas avançados, a TIE/se Bomber é uma nave altamente manobrável que traz uma artilharia devastadora para aqueles que ousam enfrentar a Primeira Ordem.</i>"""
+        "First Order Cadet":
+           display_name: """Cadete da Primeira Ordem"""
+           text: """<i class = flavor_text>Os exercícios com tiros reais da Primeira Ordem têm como objetivo erradicar os fracos, reforçando a máxima que apenas os fortes sobrevivem.</i>"""
+        '"Grudge"':
+           display_name: """“Grudge”"""
+           text: """Quando uma bomba ou mina amiga em alcance 0-2 detonar, cada vez que dados de ataque forem rolados para resolver o efeito dela, você pode rerrolar até 1 desses dados. """
+        '"Dread"':
+           display_name: """“Dread”"""
+           text: """Após você recarregar, cada nave no seu %BULLSEYEARC% recebe 1 ficha de exaustão. """
+        '"Scorch" (TIE/Se Bomber)':
+           display_name: '''"Scorch"'''
+           text: """Quando uma nave amiga em alcance 0-1 realizar um ataque primário, ela pode gastar 1 resultado %HIT%. Se a nave amiga o fizer, o defensor recebe 1 ficha de desgaste. """
+        '"Breach"':
+           display_name: """“Breach”"""
+           text: """Após você executar completamente uma manobra ou realizar uma ação %BOOST%, se você se moveu através de uma nave inimiga, você pode adquirir uma mira nela. """
+        "Fenn Rau (Rebel Fang)":
+           display_name: """Fenn Rau"""
+           text: """Antes de uma nave amiga em alcance 1-2 engajar, se houver uma nave inimiga no %FRONTARC% dela em alcance 1, essa nave amiga pode remover 1 ficha vermelha que não seja uma mira. """
+        "Bodica Venj":
+           display_name: """Bodica Venj"""
+           text: """Depois que outra nave amiga defender, se você não estiver exausto, você pode realizar um ataque primário bônus contra o atacante. Se você fizer isso, depois de realizar este ataque, receba uma ficha de exaustão. """
+        "Dirk Ullodin":
+           display_name: """Dirk Ullodin"""
+           text: """Depois que você realizar completamente uma manobra vermelha ou realizar uma ação vermelha, você pode travar uma mira em uma nave inimiga em seu %FRONTARC% em alcance 1. """
+        "Clan Wren Volunteer":
+           display_name: """Voluntário do Clã Wren"""
+           text: """Quando você realizar um ataque em alcance 1, se a velocidade da sua manobra revelada for igual a de uma nave amiga em alcance 1, você pode rerolar 1 dado de ataque.."""
+        "Mandalorian Royal Guard":
+           display_name: """Guarda Real Mandaloriana"""
+           text: """Quando uma nave amiga que não seja pequena defende, se você estiver no arco de ataque, você pode receber 1 ficha de de exaustão e 1 ficha de desgaste. Se o fizer, o defensor pode mudar 1 resultado para um resultado %EVADE%. """
+        "ISB Jingoist":
+           display_name: """Extremista do BSI"""
+           text: """Antes de você engajar, você pode escolher 1 nave inimiga em seu %FRONTARC% em alcance 0-1. Se você o fizer, essa nave recebe 1 ficha de desgaste ou exaustão a sua escolha a menos que ele decida remover 1 ficha verde."""
+        "Moff Gideon":
+           display_name: """Moff Gideon"""
+           text: """Quando uma nave inimiga em alcance 1-3 defender, antes dos dados de ataque serem rolados, você pode gastar 1 %CHARGE% e escolher uma nave amiga em alcance 0-1 do defensor. Se o fizer, dados de defesa não poderão ser modificados durante este ataque e a nave amiga escolhida recebe 1 ficha de desgaste."""
+        "Maul":
+           display_name: """Maul"""
+           text: """Quando você realizar uma ação %COORDINATE%, se você escolher uma nave com um valor de iniciativa menor que o seu, você pode gastar 1 %FORCE%. Se o fizer, trate a ação como branca e você pode coordenar 1 nave amiga adicional com um valor de iniciativa menor que o seu; cada nave amiga que você coordenar dessa forma recebe 1 ficha de desgaste"""
+        "Bo-Katan Kryze":
+           display_name: """Bo-Katan Kryze"""
+           text: """Antes de uma nave amiga em alcance 0-2 ativar, você pode gastar 1 %CHARGE%. Se você fizer isso, essa nave pode receber 1 ficha de desgaste para remover 1 ficha laranja ou vermelha que não seja um estresse."""
+        "Bo-Katan Kryze (Republic)":
+           display_name: """Bo-Katan Kryze"""
+           text: """Depois que você realizar completamente uma manobra, você pode receber 1 ficha de exaustão para escolher um objeto em seu %FRONTARC% em alcance 1-2. Se o fizer, outra nave amiga pode realizar uma ação %LOCK% para mirar neste objeto."""
+        "Captain Hark":
+           display_name: """Captão Hark"""
+           text: """Depois que você revelar uma manobra [0 %STOP%], se você estiver equipado com <strong>Asas Giratórias (Abaixadas)</strong>, você deve, ao invés disso, realizar uma derrapagem [1 %BANKLEFT%] ou [1 %BANKRIGHT%] da mesma dificuldade, você deve virar a carta <strong>Asas Giratórias (Abaixadas)</strong>."""
+        "Gar Saxon":
+           display_name: """Gar Saxon"""
+           text: """Quando uma unidade amiga em alcance 0-2 realiza um ataque primário, se o atacante estiver no %REARARC% do defensor, você pode gastar 1 %CHARGE%. Se o fizer, o atacante rola 1 dado adicional."""
+        "Pre Vizsla":
+           display_name: """Pre Vizsla"""
+           text: """Quando você estiver atacando, se a iniciativa do defensor for igual ou maior que a sua, você pode gastar 2 %CHARGE% para rolar 1 dado adicional."""
+        "Pre Vizsla":
+           display_name: """Pre Vizsla"""
+           text: """Quando você estiver atacando, se a iniciativa do defensor for igual ou maior que a sua, você pode gastar 2 %CHARGE% para rolar 1 dado adicional."""
+        "Rook Kast":
+           display_name: """Rook Kast"""
+           text: """Antes de você engajar, você pode receber 1 ficha de desgaste. Quando você realizar um ataque primário, se você estiver desgastado, você pode mudar 1 de seus resultados %FOCUS% ou em branco para um resultado %HIT%."""
+        "Ezra Bridger (Gauntlet Fighter)":
+           display_name: """Ezra Bridger"""
+           text: """Quando você defender ou realizar um ataque, se você estiver estressado, você pode gastar 1 %FORCE% para mudar até 2 de seus resultados %FOCUS% para resultados %EVADE% ou %HIT%."""
+        '"Chopper" (Gauntlet Fighter)':
+           display_name: """Chopper"""
+           text: """No início da Fase de Engajamento, cada nave inimiga em alcance 0 recebe 2 fichas de interferência."""
+        "The Mandalorian":
+           display_name: """O Mandaloriano"""
+           text: """Quando você defender ou realizar um ataque, se você estiver no %FRONTARC% em alcance 1-2 de 2 ou mais naves inimigas, você pode mudar 1 resultado em branco para um resultado %FOCUS%."""
+        "Q9-0":
+           display_name: """Q9-0"""
+           text: """Depois que você completar uma manobra avançada, você pode realizar uma ação %CALCULATE% ou %BARRELROLL%, mesmo se estiver estressado. Se o fizer, receba uma ficha de desgaste."""
+        "Guild Bounty Hunter":
+           display_name: """Caçador de Recompensas da Guilda"""
+           text: """Quando você realizar um ataque em alcance 1-2, você pode gastar 1 %CHARGE% não recursiva de 1 de suas melhorias %ILLICIT% equipadas para mudar 1 resultado %FOCUS% para um resultado %CRIT%"""
+        "Cad Bane":
+           display_name: """Cad Bane"""
+           text: """Depois que você realizar um ataque que acertou, você pode gastar 2 %CHARGE% para transferir 1 de suas fichas laranjas ou vermelhas que não seja uma mira para o defensor. """
+        "Cad Bane (Separatist)":
+           display_name: """Cad Bane"""
+           text: """Durante a Fase de Engajamento, depois que outra nave em alcance 0-3 for destruída, você pode gastar 1 %CHARGE% para realizar uma ação, mesmo se estiver estressado. """
+        "Viktor Hel (Rogue)":
+           display_name: """Viktor Hel"""
+           text: """Depois que você defender, se você não rolou exatamente 2 dados de defesa, o atacante recebe 1 ficha de estresse."""
+        "Nom Lumb (Rogue)":
+           display_name: """Nom Lumb"""
+           text: """No começo da Fase de Engajamento, você pode escolher 1 nave inimiga em seu %FRONTARC%. Se o fizer, trate sua iniciativa igual a daquela nave até o fim da rodada. """
+        "Outer Rim Hunter":
+           display_name: """Caçador da Orla Exterior"""
+           text: """<i class = flavor_text>Devido a sua associação com Cad Bane, o Caça Estelar Classe Rogue passou a ser usado por outros caçadores de recompensas, principalmente aqueles que operam na perigosa Orla Exterior.</i>"""
+        "IG-101":
+           display_name: """IG-101"""
+           text: """No começo da Fase de Sistema, você pode consertar 1 carta de dano virada para cima. """
+        "IG-102":
+           display_name: """IG-102"""
+           text: """Quando você estiver defendendo, se a iniciativa do atacante for maior ou igual a sua, você pode mudar 1 resultado em branco para um resultado %FOCUS%. """
+        "IG-111":
+           display_name: """IG-111"""
+           text: """Depois que você realizar um ataque que errou, você pode escolher 1 nave inimiga em seu %BULLSEYEARC% e receber 1 ficha de exaustão. Se você fizer isso, essa nave sofre 1 dano %HIT%. """
+        "MagnaGuard Executioner":
+           display_name: """Executor da MagnaGuard"""
+           text: """<i class = flavor_text>Além de proteger os líderes Separatistas, os droides MagnaGuard muitas vezes são despachados em Caças Estelares Classe Rogue para eliminar seus inimigos</i>"""
+        "MagnaGuard Protector":
+           display_name: """Protetor MagnaGuard"""
+           text: """<strong>Preparação:</strong> Depois de posicionar forças, atribua a condição Protegido a 1 nave amiga que não seja um <strong>Protetor MagnaGuard</strong>."""
         '"Killer"':
            display_name: """“Killer”"""
            text: """Quando você realiza um ataque, se o defensor possuir 2 ou menos de casco restante, você pode rolar 1 dado de ataque adicional."""
@@ -2190,333 +2073,145 @@ exportObj.cardLoaders.Português = () ->
         "Reaper Squadron Scout":
            display_name: """Reaper Squadron Scout"""
            text: """<i class = flavor_text>Apesar da reputação pouco glamurosa da Z-95 Clone, o Esquadrão Reaper se tornou lendário pela sua habilidade com o caça em combates distantes, como a batalha sobre Castilon.</i>"""
-
-       #Gauntlet Republic
-        "Bo-Katan Kryze (Republic)":
-           display_name: """Bo-Katan Kryze"""
-           text: """Depois que você realizar completamente uma manobra, você pode receber 1 ficha de exaustão para escolher um objeto em seu %FRONTARC% em alcance 1-2. Se o fizer, outra nave amiga pode realizar uma ação %LOCK% para mirar neste objeto."""
-        "Nite Owl Liberator":
-           display_name: """Liberador das Corujas Noturnas"""
-           text: """<i class = flavor_text>Segundo Bo-Katan Dryze, alguns antigos membros do Olho da Morte rejeitaram o direito de Maul de liderar Mandalore e, relutantes, fizeram uma aliança com a República. Os Caças Gauntlet das Corujas Noturnas são essenciais para montar a invasão que irá liberar seu planeta.</i>"""
-
-     #Resistance
-       #RZ-2 A-wing
-        "Blue Squadron Recruit":
-           display_name: """Recruta do Esquadrão Azul"""
-           text: """<i class = flavor_text>Muitas crianças por toda a galáxia cresceram ouvindo histórias de atos heroicos realizados durante a Guerra Civil Galáctica, e muitos aprenderam a voar nas mesmas cabines em que seus pais lutaram contra o Império.</i>"""
-        "Green Squadron Expert":
-           display_name: """Green Squadron Expert"""
-           text: """<i class = flavor_text>Anos de modificações de batalha foram padronizadas no projeto da RZ-2, mas os pilotos mais ousados enxergam a confiabilidade avançada da nave como um desafio para testar ainda mais os limites de sua performance.</i>"""
-        "Merl Cobben":
-           display_name: """Merl Cobben"""
-           text: """Quando uma nave amiga em alcance 0-2 realizar um ataque primário, se você estiver no %BULLSEYEARC% do defensor, o defensor rola 1 dado de defesa a menos."""
-        "Seftin Vanik":
-           display_name: """Seftin Vanik"""
-           text: """Após você realizar uma ação %BOOST%, você pode transferir 1 ficha de desvio para uma nave amiga em alcance 1."""
-        "Suralinda Javos":
-           display_name: """Suralinda Javos"""
-           text: """Após você executar parcialmente uma manobra, você pode receber 1 ficha de desgaste para rotacionar 90º ou 180º."""
-        "Wrobie Tyce":
-           display_name: """Wrobie Tyce"""
-           text: """Após você defender em alcance de ataque 1, se o atacante modificou os próprios dados, o atacante recebe 1 ficha de desgaste."""
-        "Zizi Tlo":
-           display_name: """Zizi Tlo"""
-           text: """Após você defender ou realizar um ataque, você pode gastar 1 %CHARGE% para receber 1 ficha de foco ou desvio."""
-        "Ronith Blario":
-           display_name: """Ronith Blario"""
-           text: """Quando você defender ou realizar um ataque, se a nave inimiga está dentro do %SINGLETURRETARC% de outra nave amiga, você pode gastar 1 ficha de foco dessa nave amiga para mudar 1 dos seus resultados %FOCUS% para um resultado %HIT% ou %EVADE%."""
-        "L'ulo L'ampar":
-           display_name: """L'ulo L'ampar"""
-           text: """Quando você defender ou realizar um ataque primário, se estiver estressado, você <b>deve</b> rolar 1 dado de defesa a menos ou 1 dado de ataque adicional."""
-        "Tallissan Lintra":
-           display_name: """Tallissan Lintra"""
-           text: """Quando uma nave inimiga em seu %SINGLETURRETARC% realizar um ataque, você pode gastar 1 %CHARGE%. Se o fizer, o defensor rola 1 dado adicional."""
-        "Greer Sonnel":
-           display_name: """Greer Sonnel"""
-           text: """Após você executar completamente uma manobra, você pode rotacionar seu %SINGLETURRETARC%."""
-        "Zari Bangel":
-           display_name: """Zari Bangel"""
-           text: """Você não pula a etapa Realizar Ação após você executar parcialmente uma manobra."""
-        "Tallissan Lintra (EoD)":
-           display_name: """Tallissan Lintra (EoD)"""
-           text: """Quando uma nave inimiga em seu %BULLSEYEARC% realiza um ataque, você pode gastar 1 %CHARGE%. Se fizer isso, o defensor rola 1 dado de defesa adicional."""
-        "Zizi Tlo (EoD)":
-           display_name: """Zizi Tlo (EoD)"""
-           text: """Depois que você defender ou realizar um ataque, você pode gastar 1 %CHARGE% para receber 1 ficha de foco ou desvio."""
-        "Pammich Nerro Goode (EoD)":
-           display_name: """Pammich Nerro Goode (EoD)"""
-           text: """Enquanto você tiver 2 ou menos fichas de estresse, você pode realizar manobras vermelhas mesmo se estiver estressado."""
-        
-
-       #Fireball
-        "Colossus Station Mechanic":
-           display_name: """Mecânico da Estação Colossus"""
-           text: """<i class = flavor_text>Alguns pilotos ambiciosos e talentosos começam suas carreiras na corrida em equipes de solo, trabalhando sem parar para manter naves desmanteladas no céu de mundos distantes como Castilon.</i>"""
-        "Jarek Yeager":
-           display_name: """Jarek Yeager"""
-           text: """Enquanto você tiver 2 fichas de estresse ou menos , se você estiver danificado, você pode executar manobras básicas vermelhas mesmo estressado. Se você estiver criticamente danificado, você pode executar manobras avançadas mesmo estressado."""
-        "R1-J5":
-           display_name: """R1-J5"""
-           text: """Antes que você exponha 1 de suas cartas de dano, você pode, ao invés disso, olhar suas cartas de dano viradas para baixo, escolher 1 e expor a carta escolhida."""
-        "Kazuda Xiono":
+        "Hera Syndulla (LaR)":
+           display_name: """Hera Syndulla (LaR)"""
+           text: """Depois que você completar uma manobra vermelha, você pode coordenar uma nave amiga em alcance 1-3."""
+        "Carnor Jax":
+           display_name: """Carnor Jax"""
+           text: """Quando uma nave inimiga em alcance 0-1 em seu %FRONTARC% defender ou realizar um ataque, antes do passo Rolar Dados de Ataque, você pode gastar 1 %FORCE%. Se você fizer isso, os dados dessa nave não podem ser modificados."""
+        "Thweek":
+           display_name: """Thweek"""
+           text: """Durante a Fase de Sistema, você pode receber 1 ficha de tração. No início da Fase de Engajamento, você pode receber 1 ficha de exaustão para remover 1 ficha de tração."""
+        "Kazuda Xiono (LaR)":
            display_name: """Kazuda Xiono"""
-           text: """Quando você defender ou realizar um ataque primário, se a iniciativa da nave inimiga for maior que o número de cartas de dano que você tem, você pode rolar 1 dado adicional."""
+           text: """Quando você defender ou realizar um ataque, se a nave inimiga possuir mais cartas de danos do que você, você pode mudar 1 resultado %FOCUS% para um resultado %EVADE% ou %HIT%."""
+        "Tamara Ryvora":
+           display_name: """Tamara Ryvora"""
+           text: """Quando uma nave que você possuir mira realizar um ataque, você pode escolher 1 dadod de ataque. Se você fizer isso, o atacante rerola aquele dado."""
+        "Quinlan Vos":
+           display_name: """Quinlan Vos"""
+           text: """Depois que você realizar uma ação %BARRELROLL% ou %BOOST%, você pode adquirir uma mira em uma nave em seu %BULLSEYEARC%."""
+        "Ursa Wren":
+           display_name: """Ursa Wren"""
+           text: """Depois que você adquirir uma mira em uma nave inimiga, se não houver naves inimigas em alcance 0-1 de você, você pode receber 1 ficha de reforço."""
+        "DIS-L9B2":
+           display_name: """DIS-L9B2"""
+           text: """No começo da Fase de Engajamento, se houver uma nave inimiga em seu %BULLSEYEARC%, você deve gastar 1 %CHARGE%. Durante a Fase de Engajamento, se sua %CHARGE% estiver ativa, trate sua iniciativa como se fosse 1."""
 
-       #MG-100
-        "Cobalt Squadron Bomber":
-           display_name: """Bombardeiro do Esquadrão Cobalto"""
-           text: """<i class = flavor_text>Com seus porões carregados de bombas de prótons ou de suprimentos de emergência, a tripulação das StarFortresses do Esquadrão Cobalto dedicam suas vidas para fazer a diferença na galáxia.</i>"""
-        "Cat":
-           display_name: """Cat"""
-           text: """Quando você realizar um ataque primário, se o defensor estiver em alcance 0-1 de pelo menos 1 dispositivo amigo, role 1 dado adicional."""
-        "Vennie":
-           display_name: """Vennie"""
-           text: """Quando você defender, se o atacante estiver no %SINGLETURRETARC% de uma nave amiga, você pode adicionar 1 resultado %FOCUS% à sua rolagem."""
-        "Ben Teene":
-           display_name: """Ben Teene"""
-           text: """Após você realizar um ataque, se o defensor estiver em seu %SINGLETURRETARC%, atribua a condição <strong>Aturdido</strong> ao defensor."""
-        "Edon Kappehl":
-           display_name: """Edon Kappehl"""
-           text: """Após você executar completamente uma manobra azul ou branca, se você não soltou nem lançou um dispositivo nesta rodada, você pode soltar 1 dispositivo."""
-        "Finch Dallow":
-           display_name: """Finch Dallow"""
-           text: """Quando você for soltar uma bomba, em vez disso, você pode colocá-la na área de jogo tocando sua nave."""
-        "Paige Tico":
-           display_name: """Paige Tico"""
-           text: """Após você soltar um dispositivo, você pode gastar 1 %CHARGE% para soltar um dispositivo adicional."""
-        "Finch Dallow (EoD)":
-           display_name: """Finch Dallow (EoD)"""
-           text: """Se você for soltar um dispositivo usando uma régua %STRAIGHT% e não estiver estressado, voê pode receber 1 ficha de estresse para usar uma régua [%BANKLEFT% or %BANKRIGHT%] da mesma velocidade."""
-        "Vennie (EoD)":
-           display_name: """Vennie (EoD)"""
-           text: """Quando você defender, se o atacante estiver no %SINGLETURRETARC% de uma nave amiga, você pode mudar 1 resultado %FOCUS% para um resultado %EVADE%."""
+        # Battle of Yavin Pilots
+        "Han Solo (BoY)":
+           display_name: """Han Solo (BdY)"""
+           text: """Depois de realizar um ataque que acertou, você pode gastar 1 %CHARGE% para realizar uma ação %COORDINATE%."""
+        "Garven Dreis (BoY)":
+           display_name: """Garven Dreis (BdY)"""
+           text: """Depois que você gastar uma ficha de foco, você pode escolher 1 nave amiga em alcance 1-3. Essa nave recebe 1 ficha de foco."""
+        "Luke Skywalker (BoY)":
+           display_name: """Luke Skywalker (BdY)"""
+           text: """Depois que você for declarado como defensor durante um ataque, você pode recuperar 1 %FORCE%."""
+        "Wedge Antilles (BoY)":
+           display_name: """Wedge Antilles (BdY)"""
+           text: """Quando você realizar um ataque primário, se houver outra nave amiga no arco de tiro do defensor, o defensor rola 1 dado de defesa a menos."""
+        "Biggs Darklighter (BoY)":
+           display_name: """Biggs Darklighter (BdY)"""
+           text: """Durante a Fase de Sistema, você pode escolher 1 nave amiga em alcance 1. Se o fizer, trate sua iniciativa igual a da nave escolhida até o fim da fase de Ativação."""
+        "Jek Porkins (BoY)":
+           display_name: """Jek Porkins (BdY)"""
+           text: """Depois que você receber uma ficha de estresse, você pode rolar 1 dado de ataque para removê-la. Em um resultado %HIT%, sofra 1 dano %HIT%."""
+        "Hol Okand (BoY)":
+           display_name: """Hol Okand (BdY)"""
+           text: """Durante a Fase de Sistema, se não houver naves inimigas em alcance 1-2, você pode recuperar 1 %CHARGE% em qualquer melhoria."""
+        '"Pops" Krail (BoY)':
+           display_name: """“Pops” Krail (BdY)"""
+           text: """Quando você realizar um ataque %SINGLETURRETARC%, você pode rerolar até 2 dados de ataque."""
+        '"Dutch" Vander (BoY)':
+           display_name: """“Dutch” Vander (BdY)"""
+           text: """Depois que você gastar uma mira durante um ataque, escolha uma nave amiga em alcance 1-3. A nave escolhida pode adquirir uma mira no defensor. %LINEBREAK% <i>Errata (since rules reference 1.4.4): Corrected pilot ability and adjusted initiative value</i>"""
+        "Dex Tiree (BoY)":
+           display_name: """Dex Tiree (BdY)"""
+           text: """Quando você defender, se houver pelo menos 1 outra nave amiga em alcance 0-1, você pode rolar 1 dado de defesa adicional."""
+        '"Wampa" (BoY)':
+           display_name: """“Wampa” (BdY)"""
+           text: """Quando você realizar um ataque você pode gastar 1 %CHARGE% para rolar 1 dado de ataque adicional.%LINEBREAK%Depois que você defender, perca 1 %CHARGE%."""
+        '"Dark Curse" (BoY)':
+           display_name: """“Dark Curse” (BdY)"""
+           text: """Quando você defender, os dados do atacante não podem ser modificados."""
+        "Darth Vader (BoY)":
+           display_name: """Darth Vader (BdY)"""
+           text: """Quando você realizar um ataque, você pode gastar 1 %FORCE% para mudar 1 resultado em branco para um resultado %HIT%."""
+        "Iden Versio (BoY)": 
+           display_name: """Iden Versio (BdY)"""
+           text: """Antes de uma TIE amiga em alcance 0-1 receber dano, você pode gastar 2 %CHARGE%. Se o fizer, evite 1 dano.%LINEBREAK%<i>Errata (desde a referência de regras 1.4.4): Habilidade de piloto corrigida</i>"""
+        '"Backstabber" (BoY)': 
+           display_name: """“Backstabber” (BdY)"""
+           text: """Quando você realizar um ataque primário, se um Darth Vader ou “Mauler” Mithel amigo estiver em seu %LEFTARC% ou %RIGHTARC% em alcance 0-1, role 1 dado de ataque adicional."""
+        "Sigma 4 (BoY)":
+           display_name: """Sigma 4 (BdY)"""
+           text: """Depois que você realizar uma ação %BARRELROLL%, você pode gastar 1 %CHARGE% para realizar uma ação %BOOST%."""
+        "Sigma 5 (BoY)":
+           display_name: """Sigma 5 (BdY)"""
+           text: """Depois que você realizar um ataque que acertou, você pode gastar 1 %CHARGE% para realizar uma ação %EVADE%."""
+        "Sigma 6 (BoY)":
+           display_name: """Sigma 6 (BdY)"""
+           text: """Depois que você executar completamente uma manobra 3-5, você pode gastar 1 %CHARGE% para realizar uma ação %SLAM%."""
+        "Sigma 7 (BoY)":
+           display_name: """Sigma 7 (BdY)"""
+           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para adquirir uma mira em uma nave inimiga em alcance 0-1."""
+        '"Mauler" Mithel (BoY)':
+           display_name: """“Mauler” Mithel (BdY)"""
+           text: """Quando você realizar um ataque primário, se um Darth Vader ou  “Backstabber” amigo estiver em seu %LEFTARC% ou %RIGHTARC% em alcance 0-1, role 1 dado de ataque adicional."""
 
-       #Transport POD
-        "BB-8":
-           display_name: """BB-8"""
-           text: """Durante a Fase de Sistema, você pode realizar uma ação %BARRELROLL% ou %BOOST% vermelha. %LINEBREAK% <i>Errata (desde RR 1.4.2): Alterado o momento do efeito para Fase de Sistema</i>"""
-        "Vi Moradi":
-           display_name: """Vi Moradi"""
-           text: """<strong>Preparação:</strong> Após posicionar as forças, atribua a condição <b>Informação Comprometedora</b> a 1 nave inimiga."""
-        "Finn":
-           display_name: """Finn"""
-           text: """Quando você defender ou realizar um ataque, você pode adicionar 1 resultado em branco, ou, ao invés disso, você pode receber 1 ficha de desgaste para adicionar 1 resultado f."""
-        "Rose Tico":
-           display_name: """Rose Tico"""
-           text: """Quando você defender ou realizar um ataque, você pode rerrolar até 1 dos seus resultados para cada outra nave amiga no arco de ataque."""
-
-       #Resistance Transport
-        "Logistics Division Pilot":
-           display_name: """Piloto da Divisão de Logística"""
-           text: """<i class = flavor_text>Sem o suporte da Nova República, membros da Resistência frequentemente trabalham dobrado como pilotos de transporte ou mecânicos, colocando suas habilidades e conhecimento técnico em uso na luta contra a Primeira Ordem.</i>"""
-        "Pammich Nerro Goode":
-           display_name: """Pammich Nerro Goode"""
-           text: """Enquanto você tiver 2 ou menos fichas de estresse, você pode executar manobras vermelhas mesmo estressado."""
-        "Cova Nell":
-           display_name: """Cova Nell"""
-           text: """Quando você defender ou realizar um ataque primário, se a sua manobra revelada for vermelha, role 1 dado adicional."""
-        "Nodin Chavdri":
-           display_name: """Nodin Chavdri"""
-           text: """Após você coordenar ou ser coordenado, se você tiver 2 ou menos fichas de estresse, você pode realizar 1 ação de sua barra de ações como uma ação vermelha, mesmo estressado."""
-        "Taka Jamoreesa":
-           display_name: """Taka Jamoreesa"""
-           text: """Depois que você interferir, você <b>deve</b> aplicar 1 ficha de interferência em outra nave em alcance 0-1 da nave interferida, se possível."""
-
-      #X-wing T-70
-        "Blue Squadron Rookie":
-           display_name: """Novato do Esquadrão Azul"""
-           text: """<i class = flavor_text>A X-wing T-70 da Incom-FreiTek foi projetada visando aperfeiçoar ainda mais a flexibilidade tática da venerável T-65. Seu soquete avançado de droide é compatível com uma grande variedade de astromecânicos, e seus encaixes modulares de armas permitem que seu arsenal seja adaptado para missões específicas.</i>"""
-        "Red Squadron Expert":
-           display_name: """Perito do Esquadrão Vermelho"""
-           text: """<i class = flavor_text>Apesar da maior parte do Corpo de Caças Estelares da Resistência ser composta de jovens voluntários da Nova República, seus pelotões são reforçados por veteranos da Guerra Civil Galáctica determinados a concluir a tarefa que começaram décadas atrás.</i>"""
-        "Black Squadron Ace (T-70)":
-           display_name: """Ás do Esquadrão Preto"""
-           text: """<i class = flavor_text>Durante a Guerra Fria, o Esquadrão Preto de Poe Dameron realizou audaciosas operações secretas contra a Primeira Ordem resistindo aos tratados promulgados pelo Senado da Nova República.</i>"""
-        "Jaycris Tubbs":
-           display_name: """Jaycris Tubbs"""
-           text: """Após você executar completamente uma manobra azul, você pode escolher uma nave amiga em alcance 0-1. Se o fizer, a nave escolhida remove 1 ficha de estresse."""
-        "Poe Dameron (HoH)":
-           display_name: "Poe Dameron (AdE)"
-           text: """Após uma nave amiga em alcance 0-2 realizar uma ação durante a ativação dela, você pode gastar 2 %CHARGE%. Se o fizer, a nave que realizou a ação pode realizar uma ação branca, tratando-a como vermelha."""
-        "Temmin Wexley (HoH)":
-           display_name: "Temmin Wexley (AdE)"
-           text: """No início da Fase de Engajamento, cada X-wing T-70 amiga em alcance 0-3 pode receber 1 ficha de desgaste para virar sua melhoria %CONFIGURATION% equipada. Se a nave o fizer, ela ganha 1 ficha de cálculo."""
-        "C'ai Threnalli":
-           display_name: """C'ai Threnalli"""
-           text: """Após você executar completamente uma manobra, se você se moveu através de uma nave amiga, você pode realizar uma ação %EVADE%."""
-        "Nimi Chireen":
-           display_name: """Nimi Chireen"""
-           text: """Quando você realizar um ataque, se a iniciativa do defensor for maior que a sua, você pode mudar 1 resultado em branco para um resultado %FOCUS%."""
-        "Jessika Pava":
-           display_name: """Jessika Pava"""
-           text: """Quando você defender ou realizar um ataque, você pode gastar 1 %CHARGE% ou 1 %CHARGE% não recursiva de sua melhoria %ASTROMECH% equipada para rerrolar até 1 de seus dados para cada outra nave amiga em alcance 0-1."""
-        "Joph Seastriker":
-           display_name: """Joph Seastriker"""
-           text: """Após você perder 1 escudo, receba 1 ficha de desvio."""
-        "Kare Kun":
-           display_name: """Kare Kun"""
-           text: """Quando você impulsionar, você pode usar o gabarito [1 %TURNLEFT%] ou [1 %TURNRIGHT%]."""
-        "Lieutenant Bastian":
-           display_name: """Tenente Bastian"""
-           text: """Após uma nave em alcance 1-2 receber uma carta de dano, você pode adquirir uma mira nela."""
-        "Temmin Wexley":
-           display_name: """Temmin Wexley"""
-           text: """Após você executar completamente uma manobra de velocidade 2-4, você pode realizar uma ação %BOOST%."""
-        "Ello Asty":
-           display_name: """Ello Asty"""
-           text: """Após você revelar uma manobra Curva Tallon [%TROLLLEFT% ou %TROLLRIGHT%] vermelha, se você tiver 2 ou menos fichas de estresse, trate essa manobra como se ela fosse branca."""
-        "Nien Nunb":
-           display_name: """Nien Nunb"""
-           text: """Após você receber uma ficha de estresse, se houver uma nave inimiga em seu %FRONTARC% em alcance 0-1, você pode remover essa ficha de estresse."""
-        "Poe Dameron":
-           display_name: """Poe Dameron"""
-           text: """Após você realizar uma ação, você pode gastar 1 %CHARGE% para realizar uma ação branca, tratando-a como vermelha."""
-        "Venisa Doza":
-           display_name: """Venisa Doza"""
-           text: """Quando você realizar um ataque %TORPEDO% ou %MISSILE%, você pode tratar o requisito %FRONTARC% como %REARARC% para esse ataque. Se você o fizer, trate o requisito de alcance como 1-2."""
-        "Zay Versio":
-           display_name: """Zay Versio"""
-           text: """Quando você defender, se o atacante estiver danificado, você pode rerolar 1 dado de defesa."""
-        "Poe Dameron (EoD)":
-           display_name: """Poe Dameron (EoD)"""
-           text: """Depois que você realizar uma ação, você pode gastar 1 %CHARGE% para realizar uma ação branca, tratando-a como uma ação vermelha."""
-        "Jaycris Tubbs (EoD)":
-           display_name: """Jaycris Tubbs (EoD)"""
-           text: """Depois que você executar completamente uma manobra azul, você pode escolher uma nave amiga em alcance 0-1. Se o fizer, essa nave remove 1 ficha de estresse."""
-        "Stomeroni Starck (EoD)":
-           display_name: """Stomeroni Starck (EoD)"""
-           text: """<strong>Setup:</strong> Ao invés do disco de manobras da x-wing T-70, esta nave usa o disco de manobras da RZ-2."""
-        "C'ai Threnalli (EoD)":
-           display_name: """C'ai Threnalli (EoD)"""
-           text: """Depois que você executar completamente uma manobra, se você voou através de uma nave amiga, você pode realizar uma ação %EVADE%."""
-        "Ronith Blario (EoD)":
-           display_name: """Ronith Blario (EoD)"""
-           text: """Quando você defender ou realizar um ataque, se a nave inimiga estiver no %SINGLETURRETARC% de outra nave amiga, você pode gastar 1 ficha de foco daquela nave amiga para mudar 1 de seus resultados %FOCUS% para um resultado %EVADE% ou %HIT%."""
-
-      #YT-1300 Resistance
-        "Resistance Sympathizer":
-           display_name: """Simpatizante da Resistência"""
-           text: """<i class = flavor_text>Após testemunharem o Cataclisma de Hosnian, alguns espaçadores ajudaram voluntariamente a Resistência utilizando quaisquer naves que tinham.</i>"""
-        "Chewbacca (Resistance)":
-           display_name: """Chewbacca"""
-           text: """Após uma nave amiga em alcance 0-3 ser destruída, antes da nave ser removida, você pode realizar um ação. Então, você pode realizar um ataque bônus.%LINEBREAK%<i><strong>Nota:</strong>A frase "antes da nave ser removida" não está impressa na carta, mas estava no construtor oficial.</i>"""
-        "Han Solo (Resistance)":
-           display_name: """Han Solo"""
-           text: """<strong>Preparação:</strong> Você consegue ser posicionado em qualquer lugar da área de jogo além de alcance 3 de naves inimigas."""
-        "Rey":
-           display_name: """Rey"""
-           text: """Quando você defender ou realizar um ataque, se a nave inimiga estiver em seu %FRONTARC%, você pode gastar 1 %FORCE% para mudar 1 de seus resultados em branco para um resultado %EVADE% ou %HIT%."""
-        "Lando Calrissian (Resistance)":
-           display_name: """Lando Calrissian"""
-           text: """Depois que você realizar completamente uma manobra vermelha ou realizar uma ação vermelha, você pode gastar qualquer quantidade de %CHARGE% para escolher a mesma quantidade de naves amigas em alcance 0-2. As naves escolhidas podem realizar uma ação mesmo se estiverem estressadas."""
-        "Poe Dameron (YT-1300)":
-           display_name: """Poe Dameron"""
-           text: """Antes de você realizar uma manobra, você pode gastar 1 %CHARGE%. Se você o fizer, ignore obstáculos durante essa manobra.%LINEBREAK%Depois que você realizar completamente uma manobra, você pode gastar 2 %CHARGE% para realizar uma ação %BOOST% branca ou uma ação %BARRELROLL% vermelha. Então, se você realizou uma ação %BARRELROLL% vermelha, exponha 1 carta de dano, se possível."""
-
-       #Y-wing Resistance
-        "New Republic Patrol":
-           display_name: """Patrulha da Nova República"""
-           text: """<i class = flavor_text>Projetada para personalizações, a Y-wing BTA-NR2 é utilizada por várias organizações militares em toda a galáxia para diferentes funções, de naves de policiamento a bombardeiros de guerra.</i>"""
-        "Kijimi Spice Runner":
-           display_name: """Contrabandista de Kijimi"""
-           text: """<i class = flavor_text>Liderados por Zorii Bliss, os Contrabandistas de Especiarias de Kijimi deixaram de lado suas vidas mercenárias para enfrentar a Ordem Final na Batalha de Exogol.</i>"""
-        "Corus Kapellim":
-           display_name: """Corus Kapellim"""
-           text: """Antes de você engajar, você pode escolher 1 nave em seu arco de tiro em alcance 0-1. Se o fizer, transfira 1 ficha verde da nave escolhida para você."""
-        "C'ai Threnalli (Y-Wing)":
-           display_name: """C'ai Threnalli"""
-           text: """Após você executar completamente uma manobra, se você se moveu através de uma nave amiga, você pode realizar uma ação %EVADE%."""
-        "Lega Fossang":
-           display_name: """Lega Fossang"""
-           text: """Quando você realizar um ataque primário ou %TURRET%, você pode rerrolar 1 dado de ataque para cada dispositivo aliado ou nave amiga calculando no arco de ataque."""
-        "Shasa Zaro":
-           display_name: """Shasa Zaro"""
-           text: """Após você defender, você pode escolher uma nave amiga em seu %FULLREARARC% em alcance 0-2 e 1 de suas fichas verdes. Se o fizer, a nave escolhida ganha uma ficha correspondente."""
-        "Teza Nasz":
-           display_name: """Teza Nasz"""
-           text: """Quando uma nave amiga em alcance 0-2 realizar um ataque, se o defensor tiver uma nave amiga do atacante em cada um de seus arcos laterais (%LEFTARC% e %RIGHTARC%), o atacante pode rerrolar 1 dado de ataque."""
-        "Wilsa Teshlo":
-           display_name: """Wilsa Teshlo"""
-           text: """Após você realizar um ataque, se o defensor recebeu uma carta de dano virada para cima, o defensor recebe 1 ficha de desgaste a menos que o defensor escolha 1 %CHARGE% não recursiva de 1 de suas melhorias equipadas e perca a %CHARGE% escolhida."""
-        "Aftab Ackbar":
-           display_name: """Aftab Ackbar"""
-           text: """Após você executar completamente uma manobra básica vermelha ou realizar uma ação vermelha, se você tiver exatamente 1 ficha de estresse, você pode ganhar 1 ficha de desgaste para remover a ficha de estresse."""
-        "Zorii Bliss":
-           display_name: """Zorii Bliss"""
-           text: """Após uma nave em alcance 1 realizar uma ação durante sua etapa Realizar Ação, se a ação realizada estiver em sua barra de ações, você pode gastar 1 %CHARGE% para realizar a ação, tratando-a como vermelha."""
-
-    #Separatist
-        #Belbulab
-        "Feethan Ottraw Autopilot":
-           display_name: """Autopiloto da Feethan Ottraw"""
-           text: """<i class = flavor_text>Ao contrário dos caças mais descartáveis que também construiu para os Separatistas, a Feethan Ottraw Scalable Assemblies projetou o Belbullab-22 com uma sólida mistura de poder de fogo, durabilidade e velocidade.</i>"""
-        "Skakoan Ace":
-           display_name: """Ás dos Skakoan"""
-           text: """<i class = flavor_text>Com seus poderosos motores, devastadores canhões de laser triplo e alta personalização, o Belbullab-22 é a nave escolhida por vários pilotos de elite da Aliança Separatista, incluindo o infame General Grievous.</i>"""
-        "Wat Tambor":
-           display_name: """Wat Tambor"""
-           text: """Quando você realizar um ataque primário, você pode rerrolar 1 dado de ataque para cada nave amiga calculando em alcance 1 do defensor."""
-        "General Grievous":
-           display_name: """General Grievous"""
-           text: """Quando você realizar um ataque primário, se você não estiver no arco de tiro do defensor, você pode rerrolar até 2 dados de ataque."""
-        "Captain Sear":
-           display_name: """Capitão Sear"""
-           text: """Quando uma nave amiga em alcance 0-3 realizar um ataque primário, se o defensor estiver no %BULLSEYEARC% do atacante, antes da etapa Neutralizar Resultados, a nave amiga pode gastar 1 ficha de cálculo para cancelar 1 resultado %EVADE%."""
-
-       #Hyena
-        "Techno Union Bomber":
-           display_name: """Bombardeiro da União Tecnológica"""
-           text: """<i class = flavor_text>A Baktoid Armor Workshop desenvolveu a Hyena como uma nave de combate compatível com as táticas de enxame dos Vultures da Federação do Comércio.</i>"""
-        "Separatist Bomber":
-           display_name: """Bombardeiro Separatista"""
-           text: """<i class = flavor_text>Os exércitos droides dos Separatistas são insensíveis ao sofrimento dos civis e não se esforçam para limitar os danos colaterais.</i>"""
-        "Baktoid Prototype":
-           display_name: """Protótipo da Baktoid"""
-           text: """Quando você realizar um ataque especial, se uma nave amiga com a habilidade de nave <b>Cálculos Interligados</b> tiver uma mira no defensor, você pode ignorar o requisito %FOCUS%, %CALCULATE% ou %LOCK% do ataque."""
-        "Bombardment Drone":
-           display_name: """Drone de Bombardeio"""
-           text: """Se você for soltar um dispositivo, você pode, ao invés disso, lançá-lo, usando o mesmo gabarito."""
-        "DBS-404":
-           display_name: """DBS-404"""
-           text: """Quando você realiza um ataque em alcance 1, você <B>deve</B> rolar 1 dado de ataque adicional.  Após o ataque acertar, sofra 1 dano %CRIT%.%LINEBREAK%<i>Errata (Desde RR 1.4): Alterada a restrição da habilidade"</i>"""
-        "DBS-32C":
-           display_name: """DBS-32C"""
-           text: """No início da Fase de Engajamento, você pode gastar 1 ficha de cálculo para realizar uma ação %COORDINATE%. Você não pode coordenar naves que não possuem a habilidade de nave <b>Cálculos Interligados</b>."""
-        "Baktoid Prototype (SoC)":
-           display_name: """Baktoid Prototype (CdC)"""
-           text: """Quando você realizar um ataque especial, se uma nave amiga com a habilidade de nave <b>Cálculos Interligados</b> tiver uma mira no defensor, você pode ignorar o requisito %FOCUS%, %CALCULATE% ou %LOCK% do ataque."""
+        # Siege of Coruscant Pilots
+        "Anakin Skywalker (SoC)":
+           display_name: """Anakin Skywalker (CdC)"""
+           text: """Depois que você ou uma nave amiga <b>Obi-Wan Kenobi</b> em alcance 0-3 realiza completamente uma manobra, se houver mais naves inimigas do que outras naves amigas em alcance 0-1 dessa nave, você pode gastar 1 %FORCE%. Se você fizer isso, essa nave pode realizar uma ação %BARRELROLL%."""
+        "Obi-Wan Kenobi (SoC)":
+           display_name: """Obi-Wan Kenobi (CdC)"""
+           text: """Depois que você ou uma nave amiga <b>Anakin Skywalker</b> em alcance 0-3 realiza completamente uma manobra, se houver mais naves inimigas do que outras naves amigas em alcance 0-1 dessa nave, você pode gastar 1 %FORCE%. Se você fizer isso, essa nave pode realizar uma ação %BOOST%."""
+        "Shaak Ti (SoC)":
+           display_name: """Shaak Ti (CdC)"""
+           text: """No começo da Fase Final, você pode realizar uma ação %COORDINATE% roxa, mesmo se estiver estressado.%LINEBREAK%Depois que você realizar uma ação %COORDINATE%, se a nave escolhida possuir a a habilidade de nave  <b>Nascido para Isso</b>, você pode coordenar 1 nave adicional."""
+        '"Odd Ball" (SoC)':
+           display_name: """“Odd Ball” (CdC)"""
+           text: """Depois que você realizar completamente uma manobra vermelha ou realizar uma ação vermelha, você pode escolher uma nave amiga em alcance 0-3 e uma nave inimiga em alcance 0-1. A nave amiga escolhida adquire uma mira na nave inimiga."""
+        '"Wolffe" (SoC)':
+           display_name: """“Wolffe” (CdC)"""
+           text: """Quando você realizar um ataque primário %FRONTARC%, você pode gastar 1 %CHARGE% para rerolar 1 dado de ataque.%LINEBREAK%Quando você realizar um ataque primário %REARARC%, você pode recuperar 1 %CHARGE% para rolar 1 dado de ataque adicional."""
+        '"Jag" (SoC)':
+           display_name: """“Jag” (CdC)"""
+           text: """Depois que uma nave amiga em alcance 0-2 em seu %LEFTARC% ou %RIGHTARC% realiza um ataque, se você não estiver desgastado, você pode adquirir uma mira no defensor."""
+        '"Contrail" (SoC)':
+           display_name: """“Contrail” (SoC)"""
+           text: """Quando você defender ou realizar um ataque se a direção da sua manobra revelada for igual a da nave inimiga, você pode mudar um dos resultados %FOCUS% da nave inimiga para um resultado em branco."""
+        '"Klick" (SoC)':
+           display_name: """“Klick” (SoC)"""
+           text: """Quando uma nave que você tenha mira em alcance 1-3 defender ou realizar um ataque, você pode gastar 1 %CHARGE% para evitar que bônus de alcance sejam aplicados."""
+        '"Kickback" (SoC)':
+           display_name: """“Kickback” (SoC)"""
+           text: """Depois que você realizar uma ação %BARRELROLL%, você pode realizar uma ação %LOCK% vermelha. Se você o fizer, antes de realizar a ação %LOCK%, você pode receber 1 ficha de desgaste para tratar a ação como branca."""
+        '"Axe" (SoC)':
+           display_name: """“Axe” (SoC)"""
+           text: """Depois que você realizar um ataque, você pode escolher outra nave amiga com a habilidade <strong>Nascido para Isso</strong> em alcance 0-2 em seu %LEFTARC% ou %RIGHTARC%. A nave escolhida trava uma mira no defensor."""
+        "Count Dooku (SoC)":
+           display_name: """Conde Dookan (CdC)"""
+           text: """Durante um ataque, antes que uma nave em alcance 0-2 role dados de ataque ou dados de defesa, se todas as suas %FORCE% estiverem ativas, você pode gastar 1 %FORCE% e nomear um resultado, se a rolagem não contiver o resultado nomeado, a nave deve mudar 1 dado para aquele resultado."""
         "DBS-32C (SoC)":
            display_name: """DBS-32C (CdC)"""
            text: """Depois que você realizar uma ação %CALCULATE%, você pode gastar 1 %CHARGE% para realizar uma ação %JAM%."""
         "DBS-404 (SoC)":
            display_name: """DBS-404 (CdC)"""
            text: """Quando você realiza um ataque em alcance 1, você <B>deve</B> rolar 1 dado de ataque adicional.  Após o ataque acertar, sofra 1 dano %CRIT%."""
-
-       #Vulture
-        "Trade Federation Drone":
-           display_name: """Drone da Federação do Comércio"""
-           text: """<i class = flavor_text>A Federação do Comércio usou incontáveis droides Vulture na batalha de Naboo e continua a usar esses caças econômicos nas Guerras Clônicas.</i>"""
-        "Separatist Drone":
-           display_name: """Drone Separatista"""
-           text: """<i class = flavor_text>Com a escalada das Guerras Clônicas, a Aliança Separatista continua a desenvolver a tecnologia de caças estelares droides, assim como os droides táticos que os comandam.</i>"""
-        "Haor Chall Prototype":
-           display_name: """Haor Chall Prototype"""
-           text: """Após uma nave inimiga em seu %BULLSEYEARC% em alcance 0-2 declarar outra nave amiga como defensora, você pode realizar uma ação %CALCULATE% ou %LOCK%."""
-        "DFS-081":
-           display_name: """DFS-081"""
-           text: """Quando uma nave amiga em alcance 0-1 defender, ela pode gastar 1 ficha de cálculo para mudar todos os resultados %CRIT% para resultados %HIT%."""
-        "DFS-311":
-           display_name: """DFS-311"""
-           text: """No início da Fase de Engajamento, você pode transferir 1 de suas fichas de cálculo para outra nave amiga em alcance 0-3."""
-        "Precise Hunter":
-           display_name: """Caçador Preciso"""
-           text: """Quando você realizar um ataque, se o defensor estiver em seu %BULLSEYEARC%, você pode rerrolar 1 resultado em branco."""
-        "The Iron Assembler":
-           display_name: """O Montador de Ferro"""
-           text: """Depois que uma nave amiga em alcance 0-1 pula sua fase de realizar manobra, você pode gastar 1 %CHARGE%. Se você fizer isso, e houver um asteróide ou nuvem de destroços em alcance 0 dela, essa nave pode consertar 1 dano."""
-        "Kelrodo-Ai Holdout":
-           display_name: """Resistência de Kelrodo-Ai"""
-           text: """Depois que você for destruído, você pode transferir cada uma de suas miras e fichas verdes para outra <b>Resistência de Kelrodo-Ai</b> em alcance 0-3."""
+        "Baktoid Prototype (SoC)":
+           display_name: """Baktoid Prototype (CdC)"""
+           text: """Quando você realizar um ataque especial, se uma nave amiga com a habilidade de nave <b>Cálculos Interligados</b> tiver uma mira no defensor, você pode ignorar o requisito %FOCUS%, %CALCULATE% ou %LOCK% do ataque."""
+        "DIS-347 (SoC)":
+           display_name: """DIS-347 (CdC)"""
+           text: """No início da Fase de Engajamento, você pode adquirir uma mira em um objeto em alcance 1-3 que está com uma mira amiga."""
+        "DIS-T81 (SoC)":
+           display_name: """DIS-T81 (CdC)"""
+           text: """Quando você defender ou realizar um ataque, você pode rerolar qualquer quantidade de dados. Então, se você estava defendendo, receba 1 ficha de desgaste para cada dado que foi rerolado. Ou então, se você estava atacando, recebe 1 ficha de exaustão para cada dado que foi rerolado."""
+        "Phlac-Arphocc Prototype (SoC)":
+           display_name: """Protótipo da Phlac-Arphocc (CdC)"""
+           text: """No começo da Fase de Engajamento, se houver uma nave inimiga em seu %BULLSEYEARC%, receba uma ficha de cálculo."""
         "DFS-081 (SoC)":
            display_name: """DFS-081 (CdC)"""
            text: """Quando estiver defendendo, você pode gastar 1 %CHARGE% e 1 ficha de cálculo para cancelar 1 resultado %CRIT%."""
@@ -2527,148 +2222,150 @@ exportObj.cardLoaders.Português = () ->
            display_name: """Protótipo de Haor Chall (CdC)"""
            text: """Depois que uma nave inimiga em seu %BULLSEYEARC% declarar um objeto no cenário ou outra nave amiga como o defensor, você pode realizar uma ação %CALCULATE% ou %LOCK%."""
 
-       #Nantex
-        "Sun Fac":
-           display_name: """Sun Fac"""
-           text: """Quando você realizar um ataque primário, se o defensor estiver tracionado, role 1 dado de ataque adicional."""
-        "Stalgasin Hive Guard":
-           display_name: """Guarda da Colméia de Stalgasin"""
-           text: """<i class = flavor_text>Projetados para a fisiologia única dos pilotos Geonosianos, os caças estelares classe Nantex são capazes de manobras que destruiriam a maioria das naves - e pilotos.</i>"""
-        "Petranaki Arena Ace":
-           display_name: """Ás da Arena Petranaki"""
-           text: """<i class = flavor_text>A Arena Petranaki é uma construção enorme em Geonosis que foi um local chave na primeira batalha das Guerras Clônicas.</i>"""
-        "Berwer Kret":
-           display_name: """Berwer Kret"""
-           text: """Após você realizar um ataque que acerte, cada nave amiga com a em sua barra de ação %CALCULATE% com uma mira no defensor pode realizar uma ação %CALCULATE% vermelha."""
-        "Chertek":
-           display_name: """Chertek"""
-           text: """Quando você realizar um ataque primário, se o defendor estiver tracionado, você pode rerrolar até 2 dados de ataque."""
-        "Gorgol":
-           display_name: """Gorgol"""
-           text: """Durante a Fase de Sistema, você pode receber 1 ficha de desarmamento e escolher uma nave amiga em alcance 1-2. Se o fizer, a nave escolhida recebe 1 ficha de tração, então repara 1 de suas cartas de dano viradas para cima com o atributo Nave."""
+        # TIE Bomber (TBE)
+        '"Deathfire" (TBE)':
+           display_name: """“Deathfire” (TBE)"""
+           text: """Depois que você realizar completamente uma manobra 3-5, se você não tiver soltado ou lançado um dispositivo nessa rodada, você pode gastar 2 %CHARGE% para soltar ou lançar uma bomba usando o gabarito [3 %STRAIGHT%]."""
+        "Major Rhymer (TBE)":
+           display_name: """Major Rhymer (TBE)"""
+           text: """Quando você realizar um ataque %TORPEDO%, se o defensor estiver em seu %BULLSEYEARC%, mude 1 resultado %FOCUS% para um resultado %CRIT%."""
+        "Captain Jonus (TBE)":
+           display_name: """Capitão Jonus (TBE)"""
+           text: """Depois que você soltar ou lançar um dispositivo, receba uma ficha de desvio."""
+        "Tomax Bren (TBE)":
+           display_name: """Tomax Bren (TBE)"""
+           text: """Depois que você realizar uma ação %BARRELROLL%, você pode gastar 2 %CHARGE%. Se você fizer isso, receba uma ficha de foco."""
 
-       #Tri-Fighter
-        "Separatist Interceptor":
-           display_name: """Interceptador Separatista"""
-           text: """<i class = flavor_text>Introduzidos no final das Guerras Clônicas, esses caças estelares agressivos e os destrutivos buzz droides que carregam representam uma séria ameaça até mesmo para pilotos Jedi veteranos.</i>"""
-        "Colicoid Interceptor":
-           display_name: """Interceptador Colicóide"""
-           text: """<i class = flavor_text>Projetados pela Colicoid Creation Nest e fabricados pela Phlac-Arphocc Automata Industries, os processadores heurísticos dos Droid Tri-Fighters permitem que essas naves letais analisem e se adaptem às táticas inimigas em voo.</i>"""
-        "Phlac-Arphocc Prototype":
-           display_name: """Protótipo da Phlac-Arphocc"""
-           text: """Durante a Fase de Sistema, você pode gastar uma mira sua que está em uma nave para olhar o disco daquela nave."""
-        "Fearsome Predator":
-           display_name: """Predador Terrível"""
-           text: """<strong>Preparação:</strong> Após posicionar as forças, atribua a condição <b>Presa Assustada</b> a 1 nave inimiga."""
-        "DIS-347":
-           display_name: """DIS-347"""
-           text: """No início da Fase de Engajamento, você pode adquirir uma mira em um objeto em alcance 1-3 que está com uma mira amiga."""
-        "DIS-T81":
-           display_name: """DIS-T81"""
-           text: """Quando você defender ou realizar um ataque, você pode gastar 1 ficha de cálculo de uma nave amiga no arco de tiro da nave inimiga para mudar 1 resultado %FOCUS% para um resultado %EVADE% ou %HIT%."""
-        "DIS-347 (SoC)":
-           display_name: """DIS-347 (CdC)"""
-           text: """No início da Fase de Engajamento, você pode adquirir uma mira em um objeto em alcance 1-3 que está com uma mira amiga."""
-        "DIS-T81 (SoC)":
-           display_name: """DIS-T81 (CdC)"""
-           text: """Quando você defender ou realizar um ataque, você pode rerolar qualquer quantidade de dados. Então, se você estava defendendo, receba 1 ficha de desgaste para cada dado que foi rerolado. Ou então, se você estava atacando, recebe 1 ficha de exaustão para cada dado que foi rerolado."""
-        "Phlac-Arphocc Prototype (SoC)":
-           display_name: """Protótipo da Phlac-Arphocc (CdC)"""
-           text: """No começo da Fase de Engajamento, se houver uma nave inimiga em seu %BULLSEYEARC%, receba uma ficha de cálculo."""
+        "Dash Rendar (YLF)":
+           display_name: """Dash Rendar (YLF)"""
+           text: """Durante a Fase de Engajamento, você ignora os efeitos dos obstáculos que você estiver sobrepondo."""
+        "Dash Rendar (YLF-SL)":
+           display_name: """Dash Rendar (YLF-SL)"""
+           text: """Depois que você receber uma ficha vermelha como resultado de se mover através ou sobrepor um obstáculo, você pode transferir esta ficha vermelha para uma nave amiga em alcance 0-1."""
+        "Dash Rendar (Scum)":
+           display_name: """Dash Rendar"""
+           text: """Depois que você receber uma ficha vermelha como resultado de se mover através ou sobrepor um obstáculo, você pode transferir esta ficha vermelha para uma nave amiga em alcance 0-1."""
+        '"Leebo" (YLF)':
+           display_name: """“Leebo” (YLF)"""
+           text: """Depois que você se defender ou realizar um ataque, se você gastou uma ficha de cálculo, receba 1 ficha de cálculo."""
+        '"Leebo" (YLF-SL)':
+           display_name: """“Leebo” (YLF-SL)"""
+           text: """No final da Fase de Engajamento, você pode gastar uma ficha de cálculo para adquirir uma mira em uma nave inimiga em alcance 2-3."""
+        '"Leebo" (Scum)':
+           display_name: """“Leebo”"""
+           text: """No começo da Fase de Engajamento, você pode gastar uma ficha de cálculo para adquirir uma mira em uma nave inimiga em alcance 2-3."""
+
+        # Hotshots and Aces 2
+        "Corran Horn (X-Wing)":
+           display_name: """Corran Horn"""
+           text: """Depois de declarar o defensor de um ataque, se você possuir uma mira no defensor, uma nave amiga pode transferir uma mira que tenha em você para o defensor."""
+        "Wes Janson":
+           display_name: """Wes Janson"""
+           text: """Depois que você realizar um ataque, você pode gastar 1 %CHARGE% para que o defensor receba 1 ficha de interferência.%LINEBREAK%Depois que você defender, você pode gastar 1 %CHARGE% para que o atacante receba 1 ficha de interferência."""
+        "Tycho Celchu":
+           display_name: """Tycho Celchu"""
+           text: """Enquanto você possuir 2 fichas de estresse ou menos, você pode realizar ações, mesmo se estiver estressado."""
+        "Keo Venzee":
+           display_name: """Keo Venzee"""
+           text: """Se você não tiver %FORCE% ativa, depois que você revelar uma manobra curva [%BANKLEFT% ou %BANKRIGHT%] ou curva fechada [%TURNLEFT% ou %TURNRIGHT%], você pode aumentar a dificuldade da manobra, se o fizer, realize essa manobra como uma derrapagem e recupere 1 %FORCE%."""
+        '"Pops" Krail':
+           display_name: """“Pops” Krail"""
+           text: """Depois que você executar completamente uma manobra branca, você pode escolher uma nave amiga em alcance 0-1. A nave escolhida pode realizar uma ação %FOCUS%."""
+        "Flight Leader Ubbel":
+           display_name: """Líder de Vôo Ubbel"""
+           text: """Depois que uma nave amiga em alcance 0-2 defender, se ela recebeu uma carta de dano, você pode realizar um ataque bônus contra o atacante."""
+        "Juno Eclipse":
+           display_name: """Juno Eclipse"""
+           text: """Depois de você realizar uma ação, você pode realizar uma ação %BOOST% vermelha."""
+        "Second Sister":
+           display_name: """Segunda Irmã"""
+           text: """Quando você realizar um ataque, depois do passo Neutralizar Resultados, se o ataque tiver acertado, você pode gastar 2 %FORCE%. Se o fizer, mude todos os seus resultados %HIT% para resultados %CRIT%."""
+        "Magna Tolvan":
+           display_name: """Magna Tolvan"""
+           text: """Enquanto você possuir 2 fichas de estresse ou menos, você pode realizar ações brancas, mesmo estressado.%LINEBREAK%Depois que você receber uma ficha de estresse, você pode realizar uma ação branca, se possível."""
+        "Yrica Quell":
+           display_name: """Yrica Quell"""
+           text: """Depois que você realizar completamente uma manobra, você pode adquirir uma mira em uma nave inimiga em seu %BULLSEYEARC%."""
+        "Poe Dameron (YT-1300)":
+           display_name: """Poe Dameron"""
+           text: """Antes de você realizar uma manobra, você pode gastar 1 %CHARGE%. Se você o fizer, ignore obstáculos durante essa manobra.%LINEBREAK%Depois que você realizar completamente uma manobra, você pode gastar 2 %CHARGE% para realizar uma ação %BOOST% branca ou uma ação %BARRELROLL% vermelha. Então, se você realizou uma ação %BARRELROLL% vermelha, exponha 1 carta de dano, se possível."""
+        "Lando Calrissian (Resistance)":
+           display_name: """Lando Calrissian"""
+           text: """Depois que você realizar completamente uma manobra vermelha ou realizar uma ação vermelha, você pode gastar qualquer quantidade de %CHARGE% para escolher a mesma quantidade de naves amigas em alcance 0-2. As naves escolhidas podem realizar uma ação mesmo se estiverem estressadas."""
+        "Venisa Doza":
+           display_name: """Venisa Doza"""
+           text: """Quando você realizar um ataque %TORPEDO% ou %MISSILE%, você pode tratar o requisito %FRONTARC% como %REARARC% para esse ataque. Se você o fizer, trate o requisito de alcance como 1-2."""
+        "Zay Versio":
+           display_name: """Zay Versio"""
+           text: """Quando você defender, se o atacante estiver danificado, você pode rerolar 1 dado de defesa."""
+        "Taka Jamoreesa":
+           display_name: """Taka Jamoreesa"""
+           text: """Depois que você interferir, você <b>deve</b> aplicar 1 ficha de interferência em outra nave em alcance 0-1 da nave interferida, se possível."""
+        "Hondo Ohnaka":
+           display_name: """Hondo Ohnaka"""
+           text: """<strong>Ação: </strong>Escolha 2 naves em alcane 1-3 de você que sejam amigas entre si. Coordene uma das naves escolhidas, e interfira na outra, ignorando restrições de alcance."""
+        "Tor Phun":
+           display_name: """Tor Phun"""
+           text: """Depois que você realizar um ataque, se o defensor foi destruído, você pode realizar uma ação, mesmo se estiver estressado. E então você pode receber 2 fichas de desgaste para realizar um ataque bônus."""
+        "Durge":
+           display_name: """Durge"""
+           text: """Quando você defender, depois da etapa de Neutralizar Resultados, se houver mais resultado %HIT%/%CRIT% do que seus %SHIELD% ativos, você pode mudar 1 resultado %HIT% para um resultado %CRIT% e cancelar 1 resultado %HIT%."""
+        "Doctor Aphra":
+           display_name: """Dra. Aphra"""
+           text: """Antes de você engajar, você pode gastar 1 ficha verde e 1 %CHARGE%. Se o fizer, você pode escolher outra nave em alcance 0-1 que não esteja estressada. A nave escolhida recebe 1 ficha de estresse."""
+        "Lapin":
+           display_name: """Lapin"""
+           text: """Quando você defender ou realizar um ataque, se a nave inimiga estiver estressada, os dados dessa nave não podem ser modificados. %LINEBREAK% <i>Errata (since rules reference 1.4.5): Changed Initiative value on the card to match the correct value on the ship token."""
         "Volan Das":
            display_name: """Volan Das"""
            text: """Depois que você executar completamente uma manobra vermelha, você pode escolher uma nave inimiga em alcance 1. A nave escolhida recebe 1 ficha de desgaste e você você remover 1 ficha de estresse."""
-
-       #Infiltrator
-        "Dark Courier":
-           display_name: """Dark Courier"""
-           text: """<i class = flavor_text>A nave chamada Scimitar foi muito modificada, equipada com tecnologias de camuflagem e dispositivos de vigilância avançados para missões de infiltração e assassinato.</i>"""
-        "0-66":
-           display_name: """0-66"""
-           text: """Após você defender, você pode gastar 1 ficha de cálculo para realizar uma ação."""
-        "Count Dooku":
-           display_name: """Conde Dookan"""
-           text: """Após você defender, se o atacante estiver em seu arco de tiro, você pode gastar 1 %FORCE% para remover 1 de suas fichas azuis ou vermelhas.%LINEBREAK%Após você realizar um ataque que acerte, você pode gastar 1 %FORCE% para realizar uma ação."""
-        "Count Dooku (SoC)":
-           display_name: """Conde Dookan (CdC)"""
-           text: """Durante um ataque, antes que uma nave em alcance 0-2 role dados de ataque ou dados de defesa, se todas as suas %FORCE% estiverem ativas, você pode gastar 1 %FORCE% e nomear um resultado, se a rolagem não contiver o resultado nomeado, a nave deve mudar 1 dado para aquele resultado."""
-        "Darth Maul":
-           display_name: """Darth Maul"""
-           text: """Após você realizar um ataque, você pode gastar 2 %FORCE% para realizar um ataque primário bônus contra um alvo diferente. Se o seu ataque errou, você pode realizar o ataque primário bônus, ao invés disso, contra o mesmo alvo."""
-
-       #HMP
-        "Baktoid Drone":
-           display_name: """Drone da Baktoid"""
-           text: """<i class = flavor_text>Um desenvolvimento tardio na guerra para a Confederação dos Sistemas Independentes, a nave de ataque droide usa repulsores especializados para bombardear agilmente alvos e destacar precisamente droides de batalha.</i>"""
-        "Separatist Predator":
-           display_name: """Predador Separatista"""
-           text: """<i class = flavor_text>Armado com artilharia e protegido por escudos, uma nave de ataque droide pode devastar formações de infantaria da República e caças estelares com a mesma proficiência.</i>"""
-        "DGS-286":
-           display_name: """DGS-286"""
-           text: """Antes de você engajar, você pode escolher outra nave amiga em alcance 0-1. A nave escolhida transfere 1 ficha de cálculo para você."""
-        "DGS-047":
-           display_name: """DGS-047"""
-           text: """Após você realizar um ataque, se o defensor estiver em seu %FRONTARC%, você pode adquirir uma mira nele. Se o defensor estiver em seu %BULLSEYEARC%, ele recebe 1 ficha de desgaste."""
-        "Geonosian Prototype":
-           display_name: """Protótipo Geonosiano"""
-           text: """Quando você realizar um ataque %MISSILE% ou %CANNON%, você pode remover 1 ficha de tração do defensor para rerrolar até 2 dados de ataque."""
-        "Onderon Oppressor":
-           display_name: """Opressor de Onderon"""
-           text: """Após você realizar uma pirueta ou derrapagem, se você estiver estressado, receba 1 ficha de cálculo."""
-
-       #Firespray Separatist
-        "Separatist Racketeer":
-           display_name: """Extorsionário Separatista"""
-           text: """<i class = flavor_text>Encorajados pelo amargo impasse dos Cercos da Orla Exterior, grupos mercenários de toda a galáxia aproveitam a oportunidade para lucrar com a guerra em andamento.</i>"""
-        "Boba Fett (Separatist)":
-           display_name: """Boba Fett"""
-           text: """Quando você defender, se não houver outras naves amigas em alcance 0-2, você pode mudar 1 dos seus resultados em branco para um resultado %FOCUS%."""
-        "Zam Wesell":
-           display_name: """Zam Wesell"""
-           text: """<strong>Preparação:</strong> Perca 2 %CHARGE%.%LINEBREAK% Durante a Fase de Sistema, você pode atribuir uma das suas condições secretas virada para baixo a você mesmo: <strong>%LINEBREAK%Você Deveria Me Agradecer %LINEBREAK%É Melhor Falar Sério. </strong>"""
-        "Jango Fett":
-           display_name: """Jango Fett"""
-           text: """Quando você defender ou realizar um ataque primário, se a dificuldade da sua manobra revelada for menor que a da nave inimiga, você pode mudar 1 dos resultados %FOCUS% da nave inimiga para um resultado em branco."""
         "Aurra Sing":
            display_name: """Aurra Sing"""
-           text: """Antes de você engajar, você pode gastar 1 %FORCE% para escolher 2 naves inimigas em alcance 0-1. Transfira qualquer quantidade de fichas entre essas duas naves."""
-
-       #Rogue-Class Separatist
-        "Cad Bane (Separatist)":
-           display_name: """Cad Bane"""
-           text: """Durante a Fase de Engajamento, depois que outra nave em alcance 0-3 for destruída, você pode gastar 1 %CHARGE% para realizar uma ação, mesmo se estiver estressado"""
+           text: """Antes de você engajar, você pode gastar 1 %FORCE% para escolher 2 naves inimigas em alcance 0-1. Transfira qualquer quantidade de fichas vermelhas e laranjas entre essas duas naves."""
         "Durge (Separatist)":
            display_name: """Durge"""
            text: """Quando você seria destruído, você pode gastar 1 %CHARGE% para revelar todas as suas cartas viradas para baixo. Se você fizer isso, descarte todos os <strong>Tiro Direto!</strong> e cada carta do tipo <strong>Piloto</strong>, e então conserte todas suas cartas de dano viradas para cima."""
-        "IG-101":
-           display_name: """IG-101"""
-           text: """No começo da Fase de Sistema, você pode consertar 1 carta de dano virada para cima."""
-        "IG-102":
-           display_name: """IG-102"""
-           text: """Quando você estiver defendendo, se a iniciativa do atacante for maior ou igual a sua, você pode mudar 1 resultado em branco para um resultado %FOCUS%."""
-        "IG-111":
-           display_name: """IG-111"""
-           text: """Depois que você realizar um ataque que errou, você pode escolher 1 nave inimiga em seu %BULLSEYEARC% e receber 1 ficha de exaustão. Se você fizer isso, essa nave sofre 1 dano %HIT%."""
-        "MagnaGuard Executioner":
-           display_name: """Executor da MagnaGuard"""
-           text: """<i class = flavor_text>Além de proteger os líderes Separatistas, os droides MagnaGuard muitas vezes são despachados em Caças Estelares Classe Rogue para eliminar seus inimigos</i>"""
-        "MagnaGuard Protector":
-           display_name: """MagnaGuard Protector"""
-           text: """<strong>Preparação:</strong> Depois de posicionar forças, atribua a condição Protegido a 1 nave amiga que não seja um <strong>Protetor MagnaGuard</strong>."""
+        "The Iron Assembler":
+           display_name: """O Montador de Ferro"""
+           text: """Depois que uma nave amiga em alcance 0-1 pula sua fase de realizar manobra, você pode gastar 1 %CHARGE%. Se você fizer isso, e houver um asteróide ou nuvem de destroços em alcance 0 dela, essa nave pode consertar 1 dano."""
+        "Kelrodo-Ai Holdout":
+           display_name: """Resistência de Kelrodo-Ai"""
+           text: """Depois que você for destruído, você pode transferir cada uma de suas miras e fichas verdes para outra <b>Resistência de Kelrodo-Ai</b> em alcance 0-3. %LINEBREAK% <i>Errata (since rules reference 1.4.5): Changed Initiative value on the card to match the correct value on the ship token."""
+        "Lieutenant Galek":
+           display_name: """Tenente Galek"""
+           text: """Depois que outra nave amiga em alcance 0-2 for destruída, você pode realizar uma ação %COORDINATE%, mesmo se estiver estressado. Quando você coordenar, a nave que você escolher só poderá realizar uma ação se esta ação também estiver na sua barra de ações."""
+        "Jul Jerjerrod":
+           display_name: """Jul Jerjerrod"""
+           text: """Depois que você realizar uma ação %BOOST%, você pode gastar 1 %CHARGE% para remover 1 ficha laranja ou vermelha que não seja uma mira."""
+        "DT-798":
+           display_name: """DT-798"""
+           text: """Quando você realizar um ataque primário, se você não estiver desgastado, você pode receber 1 ficha de desgaste para rolar 1 dado adicional"""
+        "Lin Gaava":
+           display_name: """Lin Gaava"""
+           text: """<strong>Preparação:</strong> Depois de posicionar as forças, aplique a condição <strong>Preparado para velocidade</strong> a você e mais 2 outras caças TIE/fo ou TIE/sf amigas que não possuam melhorias %MODIFICATION% equipadas."""
+        "Agent Tierny":
+           display_name: """Agente Tierny"""
+           text: """<strong>Preparação:</strong> Depois de posicionar forças, você <b>deve</b> aplicar a condição <strong>Confiança Quebrada</strong> a uma nave inimiga."""
+        "Adi Gallia":
+           display_name: """Adi Gallia"""
+           text: """Quando você se defender de um ataque em alcance 1, você pode gastar 1 %FORCE%. Se o fizer, o atacante não pode aplicar o bônus de alcance.%LINEBREAK%Quando você realizar um ataque contra um defensor em alcance 3, você pode gastar 1 %FORCE%. Se o fizer, o defensor não pode aplicar o bônus de alcance."""
+        "Adi Gallia (Delta-7B)":
+           display_name: """Adi Gallia"""
+           text: """Quando você se defender de um ataque em alcance 1, você pode gastar 1 %FORCE%. Se o fizer, o atacante não pode aplicar o bônus de alcance.%LINEBREAK%Quando você realizar um ataque contra um defensor em alcance 3, você pode gastar 1 %FORCE%. Se o fizer, o defensor não pode aplicar o bônus de alcance."""
+        '"Sicko"':
+           display_name: """“Sicko”"""
+           text: """Depois que você realizar uma manobra básica, você pode atribuir a condição <strong>Manobra Nauseante</strong> a você mesmo."""
+        "Kit Fisto":
+           display_name: """Kit Fisto"""
+           text: """Quando outra nave amiga defender, se o atacante estiver no %BULLSEYEARC% dela, você pode gastar 1 %FORCE% para mudar 1 dos resultados em branco do defensor para um resultado %FOCUS%."""
+        '"Slammer"':
+           display_name: """“Slammer”"""
+           text: """Depois que você realizar uma manobra, você pode gastar 2 %CHARGE% para realizar uma ação %SLAM%, mesmo se estiver estressado."""
+        "Gavyn Sykes":
+           display_name: """Gavyn Sykes"""
+           text: """Quando você defender ou realizar um ataque, se a velocidade da sua manobra revelada for maior do que a da nave inimiga, você pode rerolar seus resultados em branco."""
 
-       #Gauntlet Separatist
-        "Bo-Katan Kryze":
-           display_name: """Bo-Katan Kryze"""
-           text: """Antes de uma nave amiga em alcance 0-2 ativar, você pode gastar 1 %CHARGE%. Se você fizer isso, essa nave pode receber 1 ficha de desgaste para remover 1 ficha laranja ou vermelha que não seja um estresse."""
-        "Death Watch Warrior":
-           display_name: """Guerreiro do Olho da Morte"""
-           text: """<i class = flavor_text>Apesar do apoio incerto dos Separatistas, o Olho da Morte pretende restaurar o passado guerreiro e as antigas tradições de Mandalore. A manobrabilidade e os assentos rebaixados do Caça Gauntlet o tornam uma excelente plataforma para enviar esses orgulhosos soldados em batalha.</i>"""
-        "Pre Vizsla":
-           display_name: """Pre Vizsla"""
-           text: """Quando você estiver atacando, se a iniciativa do defensor for igual ou maior que a sua, você pode gastar 2 %CHARGE% para rolar 1 dado adicional."""
-
-
-        # Starter Packs
+         # Starter Packs
         "Darth Vader (SSP)":
            display_name: """Darth Vader (SSP)"""
            text: """Depois que você realizar uma ação, você pode gastar 1 %FORCE% para realizar uma ação."""
@@ -2704,7 +2401,7 @@ exportObj.cardLoaders.Português = () ->
            text: """Quando você realizar um ataque, você pode rerolar 1 dado de ataque para cada outra nave amiga em alcance 0-1 do defensor."""
         "Arvel Crynyd (SSP)":
            display_name: """Arvel Crynyd (SSP)"""
-           text: """Se você falharia uma ação %BOOST% por sobrepor outra nave, ao invés disso, resolva-a como se estivesse executando parcialmente uma manobra.%LINEBREAK% Quando Você realizar um ataque em alcance 0, trate-o como um ataque em alcance 1."""
+           text: """Se você falharia uma ação %BOOST% por sobrepor outra nave, ao invés disso, você pode resolvê-la como se estivesse executando parcialmente uma manobra.%LINEBREAK% Quando Você realizar um ataque em alcance 0, trate-o como um ataque em alcance 1."""
         "Jake Farrell (SSP)":
            display_name: """Jake Farrell (SSP)"""
            text: """Depois que você realizar uma ação %BARRELROLL% ou %BOOST%, você pode escolher uma nave amiga em alcance 0-1. Essa nave pode realizar uma ação %FOCUS%."""
@@ -2712,7 +2409,7 @@ exportObj.cardLoaders.Português = () ->
            display_name: """Shara Bey (SSP)"""
            text: """Quando você defender ou realizar um ataque primário, você pode gastar 1 mira que você possua na nave inimiga e adicionar 1 resultado %FOCUS% ao resultado dos seus dados. """
 
-        # Pilotos Batalha sobre Endor
+        # Battle Over Endor Pilots
         "Wedge Antilles (BoE)":
            display_name: """Wedge Antilles (BsE)"""
            text: """Depois que você realizar um ataque que acertou, receba 1 ficha de foco."""
@@ -2730,7 +2427,7 @@ exportObj.cardLoaders.Português = () ->
            text: """Quando você estiver desarmado, você ainda pode realizar ataques %MISSILE%. Quando você realiza um ataque %MISSILE% desarmado, role um máximo de 4 dados."""
         "Arvel Crynyd (BoE)":
            display_name: """Arvel Crynyd (BsE)"""
-           text: """Quando se defender, você pode receber 1 ficha de desgaste para mudar um resultado %FOCUS% para um resultado %EVADE%."""
+           text: """Quando você defender, você pode receber 1 ficha de desgaste para mudar um resultado %FOCUS% para um resultado %EVADE%."""
         "Adon Fox (BoE)":
            display_name: """Adon Fox (BsE)"""
            text: """Quando você defender, se você estiver estressado, role 1 dado adicional."""
@@ -2742,7 +2439,7 @@ exportObj.cardLoaders.Português = () ->
            text: """No começo da Fase de engajamento, se uma nave amiga <strong>Gina Moonsong</strong> em alcance 0-2 estiver estressada, você pode receber uma ficha de foco."""
         "Gemmer Sojan (BoE)":
            display_name: """Gemmer Sojan (BsE)"""
-           text: """Quando defender, você pode receber 1 ficha de desgaste para mudar até 2 dos seus resultados em branco para resultados %FOCUS%."""
+           text: """Quando você defender, você pode receber 1 ficha de desgaste para mudar até 2 dos seus resultados em branco para resultados %FOCUS%."""
         "Captain Yorr (BoE)":
            display_name: """Capitão Yorr (BsE)"""
            text: """Depois que você realizar um ataque que acertou, você pode gastar 1 %CHARGE% para realizar um ataque %CANNON% bônus."""
@@ -2760,7 +2457,7 @@ exportObj.cardLoaders.Português = () ->
            text: """Depois que você realizar uma ação %EVADE%, receba uma ficha de cálculo."""
         "Major Mianda (BoE)":
            display_name: """Major Mianda (BsE)"""
-           text: """Durante a Fase Final, você pode escolher até 2 naves pequenas amigas, você e as naves escolhidas podem realizar uma ação %BARRELROLL% vermelha ou %BOOST% vermelha."""
+           text: """Durante a Fase Final, você pode escolher até 2 naves amigas pequenas, você e as naves escolhidas podem realizar uma ação %BARRELROLL% vermelha ou %BOOST% vermelha."""
         "Lieutenant Hebsly (BoE)":
            display_name: """Tenente Hebsly (BsE)"""
            text: """Depois que você defender, você pode realizar uma ação %BOOST% vermelha, mesmo se estiver estressado."""
@@ -2774,819 +2471,178 @@ exportObj.cardLoaders.Português = () ->
            display_name: """Cimitarra 3 (BsE)"""
            text: """Depois que você soltar uma bomba, você pode gastar 1 %CHARGE% para realizar uma ação %BOOST%."""
 
-         "Hera Syndulla (LaR)":
-           display_name: """Hera Syndulla (LaR)"""
-           text: """Depois que você completar uma manobra vermelha, você pode coordenar uma nave amiga em alcance 1-3."""
-        "Carnor Jax":
-           display_name: """Carnor Jax"""
-           text: """Quando uma nave inimiga em alcance 0-1 em seu %FRONTARC% defender ou realizar um ataque, antes do passo Rolar Dados de Ataque, você pode gastar 1 %FORCE%. Se você fizer isso, os dados dessa nave não podem ser modificados."""
-        "Thweek":
-           display_name: """Thweek"""
-           text: """Durante a Fase de Sistema, você pode receber 1 ficha de tração. No início da Fase de Engajamento, você pode receber 1 ficha de exaustão para remover 1 ficha de tração."""
-        "Kazuda Xiono (LaR)":
-           display_name: """Kazuda Xiono"""
-           text: """Quando você defender ou realizar um ataque, se a nave inimiga possuir mais cartas de danos do que você, você pode mudar 1 resultado %FOCUS% para um resultado %EVADE% ou %HIT%."""
-        "Tamara Ryvora":
-           display_name: """Tamara Ryvora"""
-           text: """Quando uma nave que você possuir mira realizar um ataque, você pode escolher 1 dadod de ataque. Se você fizer isso, o atacante rerola aquele dado."""
-        "Quinlan Vos":
-           display_name: """Quinlan Vos"""
-           text: """Depois que você realizar uma ação %BARRELROLL% ou %BOOST%, você pode adquirir uma mira em uma nave em seu %BULLSEYEARC%."""
-        "Ursa Wren":
-           display_name: """Ursa Wren"""
-           text: """Depois que você adquirir uma mira em uma nave inimiga, se não houver naves inimigas em alcance 0-1 de você, você pode receber 1 ficha de reforço."""
-        "DIS-L9B2":
-           display_name: """DIS-L9B2"""
-           text: """No começo da Fase de Engajamento, se houver uma nave inimiga em seu %BULLSEYEARC%, você deve gastar 1 %CHARGE%. Durante a Fase de Engajamento, se sua %CHARGE% estiver ativa, trate sua iniciativa como se fosse 1."""
+        "Major Vynder (SSL)":
+           display_name: """Major Vynder (SL)"""
+           text: """Depois que você realizar um ataque %MISSILE%, você pode realizar um ataque %CANNON% bônus. Quando você realizar este ataque bônus, você pode mudar 1 reaultado %FOCUS% para um resultado %HIT%."""
+        "Lieutenant Karsabi (SSL)":
+           display_name: """Lieutenant Karsabi (SL)"""
+           text: """Quando você realizar uma ação %RELOAD%, a melhoria escolhida recupera 1 %CHARGE% adicional."""
+        '"Whisper" (SSL)':
+           display_name: """“Whisper” (SL)"""
+           text: """Depois que você realizar um ataque, você pode gastar 1 %CHARGE% para realizar uma ação %CLOAK%."""
+        '"Echo" (SSL)':
+           display_name: """“Echo” (SL)"""
+           text: """Depois que uma nave inimiga em alcance 0-1 realizar uma ação da sua barra de ações, você pode gastar 1 %CHARGE% para realizar a mesma ação, tratando a ação como branca."""
+        "Kylo Ren (EoD)":
+           display_name: """Kylo Ren (EoD)"""
+           text: """Antes de uma nave inimiga em seu %BULLSEYEARC% receber uma carta de dano virada para baixo, você pode gastar 1 %FORCE%. Se fizer isso, essa carta da dano é recebida virada para cima."""
+        '"Scorch" (EoD)':
+           display_name: """“Scorch” (EoD)"""
+           text: """Quando você realizar um ataque primário, se você não estiver estressado, você pode receber 1 ficha de estresse para rolar 1 dado de ataque adicional."""
+        '"Longshot" (EoD)':
+           display_name: """“Longshot” (EoD)"""
+           text: """Quando você realizar um ataque primário em alcance 3, role 1 dado de ataque adicional."""
+        '"Midnight" (EoD)':
+           display_name: """“Midnight” (EoD)"""
+           text: """Quando você defender ou realizar um ataque, se você tiver uma mira na nave inimiga, os dados daquela nave não podem ser modificados."""
+        "Zeta 5 (EoD)":
+           display_name: """Zeta 5 (EoD)"""
+           text: """Quando você realizar um ataque, se você não possuir escudos e a iniciativa do defensor for maior que a sua, adicione 1 resultado %FOCUS%."""
+        "Omega 2 (EoD)":
+           display_name: """Omega 2 (EoD)"""
+           text: """Naves TIE amigas podem adquirir miras em objetos em alcance 0-3 de você, ignorando restrições de alcance."""
+        "Lieutenant LeHuse (EoD)":
+           display_name: """Tenente LeHuse (EoD)"""
+           text: """No começo da Fase de Engajamento, você pode adquirir uma mira em um objeto em alcance 1-3 que tenha uma mira amiga. Se você fizer isso, quebre a mira amiga no objeto."""
+        "Theta 3 (EoD)":
+           display_name: """Theta 3 (EoD)"""
+           text: """No começo da Fase de Engajamento, se você não possuir fichas verdes, você pode gastar 1 %CHARGE% para receber 1 ficha de desvio."""
+        "Theta 4 (EoD)":
+           display_name: """Theta 4 (EoD)"""
+           text: """Quando uma nave inimiga em seu %SINGLETURRETARC% realizar um ataque, você pode gastar 1 %CHARGE%. Se fizer isso, gaste 1 %CHARGE% da sua melhoria %MISSILE% para escolher dois dados de ataque. O atacante deve rerolar esses dados."""
+        "Petty Officer Thanisson (EoD)":
+           display_name: """Suboficial Thanisson (EoD)"""
+           text: """Durante a Fase de Ativação ou Fase de Engajamento, depois que uma nave em seu %FRONTARC% em alcance 0-2 receber 1 ficha de desgaste ou exaustão, você pode gastar 1 1%CHARGE%. Se fizer isso, aquela nave recebe 1 ficha de estresse."""
+        "Poe Dameron (EoD)":
+           display_name: """Poe Dameron (EoD)"""
+           text: """Depois que você realizar uma ação, você pode gastar 1 %CHARGE% para realizar uma ação branca, tratando-a como uma ação vermelha."""
+        "Jaycris Tubbs (EoD)":
+           display_name: """Jaycris Tubbs (EoD)"""
+           text: """Depois que você executar completamente uma manobra azul, você pode escolher uma nave amiga em alcance 0-1. Se o fizer, essa nave remove 1 ficha de estresse."""
+        "Stomeroni Starck (EoD)":
+           display_name: """Stomeroni Starck (EoD)"""
+           text: """<strong>Setup:</strong> Ao invés do disco de manobras da x-wing T-70, esta nave usa o disco de manobras da RZ-2."""
+        "C'ai Threnalli (EoD)":
+           display_name: """C'ai Threnalli (EoD)"""
+           text: """Depois que você executar completamente uma manobra, se você voou através de uma nave amiga, você pode realizar uma ação %EVADE%."""
+        "Ronith Blario (EoD)":
+           display_name: """Ronith Blario (EoD)"""
+           text: """Quando você defender ou realizar um ataque, se a nave inimiga estiver no %SINGLETURRETARC% de outra nave amiga, você pode gastar 1 ficha de foco daquela nave amiga para mudar 1 de seus resultados %FOCUS% para um resultado %EVADE% ou %HIT%."""
+        "Tallissan Lintra (EoD)":
+           display_name: """Tallissan Lintra (EoD)"""
+           text: """Quando uma nave inimiga em seu %BULLSEYEARC% realiza um ataque, você pode gastar 1 %CHARGE%. Se fizer isso, o defensor rola 1 dado de defesa adicional."""
+        "Zizi Tlo (EoD)":
+           display_name: """Zizi Tlo (EoD)"""
+           text: """Depois que você defender ou realizar um ataque, você pode gastar 1 %CHARGE% para receber 1 ficha de foco ou desvio."""
+        "Pammich Nerro Goode (EoD)":
+           display_name: """Pammich Nerro Goode (EoD)"""
+           text: """Enquanto você tiver 2 ou menos fichas de estresse, você pode realizar manobras vermelhas mesmo se estiver estressado."""
+        "Finch Dallow (EoD)":
+           display_name: """Finch Dallow (EoD)"""
+           text: """Se você for soltar um dispositivo usando uma régua %STRAIGHT% e não estiver estressado, voê pode receber 1 ficha de estresse para usar uma régua [%BANKLEFT% or %BANKRIGHT%] da mesma velocidade."""
+        "Vennie (EoD)":
+           display_name: """Vennie (EoD)"""
+           text: """Quando você defender, se o atacante estiver no %SINGLETURRETARC% de uma nave amiga, você pode mudar 1 resultado %FOCUS% para um resultado %EVADE%."""
+        "Boba Fett (AaD)":
+           display_name: """Boba Fett (AaD)"""
+           text: """Quando outra nave amiga defender, se você tiver uma mira no atacante, você pode realizar um ataque bônus contra o atacante."""
+        "The Mandalorian (AaD)":
+           display_name: """The Mandalorian (AaD)"""
+           text: """Quando você defender ou realizar um ataque, se você estiver no %FRONTARC% e em alcance 1-2 de 2 ou mais naves inimigas, você pode mudar 1 de seus resultados em branco para um resultado %FOCUS%."""
+        "Han Solo (AaD)":
+           display_name: """Han Solo (AaD)"""
+           text: """Quando você defender ou realizar um ataque, se o ataque estiver obstruído por um obstáculo, você pode rolar 1 dado adicional."""
+        "Bo-Katan Kryze (AaD)":
+           display_name: """Bo-Katan Kryze (AaD)"""
+           text: """Quando você realizar um ataque, se você estiver em alcance 0-1 do defensor, você pode rerolar 1 dado de ataque."""
+        "Dengar (AaD)":
+           display_name: """Dengar (AaD)"""
+           text: """Após você defender, se o atacante estiver em seu %FRONTARC%, você pode gastar 1 %CHARGE% para realizar um ataque bônus contra o atacante."""
+        "Bossk (AaD)":
+           display_name: """Bossk (AaD)"""
+           text: """Quando você realizar um ataque primário, após a etapa Neutralizar Resultados, você pode gastar 1 resultado %CRIT% para adicionar 2 resultados %HIT%."""
+        "Cad Bane (AaD)":
+           display_name: """Cad Bane (AaD)"""
+           text: """Depois que você realizar um ataque que acertou, você pode gastar 2 %CHARGE% para transferir 1 de suas fichas laranjas ou vermelhas que não seja uma mira para o defensor."""
+        "Cad Bane (AaD)":
+           display_name: """Cad Bane (AaD)"""
+           text: """Depois que você realizar um ataque que acertou, você pode gastar 2 %CHARGE% para transferir 1 de suas fichas laranjas ou vermelhas que não seja uma mira para o defensor."""
+        "Fenn Rau (AaD)":
+           display_name: """Fenn Rau (AaD)"""
+           text: """Quando você defender ou realizar um ataque, se o alcance do ataque for 1, você pode rolar 1 dado adicional."""
+        "Prince Xizor (AaD)":
+           display_name: """Prince Xizor (AaD)"""
+           text: """Quando você realizar um ataque contra uma nave desgastada, você pode remover 1 ficha de estresse."""
+        "Zuckuss (AaD)":
+           display_name: """Zuckuss (AaD)"""
+           text: """Quando você realizar um ataque primário, você pode rolar 1 dado de ataque adicional. Se o fizer, o defensor rola 1 dado de defesa adicional."""
+
+        # Epic Ships
+        "Republic Judiciary":
+           display_name: """Republic Judiciary"""
+           text: """<i class = flavor_text>The Galactic Republic uses small, swift warships such as the CR90 corvette to respond rapidly to Separatist incursions across the galaxy.</i>"""
+        "Alderaanian Guard":
+           display_name: """Alderaanian Guard"""
+           text: """<i class = flavor_text>A craft used since before the Clone Wars, the CR90 corvette is favored by the Royal House of Alderaan for its versatility.</i>"""
+        "Outer Rim Patrol":
+           display_name: """Outer Rim Patrol"""
+           text: """<i class = flavor_text>The <untalic>Raider</untalic>-class corvette is one of the Empire's smallest warships, often used for reconnaissance missions, surgical strikes, or suppressing enemy starfighters with its powerful ordnance.</i>"""
+        "First Order Collaborators":
+           display_name: """First Order Collaborators"""
+           text: """<i class = flavor_text>The First Order's supporters make use of former Imperial vessels, such as the <untalic>Raider</untalic>-class corvette. Though it has outlived the regime that created it, this craft still spreads terror across the galaxy.</i>"""
+        "Echo Base Evacuees":
+           display_name: """Echo Base Evacuees"""
+           text: """<i class = flavor_text>The GR-75 medium transport acquitted itself well at battles such as the evacuation of Hoth, where several of these ships were pivotal to the Rebel forces' escape.</i>"""
+        "New Republic Volunteers":
+           display_name: """New Republic Volunteers"""
+           text: """<i class = flavor_text>In use since the Galactic Civil War, groups within the New Republic still utilize the GR-75 medium transport for supply and aid missions.</i>"""
+        "Outer Rim Garrison":
+           display_name: """Outer Rim Garrison"""
+           text: """<i class = flavor_text>Capable of carrying TIE fighters and operating independently for long periods of time, the <untalic>Gozanti</untalic>-class cruiser is a common sight in the skies of downtrodden worlds across the Outer Rim.</i>"""
+        "First Order Sympathizers":
+           display_name: """First Order Sympathizers"""
+           text: """<i class = flavor_text>The First Order's swift rise to power rests upon ruthless innovation. However, sympathizers often repurpose Imperial designs, like the venerable <untalic>Gozanti</untalic>-class cruiser, in surveillance and patrol operations.</i>"""
+        "Separatist Privateers":
+           display_name: """Separatist Privateers"""
+           text: """<i class = flavor_text>The Separatist Alliance makes use of all manner of unsavory contacts in its fight against the Galactic Republic, including corsairs and criminal cartels.</i>"""
+        "Syndicate Smugglers":
+           display_name: """Syndicate Smugglers"""
+           text: """<i class = flavor_text>Vessels like the C-ROC Cruiser allow criminal operations across the Outer Rim to move massive amounts of illicit materials, or project power that can bully small colonies into compliance.</i>"""
+        "Colicoid Destroyer":
+           display_name: """Colicoid Destroyer"""
+           text: """<i class = flavor_text>Designed by the Colicoid Creation Nest and equipped with powerful tentacles and a massive drill to tear through the hull of even the toughest starships and fortifications, the Trident-class Assault Ship is a terrifying testament to the threat posed by the Separatist Alliance.</i>"""
+        "Lawless Pirates":
+           display_name: """Lawless Pirates"""
+           text: """<i class = flavor_text>The Separatist Alliance has close ties to certain mercenaries and criminal groups and, as the war rages on, its technology sometimes finds its way into unsavory hands.</i>"""
+        "Leia Organa (CR90)":
+           display_name: """Leia Organa"""
+           text: """ """
+        "Iden Versio (Raider)":
+           display_name: """Iden Versio"""
+           text: """ """
+        "Gideon Hask (Raider)":
+           display_name: """Gideon Hask"""
+           text: """ """
+        "Asajj Ventress (Trident)":
+           display_name: """Asajj Ventress"""
+           text: """ """
 
     upgrade_translations =
-     #Atiradores
-        "Ahsoka Tano":
-           display_name: """Ahsoka Tano"""
-           text: """Depois que você executar uma manobra, você pode gastar 1 %FORCE% e escolher uma nave amiga em alcance 1-3 em seu arco de tiro. Se o fizer, ela pode realizar uma ação %FOCUS% vermelha, mesmo se estiver estressada."""
-        "Wolfpack":
-           display_name: """Alcatéia"""
-           text: """Depois que uma nave amiga em alcance 0-3 defender, se o atacante estiver em seu arco de tiro, o defensor pode receber 1 ficha de desgaste para travar uma mira no atacante."""
-        "Agile Gunner":
-           display_name: """Atirador Ágil"""
-           text: """Durante a Fase Final, você pode rotacionar seu %SINGLETURRETARC%."""
-        "Seventh Fleet Gunner":
-           display_name: """Seventh Fleet Gunner"""
-           text: """Quando outra nave amiga realizar um ataque primário, se o defensor estiver em seu arco de tiro, você pode gastar 1 %CHARGE%. Se o fizer, o atacante rola 1 dado de ataque adicional, até o máximo de 4. Durante a Fase de Sistema, você pode ganhar uma ficha de desarme para recuperar 1 %CHARGE%."""
-        "Special Forces Gunner":
-           display_name: """Atirador das Forças Especiais"""
-           text: """Quando você realizar um ataque primário %FRONTARC%, se seu %SINGLETURRETARC% estiver em seu %FRONTARC%, você pode rolar 1 dado de ataque adicional.%LINEBREAK%Depois que você realizar um ataque primário %FRONTARC%, se seu %SINGLETURRETARC% estiver em seu %REARARC%, você pode realizar um ataque primário %SINGLETURRETARC% bônus."""
-        "Veteran Tail Gunner":
-           display_name: """Atirador de Cauda Veterano"""
-           text: """Depois que você realizar um ataque primário %FRONTARC%, você pode realizar um ataque primário %REARARC% bônus."""
-        "Veteran Turret Gunner":
-           display_name: """Atirador de Torre Veterano"""
-           text: """Depois que você realizar um ataque primário, você pode realizar um ataque %SINGLETURRETARC% bônus usando um %SINGLETURRETARC% que você não tenha usado para atacar nessa rodada."""
-        "Hotshot Gunner":
-           display_name: """Atirador Experiente"""
-           text: """Quando você realizar um ataque %SINGLETURRETARC%, depois da etapa Modificar Dados de Defesa, o defensor remove 1 ficha de foco ou de cálculo."""
-        "Suppressive Gunner":
-           display_name: """Atirador Supressivo"""
-           text: """Quando você realizar um ataque, você pode gastar 1 resultado %FOCUS%. Se o fizer, o defensor recebe 1 ficha de exaustão a menos que ele escolha sofrer 1 dano %HIT%."""
-        "Bistan":
-           display_name: """Bistan"""
-           text: """Depois que você realizar um ataque primário, se você estiver focado, você pode realizar um ataque %SINGLETURRETARC% bônus contra uma nave que você não tenha atacado nessa rodada."""
-        "Boba Fett (Separatist)":
-           display_name: """Boba Fett"""
-           text: """Quando você realizar um ataque, se não houver nenhuma outra nave no arco de ataque, você pode mudar 1 de seus resultados %FOCUS% para um resultado %HIT%."""
-        "Skilled Bombardier":
-           display_name: """Bombardeiro Habilidoso"""
-           text: """Se você for soltar ou lançar um dispositivo, você pode usar um gabarito da mesma direção com 1 velocidade maior ou menor."""
-        "Bossk":
-           display_name: """Bossk"""
-           text: """Depois de realizar um ataque primário que errou, se você não estiver estressado, você <strong>deve</strong> receber 1 ficha de estresse para realizar um ataque primário bônus contra o mesmo alvo."""
-        "BT-1":
-           display_name: """BT-1"""
-           text: """Quando você realizar um ataque, você pode mudar 1 resultado %HIT% para um resultado %CRIT% para cada ficha de estresse que o defensor tiver."""
-        "Clone Captain Rex":
-           display_name: """Capitão Clone Rex"""
-           text: """Quando você realizar um ataque, você pode gastar um resultado %FOCUS%, se o fizer, cada nave amiga que tiver o defensor em seu %BULLSEYEARC% pode ganhar uma ficha de desgaste para realizar uma ação de %FOCUS%."""
-        "Clone Commander Cody":
-           display_name: """Comandante Clone Cody"""
-           text: """Depois que você realizar um ataque que errou, se 1 ou mais resultados %HIT%/%CRIT% foram neutralizados, o defensor recebe 1 ficha de desgaste."""
-        "Ghost Company":
-           display_name: """Companhia Fantasma"""
-           text: """Depois que você realizar um ataque primário, se você estiver focando, você pode realizar um ataque %SINGLETURRETARC% contra uma nave que não tenha atacado nessa rodada como um ataque bônus."""
-        "Dengar":
-           display_name: """Dengar"""
-           text: """Depois que você defender, se o atacante estiver em seu arco de tiro, você pode gastar 1 %CHARGE%. Se o fizer, role um dado de ataque a menos que o atacante escolha remover 1 ficha verde. Em um resultado %HIT% ou %CRIT%, o atacante sofre um dano %HIT%."""
-        "DT-798":
-           display_name: """DT-798"""
-           text: """No começo da Fase de Engajamento, você pode escolher uma nave amiga em seu arco de tiro. Se você o fizer, essa nave recebe 1 ficha de desgaste. %LINEBREAK% Quando você realizar um ataque, você pode rerolar até 1 dado de ataque para cada nave no arco de ataque com 1 ou mais fichas vermelhas ou laranjas que não sejam mira."""
-        "Corsair Crew":
-           display_name: """Tripulação de Corsários"""
-           text: """Quando você realizar um ataque contra uma nave padrão, você pode gastar 1 resultado %HIT%. Se o fizer, o defensor recebe uma ficha de exaustão."""
-        "Ezra Bridger":
-           display_name: """Ezra Bridger"""
-           text: """Depois que você realizar um ataque primário, você pode gastar 1 %FORCE% para realizar um ataque bonus %SINGLETURRETARC% de um %SINGLETURRETARC% que você ainda não tenha atirado nessa rodada. Se você o fizer e estiver estressado, você pode rerolar 1 dado de ataque."""
-        "Finn":
-           display_name: """Finn"""
-           text: """Quando você defender ou realizar um ataque primário, se a nave inimiga estiver em seu %FRONTARC%, você pode adicionar 1 resultado em branco a sua rolagem (este dado pode ser rerolado ou modificado de outras formas)"""
-        "Gar Saxon (Gunner)":
-           display_name: """Gar Saxon"""
-           text: """Quando você realizar a ação %LOCK%, você pode apenas escolher objetos que estejam em seu %FRONTARC% ou %REARARC%. %LINEBREAK%Quando você realizar um ataque primário, se o defensor estiver em seu %FRONTARC% ou %REARARC%, você pode remover 1 ficha laranja ou vermelha do defensor para rolar 1 dado adicional, até um máximo de 4 dados."""
-        "Greedo":
-           display_name: """Greedo"""
-           text: """Quando você realizar um ataque, você pode gastar 1 %CHARGE% para mudar 1 resultado %HIT% para um resultado %CRIT%.%LINEBREAK%Quando você defender, se sua %CHARGE% estiver ativa, o atacante pode mudar 1 resultado %HIT% para um resultado %CRIT%."""
-        "Han Solo":
-           display_name: """Han Solo"""
-           text: """Durante a Fase de Engajamento, na inciativa 7, você pode realizar um ataque %SINGLETURRETARC%. Você não pode atacar por esse %SINGLETURRETARC% novamente nessa rodada."""
-        "Han Solo (Scum)":
-           display_name: """Han Solo"""
-           text: """Antes de você engajar você pode realizar uma ação %FOCUS% vermelha."""
-        "Luke Skywalker":
-           display_name: """Luke Skywalker"""
-           text: """No começo da Fase de Engajamento, você gastar 1 %FORCE% e receber 1 ficha de exaustão para rotacionar seu indicador %SINGLETURRETARC%.%LINEBREAK%<i>Errata (desde RR 1.4): Acrescentado custo adicional</i>"""
-        "Migs Mayfeld":
-           display_name: """Migs Mayfeld"""
-           text: """Depois que você realizar um ataque %FRONTARC%, você pode realizar um ataque %REARARC% ou %SINGLETURRETARC% como um ataque bônus contra um alvo diferente que possua 1 ou mais fichas vermelhas ou laranjas."""
-        "Weapons Systems Officer":
-           display_name: """Oficial de Sistemas de Armas"""
-           text: """Depois que você realizar um ataque especial com o requisito %LOCK%, você pode travar uma mira no defensor."""
-        "Paige Tico":
-           display_name: """Paige Tico"""
-           text: """Depois que você realizar um ataque primário, você pode soltar 1 bomba ou rotacionar seu %SINGLETURRETARC%.%LINEBREAK%Depois que você for destruído, você pode soltar 1 bomba."""
-        "Fifth Brother":
-           display_name: """Quinto Irmão"""
-           text: """Quando você realizar um ataque, você pode gastar 1 %FORCE% para mudar 1 de seus resultado %FOCUS% para um resultado %CRIT%."""
-        "Rey":
-           display_name: """Rey"""
-           text: """Quando você defender ou realizar um ataque, se a nave inimiga estiver em seu %SINGLETURRETARC%, você pode gastar 1 %FORCE% para mudar 1 de seus resultados em branco para um resultado %EVADE% ou %HIT%."""
-        "Sabine Wren (Gunner)":
-           display_name: """Sabine Wren"""
-           text: """Depois que você realizar um ataque especial, você pode escolher um número de naves amigas em alcance 0-3 do defensor igual ao número de cartas de dano causadas no defensor durante este ataque. Cada nave escolhida pode remover 1 ficha de estresse ou desgaste."""
-        "First Order Ordnance Tech":
-           display_name: """Técnico de Artilharia da Primeira Ordem"""
-           text: """<i class = flavor_text>A primeira Ordem treina seus pilotos e atiradores para serem fanaticamente leais, priorizando a vitória até mesmo sobre a própria vida.</i>"""
-        "Tiber Saxon":
-           display_name: """Tiber Saxon"""
-           text: """Depois que você realizar um ataque em alcance 1-2 que acertou, se o defensor não possuir cartas de dano viradas para cima, você pode gastar 1 ou mais %CHARGE%. para cada %CHARGE% que você gastar o defensor recebe uma ficha de desgaste."""
-        "Ursa Wren (Gunner)":
-           display_name: """Ursa Wren"""
-           text: """Depois que você mirar em uma unidade inimiga além do alcance 2, se não houver unidades amigas em alcance 0-1 da unidade mirada, receba uma ficha de cálculo."""
-
-
-      #Astromecânicos
-        '"Chopper" (Astromech)':
-           display_name: """“Chopper”"""
-           text: """<strong>Ação:</strong> Gaste 1 %CHARGE% não recursiva de outra melhoria equipada para recuperar 1 escudo.%LINEBREAK%<strong>Ação:</strong> Gaste 2 escudos para recuperar 1 %CHARGE% não recursiva de uma melhoria equipada."""
-        '"Genius"':
-           display_name: """“Genius”"""
-           text: """Após você executar completamente uma manobra, se você não soltou ou lançou um dispositivo nessa rodada, você pode soltar 1 bomba."""
-        "Q7 Astromech":
-           display_name: """Astromecânico Q7"""
-           text: """Quando você realizar uma pirueta ou impulso, você pode se mover através e sobrepor obstáculos."""
-        "R2 Astromech":
-           display_name: """Astromecânico R2"""
-           text: """Após você revelar seu disco, você pode gastar 1 %CHARGE% e receber 1 ficha de desarmamento para recuperar 1 escudo."""
-        "R3 Astromech":
-           display_name: """Astromecânico R3"""
-           text: """Você pode manter até 2 miras. Cada mira deve estar em um objeto diferente.%LINEBREAK%Após você realizar uma ação %LOCK%, você pode adquirir uma mira."""
-        "R4 Astromech":
-           display_name: """Astromecânico R4"""
-           text: """Reduza a dificuldade das suas manobras básicas de velocidade 1-2 (%TURNLEFT%, %BANKLEFT%, %STRAIGHT%, %BANKRIGHT%, %TURNRIGHT%)."""
-        "R4-P Astromech":
-           display_name: """Astromecânico R4-P"""
-           text: """Antes de você executar uma manobra básica, você pode gastar 1 %CHARGE%. Se o fizer, enquanto você executar a manobra, reduza sua dificuldade."""
-        "R5 Astromech":
-           display_name: """Astromecânico R5"""
-           text: """<strong>Ação:</strong> Gaste 1 %CHARGE% para reparar 1 carta de dano virada para baixo.%LINEBREAK% <strong>Ação</strong>: Repare 1 carta de dano Nave virada para cima."""
-        "Watchful Astromech":
-           display_name: """Astromecânico Vigilante"""
-           text: """Após você realizar uma ação %RELOAD% ou %ROTATEARC%, se você estiver no arco de tiro de uma nave inimiga, você pode realizar uma ação %CALCULATE% vermelha."""
-        "BB Astromech":
-           display_name: """BB Astromech"""
-           text: """Antes de você executar uma manobra azul, você pode gastar 1 %CHARGE% para realizar uma ação %BARRELROLL%.%LINEBREAK% <i>Errata (desde RR 1.4.2): Período da habilidade alterado para Fase de Sistema</i>"""
-        "BB-8":
-           display_name: """BB-8"""
-           text: """Antes de você executar uma manobra azul, você pode gastar 1 %CHARGE% para realizar uma ação %BARRELROLL% ou %BOOST%.%LINEBREAK% <i>Errata (desde RR 1.4.2): Período da habilidade alterado para Fase de Sistema</i>"""
-        "C1-10P":
-           display_name: """C1-10P"""
-           text: """<strong>Preparação:</strong> Equipe este lado virado para cima.%LINEBREAK%Após você executar uma manobra, você pode gastar 1 %CHARGE% para realizar uma ação e vermelha, mesmo estressado.%LINEBREAK%Durante a Fase Final, se essa carta possuir 0 %CHARGE% ativa, vire-a. %LINEBREAK% <strong>C1-10P (Instável):</strong> Após você executar completamente uma manobra, você <strong>deve</strong> escolher uma nave em alcance 0-1, a nave escolhida recebe 1 ficha de interferência.%LINEBREAK%<i>Errata (desde RR 1.4): adicionado "completamente"</i>"""
-        "L4E-R5":
-           display_name: """L4E-R5"""
-           text: """No início da Fase de Engajamento, você pode transferir 1 ficha de cálculo para uma nave amiga em seu arco de tiro."""
-        "M9-G8":
-           display_name: """M9-G8"""
-           text: """Quando uma nave mirada por você realizar um ataque, você pode escolher 1 dado de ataque. Se o fizer, o atacante rerrola o dado escolhido."""
-        "R1-J5":
-           display_name: """R1-J5"""
-           text: """Enquanto você tiver 2 ou menos fichas de estresse, você pode realizar ações em cartas de dano mesmo estressado.%LINEBREAK% Após você reparar uma carta de dano com o atributo <b>Nave</b>, você pode gastar 1 %CHARGE% para reparar a carta novamente."""
-        "R2-A6":
-           display_name: """R2-A6"""
-           text: """Após você revelar seu disco, você pode colocar seu disco em uma manobra de mesma direção com velocidade 1 maior ou menor."""
-        "R2-C4":
-           display_name: """R2-C4"""
-           text: """Quando você realizar um ataque, você pode gastar 1 ficha de desvio para mudar 1 resultado %FOCUS% para um resultado %HIT%."""
-        "R2-D2":
-           display_name: """R2-D2"""
-           text: """Após você revelar seu disco, você pdoe gastar 1 %CHARGE% e receber 1 ficha de desarmamento para recuperar 1 escudo."""
-        "R2-D2 (Republic)":
-           display_name: """R2-D2"""
-           text: """Após você ativar, você pode gastar 1 %CHARGE% e receber 1 ficha de exaustão parar reparar 1 carta de dano, recuperar 1 escudo ou remover 1 dispositivo em alcance 0-1."""
-        "R2-D2 (Resistance)":
-           display_name: """R2-D2"""
-           text: """Durante a Fase Final, você pode gastar 1 %CHARGE% e 1 %SHIELD% para remover 1 ficha vermelha.%LINEBREAK% Durante a Fase Final, se você não tiver %SHIELD% ativo, você pode gastar 2 %CHARGE% para recuperar 1 %SHIELD% e receber 1 ficha de exaustão."""
-        "R2-HA":
-           display_name: """R2-HA"""
-           text: """Quando você defender, você pode gastar sua mira no atacante para rerrolar qualquer número de seus dados de defesa."""
-        "R4-B11":
-           display_name: """R4-B11"""
-           text: """Quando você realizar um ataque, você pode remover 1 ficha laranja ou vermelha do defensor para rerrolar qualquer número de dados de defesa."""
-        "R4-P17":
-           display_name: """R4-P17"""
-           text: """Após você executar completamente uma manobra vermelha, você pode gastar 1 %CHARGE% para realizar uma ação, mesmo estressado."""
-        "R4-P44":
-           display_name: """R4-P44"""
-           text: """Após você executar completamente uma manobra, se houver uma nave inimiga em seu %BULLSEYEARC%, receba 1 ficha de cálculo."""
-        "R5-D8":
-           display_name: """R5-D8"""
-           text: """<strong>Ação:</strong> Gaste 1 %CHARGE% para reparar 1 carta de dano virada para baixo. %LINEBREAK%<strong> Ação:</strong> Repare 1 carta de dano <b>Nave</b> virada para cima."""
-        "R5-P8":
-           display_name: """R5-P8"""
-           text: """Quando você realizar um ataque, contra um defensor em seu %FRONTARC%, você pode gastar 1 %CHARGE% para rerrolar 1 dado de ataque. Se o resultado rerrolado for um resultado %CRIT%, sofra 1 dano %CRIT%."""
-        "R5-TK":
-           display_name: """R5-TK"""
-           text: """Você pode realizar ataques contra naves aliadas."""
-        "R5-X3":
-           display_name: """R5-X3"""
-           text: """Antes você ativar ou engajar, você pode gastar 1 %CHARGE% para ignorar obstáculos até o final desta fase."""
-        "R6-D8":
-           display_name: """R6-D8"""
-           text: """Quando você realizar um ataque, você pode rerrolar um número de dados de ataque até o número de naves amigas em alcance 0-3 que estão com o defensor em seus %BULLSEYEARC%."""
-        "R7-A7":
-           display_name: """R7-A7"""
-           text: """Quando você realizar um ataque, você pode gastar 1 %CHARGE% para mudar 1 resultado %HIT% para um resultado %CRIT%."""
-
-       #Canhões
-        "Autoblasters":
-           display_name: """Autoblasters"""
-           text: """<strong>Ataque: </strong>Se o defensor estiver em seu %BULLSEYEARC%, role 1 dado adicional. Durante a etapa Neutralizar Resultados, se você não estiver no %FRONTARC% do defensor, resultados %EVADE% não cancelam resultados %CRIT%."""
-        "Underslung Blaster Cannon":
-           display_name: """Canhão de Baster Suspenso"""
-           text: """Após uma nave inimiga executar uma manobra, você pode realizar este ataque contra ela como um ataque bônus.%LINEBREAK%Ataque (%LOCK%): Seus dados só podem ser modificados apenas gastando uma mira para seu efeito padrão."""
-        "Heavy Laser Cannon":
-           display_name: """Canhão de Laser Pesado"""
-           text: """<strong>Ataque: </strong>Após a etapa Modificar Dados de Ataque, mude todos os resultados %CRIT% para resultados %HIT%."""
-        "Ion Cannon":
-           display_name: """Canhão Iônico"""
-           text: """<strong>Ataque:</strong> Se este ataque acertar, gaste 1 resultado %HIT% ou %CRIT% para fazer com que o defensor sofra 1 dano %HIT%. Todos os resultados %HIT%/%CRIT% restantes atribuem fichas de íon ao invés de causarem dano."""
-        "Synced Laser Cannons":
-           display_name: """Canhões de Laser Sincronizado"""
-           text: """<strong>Ataque:</strong> Se você estiver calculando, o defensor não aplica o bônus de alcance."""
-        "Jamming Beam":
-           display_name: """Feixe de Interferência"""
-           text: """<strong>Ataque:</strong> Se este ataque acertar, todos os resultados %HIT%/%CRIT% atribuem fichas de interferência ao invés de causarem dano."""
-        "Tractor Beam":
-           display_name: """Feixe de Tração"""
-           text: """<strong>Ataque:</strong> Se este ataque acertar, todos os resultados %HIT%/%CRIT% atribuem fichas de tração ao invés de causarem dano."""
-
-      #Central Tática
-        "K2-B4":
-           display_name: """K2-B4"""
-           text: """Quando uma nave amiga em alcance 0-3 defender, ela pode gastar 1 ficha de cálculo. Se ela fizer isso, adicione 1 resultado %EVADE% a menos que o atacante escolha receber 1 ficha de desgaste."""
-        "Kalani":
-           display_name: """Kalani"""
-           text: """Depois que uma nave inimiga executar uma manobra, se ela estiver no %BULLSEYEARC% de uma nave amiga em alcance 0-3, você pode gastar 1 %CHARGE%. Se você fizer isso, aquela nave amiga adquire uma mira naquela nave inimiga, e então recebe 1 ficha de estresse."""
-        "Kraken":
-           display_name: """Kraken"""
-           text: """Durante a Fase Final, você pode escolher até 3 naves amigas em alcance 0-3. Se fizer isso, cada uma dessas naves não removem 1 ficha de cálculo."""
-        "TA-175":
-           display_name: """TA-175"""
-           text: """Depois que uma nave amiga em alcance 0-3 com %CALCULATE% em sua barra de ações for destruída, cada nave amiga em alcance 0-3 com %CALCULATE% em sua barra de ações recebe 1 ficha de cálculo."""
-        "TV-94":
-           display_name: """TV-94"""
-           text: """Quando uma nave amiga em alcance 0-3 realiza um ataque primário contra um defensor no %BULLSEYEARC% dela, se houver 2 dados de ataque ou menos, ela pode gastar 1 ficha de cálculo para adicionar um resultado %HIT%."""
-
-       #Configuração
-        'Alpha-3B "Besh"':
-           display_name: """Alpha-3B “Besh”"""
-           text: """Quando você realizar um ataque primário, você pode gastar sua mira no defensor para mudar 1 dos seus resultados em branco ou %FOCUS% para um resultado %HIT%. %LINEBREAK%Adicione o encaixe %DEVICE%."""
-        'Alpha-3E "Esk"':
-           display_name: """Alpha-3E “Esk”"""
-           text: """Quando você realizar um ataque primário, antes de rolar os dados de ataque, você pode gastar 2 %CHARGE%. Se o fizer, seus resultados %CRIT% atribuem fichas de íon ao invés de causarem dano."""
-        "Swivel Wing":
-           display_name: """Asas Giratórias"""
-           text: """<strong>Asa Giratória (Abaixada)</strong> %LINEBREAK% Depois que você realizar uma manobra [0 %STOP%], você pode rotacionar sua nave 90º ou 180º. Se o fizer, você <b>deve</b> virar esta carta. %LINEBREAK% <strong>Asa Giratória (Erguida)</strong> %LINEBREAK% Quando você defender, role 1 dado de defesa a menos. %LINEBREAK% Depois que você realizar completamente uma manobra não estácionária [%STOP%], você pode virar esta carta."""
-        "Pivot Wing":
-           display_name: """Asas Pivotantes"""
-           text: """<strong>Fechadas: </strong>Quando você defender, role 1 dado de defesa a menos. %LINEBREAK%Após você executar uma manobra (0 %STOP%), você pode rotacionar sua nave 90º ou 180º.%LINEBREAK%Antes de você ativar, você pode virar esta carta.%LINEBREAK%<strong>Abertas:</Strong> Antes de você ativar, você pode virar esta carta."""
-        "Maneuver-Assist MGK-300":
-           display_name: """Assistente de Manobras MGK-300"""
-           text: """Reduza a dificuldade de suas manobras retas (%STRAIGHT%) e curvas (%BANKLEFT% ou %BANKRIGHT%) de velocidade 3."""
-        "Target-Assist MGK-300":
-           display_name: """Assistente de Mira MGK-300"""
-           text: """Antes de você engajar, se você não tiver fichas verdes e não estiver estressado, receba 1 ficha de cálculo para cada nave inimiga em alcance 2-3 em seu arco de tiro, até um máximo de 2."""
-        "Vectored Cannons (RZ-1)":
-           display_name: """Canhões Vetorizados"""
-           text: """Receba um indicador %SINGLETURRETARC%. Trate o requisito de arco seu ataque primário %FRONTARC% como %SINGLETURRETARC%.%LINEBREAK%Substitua sua habilidade de nave Propulsores Vetorizados com a seguinte:%LINEBREAK%Canhões Vetorizados: Durante a Fase de Sistema, você pode realizar uma ação %BOOST% vermelha ou %ROTATEARC% vermelha. Você consegue rotacionar seu indicador %SINGLETURRETARC% apenas para seu %FRONTARC% ou %REARARC%."""
-        "Os-1 Arsenal Loadout":
-           display_name: """Carga de Arsenal Os-1"""
-           text: """Quando você tiver exatamente 1 ficha de desarmamento, você pode realizar ataques %TORPEDO% e %MISSILE% contra alvos que você tem uma mira. Se o fizer, você não pode gastar sua mira durante o ataque.%LINEBREAK%Adicione os encaixes %TORPEDO% e %MISSILE%."""
-        "Wartime Loadout":
-           display_name: """Carregamento de Guerra"""
-           text: """Adicione 1 encaixe %TORPEDO% e 1 encaixe %MISSILE%. Substitua sua habilidade de nave com a seguinte:%LINEBREAK%Barragem Devastadora: Quando você realizar um ataque %TORPEDO% ou %MISSILE%, se o defensor estiver em seu %BULLSEYEARC%, seus resultados %CRIT% não podem ser cancelados por resultados %EVADE%."""
-        "Xg-1 Assault Configuration":
-           display_name: """Configuração de Assalto Xg-1"""
-           text: """Quando você tiver exatamente 1 ficha de desarmamento, você pode realizar ataques %CANNON%. Quando você realizar um ataque %CANNON% enquanto estiver desarmado, role um máximo de 3 dados de ataque."""
-        "Sensitive Controls":
-           display_name: """Controles Sensíveis"""
-           text: """Substitua sua habilidade de nave <strong>Autopropulsores</strong> pela habilidade:%LINEBREAK%<strong>Controles Sensíveis:</strong> Durante a Fase de Sistema, você pode realizar uma ação %BARRELROLL% vermelha ou %BOOST% vermelha."""
-        "Delta-7B":
-           display_name: """Delta-7B"""
-           text: """<i class = flavor_text>A Delta-7B foi projetada como uma variante mais pesada do interceptor Delta-7 classe Aethersprite, identificável pelo encaixe reposicionado do astromecânico. Muitos generais Jedi preferem o maior poder de fogo e durabilidade desta nave.</i>"""
-        "Enhanced Jamming Suite":
-           display_name: """Dispositivo de Interferência Aprimorado"""
-           text: """Quando você interferir, você pode escolher você mesmo ou outra nave amiga.%LINEBREAK%Quando você defender, se o atacante não tiver fichas verdes ou se houver uma nave interferida no arco de ataque, você pode rolar 1 dado de defesa adicional."""
-        "Repulsorlift Stabilizers":
-           display_name: """Estabilizadores de Repulsão"""
-           text: """<strong>Inativo: Preparação:</strong> Equipe este lado virado para cima.%LINEBREAK%Reduza a dificuldade de suas manobras retas (%STRAIGHT%).%LINEBREAK%Após você executar completamente uma manobra, você pode virar esta carta.%LINEBREAK%<strong>Ativo:</strong> Após você revelar uma manobra curva (%BANKLEFT% ou %BANKRIGHT%) ou curva fechada (%TURNLEFT% ou %TURNRIGHT%), você deve realizar a manobra como uma derrapagem, então vire esta carta.%LINEBREAK%Após você executar completamente uma manobra que não seja derrapagem, você pode virar esta carta."""
-        "Calibrated Laser Targeting":
-           display_name: """Mira a Laser Calibrada"""
-           text: """Quando você realizar um ataque primário, se o defensor estiver em seu %BULLSEYEARC%, adicione 1 resultado %FOCUS%."""
-        "Intercept Booster":
-           display_name: """Propulsores de Interceptação"""
-           text: """<strong>Conectado:</strong> %SLAM% <i class="xwing-miniatures-font xwing-miniatures-font-linked"></i> <r>%LOCK%</r></i>%LINEBREAK% <strong>Preparação:</strong> Equipe este lado virado para cima.%LINEBREAK%<i>(Ações Adicionadas Estão Disponíveis Apenas Deste Lado)</i>%LINEBREAK%Durante a Fase de Sistema, receba 1 ficha de desarmamento a menos que você vire esta carta.%LINEBREAK%No final da Fase Final, se você não tiver %CHARGE% ativa, vire esta carta.%LINEBREAK% <strong>Desconectado:</strong> <i>Vazio</i>"""
-        "Corsair Refit":
-           display_name: """Restauração Corsária"""
-           text: """Ataque Bônus: Gaste 1 %ENERGY para realizar um ataque %CANNON%, %TURRET% ou %MISSILE%."""
-        "Servomotor S-Foils":
-           display_name: """Servomotor de S-Foils"""
-           text: """<strong>Fechado: </strong><i>%BOOST%, %FOCUS% <i class="xwing-miniatures-font xwing-miniatures-font-linked"></i> <r>%BOOST%</r></i>%LINEBREAK% Quando você realizar um ataque primário, role 1 dado de ataque a menos.%LINEBREAK%Antes de você ativar, você pode virar esta carta.%LINEBREAK%<strong>Aberto:</strong> Antes de você ativar, você pode virar esta carta."""
-        "Stabilized S-Foils":
-           display_name: """S-Foils Estabilizado"""
-           text: """<strong>Fechado: </strong><i><r>%RELOAD%</r>, %BARRELROLL% <i class="xwing-miniatures-font xwing-miniatures-font-linked"></i><r> %EVADE%</r></i>%LINEBREAK% Antes de você ativar, se você não estiver criticamente danificado, você pode virar esta carta. %LINEBREAK% <strong>Aberto:</strong> <i>%BARRELROLL% <i class="xwing-miniatures-font xwing-miniatures-font-linked"></i><r> %LOCK%</r></i>%LINEBREAK% Após você realizar um ataque, você pode gastar sua mira que está no defensor para realizar um ataque %CANNON% bônus contra a nave usando uma melhoria %CANNON% com a qual você não tenha atacado este turno.%LINEBREAK%Antes de você ativar, se você não estiver criticamente danificado, você pode virar esta carta."""
-        "Integrated S-Foils":
-           display_name: """S-Foils Integrados"""
-           text: """<strong>Fechado: </strong><i>%BARRELROLL%, %FOCUS% <i class="xwing-miniatures-font xwing-miniatures-font-linked"></i> <r>%BARRELROLL%</r></i>%LINEBREAK% Antes de você ativar, você pode virar esta carta. %LINEBREAK% <b>Aberto:</b> Quando você realizar um ataque primário, se o defensor não estiver em seu %BULLSEYEARC%, role 1 dado de ataque a menos.%LINEBREAK%Antes de você ativar, você pode virar esta carta."""
-        "Landing Struts":
-           display_name: """Suportes de Aterrissagem"""
-           text: """Fechados:%LINEBREAK%<strong>Preparação:</strong> Equipe este lado virado para cima.%LINEBREAK%Quando você executar uma manobra, se você sobrepor um asteróide ou nuvem de destroços e houver 1 ou menos outras naves amigas em alcance 0 deste obstáculo, você pode virar esta carta.%LINEBREAK% Abertos:%LINEBREAK% Você ignora obstáculos em alcance 0 e quando move através deles. Após você revelar seu disco, se você revelou uma manobra diferente de [2 %STRAIGHT%] e está em alcance 0 de um asteróide ou nuvem de destroços, pula sua etapa Executar Manobra e remova 1 ficha de estresse; se você revelou uma manobra esquerda ou direita, rotacione sua nave 90º nessa direção. Após você executar uma manobra, vire esta carta.%LINEBREAK%<i>Errata (desde RR 1.4): Texto atualizado para funcionar como era a intenção</i>"""
-        "Grappling Struts":
-           display_name: """Suportes de Fixação"""
-           text: """Fechados:%LINEBREAK%<strong>Preparação:</strong> Equipe este lado virado para cima.%LINEBREAK%Quando você executar uma manobra, se você sobrepor um asteróide ou nuvem de destroços e houver 1 ou menos outras naves amigas em alcance 0 deste obstáculo, você pode virar esta carta.%LINEBREAK% Abertos:%LINEBREAK% Você ignora obstáculos em alcance 0 e quando move através deles. Após você revelar seu disco, se você revelou uma manobra diferente de [2 %STRAIGHT%] e está em alcance 0 de um asteróide ou nuvem de destroços, pula sua etapa Executar Manobra e remova 1 ficha de estresse; se você revelou uma manobra esquerda ou direita, rotacione sua nave 90º nessa direção. Após você executar uma manobra, vire esta carta.%LINEBREAK%<i>Errata (desde RR 1.4): Texto atualizado para funcionar como era a intenção</i>"""
-        "TIE Defender Elite":
-           display_name: """TIE Defender Elite"""
-           text: """Reduza a dificuldade de suas manobras de curva fechada (%TURNLEFT% ou %TURNRIGHT%). Aumente a dificuldade de suas manobras Koiogran (%KTURN%). Substitua sua habilidade de nave Força Total pela seguinte:%LINEBREAK%Controle de Tiro Avançado: Após você realizar um ataque %CANNON% ou %MISSILE%, se você possuir uma mira no defensor, você pode realizar um ataque primário bônus contra o defensor."""
-
-      #Dispositivos
-        "Electro-Proton Bomb":
-           display_name: """Bomba de Elétro-Próton"""
-           text: """<strong>Bomba</strong>%LINEBREAK%Durante a Fase de sistema você pode gastar 1 %CHARGE% para soltar uma Bomba de Elétro-Próton usando o gabarito [1 %STRAIGHT%]. Em seguida coloque 1 marcador de fuso sobre aquele dispositivo.%LINEBREAK%A %CHARGE% desta carta não pode ser recuperada."""
-        "Concussion Bombs":
-           display_name: """Bombas de Concussão"""
-           text: """Durante a Fase de Sistema, se qualquer %CHARGE% desta carta estiver inativa, você <b>deve</b> gastar 1 %CHARGE% para soltar uma bomba de concussão usando o gabarito [1 %STRAIGHT%], se possível. Caso contrário, você pode gastar 1 %CHARGE% para soltar 1 bomba de concussão.%LINEBREAK% <i>Errata (desde RR 1.3.0): Adicionado ""usando o gabarito [1 %STRAIGHT%]"</i>"""
-        "Ion Bombs":
-           display_name: """Bombas de Íon"""
-           text: """<strong>Bomba</strong>%LINEBREAK% Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar uma Bomba de Íon usando o gabarito [1 %STRAIGHT%]."""
-        "Proton Bombs":
-           display_name: """Bombas de Prótons"""
-           text: """<strong>Bomba</strong>%LINEBREAK%Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar uma Bomba de Prótons usando o gabarito [1 %STRAIGHT%]."""
-        "Seismic Charges":
-           display_name: """Cargas Sísmicas"""
-           text: """<strong>Bomba</strong>%LINEBREAK%Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar uma Carga Sísmica usando o gabarito [1 %STRAIGHT%]."""
-        "Cluster Mines":
-           display_name: """Minas de Fragmentação"""
-           text: """<strong>Mina</strong>%LINEBREAK% Durante a Fase de sistema você pode gastar 1 %CHARGE% para soltar um Conjunto de minas usando o gabarito [1 %STRAIGHT%].%LINEBREAK%A %CHARGE% desta carta não pode ser recuperada."""
-        "Thermal Detonators":
-           display_name: """Detonadores Térmicos"""
-           text: """<strong>Bomba</strong>%LINEBREAK% Durante a Fase de Sistema, você pode gastar até 2 %CHARGE% para soltar a mesma quantidade de Detonadores Térmicos usando o gabarito [1 %STRAIGHT%] ou [2 %STRAIGHT%]. Cada um deve ser posicionado usando um gabarito diferente.%LINEBREAK%Quando você recarregar esta carta, recupere 1 %CHARGE% adicional."""
-        "Bomblet Generator":
-           display_name: """Gerador de Bombas Fragmentadas"""
-           text: """<strong>Bomba</strong>%LINEBREAK%Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar uma Mini-bomba com o gabarito [1 %STRAIGHT%].%LINEBREAK%No começo da Fase de Ativação, você pode gastar 1 escudo para recuperar 2 %CHARGE%."""
-        "Proximity Mines":
-           display_name: """Minas de Proximidade"""
-           text: """<strong>Mina</strong>%LINEBREAK%Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar uma Mina de Proximidade usando o gabarito [1 %STRAIGHT%].%LINEBREAK%A %CHARGE% desta carta não pode ser recuperada."""
-        "Conner Nets":
-           display_name: """Redes Conner"""
-           text: """<strong>Mina</strong>%LINEBREAK%Durante a Fase de sistema você pode gastar 1 %CHARGE% para soltar uma Rede Conner usando o gabarito [1 %STRAIGHT%].%LINEBREAK%A %CHARGE% desta carta não pode ser recuperada."""
-        "Blazer Bomb":
-           display_name: """Bomba de Labareda"""
-           text: """<strong>Bomba</strong>%LINEBREAK% Durante a Fase de sistema você pode gastar 1 %CHARGE% para soltar uma Bomba de Labareda usando o gabarito [1 %STRAIGHT%]"""
-
-       #Força
-        "Compassion":
-           display_name: """Compaixão"""
-           text: """Antes que outra nave amiga em alcance 0-2 receba uma carta de dano virada para cima do tipo <strong>Piloto</strong> ou <strong>Equipe</strong>, você pode gastar 1 %FORCE%. Se você fizer isso, essa carta de dano é descartada, e você recebe 1 carta de dano virada para baixo. Então, se você tiver 2 ou mais cartas de dano, recupere 2 %FORCE%."""
-        "Brilliant Evasion":
-           display_name: """Evasão Brilhante"""
-           text: """Quando você se defender, se você não estiver no %BULLSEYEARC% do atacante, você pode gastar 1 %FORCE% para mudar 2 de seus resultados %FOCUS% para resultados %EVADE%."""
-        "Malice":
-           display_name: """Malícia"""
-           text: """Quando você realizar um ataque, você pode gastar 1 %FORCE% para mudar 1 resultado %FOCUS% ou %HIT% para um resultado %CRIT%. Se você fizer isso, depois que realizar o ataque, se o defensor recebeu 1 ou mais cartas viradas para cima do tipo <strong>Piloto</strong> ou <strong>Equipe</strong> recupere 2 %FORCE%."""
-        "Extreme Maneuvers":
-           display_name: """Manobras Extremas"""
-           text: """Quando você realizar uma ação %BOOST%, você pode gastar 1 %FORCE% para usar os gabaritos de curva fechada [%TURNLEFT% ou %TURNRIGHT%]."""
-        "Battle Meditation":
-           display_name: """Meditação de Batalha"""
-           text: """Você não pode coordenar naves limitadas.%LINEBREAK% Quando você realizar uma ação %COORDINATE% roxa, você pode coordenar 1 nave amiga não-limitada adicional do mesmo tipo. Ambas as naves devem realizar a mesma ação."""
-        "Instinctive Aim":
-           display_name: """Mira Instintiva"""
-           text: """Quando realizar um ataque especial, você pode gastar 1 %FORCE% para ignorar o requisito %FOCUS% ou %LOCK%."""
-        "Hate":
-           display_name: """Ódio"""
-           text: """Depois que você sofrer 1 ou mais dano, recupere a mesma quantidade de %FORCE%."""
-        "Patience":
-           display_name: """Paciência"""
-           text: """No começo da Fase de Engajamento, se houver uma nave inimiga em seu %FRONTARC%, você pde receber 1 ficha de exaustão para recuperar 1 %FORCE%."""
-        "Heightened Perception":
-           display_name: """Percepção Aguçada"""
-           text: """No início da Fase de Engajamento, você pode gastar 1 %FORCE%. Se fizer isso, engaje na iniciativa 7 ao invés do seu valor normal de iniciativa."""
-        "Predictive Shot":
-           display_name: """Predictive Shot"""
-           text: """Depois que você declarar um ataque, se o defensor estiver em seu %BULLSEYEARC%, você pode gastar 1 %FORCE%. Se o fizer, durante o passo de Rolar Dados de Defesa, o defensor não pode rolar mais dados de defesa do que a quantidade de seus resultados %HIT%/%CRIT%."""
-        "Foresight":
-           display_name: """Previsão"""
-           text: """Depois que uma nave inimiga executar uma manobra, você pode gastar 1 %FORCE% para realizar este ataque contra ela como um ataque bônus.%LINEBREAK%<strong>Ataque:</strong> Você pode mudar 1 resultado %FOCUS% para um resultado %HIT%; seus dados não podem ser modificados de outra forma."""
-        "Precognitive Reflexes":
-           display_name: """Reflexos Precognitivos"""
-           text: """Depois que você revelar seu disco de manobras, você pode gastar 1 %FORCE% para realizar uma ação %BARRELROLL% ou %BOOST%. Então, se você realizou uma manobra que não está na sua barra de ações, receba 1 ficha de desgaste.%LINEBREAK%Se você fizer isso, você não pode realizar outra ação durante sua ativação."""
-        "Supernatural Reflexes":
-           display_name: """Reflexos Sobrenaturais"""
-           text: """Antes de você ativar você pode gastar 1 %FORCE% para realizar uma ação %BARRELROLL% ou %BOOST%. Então, se você realizou uma manobra que não está na sua barra de ações, sofra 1 dano %HIT%"""
-        "Sense":
-           display_name: """Sentir"""
-           text: """Durante a Fase de Sistema, você pode escolher 1 nave em alcance 0-1 e olhar o disco de manobras dela. Se você gastar 1 %FOCE%, você pode escolher uma nave em alcance 0-3."""
-        "Shattering Shot":
-           display_name: """Tiro Destruidor"""
-           text: """Quando você realizar um ataque, se o ataque estiver obstruído por um obstáculo ou o defensor estiver em alcance 0 de um obstáculo, você pode gastar 1 %FORCE% para adicionar 1 resultado %FOCUS%."""
-
-       #Ilícitos
-        "Babu Frik":
-           display_name: """Babu Frik"""
-           text: """Antes de você receber uma ficha laranja ou vermelha, que não seja uma mira, você pode gastar 1 %CHARGE% para, ao invés disso, colocá-la nessa carta. Durante a Fase de Sistema, se houver 1 ou mais fichas nessa carta, você <strong>deve</strong> gastar 1 %CHARGE%. Se você não puder, remova os tokens dessa carta, e receba tokens iguais."""
-        "Inertial Dampeners":
-           display_name: """Amortecedores Inerciais"""
-           text: """Antes de você executar uma manobra, você pode gastar 1 escudo. Se você fizer isso, realize uma manobra [0 %STOP%] branca ao inves da manobra que você revelou, e então receba 1 ficha de estresse."""
-        "Hotshot Tail Blaster":
-           text: """Você pode realizar este ataque em alcance 0.%LINEBREAK%strong>Ataque: </strong>Gaste 1 %CHARGE%."""
-        "Contraband Cybernetics":
-           display_name: """Cibernética Ilegal"""
-           text: """Antes de você ativar, você pode gastar 1 %CHARGE%. Se o fizer, até o fim da rodada, você pode realizar ações e executar manobras vermelhas mesmo se estiver estressado.%LINEBREAK% A %CHARGE% desta carta não pode ser recuperada. %LINEBREAK% <i>Errata (desde RR 1.4.2): Adicionada restrição na recuperação de cargas</i>"""
-        "False Transponder Codes":
-           display_name: """Códigos de Transponder Falsos"""
-           text: """Depois que você adquirir uma mira em um objeto ou um objeto adquirir mira em você, se você tiver 1 %CHARGE% ativa, perca 1 %CHARGE% e interfira aquele objeto ignorando as restrições de alcance."""
-        "Cloaking Device":
-           display_name: """Dispositivo de Camuflagem"""
-           text: """<strong>Ação: </strong> Gaste 1 %CHARGE% para realizar uma ação %CLOAK%.%LINEBREAK% No começo da Fase de Planejamento, role 1 dado de ataque. Em um resultado %FOCUS%, descamufle ou descarte sua ficha de camuflagem."""
-        "Deadman's Switch":
-           display_name: """Dispositivo de Homem Morto"""
-           text: """Depois que você for destruído, todas as outras naves em alcance 0-1 sofrem 1 dano %HIT%."""
-        "Rigged Cargo Chute":
-           display_name: """Ejetor de Carregamento"""
-           text: """<strong>Ação:</strong> Gaste 1 %CHARGE%. Solte 1 carga solta usando o gabarito [1 %STRAIGHT%]."""
-        "Scanner Baffler":
-           display_name: """Scanner Baffler"""
-           text: """No fim da Preparação, você pode escolher até seis outras naves padrão amigas em sua área de saída em alcance 0-1. Se você o fizer, coloque essas naves em qualquer lugar em alcance 0-1."""
-        "Tracking Fob":
-           display_name: """Fob de Rastreamento"""
-           text: """<strong>Preparação: </strong>Depois de posicionar forças, escolha um oponente; ele atribui  a condição <strong> Marcado para Eliminação</strong> a 1 de suas naves. Ele deve atribir a condição a uma nave limitada, se possível.%LINEBREAK% Você ignora restrições de alcance quando adquirir miras na nave com a condição<strong> Marcado para Eliminação</strong>."""
-        "Saboteur's Map":
-           display_name: """Mapa do Sabotador"""
-           text: """No fim da Preparação, você pode gastar até 1 %CHARGE%de cada uma de suas melhorias <strong>Mina</strong> equipadas para posicionar o dispositivo correspondente na área de jogo além do alcance 2 de qualquer nave inimiga ou outro dispositivo."""
-        "Feedback Array":
-           display_name: """Matriz de Retorno"""
-           text: """Antes de você engajar, você pode receber 1 ficha de íon e 1 ficha de desarme. Se você fizer isso, cada nave em alcance 0 sofre 1 dano %HIT%."""
-        "Overtuned Modulators":
-           display_name: """Moduladores Tunados"""
-           text: """Durane a Fase de Sistema, se você não estiver estressado você pode gastar 1 %CHARGE% para receber 3 fichas de cálculo.%LINEBREAK%Durante a Fase Final, se sua %CHARGE% estiver inativa, para cada ficha verde que você remover, receba 1 ficha de desgaste."""
-        "Coaxium Hyperfuel":
-           display_name: """Super Combustível de Coaxium"""
-           text: """Você pode realizar a ação %SLAM% mesmo se estiver estressado. Se você fizer isso, você sofre 1 dano %CRIT% a menos que exponha 1 de suas cartas de dano.%LINEBREAK%Depois que você executar parcialmente uma manobra, você pode expor 1 de suas cartas de dano ou sofrer 1 dano %CRIT% para realizar uma ação %SLAM%."""
-        "Quick-Release Locks":
-           display_name: """Travas de Abertura Rápida"""
-           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para colocar 1 carga de caixas a deriva em seu %REARARC% em alcance 0. Ele não pode sobrepor uma nave.%LINEBREAK% A %CHARGE% dessa carta não pode ser recuperada."""
-
-       #Míssil
-        "Multi-Missile Pods":
-           display_name: """Cápsula Multi-Mísseis"""
-           text: """<strong>Ataque [%CALCULATE% ou %LOCK%]: </strong>Gaste 1 %CHARGE%. %LINEBREAK%Se o defensor estiver em seu %FRONTARC%, você pode gastar 1 %CHARGE% para rolar 1 dado de ataque adicional. Ao invés disso, se o defensor estiver em seu %BULLSEYEARC% você pode gastar até 2 %CHARGE% para rolar a mesma quantidade de dados de ataque."""
-        "Energy-Shell Charges":
-           display_name: """Cargas de Energia"""
-           text: """<strong>Ataque[%CALCULATE%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Quando você realizar este ataque, você pode gastar 1 ficha de cálculo para mudar 1 resultado %FOCUS% para um resultado %CRIT%.%LINEBREAK%<strong>Ação:</strong> Recarregue esta carta."""
-        "Proton Rockets":
-           display_name: """Foguetes de Prótons"""
-           text: """<strong>Ataque [%FOCUS%]:</strong> Gaste 1 %CHARGE%."""
-        "Cluster Missiles":
-           display_name: """Mísseis de Fragmentação"""
-           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Depois deste ataque, você pode realizar este ataque como um ataque bônus contra um alvo diferente em alcance 0-1 do defensor, ignorando o requerimento de %LOCK%."""
-        "Discord Missiles":
-           display_name: """Mísseis Divergentes"""
-           text: """No começo da Fase de Engajamento, você pode gastar 1 ficha de cálculo e 1 %CHARGE% para lançar um enxame de droides zunidores usando o gabarito [3 %BANKLEFT%], [3 %STRAIGHT%] ou [3 %BANKRIGHT%].%LINEBREAK%A %CHARGE% dessa carta não pode ser recuperada."""
-        "Ion Missiles":
-           display_name: """Mísseis Iônicos"""
-           text: """<strong>Ataque[%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Se este ataque acertar, gaste 1 resultado %HIT% ou %CRIT% para causar 1 dano %HIT% no defensor. Todos os resultados %HIT%/%CRIT% restantes causam fichas de íon ao invés de dano."""
-        "Homing Missiles":
-           display_name: """Mísseis Teleguiados"""
-           text: """<strong>Ataque[%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Depois que você declarar o defensor, o defensor pode escolher sofrer 1 dano %HIT%. Se o fizer, pule as etapas de Dados de Ataque e Dados de Defesa e o ataque é tratado como um acerto."""
-        "Concussion Missiles":
-           display_name: """Mísseis de Concussão"""
-           text: """<strong>Ataque[%LOCK%]: </strong>Gaste 1 %CHARGE%.%LINEBREAK%Depois que esse ataque acertar, cada nave em alcance 0-1 do defensor expõe uma de suas cartas de dano."""
-        "Diamond-Boron Missiles":
-           display_name: """Mísseis de Diamante-Boro"""
-           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Depois que este ataque acertar, você pode gastar 1 %CHARGE%. Se o fizer, cada nave em alcance 0-1 do defensor com agilidade igual ou menor que a do defensor rola um dado de ataque e sofre 1 dano %HIT%/%CRIT% para cada resultado equivalente."""
-        "Electro-Chaff Missiles":
-           display_name: """Mísseis de Electro-Chaff"""
-           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% dessa carta para lançar 1 nuvem de electro-chaff usando o gabarito [3 %BANKLEFT%], [3 %BANKRIGHT%] ou [4 %STRAIGHT%]. Então coloque 1 marcador de fuso nela.%LINEBREAK%A %CHARGE% desta carta não pode ser recuperada."""
-        "Mag-Pulse Warheads":
-           display_name: """Ogiva de Pulso Magnético"""
-           text: """<strong>Ataque[%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Se este ataque acertar, o defensor sofre 1 dano %CRIT% e recebe 1 ficha de exaustão e 1 ficha de interferência. Então cancele todos os resultados %HIT%/%CRIT%."""
-        "Barrage Rockets":
-           display_name: """Torrente de Foguetes"""
-           text: """<strong>Ataque [%FOCUS%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Se o defensor estiver em seu %BULLSEYEARC%, você pode gastar 1 ou mais %CHARGE% para rerrolar a mesma quantidade de dados."""
-        "XX-23 S-Thread Tracers":
-           display_name: """Fibras de Rastreamento XX-23 S"""
-           text: """Ataque [%FOCUS%, %CALCULATE% ou %LOCK%]: Gaste 1 %CHARGE%. Se este ataque acertar, cada nave amiga em alcance 1-3 do defensor pode travar uma mira no defensor. E então cancele todos os resultados dos dados."""
-
-       #Modificação
-        "Munitions Failsafe":
-           display_name: """Abortar Disparo"""
-           text: """Quando você realizar um ataque %TORPEDO% ou %MISSILE%, depois de rolar dados de ataque, você pode cancelar todos os resultados para recuperar 1 %CHARGE% que você tenha gasto como custo deste ataque."""
-        "Drop-Seat Bay":
-           display_name: """Assentos Rebaixados"""
-           text: """Se você for soltar um remoto %CREW% usando um gabarito reto [%STRAIGHT%], você pode, ao invés disso, usar um gabarito de curva [%BANKLEFT% ou %BANKRIGHT%] da mesma velocidade e pode alinhar a linha do meio do gabarito com a linha do meio nas laterais direita ou esquerda da sua nave, ao invés da guia traseira."""
-        "Spare Parts Canisters":
-           display_name: """Caixa de Peças Sobressalentes"""
-           text: """<strong>Ação: </strong>Gaste 1 %CHARGE% para recuperar 1 carga em uma das suas melhorias %ASTROMECH% equipadas. %LINEBREAK%Ação: Gaste 1 %CHARGE% para soltar 1 peças sobressalentes, e então quebre todas as miras em você."""
-        "Independent Calculations":
-           display_name: """Cálculos Independentes"""
-           text: """Substitua sua habilidade de nave <strong>Cálculos Interligados</strong> pela seguinte habilidade:%LINEBREAK%<strong>Cálculos Independentes:</strong> Quando você realizar uma ação a branca, você pode tratá-la como vermelha para receber 1 ficha de cálculo adicional. Outras naves não podem usar suas fichas de cálculo usando a habilidade de nave Cálculos Interligados."""
-        "Deuterium Power Cells":
-           display_name: """Células de Energia de Deutério"""
-           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% e receber uma ficha de desarme para recuperar 1 %SHIELD%.%LINEBREAK%Quando você for receber 1 ficha, exceto ficha de mira, ao invés disso se você não estiver estressado, você pode gastar 1 %CHARGE% para receber uma ficha de estresse."""
-        "Targeting Computer":
-           display_name: """Computador de Mira"""
-           text: """<i class = flavor_text>Computadores de mira são componentes padrão na maioria das naves, especialmente aquelas que carregam artilharia pesada. Alguns caças leves e naves de transporte não possuem esse tipo de ajuda em suas armas, apesar dela poder ser instalada como uma modificação.</i>"""
-        "Synchronized Console":
-           display_name: """Console Sincronizado"""
-           text: """Depois que você realizar um ataque, você pode escolher uma nave amiga em alcance 1 ou uma nave amiga com a melhoria Console Sincronizado em alcance 1-3 e gastar uma mira que você possui no defensor. Se o fizer, a nave amiga que você escolheu pode travar uma mira no defensor."""
-        "Angled Deflectors":
-           display_name: """Defletores Angulares"""
-           text: """<i class = flavor_text>Escudos de caças normalmente possuem controles manuais que permite que sejam angulados para aumentar a proteção traseira ou dianteira. Entretanto, ao fazer isso a nave fica exposta a possíveis falhas de percepção do piloto.</i>"""
-        "Static Discharge Vanes":
-           display_name: """Descarga Estática"""
-           text: """Antes de você receber 1 ficha de íon ou interferência, se você não estiver estressado, você pode escolher outra nave em alcance 0-1 e receber 1 ficha de estresse. Se você o fizer, a nave escolhida recebe aquela ficha de íon ou interferência, então você sofre 1 dano %HIT%.%LINEBREAK%<i>Errata (desde RR 1.1.0): Alterado de "Se você for receber 1 ficha de íon ou interferência, se você não estiver estressado, você pode escolher outra nave em alcance 0-1 e receber 1 ficha de estresse e transfira 1 ficha de íon ou interferência para aquela nave."</i>"""
-        "Electronic Baffle":
-           display_name: """Desorientador Eletrônico"""
-           text: """Durante a Fase Final, você pode sofrer 1 dano para remover 1 ficha vermelha."""
-        "Stealth Device":
-           display_name: """Dispositivo de Ocultamento"""
-           text: """Quando você defender, se sua %CHARGE% estiver ativa, role 1 dado de defesa adicional.%LINEBREAK%Depois que você sofrer dano, perca 1 %CHARGE%."""
-        "Tactical Scrambler":
-           display_name: """Embaralhador Tático"""
-           text: """Quando você obstruir o ataque de uma nave inimiga, o defensor rola 1 dado de defesa adicional."""
-        "Delayed Fuses":
-           display_name: """Fusos Aumentados"""
-           text: """Depois que você soltar, lançar ou colocar uma bomba ou mina, você pode colocar 1 marcador de fuso neste dispositivo."""
-        "Gauntlet":
-           display_name: """Gauntlet"""
-           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para consertar 1 carta do tipo <strong>Nave</strong> virada para cima."""
-        "Hull Upgrade":
-           display_name: """Melhoria de Casco"""
-           text: """<i class = flavor_text>Para aqueles que não podem pagar por um gerador de escudo melhorado, fixar placas adicionais no casco da nave pode ser um substituto adequado.</i>"""
-        "Shield Upgrade":
-           display_name: """Melhoria de Escudo"""
-           text: """<i class = flavor_text>Escudos defletores são uma linha de defesa importante para a maioria das naves espaciais além dos caças leves. Melhorar a capacidade de escudos de uma nave pode ser cara, mas todos os pilotos, exceto alguns irresponsáveis, enxergam a importância desse tipo de investimento.</i>"""
-        "Engine Upgrade":
-           display_name: """Melhoria de Motor"""
-           text: """<i class = flavor_text>Grandes forças militares como o Império Galatico possuem motores padronizados, mas alguns pilotos e pequenas organizações normalmente substituem os conectores de energia e propulsores, ou usam combustíveis de alta performance para conseguir aquele impulso extra dos seus motores.</i>"""
-        "Precision Ion Engines":
-           display_name: """Motores Iônicos Precisos"""
-           text: """Antes de você realizar uma manobra Koiogran de velocidade 1-3 [%KTURN%], você pode, ao invés disso, gastar 1 %CHARGE% para realizar essa manobra como um Loop de Segnor [%SLOOPLEFT% ou %SLOOPRIGHT%]."""
-        "Nightbrother":
-           display_name: """Nightbrother"""
-           text: """Depois que você revelar uma manobra que não seja azul, se você estiver estressado, você pode gastar 2 %CHARGE% para receber 1 ficha de foco ou evade."""
-        "Mandalorian Optics":
-           display_name: """Visores Mandalorianos"""
-           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para travar uma mira em um objeto em seu %FRONTARC%.%LINEBREAK%Quando você realiza um ataque primário, se você possuir uma mira no defensor, ignore obstáculos além do alcance 0 que estejam obstruindo o ataque."""
-        "Afterburners":
-           display_name: """Pós-Combustores"""
-           text: """Depois que você realizar completamente uma manobra de velocidade 3-5, você pode gastar 1 %CHARGE% para realizar uma ação %BOOST%, mesmo se estiver estressado."""
-        "Burnout Thrusters":
-           display_name: """Propulsores Poderosos"""
-           text: """Depois que você realizar uma ação %SLAM%, perca 1 %CHARGE%. Então você pode receber 1 ficha de exaustão para remover 1 ficha de desarme.%LINEBREAK%Se sua %CHARGE% estiver inativa, você não pode realizar a ação %SLAM%."""
-        "Ablative Plating":
-           display_name: """Revestimento Ablativo"""
-           text: """Antes de você sofrer dano de um obstáculo ou de uma bomba amiga detonando, você pode gastar 1 %CHARGE%. Se o fizer, evite 1 dano."""
-        "Impervium Plating":
-           display_name: """Revestimento de Impervium"""
-           text: """Antes de você receber uma carta do tipo <strong>Nave</strong> virada para cima, você pode gastar 1 %CHARGE% para descartá-la."""
-        "Beskar Reinforced Plating":
-           display_name: """Revestimento Reforçado de Beskar"""
-           text: """Quando você defender, se o atacante estiver em seu %FRONTARC%, antes de você receber uma carta de dano virada para cima, você pode gastar 1 %CHARGE% para receber esta carta virada para baixo, ou gastar 2 %CHARGE% para descartá-la imediatamente."""
-        "Advanced SLAM":
-           display_name: """SLAM Avançado"""
-           text: """Depois que você realizar uma ação %SLAM%, se você executou completamente a manobra, você pode realizar uma ação branca da sua barra de ações, tratando-a como vermelha."""
-        "Overdrive Thruster":
-           display_name: """Propulsores Sobrecarregados"""
-           text: """Quando você realizar uma ação vermelha %BOOST%, %BARRELROLL% ou %SLAM%, você <strong>deve</strong> usar um gabarito 1 velocidade maior, se possível."""
-
-       #Sensor
-        "Collision Detector":
-           display_name: """Detector de Colisão"""
-           text: """Quando você realiza uma pirueta ou impulso, você pode se mover através e sobrepor obstáculos.%LINEBREAK%Depois que você se mover através ou sobrepor um obstáculo, você pode gastar 1 %CHARGE% para ignorar seus efeitos até o fim da rodada."""
-        "Advanced Sensors":
-           display_name: """Sensores Avançados"""
-           text: """Depois que você revelar seu disco de manobra, você pode realizar 1 ação.%LINEBREAK%Se o fizer, você não pode realizar outra ação durante sua ativação."""
-        "Passive Sensors":
-           display_name: """Sensores Passivos"""
-           text: """<strong>Ação:</strong> Gaste 1 %CHARGE%. Você pode realizar esta ação apenas durante seu passo de Realizar Ação.%LINEBREAK%Enquanto sua %CHARGE% estiver inativa, você não pode ser coordenado. Antes de você engajar, se sua %CHARGE% estiver inativa, você pode realizar uma ação de a ou %LOCK%."""
-        "Trajectory Simulator":
-           display_name: """Simulador de Trajetória"""
-           text: """Durante a Fase de Sistema, se você for soltar ou lançar uma bomba, você pode, em vez disso, lançá-la usando o gabarito [5 %STRAIGHT%]."""
-        "Fire-Control System":
-           display_name: """Sistema de Controle de Tiro"""
-           text: """Quando você realiza um ataque, se você tiver uma mira no defensor, você pode rerrolar 1 dado de ataque. Se o fizer, você não pode gastar sua mira durante este ataque."""
-
-       #Talento
-        "Backwards Tailslide":
-           display_name: """Deslizamento de Cauda"""
-           text: """Quando você realizar um impulso ou pirueta, se sua carta de melhoria %CONFIGURATION% estiver com o lado “(Fechada)” para cima, você pode se mover através e sobrepor obstáculos.%LINEBREAK%Depois que você realizar um impulso ou pirueta através de um obstáculo, se você não estiver em alcance 0 dele, receba 1 ficha de desvio."""
-        "Selfless":
-           display_name: """Autruísmo"""
-           text: """Quando outra nave amiga em alcance 0-1 defende, antes do passo Neutralizar Resultados, se você estiver no arco de ataque, você pode sofrer 1 dano %CRIT% para cancelar 1 resultado %CRIT%."""
-        "Selfless (BoY)":
-           display_name: """Autruísmo"""
-           text: """Quando outra nave amiga em alcance 0-1 defende, antes do passo Neutralizar Resultados, se você estiver no arco de ataque, você pode sofrer 1 dano %CRIT% para cancelar 1 resultado %CRIT%."""
-        "Composure":
-           display_name: """Compostura"""
-           text: """Depois que você falhar uma ação, se você não possuir fichas verdes, você pode realizar uma ação %FOCUS% Se o fizer, você não pode realizar ações adicionais nesta rodada.%LINEBREAK% <i>Errata (desde RR 1.1.0): Adicionado "Se o fizer, você não pode realizar ações adicionais nesta rodada."</i>"""
-        "Debris Gambit":
-           display_name: """Contornar Destroços"""
-           text: """Quando Realizar uma ação %EVADE% vermelha, se houver um obstáculo em alcance 0-1, trate a ação como branca."""
-        "Dedicated":
-           display_name: """Dedicado"""
-           text: """Quando outra nave amiga em seu %LEFTARC% ou %RIGHTARC% em alcance 0-2 defende, se ela for limitada ou possuir a melhoria <strong>Dedicado</strong> e você não estiver desgastado, você pode receber 1 ficha de desgaste. Se o fizer, o defensor rerrola 1 de seus resultados em branco.%LINEBREAK%<i>Errata (desde RR 1.4): Removida a restrição não-limitada e adicionada a restrição Clone</i>"""
-        "Gravitic Deflection":
-           display_name: """Deflexão Magnética"""
-           text: """Quando você defender, você pode rerrolar 1 dado de defesa para cada nave tracionada no arco de ataque."""
-        "Cutthroat":
-           display_name: """Degolar"""
-           text: """Depois que outra nave amiga em alcance 0-3 for destruída, se essa nave for limitada ou possuir a melhoria <strong>Degolar</strong>, você pode remover 1 de suas fichas vermelhas ou laranjas, ou recuperar 1 %CHARGE% não recursiva na sua carta de piloto ou de suas cartas de melhorias equipadas."""
-        "Fearless":
-           display_name: """Destemido"""
-           text: """Quando você realizar um ataque primário %FRONTARC%, se o defensor estiver em alcance 1 e você estiver no %FRONTARC% do defensor, você pode mudar um de seus resultados para um resultado %HIT%."""
-        "Disciplined":
-           display_name: """Disciplinado"""
-           text: """Depois que outra nave amiga em alcance 0-3 for destruída, se essa nave for limitada ou possuir a melhoria <strong>Disciplinado</strong>, você pode realizar uma ação %LOCK% ou %BARRELROLL%."""
-        "Enduring":
-           display_name: """Durável"""
-           text: """Quando você defender, se você não estiver no %BULLSEYEARC% do atacante, resultados %CRIT% são cancelados antes de resultados %HIT%.%LINEBREAK%Depois que você sofrer dano %CRIT%, você pode realizar uma ação %CALCULATE% ou %FOCUS% na sua barra de ações, mesmo se estiver estressado, tratando essa ação como vermelha."""
-        "Elusive":
-           display_name: """Evasivo"""
-           text: """Quando defender, você pode gastar 1 %CHARGE% para rerollar 1 dado de defesa.%LINEBREAK%Depois que realizar completamente uma manobra vermelha, recupere 1 %CHARGE%."""
-        "Ensnare":
-           display_name: """Enredar"""
-           text: """No final da Fase de Ativação, se você estiver tracionado, você pode escolher 1 nave em seu arco %SINGLETURRETARC% em alcance 0-1. Transfira 1 ficha de tração para ela."""
-        "Hopeful":
-           display_name: """Esperançoso"""
-           text: """Depois que outra nave amiga em alcance 0-3 for destruída, se aquela nave for limitada ou possuir a melhoria <strong>Esperançoso</strong>, você pode realizar uma ação de %FOCUS% ou %BOOST%."""
-        "Ion Limiter Override":
-           display_name: """Exceder o Limitador Iônico"""
-           text: """Depois que você executar completamente uma manobra vermelha, você pode realizar uma ação %BARRELROLL% mesmo estressado. Se o fizer, role um dado de ataque: em um resultado %HIT% receba uma ficha de desgaste, e em um resultado %CRIT% receba uma ficha de íon."""
-        "Fanatical":
-           display_name: """Fanático"""
-           text: """Quando você realizar um ataque primário, se você não possuir escudos ativos, você pode mudar 1 resultado %FOCUS% para um resultado %HIT%."""
-        "Juke":
-           display_name: """Finta"""
-           text: """Quando realizar um ataque, se você estiver desviando, você pode mudar 1 resultado %EVADE% do defensor para um resultado %FOCUS%."""
-        "Heroic":
-           display_name: """Heróico"""
-           text: """Quando você defender ou realizar um ataque, se você possuir apenas resultados em branco e tiver 2 ou mais resultados, você pode rerrolar qualquer quantidade dos seus dados."""
-        "Ruthless":
-           display_name: """Impiedoso"""
-           text: """Quando você realizar um ataque, você pode escolher outra nave amiga em alcance 0-1 do defensor. Se você o fizer, essa nave sofre 1 dano %HIT% e você pode mudar 1 de seus resultados para um resultado %HIT%."""
-        "Intimidation":
-           display_name: """Intimidação"""
-           text: """Quando uma nave em alcance 0 defende, ela rola 1 dado de defesa a menos."""
-        "Squad Leader":
-           display_name: """Líder de Esquadrão"""
-           text: """Quando você coordenar, a nave que você escolheu só pode realizar uma ação que também esteja na sua barra de ações."""
-        "Lone Wolf":
-           display_name: """Lobo Solitário"""
-           text: """Quando você defender ou realizar um ataque, se não houver outras naves amigas em alcance 0-2, você pode gastar 1 %CHARGE% para rerrolar 1 de seus dados."""
-        "Starbird Slash":
-           display_name: """Manobra Atordoante"""
-           text: """Depois que você realizar completamente uma manobra, você pode escolher 1 nave inimiga que você tenha se movido através. Essa nave recebe 1 ficha de desgaste. Então, se você estiver no arco de tiro dessa nave, você ganha 1 ficha de desgaste."""
-        "Interloper Turn":
-           display_name: """Manobra Clandestina"""
-           text: """Antes de você realizar uma curva [%TURNLEFT% ou %TURNRIGHT%) de velocidade 1-2 ou uma Manobra Koiogran [%KTURN%] de velocidade 1-2, se você estiver em alcance 0-1 de um asteroide, estrutura, ou nave enorme, você pode receber uma ficha de tração."""
-        "Marg Sabl Closure":
-           display_name: """Manobra Marg Sabl"""
-           text: """Depois que você realizar uma manobra, se você se moveu através de um obstáculo, estrutura ou nave enorme, ou se você destacou, você pode escolher 1 nave inimiga em seu %FRONTARC% em alcance 1-2. Essa nave recebe 1 ficha de desgaste."""
-        "Expert Handling":
-           display_name: """Pilotagem Experiente"""
-           text: """<i class = flavor_text>Enquanto caças pesados podem ser forçados em uma pirueta, pilotos experientes sabem como fazer isso sem colocar estresse desnecessário em suas naves ou deixá-los abertos a um ataque.</i>"""
-        "Notorious":
-           display_name: """Notório"""
-           text: """Depois que você defender, se o atacante estiver em seu arco de tiro, você pode gastar 1 %CHARGE%. Se o fizer, o atacante recebe 1 ficha de desgaste.%LINEBREAK%Quando você realiza um ataque, se o defensor estiver desgastado, você pode rerrolar 1 resultado em branco."""
-        "Daredevil":
-           display_name: """Ousado"""
-           text: """Quando você realizar uma ação %BOOST% branca, você pode tratá-la como vermelha para usar o gabarito [1 %TURNLEFT%] ou [1 %TURNRIGHT%]."""
-        "Outmaneuver":
-           display_name: """Outmaneuver"""
-           text: """Quando você realizar um ataque %FRONTARC%, se você não estiver no arco de tiro do defensor, o defensor rola 1 dado de defesa a menos."""
-        "Marksmanship":
-           display_name: """Franco-Atirador"""
-           text: """Quando você realiza um ataque, se o defensor estiver em seu %BULLSEYEARC%, você pode mudar 1 resultado %HIT% para um resultado %CRIT%."""
-        "Predator":
-           display_name: """Predador"""
-           text: """Quando você realizar um ataque primário, se o defensor estiver em seu %BULLSEYEARC%, você pode rerrolar 1 dado de ataque."""
-        "Saturation Salvo":
-           display_name: """Rajada Massiva"""
-           text: """Quando você realizar um ataque %TORPEDO% ou %MISSILE%, você pode gastar 1 %CHARGE% daquela melhoria. Se o fizer, escolha dois dados de defesa. O defensor deve rerrolar estes dados."""
-        "Tierfon Belly Run":
-           display_name: """Rasante de Tierfon"""
-           text: """Você pode realizar ataques especiais mesmo estando em alcance 0 de asteroides.%LINEBREAK%Quando você defender, se você estiver em alcance 0 de um obstáculo, os dados de ataque não podem ser rerrolados."""
-        "Feedback Ping":
-           display_name: """Sinal de Retorno"""
-           text: """Depois que uma nave inimiga realizar uma manobra, se ela estiver em alcance 0-1 de um dispositivo amigo, você pode travar uma mira nessa nave, ignorando as restrições de alcance."""
-        "Swarm Tactics":
-           display_name: """Táticas de Enxame"""
-           text: """No começo da Fase de Engajamento, você pode escolher 1 nave amiga em alcance 1. Se o fizer, essa nave trata sua iniciativa igual a sua até o final da rodada."""
-        "Trick Shot":
-           display_name: """Tiro Ardiloso"""
-           text: """Quando você realizar um ataque que está obstruído por um obstáculo, role 1 dado de ataque adicional."""
-        "Deadeye Shot":
-           display_name: """Tiro no Alvo"""
-           text: """Quando você realizar um ataque primário, se o defensor estiver em seu %BULLSEYEARC%, você pode gastar 1 resultado %HIT% ou mudar 1 resultado %CRIT% para um resultado %HIT%. Se o fizer, o defensor expõe uma de suas cartas de dano."""
-        "Crack Shot":
-           display_name: """Tiro Certeiro"""
-           text: """Quando realizar um ataque primário, se o defensor estiver em seu %BULLSEYEARC%, antes do passo de Neutralizar Resultados, você pode gastar 1 %CHARGE% para cancelar 1 resultado %EVADE%."""
-        "Snap Shot":
-           display_name: """Tiro Rápido"""
-           text: """Depois que uma nave inimiga executar uma manobra, você pode realizar este ataque como um ataque bônus.%LINEBREAK%<strong>Ataque:</strong> Seus dados não podem ser modificados."""
-        "Proud Tradition":
-           display_name: """Tradição Orgulhosa"""
-           text: """<strong>Tradição Orgulhosa</strong>%LINEBREAK%<strong>Preparação:</strong> Equipe este lado para cima.%LINEBREAK%Enquanto você tiver 2 fichas de estresse ou menos, você pode realizar ações %FOCUS% mesmo se estiver estressado.%LINEBREAK%Depois de realizar um ataque, se você estiver estressado, o defensor pode gastar 1 ficha de foco ou sofrer 1 dano %CRIT% para virar esta carta. %LINEBREAK% <strong>Tradição Falsa</strong>%LINEBREAK% Trate sua ação %FOCUS% como vermelha."""
-        "Treacherous":
-           display_name: """Traiçoeiro"""
-           text: """Quando você defender, você pode escolher uma nave obstruindo o ataque e gastar 1 %CHARGE%. Se o fizer, cancele 1 resultado %HIT% ou %CRIT%, e a nave que você escolher recebe 1 ficha de desgaste.%LINEBREAK%Depois que uma nave em alcance 0-3 for destruída, recupere 1 %CHARGE%."""
-        "Clan Training":
-           display_name: """Treinamento de Clã"""
-           text: """Antes de você engajar, se você não estiver focado e houver uma nave inimiga no seu %FRONTARC% em alcance1, você pode gastar 1 %CHARGE% para realizar uma ação %FOCUS% vermelha.%LINEBREAK%Depois que você realizar um ataque, se o defensor foi destruído, recupere 1 %CHARGE%."""
-
-       #Tecnologias
-        "Primed Thrusters":
-           display_name: """Propulsores Preparados"""
-           text: """Enquanto você possuir 2 fichas de estresse ou menos, você pode realizar ações de %BARRELROLL% e %BOOST% mesmo se estiver estressado."""
-        "Pattern Analyzer":
-           display_name: """Analista de Padrões"""
-           text: """Quando você realizar completamente uma manobra vermelha, antes da fase Checar Dificuldade, você pode realizar 1 ação."""
-        "Biohexacrypt Codes":
-           display_name: """Códigos Biohexacripto"""
-           text: """Quando você coordenar ou interferir, se você possuir uma mira na nave, você pode gastar essa mira para escolher essa nave, ignorando restrições de alcance."""
-        "Sensor Scramblers":
-           display_name: """Confundir Sensores"""
-           text: """<strong>Preparação:</strong> Receba 1 ficha de camuflagem.%LINEBREAK%Enquanto você estiver camuflado, outras naves não podem travar miras em você.%LINEBREAK%Durante a Fase Final, se você estiver camuflado e houver uma nave inimiga em alcance 0-3, você <strong>deve</strong> descamuflar. Se o fizer, e a descamuflagem falhar, perca 1 ficha de camuflagem."""
-        "Sensor Buoy Suite":
-           display_name: """Conjunto de Bóias de Sensor"""
-           text: """<strong>Preparação:</strong> Antes de posicionar as forças, coloque 2 remotos bóias de sensor além do alcance 2 de qualquer borda.%LINEBREAK%Antes de engajar você pode travar uma mira em uma nave em alcance 0-1 de uma bóia de sensor amiga, ignorando restrições de alcance."""
-        "Hyperspace Tracking Data":
-           display_name: """Dados de Rastreamento do Hiperespaço"""
-           text: """<strong>Preparação:</strong> Antes de posicionar as forças, você pode escolher um número entre 0 e 6. Trate sua iniciativa como o valor escolhido durante a Preparação.%LINEBREAK%Depois da Preparação, atribua 1 ficha de foco ou desvio para cada nave aliada em alcance 0-2."""
-        "Enhanced Jamming Suite":
-           display_name: """Equipamento de Interferência Otimizado"""
-           text: """Quando você interferir, você pode escolher você mesmo ou outra nave amiga.%LINEBREAK%Quando você defender, se o atacante não possuir fichas verdes ou se houver uma nave interferida no arco de ataque, você pode rolar um dado de defesa adicional."""
-        "Advanced Optics":
-           display_name: """Ótica Avançada"""
-           text: """Quando você realiza um ataque, você pode gastar 1 ficha de foco para mudar um dos seus resultados em branco para um resultado %HIT%."""
-        "Ferrosphere Paint":
-           display_name: """Pintura de Ferrosfera"""
-           text: """Depois que uma nave inimiga travar mira em você, se você não estiver no %BULLSEYEARC% dessa nave, essa nave ganha uma ficha de estresse a menos que ela escolha quebrar a mira.%LINEBREAK%<i>Errata (desde RR 1.4): Habilidade ajustada para permitir contrajogo</i>"""
-        "Automated Target Priority":
-           display_name: """Prioridade de Alvo Automatizada"""
-           text: """Quando você realizar um ataque, você <strong>deve</strong> escolher um defensor no alcance de ataque válido mais próximo.%LINEBREAK%Depois que você realizar um ataque que errou, coloque 1 ficha de cálculo nessa carta.%LINEBREAK%Antes de você engajar, você pode remover 1 ficha de cálculo desta carta para receber uma ficha de cálculo."""
-        "Targeting Synchronizer":
-           display_name: """Sincronizador de Alvos"""
-           text: """Enquanto uma nave aliada em alcance 1-2 realiza um ataque contra um alvo que você possua mira, essa nave ignora o requerimento %LOCK% do ataque."""
-
-      #Torpedo
-        "Plasma Torpedoes":
-           display_name: """Torpedos de Plasma"""
-           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Durante o passo Neutralizar Resultados, resultados %CRIT% são cancelados antes de resultados %HIT%. Depois que este ataque acertar, o defensor perde 1 escudo."""
-        "Proton Torpedoes":
-           display_name: """Torpedos de Próton"""
-           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Mude 1 resultado %HIT% para um resultado %CRIT%."""
-        "Adv. Proton Torpedoes":
-           display_name: """Torpedos de Próton Avançados"""
-           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Mude 1 resultado %HIT% para um resultado %CRIT%."""
-        "Ion Torpedoes":
-           display_name: """Torpedos Iônicos"""
-           text: """<strong>Ataque[%LOCK%]: </strong> Gaste 1 %CHARGE%.%LINEBREAK%Se este ataque acertar, gaste 1 resultado %HIT% ou %CRIT% para causar 1 dano %HIT% ao defensor. Todos os resultados %HIT%/%CRIT% restantes causam fichas de íon ao invés de dano."""
-        "Tracking Torpedoes":
-           display_name: """Torpedos Rastreadores"""
-           text: """Durante a Fase de Sistema, você pode gastar até 3 %CHARGE% para lançar a mesma quantidade de torpedos rastreadores usando os gabaritos [%BANKLEFT% 3], [%STRAIGHT% 4] e [%BANKRIGHT% 3]. Cada dispositivo deve usar um gabarito diferente. Então cada dispositivo pode adquirir uma mira em um objeto que você possua mira, ignorando as restrições de alcance."""
-        "Homing Torpedoes":
-           display_name: """Torpedos Teleguiados"""
-           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Depois que você declarar o defensor, o defensor pode escolher sofrer um dano %CRIT%. Se o fizer, pule as etapas de Dados de Ataque e Dados de Defesa e o ataque é tratado como acerto."""
-
-       #Torre
-        "Ion Cannon Turret":
-           display_name: """Torre de Canhão de Íons"""
-           text: """<strong>Ataque: </strong> Se este ataque acertar, gaste um resultado %HIT% ou %CRIT% para fazer o defensor sofrer 1 dano %HIT%. Todos os resultados %HIT%/%CRIT% restantes causam fichas de íon ao invés de dano."""
-        "Dorsal Turret":
-           display_name: """Torre Dorsal"""
-           text: """<strong>Ataque</strong>"""
-
-       #Título
+        "0-0-0":
+           display_name: """0-0-0"""
+           text: """No começo da Fase de Engajamento, você pode escolher 1 nave inimiga em alcance 0-1. Se o fizer,  você recebe 1 ficha de cálculo a menos que a nave inimiga escolha receber 1 ficha de estresse."""
+        "4-LOM":
+           display_name: """4-LOM"""
+           text: """Quando você realizar um ataque, depoisd e rolar dados de ataque, você pode nomear um tipo de ficha verde. Se você o fizer, receba 2 fichas de íon, durante este ataque, o defensor não pode gastar fichas do tipo nomeado."""
         "Andrasta":
            display_name: """Andrasta"""
            text: """ """
-        "B6 Blade Wing Prototype":
-           display_name: """Protótipo B6 Blade Wing"""
-           text: """ """
-        "B6 Blade Wing Prototype (Epic)":
-           display_name: """Protótipo B6 Blade Wing (Épico)"""
-           text: """<strong>Ataque [%LOCK%]: </strong>Receba 1 ficha de íon para realizar este ataque. Se este ataque acertar, o defensor sofre 1 dano %HIT%/%CRIT% adicional para cada resultado igual não cancelado depois do primeiro."""
         "Black One":
            display_name: """Black One"""
            text: """Depois que você realizar uma ação %SLAM% perca 1 %CHARGE%. E então você pode receber 1 ficha de íon para remover 1 ficha de desarme.%LINEBREAK%Se sua %CHARGE% estiver inativa, você não pode realizar a ação %SLAM%."""
+        "Dauntless":
+           display_name: """Dauntless"""
+           text: """After you partially execute a maneuver, you may perform 1 white action, treating that action as red."""
         "Ghost":
            display_name: """Ghost"""
            text: """Você pode acoplar 1 transporte de ataque ou um transporte classe Sheathipede.%LINEBREAK%Suas naves acopladas podem destacar apenas pelas suas guias traseiras."""
@@ -3599,12 +2655,6 @@ exportObj.cardLoaders.Português = () ->
         "IG-2000":
            display_name: """IG-2000"""
            text: """Você possui a habilidade de cada outra nave amiga com a melhoria <strong>IG-2000</strong>."""
-        "Kaz's Fireball":
-           display_name: """Fireball do Kaz"""
-           text: """<strong>Preparação: </strong> Quando você resolver o <strong>Explosão com Asas</strong>, você pode procurar o baralho de dano e escolha uma carta de dano do tipo <strong>Nave</strong>; você recebe essa carta. Então, embaralhe o baralho de dano.%LINEBREAK%Você pode realizar ações de suas cartas de dano mesmo se estiver ionizado."""
-        "Lando's Millennium Falcon":
-           display_name: """Millennium Falcon do Lando"""
-           text: """1 Nave de Fuga pode acoplar em você.%LINEBREAK%Quando você tiver uma Nave de Fuga acoplada, você pode tratar os escudos dela como se estivessem na sua carta de nave.%LINEBREAK%Quando você realiza um ataque primário contra uma nave estressada, role 1 dado de ataque adicional.%LINEBREAK%<i>Errata (desde o RR 1.1.0): Substituído “gastar" por "tratar"</i>"""
         "Marauder":
            display_name: """Marauder"""
            text: """Quando você realizar uma taque primário %REARARC% você pode rerrolar 1 dado de ataque."""
@@ -3619,19 +2669,13 @@ exportObj.cardLoaders.Português = () ->
            text: """Ganhe uma arma primária %FRONTARC% com valor "3".%LINEBREAK%Durante a Fase Final, não remova até 2 fichas de foco."""
         "Outrider":
            display_name: """Outrider"""
-           text: """Quando você realizar um ataque primário em alcance 3, role 1 dado de ataque adicional.%LINEBREAK%Quando você realizar um ataque obstruído, você pode mudar um dos resultados %EVADE% do defensor para um resultado %FOCUS%.%LINEBREAK% Errata (desde a errata 1.8): novo texto"</i>"""
+           text: """Quando você realizar um ataque primário em alcance 3, role 1 dado de ataque adicional.%LINEBREAK%Quando você realizar um ataque obstruído, você pode mudar um dos resultados %EVADE% do defensor para um resultado %FOCUS%.%LINEBREAK% Errata (desde a errata 1.8): novo texto</i>"""
         "Phantom":
            display_name: """Phantom"""
            text: """Você pode acoplar em alcance 1."""
         "Punishing One":
            display_name: """Punishing One"""
            text: """Quando você realizar um ataque primário, se o defensor estiver em seu %FRONTARC%, role 1 dado de ataque adicional."""
-        "Razor Crest":
-           display_name: """Razor Crest"""
-           text: """<strong>Preparação: </strong> Coloque 1 melhoria %ILLICIT% não limitada virada para baixo sob esta carta.%LINEBREAK% Durante a Fase de Sistema, você pode revelar esta melhoria %ILLICIT% e equipá-la como se ela estivesse equipada durante a Preparação (sem pagar seu custo em pontos)."""
-        "Rey's Millennium Falcon":
-           display_name: """Millennium Falcon da Rey"""
-           text: """Se você possuir 2 fichas de estresse ou menos, você pode realizar manobras Loop de Segnor vermelho [%SLOOPLEFT% ou %SLOOPRIGHT%] e realizar as ações %BOOST% e %ROTATEARC% mesmo se estiver estressado."""
         "ST-321":
            display_name: """ST-321"""
            text: """Depois que você realizar uma ação %COORDINATE%, você pode escolher uma nave inimiga em alcance 0-3 da nave que você coordenou. Se o fizer, adquira uma mira nessa nave inimiga, ignorando restrições de alcance."""
@@ -3641,9 +2685,6 @@ exportObj.cardLoaders.Português = () ->
         "Shadow Caster":
            display_name: """Shadow Caster"""
            text: """Depois que você realizar um ataque que acertou, se o defensor estiver em seu %SINGLETURRETARC% e seu %FRONTARC%, o defensor recebe uma ficha de tração."""
-        "Slave I (Separatist)":
-           display_name: """Slave I"""
-           text: """Quando você realizar um ataque %FRONTARC%, se você estiver no %FULLREARARC% do defensor, você pode mudar 1 resultado %HIT% para um resultado %CRIT%."""
         "Slave I":
            display_name: """Slave I"""
            text: """Depois que você revelar uma manobra curva [%TURNLEFT% ou %TURNRIGHT%] ou curva suave [%BANKLEFT% ou %BANKRIGHT%] você pode mudar seu disco para outra manobra de mesma velocidade e sentido, para outra direção.%LINEBREAK%<i>Errata (desde RR 1.0.2): removido "você pode receber 1 ficha de estresse. Se você fizer isso,"</i>"""
@@ -3653,64 +2694,86 @@ exportObj.cardLoaders.Português = () ->
         "Soulless One":
            display_name: """Soulless One"""
            text: """Quando você defender, se o atacante estiver forca do seu arco de tiro, você pode rerrolar 1 dado de defesa."""
-        "Xanadu Blood":
-           display_name: """Xanadu Blood"""
-           text: """ """
-
-      #Tripulação
-        "0-0-0":
-           display_name: """0-0-0"""
-           text: """No começo da Fase de Engajamento, você pode escolher 1 nave inimiga em alcance 0-1. Se o fizer,  você recebe 1 ficha de cálculo a menos que a nave inimiga escolha receber 1 ficha de estresse."""
-        "4-LOM":
-           display_name: """4-LOM"""
-           text: """Quando você realizar um ataque, depoisd e rolar dados de ataque, você pode nomear um tipo de ficha verde. Se você o fizer, receba 2 fichas de íon, durante este ataque, o defensor não pode gastar fichas do tipo nomeado."""
-        "Aayla Secura":
-           display_name: """Aayla Secura"""
-           text: """Quando uma nave inimiga em seu %BULLSEYEARC% realiza um ataque, se o defensor for uma nave amiga e estiver em alcnace 0-2, o defensor pode mudar 1 resultado em branco para um resultado %FOCUS%."""
+        "Ablative Plating":
+           display_name: """Revestimento Ablativo"""
+           text: """Antes de você sofrer dano de um obstáculo ou de uma bomba amiga detonando, você pode gastar 1 %CHARGE%. Se o fizer, evite 1 dano."""
+        "Admiral Sloane":
+           display_name: """Admiral Sloane"""
+           text: """After another friendly ship at range 0-3 defends, if it is destroyed, the attacker gains 2 stress tokens.%LINEBREAK%While a friendly ship at range 0-3 performs an attack against a stressed ship, it may reroll 1 attack die."""
+        "Adv. Proton Torpedoes":
+           display_name: """Torpedos de Próton Avançados"""
+           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Mude 1 resultado %HIT% para um resultado %CRIT%."""
+        "Advanced Optics":
+           display_name: """Ótica Avançada"""
+           text: """Quando você realiza um ataque, você pode gastar 1 ficha de foco para mudar um dos seus resultados em branco para um resultado %HIT%."""
+        "Advanced SLAM":
+           display_name: """SLAM Avançado"""
+           text: """Depois que você realizar uma ação %SLAM%, se você executou completamente a manobra, você pode realizar uma ação branca da sua barra de ações, tratando-a como vermelha."""
+        "Advanced Sensors":
+           display_name: """Sensores Avançados"""
+           text: """Depois que você revelar seu disco de manobra, você pode realizar 1 ação.%LINEBREAK%Se o fizer, você não pode realizar outra ação durante sua ativação."""
+        "Afterburners":
+           display_name: """Pós-Combustores"""
+           text: """Depois que você realizar completamente uma manobra de velocidade 3-5, você pode gastar 1 %CHARGE% para realizar uma ação %BOOST%, mesmo se estiver estressado."""
         "Agent Kallus":
            display_name: """Agente Kallus"""
            text: """<strong>Preparação: </strong> deopis de posicionar as forças, atribua a condição <strong>Caçado</strong> a uma nave inimiga.%LINEBREAK%Quando você realizar um ataque contra a nave com a condição <strong>Caçado</strong>, você pode mudar 1 de seus resultados %FOCUS% para um resultado %HIT%.%LINEBREAK%<i>Errata (desde RR 1.1.0)</i>:"Adicionado depois de posicionar as forças,"</i>"""
-        "Agent Terex":
-           display_name: """Agente Terex"""
-           text: """<strong>Preparação: </strong> Equipe este lado para cima e coloque 3 fichas de cálculo nesta carta.%LINEBREAK%No começo da Fase de Engajamento, você pode escolher uma nave amiga em alcance 0-3 e remover 1 ficha de cálculo desta carta para que aquela carta ganhe uma ficha igual. Então, se não houver fichas de cáculo nesta carta, vire-a. %LINEBREAK%<strong>Ciborgue:</strong> Durante a Fase de Sistema, role 1 dado de ataque. em um resultado %HIT% ou %CRIT%, receba 1 ficha de cálculo. Caso contrário, receba 1 ficha de interferência.%LINEBREAK%<strong>Ação: </strong>Transfira 1 ficha de cálculo ou de interferência para uma nave em alcance 0-3."""
-        "Ahsoka Tano (Crew)":
-           display_name: """Ahsoka Tano"""
-           text: """Após você realizar completamente uma manobra, você pode gastar 1 %FORCE% para escolher 1 nave amiga em seu %FULLREARARC% em alcance 1-2. Se você o fizer, aquela nave pode realizar uma ação %FOCUS% vermelha, mesmo se estiver estressada."""
-        "Prime Minister Almec":
-           display_name: """Primeiro Ministro Almec"""
-           text: """<strong>Preparação: </strong>Equipe este lado para cima.%LINEBREAK%Depois que uma nave amiga em alcance 0-2 revelar uma manobra branca, se ela não possuir fichas verdes, ela pode receber 1 ficha de estresse para receber 1 ficha de cálculo.%LINEBREAK%Durante a Fase Final, se você possuir 2 ou mais fichas de estresse, vire essa carta. %LINEBREAK% <strong>Almec, o Fantoche de Maul</strong> %LINEBREAK% Depois que uma nave amiga em alcance 0-2 realizar completamente uma manobra vermelha, essa nave pode realizar uma ação %CALCULATE% OU %FOCUS% da sua barra de ações, mesmo se estiver estressada."""
-        "Amilyn Holdo":
-           display_name: """Amilyn Holdo"""
-           text: """Antes de você engajar, você pode escolher outra nave amiga em alcnace 1-2. Você pode transferir para aquela nave 1 ficha de 1 tipo que ela não tenha. Aquela nave pode transferir para você 1 ficha de um tipo que você não tenha."""
+        "Agile Gunner":
+           display_name: """Atirador Ágil"""
+           text: """Durante a Fase Final, você pode rotacionar seu %SINGLETURRETARC%."""
+        "Autoblasters":
+           display_name: """Autoblasters"""
+           text: """<strong>Ataque: </strong>Se o defensor estiver em seu %BULLSEYEARC%, role 1 dado adicional. Durante a etapa Neutralizar Resultados, se você não estiver no %FRONTARC% do defensor, resultados %EVADE% não cancelam resultados %CRIT%."""
+        "BB Astromech":
+           display_name: """BB Astromech"""
+           text: """Antes de você executar uma manobra azul, você pode gastar 1 %CHARGE% para realizar uma ação %BARRELROLL%.%LINEBREAK% <i>Errata (desde RR 1.4.2): Período da habilidade alterado para Fase de Sistema</i>"""
+        "BB-8":
+           display_name: """BB-8"""
+           text: """Antes de você executar uma manobra azul, você pode gastar 1 %CHARGE% para realizar uma ação %BARRELROLL% ou %BOOST%.%LINEBREAK% <i>Errata (desde RR 1.4.2): Período da habilidade alterado para Fase de Sistema</i>"""
+        "BT-1":
+           display_name: """BT-1"""
+           text: """Quando você realizar um ataque, você pode mudar 1 resultado %HIT% para um resultado %CRIT% para cada ficha de estresse que o defensor tiver."""
+        "Barrage Rockets":
+           display_name: """Torrente de Foguetes"""
+           text: """<strong>Ataque [%FOCUS%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Se o defensor estiver em seu %BULLSEYEARC%, você pode gastar 1 ou mais %CHARGE% para rerrolar a mesma quantidade de dados."""
+        "Battle Meditation":
+           display_name: """Meditação de Batalha"""
+           text: """Você não pode coordenar naves limitadas.%LINEBREAK% Quando você realizar uma ação %COORDINATE% roxa, você pode coordenar 1 nave amiga não-limitada adicional do mesmo tipo. Ambas as naves devem realizar a mesma ação."""
         "Baze Malbus":
            display_name: """Baze Malbus"""
            text: """Quando você realizar uma ação %FOCUS%, você pode tratá-la como vermelha. Se o fizer, receba 1 ficha de foco adicional para cada nave inimiga em alcance 0-1, até um máximo de 2."""
+        "Biohexacrypt Codes":
+           display_name: """Códigos Biohexacripto"""
+           text: """Quando você coordenar ou interferir, se você possuir uma mira na nave, você pode gastar essa mira para escolher essa nave, ignorando restrições de alcance."""
+        "Bistan":
+           display_name: """Bistan"""
+           text: """Depois que você realizar um ataque primário, se você estiver focado, você pode realizar um ataque %SINGLETURRETARC% bônus contra uma nave que você não tenha atacado nessa rodada."""
         "Boba Fett":
            display_name: """Boba Fett"""
            text: """<strong>Preparação: </strong>Comece na reserva.%LINEBREAK%No fim da Preparação, se coloque em alcance 0 de um obstáculo e além do alcance 3 de qualquer nave inimiga."""
-        "Bo-Katan Kryze (Republic/Separatist)":
-           display_name: """Bo-Katan Kryze"""
-           text: """Quando você realizar um ataque, se você estiver em alcance 0-1 do defensor, você pode rerrolar 1 dado de ataque."""
-        "Bo-Katan Kryze (Rebel/Scum)":
-           display_name: """Bo-Katan Kryze"""
-           text: """Depois que você realizar um ataque, se o defensor foi destruído, cada nave amiga em alcance 0-2 pode remover 1 ficha vermelha ou laranja."""
+        "Bomblet Generator":
+           display_name: """Gerador de Bombas Fragmentadas"""
+           text: """<strong>Bomba</strong>%LINEBREAK%Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar uma Mini-bomba com o gabarito [1 %STRAIGHT%].%LINEBREAK%No começo da Fase de Ativação, você pode gastar 1 escudo para recuperar 2 %CHARGE%."""
+        "Bossk":
+           display_name: """Bossk"""
+           text: """Depois de realizar um ataque primário que errou, se você não estiver estressado, você <strong>deve</strong> receber 1 ficha de estresse para realizar um ataque primário bônus contra o mesmo alvo."""
+        "Brilliant Evasion":
+           display_name: """Evasão Brilhante"""
+           text: """Quando você se defender, se você não estiver no %BULLSEYEARC% do atacante, você pode gastar 1 %FORCE% para mudar 2 de seus resultados %FOCUS% para resultados %EVADE%."""
         "C-3PO":
            display_name: """C-3PO"""
            text: """Antes de rolar dados de defesa, você pode gastar 1 ficha de cálculo para chutar um númer 1 ou maior. Se você o fizer e rolar exatamente a mesma quantidade de resultados %EVADE%, adicione 1 resultado %EVADE%.%LINEBREAK%Depois que você realizar a ação %CALCULATE%, receba 1 ficha de cálculo."""
         "C-3PO (Resistance)":
            display_name: """C-3PO"""
            text: """Quando você coordenar, você pode escolher naves amigas além do alcance 2 se elas possuírem %CALCULATE% em sua barra de ações.%LINEBREAK%Depois qeu você realizar a ação %CALCULATE% ou %COORDINATE%, receba 1 ficha de cálculo."""
-        "C-3PO (Republic)":
-           display_name: """C-3PO"""
-           text: """Quando você defender, se você estiver calculando, você pode rerrolar 1 dado de defesa.%LINEBREAK%Depois que você realizar uma ação de %CALCULATE%, receba 1 ficha de cálculo."""
         "Cad Bane":
            display_name: """Cad Bane"""
            text: """Depois que você soltar ou lançar um dispositivo, você pode realizar uma ação %BOOST% vermelha."""
-        "Captain Hark":
-           display_name: """Captão Hark"""
-           text: """Depois que você executar completamente uma manobra vermelha, se você não estiver focado, você pode gastar 1 %CHARGE% para receber 1 ficha de foco."""
+        "Calibrated Laser Targeting":
+           display_name: """Mira a Laser Calibrada"""
+           text: """Quando você realizar um ataque primário, se o defensor estiver em seu %BULLSEYEARC%, adicione 1 resultado %FOCUS%."""
         "Captain Phasma":
-           display_name: """Captã Phasma"""
+           display_name: """Capitã Phasma"""
            text: """No final da Fase de Engajamento, cada nave inimiga em alcance 0-1 que não esteja estressada recebe 1 ficha de estresse."""
         "Cassian Andor":
            display_name: """Cassian Andor"""
@@ -3727,15 +2790,972 @@ exportObj.cardLoaders.Português = () ->
         "Chewbacca (Resistance)":
            display_name: """Chewbacca"""
            text: """<strong>Preparação: </strong>Perca 1 %CHARGE%.%LINEBREAK%Depois que uma nave amiga em alcance 0-3 receber 1 carta de dano, recupere 1  %CHARGE%.%LINEBREAK%Quando você realizar um ataque, você pode gastar 2 %CHARGE% para mudar 1 resultado %FOCUS% para um resultado %CRIT%."""
-        '"Chopper" (Crew)':
-           display_name: """“Chopper”"""
-           text: """Durante o passo de Realizar Ação, você pode realizar 1 ação, mesmo se estiver estressado. Depois que você realizar uma ação estressado, sofra 1 dano %HIT% a menos que você exponha 1 de suas cartas de dano."""
         "Ciena Ree":
            display_name: """Ciena Ree"""
            text: """Depois que você realizar uma ação %COORDINATE%, se a nave que você coordenou realizaou uma ação %BARRELROLL% ou %BOOST%, ela pode receber 1 ficha de estresse para girar 90º."""
         "Cikatro Vizago":
            display_name: """Cikatro Vizago"""
            text: """Durante a Fase Final, você pode escolher 2 melhorias %ILLICIT% equipadas em naves amigas em alcance 0-1. Se o fizer, você pode trocar essas melhorias entre si.%LINEBREAK%<strong>Fim do Jogo: </strong>Devolva todas as melhorias %ILLICIT% a suas naves originais."""
+        "Cloaking Device":
+           display_name: """Dispositivo de Camuflagem"""
+           text: """<strong>Ação: </strong> Gaste 1 %CHARGE% para realizar uma ação %CLOAK%.%LINEBREAK% No começo da Fase de Planejamento, role 1 dado de ataque. Em um resultado %FOCUS%, descamufle ou descarte sua ficha de camuflagem."""
+        "Clone Commander Cody":
+           display_name: """Comandante Clone Cody"""
+           text: """Depois que você realizar um ataque que errou, se 1 ou mais resultados %HIT%/%CRIT% foram neutralizados, o defensor recebe 1 ficha de desgaste."""
+        "Cluster Missiles":
+           display_name: """Mísseis de Fragmentação"""
+           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Depois deste ataque, você pode realizar este ataque como um ataque bônus contra um alvo diferente em alcance 0-1 do defensor, ignorando o requerimento de %LOCK%."""
+        "Collision Detector":
+           display_name: """Detector de Colisão"""
+           text: """Quando você realiza uma pirueta ou impulso, você pode se mover através e sobrepor obstáculos.%LINEBREAK%Depois que você se mover através ou sobrepor um obstáculo, você pode gastar 1 %CHARGE% para ignorar seus efeitos até o fim da rodada."""
+        "Composure":
+           display_name: """Compostura"""
+           text: """Depois que você falhar uma ação, se você não possuir fichas verdes, você pode realizar uma ação %FOCUS% Se o fizer, você não pode realizar ações adicionais nesta rodada.%LINEBREAK% <i>Errata (desde RR 1.1.0): Adicionado "Se o fizer, você não pode realizar ações adicionais nesta rodada."</i>"""
+        "Concussion Missiles":
+           display_name: """Mísseis de Concussão"""
+           text: """<strong>Ataque[%LOCK%]: </strong>Gaste 1 %CHARGE%.%LINEBREAK%Depois que esse ataque acertar, cada nave em alcance 0-1 do defensor expõe uma de suas cartas de dano."""
+        "Conner Nets":
+           display_name: """Redes Conner"""
+           text: """<strong>Mina</strong>%LINEBREAK%Durante a Fase de sistema você pode gastar 1 %CHARGE% para soltar uma Rede Conner usando o gabarito [1 %STRAIGHT%].%LINEBREAK%A %CHARGE% desta carta não pode ser recuperada."""
+        "Contraband Cybernetics":
+           display_name: """Cibernética Ilegal"""
+           text: """Antes de você ativar, você pode gastar 1 %CHARGE%. Se o fizer, até o fim da rodada, você pode realizar ações e executar manobras vermelhas mesmo se estiver estressado.%LINEBREAK% A %CHARGE% desta carta não pode ser recuperada. %LINEBREAK% <i>Errata (desde RR 1.4.2): Adicionada restrição na recuperação de cargas</i>"""
+        "Count Dooku":
+           display_name: """Conde Dookan"""
+           text: """Durante um ataque, Antes que uma nave em alcance 0-2 role dado de ataque ou defesa, se todas as suas %FORCE% estiverem ativas, você pode gastar 1 %FORCE% e nomear um resultado. Se a rolagem não conter o restulado nomeado, a nave deve mudar 1 dado para esse resultado.%LINEBREAK%<i>Errata (desde RR 1.4): Adicionado "Durante um ataque,"</i>"""
+        "Crack Shot":
+           display_name: """Tiro Certeiro"""
+           text: """Quando realizar um ataque primário, se o defensor estiver em seu %BULLSEYEARC%, antes do passo de Neutralizar Resultados, você pode gastar 1 %CHARGE% para cancelar 1 resultado %EVADE%."""
+        "DRK-1 Probe Droids":
+           display_name: """Sonda Droide Dark Eye"""
+           text: """During the End Phase, you may spend 1 %CHARGE% to drop or launch 1 DRK-1 probe droid using a speed 3 template.%LINEBREAK%This card's %CHARGE% cannot be recovered."""
+        "Daredevil":
+           display_name: """Ousado"""
+           text: """Quando você realizar uma ação %BOOST% branca, você pode tratá-la como vermelha para usar o gabarito [1 %TURNLEFT%] ou [1 %TURNRIGHT%]."""
+        "Darth Vader":
+           display_name: """Darth Vader"""
+           text: """No começo da Fase de Engajamento, você pode escolher 1 nave em seu arco de tiro em alcance 0-2 e gastar 1 %FORCE%. Se você fizer isso, essa nave sofre 1 dano %HIT% a menos que escolha remover 1 ficha verde."""
+        "Deadman's Switch":
+           display_name: """Dispositivo de Homem Morto"""
+           text: """Depois que você for destruído, todas as outras naves em alcance 0-1 sofrem 1 dano %HIT%."""
+        "Death Troopers":
+           display_name: """Death Troopers"""
+           text: """Durante a Fase de ativação, naves inimigas em alcance 0-1 não podem remover fichas de estresse."""
+        "Debris Gambit":
+           display_name: """Contornar Destroços"""
+           text: """Quando Realizar uma ação %EVADE% vermelha, se houver um obstáculo em alcance 0-1, trate a ação como branca."""
+        "Dedicated":
+           display_name: """Dedicado"""
+           text: """Quando outra nave amiga em seu %LEFTARC% ou %RIGHTARC% em alcance 0-2 defende, se ela for limitada ou possuir a melhoria <strong>Dedicado</strong> e você não estiver desgastado, você pode receber 1 ficha de desgaste. Se o fizer, o defensor rerrola 1 de seus resultados em branco.%LINEBREAK%<i>Errata (desde RR 1.4): Removida a restrição não-limitada e adicionada a restrição Clone</i>"""
+        "Delayed Fuses":
+           display_name: """Fusos Aumentados"""
+           text: """Depois que você soltar, lançar ou colocar uma bomba ou mina, você pode colocar 1 marcador de fuso neste dispositivo."""
+        "Delta-7B":
+           display_name: """Delta-7B"""
+           text: """<i class = flavor_text>A Delta-7B foi projetada como uma variante mais pesada do interceptor Delta-7 classe Aethersprite, identificável pelo encaixe reposicionado do astromecânico. Muitos generais Jedi preferem o maior poder de fogo e durabilidade desta nave.</i>"""
+        "Dengar":
+           display_name: """Dengar"""
+           text: """Depois que você defender, se o atacante estiver em seu arco de tiro, você pode gastar 1 %CHARGE%. Se o fizer, role um dado de ataque a menos que o atacante escolha remover 1 ficha verde. Em um resultado %HIT% ou %CRIT%, o atacante sofre um dano %HIT%."""
+        "Diamond-Boron Missiles":
+           display_name: """Mísseis de Diamante-Boro"""
+           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Depois que este ataque acertar, você pode gastar 1 %CHARGE%. Se o fizer, cada nave em alcance 0-1 do defensor com agilidade igual ou menor que a do defensor rola um dado de ataque e sofre 1 dano %HIT%/%CRIT% para cada resultado equivalente."""
+        "Director Krennic":
+           display_name: """Director Krennic"""
+           text: """<strong>Preparação: </strong>Antes de posicionar as forças, atribua a condição <strong>Protótipo Otimizado</strong> a outra nave amiga."""
+        "Discord Missiles":
+           display_name: """Mísseis Divergentes"""
+           text: """No começo da Fase de Engajamento, você pode gastar 1 ficha de cálculo e 1 %CHARGE% para lançar um enxame de droides zunidores usando o gabarito [3 %BANKLEFT%], [3 %STRAIGHT%] ou [3 %BANKRIGHT%].%LINEBREAK%A %CHARGE% dessa carta não pode ser recuperada."""
+        "Dorsal Turret":
+           display_name: """Torre Dorsal"""
+           text: """<strong>Ataque</strong>"""
+        "Electronic Baffle":
+           display_name: """Desorientador Eletrônico"""
+           text: """Durante a Fase Final, você pode sofrer 1 dano para remover 1 ficha vermelha."""
+        "Elusive":
+           display_name: """Evasivo"""
+           text: """Quando defender, você pode gastar 1 %CHARGE% para rerollar 1 dado de defesa.%LINEBREAK%Depois que realizar completamente uma manobra vermelha, recupere 1 %CHARGE%."""
+        "Emperor Palpatine":
+           display_name: """Imperador Palpatine"""
+           text: """Quando outra nave amiga defender ou realizar um ataque, você pode gastar 1 %FORCE% para modificar 1 dado dela, como se se aquela nave tivesse gasto 1 %FORCE%."""
+        "Energy-Shell Charges":
+           display_name: """Cargas de Energia"""
+           text: """<strong>Ataque[%CALCULATE%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Quando você realizar este ataque, você pode gastar 1 ficha de cálculo para mudar 1 resultado %FOCUS% para um resultado %CRIT%.%LINEBREAK%<strong>Ação:</strong> Recarregue esta carta."""
+        "Engine Upgrade":
+           display_name: """Melhoria de Motor"""
+           text: """<i class = flavor_text>Grandes forças militares como o Império Galatico possuem motores padronizados, mas alguns pilotos e pequenas organizações normalmente substituem os conectores de energia e propulsores, ou usam combustíveis de alta performance para conseguir aquele impulso extra dos seus motores.</i>"""
+        "Ensnare":
+           display_name: """Enredar"""
+           text: """No final da Fase de Ativação, se você estiver tracionado, você pode escolher 1 nave em seu arco %SINGLETURRETARC% em alcance 0-1. Transfira 1 ficha de tração para ela."""
+        "Expert Handling":
+           display_name: """Pilotagem Experiente"""
+           text: """<i class = flavor_text>Enquanto caças pesados podem ser forçados em uma pirueta, pilotos experientes sabem como fazer isso sem colocar estresse desnecessário em suas naves ou deixá-los abertos a um ataque.</i>"""
+        "Ezra Bridger":
+           display_name: """Ezra Bridger"""
+           text: """Depois que você realizar um ataque primário, você pode gastar 1 %FORCE% para realizar um ataque bonus %SINGLETURRETARC% de um %SINGLETURRETARC% que você ainda não tenha atirado nessa rodada. Se você o fizer e estiver estressado, você pode rerolar 1 dado de ataque."""
+        "Fanatical":
+           display_name: """Fanático"""
+           text: """Quando você realizar um ataque primário, se você não possuir escudos ativos, você pode mudar 1 resultado %FOCUS% para um resultado %HIT%."""
+        "Fearless":
+           display_name: """Destemido"""
+           text: """Quando você realizar um ataque primário %FRONTARC%, se o defensor estiver em alcance 1 e você estiver no %FRONTARC% do defensor, você pode mudar um de seus resultados para um resultado %HIT%."""
+        "Feedback Array":
+           display_name: """Matriz de Retorno"""
+           text: """Antes de você engajar, você pode receber 1 ficha de íon e 1 ficha de desarme. Se você fizer isso, cada nave em alcance 0 sofre 1 dano %HIT%."""
+        "Ferrosphere Paint":
+           display_name: """Pintura de Ferrosfera"""
+           text: """Depois que uma nave inimiga travar mira em você, se você não estiver no %BULLSEYEARC% dessa nave, essa nave ganha uma ficha de estresse a menos que ela escolha quebrar a mira.%LINEBREAK%<i>Errata (desde RR 1.4): Habilidade ajustada para permitir contrajogo</i>"""
+        "Fifth Brother":
+           display_name: """Quinto Irmão"""
+           text: """Quando você realizar um ataque, você pode gastar 1 %FORCE% para mudar 1 de seus resultado %FOCUS% para um resultado %CRIT%."""
+        "Finn":
+           display_name: """Finn"""
+           text: """Quando você defender ou realizar um ataque primário, se a nave inimiga estiver em seu %FRONTARC%, você pode adicionar 1 resultado em branco a sua rolagem (este dado pode ser rerolado ou modificado de outras formas)"""
+        "Fire-Control System":
+           display_name: """Sistema de Controle de Tiro"""
+           text: """Quando você realiza um ataque, se você tiver uma mira no defensor, você pode rerrolar 1 dado de ataque. Se o fizer, você não pode gastar sua mira durante este ataque."""
+        "Freelance Slicer":
+           display_name: """Invasor Independente"""
+           text: """Quando você defender, antes dos dados de ataque serem rolados, você pode gastar 1 mira que você possuir no atacante para rolar 1 dado de ataque. Se você fizer isso, o atacante recebe 1 ficha de interferência. Então, em um resultado %HIT% ou %CRIT%, receba 1 ficha de interferência."""
+        "GA-97":
+           display_name: """GA-97"""
+           text: """<strong>Preparação: </strong>Antes de posicionar as forças, você pode gastar 3-5 %CHARGE%. Se você fizer isso, escolha outra nave amiga e atribua a condição <strong>É a Resistência</strong> a ela."""
+        'GNK "Gonk" Droid':
+           display_name: """GNK “Gonk” Droide"""
+           text: """<strong>Preparação: </strong>Perca 1 %CHARGE%.%LINEBREAK%<strong>Ação: </strong>Recupere 1 %CHARGE%.%LINEBREAK%strong>Ação: </strong>Gaste 1 %CHARGE% para recuperar 1 escudo."""
+        "General Grievous":
+           display_name: """General Grievous"""
+           text: """Quando você defender, depois da etapa de Neutralizar Resultados, se houver 2 ou mais resultados %HIT%/%CRIT%, você pode gastar 1 %CHARGE% para cancelar 1 resultado %HIT% ou %CHRIT%.%LINEBREAK%Depois que uma nave amiga for destruída, recupere 1 %CHARGE%."""
+        "General Hux":
+           display_name: """General Hux"""
+           text: """Quando você realiza uma ação %COORDINATE% branca, você pode tratá-la como vermelha. Se você fizer isso, você pode coordenar até 2 naves adicionais do mesmo tipo, e cada nave que você coordenar deve realizar a mesma ação, tratando-a como vermelha."""
+        "Grand Inquisitor":
+           display_name: """Grand Inquisitor"""
+           text: """Depois que uma nave inimiga em alcance 0-2 revelar seu disco, você pode gastar 1 %FORCE% para realizar 1 ação branca em sua barra de ações, tratando essa ação como vermelha."""
+        "Grand Moff Tarkin":
+           display_name: """Grand Moff Tarkin"""
+           text: """Durante a Fase de Sistema, você pode gastar 2 %CHARGE%. Se você o fizer, todas as naves amigas podem adquirir uma mira em uma nave que você tenha mirado."""
+        "Grappling Struts":
+           display_name: """Suportes de Fixação"""
+           text: """Fechados:%LINEBREAK%<strong>Preparação:</strong> Equipe este lado virado para cima.%LINEBREAK%Depois que você executar uma manobra, se você sobrepor um asteróide ou nuvem de destroços e houver 1 ou menos outras naves amigas em alcance 0 deste obstáculo, você pode virar esta carta. Se o fizer, você não sofre os efeitos de sobrepor o asteróide ou núvem de destroços.%LINEBREAK% Abertos:%LINEBREAK% Você ignora obstáculos em alcance 0. Você não pode realizar ações %BARRELROLL%. Após você revelar seu disco, se você revelou uma manobra diferente de [2 %STRAIGHT%] e está em alcance 0 de um asteróide ou nuvem de destroços, pule sua etapa Executar Manobra e remova 1 ficha de estresse; se você revelou uma manobra esquerda ou direita, rotacione sua nave 90º nessa direção. Após você executar uma manobra, vire esta carta.%LINEBREAK%<i>Errata (desde RR 1.4): Texto atualizado para funcionar como era a intenção</i>"""
+        "Greedo":
+           display_name: """Greedo"""
+           text: """Quando você realizar um ataque, você pode gastar 1 %CHARGE% para mudar 1 resultado %HIT% para um resultado %CRIT%.%LINEBREAK%Quando você defender, se sua %CHARGE% estiver ativa, o atacante pode mudar 1 resultado %HIT% para um resultado %CRIT%."""
+        "Han Solo":
+           display_name: """Han Solo"""
+           text: """Durante a Fase de Engajamento, na inciativa 7, você pode realizar um ataque %SINGLETURRETARC%. Você não pode atacar por esse %SINGLETURRETARC% novamente nessa rodada."""
+        "Han Solo (Scum)":
+           display_name: """Han Solo"""
+           text: """Antes de você engajar você pode realizar uma ação %FOCUS% vermelha."""
+        "Han Solo (Resistance)":
+           display_name: """Han Solo"""
+           text: """Depois que você realizar uma ação %EVADE%, receba fichas de desvio adicionais igual a quantidade de naves inimigas em alcance 0-1."""
+        "Hate":
+           display_name: """Ódio"""
+           text: """Depois que você sofrer 1 ou mais dano, recupere a mesma quantidade de %FORCE%."""
+        "Heavy Laser Cannon":
+           display_name: """Canhão de Laser Pesado"""
+           text: """<strong>Ataque: </strong>Após a etapa Modificar Dados de Ataque, mude todos os resultados %CRIT% para resultados %HIT%."""
+        "Heightened Perception":
+           display_name: """Percepção Aguçada"""
+           text: """No início da Fase de Engajamento, você pode gastar 1 %FORCE%. Se fizer isso, engaje na iniciativa 7 ao invés do seu valor normal de iniciativa."""
+        "Hera Syndulla":
+           display_name: """Hera Syndulla"""
+           text: """Você pode executar manobras vermelhas mesmo se estiver estressado, Depois que você realizar completamente uma manobra vermelha, se você possuir 3 ou mais fichas de estresse, remova 1 ficha de estresse e sofra 1 dano %HIT%."""
+        "Heroic":
+           display_name: """Heróico"""
+           text: """Quando você defender ou realizar um ataque, se você possuir apenas resultados em branco e tiver 2 ou mais resultados, você pode rerrolar qualquer quantidade dos seus dados."""
+        "Homing Missiles":
+           display_name: """Mísseis Teleguiados"""
+           text: """<strong>Ataque[%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Depois que você declarar o defensor, o defensor pode escolher sofrer 1 dano %HIT%. Se o fizer, pule as etapas de Dados de Ataque e Dados de Defesa e o ataque é tratado como um acerto."""
+        "Hotshot Gunner":
+           display_name: """Atirador Experiente"""
+           text: """Quando você realizar um ataque %SINGLETURRETARC%, depois da etapa Modificar Dados de Defesa, o defensor remove 1 ficha de foco ou de cálculo."""
+        "Hull Upgrade":
+           display_name: """Melhoria de Casco"""
+           text: """<i class = flavor_text>Para aqueles que não podem pagar por um gerador de escudo melhorado, fixar placas adicionais no casco da nave pode ser um substituto adequado.</i>"""
+        "Hyperspace Tracking Data":
+           display_name: """Dados de Rastreamento do Hiperespaço"""
+           text: """<strong>Preparação:</strong> Antes de posicionar as forças, você pode escolher um número entre 0 e 6. Trate sua iniciativa como o valor escolhido durante a Preparação.%LINEBREAK%Depois da Preparação, atribua 1 ficha de foco ou desvio para cada nave aliada em alcance 0-2."""
+        "IG-88D":
+           display_name: """IG-88D"""
+           text: """Você possui a habilidade de piloto de outras naves amigas com a melhoria IG-2000.%LINEBREAK%Depois que você realizar uma ação %CALCULATE% receba 1 ficha de cálculo."""
+        "Ion Bombs":
+           display_name: """Bombas de Íon"""
+           text: """<strong>Bomba</strong>%LINEBREAK% Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar uma Bomba de Íon usando o gabarito [1 %STRAIGHT%]."""
+        "ISB Slicer":
+           display_name: """Invasor do BSI"""
+           text: """Durante a Fase Final, naves inimigas em alcance 1-2 não podem remover fichas de interferência."""
+        "Impervium Plating":
+           display_name: """Revestimento de Impervium"""
+           text: """Antes de você receber uma carta do tipo <strong>Nave</strong> virada para cima, você pode gastar 1 %CHARGE% para descartá-la."""
+        "Inertial Dampeners":
+           display_name: """Amortecedores Inerciais"""
+           text: """Antes de você executar uma manobra, você pode gastar 1 escudo. Se você fizer isso, realize uma manobra [0 %STOP%] branca ao inves da manobra que você revelou, e então receba 1 ficha de estresse."""
+        "Informant":
+           display_name: """Informante"""
+           text: """<strong>Preparação: </strong>Depois de posicionar forças, escolha 1 nave inimiga e atribua a condição <strong>Dispositivo de Escuta</strong> a ela."""
+        "Instinctive Aim":
+           display_name: """Mira Instintiva"""
+           text: """Quando realizar um ataque especial, você pode gastar 1 %FORCE% para ignorar o requisito %FOCUS% ou %LOCK%."""
+        "Integrated S-Foils":
+           display_name: """S-Foils Integrados"""
+           text: """<strong>Fechado: </strong><i>%BARRELROLL%, %FOCUS% <i class="xwing-miniatures-font xwing-miniatures-font-linked"></i> <r>%BARRELROLL%</r></i>%LINEBREAK% Antes de você ativar, você pode virar esta carta. %LINEBREAK% <b>Aberto:</b> Quando você realizar um ataque primário, se o defensor não estiver em seu %BULLSEYEARC%, role 1 dado de ataque a menos.%LINEBREAK%Antes de você ativar, você pode virar esta carta."""
+        "Intimidation":
+           display_name: """Intimidação"""
+           text: """Quando uma nave em alcance 0 defende, ela rola 1 dado de defesa a menos."""
+        "Ion Cannon":
+           display_name: """Canhão Iônico"""
+           text: """<strong>Ataque:</strong> Se este ataque acertar, gaste 1 resultado %HIT% ou %CRIT% para fazer com que o defensor sofra 1 dano %HIT%. Todos os resultados %HIT%/%CRIT% restantes atribuem fichas de íon ao invés de causarem dano."""
+        "Ion Cannon Turret":
+           display_name: """Torre de Canhão de Íons"""
+           text: """<strong>Ataque: </strong> Se este ataque acertar, gaste um resultado %HIT% ou %CRIT% para fazer o defensor sofrer 1 dano %HIT%. Todos os resultados %HIT%/%CRIT% restantes causam fichas de íon ao invés de dano."""
+        "Ion Missiles":
+           display_name: """Mísseis Iônicos"""
+           text: """<strong>Ataque[%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Se este ataque acertar, gaste 1 resultado %HIT% ou %CRIT% para causar 1 dano %HIT% no defensor. Todos os resultados %HIT%/%CRIT% restantes causam fichas de íon ao invés de dano."""
+        "Ion Torpedoes":
+           display_name: """Torpedos Iônicos"""
+           text: """<strong>Ataque[%LOCK%]: </strong> Gaste 1 %CHARGE%.%LINEBREAK%Se este ataque acertar, gaste 1 resultado %HIT% ou %CRIT% para causar 1 dano %HIT% ao defensor. Todos os resultados %HIT%/%CRIT% restantes causam fichas de íon ao invés de dano."""
+        "Jabba the Hutt":
+           display_name: """Jabba the Hutt"""
+           text: """Durante a Fase Final, você pode escolher 1 nave amiga em alcance 0-2 e gastar 1 %CHARGE%. Se você fizer isso, aquela nave recupera 1 %CHARGE% em uma de suas melhorias %ILLICIT% equipadas."""
+        "Jamming Beam":
+           display_name: """Feixe de Interferência"""
+           text: """<strong>Ataque:</strong> Se este ataque acertar, todos os resultados %HIT%/%CRIT% atribuem fichas de interferência ao invés de causarem dano."""
+        "Juke":
+           display_name: """Finta"""
+           text: """Quando realizar um ataque, se você estiver desviando, você pode mudar 1 resultado %EVADE% do defensor para um resultado %FOCUS%."""
+        "Jyn Erso":
+           display_name: """Jyn Erso"""
+           text: """Quando uma nave amiga em alcance 0-3 for receber 1 ficha de foco, ela pode, ao invés disso, receber 1 ficha de desvio."""
+        "K2-B4":
+           display_name: """K2-B4"""
+           text: """Quando uma nave amiga em alcance 0-3 defender, ela pode gastar 1 ficha de cálculo. Se ela fizer isso, adicione 1 resultado %EVADE% a menos que o atacante escolha receber 1 ficha de desgaste."""
+        "Kaydel Connix":
+           display_name: """Kaydel Connix"""
+           text: """Depois que você revelar seu disco de manobras, você pode mudar seu disco para uma manobra basica uma velocidade maior. Quando você executar essa manobra, aumente sua dificuldade."""
+        "Kanan Jarrus":
+           display_name: """Kanan Jarrus"""
+           text: """Depois que uma nave amiga em alcance 0-2 executa completamente uma manobra branca, você pode gastar 1 %FORCE% para remover 1 ficha de estresse dessa nave."""
+        "Ketsu Onyo":
+           display_name: """Ketsu Onyo"""
+           text: """No começo da Fase Final, você pode escolher 1 nave inimiga em alcance 0-2 em seu arco de tiro. Se fizer isso, aquela nave não remove suas fichas de tração."""
+        "Kraken":
+           display_name: """Kraken"""
+           text: """Durante a Fase Final, você pode escolher até 3 naves amigas em alcance 0-3. Se fizer isso, cada uma dessas naves não removem 1 ficha de cálculo."""
+        "Kylo Ren":
+           display_name: """Kylo Ren"""
+           text: """<strong>Ação: </strong>Escolha 1 nave inimiga em alcance 1-3. Se você fizer isso, gaste 1 %FORCE% para atribuir a condição <strong>Contemple o Lado Sombrio</strong> a essa nave."""
+        "L3-37":
+           display_name: """L3-37"""
+           text: """<strong>Preparação: </strong>Equipe este lado para cima.%LINEBREAK%Quando você defender, você pode virar esta carta. Se o fizer, o atacante deve rerrolar todos os dados de ataque.%LINEBREAK%<strong>Programação da L3-37:</strong> Se você não possuir escudos ativos, reduza a dificuldade das suas manobras curva [%BANKLEFT% e %BANKRIGHT%]."""
+        "Kylo Ren":
+           display_name: """Kylo Ren"""
+           text: """<strong>Ação: </strong>Escolha 1 nave inimiga em alcance 1-3. Se você fizer isso, gaste 1 %FORCE% para atribuir a condição <strong>Contemple o Lado Sombrio</strong> a essa nave."""
+        "Landing Struts":
+           display_name: """Suportes de Aterrissagem"""
+           text: """Fechados:%LINEBREAK%<strong>Preparação:</strong> Equipe este lado virado para cima.%LINEBREAK%Depois que você executar uma manobra, se você sobrepor um asteróide ou nuvem de destroços e houver 1 ou menos outras naves amigas em alcance 0 deste obstáculo, você pode virar esta carta. Se o fizer, você não sofre os efeitos de sobrepor o asteróide ou núvem de destroços.%LINEBREAK% Abertos:%LINEBREAK% Você ignora obstáculos em alcance 0. Você não pode realizar ações %BARRELROLL%. Após você revelar seu disco, se você revelou uma manobra diferente de [2 %STRAIGHT%] e está em alcance 0 de um asteróide ou nuvem de destroços, pule sua etapa Executar Manobra e remova 1 ficha de estresse; se você revelou uma manobra esquerda ou direita, rotacione sua nave 90º nessa direção. Após você executar uma manobra, vire esta carta.%LINEBREAK%<i>Errata (desde RR 1.4): Texto atualizado para funcionar como era a intenção</i>"""
+        "Lando Calrissian":
+           display_name: """Lando Calrissian"""
+           text: """<strong>Ação: </strong> Role 2 dados de defesa. Para cada resultado %FOCUS% receba 1 ficha de foco. Para cada resultado %EVADE% receba 1 ficha de desvio. Se ambos os resultados forem em branco, o jogador adversário escolhe foco ou desvio. Você recebe 1 ficha daquele tipo."""
+        "Lando Calrissian (Scum)":
+           display_name: """Lando Calrissian"""
+           text: """Depois que você rolar dados, você pode gastar 1 ficha verde para rerrolar até 2 dos seus resultados."""
+        "Lando's Millennium Falcon":
+           display_name: """Millennium Falcon do Lando"""
+           text: """1 Nave de Fuga pode acoplar em você.%LINEBREAK%Quando você tiver uma Nave de Fuga acoplada, você pode tratar os escudos dela como se estivessem na sua carta de nave.%LINEBREAK%Quando você realiza um ataque primário contra uma nave estressada, role 1 dado de ataque adicional.%LINEBREAK%<i>Errata (desde o RR 1.1.0): Substituído “gastar" por "tratar"</i>"""
+        "Latts Razzi":
+           display_name: """Latts Razzi"""
+           text: """Quando você defender, se o atacante estiver estressado, você pode remover 1 ficha de estresse do atacante para mudar 1 de seus resultados branco/%FOCUS% para um resultado %EVADE%."""
+        "Leia Organa":
+           display_name: """Leia Organa"""
+           text: """No começo da Fase de Ativação, você pode gastar 3 %CHARGE%. Durante esta fase, todas as naves amigas reduzem a dificuldade de suas manobras vermelhas."""
+        "Lone Wolf":
+           display_name: """Lobo Solitário"""
+           text: """Quando você defender ou realizar um ataque, se não houver outras naves amigas em alcance 0-2, você pode gastar 1 %CHARGE% para rerrolar 1 de seus dados."""
+        "Luke Skywalker":
+           display_name: """Luke Skywalker"""
+           text: """No começo da Fase de Engajamento, você gastar 1 %FORCE% e receber 1 ficha de exaustão para rotacionar seu indicador %SINGLETURRETARC%.%LINEBREAK%<i>Errata (desde RR 1.4): Acrescentado custo adicional</i>"""
+        "M9-G8":
+           display_name: """M9-G8"""
+           text: """Quando uma nave mirada por você realizar um ataque, você pode escolher 1 dado de ataque. Se o fizer, o atacante rerrola o dado escolhido."""
+        "Magva Yarro":
+           display_name: """Magva Yarro"""
+           text: """Depois que você defender, se o ataque acertou, você pode adquirir uma mira no atacante."""
+        "Marksmanship":
+           display_name: """Franco-Atirador"""
+           text: """Quando você realiza um ataque, se o defensor estiver em seu %BULLSEYEARC%, você pode mudar 1 resultado %HIT% para um resultado %CRIT%."""
+        "Maul":
+           display_name: """Maul"""
+           text: """Depois que você sofrer dano, você pode receber 1 ficha de estresse para recuperar 1 %FORCE%.%LINEBREAK%Você pode equipar melhorias "Lado Sombrio"."""
+        "Minister Tua":
+           display_name: """Ministra Tua"""
+           text: """No começo da Fase de Engajamento, se você estiver danificado, você pode realizar uma ação %REINFORCE% vermelha."""
+        "Moff Jerjerrod":
+           display_name: """Moff Jerjerrod"""
+           text: """Durante a Fase de Sistema, você pode gastar 2 %CHARGE%. Se o fizer, escolha o gabarito [1 %BANKLEFT%],  ]1 %STRAIGHT%] ou [1 %BANKRIGHT%]. Todas as naves amigas podem realizar uma ação %BOOST% vermelha usando aquele gabarito."""
+        "Munitions Failsafe":
+           display_name: """Abortar Disparo"""
+           text: """Quando você realizar um ataque %TORPEDO% ou %MISSILE%, depois de rolar dados de ataque, você pode cancelar todos os resultados para recuperar 1 %CHARGE% que você tenha gasto como custo deste ataque."""
+        "Nien Nunb":
+           display_name: """Nien Nunb"""
+           text: """Reduza a dificuldade das suas manobras curva [%BANKLEFT% e %BANKRIGHT%]."""
+        "Novice Technician":
+           display_name: """Técnico Novato"""
+           text: """At the end of the round, you may roll 1 attack die to repair 1 faceup damage card. Then on a %HIT% result, expose 1 damage card."""
+        "Os-1 Arsenal Loadout":
+           display_name: """Carga de Arsenal Os-1"""
+           text: """Quando você tiver exatamente 1 ficha de desarmamento, você pode realizar ataques %TORPEDO% e %MISSILE% contra alvos que você tem uma mira. Se o fizer, você não pode gastar sua mira durante o ataque.%LINEBREAK%Adicione os encaixes %TORPEDO% e %MISSILE%."""
+        "Outmaneuver":
+           display_name: """Outmaneuver"""
+           text: """Quando você realizar um ataque %FRONTARC%, se você não estiver no arco de tiro do defensor, o defensor rola 1 dado de defesa a menos."""
+        "Paige Tico":
+           display_name: """Paige Tico"""
+           text: """Depois que você realizar um ataque primário, você pode soltar 1 bomba ou rotacionar seu %SINGLETURRETARC%.%LINEBREAK%Depois que você for destruído, você pode soltar 1 bomba."""
+        "Pattern Analyzer":
+           display_name: """Analista de Padrões"""
+           text: """Quando você realizar completamente uma manobra vermelha, antes da fase Checar Dificuldade, você pode realizar 1 ação."""
+        "Perceptive Copilot":
+           display_name: """Co-Piloto Perspicaz"""
+           text: """Depois que você realizar uma ação %FOCUS%, receba 1 ficha de foco."""
+        "Petty Officer Thanisson":
+           display_name: """Suboficial Thanisson"""
+           text: """Durante a Fase de Ativação ou Engajamento, depois que uma nave inimiga em seu %FRONTARC% em alcance 0-1 receber uma ficha vermelha ou laranja, se você não estiver estressado, você pode receber 1 ficha de estresse. Se você fizer isso, aquela nave recebe 1 ficha adicional do tipo que recebeu."""
+        "Plasma Torpedoes":
+           display_name: """Torpedos de Plasma"""
+           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Durante o passo Neutralizar Resultados, resultados %CRIT% são cancelados antes de resultados %HIT%. Depois que este ataque acertar, o defensor perde 1 escudo."""
+        "Pivot Wing":
+           display_name: """Asas Pivotantes"""
+           text: """<strong>Fechadas: </strong>Quando você defender, role 1 dado de defesa a menos. %LINEBREAK%Após você executar uma manobra (0 %STOP%), você pode rotacionar sua nave 90º ou 180º.%LINEBREAK%Antes de você ativar, você pode virar esta carta.%LINEBREAK%<strong>Abertas:</Strong> Antes de você ativar, você pode virar esta carta."""
+        "Predator":
+           display_name: """Predador"""
+           text: """Quando você realizar um ataque primário, se o defensor estiver em seu %BULLSEYEARC%, você pode rerrolar 1 dado de ataque."""
+        "Predictive Shot":
+           display_name: """Predictive Shot"""
+           text: """Depois que você declarar um ataque, se o defensor estiver em seu %BULLSEYEARC%, você pode gastar 1 %FORCE%. Se o fizer, durante o passo de Rolar Dados de Defesa, o defensor não pode rolar mais dados de defesa do que a quantidade de seus resultados %HIT%/%CRIT%."""
+        "Primed Thrusters":
+           display_name: """Propulsores Preparados"""
+           text: """Enquanto você possuir 2 fichas de estresse ou menos, você pode realizar ações de %BARRELROLL% e %BOOST% mesmo se estiver estressado."""
+        "Proton Bombs":
+           display_name: """Bombas de Prótons"""
+           text: """<strong>Bomba</strong>%LINEBREAK%Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar uma Bomba de Prótons usando o gabarito [1 %STRAIGHT%]."""
+        "Proton Rockets":
+           display_name: """Foguetes de Prótons"""
+           text: """<strong>Ataque [%FOCUS%]:</strong> Gaste 1 %CHARGE%."""
+        "Proton Torpedoes":
+           display_name: """Torpedos de Próton"""
+           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Mude 1 resultado %HIT% para um resultado %CRIT%."""
+        "Proximity Mines":
+           display_name: """Minas de Proximidade"""
+           text: """<strong>Mina</strong>%LINEBREAK%Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar uma Mina de Proximidade usando o gabarito [1 %STRAIGHT%].%LINEBREAK%A %CHARGE% desta carta não pode ser recuperada."""
+        "Qi'ra":
+           display_name: """Qi'ra"""
+           text: """Quando você se mover e realizar ataques, você ignora obstáculos em que possua uma mira."""
+        "R2 Astromech":
+           display_name: """Astromecânico R2"""
+           text: """Após você revelar seu disco, você pode gastar 1 %CHARGE% e receber 1 ficha de desarmamento para recuperar 1 escudo."""
+        "R2-C4":
+           display_name: """R2-C4"""
+           text: """Quando você realizar um ataque, você pode gastar 1 ficha de desvio para mudar 1 resultado %FOCUS% para um resultado %HIT%."""
+        "R2-D2 (Crew)":
+           display_name: """R2-D2"""
+           text: """Durante a Fase Final, se você estiver danificado e não possuir escudos ativos, você pode rolar 1 dado de ataque para recuperar 1 escudo. Em um resultado %HIT%, exponha 1 de suas cartas de dano."""
+        "R2-D2":
+           display_name: """R2-D2"""
+           text: """Após você revelar seu disco, você pode gastar 1 %CHARGE% e receber 1 ficha de desarmamento para recuperar 1 escudo."""
+        "R2-HA":
+           display_name: """R2-HA"""
+           text: """Quando você defender, você pode gastar sua mira no atacante para rerrolar qualquer número de seus dados de defesa."""
+        "R3 Astromech":
+           display_name: """Astromecânico R3"""
+           text: """Você pode manter até 2 miras. Cada mira deve estar em um objeto diferente.%LINEBREAK%Após você realizar uma ação %LOCK%, você pode adquirir uma mira."""
+        "R4 Astromech":
+           display_name: """Astromecânico R4"""
+           text: """Reduza a dificuldade das suas manobras básicas de velocidade 1-2 (%TURNLEFT%, %BANKLEFT%, %STRAIGHT%, %BANKRIGHT%, %TURNRIGHT%)."""
+        "R4-P Astromech":
+           display_name: """Astromecânico R4-P"""
+           text: """Antes de você executar uma manobra básica, você pode gastar 1 %CHARGE%. Se o fizer, enquanto você executar a manobra, reduza sua dificuldade."""
+        "R4-P17":
+           display_name: """R4-P17"""
+           text: """Após você executar completamente uma manobra vermelha, você pode gastar 1 %CHARGE% para realizar uma ação, mesmo estressado."""
+        "R4-P44":
+           display_name: """R4-P44"""
+           text: """Após você executar completamente uma manobra vermelha, se houver uma nave inimiga em seu %BULLSEYEARC%, receba 1 ficha de cálculo."""
+        "R5 Astromech":
+           display_name: """Astromecânico R5"""
+           text: """<strong>Ação:</strong> Gaste 1 %CHARGE% para reparar 1 carta de dano virada para baixo.%LINEBREAK% <strong>Ação</strong>: Repare 1 carta de dano Nave virada para cima."""
+        "R5-D8":
+           display_name: """R5-D8"""
+           text: """<strong>Ação:</strong> Gaste 1 %CHARGE% para reparar 1 carta de dano virada para baixo. %LINEBREAK%<strong> Ação:</strong> Repare 1 carta de dano <b>Nave</b> virada para cima."""
+        "R5-P8":
+           display_name: """R5-P8"""
+           text: """Quando você realizar um ataque, contra um defensor em seu %FRONTARC%, você pode gastar 1 %CHARGE% para rerrolar 1 dado de ataque. Se o resultado rerrolado for um resultado %CRIT%, sofra 1 dano %CRIT%."""
+        "R5-TK":
+           display_name: """R5-TK"""
+           text: """Você pode realizar ataques contra naves aliadas."""
+        "R5-X3":
+           display_name: """R5-X3"""
+           text: """Antes você ativar ou engajar, você pode gastar 1 %CHARGE% para ignorar obstáculos até o final desta fase."""
+        "Rey":
+           display_name: """Rey"""
+           text: """Quando você defender ou realizar um ataque, se a nave inimiga estiver em seu %SINGLETURRETARC%, você pode gastar 1 %FORCE% para mudar 1 de seus resultados em branco para um resultado %EVADE% ou %HIT%."""
+        "Rey's Millennium Falcon":
+           display_name: """Millennium Falcon da Rey"""
+           text: """Se você possuir 2 fichas de estresse ou menos, você pode realizar manobras Loop de Segnor vermelho [%SLOOPLEFT% ou %SLOOPRIGHT%] e realizar as ações %BOOST% e %ROTATEARC% mesmo se estiver estressado."""
+        "Rigged Cargo Chute":
+           display_name: """Ejetor de Carregamento"""
+           text: """<strong>Ação:</strong> Gaste 1 %CHARGE%. Solte 1 carga solta usando o gabarito [1 %STRAIGHT%]."""
+        "Rose Tico":
+           display_name: """Rose Tico"""
+           text: """Quando você defender ou realizar um ataque, você pode gastar 1 de seus resultados para adquirir uma mira na nave inimiga."""
+        "Ruthless":
+           display_name: """Impiedoso"""
+           text: """Quando você realizar um ataque, você pode escolher outra nave amiga em alcance 0-1 do defensor. Se você o fizer, essa nave sofre 1 dano %HIT% e você pode mudar 1 de seus resultados para um resultado %HIT%."""
+        "Sabine Wren":
+           display_name: """Sabine Wren"""
+           text: """<strong>Preparação: </strong>Posicione 1 ficha de íon, 1 ficha de interferência, 1 ficha de estresse e 1 ficha de tração nesta carta.%LINEBREAK%Depois que uma nave sofrer o efeito de uma bomba amiga, você pode remover 1 fica de íon, interferência, estresse ou tração desta carta. Se o fizer, aquela nave recebe uma ficha igual."""
+        "Saturation Salvo":
+           display_name: """Rajada Massiva"""
+           text: """Quando você realizar um ataque %TORPEDO% ou %MISSILE%, você pode gastar 1 %CHARGE% daquela melhoria. Se o fizer, escolha dois dados de defesa. O defensor deve rerrolar estes dados."""
+        "Saw Gerrera":
+           display_name: """Saw Gerrera"""
+           text: """Quando vê realizar um ataque, você pode sofrer 1 dano %HIT% para mudar todos os seus resultados %FOCUS% para resultados %CRIT%."""
+        "Seasoned Navigator":
+           display_name: """Navegador Experiente"""
+           text: """Depois que você revelar seu disco de manobras, você pode colocar seu disco em outra manobra que não seja vermelha da mesma velocidade. Quando realizar essa manobra, aumente sua dificuldade."""
+        "Seismic Charges":
+           display_name: """Cargas Sísmicas"""
+           text: """<strong>Bomba</strong>%LINEBREAK%Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar uma Carga Sísmica usando o gabarito [1 %STRAIGHT%]."""
+        "Selfless":
+           display_name: """Autruísmo"""
+           text: """Quando outra nave amiga em alcance 0-1 defende, antes do passo Neutralizar Resultados, se você estiver no arco de ataque, você pode sofrer 1 dano %CRIT% para cancelar 1 resultado %CRIT%."""
+        "Selfless (BoY)":
+           display_name: """Autruísmo"""
+           text: """Quando outra nave amiga em alcance 0-1 defende, antes do passo Neutralizar Resultados, se você estiver no arco de ataque, você pode sofrer 1 dano %CRIT% para cancelar 1 resultado %CRIT%."""
+        "Sense":
+           display_name: """Sentir"""
+           text: """Durante a Fase de Sistema, você pode escolher 1 nave em alcance 0-1 e olhar o disco de manobras dela. Se você gastar 1 %FORCE%, você pode escolher uma nave em alcance 0-3."""
+        "Servomotor S-Foils":
+           display_name: """Servomotor de S-Foils"""
+           text: """<strong>Fechado: </strong><i>%BOOST%, %FOCUS% <i class="xwing-miniatures-font xwing-miniatures-font-linked"></i> <r>%BOOST%</r></i>%LINEBREAK% Quando você realizar um ataque primário, role 1 dado de ataque a menos.%LINEBREAK%Antes de você ativar, você pode virar esta carta.%LINEBREAK%<strong>Aberto:</strong> Antes de você ativar, você pode virar esta carta."""
+        "Seventh Fleet Gunner":
+           display_name: """Seventh Fleet Gunner"""
+           text: """Quando outra nave amiga realizar um ataque primário, se o defensor estiver em seu arco de tiro, você pode gastar 1 %CHARGE%. Se o fizer, o atacante rola 1 dado de ataque adicional, até o máximo de 4. Durante a Fase de Sistema, você pode ganhar uma ficha de desarme para recuperar 1 %CHARGE%."""
+        "Seventh Sister":
+           display_name: """Seventh Sister"""
+           text: """Quando uma nave inimiga em alcance 0-1 for receber uma ficha de estresse, você pode gastar 1 %FORCE% para que ela receba 1 ficha de interferência ou 1 ficha de tração, ao invés da ficha de estresse."""
+        "Shield Upgrade":
+           display_name: """Melhoria de Escudo"""
+           text: """<i class = flavor_text>Escudos defletores são uma linha de defesa importante para a maioria das naves espaciais além dos caças leves. Melhorar a capacidade de escudos de uma nave pode ser cara, mas todos os pilotos, exceto alguns irresponsáveis, enxergam a importância desse tipo de investimento.</i>"""
+        "Skilled Bombardier":
+           display_name: """Bombardeiro Habilidoso"""
+           text: """Se você for soltar ou lançar um dispositivo, você pode usar um gabarito da mesma direção com 1 velocidade maior ou menor."""
+        "Spare Parts Canisters":
+           display_name: """Caixa de Peças Sobressalentes"""
+           text: """<strong>Ação: </strong>Gaste 1 %CHARGE% para recuperar 1 carga em uma das suas melhorias %ASTROMECH% equipadas. %LINEBREAK%Ação: Gaste 1 %CHARGE% para soltar 1 peças sobressalentes, e então quebre todas as miras em você."""
+        "Special Forces Gunner":
+           display_name: """Atirador das Forças Especiais"""
+           text: """Quando você realizar um ataque primário %FRONTARC%, se seu %SINGLETURRETARC% estiver em seu %FRONTARC%, você pode rolar 1 dado de ataque adicional.%LINEBREAK%Depois que você realizar um ataque primário %FRONTARC%, se seu %SINGLETURRETARC% estiver em seu %REARARC%, você pode realizar um ataque primário %SINGLETURRETARC% bônus."""
+        "Squad Leader":
+           display_name: """Líder de Esquadrão"""
+           text: """Quando você coordenar, a nave que você escolheu só pode realizar uma ação que também esteja na sua barra de ações."""
+        "Static Discharge Vanes":
+           display_name: """Descarga Estática"""
+           text: """Antes de você receber 1 ficha de íon ou interferência, se você não estiver estressado, você pode escolher outra nave em alcance 0-1 e receber 1 ficha de estresse. Se você o fizer, a nave escolhida recebe aquela ficha de íon ou interferência, então você sofre 1 dano %HIT%.%LINEBREAK%<i>Errata (desde RR 1.1.0): Alterado de "Se você for receber 1 ficha de íon ou interferência, se você não estiver estressado, você pode escolher outra nave em alcance 0-1 e receber 1 ficha de estresse e transfira 1 ficha de íon ou interferência para aquela nave."</i>"""
+        "Stealth Device":
+           display_name: """Dispositivo de Ocultamento"""
+           text: """Quando você defender, se sua %CHARGE% estiver ativa, role 1 dado de defesa adicional.%LINEBREAK%Depois que você sofrer dano, perca 1 %CHARGE%."""
+        "Supernatural Reflexes":
+           display_name: """Reflexos Sobrenaturais"""
+           text: """Antes de você ativar você pode gastar 1 %FORCE% para realizar uma ação %BARRELROLL% ou %BOOST%. Então, se você realizou uma manobra que não está na sua barra de ações, sofra 1 dano %HIT%"""
+        "Supreme Leader Snoke":
+           display_name: """Supreme Leader Snoke"""
+           text: """Durante a Fase de Sistema, você pode escolher qualquer quantidade de naves inimigas além do alcance 1. Se você fizer isso, gaste a mesma quantidade de %FORCE% para virar o disco de manobras de cada uma dessas naves para cima."""
+        "Swarm Tactics":
+           display_name: """Táticas de Enxame"""
+           text: """No começo da Fase de Engajamento, você pode escolher 1 nave amiga em alcance 1. Se o fizer, essa nave trata sua iniciativa igual a sua até o final da rodada."""
+        "Synchronized Console":
+           display_name: """Console Sincronizado"""
+           text: """Depois que você realizar um ataque, você pode escolher uma nave amiga em alcance 1 ou uma nave amiga com a melhoria Console Sincronizado em alcance 1-3 e gastar uma mira que você possui no defensor. Se o fizer, a nave amiga que você escolheu pode travar uma mira no defensor."""
+        "TA-175":
+           display_name: """TA-175"""
+           text: """Depois que uma nave amiga em alcance 0-3 com %CALCULATE% em sua barra de ações for destruída, cada nave amiga em alcance 0-3 com %CALCULATE% em sua barra de ações recebe 1 ficha de cálculo."""
+        "TV-94":
+           display_name: """TV-94"""
+           text: """Quando uma nave amiga em alcance 0-3 realiza um ataque primário contra um defensor no %BULLSEYEARC% dela, se houver 2 dados de ataque ou menos, ela pode gastar 1 ficha de cálculo para adicionar um resultado %HIT%."""
+        "Tactical Officer":
+           display_name: """Oficial Tático"""
+           text: """<i class = flavor_text>No Caos de uma batalha estelar, uma ordem pode significar a diferença entre uma vitória e um massacre.</i>"""
+        "Tactical Scrambler":
+           display_name: """Embaralhador Tático"""
+           text: """Quando você obstruir o ataque de uma nave inimiga, o defensor rola 1 dado de defesa adicional."""
+        "Targeting Computer":
+           display_name: """Computador de Mira"""
+           text: """<i class = flavor_text>Computadores de mira são componentes padrão na maioria das naves, especialmente aquelas que carregam artilharia pesada. Alguns caças leves e naves de transporte não possuem esse tipo de ajuda em suas armas, apesar dela poder ser instalada como uma modificação.</i>"""
+        "Targeting Synchronizer":
+           display_name: """Sincronizador de Alvos"""
+           text: """Enquanto uma nave aliada em alcance 1-2 realiza um ataque contra um alvo que você possua mira, essa nave ignora o requerimento %LOCK% do ataque."""
+        "Tobias Beckett":
+           display_name: """Tobias Beckett"""
+           text: """<strong>Preparação: </strong>Depois de posicionar as forças, você pode escolher 1 obstáculo na área de jogo. Se o fizer, coloque-o em qualquer lugar da área de jogo além do alcance 2 de qualquer borda ou nave, e além do alcance 1 de qualquer outro obstáculo."""
+        "Tractor Beam":
+           display_name: """Feixe de Tração"""
+           text: """<strong>Ataque:</strong> Se este ataque acertar, todos os resultados %HIT%/%CRIT% atribuem fichas de tração ao invés de causarem dano."""
+        "Trajectory Simulator":
+           display_name: """Simulador de Trajetória"""
+           text: """Durante a Fase de Sistema, se você for soltar ou lançar uma bomba, você pode, em vez disso, lançá-la usando o gabarito [5 %STRAIGHT%]."""
+        "Treacherous":
+           display_name: """Traiçoeiro"""
+           text: """Quando você defender, você pode escolher uma nave obstruindo o ataque e gastar 1 %CHARGE%. Se o fizer, cancele 1 resultado %HIT% ou %CRIT%, e a nave que você escolher recebe 1 ficha de desgaste.%LINEBREAK%Depois que uma nave em alcance 0-3 for destruída, recupere 1 %CHARGE%."""
+        "Trick Shot":
+           display_name: """Tiro Ardiloso"""
+           text: """Quando você realizar um ataque que está obstruído por um obstáculo, role 1 dado de ataque adicional."""
+        "Unkar Plutt":
+           display_name: """Unkar Plutt"""
+           text: """Depois que você executar parcialmente uma manobra, você pode sofrer 1 dano %HIT% para realizar 1 ação branca."""
+        "Veteran Tail Gunner":
+           display_name: """Atirador de Cauda Veterano"""
+           text: """Depois que você realizar um ataque primário %FRONTARC%, você pode realizar um ataque primário %REARARC% bônus."""
+        "Veteran Turret Gunner":
+           display_name: """Atirador de Torre Veterano"""
+           text: """Depois que você realizar um ataque primário, você pode realizar um ataque %SINGLETURRETARC% bônus usando um %SINGLETURRETARC% que você não tenha usado para atacar nessa rodada."""
+        "Xg-1 Assault Configuration":
+           display_name: """Configuração de Assalto Xg-1"""
+           text: """Quando você tiver exatamente 1 ficha de desarmamento, você pode realizar ataques %CANNON%. Quando você realizar um ataque %CANNON% enquanto estiver desarmado, role um máximo de 3 dados de ataque."""
+        "Zuckuss":
+           display_name: """Zuckuss"""
+           text: """Quando você realizar um ataque, se você não estiver estressado, você pode escolher 1 dado de defesa e receber 1 ficha de estresse. Se o fizer, o defensor deve rerrolar esse dado."""
+        '"Chopper" (Crew)':
+           display_name: """“Chopper”"""
+           text: """Durante o passo de Realizar Ação, você pode realizar 1 ação, mesmo se estiver estressado. Depois que você realizar uma ação estressado, sofra 1 dano %HIT% a menos que você exponha 1 de suas cartas de dano."""
+        '"Chopper" (Astromech)':
+           display_name: """“Chopper”"""
+           text: """<strong>Ação:</strong> Gaste 1 %CHARGE% não recursiva de outra melhoria equipada para recuperar 1 escudo.%LINEBREAK%<strong>Ação:</strong> Gaste 2 escudos para recuperar 1 %CHARGE% não recursiva de uma melhoria equipada."""
+        '"Genius"':
+           display_name: """“Genius”"""
+           text: """Após você executar completamente uma manobra, se você não soltou ou lançou um dispositivo nessa rodada, você pode soltar 1 bomba."""
+        '"Zeb" Orrelios':
+           display_name: """“Zeb” Orrelios"""
+           text: """Quando você realizar um ataque em alcance 0, você pode gastar fichas de foco para seu efeito padrão para modificar seus resultados. Quando você defenderem alcance 0, o atacante pode usar fichas de foco para seu efeito padrão para modificar os resultados.%LINEBREAK%<i>Errata (desde RR 1.4): Habilidade refeita</i>"""
+        "Kaydel Connix":
+           display_name: """Kaydel Connix"""
+           text: """Depois que você revelar seu disco de manobras, você pode mudar seu disco para uma manobra basica uma velocidade maior. Quando você executar essa manobra, aumente sua dificuldade."""
+        "Autoblasters":
+           display_name: """Autoblasters"""
+           text: """<strong>Ataque: </strong>Se o defensor estiver em seu %BULLSEYEARC%, role 1 dado adicional. Durante a etapa Neutralizar Resultados, se você não estiver no %FRONTARC% do defensor, resultados %EVADE% não cancelam resultados %CRIT%."""
+        "R2-C4":
+           display_name: """R2-C4"""
+           text: """Quando você realizar um ataque, você pode gastar 1 ficha de desvio para mudar 1 resultado %FOCUS% para um resultado %HIT%."""
+        "Electro-Proton Bomb":
+           display_name: """Bomba de Elétro-Próton"""
+           text: """<strong>Bomba</strong>%LINEBREAK%Durante a Fase de sistema você pode gastar 1 %CHARGE% para soltar uma Bomba de Elétro-Próton usando o gabarito [1 %STRAIGHT%]. Em seguida coloque 1 marcador de fuso sobre aquele dispositivo.%LINEBREAK%A %CHARGE% desta carta não pode ser recuperada."""
+        "Passive Sensors":
+           display_name: """Sensores Passivos"""
+           text: """<strong>Ação:</strong> Gaste 1 %CHARGE%. Você pode realizar esta ação apenas durante seu passo de Realizar Ação.%LINEBREAK%Enquanto sua %CHARGE% estiver inativa, você não pode ser coordenado. Antes de você engajar, se sua %CHARGE% estiver inativa, você pode realizar uma ação de a ou %LOCK%."""
+        "R2-A6":
+           display_name: """R2-A6"""
+           text: """Após você revelar seu disco, você pode colocar seu disco em uma manobra de mesma direção com velocidade 1 maior ou menor."""
+        "Amilyn Holdo":
+           display_name: """Amilyn Holdo"""
+           text: """Antes de você engajar, você pode escolher outra nave amiga em alcnace 1-2. Você pode transferir para aquela nave 1 ficha de 1 tipo que ela não tenha. Aquela nave pode transferir para você 1 ficha de um tipo que você não tenha."""
+        "Larma D'Acy":
+           display_name: """Larma D'Acy"""
+           text: """Quando você possuir 2 fichas de estresse ou menos, você pode realizar as ações %REINFORCE%, %COORDINATE% e %JAM%, mesmo se estiver estressado.%LINEBREAK%Quando você realizar uma ação %REINFORCE%, %COORDINATE% ou %JAM% branca, se você estiver estressado, trate essa ação como vermelha."""
+        "PZ-4CO":
+           display_name: """PZ-4CO"""
+           text: """No fim da Fase de Ativação, você pode escolher 1 nave amiga em alcance 1-2. Se você fizer isso, transfira 1 ficha de cálculo para aquela nave. Se sua manobra revelada for azul, você pode, ao invés disso, transferir 1 ficha de foco."""
+        "Leia Organa (Resistance)":
+           display_name: """Leia Organa"""
+           text: """Depois que uma nave amiga revelar uma manobra que não seja [0 %STOP%], você pode gastar 1 %FORCE%. Se fizer isso, a nave escolhida reduz a dificuldade daquela manobra.%LINEBREAK%<i>Errata (desde RR 1.4): Adicionada restrição no tipo de manobra)</i>"""
+        "Korr Sella":
+           display_name: """Korr Sella"""
+           text: """Depois que você completar uma manobra azul, remova todas as suas fichas de estresse."""
+        "Precognitive Reflexes":
+           display_name: """Reflexos Precognitivos"""
+           text: """Depois que você revelar seu disco de manobras, você pode gastar 1 %FORCE% para realizar uma ação %BARRELROLL% ou %BOOST%. Então, se você realizou uma manobra que não está na sua barra de ações, receba 1 ficha de desgaste.%LINEBREAK%Se você fizer isso, você não pode realizar outra ação durante sua ativação."""
+        "Foresight":
+           display_name: """Previsão"""
+           text: """Depois que uma nave inimiga executar uma manobra, você pode gastar 1 %FORCE% para realizar este ataque contra ela como um ataque bônus.%LINEBREAK%<strong>Ataque:</strong> Você pode mudar 1 resultado %FOCUS% para um resultado %HIT%; seus dados não podem ser modificados de outra forma."""
+        "Angled Deflectors":
+           display_name: """Defletores Angulares"""
+           text: """<i class = flavor_text>Escudos de caças normalmente possuem controles manuais que permite que sejam angulados para aumentar a proteção traseira ou dianteira. Entretanto, ao fazer isso a nave fica exposta a possíveis falhas de percepção do piloto.</i>"""
+        "C1-10P":
+           display_name: """C1-10P"""
+           text: """<strong>Preparação:</strong> Equipe este lado virado para cima.%LINEBREAK%Após você executar uma manobra, você pode gastar 1 %CHARGE% para realizar uma ação %EVADE% vermelha, mesmo se estiver estressado.%LINEBREAK%Durante a Fase Final, se essa carta possuir 0 %CHARGE% ativa, vire-a. %LINEBREAK% <strong>C1-10P (Instável):</strong> Após você executar completamente uma manobra, você <strong>deve</strong> escolher uma nave em alcance 0-1, a nave escolhida recebe 1 ficha de interferência.%LINEBREAK%<i>Errata (desde RR 1.4): adicionado "completamente"</i>"""
+        "Ahsoka Tano":
+           display_name: """Ahsoka Tano"""
+           text: """Depois que você executar uma manobra, você pode gastar 1 %FORCE% e escolher uma nave amiga em alcance 1-3 em seu arco de tiro. Se o fizer, ela pode realizar uma ação %FOCUS% vermelha, mesmo se estiver estressada."""
+        "C-3PO (Republic)":
+           display_name: """C-3PO"""
+           text: """Quando você defender, se você estiver calculando, você pode rerrolar 1 dado de defesa.%LINEBREAK%Depois que você realizar uma ação de %CALCULATE%, receba 1 ficha de cálculo."""
+        "Gravitic Deflection":
+           display_name: """Deflexão Magnética"""
+           text: """Quando você defender, você pode rerrolar 1 dado de defesa para cada nave tracionada no arco de ataque."""
+        "Snap Shot":
+           display_name: """Tiro Rápido"""
+           text: """Depois que uma nave inimiga executar uma manobra, você pode realizar este ataque como um ataque bônus.%LINEBREAK%<strong>Ataque:</strong> Seus dados não podem ser modificados."""
+        "Deuterium Power Cells":
+           display_name: """Células de Energia de Deutério"""
+           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% e receber uma ficha de desarme para recuperar 1 %SHIELD%.%LINEBREAK%Quando você for receber 1 ficha, exceto ficha de mira, ao invés disso se você não estiver estressado, você pode gastar 1 %CHARGE% para receber uma ficha de estresse."""
+        "Mag-Pulse Warheads":
+           display_name: """Ogiva de Pulso Magnético"""
+           text: """<strong>Ataque[%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Se este ataque acertar, o defensor sofre 1 dano %CRIT% e recebe 1 ficha de exaustão e 1 ficha de interferência. Então cancele todos os resultados %HIT%/%CRIT%."""
+        "Coaxium Hyperfuel":
+           display_name: """Super Combustível de Coaxium"""
+           text: """Você pode realizar a ação %SLAM% mesmo se estiver estressado. Se você fizer isso, você sofre 1 dano %CRIT% a menos que exponha 1 de suas cartas de dano.%LINEBREAK%Depois que você executar parcialmente uma manobra, você pode expor 1 de suas cartas de dano ou sofrer 1 dano %CRIT% para realizar uma ação %SLAM%."""
+        "R1-J5":
+           display_name: """R1-J5"""
+           text: """Enquanto você tiver 2 ou menos fichas de estresse, você pode realizar ações em cartas de dano mesmo estressado.%LINEBREAK% Após você reparar uma carta de dano com o atributo <b>Nave</b>, você pode gastar 1 %CHARGE% para reparar a carta novamente."""
+        "Stabilized S-Foils":
+           display_name: """S-Foils Estabilizado"""
+           text: """<strong>Fechado: </strong><i><r>%RELOAD%</r>, %BARRELROLL% <i class="xwing-miniatures-font xwing-miniatures-font-linked"></i><r> %EVADE%</r></i>%LINEBREAK% Antes de você ativar, se você não estiver criticamente danificado, você pode virar esta carta. %LINEBREAK% <strong>Aberto:</strong> <i>%BARRELROLL% <i class="xwing-miniatures-font xwing-miniatures-font-linked"></i><r> %LOCK%</r></i>%LINEBREAK% Após você realizar um ataque, você pode gastar sua mira que está no defensor para realizar um ataque %CANNON% bônus contra a nave usando uma melhoria %CANNON% com a qual você não tenha atacado este turno.%LINEBREAK%Antes de você ativar, se você não estiver criticamente danificado, você pode virar esta carta."""
+        "K-2SO":
+           display_name: """K-2SO"""
+           text: """Durante a Fase de Sistema, você pode escolher uma nave amiga em alcance 0-3. Essa nave recebe 1 ficha de cálculo e 1 ficha de estresse."""
+        "Proud Tradition":
+           display_name: """Tradição Orgulhosa"""
+           text: """<strong>Tradição Orgulhosa</strong>%LINEBREAK%<strong>Preparação:</strong> Equipe este lado para cima.%LINEBREAK%Enquanto você tiver 2 fichas de estresse ou menos, você pode realizar ações %FOCUS% mesmo se estiver estressado.%LINEBREAK%Depois de realizar um ataque, se você estiver estressado, o defensor pode gastar 1 ficha de foco ou sofrer 1 dano %CRIT% para virar esta carta. %LINEBREAK% <strong>Tradição Falsa</strong>%LINEBREAK% Trate sua ação %FOCUS% como vermelha."""
+        "Cluster Mines":
+           display_name: """Minas de Fragmentação"""
+           text: """<strong>Mina</strong>%LINEBREAK% Durante a Fase de sistema você pode gastar 1 %CHARGE% para soltar um Conjunto de minas usando o gabarito [1 %STRAIGHT%].%LINEBREAK%A %CHARGE% desta carta não pode ser recuperada."""
+        "Kaz's Fireball":
+           display_name: """Fireball do Kaz"""
+           text: """<strong>Preparação: </strong> Quando você resolver o <strong>Explosão com Asas</strong>, você pode procurar o baralho de dano e escolha uma carta de dano do tipo <strong>Nave</strong>; você recebe essa carta. Então, embaralhe o baralho de dano.%LINEBREAK%Você pode realizar ações de suas cartas de dano mesmo se estiver ionizado."""
+        "Agent Terex":
+           display_name: """Agente Terex"""
+           text: """<strong>Preparação: </strong> Equipe este lado para cima e coloque 3 fichas de cálculo nesta carta.%LINEBREAK%No começo da Fase de Engajamento, você pode escolher uma nave amiga em alcance 0-3 e remover 1 ficha de cálculo desta carta para que aquela carta ganhe uma ficha igual. Então, se não houver fichas de cáculo nesta carta, vire-a. %LINEBREAK%<strong>Ciborgue:</strong> Durante a Fase de Sistema, role 1 dado de ataque. em um resultado %HIT% ou %CRIT%, receba 1 ficha de cálculo. Caso contrário, receba 1 ficha de interferência.%LINEBREAK%<strong>Ação: </strong>Transfira 1 ficha de cálculo ou de interferência para uma nave em alcance 0-3."""
+        "Clone Captain Rex":
+           display_name: """Capitão Clone Rex"""
+           text: """Quando você realizar um ataque, você pode gastar um resultado %FOCUS%, se o fizer, cada nave amiga que tiver o defensor em seu %BULLSEYEARC% pode ganhar uma ficha de desgaste para realizar uma ação de %FOCUS%."""
+        '"Fives"':
+           display_name: """“Fives”"""
+           text: """Depois que você realizar um ataque que errou, se a iniciativa do defensor for igual ou maior que a sua iniciativa, coloque 1 ficha de foco ou desvio nesta carta.%LINEBREAK%Antes de você engajar, você pode remover 1 ficha desta carta para receber 1 ficha igual."""
+        "Suppressive Gunner":
+           display_name: """Atirador Supressivo"""
+           text: """Quando você realizar um ataque, você pode gastar 1 resultado %FOCUS%. Se o fizer, o defensor recebe 1 ficha de exaustão a menos que ele escolha sofrer 1 dano %HIT%."""
+        "Ghost Company":
+           display_name: """Companhia Fantasma"""
+           text: """Depois que você realizar um ataque primário, se você estiver focando, você pode realizar um ataque %SINGLETURRETARC% contra uma nave que não tenha atacado nessa rodada como um ataque bônus."""
+        "Wolfpack":
+           display_name: """Alcatéia"""
+           text: """Depois que uma nave amiga em alcance 0-3 defender, se o atacante estiver em seu arco de tiro, o defensor pode receber 1 ficha de desgaste para travar uma mira no atacante."""
+        "Yoda":
+           display_name: """Yoda"""
+           text: """Depois que outra nave amiga em alcance 0-2 executa completamente uma manobra roxa ou realiza uma ação roxa, você pode gastar 1 %FORCE%. Se o fizer, essa nave recupera 1 %FORCE%."""
+        "Kit Fisto":
+           display_name: """Kit Fisto"""
+           text: """No começo da Fase de Engajamento, você pode escolher 1 nave amiga em alcance 0-1 e gastar 1 %FORCE%. Se você fizer isso, ela pode realizar uma ação %EVADE% vermelha."""
+        "Plo Koon":
+           display_name: """Plo Koon"""
+           text: """No começo da Fase Final, se você estiver reforçando, você pode escolher 1 nave amiga em alcance 0 ou em seu %LEFTARC% ou %RIGHTARC% em alcance 1. Essa nave remove 1 ficha de exaustão ou desgaste, ou conserta 1 carta de dano virada para cima."""
+        "Repulsorlift Stabilizers":
+           display_name: """Estabilizadores de Repulsão"""
+           text: """<strong>Inativo: Preparação:</strong> Equipe este lado virado para cima.%LINEBREAK%Reduza a dificuldade de suas manobras retas (%STRAIGHT%).%LINEBREAK%Após você executar completamente uma manobra, você pode virar esta carta.%LINEBREAK%<strong>Ativo:</strong> Após você revelar uma manobra curva (%BANKLEFT% ou %BANKRIGHT%) ou curva fechada (%TURNLEFT% ou %TURNRIGHT%), você deve realizar a manobra como uma derrapagem, então vire esta carta.%LINEBREAK%Após você executar completamente uma manobra que não seja derrapagem, você pode virar esta carta."""
+        "Multi-Missile Pods":
+           display_name: """Cápsula Multi-Mísseis"""
+           text: """<strong>Ataque [%CALCULATE% ou %LOCK%]: </strong>Gaste 1 %CHARGE%. %LINEBREAK%Se o defensor estiver em seu %FRONTARC%, você pode gastar 1 %CHARGE% para rolar 1 dado de ataque adicional. Ao invés disso, se o defensor estiver em seu %BULLSEYEARC% você pode gastar até 2 %CHARGE% para rolar a mesma quantidade de dados de ataque."""
+        "Synced Laser Cannons":
+           display_name: """Canhões de Laser Sincronizado"""
+           text: """<strong>Ataque:</strong> Se você estiver calculando, o defensor não aplica o bônus de alcance."""
+        "Concussion Bombs":
+           display_name: """Bombas de Concussão"""
+           text: """Durante a Fase de Sistema, se qualquer %CHARGE% desta carta estiver inativa, você <b>deve</b> gastar 1 %CHARGE% para soltar uma bomba de concussão usando o gabarito [1 %STRAIGHT%], se possível. Caso contrário, você pode gastar 1 %CHARGE% para soltar 1 bomba de concussão.%LINEBREAK% <i>Errata (desde RR 1.3.0): Adicionado ""usando o gabarito [1 %STRAIGHT%]"</i>"""
+        "Maneuver-Assist MGK-300":
+           display_name: """Assistente de Manobras MGK-300"""
+           text: """Reduza a dificuldade de suas manobras retas (%STRAIGHT%) e curvas (%BANKLEFT% ou %BANKRIGHT%) de velocidade 3."""
+        "Target-Assist MGK-300":
+           display_name: """Assistente de Mira MGK-300"""
+           text: """Antes de você engajar, se você não tiver fichas verdes e não estiver estressado, receba 1 ficha de cálculo para cada nave inimiga em alcance 2-3 em seu arco de tiro, até um máximo de 2."""
+        "Deadeye Shot":
+           display_name: """Tiro no Alvo"""
+           text: """Quando você realizar um ataque primário, se o defensor estiver em seu %BULLSEYEARC%, você pode gastar 1 resultado %HIT% ou mudar 1 resultado %CRIT% para um resultado %HIT%. Se o fizer, o defensor expõe uma de suas cartas de dano."""
+        "Marg Sabl Closure":
+           display_name: """Manobra Marg Sabl"""
+           text: """Depois que você realizar uma manobra, se você se moveu através de um obstáculo, estrutura ou nave enorme, ou se você destacou, você pode escolher 1 nave inimiga em seu %FRONTARC% em alcance 1-2. Essa nave recebe 1 ficha de desgaste."""
+        "Hondo Ohnaka":
+           display_name: """Hondo Ohnaka"""
+           text: """<strong>Ação: </strong>Escolha 2 naves em alcane 1-3 de você que sejam amigas entre si. Coordene uma das naves escolhidas, e interfira na outra, ignorando restrições de alcance."""
+        "Boba Fett (Separatist)":
+           display_name: """Boba Fett"""
+           text: """Quando você realizar um ataque, se não houver nenhuma outra nave no arco de ataque, você pode mudar 1 de seus resultados %FOCUS% para um resultado %HIT%."""
+        "R2-D2 (Republic)":
+           display_name: """R2-D2"""
+           text: """Após você ativar, você pode gastar 1 %CHARGE% e receber 1 ficha de exaustão parar reparar 1 carta de dano, recuperar 1 escudo ou remover 1 dispositivo em alcance 0-1."""
+        "Aayla Secura":
+           display_name: """Aayla Secura"""
+           text: """Quando uma nave inimiga em seu %BULLSEYEARC% realiza um ataque, se o defensor for uma nave amiga e estiver em alcnace 0-2, o defensor pode mudar 1 resultado em branco para um resultado %FOCUS%."""
+        "Patience":
+           display_name: """Paciência"""
+           text: """No começo da Fase de Engajamento, se houver uma nave inimiga em seu %FRONTARC%, você pde receber 1 ficha de exaustão para recuperar 1 %FORCE%."""
+        "Syliure-31 Hyperdrive":
+           display_name: """Syliure-31 Hyperdrive"""
+           text: """<strong>Setup:</strong> You can be placed anywhere in the play area beyond range 1 of obstacles, beyond range 3 of enemy ships, and beyond range 3 of the enemy table edge."""
+        "Jedi Commander":
+           display_name: """Jedi Commander"""
+           text: """<strong>Setup Side:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You are a <b>wing leader</b>. Your wingmates must be 2-5 V-19 Torrents or 2-5 Nimbus-class V-wings. %LINEBREAK% After you are placed, flip this card. %LINEBREAK% <strong>Play Side:</strong>%LINEBREAK% While your wingmates execute purple maneuvers, they treat those maneuvers as red instead. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may each suffer 1 %HIT%/%CRIT% damage to cancel 1 matching result."""
+        "Extreme Maneuvers":
+           display_name: """Manobras Extremas"""
+           text: """Quando você realizar uma ação %BOOST%, você pode gastar 1 %FORCE% para usar os gabaritos de curva fechada [%TURNLEFT% ou %TURNRIGHT%]."""
+        "Starbird Slash":
+           display_name: """Manobra Atordoante"""
+           text: """Depois que você realizar completamente uma manobra, você pode escolher 1 nave inimiga que você tenha se movido através. Essa nave recebe 1 ficha de desgaste. Então, se você estiver no arco de tiro dessa nave, você ganha 1 ficha de desgaste."""
+        "Backwards Tailslide":
+           display_name: """Deslizamento de Cauda"""
+           text: """Quando você realizar um impulso ou pirueta, se sua carta de melhoria %CONFIGURATION% estiver com o lado “(Fechada)” para cima, você pode se mover através e sobrepor obstáculos.%LINEBREAK%Depois que você realizar um impulso ou pirueta através de um obstáculo, se você não estiver em alcance 0 dele, receba 1 ficha de desvio."""
+        "Overdrive Thruster":
+           display_name: """Propulsores Sobrecarregados"""
+           text: """Quando você realizar uma ação vermelha %BOOST%, %BARRELROLL% ou %SLAM%, você <strong>deve</strong> usar um gabarito 1 velocidade maior, se possível."""
+        "R2-D2 (Resistance)":
+           display_name: """R2-D2"""
+           text: """Durante a Fase Final, você pode gastar 1 %CHARGE% e 1 %SHIELD% para remover 1 ficha vermelha.%LINEBREAK% Durante a Fase Final, se você não tiver %SHIELD% ativo, você pode gastar 2 %CHARGE% para recuperar 1 %SHIELD% e receber 1 ficha de exaustão."""
+        "R6-D8":
+           display_name: """R6-D8"""
+           text: """Quando você realizar um ataque, você pode rerrolar um número de dados de ataque até o número de naves amigas em alcance 0-3 que estão com o defensor em seus %BULLSEYEARC%."""
+        "Underslung Blaster Cannon":
+           display_name: """Canhão de Baster Suspenso"""
+           text: """Após uma nave inimiga executar uma manobra, você pode realizar este ataque contra ela como um ataque bônus.%LINEBREAK%<strong>Ataque (%LOCK%):</strong> Seus dados podem ser modificados apenas gastando uma mira para seu efeito padrão."""
+        "Commander Pyre":
+           display_name: """Comandante Pyre"""
+           text: """<strong>Preparação: </strong>Depois que posicionar forças, escolha uma nave inimiga, ela recebe 2 fichas de estresse.%LINEBREAK%Quando você defender, se o atacante estiver estressado, você pode rerrolar 1 dado de defesa."""
+        "Commander Malarus":
+           display_name: """Comandante Malarus"""
+           text: """<strong>Preparação: </strong>Equipe este lado para cima.%LINEBREAK%Quando uma nave amiga não limitada em alcance 0-1 realiza um ataque primário, essa nave pode rerrolar 1 resultado em branco. Se ela fizer isso e o ataque não acertar, você <strong>deve</strong> virar essa carta.%LINEBREAK%<strong>Aperfeiçoada:</strong> Quando você realizar um ataque, se o defensor estiver em seu %BULLSEYEARC%, você <strong>deve</strong> converter todos seus resultados %FOCUS% para resultados %HIT% e receber 1 ficha de estresse. Então, se você possuir 2 ou mais fichas de estresse, sofra 1 dano %HIT%."""
+        "Automated Target Priority":
+           display_name: """Prioridade de Alvo Automatizada"""
+           text: """Quando você realizar um ataque, você <strong>deve</strong> escolher um defensor no alcance de ataque válido mais próximo.%LINEBREAK%Depois que você realizar um ataque que errou, coloque 1 ficha de cálculo nessa carta.%LINEBREAK%Antes de você engajar, você pode remover 1 ficha de cálculo desta carta para receber uma ficha de cálculo."""
+        "Sensor Buoy Suite":
+           display_name: """Conjunto de Bóias de Sensor"""
+           text: """<strong>Preparação:</strong> Antes de posicionar as forças, coloque 2 remotos bóias de sensor além do alcance 2 de qualquer borda.%LINEBREAK%Antes de engajar você pode travar uma mira em uma nave em alcance 0-1 de uma bóia de sensor amiga, ignorando restrições de alcance."""
+        "Kalani":
+           display_name: """Kalani"""
+           text: """Depois que uma nave inimiga executar uma manobra, se ela estiver no %BULLSEYEARC% de uma nave amiga em alcance 0-3, você pode gastar 1 %CHARGE%. Se você fizer isso, aquela nave amiga adquire uma mira naquela nave inimiga, e então recebe 1 ficha de estresse."""
+        'Alpha-3B "Besh"':
+           display_name: """Alpha-3B “Besh”"""
+           text: """Quando você realizar um ataque primário, você pode gastar sua mira no defensor para mudar 1 dos seus resultados em branco ou %FOCUS% para um resultado %HIT%. %LINEBREAK%Adicione o encaixe %DEVICE%."""
+        'Alpha-3E "Esk"':
+           display_name: """Alpha-3E “Esk”"""
+           text: """Quando você realizar um ataque primário, antes de rolar os dados de ataque, você pode gastar 2 %CHARGE%. Se o fizer, seus resultados %CRIT% atribuem fichas de íon ao invés de causarem dano."""
+        "Thermal Detonators":
+           display_name: """Detonadores Térmicos"""
+           text: """<strong>Bomba</strong>%LINEBREAK% Durante a Fase de Sistema, você pode gastar até 2 %CHARGE% para soltar a mesma quantidade de Detonadores Térmicos usando o gabarito [1 %STRAIGHT%] ou [2 %STRAIGHT%]. Cada um deve ser posicionado usando um gabarito diferente.%LINEBREAK%Quando você recarregar esta carta, recupere 1 %CHARGE% adicional."""
+        "R7-A7":
+           display_name: """R7-A7"""
+           text: """Quando você realizar um ataque, você pode gastar 1 %CHARGE% para mudar 1 resultado %HIT% para um resultado %CRIT%."""
+        "Q7 Astromech":
+           display_name: """Astromecânico Q7"""
+           text: """Quando você realizar uma pirueta ou impulso, você pode se mover através e sobrepor obstáculos."""
+        "Ion Limiter Override":
+           display_name: """Exceder o Limitador Iônico"""
+           text: """Depois que você executar completamente uma manobra vermelha, você pode realizar uma ação %BARRELROLL% mesmo estressado. Se o fizer, role um dado de ataque: em um resultado %HIT% receba uma ficha de desgaste, e em um resultado %CRIT% receba uma ficha de íon."""
+        "Precision Ion Engines":
+           display_name: """Motores Iônicos Precisos"""
+           text: """Antes de você realizar uma manobra Koiogran de velocidade 1-3 [%KTURN%], você pode, ao invés disso, gastar 1 %CHARGE% para realizar essa manobra como um Loop de Segnor [%SLOOPLEFT% ou %SLOOPRIGHT%]."""
+        "Intercept Booster":
+           display_name: """Propulsores de Interceptação"""
+           text: """<strong>Conectado:</strong> %SLAM% <i class="xwing-miniatures-font xwing-miniatures-font-linked"></i> <r>%LOCK%</r></i>%LINEBREAK% <strong>Preparação:</strong> Equipe este lado virado para cima.%LINEBREAK%<i>(Ações Adicionadas Estão Disponíveis Apenas Deste Lado)</i>%LINEBREAK%Durante a Fase de Sistema, receba 1 ficha de desarmamento a menos que você vire esta carta.%LINEBREAK%No final da Fase Final, se você não tiver %CHARGE% ativa, vire esta carta.%LINEBREAK% <strong>Desconectado:</strong> <i>Vazio</i>"""
+        "XX-23 S-Thread Tracers":
+           display_name: """Fibras de Rastreamento XX-23 S"""
+           text: """Ataque [%FOCUS%, %CALCULATE% ou %LOCK%]: Gaste 1 %CHARGE%. Se este ataque acertar, cada nave amiga em alcance 1-3 do defensor pode travar uma mira no defensor. E então cancele todos os resultados dos dados."""
+        "Independent Calculations":
+           display_name: """Cálculos Independentes"""
+           text: """Substitua sua habilidade de nave <strong>Cálculos Interligados</strong> pela seguinte habilidade:%LINEBREAK%<strong>Cálculos Independentes:</strong> Quando você realizar uma ação %CALCULATE% branca, você pode tratá-la como vermelha para receber 1 ficha de cálculo adicional. Outras naves não podem usar suas fichas de cálculo usando a habilidade de nave Cálculos Interligados."""
+        "Jango Fett":
+           display_name: """Jango Fett"""
+           text: """Quando você defender ou realizar um ataque, você pode gastar uma mira que você tenha na nave inimiga apra mudar 1 dos resultados %FOCUS% da nave inimiga para um resultado em branco."""
+        "Zam Wesell":
+           display_name: """Zam Wesell"""
+           text: """<strong>Preparação:</strong> Perca 2 %CHARGE%.%LINEBREAK% Durante a Fase de Sistema, você pode atribuir uma das suas condições secretas virada para baixo a você mesmo: <strong>%LINEBREAK%Você Deveria Me Agradecer %LINEBREAK%É Melhor Falar Sério. </strong>"""
+        "Boba Fett (Separatist)":
+           display_name: """Boba Fett"""
+           text: """Quando você realizar um ataque, se não houver nenhuma outra nave no arco de ataque, você pode mudar 1 de seus resultados %FOCUS% para um resultado %HIT%."""
+        "Slave I (Separatist)":
+           display_name: """Slave I"""
+           text: """Quando você realizar um ataque %FRONTARC%, se você estiver no %FULLREARARC% do defensor, você pode mudar 1 resultado %HIT% para um resultado %CRIT%."""
+        "Weapons Systems Officer":
+           display_name: """Oficial de Sistemas de Armas"""
+           text: """Depois que você realizar um ataque especial com o requisito %LOCK%, você pode travar uma mira no defensor."""
+        "False Transponder Codes":
+           display_name: """Códigos de Transponder Falsos"""
+           text: """Depois que você adquirir uma mira em um objeto ou um objeto adquirir mira em você, se você tiver 1 %CHARGE% ativa, perca 1 %CHARGE% e interfira aquele objeto ignorando as restrições de alcance."""
+        "Vectored Cannons (RZ-1)":
+           display_name: """Canhões Vetorizados"""
+           text: """Receba um indicador %SINGLETURRETARC%. Trate o requisito de arco seu ataque primário %FRONTARC% como %SINGLETURRETARC%.%LINEBREAK%Substitua sua habilidade de nave Propulsores Vetorizados com a seguinte:%LINEBREAK%Canhões Vetorizados: Durante a Fase de Sistema, você pode realizar uma ação %BOOST% vermelha ou %ROTATEARC% vermelha. Você consegue rotacionar seu indicador %SINGLETURRETARC% apenas para seu %FRONTARC% ou %REARARC%."""
+        "B6 Blade Wing Prototype (Epic)":
+           display_name: """Protótipo B6 Blade Wing (Épico)"""
+           text: """<strong>Ataque [%LOCK%]: </strong>Receba 1 ficha de íon para realizar este ataque. Se este ataque acertar, o defensor sofre 1 dano %HIT%/%CRIT% adicional para cada resultado igual não cancelado depois do primeiro."""
+        "TIE Defender Elite":
+           display_name: """TIE Defender Elite"""
+           text: """Reduza a dificuldade de suas manobras de curva fechada (%TURNLEFT% ou %TURNRIGHT%). Aumente a dificuldade de suas manobras Koiogran (%KTURN%). Substitua sua habilidade de nave Força Total pela seguinte:%LINEBREAK%Controle de Tiro Avançado: Após você realizar um ataque %CANNON% ou %MISSILE%, se você possuir uma mira no defensor, você pode realizar um ataque primário bônus contra o defensor."""
+        "Sensitive Controls":
+           display_name: """Controles Sensíveis"""
+           text: """Substitua sua habilidade de nave <strong>Autopropulsores</strong> pela habilidade:%LINEBREAK%<strong>Controles Sensíveis:</strong> Durante a Fase de Sistema, você pode realizar uma ação %BARRELROLL% vermelha ou %BOOST% vermelha."""
+        "Cutthroat":
+           display_name: """Degolar"""
+           text: """Depois que outra nave amiga em alcance 0-3 for destruída, se essa nave for limitada ou possuir a melhoria <strong>Degolar</strong>, você pode remover 1 de suas fichas vermelhas ou laranjas, ou recuperar 1 %CHARGE% não recursiva na sua carta de piloto ou de suas cartas de melhorias equipadas."""
+        "Tierfon Belly Run":
+           display_name: """Rasante de Tierfon"""
+           text: """Você pode realizar ataques especiais mesmo estando em alcance 0 de asteroides.%LINEBREAK%Quando você defender, se você estiver em alcance 0 de um obstáculo, os dados de ataque não podem ser rerrolados."""
+        "B6 Blade Wing Prototype":
+           display_name: """B6 Blade Wing Prototype"""
+           text: """ """
+        "Phoenix Squadron":
+           display_name: """Phoenix Squadron"""
+           text: """<strong>Setup Side:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You are a <b>wing leader</b>. Your wingmates must be 2-5 of the following: %LINEBREAK% - 0-1 Attack Shuttle %LINEBREAK% - 0-1 Sheathipede-class Shuttle %LINEBREAK% - 0-5 RZ-1 A-wings %LINEBREAK% After you are placed, flip this card. %LINEBREAK% <strong>Play Side:</strong>%LINEBREAK% At the start of the Planning Phase, 1 of your wingmates that is docked with you may join your wing without gaining a stress token. %LINEBREAK% While you or your Attack Shuttle wingmate or Sheathipede-class wingmate defends, up to 2 of your RZ-1 A-Wing wingmates in the attack arc may each suffer 1 %HIT%/%CRIT% damage to cancel 1 matching result."""
+        "Hopeful":
+           display_name: """Esperançoso"""
+           text: """Depois que outra nave amiga em alcance 0-3 for destruída, se aquela nave for limitada ou possuir a melhoria <strong>Esperançoso</strong>, você pode realizar uma ação de %FOCUS% ou %BOOST%."""
+        "Sabine Wren (Gunner)":
+           display_name: """Sabine Wren"""
+           text: """Depois que você realizar um ataque especial, você pode escolher um número de naves amigas em alcance 0-3 do defensor igual ao número de cartas de dano causadas no defensor durante este ataque. Cada nave escolhida pode remover 1 ficha de estresse ou desgaste."""
+        "Disciplined":
+           display_name: """Disciplinado"""
+           text: """Depois que outra nave amiga em alcance 0-3 for destruída, se essa nave for limitada ou possuir a melhoria <strong>Disciplinado</strong>, você pode realizar uma ação %LOCK% ou %BARRELROLL%."""
+        "Shadow Wing":
+           display_name: """Shadow Wing"""
+           text: """<strong>Setup Side:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You are a <b>wing leader</b>. Your wingmates must be 2-5 other ships of your type. %LINEBREAK% After you are placed, flip this card. %LINEBREAK% <strong>Play Side:</strong>%LINEBREAK% Your wingmates can perform %BARRELROLL% or %BOOST% actions. If they do, they voluntarily split from the wing. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may each suffer 1 %HIT%/%CRIT% damage to cancel 1 matching result."""
+        "Skystrike Academy Class":
+           display_name: """Skystrike Academy Class"""
+           text: """<strong>Setup Side:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You are a <b>wing leader</b>. Your wingmates must be 2-5 TIE/ln FIghters with initiative lower than yours. %LINEBREAK% After you are placed, flip this card. %LINEBREAK% <strong>Play Side:</strong>%LINEBREAK% After you barrel roll or boost, each of your wingmates is forced to split from the wing %LINEBREAK% While you defend, up to 5 of your wingmates in the attack arc may each suffer 1 %HIT%/%CRIT% damage to cancel 1 matching result."""
+        "In It For The Money":
+           display_name: """In It For The Money"""
+           text: """<strong>In It For The Money:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You can be included in Republic, Rebel, and Resistance squads. %LINEBREAK% After an allied limited ship in your squad is destroyed, gain 1 focus token and flip this card. %LINEBREAK% <strong>In It For Your Rebellion:</strong>%LINEBREAK% Non-Scum ships in your squad are treated as friendly instead of allied."""
+        "Bounty":
+           display_name: """Bounty"""
+           text: """<strong>Hired:</strong>%LINEBREAK%Setup: Equip this side faceup. %LINEBREAK% You can be included in Separatist, Imperial , and First Order squads. %LINEBREAK% After you perform an attack, if the defender was a limited ship and was destroyed, you may recover 1 %CHARGE% on your ship card and each of your upgrade cards. Then flip this card. %LINEBREAK% <strong>Paid:</strong>%LINEBREAK% """
+        "Gamut Key":
+           display_name: """Gamut Key"""
+           text: """No começo da Fase Final, você pode gastar 2 %CHARGE% para escolher uma nave em alcance 0-1 com 1 ou mais fichas circulares. Durante a Fase Final, fichas circulares não são removidas dessa nave."""
+        "Interloper Turn":
+           display_name: """Manobra Clandestina"""
+           text: """Antes de você realizar uma curva [%TURNLEFT% ou %TURNRIGHT%) de velocidade 1-2 ou uma Manobra Koiogran [%KTURN%] de velocidade 1-2, se você estiver em alcance 0-1 de um asteroide, estrutura, ou nave enorme, você pode receber uma ficha de tração."""
+        "Protectorate Gleb":
+           display_name: """Protectorate Gleb"""
+           text: """Depois que você coordenar uma nave amiga, você pode trasnferir 1 ficha laranja ou vermelha para a nave que você coordenou. %LINEBREAK% <i>Errata (desde RR: 1.2.0 [06/14/2021]): Adicionada restrição para naves amigas</i>"""
+        "R4-B11":
+           display_name: """R4-B11"""
+           text: """Quando você realizar um ataque, você pode remover 1 ficha laranja ou vermelha do defensor para rerrolar qualquer número de dados de defesa."""
+        "Wartime Loadout":
+           display_name: """Carregamento de Guerra"""
+           text: """Adicione 1 encaixe %TORPEDO% e 1 encaixe %MISSILE%. Substitua sua habilidade de nave com a seguinte:%LINEBREAK%Barragem Devastadora: Quando você realizar um ataque %TORPEDO% ou %MISSILE%, se o defensor estiver em seu %BULLSEYEARC%, seus resultados %CRIT% não podem ser cancelados por resultados %EVADE%."""
+        "Watchful Astromech":
+           display_name: """Astromecânico Vigilante"""
+           text: """Após você realizar uma ação %RELOAD% ou %ROTATEARC%, se você estiver no arco de tiro de uma nave inimiga, você pode realizar uma ação %CALCULATE% vermelha."""
+        "L4E-R5":
+           display_name: """L4E-R5"""
+           text: """No início da Fase de Engajamento, você pode transferir 1 ficha de cálculo para uma nave amiga em seu arco de tiro."""
+        "Overtuned Modulators":
+           display_name: """Moduladores Tunados"""
+           text: """Durane a Fase de Sistema, se você não estiver estressado você pode gastar 1 %CHARGE% para receber 3 fichas de cálculo.%LINEBREAK%Durante a Fase Final, se sua %CHARGE% estiver inativa, para cada ficha verde que você remover, receba 1 ficha de desgaste."""
+        "Sensor Scramblers":
+           display_name: """Confundir Sensores"""
+           text: """<strong>Preparação:</strong> Receba 1 ficha de camuflagem.%LINEBREAK%Enquanto você estiver camuflado, outras naves não podem travar miras em você.%LINEBREAK%Durante a Fase Final, se você estiver camuflado e houver uma nave inimiga em alcance 0-3, você <strong>deve</strong> descamuflar. Se o fizer, e a descamuflagem falhar, perca 1 ficha de camuflagem."""
+        "Enhanced Jamming Suite":
+           display_name: """Dispositivo de Interferência Aprimorado"""
+           text: """Quando você interferir, você pode escolher você mesmo ou outra nave amiga.%LINEBREAK%Quando você defender, se o atacante não tiver fichas verdes ou se houver uma nave interferida no arco de ataque, você pode rolar 1 dado de defesa adicional."""
+        "Compassion":
+           display_name: """Compaixão"""
+           text: """Antes que outra nave amiga em alcance 0-2 receba uma carta de dano virada para cima do tipo <strong>Piloto</strong> ou <strong>Equipe</strong>, você pode gastar 1 %FORCE%. Se você fizer isso, essa carta de dano é descartada, e você recebe 1 carta de dano virada para baixo. Então, se você tiver 2 ou mais cartas de dano, recupere 2 %FORCE%."""
+        "Malice":
+           display_name: """Malícia"""
+           text: """Quando você realizar um ataque, você pode gastar 1 %FORCE% para mudar 1 resultado %FOCUS% ou %HIT% para um resultado %CRIT%. Se você fizer isso, depois que realizar o ataque, se o defensor recebeu 1 ou mais cartas viradas para cima do tipo <strong>Piloto</strong> ou <strong>Equipe</strong> recupere 2 %FORCE%."""
+        "Shattering Shot":
+           display_name: """Tiro Destruidor"""
+           text: """Quando você realizar um ataque, se o ataque estiver obstruído por um obstáculo ou o defensor estiver em alcance 0 de um obstáculo, você pode gastar 1 %FORCE% para adicionar 1 resultado %FOCUS%."""
+        "DT-798":
+           display_name: """DT-798"""
+           text: """No começo da Fase de Engajamento, você pode escolher uma nave amiga em seu arco de tiro. Se você o fizer, essa nave recebe 1 ficha de desgaste. %LINEBREAK% Quando você realizar um ataque, você pode rerolar até 1 dado de ataque para cada nave no arco de ataque com 1 ou mais fichas vermelhas ou laranjas que não sejam mira."""
+        "Feedback Ping":
+           display_name: """Sinal de Retorno"""
+           text: """Depois que uma nave inimiga realizar uma manobra, se ela estiver em alcance 0-1 de um dispositivo amigo, você pode travar uma mira nessa nave, ignorando as restrições de alcance."""
+        "Electro-Chaff Missiles":
+           display_name: """Mísseis de Electro-Chaff"""
+           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% dessa carta para lançar 1 nuvem de electro-chaff usando o gabarito [3 %BANKLEFT%], [3 %BANKRIGHT%] ou [4 %STRAIGHT%]. Então coloque 1 marcador de fuso nela.%LINEBREAK%A %CHARGE% desta carta não pode ser recuperada."""
+        "Babu Frik":
+           display_name: """Babu Frik"""
+           text: """Antes de você receber uma ficha laranja ou vermelha, que não seja uma mira, você pode gastar 1 %CHARGE% para, ao invés disso, colocá-la nessa carta. Durante a Fase de Sistema, se houver 1 ou mais fichas nessa carta, você <strong>deve</strong> gastar 1 %CHARGE%. Se você não puder, remova os tokens dessa carta, e receba tokens iguais."""
+        "Ahsoka Tano (Crew)":
+           display_name: """Ahsoka Tano"""
+           text: """Após você realizar completamente uma manobra, você pode gastar 1 %FORCE% para escolher 1 nave amiga em seu %FULLREARARC% em alcance 1-2. Se você o fizer, aquela nave pode realizar uma ação %FOCUS% vermelha, mesmo se estiver estressada."""
+        "Bo-Katan Kryze (Republic/Separatist)":
+           display_name: """Bo-Katan Kryze"""
+           text: """Quando você realizar um ataque, se você estiver em alcance 0-1 do defensor, você pode rerolar 1 dado de ataque."""
+        "Bo-Katan Kryze (Rebel/Scum)":
+           display_name: """Bo-Katan Kryze"""
+           text: """Depois que você realizar um ataque, se o defensor foi destruído, cada nave amiga em alcance 0-2 pode remover 1 ficha vermelha ou laranja."""
+        "Fenn Rau":
+           display_name: """Fenn Rau"""
+           text: """Antes que uma nave amiga em alcance 0-2 engaje, se a manobra revelada dela for 1 velocidade maior ou mais e houver 1 nave inimiga no %FRONTARC% dela em alcance 1, essa nave amiga pode remover 1 ficha vermelha que não seja uma mira."""
+        "Captain Hark":
+           display_name: """Captão Hark"""
+           text: """Depois que você executar completamente uma manobra vermelha, se você não estiver focado, você pode gastar 1 %CHARGE% para receber 1 ficha de foco."""
+        "Gar Saxon":
+           display_name: """Gar Saxon"""
+           text: """Quando uma unidade amiga em alcance 1-3 com uma iniciativa 4 ou menor realizar um ataque contra um defensor em que você possura mira, o atacante pode mudar 1 resultado %FOCUS% para um resultado %HIT%."""
+        "Gar Saxon (Gunner)":
+           display_name: """Gar Saxon"""
+           text: """Quando você realizar a ação %LOCK%, você pode escolher apenas objetos que estejam em seu %FRONTARC% ou %REARARC%. %LINEBREAK%Quando você realizar um ataque primário, se o defensor estiver em seu %FRONTARC% ou %REARARC%, você pode remover 1 ficha laranja ou vermelha do defensor para rolar 1 dado adicional, até um máximo de 4 dados."""
+        "Korkie Kryze":
+           display_name: """Korkie Kryze"""
+           text: """Depois que uma nave amiga em seu %FULLFRONTARC% em alcance 1-2 se torna o defensor, você pode transferir uma ficha verde para ela.%LINEBREAK%Quando uma nave amiga em seu %FULLFRONTARC% em alcance 1-2 defende, se você obstruir o ataque, o defensor rola 1 dado de defesa adicional."""
+        "Obi-Wan Kenobi":
+           display_name: """Obi-Wan Kenobi"""
+           text: """Depois que uma nave amiga em alcance 0-2 gastar uma ficha de foco ou desvio, você pode gastar 1 %FORCE%. Se fizer isso, aquela nave recebe 1 ficha de foco."""
+        "Pre Vizsla":
+           display_name: """Pre Vizsla"""
+           text: """Quando você realizar uma ação %COORDINATE%, você pode escolher um remoto %CREW% amigo ao invés de uma nave amiga. Ao invés de realizar uma ação, este remoto realoca para frente usando o gabarito [1 %TURNLEFT%], [1 %TURNRIGHT%] ou [2 %STRAIGHT%]."""
+        "Obi-Wan Kenobi":
+           display_name: """Obi-Wan Kenobi"""
+           text: """Depois que uma nave amiga em alcance 0-2 gastar uma ficha de foco ou desvio, você pode gastar 1 %FORCE%. Se fizer isso, aquela nave recebe 1 ficha de foco."""
+        "Rook Kast":
+           display_name: """Rook Kast"""
+           text: """Depois que você realizar uma ação vermelha, você pode receber 1 ficha de desgaste.%LINEBREAK%Quando você realizar um ataque, se você estiver desgastado, você pode mudar 1 de seus resultados em branco ou %FOCUS% para um resultado %HIT%."""
+        "Satine Kryze":
+           display_name: """Satine Kryze"""
+           text: """No começo da Fase de Engajamento, você pode gastar 2 %CHARGE%. Se você fizer isso, cada nave amiga pode escolher receber 1 ficha de exaustão e 1 ficha de foco, ou receber 1 ficha de desarme e 1 ficha de desvio."""
+        "Savage Opress":
+           display_name: """Savage Opress"""
+           text: """Depois que uma nave amiga em seu %FRONTARC% em alcance 1-2 receber uma ficha de estresse ou desgaste, você pode gastar 1 %FORCE%. Se fizer isso, aquela nave recebe 1 ficha de foco."""
+        "Tal Merrik":
+           display_name: """Tal Merrik"""
+           text: """<strong>Preparação: </strong>Antes de posicionar as forças, escolha 1 nave inimiga e atribua a condição <strong>Falso Amigo</strong> a ela.%LINEBREAK%<strong>Ação: </strong> Se a condição <strong>Falso Amigo</strong> não estiver atribuida a nenhuma nave, atribua a condição a uma nave inimiga em seu %FRONTARC% em alcance 0-2."""
+        "Tiber Saxon":
+           display_name: """Tiber Saxon"""
+           text: """Depois que você realizar um ataque em alcance 1-2 que acertou, se o defensor não possuir cartas de dano viradas para cima, você pode gastar 1 ou mais %CHARGE%. para cada %CHARGE% que você gastar o defensor recebe uma ficha de desgaste."""
+        "Tristan Wren":
+           display_name: """Tristan Wren"""
+           text: """Quando uma unidade amiga em alcance 0-3 realiza um ataque %RANGEBONUS%, você pode gastar 1 %CHARGE%. Se o fizer, o atacante pode mudar 1 resultado %HIT% para um resultado %CRIT%."""
+        "Ursa Wren":
+           display_name: """Ursa Wren"""
+           text: """Você pode manter até 2 miras. Cada mira deve estar em um objeto diferente.%LINEBREAK%Depois que uma nave amiga em alcance 0-3 for mirada, você pode realizar uma ação %LOCK%. %LINEBREAK% <i>Errata (desde RR 1.4.2): Texto atualizado para funcionar como era a inteção</i>"""
+        "Ursa Wren (Gunner)":
+           display_name: """Ursa Wren"""
+           text: """Depois que você mirar em uma unidade inimiga além do alcance 2, se não houver unidades amigas em alcance 0-1 da unidade mirada, receba uma ficha de cálculo."""
+        "Sabine Wren (Command)":
+           display_name: """Sabine Wren"""
+           text: """<strong>Setup:</strong> Before placing forces, assign the <b>Trials of the Darksaber</b> condition to yourself. %LINEBREAK% While you perform a %COORDINATE% action, you may coordinate 1 additional friendly ship."""
+        "Prime Minister Almec":
+           display_name: """Primeiro Ministro Almec"""
+           text: """<strong>Preparação: </strong>Equipe este lado para cima.%LINEBREAK%Depois que uma nave amiga em alcance 0-2 revelar uma manobra branca, se ela não possuir fichas verdes, ela pode receber 1 ficha de estresse para receber 1 ficha de cálculo.%LINEBREAK%Durante a Fase Final, se você possuir 2 ou mais fichas de estresse, vire essa carta. %LINEBREAK% <strong>Almec, o Fantoche de Maul</strong> %LINEBREAK% Depois que uma nave amiga em alcance 0-2 realizar completamente uma manobra vermelha, essa nave pode realizar uma ação %CALCULATE% OU %FOCUS% da sua barra de ações, mesmo se estiver estressada."""
+        "Beskar Reinforced Plating":
+           display_name: """Revestimento Reforçado de Beskar"""
+           text: """Quando você defender, se o atacante estiver em seu %FRONTARC%, antes de você receber uma carta de dano virada para cima, você pode gastar 1 %CHARGE% para receber esta carta virada para baixo, ou gastar 2 %CHARGE% para descartá-la imediatamente."""
+        "Blazer Bomb":
+           display_name: """Bomba de Labareda"""
+           text: """<strong>Bomba</strong>%LINEBREAK% Durante a Fase de sistema você pode gastar 1 %CHARGE% para soltar uma Bomba de Labareda usando o gabarito [1 %STRAIGHT%]"""
+        "Mandalorian Optics":
+           display_name: """Visores Mandalorianos"""
+           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para travar uma mira em um objeto em seu %FRONTARC%.%LINEBREAK%Quando você realiza um ataque primário, se você possuir uma mira no defensor, ignore obstáculos além do alcance 0 que estejam obstruindo o ataque."""
+        "Clan Training":
+           display_name: """Treinamento de Clã"""
+           text: """Antes de você engajar, se você não estiver focado e houver uma nave inimiga no seu %FRONTARC% em alcance1, você pode gastar 1 %CHARGE% para realizar uma ação %FOCUS% vermelha.%LINEBREAK%Depois que você realizar um ataque, se o defensor foi destruído, recupere 1 %CHARGE%."""
+        "Gauntlet":
+           display_name: """Gauntlet"""
+           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para consertar 1 carta do tipo <strong>Nave</strong> virada para cima."""
+        "Nightbrother":
+           display_name: """Nightbrother"""
+           text: """Depois que você revelar uma manobra que não seja azul, se você estiver estressado, você pode gastar 2 %CHARGE% para receber 1 ficha de foco ou evade."""
+        "Swivel Wing":
+           display_name: """Asas Giratórias"""
+           text: """<strong>Asa Giratória (Abaixada)</strong> %LINEBREAK% Depois que você realizar uma manobra [0 %STOP%], você pode rotacionar sua nave 90º ou 180º. Se o fizer, você <b>deve</b> virar esta carta. %LINEBREAK% <strong>Asa Giratória (Erguida)</strong> %LINEBREAK% Quando você defender, role 1 dado de defesa a menos. %LINEBREAK% Depois que você realizar completamente uma manobra não estácionária [%STOP%], você pode virar esta carta."""
         "Clan Wren Commandos":
            display_name: """Comandos do Clã Wren"""
            text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar um remoto Equipe de Comando usando o gabarito [1 %STRAIGHT%]. Você pode colocar este dispositivo usasndo suas guias frontais ou traseiras.%LINEBREAK%A %CHARGE% dessa carta não pode ser recuperada."""
@@ -3751,261 +3771,68 @@ exportObj.cardLoaders.Português = () ->
         "Mandalorian Super Commandos":
            display_name: """Super Comandos Mandalorianos"""
            text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para soltar um remoto Equipe de Comando usando o gabarito [1 %STRAIGHT%]. Você pode colocar este dispositivo usasndo suas guias frontais ou traseiras.%LINEBREAK%A %CHARGE% dessa carta não pode ser recuperada."""
-        "Commander Malarus":
-           display_name: """Comandante Malarus"""
-           text: """<strong>Preparação: </strong>Equipe este lado para cima.%LINEBREAK%Quando uma nave amiga não limitada em alcance 0-1 realiza um ataque primário, essa nave pode rerrolar 1 resultado em branco. Se ela fizer isso e o ataque não acertar, você <strong>deve</strong> virar essa carta.%LINEBREAK%<strong>Aperfeiçoada:</strong> Quando você realizar um ataque, se o defensor estiver em seu %BULLSEYEARC%, você <strong>deve</strong> converter todos seus resultados %FOCUS% para resultados %HIT% e receber 1 ficha de estresse. Então, se você possuir 2 ou mais fichas de estresse, sofra 1 dano %HIT%."""
-        "Commander Pyre":
-           display_name: """Comandante Pyre"""
-           text: """<strong>Preparação: </strong>Depois que posicionar forças, escolha uma nave inimiga, ela recebe 2 fichas de estresse.%LINEBREAK%Quando você defender, se o atacante estiver estressado, você pode rerrolar 1 dado de defesa."""
-        "Count Dooku":
-           display_name: """Conde Dookan"""
-           text: """Durante um ataque, Antes que uma nave em alcance 0-2 role dado de ataque ou defesa, se todas as suas %FORCE% estiverem ativas, você pode gastar 1 %FORCE% e nomear um resultado. Se a rolagem não conter o restulado nomeado, a nave deve mudar 1 dado para esse resultado.%LINEBREAK%<i>Errata (desde RR 1.4): Adicionado "Durante um ataque,"</i>"""
-        "Darth Vader":
-           display_name: """Darth Vader"""
-           text: """No começo da Fase de Engajamento, você pode escolher 1 nave em seu arco de tiro em alcance 0-2 e gastar 1 %FORCE%. Se você fizer isso, essa nave sofre 1 dano %HIT% a menos que escolha remover 1 ficha verde."""
-        "Death Troopers":
-           display_name: """Death Troopers"""
-           text: """Durante a Fase de ativação, naves inimigas em alcance 0-1 não podem remover fichas de estresse."""
-        "Director Krennic":
-           display_name: """Director Krennic"""
-           text: """<strong>Preparação: </strong>Antes de posicionar as forças, atribua a condição <strong>Protótipo Otimizado</strong> a outra nave amiga."""
-        "Emperor Palpatine":
-           display_name: """Imperador Palpatine"""
-           text: """Quando outra nave amiga defender ou realizar um ataque, você pode gastar 1 %FORCE% para modificar 1 dado dela, como se se aquela nave tivesse gasto 1 %FORCE%."""
-        "Fenn Rau":
-           display_name: """Fenn Rau"""
-           text: """Antes que uma nave amiga em alcance 0-2 engaje, se a manobra revelada dela for 1 velocidade maior ou mais e houver 1 nave inimiga no %FRONTARC% dela em alcance 1, essa nave amiga pode remover 1 ficha vermelha que não seja uma mira."""
-        '"Fives"':
-           display_name: """“Fives”"""
-           text: """Depois que você realizar um ataque que errou, se a iniciativa do defensor for igual ou maior que a sua iniciativa, coloque 1 ficha de foco ou desvio nesta carta.%LINEBREAK%Antes de você engajar, você pode remover 1 ficha desta carta para receber 1 ficha igual."""
-        "Freelance Slicer":
-           display_name: """Invasor Independente"""
-           text: """Quando você defender, antes dos dados de ataque serem rolados, você pode gastar 1 mira que você possuir no atacante para rolar 1 dado de ataque. Se você fizer isso, o atacante recebe 1 ficha de interferência. Então, em um resultado %HIT% ou %CRIT%, receba 1 ficha de interferência."""
-        "GA-97":
-           display_name: """GA-97"""
-           text: """<strong>Preparação: </strong>Antes de posicionar as forças, você pode gastar 3-5 %CHARGE%. Se você fizer isso, escolha outra nave amiga e atribua a condição <strong>É a Resistência</strong> a ela."""
-        "Gamut Key":
-           display_name: """Gamut Key"""
-           text: """No começo da Fase Final, você pode gastar 2 %CHARGE% para escolher uma nave em alcance 0-1 com 1 ou mais fichas circulares. Durante a Fase Final, fichas circulares não são removidas dessa nave."""
-        "Gar Saxon":
-           display_name: """Gar Saxon"""
-           text: """Quando uma unidade amiga em alcance 1-3 com uma iniciativa 4 ou menor realizar um ataque contra um defensor em que você possura mira, o atacante pode mudar 1 resultado %FOCUS% para um resultado %HIT%."""
-        "General Grievous":
-           display_name: """General Grievous"""
-           text: """Quando você defender, depois da etapa de Neutralizar Resultados, se houver 2 ou mais resultados %HIT%/%CRIT%, você pode gastar 1 %CHARGE% para cancelar 1 resultado %HIT% ou %CHRIT%.%LINEBREAK%Depois que uma nave amiga for destruída, recupere 1 %CHARGE%."""
-        "General Hux":
-           display_name: """General Hux"""
-           text: """Quando você realiza uma ação %COORDINATE% branca, você pode tratá-la como vermelha. Se você fizer isso, você pode coordenar até 2 naves adicionais do mesmo tipo, e cada nave que você coordenar deve realizar a mesma ação, tratando-a como vermelha."""
-        "Ghost Company":
-           display_name: """Ghost Company"""
-           text: """Depois que você realizar um ataque primário, se você estiver focado, você pode realizar um ataque %SINGLETURRETARC% contra uma nave que você não tenha atacado nesta rodada como um ataque bônus."""
-        'GNK "Gonk" Droid':
-           display_name: """GNK “Gonk” Droide"""
-           text: """<strong>Preparação: </strong>Perca 1 %CHARGE%.%LINEBREAK%<strong>Ação: </strong>Recupere 1 %CHARGE%.%LINEBREAK%strong>Ação: </strong>Gaste 1 %CHARGE% para recuperar 1 escudo."""
-        "Grand Inquisitor":
-           display_name: """Grand Inquisitor"""
-           text: """Depois que uma nave inimiga em alcance 0-2 revelar seu disco, você pode gastar 1 %FORCE% para realizar 1 ação branca em sua barra de ações, tratando essa ação como vermelha."""
-        "Grand Moff Tarkin":
-           display_name: """Grand Moff Tarkin"""
-           text: """Durante a Fase de Sistema, você pode gastar 2 %CHARGE%. Se você o fizer, todas as naves amigas podem adquirir uma mira em uma nave que você tenha mirado."""
-        "Greef Karga":
-           display_name: """Greef Karga"""
-           text: """Você pode coordenar naves aliadas como se fossem naves amigas.%LINEBREAK%Depois que você coordenar uma nave, ela pode adquirir uma mira em um objeto que você tenha mirado."""
-        "Han Solo (Resistance)":
-           display_name: """Han Solo"""
-           text: """Depois que você realizar uma ação %EVADE%, receba fichas de desvio adicionais igual a quantidade de naves inimigas em alcance 0-1."""
-        "Hera Syndulla":
-           display_name: """Hera Syndulla"""
-           text: """Você pode executar manobras vermelhas mesmo se estiver estressado, Depois que você realizar completamente uma manobra vermelha, se você possuir 3 ou mais fichas de estresse, remova 1 ficha de estresse e sofra 1 dano %HIT%."""
-        "Hondo Ohnaka":
-           display_name: """Hondo Ohnaka"""
-           text: """<strong>Ação: </strong>Escolha 2 naves em alcane 1-3 de você que sejam amigas entre si. Coordene uma das naves escolhidas, e interfira na outra, ignorando restrições de alcance."""
-        "IG-11":
-           display_name: """IG-11"""
-           text: """<strong>Setup:</strong> <strong>Preparação: </strong>Equipe este lado para cima.%LINEBREAK%Quando for receber uma carta de dano virada para cima, ao invés disso, você <strong>deve</strong> colocar 1 marcador de fuso nesta carta e receber 1 ficha de cálculo. Então, se houver 2 marcadores de fuso nesta carta, vire-a. %LINEBREAK% <strong>IG-11 (Protocolo Anti-Captura)</strong> %LINEBREAK% Durante a Fase Final, remova 1 marcador de fuso desta carta. Então, se esta carta não possuir marcadores de fuso, você é destruído e cada nave em alcance 0-1 sofre 1 dano %CRIT%.%LINEBREAK%<strong>Ação: </strong>Coloque 1 marcador de fuso nesta carta."""
-        "IG-88D":
-           display_name: """IG-88D"""
-           text: """Você possui a habilidade de piloto de outras naves amigas com a melhoria IG-2000.%LINEBREAK%Depois que você realizar uma ação %CALCULATE% receba 1 ficha de cálculo."""
-        "Informant":
-           display_name: """Informante"""
-           text: """<strong>Preparação: </strong>Depois de posicionar forças, escolha 1 nave inimiga e atribua a condição <strong>Dispositivo de Escuta</strong> a ela."""
-        "ISB Slicer":
-           display_name: """Invasor do BSI"""
-           text: """Durante a Fase Final, naves inimigas em alcance 1-2 não podem remover fichas de interferência."""
-        "Jabba the Hutt":
-           display_name: """Jabba the Hutt"""
-           text: """Durante a Fase Final, você pode escolher 1 nave amiga em alcance 0-2 e gastar 1 %CHARGE%. Se você fizer isso, aquela nave recupera 1 %CHARGE% em uma de suas melhorias %ILLICIT% equipadas."""
-        "Jango Fett":
-           display_name: """Jango Fett"""
-           text: """Quando você defender ou realizar um ataque, você pode gastar uma mira que você tenha na nave inimiga apra mudar 1 dos resultados %FOCUS% da nave inimiga para um resultado em branco."""
-        "Jyn Erso":
-           display_name: """Jyn Erso"""
-           text: """Quando uma nave amiga em alcance 0-3 for receber 1 ficha de foco, ela pode, ao invés disso, receber 1 ficha de desvio."""
-        "K-2SO":
-           display_name: """K-2SO"""
-           text: """Durante a Fase de Sistema, você pode escolher uma nave amiga em alcance 0-3. Essa nave recebe 1 ficha de cálculo e 1 ficha de estresse."""
-        "Kanan Jarrus":
-           display_name: """Kanan Jarrus"""
-           text: """Depois que uma nave amiga em alcance 0-2 executa completamente uma manobra branca, você pode gastar 1 %FORCE% para remover 1 ficha de estresse dessa nave."""
-        "Kaydel Connix":
-           display_name: """Kaydel Connix"""
-           text: """Depois que você revelar seu disco de manobras, você pode mudar seu disco para uma manobra basica uma velocidade maior. Quando você executar essa manobra, aumente sua dificuldade."""
-        "Ketsu Onyo":
-           display_name: """Ketsu Onyo"""
-           text: """No começo da Fase Final, você pode escolher 1 nave inimiga em alcance 0-2 em seu arco de tiro. Se fizer isso, aquela nave não remove suas fichas de tração."""
-        "Kit Fisto":
-           display_name: """Kit Fisto"""
-           text: """No começo da Fase de Engajamento, você pode escolher 1 nave amiga em alcance 0-1 e gastar 1 %FORCE%. Se você fizer isso, ela pode realizar uma ação %EVADE% vermelha."""
-        "Korkie Kryze":
-           display_name: """Korkie Kryze"""
-           text: """Depois que uma nave amiga em seu %FULLFRONTARC% em alcance 1-2 se torna o defensor, você pode transferir uma ficha verde para ela.%LINEBREAK%Quando uma nave amiga em seu %FULLFRONTARC% em alcance 1-2 defende, se você obstruir o ataque, o defensor rola 1 dado de defesa adicional."""
-        "Korr Sella":
-           display_name: """Korr Sella"""
-           text: """Depois que você completar uma manobra azul, remova todas as suas fichas de estresse."""
-        "Kuiil":
-           display_name: """Kuiil"""
-           text: """<strong>Ação: </strong>Role 1 dado de ataque para cada carta de dano que você tiver. Para cada resultado %HIT%, conserte 1 carta de dano do tipo <strong><i>Nave</i></strong>, então, para cada resultado %CRIT% conserte 1 carta de dano virada para baixo. Para cada resultado em branco, remova 1 ficha laranja, e para cada resultado %FOCUS%, receba 1 ficha de foco."""
-        "Kylo Ren":
-           display_name: """Kylo Ren"""
-           text: """<strong>Ação: </strong>Escolha 1 nave inimiga em alcance 1-3. Se você fizer isso, gaste 1 %FORCE% para atribuir a condição <strong>Contemple o Lado Sombrio</strong> a essa nave."""
-        "L3-37":
-           display_name: """L3-37"""
-           text: """<strong>Preparação: </strong>Equipe este lado para cima.%LINEBREAK%Quando você defender, você pode virar esta carta. Se o fizer, o atacante deve rerrolar todos os dados de ataque.%LINEBREAK%<strong>Programação da L3-37:</strong> Se você não possuir escudos ativos, reduza a dificuldade das suas manobras curva [%BANKLEFT% e %BANKRIGHT%]."""
-        "Lando Calrissian":
-           display_name: """Lando Calrissian"""
-           text: """<strong>Ação: </strong> Role 2 dados de defesa. Para cada resultado %FOCUS% receba 1 ficha de foco. Para cada resultado %EVADE% receba 1 ficha de desvio. Se ambos os resultados forem em branco, o jogador adversário escolhe foco ou desvio. Você recebe 1 ficha daquele tipo."""
-        "Lando Calrissian (Scum)":
-           display_name: """Lando Calrissian"""
-           text: """Depois que você rolar dados, você pode gastar 1 ficha verde para rerrolar até 2 dos seus resultados."""
-        "Larma D'Acy":
-           display_name: """Larma D'Acy"""
-           text: """Quando você possuir 2 fichas de estresse ou menos, você pode realizar as ações %REINFORCE%, %COORDINATE% e %JAM%, mesmo se estiver estressado.%LINEBREAK%Quando você realizar uma ação %REINFORCE%, %COORDINATE% ou %JAM% branca, se você estiver estressado, trate essa ação como vermelha."""
-        "Latts Razzi":
-           display_name: """Latts Razzi"""
-           text: """Quando você defender, se o atacante estiver estressado, você pode remover 1 ficha de estresse do atacante para mudar 1 de seus resultados branco/%FOCUS% para um resultado %EVADE%."""
-        "Leia Organa":
-           display_name: """Leia Organa"""
-           text: """No começo da Fase de Ativação, você pode gastar 3 %CHARGE%. Durante esta fase, todas as naves amigas reduzem a dificuldade de suas manobras vermelhas."""
-        "Leia Organa (Resistance)":
-           display_name: """Leia Organa"""
-           text: """Depois que uma nave amiga revelar uma manobra que não seja [0 %STOP%], você pode gastar 1 %FORCE%. Se fizer isso, a nave escolhida reduz a dificuldade daquela manobra.%LINEBREAK%<i>Errata (desde RR 1.4): Adicionada restrição no tipo de manobra)</i>"""
-        "Magva Yarro":
-           display_name: """Magva Yarro"""
-           text: """Depois que você defender, se o ataque acertou, você pode adquirir uma mira no atacante."""
-        "Maul":
-           display_name: """Maul"""
-           text: """Depois que você sofrer dano, você pode receber 1 ficha de estresse para recuperar 1 %FORCE%.%LINEBREAK%Você pode equipar melhorias "Lado Sombrio"."""
-        "Minister Tua":
-           display_name: """Ministra Tua"""
-           text: """No começo da Fase de Engajamento, se você estiver danificado, você pode realizar uma ação %REINFORCE% vermelha."""
-        "Moff Jerjerrod":
-           display_name: """Moff Jerjerrod"""
-           text: """Durante a Fase de Sistema, você pode gastar 2 %CHARGE%. Se o fizer, escolha o gabarito [1 %BANKLEFT%],  ]1 %STRAIGHT%] ou [1 %BANKRIGHT%]. Todas as naves amigas podem realizar uma ação %BOOST% vermelha usando aquele gabarito."""
-        "Nien Nunb":
-           display_name: """Nien Nunb"""
-           text: """Reduza a dificuldade das suas manobras curva [%BANKLEFT% e %BANKRIGHT%]."""
-        "Novice Technician":
-           display_name: """Técnico Novato"""
-           text: """At the end of the round, you may roll 1 attack die to repair 1 faceup damage card. Then on a %HIT% result, expose 1 damage card."""
-        "Obi-Wan Kenobi":
-           display_name: """Obi-Wan Kenobi"""
-           text: """Depois que uma nave amiga em alcance 0-2 gastar uma ficha de foco ou desvio, você pode gastar 1 %FORCE%. Se fizer isso, aquela nave recebe 1 ficha de foco."""
-        "Peli Motto":
-           display_name: """Peli Motto"""
-           text: """Durante a Fase de Sistema, você pode realizar uma ação em uma de suas cartas de dano, mesmo se estiver estressado.%LINEBREAK%Depois que você reparar uma carta virada pra cima do tipo <strong><i>Nave</i></strong>, você pode rolar 1 dado de ataque. Em um resultado %HIT%, repare outra carta virada para cima do tipo <strong><i>Nave</i></strong>. Em um resultado %CRIT%, exponha 1 carta de dano."""
-        "Perceptive Copilot":
-           display_name: """Co-Piloto Perspicaz"""
-           text: """Depois que você realizar uma ação %FOCUS%, receba 1 ficha de foco."""
-        "Petty Officer Thanisson":
-           display_name: """Suboficial Thanisson"""
-           text: """Durante a Fase de Ativação ou Engajamento, depois que uma nave inimiga em seu %FRONTARC% em alcance 0-1 receber uma ficha vermelha ou laranja, se você não estiver estressado, você pode receber 1 ficha de estresse. Se você fizer isso, aquela nave recebe 1 ficha adicional do tipo que recebeu."""
-        "Plo Koon":
-           text: """No começo da Fase Final, se você estiver reforçando, você pode escolher 1 nave amiga em alcance 0 ou em seu %LEFTARC% ou %RIGHTARC% em alcance 1. Essa nave remove 1 ficha de exaustão ou desgaste, ou conserta 1 carta de dano virada para cima."""
-        "Pre Vizsla":
-           display_name: """Pre Vizsla"""
-           text: """Quando você realizar uma ação %COORDINATE%, você pode escolher um remoto %CREW% amigo ao invés de uma nave amiga. Ao invés de realizar uma ação, este remoto realoca para frente usando o gabarito [1 %TURNLEFT%], [1 %TURNRIGHT%] ou [2 %STRAIGHT%]."""
-        "Protectorate Gleb":
-           text: """Depois que você coordenar uma nave amiga, você pode trasnferir 1 ficha laranja ou vermelha para a nave que você coordenou. %LINEBREAK% <i>Errata (desde RR: 1.2.0 [06/14/2021]): Adicionada restrição para naves amigas</i>"""
-        "PZ-4CO":
-           display_name: """PZ-4CO"""
-           text: """No fim da Fase de Ativação, você pode escolher 1 nave amiga em alcance 1-2. Se você fizer isso, transfira 1 ficha de cálculo para aquela nave. Se sua manobra revelada for azul, você pode, ao invés disso, transferir 1 ficha de foco."""
-        "Qi'ra":
-           display_name: """Qi'ra"""
-           text: """Quando você se mover e realizar ataques, você ignora obstáculos em que possua uma mira."""
-        "R2-D2 (Crew)":
-           display_name: """R2-D2"""
-           text: """Durante a Fase Final, se você estiver danificado e não possuir escudos ativos, você pode rolar 1 dado de ataque para recuperar 1 escudo. Em um resultado %HIT%, exponha 1 de suas cartas de dano."""
-        "Rook Kast":
-           display_name: """Rook Kast"""
-           text: """Depois que você realizar uma ação vermelha, você pode receber 1 ficha de desgaste.%LINEBREAK%Quando você realizar um ataque, se você estiver desgastado, você pode mudar 1 de seus resultados em branco ou %FOCUS% para um resultado %HIT%."""
-        "Rose Tico":
-           display_name: """Rose Tico"""
-           text: """Quando você defender ou realizar um ataque, você pode gastar 1 de seus resultados para adquirir uma mira na nave inimiga."""
-        "Sabine Wren":
-           display_name: """Sabine Wren"""
-           text: """<strong>Preparação: </strong>Posicione 1 ficha de íon, 1 ficha de interferência, 1 ficha de estresse e 1 ficha de tração nesta carta.%LINEBREAK%Depois que uma nave sofrer o efeito de uma bomba amiga, você pode remover 1 fica de íon, interferência, estresse ou tração desta carta. Se o fizer, aquela nave recebe uma ficha igual."""
-        "Satine Kryze":
-           display_name: """Satine Kryze"""
-           text: """No começo da Fase de Engajamento, você pode gastar 2 %CHARGE%. Se você fizer isso, cada nave amiga pode escolher receber 1 ficha de exaustão e 1 ficha de foco, ou receber 1 ficha de desarme e 1 ficha de desvio."""
-        "Savage Opress":
-           display_name: """Savage Opress"""
-           text: """Depois que uma nave amiga em seu %FRONTARC% em alcance 1-2 receber uma ficha de estresse ou desgaste, você pode gastar 1 %FORCE%. Se fizer isso, aquela nave recebe 1 ficha de foco."""
-        "Saw Gerrera":
-           display_name: """Saw Gerrera"""
-           text: """Quando vê realizar um ataque, você pode sofrer 1 dano %HIT% para mudar todos os seus resultados %FOCUS% para resultados %CRIT%."""
-        "Seasoned Navigator":
-           display_name: """Navegador Experiente"""
-           text: """Depois que você revelar seu disco de manobras, você pode colocar seu disco em outra manobra que não seja vermelha da mesma velocidade. Quando realizar essa manobra, aumente sua dificuldade."""
-        "Seventh Sister":
-           display_name: """Seventh Sister"""
-           text: """Quando uma nave inimiga em alcance 0-1 for receber uma ficha de estresse, você pode gastar 1 %FORCE% para que ela receba 1 ficha de interferência ou 1 ficha de tração, ao invés da ficha de estresse."""
-        "Supreme Leader Snoke":
-           display_name: """Supreme Leader Snoke"""
-           text: """Durante a Fase de Sistema, você pode escolher qualquer quantidade de naves inimigas além do alcance 1. Se você fizer isso, gaste a mesma quantidade de %FORCE% para virar o disco de manobras de cada uma dessas naves para cima."""
-        "Tal Merrik":
-           display_name: """Tal Merrik"""
-           text: """<strong>Preparação: </strong>Antes de posicionar as forças, escolha 1 nave inimiga e atribua a condição <strong>Falso Amigo</strong> a ela.%LINEBREAK%<strong>Ação: </strong> Se a condição <strong>Falso Amigo</strong> não estiver atribuida a nenhuma nave, atribua a condição a uma nave inimiga em seu %FRONTARC% em alcance 0-2."""
-        "Tactical Officer":
-           display_name: """Oficial Tático"""
-           text: """<i class = flavor_text>No Caos de uma batalha estelar, uma ordem pode significar a diferença entre uma vitória e um massacre.</i>"""
-        "The Child":
-           display_name: """A Criança"""
-           text: """<strong>Preparação: </strong>Depois de posicionar forças, escolha um oponente; ele atribui a condição <strong>Perseguição Impiedosa</strong> a duas de suas naves.%LINEBREAK%Sua %FORCE% perde o icone de recursiva. Depois que você defender, se você sofreu dano durante este ataque, recupere 1 %FORCE%."""
+        "Razor Crest":
+           display_name: """Razor Crest"""
+           text: """<strong>Preparação: </strong> Coloque 1 melhoria %ILLICIT% não limitada virada para baixo sob esta carta.%LINEBREAK% Durante a Fase de Sistema, você pode revelar esta melhoria %ILLICIT% e equipá-la como se ela estivesse equipada durante a Preparação (sem pagar seu custo em pontos)."""
         "The Mandalorian":
            display_name: """O Mandaloriano"""
            text: """Durante a Fase Final, se você não defendeu nessa rodada, recupere 1 %FORCE% não recorrente, se possível."""
-        "Tobias Beckett":
-           display_name: """Tobias Beckett"""
-           text: """<strong>Preparação: </strong>Depois de posicionar as forças, você pode escolher 1 obstáculo na área de jogo. Se o fizer, coloque-o em qualquer lugar da área de jogo além do alcance 2 de qualquer borda ou nave, e além do alcance 1 de qualquer outro obstáculo."""
-        "Tristan Wren":
-           display_name: """Tristan Wren"""
-           text: """Quando uma unidade amiga em alcance 0-3 realiza um ataque %RANGEBONUS%, você pode gastar 1 %CHARGE%. Se o fizer, o atacante pode mudar 1 resultado %HIT% para um resultado %CRIT%."""
-        "Unkar Plutt":
-           display_name: """Unkar Plutt"""
-           text: """Depois que você executar parcialmente uma manobra, você pode sofrer 1 dano %HIT% para realizar 1 ação branca."""
-        "Ursa Wren":
-           display_name: """Ursa Wren"""
-           text: """Você pode manter até 2 miras. Cada mira deve estar em um objeto diferente.%LINEBREAK%Depois que uma nave amiga em alcance 0-3 for mirada, você pode realizar uma ação %LOCK%. %LINEBREAK% <i>Errata (desde RR 1.4.2): Texto atualizado para funcionar como era a inteção</i>"""
-        "Yoda":
-           display_name: """Yoda"""
-           text: """Depois que outra nave amiga em alcance 0-2 executa completamente uma manobra roxa ou realiza uma ação roxa, você pode gastar 1 %FORCE%. Se o fizer, essa nave recupera 1 %FORCE%."""
-        "Zam Wesell":
-           display_name: """Zam Wesell"""
-           text: """<strong>Preparação:</strong> Perca 2 %CHARGE%.%LINEBREAK% Durante a Fase de Sistema, você pode atribuir uma das suas condições secretas virada para baixo a você mesmo: <strong>%LINEBREAK%Você Deveria Me Agradecer %LINEBREAK%É Melhor Falar Sério. </strong>"""
-        '"Zeb" Orrelios':
-           display_name: """“Zeb” Orrelios"""
-           text: """Quando você realizar um ataque em alcance 0, você pode gastar fichas de foco para seu efeito padrão para modificar seus resultados. Quando você defenderem alcance 0, o atacante pode usar fichas de foco para seu efeito padrão para modificar os resultados.%LINEBREAK%<i>Errata (desde RR 1.4): Habilidade refeita</i>"""
-        "Zuckuss":
-           display_name: """Zuckuss"""
-           text: """Quando você realizar um ataque, se você não estiver estressado, você pode escolher 1 dado de defesa e receber 1 ficha de estresse. Se o fizer, o defensor deve rerrolar esse dado."""
- 
-       #Melhorias Standard Loadout
+        "The Child":
+           display_name: """A Criança"""
+           text: """<strong>Preparação: </strong>Depois de posicionar forças, escolha um oponente; ele atribui a condição <strong>Perseguição Impiedosa</strong> a duas de suas naves.%LINEBREAK%Sua %FORCE% perde o icone de recursiva. Depois que você defender, se você sofreu dano durante este ataque, recupere 1 %FORCE%."""
+        "Tracking Fob":
+           display_name: """Fob de Rastreamento"""
+           text: """<strong>Preparação: </strong>Depois de posicionar forças, escolha um oponente; ele atribui a condição <strong> Marcado para Eliminação</strong> a 1 de suas naves. Ele deve atribir a condição a uma nave limitada, se possível.%LINEBREAK% Você ignora restrições de alcance quando adquirir miras na nave com a condição<strong> Marcado para Eliminação</strong>."""
+        "Notorious":
+           display_name: """Notório"""
+           text: """Depois que você defender, se o atacante estiver em seu arco de tiro, você pode gastar 1 %CHARGE%. Se o fizer, o atacante recebe 1 ficha de desgaste.%LINEBREAK%Quando você realiza um ataque, se o defensor estiver desgastado, você pode rerrolar 1 resultado em branco."""
+        "Enduring":
+           display_name: """Durável"""
+           text: """Quando você defender, se você não estiver no %BULLSEYEARC% do atacante, resultados %CRIT% são cancelados antes de resultados %HIT%.%LINEBREAK%Depois que você sofrer dano %CRIT%, você pode realizar uma ação %CALCULATE% ou %FOCUS% na sua barra de ações, mesmo se estiver estressado, tratando essa ação como vermelha."""
+        "IG-11":
+           display_name: """IG-11"""
+           text: """<strong>Setup:</strong> <strong>Preparação: </strong>Equipe este lado para cima.%LINEBREAK%Quando for receber uma carta de dano virada para cima, ao invés disso, você <strong>deve</strong> colocar 1 marcador de fuso nesta carta e receber 1 ficha de cálculo. Então, se houver 2 marcadores de fuso nesta carta, vire-a. %LINEBREAK% <strong>IG-11 (Protocolo Anti-Captura)</strong> %LINEBREAK% Durante a Fase Final, remova 1 marcador de fuso desta carta. Então, se esta carta não possuir marcadores de fuso, você é destruído e cada nave em alcance 0-1 sofre 1 dano %CRIT%.%LINEBREAK%<strong>Ação: </strong>Coloque 1 marcador de fuso nesta carta."""
+        "Greef Karga":
+           display_name: """Greef Karga"""
+           text: """Você pode coordenar naves aliadas como se fossem naves amigas.%LINEBREAK%Depois que você coordenar uma nave, ela pode adquirir uma mira em um objeto que você tenha mirado."""
+        "Kuiil":
+           display_name: """Kuiil"""
+           text: """<strong>Ação: </strong>Role 1 dado de ataque para cada carta de dano que você tiver. Para cada resultado %HIT%, conserte 1 carta de dano do tipo <strong><i>Nave</i></strong>, então, para cada resultado %CRIT% conserte 1 carta de dano virada para baixo. Para cada resultado em branco, remova 1 ficha laranja, e para cada resultado %FOCUS%, receba 1 ficha de foco."""
+        "Peli Motto":
+           display_name: """Peli Motto"""
+           text: """Durante a Fase de Sistema, você pode realizar uma ação em uma de suas cartas de dano, mesmo se estiver estressado.%LINEBREAK%Depois que você reparar uma carta virada pra cima do tipo <strong><i>Nave</i></strong>, você pode rolar 1 dado de ataque. Em um resultado %HIT%, repare outra carta virada para cima do tipo <strong><i>Nave</i></strong>. Em um resultado %CRIT%, exponha 1 carta de dano."""
+        "Migs Mayfeld":
+           display_name: """Migs Mayfeld"""
+           text: """Depois que você realizar um ataque %FRONTARC%, você pode realizar um ataque %REARARC% ou %SINGLETURRETARC% como um ataque bônus contra um alvo diferente que possua 1 ou mais fichas vermelhas ou laranjas."""
+        "Burnout Thrusters":
+           display_name: """Propulsores Poderosos"""
+           text: """Depois que você realizar uma ação %SLAM%, perca 1 %CHARGE%. Então você pode receber 1 ficha de exaustão para remover 1 ficha de desarme.%LINEBREAK%Se sua %CHARGE% estiver inativa, você não pode realizar a ação %SLAM%."""
+        "Hotshot Tail Blaster":
+           display_name: """Hotshot Tail Blaster"""
+           text: """Você pode realizar este ataque em alcance 0.%LINEBREAK%strong>Ataque: </strong>Gaste 1 %CHARGE%."""
+        "Drop-Seat Bay":
+           display_name: """Assentos Rebaixados"""
+           text: """Se você for soltar um remoto %CREW% usando um gabarito reto [%STRAIGHT%], você pode, ao invés disso, usar um gabarito de curva [%BANKLEFT% ou %BANKRIGHT%] da mesma velocidade e pode alinhar a linha do meio do gabarito com a linha do meio nas laterais direita ou esquerda da sua nave, ao invés da guia traseira."""
+        "Combat Boarding Tube":
+           display_name: """Combat Boarding Tube"""
+           text: """During the System Phase, if you would drop a %CREW% remote and there is an enemy medium, large, or huge ship at range 0-1 in your %REARARC%, you may place that device in the play area in your %REARARC% at range 0-1 so that it is at range 0 of that enemy ship instead. Then, that enemy ship gains 1 deplete, strain, or stress token of your choice."""
+        "Proton Cannons":
+           display_name: """Canhões de Prótons"""
+           text: """<strong>Ataque:</strong> Gaste 2 %CHARGE%. Mude 1 resultado %FOCUS% ou %HIT% para um resultado %CRIT%."""
+        "Homing Torpedoes":
+           display_name: """Torpedos Teleguiados"""
+           text: """<strong>Ataque [%LOCK%]:</strong> Gaste 1 %CHARGE%.%LINEBREAK%Depois que você declarar o defensor, o defensor pode escolher sofrer um dano %CRIT%. Se o fizer, pule as etapas de Dados de Ataque e Dados de Defesa e o ataque é tratado como acerto."""
+        "Xanadu Blood":
+           display_name: """Xanadu Blood"""
+           text: """ """
+
+        # Standardized upgrades
         "Fanatic (BoY)":
            display_name: """Fanático"""
            text: """Quando você realizar um ataque primário, se você estiver danificado, você pode mudar 1 resultado %FOCUS% para um resultado %HIT%."""
         "Vengeful (BoY)":
            display_name: """Vingativo"""
-           text: """Depois que uma nave amiga em alcance 0-3 for destruída, se essa nave for limitada, você pode remover 1 de suas fichas vermelhas ou recuperar 1 carga recorrente de suas cartas."""
+           text: """Depois que uma nave amiga em alcance 0-3 for destruída, se essa nave for limitada, você pode remover 1 de suas fichas vermelhas ou recuperar 1 carga recorrente da sua carta de nave."""
         "Chewbacca (BoY)":
            display_name: """Chewbacca"""
            text: """Depois que você fizer uma ação %EVADE%, você pode receber 1 ficha de foco."""
@@ -4066,10 +3893,33 @@ exportObj.cardLoaders.Português = () ->
         "Wolfpack (SoC)":
            display_name: """Matilha"""
            text: """Quando você realizar um ataque, você pode gastar uma mira pertencente a uma nave <b>Plo Koon</b> aliada ou uma nave com a habilidade <b>Nascido para Isso</b> que esteja no defensor para rerrolar qualquer quantidade de dados de ataque."""
-
+        "Swift Approach (TBE)":
+           display_name: """Swift Approach"""
+           text: """During the System Phase, after you drop or launch a device, you may perform a white %BARRELROLL% or %BOOST% action, even while stressed."""
+        "Automated Loaders (TBE)":
+           display_name: """Automated Loaders"""
+           text: """After you perform a primary attack, you may spend 1 %CHARGE% to perform a %RELOAD% action."""
+        "Top Cover (TBE)":
+           display_name: """Top Cover"""
+           text: """After a friendly ship at range 0-1 defends, if you have not dropped or launched a device this round, you may launch a device using the [3 %BANKLEFT%], [3 %STRAIGHT%], or [3 %BANKRIGHT%] template. %LINEBREAK% You ignore the effects of friendly devices."""
+        "True Grit (TBE)":
+           display_name: """True Grit"""
+           text: """At the end of the Activation Phase, if you are not strained, you may gain 1 strain token to remove 1 non-lock red or orange token."""
+        "Mercenary (YLF)":
+           display_name: """Mercenário"""
+           text: """Depois que outra nave amiga em alcance 0-2 for destruída, antes dela ser removida da área de jogo, transfira uma das fichas verdes dessa nave para você."""
+        "Seeker Missiles (YLF)":
+           display_name: """Seeker Missiles"""
+           text: """<strong>Attack (%LOCK%):</strong> Spend 1 %CHARGE%. During the Modify Attack Dice step, you may spend up to 2 additional %CHARGE%. Change one %FOCUS% result to a %HIT% result for each %CHARGE% spent in this way."""
+        '"Leebo" (YLF)':
+           display_name: """“Leebo”"""
+           text: """Depois que você consertar uma carta de dano, você pode realizar uma ação da sua barra de ações."""
+        "Efficient Processing (YLF)":
+           display_name: """Processamento Eficiente"""
+           text: """Depois que você realizar uma ação %CALCULATE%, receba 1 ficha de cálculo."""
         "It's A Trap! (BoE)":
            display_name: """É uma Armadilha!"""
-           text: """Quando defender, se houver mais outras naves amigas do que naves inimigas em alcance 0-1, você pode rerolar 1 de seus resultados em branco."""
+           text: """Quando você defender, se houver mais outras naves amigas do que naves inimigas em alcance 0-1, você pode rerolar 1 de seus resultados em branco."""
         "R2-A3 (BoE)":
            display_name: """R2-A3"""
            text: """Depois que você realizar uma ação, você pode gastar 1 %CHARGE% para adquirir uma mira."""
@@ -4099,7 +3949,7 @@ exportObj.cardLoaders.Português = () ->
            text: """Quando atacar, você pode gastar um resultado %FOCUS% no fim do passo Neutralizar Resultados. Se você fizer isso, depois que o ataque for resolvido, o defensor recebe uma ficha de desgaste."""
         "Chaff Particles (BoE)":
            display_name: """Partículas Chaff"""
-           text: """Quando defender, você pode gastar 1 resultado %FOCUS% no fim da etapa Neutralizar Resultados para remover 1 ficha vermelha ou laranja."""
+           text: """Quando você defender, você pode gastar 1 resultado %FOCUS% no fim da etapa Neutralizar Resultados para remover 1 ficha vermelha ou laranja."""
         "Computer-Assisted Handling (BoE)":
            display_name: """Manobra Assistida por Computador"""
            text: """Depois que você executar completamente uma manobra, você pode gastar 1 %CHARGE% para realizar uma ação %BOOST% ou %BARRELROLL%."""
@@ -4136,7 +3986,7 @@ exportObj.cardLoaders.Português = () ->
         "Ion Maneuvering Jet (BoE)":
            display_name: """Jato de Manobra Iônica"""
            text: """Depois que você executar completamente uma Manobra Koiogran [%KTURN%], você pode gastar 1 %CHARGE% para realizar uma ação, mesmo se estiver estressado."""
-         "Without A Trace (SL)":
+        "Without A Trace (SL)":
            display_name: """Sem Vestígios"""
            text: """Depois que você receber uma ficha de camuflagem, você pode remover 1 ficha vermelha. Enquanto você estiver camuflado, naves inimigas não podem adquirir miras em você."""
         "Relay System (SL)":
@@ -4338,7 +4188,7 @@ exportObj.cardLoaders.Português = () ->
            display_name: """Fúria Turbulenta"""
            text: """No começo da Fase de Engajamento, se você estiver no %FRONTARC% de uma nave inimiga, você pode receber 1 ficha de desgaste para recuperar 1 %FORCE%."""
         "Seeker Missiles":
-           display_name: """Mísseis Buscadores"""
+           display_name: """Mísseis Perseguidores"""
            text: """<strong>Ataque (%LOCK%):</strong> Gaste 1 %CHARGE%. Durante o passo Modificar Dados de Ataque, você pode gastar até 2 %CHARGE% adicionais. Modifique 1 resultado %FOCUS% para um resultado %HIT% para cada %CHARGE% extra que foi gasta."""
         "Targeting Matrix":
            display_name: """Matriz de Alvo"""
@@ -4371,8 +4221,341 @@ exportObj.cardLoaders.Português = () ->
            display_name: """Torre de Rajada de Laser"""
            text: """<strong>Ataque:</strong> Gaste 1 %CHARGE%. Você pode gastar 1 %CHARGE% para rolar 1 dado de ataque adicional para um máximo de 3 dados."""
 
-    condition_translations = 
-    
+        # Epic upgrades
+        "Admiral Ozzel":
+           display_name: """Admiral Ozzel"""
+           text: """While a friendly large or huge ship at range 0-3 executes a maneuver, it may suffer 1 %HIT% damage to execute a maneuver of the same bearing and difficulty of a speed 1 higher or lower instead."""
+        "Azmorigan":
+           display_name: """Azmorigan"""
+           text: """During the End Phase, you may choose up to 2 friendly ships at range 0-1. If you do, each of these ships does not remove 1 calculate or evade token."""
+        "Captain Needa":
+           display_name: """Captain Needa"""
+           text: """After a friendly ship at range 0-4 reveals its dial, you may spend 1 %CHARGE%. If you do, it sets its dial to another maneuver of the same difficulty and speed."""
+        "Strategic Commander":
+           display_name: """Strategic Commander"""
+           text: """After a friendly ship at range 0-4 reveals its dial, you may spend 1 %CHARGE%. If you do, it sets its dial to another maneuver of the same difficulty and speed."""
+        "Carlist Rieekan":
+           display_name: """Carlist Rieekan"""
+           text: """After a friendly ship at range 0-2 is destroyed, you may choose a friendly ship at range 0-2. If you do, it may perform a red %EVADE% action."""
+        "Jan Dodonna":
+           display_name: """Jan Dodonna"""
+           text: """Friendly ships at range 0-3 can spend your focus and evade tokens."""
+        "Raymus Antilles":
+           display_name: """Raymus Antilles"""
+           text: """After you are destroyed, each friendly ship at range 0-1 gains 1 focus token. After you are destroyed, you are not removed until the end of the End Phase."""
+        "Stalwart Captain":
+           display_name: """Stalwart Captain"""
+           text: """After you are destroyed, you are not removed until the end of the End Phase."""
+        "Agent of the Empire":
+           display_name: """Agent of the Empire"""
+           text: """You are a <strong>wing leader</strong>. Your wingmates must be 2, 3, 4, or 5 TIE/ln fighters. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may suffer 1 %HIT% or %CRIT% damage to cancel a matching result."""
+        "First Order Elite":
+           display_name: """First Order Elite"""
+           text: """You are a <strong>wing leader</strong>. Your wingmates must be 2 or 3 TIE/fo fighters or TIE/sf fighters. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may suffer 1 %HIT% or %CRIT% damage to cancel a matching result."""
+        "Veteran Wing Leader":
+           display_name: """Veteran Wing Leader"""
+           text: """You are a <strong>wing leader</strong>. Your wingmates must be 2, 3, 4, or 5 other ships of your ship type. %LINEBREAK% While you defend, up to 2 of your wingmates in the attack arc may suffer 1 %HIT% or %CRIT% damage to cancel a matching result."""
+        "Dreadnought Hunter":
+           display_name: """Dreadnought Hunter"""
+           text: """While you perform an attack against a huge ship, if the attack deals a faceup damage card to the defender and the defender is in your %BULLSEYEARC%, you may apply the <strong>Precision Shot</strong> effect even if you are not in the specified arc."""
+        "Ion Cannon Battery":
+           display_name: """Ion Cannon Battery"""
+           text: """<strong>Online: </strong> Setup: Equip this side faceup.%LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. If this attack hits, the defender suffers 1 %CRIT% damage, and all %HIT%/%CRIT% results inflict ion tokens instead of damage. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."""
+        "Targeting Battery":
+           display_name: """Targeting Battery"""
+           text: """<strong>Online: </strong> Setup: Equip this side faceup.%LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. After you perform this attack, you may acquire a lock on the defender. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."""
+        "Ordnance Tubes":
+           display_name: """Ordnance Tubes"""
+           text: """<strong>Online: </strong> Setup: Equip this side faceup. %LINEBREAK% You can perform %TORPEDO% and %MISSILE% attacks only as bonus attacks. You <strong>must</strong> treat the %FRONTARC% requirement of your equipped %TORPEDO% and %MISSILE% upgrades as %FULLFRONTARC%. %LINEBREAK% Bonus Attack: Perform a %TORPEDO% attack. %LINEBREAK% Bonus Attack: Perform a %MISSILE% attack. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% You must treat the %FRONTARC% requirement of your equipped %TORPEDO% and %MISSILE% upgrades as %BULLSEYEARC%. %LINEBREAK% Action: Spend 2 %ENERGY% to flip this card."""
+        "Point-Defense Battery":
+           display_name: """Point-Defense Battery"""
+           text: """<strong>Online: </strong> Setup: Equip this side faceup. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK% Bonus Attack: Spend 1 %ENERGY%. %LINEBREAK%<strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."""
+        "Turbolaser Battery":
+           display_name: """Turbolaser Battery"""
+           text: """<strong>Online: </strong> Setup: Equip this side faceup.%LINEBREAK% Bonus Attack (%LOCK%): Spend 3 %ENERGY%. If this attack hits, add 3 %HIT% results. %LINEBREAK% <strong>Offline: </strong> %LINEBREAK% After you engage, you may spend 2 %ENERGY% to flip this card."""
+        "Bombardment Specialists":
+           display_name: """Bombardment Specialists"""
+           text: """While you perform an attack, you may spend 1 calculate token to increase or decrease the range requirement by 1, to a limit of 0-5."""
+        "Comms Team":
+           display_name: """Comms Team"""
+           text: """After you perform a %COORDINATE% action, you may spend up to 2 %ENERGY% to coordinate that many additional ships at range 0-1 of the ship you coordinated."""
+        "IG-RM Droids":
+           display_name: """IG-RM Droids"""
+           text: """While you perform an attack, if you are calculating, you may change 1 %HIT% result to a %CRIT% result."""
+        "Gunnery Specialists":
+           display_name: """Gunnery Specialists"""
+           text: """While you perform a primary or %HARDPOINT% attack, you may spend 1 or more %ENERGY% to reroll that many attack dice."""
+        "Damage Control Team":
+           display_name: """Damage Control Team"""
+           text: """Before you engage, you may spend 1 or more %ENERGY% to flip that many of your <strong>Offline</strong> upgrade cards.%LINEBREAK% Action: Spend 1 or more %ENERGY% to repair that many of your faceup <strong>Ship</strong> damage cards."""
+        "Ordnance Team":
+           display_name: """Ordnance Team"""
+           text: """While you perform a %RELOAD% action, you may spend up to 3 %ENERGY% to reload that many additional %CHARGE% on your equipped %MISSILE%/%TORPEDO% upgrades. %LINEBREAK% After you perform a %RELOAD% action, you may spend 1 %ENERGY% to remove 1 disarm token."""
+        "Sensor Experts":
+           display_name: """Sensor Experts"""
+           text: """You can maintain up to 3 locks on different objects. %LINEBREAK% After you perform a %LOCK% action, you may spend up to 2 %ENERGY% to acquire a lock on that many other objects at range 0-1 of the object you locked, ignoring range restrictions."""
+        "Quick-Release Locks":
+           display_name: """Travas de Abertura Rápida"""
+           text: """Durante a Fase de Sistema, você pode gastar 1 %CHARGE% para colocar 1 carga de caixas a deriva em seu %REARARC% em alcance 0. Ele não pode sobrepor uma nave.%LINEBREAK% A %CHARGE% dessa carta não pode ser recuperada."""
+        "Saboteur's Map":
+           display_name: """Mapa do Sabotador"""
+           text: """No fim da Preparação, você pode gastar até 1 %CHARGE%de cada uma de suas melhorias <strong>Mina</strong> equipadas para posicionar o dispositivo correspondente na área de jogo além do alcance 2 de qualquer nave inimiga ou outro dispositivo."""
+        "Scanner Baffler":
+           display_name: """Scanner Baffler"""
+           text: """No fim da Preparação, você pode escolher até seis outras naves padrão amigas em sua área de saída em alcance 0-1. Se você o fizer, coloque essas naves em qualquer lugar em alcance 0-1."""
+        "Adaptive Shields":
+           display_name: """Adaptive Shields"""
+           text: """While another friendly ship at range 0-1 defends, if it is a smaller size than you, you may spend 1 shield or 2 %ENERGY% to cancel 1 %HIT% or %CRIT% result."""
+        "Boosted Scanners":
+           display_name: """Boosted Scanners"""
+           text: """While you lock, coordinate, or jam, you may spend up to 3 %ENERGY% to increase the range at which you can choose an object by 1 per %ENERGY% spent this way, to a maximum of range 5."""
+        "Optimized Power Core":
+           display_name: """Optimized Power Core"""
+           text: """After you execute a blue maneuver, recover 1 %ENERGY%."""
+        "Tibanna Reserves":
+           display_name: """Tibanna Reserves"""
+           text: """Action: Spend 1 %CHARGE% to recover 2 %ENERGY%."""
+        "Toryn Farr":
+           display_name: """Toryn Farr"""
+           text: """After you coordinate a friendly ship, it may acquire a lock on a ship you are locking, ignoring range restrictions."""
+        "Dodonna's Pride":
+           display_name: """Dodonna's Pride"""
+           text: """ """
+        "Jaina's Light":
+           display_name: """Jaina's Light"""
+           text: """While a friendly ship at range 0-2 defends, if the attack is obstructed by an obstacle, you may spend 1 %ENERGY%. If you do, the defender rolls 1 additional defense die."""
+        "Liberator":
+           display_name: """Liberator"""
+           text: """You can dock up to 2 small ships. %LINEBREAK% After a ship deploys from you, it may perform a %FOCUS% or %BARRELROLL% action."""
+        "Tantive IV":
+           display_name: """Tantive IV"""
+           text: """While you defend, if the attacker is in your %REARARC%, you may roll 1 additional defense die."""
+        "Thunderstrike":
+           display_name: """Thunderstrike"""
+           text: """While you perform a bonus attack, if you have not attacked the defender this round, you may reroll 1 attack die."""
+        "Bright Hope":
+           display_name: """Bright Hope"""
+           text: """You can reinforce only your %FULLFRONTARC%. %LINEBREAK% While you defend, if you are reinforced and the attacker is in your %FULLFRONTARC%, you may roll 1 additional defense die."""
+        "Luminous":
+           display_name: """Luminous"""
+           text: """Setup: You are placed in reserve. %LINEBREAK% At the end of setup, you are placed in the play area at range 0-2 of a friendly ship."""
+        "Quantum Storm":
+           display_name: """Quantum Storm"""
+           text: """After you fully execute a white maneuver, recover 1 %ENERGY%."""
+        "Assailer":
+           display_name: """Assailer"""
+           text: """While you defend, if the attack range is 1, you may roll 1 additional defense die."""
+        "Corvus":
+           display_name: """Corvus"""
+           text: """You can dock up to 2 small ships. %LINEBREAK% After you perform a %CALCULATE% action, gain 1 calculate token."""
+        "Impetuous":
+           display_name: """Impetuous"""
+           text: """After you perform an attack, if the defender was destroyed, you may perform a %FOCUS% or %LOCK% action."""
+        "Instigator":
+           display_name: """Instigator"""
+           text: """While you perform an attack, if the defender has an orange or red token, you may reroll up to 2 attack dice."""
+        "Blood Crow":
+           display_name: """Blood Crow"""
+           text: """While you perform an attack at attack range 1-2, you may add 1 %FOCUS% result."""
+        "Requiem":
+           display_name: """Requiem"""
+           text: """After a ship deploys from you, it may acquire a lock on one ship you are locking, ignoring range restrictions."""
+        "Suppressor":
+           display_name: """Suppressor"""
+           text: """After you coordinate a friendly ship, you may spend 1 %ENERGY% to jam an enemy ship at range 0-2 of that ship, ignoring range restrictions."""
+        "Vector":
+           display_name: """Vector"""
+           text: """After a ship deploys from you, it may perform a %EVADE% or %BOOST% action."""
+        "Broken Horn":
+           display_name: """Broken Horn"""
+           text: """If you are damaged, reduce the difficulty of your speed 3-5 maneuvers."""
+        "Merchant One":
+           display_name: """Merchant One"""
+           text: """Bonus Attack: Perform a %TURRET% attack."""
+        "Insatiable Worrt":
+           display_name: """Insatiable Worrt"""
+           text: """During the End Phase, you may recover 1 additional shield or 1 additional %ENERGY%."""
+        "Corsair Refit":
+           display_name: """Restauração Corsária"""
+           text: """Ataque Bônus: Gaste 1 %ENERGY para realizar um ataque %CANNON%, %TURRET% ou %MISSILE%."""
+        "Enhanced Propulsion":
+           display_name: """Enhanced Propulsion"""
+           text: """<strong>Setup:</strong> Equip this side faceup.%LINEBREAK% At the start of the End Phase, you may spend 2 %ENERGY% to execute a white [2 %STRAIGHT%], [1 %BANKLEFT%], or [1 %BANKRIGHT%] maneuver. %LINEBREAK% """
+        "Drill Beak":
+           display_name: """Drill Beak"""
+           text: """<strong>Setup:</strong> Equip this side faceup.%LINEBREAK% You can perform this attack at range 0.
+           %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. If the attack range is 0, change all %HIT% results to %CRIT% results."""
+        "Tractor Tentacles":
+           display_name: """Tractor Tentacles"""
+           text: """<strong>Setup:</strong> Equip this side faceup.
+           %LINEBREAK% <strong>Bonus Attack</strong> %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%."""
+        "Tracking Torpedoes":
+           display_name: """Torpedos Rastreadores"""
+           text: """Durante a Fase de Sistema, você pode gastar até 3 %CHARGE% para lançar a mesma quantidade de torpedos rastreadores usando os gabaritos [%BANKLEFT% 3], [%STRAIGHT% 4] e [%BANKRIGHT% 3]. Cada dispositivo deve usar um gabarito diferente. Então cada dispositivo pode adquirir uma mira em um objeto que você possua mira, ignorando as restrições de alcance."""
+        "Proton Cannon Battery":
+           display_name: """Proton Cannon Battery"""
+           text: """<strong>Setup:</strong> Equip this side faceup.
+           %LINEBREAK% <strong>Bonus Attack:</strong> Change 1 %HIT% result to a %CRIT% result. %LINEBREAK% <strong>Bonus Attack:</strong> Spend 1 %ENERGY%. Change 1 %HIT% result to a %CRIT% result."""
+        "Tractor Technicians":
+           display_name: """Tractor Technicians"""
+           text: """During the End Phase, each other ship at range 0-1 cannot remove its tractor tokens. %LINEBREAK% Before a tractored enemy ship at range 0-1 reveals its dial, you may spend 1 %ENERGY%. If you do, while that ship executes its maneuver this activation, it reduces the speed of that maneuver by 1, to a minimum of 1."""
+        "Asajj Ventress (Command)":
+           display_name: """Asajj Ventress"""
+           text: """During the System Phase, you may spend 1 %FORCE%. IF you do, each enemy ship in your %FRONTARC% at range 0-1 gains 1 strain token unless it chooses to gain 1 jam token."""
+        "Hondo Ohnaka (Command)":
+           display_name: """Hondo Ohnaka"""
+           text: """During the System Phase, you may spend 1 %CHARGE% and choose 1 friendly shiop at range 0-1. Move 1 Victory Token or Objective Token from its ship card to your ship card, or from your ship card to its ship card."""
+        "Zealous Captain":
+           display_name: """Zealous Captain"""
+           text: """During the Engagement Phase, at initiative 4, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack."""
+        "General Grievous (Command)":
+           display_name: """General Grievous"""
+           text: """During the Engagement Phase, at initiative 4, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack. %LINEBREAK% You can perform attacks against friendly ships. %LINEBREAK% After you perform an attack, if the defender was destroyed, each friendly ship at range 0-2 of it may perform a %CALCULATE% action."""
+        "Mar Tuuk":
+           display_name: """Mar Tuuk"""
+           text: """<strong>Setup:</strong> After placing forces, choose 1 friendly wing of ships with %CALCULATE% on their action bars and place that wing in reserve. %LINEBREAK% During the End Phase, you may place that wing within your deployment area or beyond range 2 of any enemy shp. Then you may choose 1 enemy ship at range 0-1 of you; each ship in that wing acquires a lock on it."""
+        "Riff Tamson":
+           display_name: """Riff Tamson"""
+           text: """During the Engagement Phase, at initiative 5, you may spend 1 %ENERGY% to perform a bonus %HARDPOINT% attack. %LINEBREAK% After you perform an attack, if the defender was dealt 1 or more faceup damage cards, it gains 2 strain tokens."""
+        "Corsair Crew":
+           display_name: """Tripulação de Corsários"""
+           text: """Quando você realizar um ataque contra uma nave padrão, você pode gastar 1 resultado %HIT%. Se o fizer, o defensor recebe uma ficha de exaustão."""
+        "Grappler":
+           display_name: """Grappler"""
+           text: """While you perform a <b>Drill Beak</b> attack, at range 1, if the defender is tractored, treat it as being range 0 instead."""
+        "Nautolan's Revenge":
+           display_name: """Nautolan's Revenge"""
+           text: """Before you engage, you may spend up to 2 calculate tokens. If you do, recover that many %ENERGY%."""
+        "Droid Crew":
+           display_name: """Droid Crew"""
+           text: """While you perform a white %FOCUS% action, treat it as red instead. %LINEBREAK% At the start of the End Phase, repair all of your faceup <b>Crew</b> damage cards."""
+        "Trident":
+           display_name: """Trident"""
+           text: """After you overlap a ship or a ship overlaps you, if it is not tractored, you may spend 1 %ENERGY%. If you do, it gains 3 tractor tokens."""
+        "Neimoidian Grasp":
+           display_name: """Neimoidian Grasp"""
+           text: """After you perform an attack, you may perform a red  %EVADE% action. While you defend, if you are evading, you may roll 1 addtional defense die."""
+
+        # Epic SL Upgrades
+        "Leia Organa (Epic)":
+           display_name: """Leia Organa"""
+           text: """After a friendly ship at range 0-3 is destroyed, choose another friendly ship at range 0-3. It may perform a %BOOST% or %FOCUS% action."""
+        "R2-D2 (Epic)":
+           display_name: """R2-D2"""
+           text: """At the end of the Engagement Phase, if you are not shielded, you may roll 1 attack die to recover one %SHIELD%. If you do, on a %HIT% result, deal 1 facedown damage card to this ship."""
+        "C-3PO (Epic)":
+           display_name: """C-3PO"""
+           text: """While you defend, you may gain 1 strain token. If you do, change 1 of your results to an %EVADE% result."""
+        "Bail Organa (Epic)":
+           display_name: """Bail Organa"""
+           text: """At the start of the Engagement Phase, you may remove a green token from this ship. If you do, up to three other friendly ships at range 0-3 gain that token."""
+        "Secret Provisions (Epic)":
+           display_name: """Secret Provisions"""
+           text: """During the End Phase, if you are at range 1-3 of the opponent's board edge, you may spend one %CHARGE% to gain 2 %MISSIONPOINT%."""
+        "Nien Nunb (Epic)":
+           display_name: """Nien Nunb"""
+           text: """<strong>Bonus Attack:</strong> After performing a primary attack, you may spend 2 %ENERGY% and 1 %CHARGE% to perform a bonus primary attack against a different target."""
+        "Urcos Furdam (Epic)":
+           display_name: """Urcos Furdam"""
+           text: """After you perform a blue maneuver, recover one energy."""
+        "Tantive IV (Republic)":
+           display_name: """Tantive IV"""
+           text: """While you defend, if you have no green tokens, you may change 1 result to an %EVADE% result."""
+        "Tantive IV (Resistance)":
+           display_name: """Tantive IV"""
+           text: """When a friendly ship at range 0-2 defends or performs an attack, if it has only blank results and has 2 or more results, you may suffer 1 %HIT% or spend 2 %ENERGY%. If you do, that ship may reroll all of its dice."""
+        "Twin Missile Launcher (Epic)":
+           display_name: """Twin Missile Launcher"""
+           text: """<strong>Bonus attack:</strong> Spend 1 energy. %LINEBREAK% <strong>Bonus attack:</strong> Spend 1 energy."""
+        "Fanatical (Epic)":
+           display_name: """Fanatical"""
+           text: """While you perform an attack, if you are not shielded, you may change 1 %FOCUS% result to a %HIT% result."""
+        "Inferno Squad (Epic)":
+           display_name: """Inferno Squad"""
+           text: """While a friendly <strong>Gideon Hask</strong>, <strong>Del Meeko</strong>, or <strong>Seyn Marana</strong> ship at range 0-2 performs an attack, you may suffer 1 %HIT% damage. If you do, they may change one of their results to a hit result."""
+        "Corvus (Epic)":
+           display_name: """Corvus"""
+           text: """<strong>Setup:</strong> Place this ship as if it were a standard ship at initiative 5."""
+        "Agent Terex (Epic)":
+           display_name: """Agent Terex"""
+           text: """After an enemy ship is destroyed during an attack, if the attacker is at range 1-2 of you, assign a focus token to them."""
+        "Protectorate Gleb (Epic)":
+           display_name: """Protectorate Gleb"""
+           text: """While you defend or perform an attack, during the Modify Dice step, another friendly ship at range 0-2 may gain a strain or deplete token. If they do, you may transfer one focus token from that ship to you."""
+        "Jinata Security Forces (Epic)":
+           display_name: """Jinata Security Forces"""
+           text: """While you defend or perform an attack, you may spend a focus token to change a blank result to a %HIT% result or an %EVADE% result"""
+        "Precursor (Epic)":
+           display_name: """Precursor"""
+           text: """At the end of the Engagement Phase, you may spend 1 %SHIELD% to recover 1 %ENERGY%, or spend 1 %ENERGY% to recover 1 %SHIELD%."""
+        "TX-25 (Epic)":
+           display_name: """TX-25"""
+           text: """After a friendly ship at range 0-3 is destroyed, you may equip a Tactical Relay upgrade attached to that ship to this one."""
+        "Endless Hordes (Epic)":
+           display_name: """Endless Hordes"""
+           text: """Before a friendly ship with the <strong>Contingency Protocol</strong> upgrade or a friendly <strong>Trade Federation Drone</strong> at range 0-3 would be removed from play, you may spend 1 %CHARGE% to restore that ship, remove and Command upgrade from it, and dock it."""
+        "Alpha Revue (Epic)":
+           display_name: """Alpha Revue"""
+           text: """Before the Neutralize Results step, while a friendly Vulture-class Droid Fighter is at range 0-2 is attacking a defender in its %BULLSEYEARC%, it may suffer 1 %HIT% damage to cancel 1 %EVADE% result."""
+        "Petty Officer Thanisson (Epic)":
+           display_name: """Petty Officer Thanisson"""
+           text: """During the Activation or Engagement Phase, after an enemy ship in your %FRONTARC% at range 0-1 gains a red or orange token, if you are not stressed, you may gain 1 stress token. If you do, that ship gains 1 additional token of the type that it gained."""
+        "Malefactor (Epic)":
+           display_name: """Malefactor"""
+           text: """While you defend, friendly ships docked with you may suffer damage instead of you."""
+        "Thrawn (Epic)":
+           display_name: """Thrawn"""
+           text: """Before an enemy ship at range 0-3 reveals its dial, you may spend 1 %CHARGE% and choose a number. If the speed on the dial matches your choice, acquire a lock on that ship or recover 1 %ENERGY%."""
+        "Heavy Laser Cannon Turret (Epic)":
+           display_name: """Heavy Laser Cannon Turret"""
+           text: """<strong>Bonus attack:</strong> Spend 1 energy. Roll an additional attack die at range 3."""
+        "Blood Crow (Epic)":
+           display_name: """Blood Crow"""
+           text: """While you defend or perform an attack, if the attack range is 1, you may spend 1 %ENERGY% to add a %FOCUS% result."""
+        "Spectre of Nayr (Epic)":
+           display_name: """Spectre of Nayr"""
+           text: """After you perform an attack, if you have not targetted the defender in a previous attack this round and you are focused, you may recover 1 %ENERGY%"""
+        "GA-75 (Epic)":
+           display_name: """GA-75"""
+           text: """Setup: Before placing forces, you may spend 2 %CHARGE%. If you do, choose a friendly ship with a <strong>Wing Leader</strong> upgrade. Assign the <strong>It's the Resistance</strong> condition to it."""
+        "Hosnian Lament (Epic)":
+           display_name: """Hosnian Lament"""
+           text: """While a friendly ship at range 0-2 is defending, if it suffers 2 or more damage during the attack, you may spend 1 %ENERGY% to assign a strain token to the attacker."""
+        "Planetary Ion Bombardment (Epic)":
+           display_name: """Planetary Ion Bombardment"""
+           text: """<strong>Bonus Attack (%LOCK%):</strong> Attack 1 medium, large or huge ship. If this attack hits, all %HIT%/%CRIT% results inflict ion tokens instead of damage."""
+        "Azmorigan (Epic)":
+           display_name: """Azmorigan"""
+           text: """After a friendly ship at range 0-3 is destroyed, before that ship is removed, you may equip an %ILLICIT% upgrade attached to that ship to this one. Recover all charges on it."""
+        "Illegal Countermeasures (Epic)":
+           display_name: """Illegal Countermeasures"""
+           text: """While you or a ship you are locking at range 0-3 defends or performs an attack, you may spend 1 %ENERGY% to prevent range bonuses from being applied.."""
+        "Modified Dorsal Turret (Epic)":
+           display_name: """Modified Dorsal Turret"""
+           text: """<strong>Bonus Attack</strong>"""
+        "AQ-Series Battle Droids (Epic)":
+           display_name: """AQ-Series Battle Droids"""
+           text: """After an enemy ship at range 0-2 becomes tractored, assign it a jam token."""
+        "Drill Beak (Epic)":
+           display_name: """Drill Beak"""
+           text: """<strong>Bonus Attack</strong>: If the attack range is 0, change all %HIT% results to %CRIT% results."""
+        "Trident (Epic)":
+           display_name: """Trident"""
+           text: """While you defend, if the attackerr does not have any green tokens, you may add 1 %EVADE% result."""
+        "Caij Vanda (Epic)":
+           display_name: """Caij Vanda"""
+           text: """While you defend, if the attacker is in your %FRONTARC%, add an %EVADE% result."""
+        "Nautolan's Revenge (Epic)":
+           display_name: """Nautolan's Revenge"""
+           text: """After a tractored enemy ship in your %REARARC% suffers damage, you may spend 1 %CHARGE%. If you do, that ship suffers 1 additional %HIT% damage."""
+        "Born for This (Epic)":
+           display_name: "Born for This"
+           text: """While another friendly ship at range 0-2 defends, if you are not strained, it may spend your focus and evade tokens as if that ship has them. If it does, you gain 1 strain token."""
+        "Point Defense Battery (Epic)":
+           display_name: "Point Defense Battery"
+           text: """<strong>Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Attack:</strong> Spend 1 %ENERGY%. %LINEBREAK% <strong>Attack:</strong> Spend 1 %ENERGY%."""
+
+    condition_translations =
         'Suppressive Fire':
            display_name: 'Tiro Supressivo'
            text: '''Quando você realizar um ataque contra uma nave que não seja <strong>Capitão Rex</strong>, role 1 dado de ataque a menos.%LINEBREAK%Após <strong>Capitão Rex</strong> defender, remova essa carta. No final da Fase de Engajamento, se <strong>Capitão Rex</strong> não realizou um ataque nessa fase, remova essa carta.%LINEBREAK%Após <strong>Capitão Rex</strong> ser destruído, remova essa carta.'''
@@ -4503,7 +4686,7 @@ exportObj.cardLoaders.Português = () ->
            display_name: 'Confiança Quebrada'
            text: '''Trate naves amigas como aliadas.%LINEBREAK% Naves não inimigas tratam você como aliada. %LINEBREAK%Quando realizar um ataque, antes de declarar o defensor, cada nave aliada no arco de ataque que não estiver estressada recebe 1 ficha de estresse. Depois que você defender ou realizar um ataque, se o defensor recebeu pelo menos 1 carta de dano virada para cima, ou foi destruído, remova esta condição.'''
 
-    chassis_translations = 
+    chassis_translations =
         "Vectored Thrusters":
            display_name: "Propulsores Vetorizados"
            text: """Após realizar uma ação, você pode realizar uma ação %BOOST% vermelha"""
@@ -4572,7 +4755,7 @@ exportObj.cardLoaders.Português = () ->
            text: """Quando você defender ou realizar um ataque, você pode gastar 1 ficha de cálculo de uma nave amiga em alcance 0-1 para mudar 1 resultado %FOCUS% para um resultado %EVADE% ou %HIT%."""
         "Independent Calculations":
            display_name: "Cálculos Independentes"
-           text: """Quando você realizar uma ação %CALCULATE% branca, você pode tratá-la como vermelha para receber 1 ficha de cálculo adicional. Outras naves não podem gastar suas fichas de cálculo usando a habilidade de nave <strong>Cálculos Interligados</strong>."""
+           text: """Quando você realizar uma ação %CALCULATE% branca, você pode tratá-la como vermelha para receber 1 ficha de cálculo adicional. Outras naves não podem usar suas fichas de cálculo usando a habilidade de nave <strong>Cálculos Interligados</strong>."""
         "Adaptive Ailerons":
            display_name: "Ailerons Adaptáveis"
            text: """Antes de revelar seu disco, se você não estiver estressado, você <b>deve</b> impulsionar. %LINEBREAK% <i>Errata (desde RR 1.4.2): Alterada a habilidade da nave</i>"""
@@ -4654,7 +4837,7 @@ exportObj.cardLoaders.Português = () ->
         "Modified for Organics":
            display_name: "Modificado para Orgânicos"
            text: """Esta nave não é afetada pela restrição <strong>Padronizada</strong>. Reduza a dificuldade de suas manobras curvas suave [%BANKLEFT% ou %BANKRIGHT%] de velocidade 2 e 3. Aumente a dificuldade de suas curvas [%TURNLEFT% ou %TURNRIGHT%] de velocidade 3."""
-         "Locked S-Foils":
+        "Locked S-Foils":
            display_name: "S-Foils Travados"
            text: """Depois que você realizar uma ação %BOOST%, receba uma ficha de exaustão."""
         "Gyro-Cockpit":
@@ -4767,5 +4950,16 @@ exportObj.cardLoaders.Português = () ->
         "Direct Hit!":
            display_name: """Acerto em Cheio!"""
            text:"Sofra 1 dano %HIT%. Então, repare esta carta. "
-            
+
+    for name, data of pilot_translations
+        data['display_name'] = name unless data.display_name?
+    for name, data of upgrade_translations
+        data['display_name'] = name unless data.display_name?
+    for name, data of condition_translations
+        data['display_name'] = name unless data.display_name?
+    for name, data of chassis_translations
+        data['display_name'] = name unless data.display_name?
+    for name, data of damage_translations
+        data['display_name'] = name unless data.display_name?
+
     exportObj.setupTranslationCardData pilot_translations, upgrade_translations, condition_translations, chassis_translations, damage_translations
