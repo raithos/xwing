@@ -12666,9 +12666,12 @@ class exportObj.Collection
         @modal.find('#reset-check').hide()
 
         if @checks.collectioncheck?
-            if @checks.collectioncheck != "false"
+            if @checks.collectioncheck == "true"
                 @checks.collectioncheck = true
                 @modal.find('.check-collection').prop('checked', true)
+            else
+                @checks.collectioncheck = false
+                @modal.find('.check-collection').prop('checked', false)
         else
             @checks.collectioncheck = true
             @modal.find('.check-collection').prop('checked', true)
