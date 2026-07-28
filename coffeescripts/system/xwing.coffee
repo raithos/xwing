@@ -2060,7 +2060,7 @@ class exportObj.SquadBuilder
         for ship_name, ship_data of exportObj.ships
             if @isOurFaction(ship_data.factions) and (@matcher(ship_data.name, term) or (ship_data.display_name and @matcher(ship_data.display_name, term)))
                 if (@isItemAvailable(ship_data, true))
-                    if (not collection_only or (@collection? and (@collection.checks.collectioncheck == "true") and @collection.checkShelf('ship', ship_data.name)))
+                    if (not collection_only or (@collection? and (@collection.checks.collectioncheck == true) and @collection.checkShelf('ship', ship_data.name)))
                         ships.push
                             id: ship_data.name
                             text: if ship_data.display_name then ship_data.display_name else ship_data.name
@@ -3381,7 +3381,7 @@ class exportObj.SquadBuilder
             ship_limit: ship_limit
             keep_running: true
             allowed_sources: allowed_sources ? exportObj.expansions
-            collection_only: @collection? and (@collection.checks.collectioncheck == "true") and collection_only
+            collection_only: @collection? and (@collection.checks.collectioncheck == true) and collection_only
             fill_zero_pts: fill_zero_pts
         stopHandler = () =>
             #console.log "*** TIMEOUT *** TIMEOUT *** TIMEOUT ***"
@@ -3589,7 +3589,7 @@ class exportObj.SquadBuilder
         if Object.keys(@collection?.expansions ? {}).length == 0
             # console.log "collection not ready or is empty"
             return [true, []]
-        else if @collection?.checks.collectioncheck != "true"
+        else if @collection?.checks.collectioncheck != true
             # console.log "collection check not enabled"
             return [true, []]
         @collection.reset()
@@ -4389,7 +4389,7 @@ class Ship
                 query.callback(data)
             minimumResultsForSearch: if $.isMobile() then -1 else 0
             formatResultCssClass: (obj) =>
-                if @builder.collection? and (@builder.collection.checks.collectioncheck == "true")
+                if @builder.collection? and (@builder.collection.checks.collectioncheck == true)
                     not_in_collection = false
                     if @pilot? and obj.id == exportObj.ships[@pilot.ship].id
                         # Currently selected ship; mark as not in collection if it's neither
@@ -4426,7 +4426,7 @@ class Ship
                 query.callback(data)
             minimumResultsForSearch: if $.isMobile() then -1 else 0
             formatResultCssClass: (obj) =>
-                if @builder.collection? and (@builder.collection.checks.collectioncheck == "true")
+                if @builder.collection? and (@builder.collection.checks.collectioncheck == true)
                     not_in_collection = false
                     name = ""
                     if @builder.isQuickbuild

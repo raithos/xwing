@@ -12667,6 +12667,7 @@ class exportObj.Collection
 
         if @checks.collectioncheck?
             if @checks.collectioncheck != "false"
+                @checks.collectioncheck = true
                 @modal.find('.check-collection').prop('checked', true)
         else
             @checks.collectioncheck = true
@@ -12795,13 +12796,11 @@ class exportObj.Collection
             $(exportObj).trigger 'xwing-collection:changed', this
 
         $ @modal.find('.check-collection').change (e) =>
-            if @modal.find('.check-collection').prop('checked') == false
-                result = false
+            @checks.collectioncheck = @modal.find('.check-collection').prop('checked')
+            if @checks.collectioncheck == false
                 @modal_status.text """Collection Tracking Disabled"""
             else
-                result = true
                 @modal_status.text """Collection Tracking Active"""
-            @checks.collectioncheck = result
             @modal_status.fadeIn 100, =>
                 @modal_status.fadeOut 1000
             $(exportObj).trigger 'xwing-collection:changed', this
