@@ -2142,7 +2142,7 @@ exportObj.cardLoaders.Deutsch = () ->
            text: "Nachdem du während eines Angriffes als Verteidiger deklariert worden bist, darfst du 1 %FORCE% wiederherstellen."
         "Wedge Antilles (BoY)":
            display_name: "Wedge Antilles"
-           text: "Solange du einen Angriff durchführst, falls ein anderes befreundetes Schiff im Feuerwinkel des Verteidigers ist, wirft der Verteidiger 1 Verteidigungswürfel weniger."
+           text: "Solange du einen Primärangriff durchführst, falls ein anderes befreundetes Schiff im Feuerwinkel des Verteidigers ist, wirft der Verteidiger 1 Verteidigungswürfel weniger."
         "Biggs Darklighter (BoY)":
            display_name: "Biggs Darklighter"
            text: "Während der Systemphase darfst du 1 befreundetes Schiff in Reichweite 1 wählen. Falls du das tust, behandle deinei Initiative bis zum Ende der Aktivierungsphase so, als würde sie der Initiative des gewählten Schiffes entsprechen."
