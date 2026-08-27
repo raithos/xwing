@@ -2135,19 +2135,19 @@ exportObj.cardLoaders.Deutsch = () ->
            display_name: "Transgalmeg-Steuerlink"
            text: "<b>Hyperraum-Andockring:</b> 1 Delta-7-Aethersprite, Eta-2-Actis oder V-Flügler der Nimbus-Klasse kann an dir andocken.%LINEBREAK% Solange ein Schiff an dir angedockt ist, erhältst du die Initiative jenes Schiffes und dir wird sein Rad zugeordnet. Solange du ein Manöver durchführst, verringere seine Geschwindigkeit auf 1. Bevor du ein Expertenmanöver ausführst, führe stattdessen ein weisses Stationäre-Manöver [%STOP%] aus, dann darfst du dich um 90 ° oder 180 ° drehen.%LINEBREAK% Solange kein Schiff an dir angedockt ist, wird dir kein Manöverrad zugeordnet und du wirst nicht aktiviert und kämpfst nicht."
         "Garven Dreis (BoY)":
-           display_name: "Garven Dreis"
+           display_name: "Garven Dreis (BoY)"
            text: "Nachdem du einen Fokusmarker ausgegeben hast, darfst du 1 befreundetes Schiff in Reichweite 1-3 wählen. Jenes Schiff erhält 1 Fokusmarker."
         "Luke Skywalker (BoY)":
-           display_name: "Luke Skywalker"
+           display_name: "Luke Skywalker (BoY)"
            text: "Nachdem du während eines Angriffes als Verteidiger deklariert worden bist, darfst du 1 %FORCE% wiederherstellen."
         "Wedge Antilles (BoY)":
-           display_name: "Wedge Antilles"
-           text: "Solange du einen Angriff durchführst, falls ein anderes befreundetes Schiff im Feuerwinkel des Verteidigers ist, wirft der Verteidiger 1 Verteidigungswürfel weniger."
+           display_name: "Wedge Antilles (BoY)"
+           text: "Solange du einen Primärangriff durchführst, falls ein anderes befreundetes Schiff im Feuerwinkel des Verteidigers ist, wirft der Verteidiger 1 Verteidigungswürfel weniger."
         "Biggs Darklighter (BoY)":
-           display_name: "Biggs Darklighter"
+           display_name: "Biggs Darklighter (BoY)"
            text: "Während der Systemphase darfst du 1 befreundetes Schiff in Reichweite 1 wählen. Falls du das tust, behandle deinei Initiative bis zum Ende der Aktivierungsphase so, als würde sie der Initiative des gewählten Schiffes entsprechen."
         "Jek Porkins (BoY)":
-           display_name: "Jek Porkins"
+           display_name: "Jek Porkins (BoY)"
            text: "Nachdem du einen Stressmarker erhalten hast, darfst du 1 Angriffswürfel werfen, um ihn zu entfernen. Bei einem %HIT% -Ergebnis erleidest du 1 %HIT% -Schaden."
         "Corran Horn (X-Wing)":
            display_name: "Corran Horn"
@@ -2228,16 +2228,16 @@ exportObj.cardLoaders.Deutsch = () ->
            display_name: "Lieutenant Lorrir"
            text: "Solange du eine Fassrolle fliegst, <strong>musst</strong> du die [%BANKLEFT% oder %BANKRIGHT%]-Schablone statt der [%STRAIGHT%]-Schablone verwenden."
         "Iden Versio (BoY)":
-           display_name: "Iden Versio"
+           display_name: "Iden Versio (BoY)"
            text: "Bevor ein befreundeter TIE in Reichweite 0-1 Schaden erleiden würde, darfst du 2 %CHARGE% ausgeben. Falls du das tust, verhindere 1 %HIT% oder %CRIT%."
         "Sigma 4 (BoY)":
-           display_name: "Sigma 4"
+           display_name: "Sigma 4 (BoY)"
            text: "Nachdem du eine %BARRELROLL% -Aktion durchgeführt hast, darfst du 1 %CHARGE% ausgeben, um eine %BOOST% -Aktion durchzuführen."
         "Sigma 5 (BoY)":
-           display_name: "Sigma 5"
+           display_name: "Sigma 5 (BoY)"
            text: "Nachdem du einen Angriff durchgeführt hast, der getroffen hat, darfst du 1 %CHARGE% ausgeben, um eine %EVADE% -Aktion durchzuführen."
         "Sigma 6 (BoY)":
-           display_name: "Sigma 6"
+           display_name: "Sigma 6 (BoY)"
            text: "Nachdem du ein Manöver mit Geschwindigkeit 3-5 vollständig ausgeführt hast, darfst du 1 %CHARGE% ausgeben, um eine %SLAM% -Aktion durchzuführen."
         "Sigma 7 (BoY)":
            display_name: "Sigma 7"
@@ -2252,16 +2252,16 @@ exportObj.cardLoaders.Deutsch = () ->
            display_name: "Moff Gideon"
            text: "Solange ein feindliches Schiff in Reichweite 1-3 verteidigt, bevor die Angriffswürfel geworfen werden, darfst du 1 %CHARGE% ausgeben und ein befreundetes Schiff in Reichweite 0-1 des Verteidigers wählen. Falls du das tust, können die Verteidigungswürfel während dieses Angriffes nicht modifiziert werden und das gewählte befreundete Schiff erhält 1 Anstrengungsmarker."
         '"Wampa" (BoY)':
-           display_name: "„Wampa“"
+           display_name: "„Wampa“ (BoY)"
            text: "Solange du einen Angriff durchführst, darfst du 1 %CHARGE% ausgeben, um 1 zusätzlichen Angriffswürfel zu werfen. Nachdem du verteidigt hast, verlierst du 1 %CHARGE%."
         '"Dark Curse" (BoY)':
-           display_name: "„Dark Curse“"
+           display_name: "„Dark Curse“ (BoY)"
            text: "Solange du verteidigst,können die Würfel des Angreifers nicht modifiziert werden."
         '"Backstabber" (BoY)':
-           display_name: "„Backstabber“"
+           display_name: "„Backstabber“ (BoY)"
            text: 'Solange du einen Primärangriff durchführst, falls ein befreundeter <strong>Darth Vader</strong> oder <strong>„Mauler“ Mithel</strong> in Reichweite 0-1 in deinem %LEFTARC% oder %RIGHTARC% ist, wirfst du 1 zusätzlichen Angriffswürfel.'
         '"Mauler" Mithel (BoY)':
-           display_name: "„Mauler“ Mithel"
+           display_name: "„Mauler“ Mithel (BoY)"
            text: 'Solange du einen Primärangriff durchführst, falls ein befreundeter <strong>Darth Vader</strong> oder <strong>„Backstabber“</strong> in Reichweite 0-1 in deinem %LEFTARC% oder %RIGHTARC% ist, wirfst du 1 zusätzlichen Angriffswürfel.'
         "Magna Tolvan":
            display_name: "Magna Tolvan"
