@@ -10218,7 +10218,6 @@ exportObj.basicCardData = ->
                 "Torpedo"
                 "Astromech"
                 "Device"
-                "Illicit"
                 "Modification"
             ]
         }
