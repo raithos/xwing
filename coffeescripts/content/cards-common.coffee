@@ -5780,7 +5780,6 @@ exportObj.basicCardData = ->
                 "Gunner"
                 "Device"
                 "Modification"
-                "Modification"
             ]
         }
         {
